@@ -1,0 +1,792 @@
+[
+    {
+        "attempt": 1,
+        "question": "Are Willard Mack and Subhash Ghai both involved in film?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Willard Mack's professional background.",
+                "output": "Willard Mack was a playwright and actor, known for his work on the 1916 American drama silent film \"Nanette of the Wilds\" and the 1929 comedy film \"Girl Crazy\". He also collaborated with Tha Dogg Pound on the \"Rhyme & Reason\" soundtrack. Additionally, he has a namesake, Wilbur Mack, who was also an actor.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Subhash Ghai's professional background.",
+                "output": "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and producing short films and has also directed and written English and Marathi films.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Willard Mack is involved in the film industry based on his professional background.",
+                "output": "Based on his professional background, it can be determined that Willard Mack was involved in the film industry as a playwright, actor, and collaborator on film soundtracks. Therefore, he is indeed involved in the film industry.",
+                "upstream": [
+                    [
+                        "1",
+                        "Willard Mack was a playwright and actor, known for his work on the 1916 American drama silent film \"Nanette of the Wilds\" and the 1929 comedy film \"Girl Crazy\". He also collaborated with Tha Dogg Pound on the \"Rhyme & Reason\" soundtrack. Additionally, he has a namesake, Wilbur Mack, who was also an actor."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Subhash Ghai is involved in the film industry based on his professional background.",
+                "output": "Yes, Subhash Ghai is involved in the film industry based on his professional background as a film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has also founded a film and media institution and received awards for his contributions to Indian cinema.",
+                "upstream": [
+                    [
+                        "2",
+                        "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and producing short films and has also directed and written English and Marathi films."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Combine results from the analysis of both Willard Mack and Subhash Ghai to conclude if both are involved in film.",
+                "output": "Based on the analysis of both Willard Mack and Subhash Ghai, it can be concluded that both individuals are indeed involved in the film industry. Willard Mack was involved as a playwright, actor, and collaborator on film soundtracks, while Subhash Ghai has worked as a film director, producer, and screenwriter in Hindi cinema, as well as founding a film and media institution and receiving awards for his contributions to Indian cinema. Therefore, both individuals have significant involvement in the film industry.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on his professional background, it can be determined that Willard Mack was involved in the film industry as a playwright, actor, and collaborator on film soundtracks. Therefore, he is indeed involved in the film industry."
+                    ],
+                    [
+                        "4",
+                        "Yes, Subhash Ghai is involved in the film industry based on his professional background as a film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has also founded a film and media institution and received awards for his contributions to Indian cinema."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Wilbur Mack\n\"(for non-related playwright and fellow actor Willard Mack, see Willard Mack)\"",
+            "Willard Mack\n\"(for fellow actor also born 1873, but not a relative, see Wilbur Mack)\"",
+            "Nanette of the Wilds\nNanette of the Wilds is a 1916 American drama silent film directed by Joseph Kaufman and written by Willard Mack. The film stars Pauline Frederick, Willard Mack, Macey Harlam, Charles Brandt, Frank Joyner and Daniel Pennell. The film was released on November 26, 1916, by Paramount Pictures.",
+            "Subhash Ghai\nSubhash Ghai (born 24 January 1945) is an Indian film director, producer and screenwriter, known for his works predominantly in Hindi cinema. His most notable works include \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and Black & White (2008). In 1982, He started Mukta Arts Private Limited which, in 2000, became a public company, with Subhash Ghai as its executive chairman. In 2006, he received the National Film Award, for producing the social problem film \"Iqbal\", in the same year he founded the Whistling Woods International film and media institution in Mumbai. In 2015, He received the IIFA Award for outstanding contribution to Indian Cinema.",
+            "Karma (1986 film)\nKarma (Hindi:\u0915\u0930\u094d\u092e\u093e) is a 1986 Indian action film directed by Subhash Ghai and featuring an ensemble cast including Dilip Kumar, Nutan, Naseeruddin Shah, Jackie Shroff, Anil Kapoor, Poonam Dhillon, Sridevi and Anupam Kher. The film reunites Subhash Ghai and Dilip Kumar after the success of their last film together \"Vidhaata\" (1982). The film also marked the first time Dilip Kumar was paired with veteran actress Nutan. The film was a huge success at box office.",
+            "Kalicharan\nKalicharan is a 1976 Indian action drama film directed by Subhash Ghai and starring Shatrughan Sinha, Reena Roy, Ajit, Danny Denzongpa, Madan Puri and Premnath. The film became a box office hit. The film was the directorial debut of Subhash Ghai and was the breakthrough role for stars Shatrughan Sinha and Reena Roy. It was later remade into the Telugu film \"Khaidi Kalidasu\" (1977), Kannada film Kaalinga (1980) with Vishnuvardhan and the Tamil film \"Sangili\" (1982) with Prabhu and Sivaji Ganesan in the lead roles and in Malayalam \"Pathamudayam\" (1985) by Mohanlal.",
+            "Fear (1965 film)\nFear (1965) is a 35\u00a0mm short Hindi film directed by legendary filmmaker Ritwik Ghatak. In 1964-65 Ritwik created this documentary for the acting department of Pune Film Institute. Mainly the students of Pune Film Institute participated in this film. Director Subhash Ghai, and actor Asrani then students of that institute acted in this film.",
+            "Joggers' Park (film)\nJoggers' Park is a 2003 Indian drama film made in English and Hindi. It is directed by Anant Balani and written by Subhash Ghai. It stars Bengali actor Victor Bannerjee, Perizaad Zorabian and Divya Dutta in lead roles. It was filmed on location in Mumbai's Jogger's Park. It was inspired from the storyline of 1986 film Anokha Rishta starring Rajesh Khanna.",
+            "Samhita (film)\nSamhita: The Script (or simply Samhita) is a 2013 Indian Marathi film directed by duo Sumitra BhaveSunil Sukthankar and produced by Mukta Arts in association with Ashokk Movies. The film starts Devika Daftardar, Milind Soman, and Rajeshwari Sachdev in the lead roles along with Uttara Baokar and Jyoti Subhash reprising the supporting roles. The film had its theatrical release on 18 October 2013 and won several awards including two National Film Awards at the 60th National Film Awards; the Best Female Playback Singer for Arati Ankalikar-Tikekar and the Best Music Direction (Songs) for Shailendra Barve. The director-producer Subhash Ghai, the founder of Mukta Arts, was not initially part of the film and was approached when the director duo faced a financial problems.",
+            "Yuvvraaj\nYuvvraaj is a 2008 Indian film directed and produced by Subhash Ghai. The film stars Anil Kapoor, Salman Khan, Zayed Khan and Katrina Kaif in the lead roles and is inspired from Hollywood film \"Rain Man\" (1988). \"Yuvvraaj\" is a musical story of a fragmented family of three brothers who try to con each other to inherit their father's wealth. According to the director, the film is about the arrogance and overconfidence of contemporary youth. The film was released on 28 November 2008. Although the film received mixed reviews from critics and bombed at the box-office, its script was added to the library of the Academy of Motion Picture Arts and Sciences in 2009.",
+            "Kisna: The Warrior Poet\nKisna: The Warrior Poet is an Indian Hindi film written, edited, produced and directed by Subhash Ghai and starring Vivek Oberoi (who plays the title role), Antonia Bernath, and Isha Sharvani. The musical film is set in the British India of the tumultuous 1940s when Indian nationalists fighting for the country's independence rose up as one, urging the British Raj to leave. It is a love story about two people who are torn between Karma (the noble deed) and Dharma (the duty). The film has two veteran composers, A. R. Rahman and Ismail Darbar; the lyrics were written by Javed Akhtar. This film also marks Amrish Puri's final performance. The film, however, did not perform well at the box office. The film was premiered in the March\u00e9 du Film section of the 2005 Cannes Film Festival.",
+            "Girl Crazy (1929 film)\nGirl Crazy was a 1929 comedy film directed by Mack Sennett and starring Andy Clyde as \"a girl-crazy sexagenarian\". The film's story is credited to Hampton Del Ruth, Alfred J. Goulding, Harry McCoy, Earle Rodney, and Mack Sennett.",
+            "Mack 10 discography\nThe discography of West Coast hip hop artist Mack 10 consists of eight studio albums, two compilation albums, twenty-two singles, and fifteen music videos. He has also collaborated on two albums and was featured in two soundtrack albums. After signing to Priority Records in 1995, Mack 10 released his self-titled debut album in June. The album, produced by fellow rapper Ice Cube, saw considerable commercial success and went Gold in the US. His prosperity continued when he released \"Based on a True Story\", which peaked at number fourteen on the US \"Billboard\" 200. The rapper collaborated with Tha Dogg Pound to record \"Nothin' But the Cavi Hit\" which was released on the \"Rhyme & Reason\" soundtrack. Mack 10's 1998 release, \"The Recipe\", was the rapper's third and final album to be certified Gold in the US by RIAA. Mack 10's album sales began to decline after his first compilation album release, \"Hoo-Bangin': The Mix Tape, Vol. 1\". His fourth studio album, \"The Paper Route\" (2000), debuted at number nineteen on the \"Billboard\" 200; however, it failed to earn the rapper any RIAA certifications.",
+            "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+            "Joya (singer)\nJoya (birth name Joya Owens born 1973) in Detroit, Michigan, United States is an American R&B/soul singer - songwriter, who released her debut album \"Here I Am\" on Atlas/A&M record label. Following her debut album release, Joya was a background session vocalist for various artists' including R&B/soul singer Mary J. Blige. She also toured as a background singer during Blige's \"Share My World Tour\" in 1998.",
+            "Blue Fire\nBlue Fire is a launched roller coaster at Europa-Park. The coaster opened in 2009 as part of a new Iceland-themed expansion to Europa-Park. As the first launched coaster built by MACK Rides, Blue Fire will serve as the park's tenth roller coaster and their first roller coaster with inversions. The ride's tagline is \"Discover Pure Energy\"."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 2,
+        "question": "Are Willard Mack and Subhash Ghai both involved in film?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Willard Mack's professional background.",
+                "output": "Willard Mack was a playwright and actor who wrote the 1916 American drama silent film \"Nanette of the Wilds\" and also appeared in the film. He also worked on the 1929 comedy film \"Girl Crazy\" and had a successful career in the entertainment industry. Additionally, there is a mention of a fellow actor named Wilbur Mack, who is not a relative. There is no specific information provided about Willard Mack's professional background outside of his work in the film industry.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Subhash Ghai's professional background.",
+                "output": "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and production in various other films, including \"Joggers' Park\" (2003), \"Yuvvraaj\" (2008), and \"Kisna: The Warrior Poet\" (2005).",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Willard Mack is involved in the film industry based on his professional background.",
+                "output": "Based on the information provided, it can be determined that Willard Mack was involved in the film industry as a playwright, actor, and writer for American drama and comedy films. Therefore, it can be concluded that Willard Mack was involved in the film industry based on his professional background.",
+                "upstream": [
+                    [
+                        "1",
+                        "Willard Mack was a playwright and actor who wrote the 1916 American drama silent film \"Nanette of the Wilds\" and also appeared in the film. He also worked on the 1929 comedy film \"Girl Crazy\" and had a successful career in the entertainment industry. Additionally, there is a mention of a fellow actor named Wilbur Mack, who is not a relative. There is no specific information provided about Willard Mack's professional background outside of his work in the film industry."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Subhash Ghai is involved in the film industry based on his professional background.",
+                "output": "Yes, Subhash Ghai is involved in the film industry as a director, producer, screenwriter, and executive chairman of a film production company. He has also received awards for his contributions to Indian cinema and has been involved in acting and production in various films.",
+                "upstream": [
+                    [
+                        "2",
+                        "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and production in various other films, including \"Joggers' Park\" (2003), \"Yuvvraaj\" (2008), and \"Kisna: The Warrior Poet\" (2005)."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Combine results from the analysis of both Willard Mack and Subhash Ghai to conclude if both are involved in film.",
+                "output": "Based on the analysis of both Willard Mack and Subhash Ghai, it can be concluded that both individuals are indeed involved in the film industry. Willard Mack was involved as a playwright, actor, and writer for American drama and comedy films, while Subhash Ghai has been involved as a director, producer, screenwriter, and executive chairman of a film production company in Indian cinema. Therefore, both individuals have made significant contributions to the film industry in their respective capacities.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the information provided, it can be determined that Willard Mack was involved in the film industry as a playwright, actor, and writer for American drama and comedy films. Therefore, it can be concluded that Willard Mack was involved in the film industry based on his professional background."
+                    ],
+                    [
+                        "4",
+                        "Yes, Subhash Ghai is involved in the film industry as a director, producer, screenwriter, and executive chairman of a film production company. He has also received awards for his contributions to Indian cinema and has been involved in acting and production in various films."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Wilbur Mack\n\"(for non-related playwright and fellow actor Willard Mack, see Willard Mack)\"",
+            "Willard Mack\n\"(for fellow actor also born 1873, but not a relative, see Wilbur Mack)\"",
+            "Nanette of the Wilds\nNanette of the Wilds is a 1916 American drama silent film directed by Joseph Kaufman and written by Willard Mack. The film stars Pauline Frederick, Willard Mack, Macey Harlam, Charles Brandt, Frank Joyner and Daniel Pennell. The film was released on November 26, 1916, by Paramount Pictures.",
+            "Subhash Ghai\nSubhash Ghai (born 24 January 1945) is an Indian film director, producer and screenwriter, known for his works predominantly in Hindi cinema. His most notable works include \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and Black & White (2008). In 1982, He started Mukta Arts Private Limited which, in 2000, became a public company, with Subhash Ghai as its executive chairman. In 2006, he received the National Film Award, for producing the social problem film \"Iqbal\", in the same year he founded the Whistling Woods International film and media institution in Mumbai. In 2015, He received the IIFA Award for outstanding contribution to Indian Cinema.",
+            "Karma (1986 film)\nKarma (Hindi:\u0915\u0930\u094d\u092e\u093e) is a 1986 Indian action film directed by Subhash Ghai and featuring an ensemble cast including Dilip Kumar, Nutan, Naseeruddin Shah, Jackie Shroff, Anil Kapoor, Poonam Dhillon, Sridevi and Anupam Kher. The film reunites Subhash Ghai and Dilip Kumar after the success of their last film together \"Vidhaata\" (1982). The film also marked the first time Dilip Kumar was paired with veteran actress Nutan. The film was a huge success at box office.",
+            "Kalicharan\nKalicharan is a 1976 Indian action drama film directed by Subhash Ghai and starring Shatrughan Sinha, Reena Roy, Ajit, Danny Denzongpa, Madan Puri and Premnath. The film became a box office hit. The film was the directorial debut of Subhash Ghai and was the breakthrough role for stars Shatrughan Sinha and Reena Roy. It was later remade into the Telugu film \"Khaidi Kalidasu\" (1977), Kannada film Kaalinga (1980) with Vishnuvardhan and the Tamil film \"Sangili\" (1982) with Prabhu and Sivaji Ganesan in the lead roles and in Malayalam \"Pathamudayam\" (1985) by Mohanlal.",
+            "Fear (1965 film)\nFear (1965) is a 35\u00a0mm short Hindi film directed by legendary filmmaker Ritwik Ghatak. In 1964-65 Ritwik created this documentary for the acting department of Pune Film Institute. Mainly the students of Pune Film Institute participated in this film. Director Subhash Ghai, and actor Asrani then students of that institute acted in this film.",
+            "Joggers' Park (film)\nJoggers' Park is a 2003 Indian drama film made in English and Hindi. It is directed by Anant Balani and written by Subhash Ghai. It stars Bengali actor Victor Bannerjee, Perizaad Zorabian and Divya Dutta in lead roles. It was filmed on location in Mumbai's Jogger's Park. It was inspired from the storyline of 1986 film Anokha Rishta starring Rajesh Khanna.",
+            "Samhita (film)\nSamhita: The Script (or simply Samhita) is a 2013 Indian Marathi film directed by duo Sumitra BhaveSunil Sukthankar and produced by Mukta Arts in association with Ashokk Movies. The film starts Devika Daftardar, Milind Soman, and Rajeshwari Sachdev in the lead roles along with Uttara Baokar and Jyoti Subhash reprising the supporting roles. The film had its theatrical release on 18 October 2013 and won several awards including two National Film Awards at the 60th National Film Awards; the Best Female Playback Singer for Arati Ankalikar-Tikekar and the Best Music Direction (Songs) for Shailendra Barve. The director-producer Subhash Ghai, the founder of Mukta Arts, was not initially part of the film and was approached when the director duo faced a financial problems.",
+            "Yuvvraaj\nYuvvraaj is a 2008 Indian film directed and produced by Subhash Ghai. The film stars Anil Kapoor, Salman Khan, Zayed Khan and Katrina Kaif in the lead roles and is inspired from Hollywood film \"Rain Man\" (1988). \"Yuvvraaj\" is a musical story of a fragmented family of three brothers who try to con each other to inherit their father's wealth. According to the director, the film is about the arrogance and overconfidence of contemporary youth. The film was released on 28 November 2008. Although the film received mixed reviews from critics and bombed at the box-office, its script was added to the library of the Academy of Motion Picture Arts and Sciences in 2009.",
+            "Kisna: The Warrior Poet\nKisna: The Warrior Poet is an Indian Hindi film written, edited, produced and directed by Subhash Ghai and starring Vivek Oberoi (who plays the title role), Antonia Bernath, and Isha Sharvani. The musical film is set in the British India of the tumultuous 1940s when Indian nationalists fighting for the country's independence rose up as one, urging the British Raj to leave. It is a love story about two people who are torn between Karma (the noble deed) and Dharma (the duty). The film has two veteran composers, A. R. Rahman and Ismail Darbar; the lyrics were written by Javed Akhtar. This film also marks Amrish Puri's final performance. The film, however, did not perform well at the box office. The film was premiered in the March\u00e9 du Film section of the 2005 Cannes Film Festival.",
+            "Girl Crazy (1929 film)\nGirl Crazy was a 1929 comedy film directed by Mack Sennett and starring Andy Clyde as \"a girl-crazy sexagenarian\". The film's story is credited to Hampton Del Ruth, Alfred J. Goulding, Harry McCoy, Earle Rodney, and Mack Sennett.",
+            "Mack 10 discography\nThe discography of West Coast hip hop artist Mack 10 consists of eight studio albums, two compilation albums, twenty-two singles, and fifteen music videos. He has also collaborated on two albums and was featured in two soundtrack albums. After signing to Priority Records in 1995, Mack 10 released his self-titled debut album in June. The album, produced by fellow rapper Ice Cube, saw considerable commercial success and went Gold in the US. His prosperity continued when he released \"Based on a True Story\", which peaked at number fourteen on the US \"Billboard\" 200. The rapper collaborated with Tha Dogg Pound to record \"Nothin' But the Cavi Hit\" which was released on the \"Rhyme & Reason\" soundtrack. Mack 10's 1998 release, \"The Recipe\", was the rapper's third and final album to be certified Gold in the US by RIAA. Mack 10's album sales began to decline after his first compilation album release, \"Hoo-Bangin': The Mix Tape, Vol. 1\". His fourth studio album, \"The Paper Route\" (2000), debuted at number nineteen on the \"Billboard\" 200; however, it failed to earn the rapper any RIAA certifications.",
+            "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+            "Joya (singer)\nJoya (birth name Joya Owens born 1973) in Detroit, Michigan, United States is an American R&B/soul singer - songwriter, who released her debut album \"Here I Am\" on Atlas/A&M record label. Following her debut album release, Joya was a background session vocalist for various artists' including R&B/soul singer Mary J. Blige. She also toured as a background singer during Blige's \"Share My World Tour\" in 1998.",
+            "Blue Fire\nBlue Fire is a launched roller coaster at Europa-Park. The coaster opened in 2009 as part of a new Iceland-themed expansion to Europa-Park. As the first launched coaster built by MACK Rides, Blue Fire will serve as the park's tenth roller coaster and their first roller coaster with inversions. The ride's tagline is \"Discover Pure Energy\"."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 3,
+        "question": "Are Willard Mack and Subhash Ghai both involved in film?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Willard Mack's professional background.",
+                "output": "Willard Mack was a playwright and actor who wrote the 1916 American drama silent film \"Nanette of the Wilds\" and also appeared in the film. He also worked on the 1929 comedy film \"Girl Crazy\" and had a successful career in the entertainment industry. Additionally, there is a mention of a fellow actor named Wilbur Mack, who is not a relative of Willard Mack.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Subhash Ghai's professional background.",
+                "output": "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and production in various other films, including \"Fear\" (1965), \"Joggers' Park\" (2003), \"Samhita\" (2013), \"Yuvvraaj\" (2008), and \"Kisna: The Warrior Poet\" (2005).",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Willard Mack is involved in the film industry based on his professional background.",
+                "output": "Based on his professional background as a playwright, actor, and involvement in the production of films such as \"Nanette of the Wilds\" and \"Girl Crazy,\" it can be determined that Willard Mack was indeed involved in the film industry.",
+                "upstream": [
+                    [
+                        "1",
+                        "Willard Mack was a playwright and actor who wrote the 1916 American drama silent film \"Nanette of the Wilds\" and also appeared in the film. He also worked on the 1929 comedy film \"Girl Crazy\" and had a successful career in the entertainment industry. Additionally, there is a mention of a fellow actor named Wilbur Mack, who is not a relative of Willard Mack."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Subhash Ghai is involved in the film industry based on his professional background.",
+                "output": "Yes, Subhash Ghai is involved in the film industry based on his professional background as a film director, producer, screenwriter, actor, and founder of a film and media institution. He has a long and successful career in Hindi cinema and has made significant contributions to the industry.",
+                "upstream": [
+                    [
+                        "2",
+                        "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and production in various other films, including \"Fear\" (1965), \"Joggers' Park\" (2003), \"Samhita\" (2013), \"Yuvvraaj\" (2008), and \"Kisna: The Warrior Poet\" (2005)."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Combine results from the analysis of both Willard Mack and Subhash Ghai to conclude if both are involved in film.",
+                "output": "Based on the analysis of both Willard Mack and Subhash Ghai, it can be concluded that both individuals are indeed involved in the film industry. Willard Mack's involvement as a playwright, actor, and producer of films such as \"Nanette of the Wilds\" and \"Girl Crazy\" demonstrates his connection to the industry. Similarly, Subhash Ghai's extensive career as a film director, producer, screenwriter, actor, and founder of a film and media institution solidifies his involvement in the film industry. Therefore, both Willard Mack and Subhash Ghai have significant ties to the film industry.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on his professional background as a playwright, actor, and involvement in the production of films such as \"Nanette of the Wilds\" and \"Girl Crazy,\" it can be determined that Willard Mack was indeed involved in the film industry."
+                    ],
+                    [
+                        "4",
+                        "Yes, Subhash Ghai is involved in the film industry based on his professional background as a film director, producer, screenwriter, actor, and founder of a film and media institution. He has a long and successful career in Hindi cinema and has made significant contributions to the industry."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Wilbur Mack\n\"(for non-related playwright and fellow actor Willard Mack, see Willard Mack)\"",
+            "Willard Mack\n\"(for fellow actor also born 1873, but not a relative, see Wilbur Mack)\"",
+            "Nanette of the Wilds\nNanette of the Wilds is a 1916 American drama silent film directed by Joseph Kaufman and written by Willard Mack. The film stars Pauline Frederick, Willard Mack, Macey Harlam, Charles Brandt, Frank Joyner and Daniel Pennell. The film was released on November 26, 1916, by Paramount Pictures.",
+            "Subhash Ghai\nSubhash Ghai (born 24 January 1945) is an Indian film director, producer and screenwriter, known for his works predominantly in Hindi cinema. His most notable works include \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and Black & White (2008). In 1982, He started Mukta Arts Private Limited which, in 2000, became a public company, with Subhash Ghai as its executive chairman. In 2006, he received the National Film Award, for producing the social problem film \"Iqbal\", in the same year he founded the Whistling Woods International film and media institution in Mumbai. In 2015, He received the IIFA Award for outstanding contribution to Indian Cinema.",
+            "Karma (1986 film)\nKarma (Hindi:\u0915\u0930\u094d\u092e\u093e) is a 1986 Indian action film directed by Subhash Ghai and featuring an ensemble cast including Dilip Kumar, Nutan, Naseeruddin Shah, Jackie Shroff, Anil Kapoor, Poonam Dhillon, Sridevi and Anupam Kher. The film reunites Subhash Ghai and Dilip Kumar after the success of their last film together \"Vidhaata\" (1982). The film also marked the first time Dilip Kumar was paired with veteran actress Nutan. The film was a huge success at box office.",
+            "Kalicharan\nKalicharan is a 1976 Indian action drama film directed by Subhash Ghai and starring Shatrughan Sinha, Reena Roy, Ajit, Danny Denzongpa, Madan Puri and Premnath. The film became a box office hit. The film was the directorial debut of Subhash Ghai and was the breakthrough role for stars Shatrughan Sinha and Reena Roy. It was later remade into the Telugu film \"Khaidi Kalidasu\" (1977), Kannada film Kaalinga (1980) with Vishnuvardhan and the Tamil film \"Sangili\" (1982) with Prabhu and Sivaji Ganesan in the lead roles and in Malayalam \"Pathamudayam\" (1985) by Mohanlal.",
+            "Fear (1965 film)\nFear (1965) is a 35\u00a0mm short Hindi film directed by legendary filmmaker Ritwik Ghatak. In 1964-65 Ritwik created this documentary for the acting department of Pune Film Institute. Mainly the students of Pune Film Institute participated in this film. Director Subhash Ghai, and actor Asrani then students of that institute acted in this film.",
+            "Joggers' Park (film)\nJoggers' Park is a 2003 Indian drama film made in English and Hindi. It is directed by Anant Balani and written by Subhash Ghai. It stars Bengali actor Victor Bannerjee, Perizaad Zorabian and Divya Dutta in lead roles. It was filmed on location in Mumbai's Jogger's Park. It was inspired from the storyline of 1986 film Anokha Rishta starring Rajesh Khanna.",
+            "Samhita (film)\nSamhita: The Script (or simply Samhita) is a 2013 Indian Marathi film directed by duo Sumitra BhaveSunil Sukthankar and produced by Mukta Arts in association with Ashokk Movies. The film starts Devika Daftardar, Milind Soman, and Rajeshwari Sachdev in the lead roles along with Uttara Baokar and Jyoti Subhash reprising the supporting roles. The film had its theatrical release on 18 October 2013 and won several awards including two National Film Awards at the 60th National Film Awards; the Best Female Playback Singer for Arati Ankalikar-Tikekar and the Best Music Direction (Songs) for Shailendra Barve. The director-producer Subhash Ghai, the founder of Mukta Arts, was not initially part of the film and was approached when the director duo faced a financial problems.",
+            "Yuvvraaj\nYuvvraaj is a 2008 Indian film directed and produced by Subhash Ghai. The film stars Anil Kapoor, Salman Khan, Zayed Khan and Katrina Kaif in the lead roles and is inspired from Hollywood film \"Rain Man\" (1988). \"Yuvvraaj\" is a musical story of a fragmented family of three brothers who try to con each other to inherit their father's wealth. According to the director, the film is about the arrogance and overconfidence of contemporary youth. The film was released on 28 November 2008. Although the film received mixed reviews from critics and bombed at the box-office, its script was added to the library of the Academy of Motion Picture Arts and Sciences in 2009.",
+            "Kisna: The Warrior Poet\nKisna: The Warrior Poet is an Indian Hindi film written, edited, produced and directed by Subhash Ghai and starring Vivek Oberoi (who plays the title role), Antonia Bernath, and Isha Sharvani. The musical film is set in the British India of the tumultuous 1940s when Indian nationalists fighting for the country's independence rose up as one, urging the British Raj to leave. It is a love story about two people who are torn between Karma (the noble deed) and Dharma (the duty). The film has two veteran composers, A. R. Rahman and Ismail Darbar; the lyrics were written by Javed Akhtar. This film also marks Amrish Puri's final performance. The film, however, did not perform well at the box office. The film was premiered in the March\u00e9 du Film section of the 2005 Cannes Film Festival.",
+            "Girl Crazy (1929 film)\nGirl Crazy was a 1929 comedy film directed by Mack Sennett and starring Andy Clyde as \"a girl-crazy sexagenarian\". The film's story is credited to Hampton Del Ruth, Alfred J. Goulding, Harry McCoy, Earle Rodney, and Mack Sennett.",
+            "Mack 10 discography\nThe discography of West Coast hip hop artist Mack 10 consists of eight studio albums, two compilation albums, twenty-two singles, and fifteen music videos. He has also collaborated on two albums and was featured in two soundtrack albums. After signing to Priority Records in 1995, Mack 10 released his self-titled debut album in June. The album, produced by fellow rapper Ice Cube, saw considerable commercial success and went Gold in the US. His prosperity continued when he released \"Based on a True Story\", which peaked at number fourteen on the US \"Billboard\" 200. The rapper collaborated with Tha Dogg Pound to record \"Nothin' But the Cavi Hit\" which was released on the \"Rhyme & Reason\" soundtrack. Mack 10's 1998 release, \"The Recipe\", was the rapper's third and final album to be certified Gold in the US by RIAA. Mack 10's album sales began to decline after his first compilation album release, \"Hoo-Bangin': The Mix Tape, Vol. 1\". His fourth studio album, \"The Paper Route\" (2000), debuted at number nineteen on the \"Billboard\" 200; however, it failed to earn the rapper any RIAA certifications.",
+            "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+            "Joya (singer)\nJoya (birth name Joya Owens born 1973) in Detroit, Michigan, United States is an American R&B/soul singer - songwriter, who released her debut album \"Here I Am\" on Atlas/A&M record label. Following her debut album release, Joya was a background session vocalist for various artists' including R&B/soul singer Mary J. Blige. She also toured as a background singer during Blige's \"Share My World Tour\" in 1998.",
+            "Blue Fire\nBlue Fire is a launched roller coaster at Europa-Park. The coaster opened in 2009 as part of a new Iceland-themed expansion to Europa-Park. As the first launched coaster built by MACK Rides, Blue Fire will serve as the park's tenth roller coaster and their first roller coaster with inversions. The ride's tagline is \"Discover Pure Energy\"."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 4,
+        "question": "Are Willard Mack and Subhash Ghai both involved in film?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Willard Mack's professional background.",
+                "output": "There is no relevant information about a person named Willard Mack in the provided text.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Subhash Ghai's professional background.",
+                "output": "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and production in various other films, including \"Joggers' Park\" (2003), \"Yuvvraaj\" (2008), and \"Kisna: The Warrior Poet\" (2005).",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Willard Mack is involved in the film industry based on his professional background.",
+                "output": "Based on the lack of relevant information about Willard Mack in the provided text, it is not possible to determine if he is involved in the film industry based on his professional background. Further research or information is needed to make a determination.",
+                "upstream": [
+                    [
+                        "1",
+                        "There is no relevant information about a person named Willard Mack in the provided text."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Subhash Ghai is involved in the film industry based on his professional background.",
+                "output": "Yes, Subhash Ghai is involved in the film industry based on his professional background as a film director, producer, screenwriter, and executive chairman of a film production company. He has also received awards for his contributions to Indian cinema and has been involved in acting and production in various films.",
+                "upstream": [
+                    [
+                        "2",
+                        "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and production in various other films, including \"Joggers' Park\" (2003), \"Yuvvraaj\" (2008), and \"Kisna: The Warrior Poet\" (2005)."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Combine results from the analysis of both Willard Mack and Subhash Ghai to conclude if both are involved in film.",
+                "output": "Based on the analysis of both Willard Mack and Subhash Ghai, it can be concluded that Subhash Ghai is involved in the film industry based on his extensive professional background as a film director, producer, screenwriter, and executive chairman of a film production company. However, it is not possible to determine if Willard Mack is involved in the film industry based on the lack of relevant information about his professional background. Therefore, it can be concluded that Subhash Ghai is involved in film, while further research or information is needed to make a determination about Willard Mack.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the lack of relevant information about Willard Mack in the provided text, it is not possible to determine if he is involved in the film industry based on his professional background. Further research or information is needed to make a determination."
+                    ],
+                    [
+                        "4",
+                        "Yes, Subhash Ghai is involved in the film industry based on his professional background as a film director, producer, screenwriter, and executive chairman of a film production company. He has also received awards for his contributions to Indian cinema and has been involved in acting and production in various films."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "White Knights of the Ku Klux Klan\nThe White Knights of the Ku Klux Klan are considered the most militant as well as the most violent chapter of the Ku Klux Klan in history. They originated in Mississippi in the early 1960s under the leadership of Samuel Bowers, its first Grand Wizard. The White Knights of Mississippi were formed in 1964, and they included roughly 200 members of the Original Knights of Louisiana. The White Knights were not interested in holding public demonstrations or in letting any information about themselves get out to the masses. Similar to the United Klans of America (UKA), the White Knights of Mississippi were very secretive about their group. Within a year, their membership was up to around six thousand, and they had Klaverns in over half of the counties in Mississippi. But by 1967, the number of active members had shrunk to around four hundred.",
+            "Texas hold 'em\nTexas hold 'em (also known as Texas holdem, hold 'em, and holdem) is a variation of the card game of poker. Two cards, known as the hole cards, are dealt face down to each player, and then five community cards are dealt face up in three stages. The stages consist of a series of three cards (\"the flop\"), later an additional single card (\"the turn\" or \"fourth street\"), and a final card (\"the river\" or \"fifth street\"). Each player seeks the best five card poker hand from any combination of the seven cards of the five community cards and their own two hole cards. (If a player's best five-card poker hand consists only of the five community cards and none of the player's hole cards, it is called \"playing the board\". If you play the board on the river, then you can do no better than tie the other player(s) in the game if no player can make a better hand than the board represents, using either or both hole cards.) Players have betting options to check, call, raise, or fold. Rounds of betting take place before the flop is dealt and after each subsequent deal.",
+            "North Sentinel Island\nNorth Sentinel Island is one of the Andaman Islands, which includes South Sentinel Island, in the Bay of Bengal. It is home to the Sentinelese who, often violently, reject any contact with the outside world, and are among the last people worldwide to remain virtually untouched by modern civilization. As such, only limited information about the island is known.",
+            "Wilbur Mack\n\"(for non-related playwright and fellow actor Willard Mack, see Willard Mack)\"",
+            "Tax code (PAYE)\nIn the UK, every person paid under the PAYE scheme is allocated a tax code by HM Revenue and Customs. This is usually in the form of a number followed by a letter suffix, though other 'non-standard' codes are also used. This code describes to employers how much tax to deduct from an employee. The code is normally based on information provided to HMRC by the taxpayer or their employer. Tax codes are usually adjusted once a year to take into account any changes made in the National Budget, but can be altered more often to reflect an employee's circumstances. Tax codes can be changed if someone has paid too much or too little tax the previous tax year, if an employee receives state benefits, or has non-PAYE income (for example, self-employed earnings). Changes in a tax code are to ensure the employee has paid the correct amount of tax by the end of each tax year.",
+            "Against All Will\nAgainst All Will is a rock quartet from Los Angeles, California, whose debut album lineup was formed in Spring 2009 by Jimmy Allen (formerly of Puddle of Mudd), Jeff Current (formerly of Seven Story Drop), Steve \"Boomstick\" Wilson (formerly of Dead Kennedys and t.A.T.u.), and Cello Dias (formerly of Soulfly). Songs \"All About You\" and \"The Drug I Need\" from their debut album entitled A Rhyme & Reason ranked in the national rock radio top 50 in 2010.",
+            "List of Nick Fury comics\nThese are tiles about the characters of Nick Fury, Nick Fury Jr., Ultimate Nick Fury or any other alternative version of the character published by Marvel Comics.",
+            "Kermode bear\nThe Kermode bear (\"Ursus americanus kermodei\"), also known as the \"spirit bear\" (particularly in British Columbia), is a rare subspecies of the American black bear living in the Central and North Coast regions of British Columbia, Canada. It is the official provincial mammal of British Columbia. It is noted for about one-tenth of its population having white or cream-coloured coats like polar bears. This colour is due to a double recessive gene unique in the subspecies. They are not albinos and not any more related to polar bears or the \"blonde\" brown bears of Alaska's \"ABC Islands\" than other members of their species. Sometimes, a mother black bear can have a white cub.",
+            "Subhash Ghai\nSubhash Ghai (born 24 January 1945) is an Indian film director, producer and screenwriter, known for his works predominantly in Hindi cinema. His most notable works include \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and Black & White (2008). In 1982, He started Mukta Arts Private Limited which, in 2000, became a public company, with Subhash Ghai as its executive chairman. In 2006, he received the National Film Award, for producing the social problem film \"Iqbal\", in the same year he founded the Whistling Woods International film and media institution in Mumbai. In 2015, He received the IIFA Award for outstanding contribution to Indian Cinema.",
+            "Karma (1986 film)\nKarma (Hindi:\u0915\u0930\u094d\u092e\u093e) is a 1986 Indian action film directed by Subhash Ghai and featuring an ensemble cast including Dilip Kumar, Nutan, Naseeruddin Shah, Jackie Shroff, Anil Kapoor, Poonam Dhillon, Sridevi and Anupam Kher. The film reunites Subhash Ghai and Dilip Kumar after the success of their last film together \"Vidhaata\" (1982). The film also marked the first time Dilip Kumar was paired with veteran actress Nutan. The film was a huge success at box office.",
+            "Kalicharan\nKalicharan is a 1976 Indian action drama film directed by Subhash Ghai and starring Shatrughan Sinha, Reena Roy, Ajit, Danny Denzongpa, Madan Puri and Premnath. The film became a box office hit. The film was the directorial debut of Subhash Ghai and was the breakthrough role for stars Shatrughan Sinha and Reena Roy. It was later remade into the Telugu film \"Khaidi Kalidasu\" (1977), Kannada film Kaalinga (1980) with Vishnuvardhan and the Tamil film \"Sangili\" (1982) with Prabhu and Sivaji Ganesan in the lead roles and in Malayalam \"Pathamudayam\" (1985) by Mohanlal.",
+            "Fear (1965 film)\nFear (1965) is a 35\u00a0mm short Hindi film directed by legendary filmmaker Ritwik Ghatak. In 1964-65 Ritwik created this documentary for the acting department of Pune Film Institute. Mainly the students of Pune Film Institute participated in this film. Director Subhash Ghai, and actor Asrani then students of that institute acted in this film.",
+            "Joggers' Park (film)\nJoggers' Park is a 2003 Indian drama film made in English and Hindi. It is directed by Anant Balani and written by Subhash Ghai. It stars Bengali actor Victor Bannerjee, Perizaad Zorabian and Divya Dutta in lead roles. It was filmed on location in Mumbai's Jogger's Park. It was inspired from the storyline of 1986 film Anokha Rishta starring Rajesh Khanna.",
+            "Samhita (film)\nSamhita: The Script (or simply Samhita) is a 2013 Indian Marathi film directed by duo Sumitra BhaveSunil Sukthankar and produced by Mukta Arts in association with Ashokk Movies. The film starts Devika Daftardar, Milind Soman, and Rajeshwari Sachdev in the lead roles along with Uttara Baokar and Jyoti Subhash reprising the supporting roles. The film had its theatrical release on 18 October 2013 and won several awards including two National Film Awards at the 60th National Film Awards; the Best Female Playback Singer for Arati Ankalikar-Tikekar and the Best Music Direction (Songs) for Shailendra Barve. The director-producer Subhash Ghai, the founder of Mukta Arts, was not initially part of the film and was approached when the director duo faced a financial problems.",
+            "Yuvvraaj\nYuvvraaj is a 2008 Indian film directed and produced by Subhash Ghai. The film stars Anil Kapoor, Salman Khan, Zayed Khan and Katrina Kaif in the lead roles and is inspired from Hollywood film \"Rain Man\" (1988). \"Yuvvraaj\" is a musical story of a fragmented family of three brothers who try to con each other to inherit their father's wealth. According to the director, the film is about the arrogance and overconfidence of contemporary youth. The film was released on 28 November 2008. Although the film received mixed reviews from critics and bombed at the box-office, its script was added to the library of the Academy of Motion Picture Arts and Sciences in 2009.",
+            "Kisna: The Warrior Poet\nKisna: The Warrior Poet is an Indian Hindi film written, edited, produced and directed by Subhash Ghai and starring Vivek Oberoi (who plays the title role), Antonia Bernath, and Isha Sharvani. The musical film is set in the British India of the tumultuous 1940s when Indian nationalists fighting for the country's independence rose up as one, urging the British Raj to leave. It is a love story about two people who are torn between Karma (the noble deed) and Dharma (the duty). The film has two veteran composers, A. R. Rahman and Ismail Darbar; the lyrics were written by Javed Akhtar. This film also marks Amrish Puri's final performance. The film, however, did not perform well at the box office. The film was premiered in the March\u00e9 du Film section of the 2005 Cannes Film Festival."
+        ],
+        "recall": 0.3333333333333333
+    },
+    {
+        "attempt": 5,
+        "question": "Are Willard Mack and Subhash Ghai both involved in film?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Willard Mack's professional background.",
+                "output": "Willard Mack was a playwright and actor who wrote the 1916 American drama silent film \"Nanette of the Wilds\" and also appeared in the film. He also worked on the 1929 comedy film \"Girl Crazy\" and had a successful career in the entertainment industry. Additionally, there is a mention of a fellow actor named Wilbur Mack, who is not a relative of Willard Mack.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Subhash Ghai's professional background.",
+                "output": "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and writing for films such as \"Fear\" (1965), \"Joggers' Park\" (2003), \"Samhita\" (2013), \"Yuvvraaj\" (2008), and \"Kisna: The Warrior Poet\" (2005).",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Willard Mack is involved in the film industry based on his professional background.",
+                "output": "Based on his professional background as a playwright, actor, and involvement in the production of several films, it can be determined that Willard Mack is indeed involved in the film industry.",
+                "upstream": [
+                    [
+                        "1",
+                        "Willard Mack was a playwright and actor who wrote the 1916 American drama silent film \"Nanette of the Wilds\" and also appeared in the film. He also worked on the 1929 comedy film \"Girl Crazy\" and had a successful career in the entertainment industry. Additionally, there is a mention of a fellow actor named Wilbur Mack, who is not a relative of Willard Mack."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Subhash Ghai is involved in the film industry based on his professional background.",
+                "output": "Yes, based on his professional background, Subhash Ghai is definitely involved in the film industry as a director, producer, screenwriter, and also as the executive chairman of a film production company. He has also been involved in acting and writing for films, and has received awards for his contributions to Indian cinema.",
+                "upstream": [
+                    [
+                        "2",
+                        "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and writing for films such as \"Fear\" (1965), \"Joggers' Park\" (2003), \"Samhita\" (2013), \"Yuvvraaj\" (2008), and \"Kisna: The Warrior Poet\" (2005)."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Combine results from the analysis of both Willard Mack and Subhash Ghai to conclude if both are involved in film.",
+                "output": "Based on the analysis of both Willard Mack and Subhash Ghai, it can be concluded that both individuals are indeed involved in the film industry. Willard Mack's background as a playwright, actor, and involvement in film production, along with Subhash Ghai's extensive experience as a director, producer, screenwriter, and executive chairman of a film production company, clearly demonstrate their involvement in the film industry. Therefore, both Willard Mack and Subhash Ghai are involved in film.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on his professional background as a playwright, actor, and involvement in the production of several films, it can be determined that Willard Mack is indeed involved in the film industry."
+                    ],
+                    [
+                        "4",
+                        "Yes, based on his professional background, Subhash Ghai is definitely involved in the film industry as a director, producer, screenwriter, and also as the executive chairman of a film production company. He has also been involved in acting and writing for films, and has received awards for his contributions to Indian cinema."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Wilbur Mack\n\"(for non-related playwright and fellow actor Willard Mack, see Willard Mack)\"",
+            "Willard Mack\n\"(for fellow actor also born 1873, but not a relative, see Wilbur Mack)\"",
+            "Nanette of the Wilds\nNanette of the Wilds is a 1916 American drama silent film directed by Joseph Kaufman and written by Willard Mack. The film stars Pauline Frederick, Willard Mack, Macey Harlam, Charles Brandt, Frank Joyner and Daniel Pennell. The film was released on November 26, 1916, by Paramount Pictures.",
+            "Subhash Ghai\nSubhash Ghai (born 24 January 1945) is an Indian film director, producer and screenwriter, known for his works predominantly in Hindi cinema. His most notable works include \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and Black & White (2008). In 1982, He started Mukta Arts Private Limited which, in 2000, became a public company, with Subhash Ghai as its executive chairman. In 2006, he received the National Film Award, for producing the social problem film \"Iqbal\", in the same year he founded the Whistling Woods International film and media institution in Mumbai. In 2015, He received the IIFA Award for outstanding contribution to Indian Cinema.",
+            "Karma (1986 film)\nKarma (Hindi:\u0915\u0930\u094d\u092e\u093e) is a 1986 Indian action film directed by Subhash Ghai and featuring an ensemble cast including Dilip Kumar, Nutan, Naseeruddin Shah, Jackie Shroff, Anil Kapoor, Poonam Dhillon, Sridevi and Anupam Kher. The film reunites Subhash Ghai and Dilip Kumar after the success of their last film together \"Vidhaata\" (1982). The film also marked the first time Dilip Kumar was paired with veteran actress Nutan. The film was a huge success at box office.",
+            "Kalicharan\nKalicharan is a 1976 Indian action drama film directed by Subhash Ghai and starring Shatrughan Sinha, Reena Roy, Ajit, Danny Denzongpa, Madan Puri and Premnath. The film became a box office hit. The film was the directorial debut of Subhash Ghai and was the breakthrough role for stars Shatrughan Sinha and Reena Roy. It was later remade into the Telugu film \"Khaidi Kalidasu\" (1977), Kannada film Kaalinga (1980) with Vishnuvardhan and the Tamil film \"Sangili\" (1982) with Prabhu and Sivaji Ganesan in the lead roles and in Malayalam \"Pathamudayam\" (1985) by Mohanlal.",
+            "Fear (1965 film)\nFear (1965) is a 35\u00a0mm short Hindi film directed by legendary filmmaker Ritwik Ghatak. In 1964-65 Ritwik created this documentary for the acting department of Pune Film Institute. Mainly the students of Pune Film Institute participated in this film. Director Subhash Ghai, and actor Asrani then students of that institute acted in this film.",
+            "Joggers' Park (film)\nJoggers' Park is a 2003 Indian drama film made in English and Hindi. It is directed by Anant Balani and written by Subhash Ghai. It stars Bengali actor Victor Bannerjee, Perizaad Zorabian and Divya Dutta in lead roles. It was filmed on location in Mumbai's Jogger's Park. It was inspired from the storyline of 1986 film Anokha Rishta starring Rajesh Khanna.",
+            "Samhita (film)\nSamhita: The Script (or simply Samhita) is a 2013 Indian Marathi film directed by duo Sumitra BhaveSunil Sukthankar and produced by Mukta Arts in association with Ashokk Movies. The film starts Devika Daftardar, Milind Soman, and Rajeshwari Sachdev in the lead roles along with Uttara Baokar and Jyoti Subhash reprising the supporting roles. The film had its theatrical release on 18 October 2013 and won several awards including two National Film Awards at the 60th National Film Awards; the Best Female Playback Singer for Arati Ankalikar-Tikekar and the Best Music Direction (Songs) for Shailendra Barve. The director-producer Subhash Ghai, the founder of Mukta Arts, was not initially part of the film and was approached when the director duo faced a financial problems.",
+            "Yuvvraaj\nYuvvraaj is a 2008 Indian film directed and produced by Subhash Ghai. The film stars Anil Kapoor, Salman Khan, Zayed Khan and Katrina Kaif in the lead roles and is inspired from Hollywood film \"Rain Man\" (1988). \"Yuvvraaj\" is a musical story of a fragmented family of three brothers who try to con each other to inherit their father's wealth. According to the director, the film is about the arrogance and overconfidence of contemporary youth. The film was released on 28 November 2008. Although the film received mixed reviews from critics and bombed at the box-office, its script was added to the library of the Academy of Motion Picture Arts and Sciences in 2009.",
+            "Kisna: The Warrior Poet\nKisna: The Warrior Poet is an Indian Hindi film written, edited, produced and directed by Subhash Ghai and starring Vivek Oberoi (who plays the title role), Antonia Bernath, and Isha Sharvani. The musical film is set in the British India of the tumultuous 1940s when Indian nationalists fighting for the country's independence rose up as one, urging the British Raj to leave. It is a love story about two people who are torn between Karma (the noble deed) and Dharma (the duty). The film has two veteran composers, A. R. Rahman and Ismail Darbar; the lyrics were written by Javed Akhtar. This film also marks Amrish Puri's final performance. The film, however, did not perform well at the box office. The film was premiered in the March\u00e9 du Film section of the 2005 Cannes Film Festival.",
+            "Girl Crazy (1929 film)\nGirl Crazy was a 1929 comedy film directed by Mack Sennett and starring Andy Clyde as \"a girl-crazy sexagenarian\". The film's story is credited to Hampton Del Ruth, Alfred J. Goulding, Harry McCoy, Earle Rodney, and Mack Sennett.",
+            "Mack 10 discography\nThe discography of West Coast hip hop artist Mack 10 consists of eight studio albums, two compilation albums, twenty-two singles, and fifteen music videos. He has also collaborated on two albums and was featured in two soundtrack albums. After signing to Priority Records in 1995, Mack 10 released his self-titled debut album in June. The album, produced by fellow rapper Ice Cube, saw considerable commercial success and went Gold in the US. His prosperity continued when he released \"Based on a True Story\", which peaked at number fourteen on the US \"Billboard\" 200. The rapper collaborated with Tha Dogg Pound to record \"Nothin' But the Cavi Hit\" which was released on the \"Rhyme & Reason\" soundtrack. Mack 10's 1998 release, \"The Recipe\", was the rapper's third and final album to be certified Gold in the US by RIAA. Mack 10's album sales began to decline after his first compilation album release, \"Hoo-Bangin': The Mix Tape, Vol. 1\". His fourth studio album, \"The Paper Route\" (2000), debuted at number nineteen on the \"Billboard\" 200; however, it failed to earn the rapper any RIAA certifications.",
+            "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+            "Joya (singer)\nJoya (birth name Joya Owens born 1973) in Detroit, Michigan, United States is an American R&B/soul singer - songwriter, who released her debut album \"Here I Am\" on Atlas/A&M record label. Following her debut album release, Joya was a background session vocalist for various artists' including R&B/soul singer Mary J. Blige. She also toured as a background singer during Blige's \"Share My World Tour\" in 1998.",
+            "Blue Fire\nBlue Fire is a launched roller coaster at Europa-Park. The coaster opened in 2009 as part of a new Iceland-themed expansion to Europa-Park. As the first launched coaster built by MACK Rides, Blue Fire will serve as the park's tenth roller coaster and their first roller coaster with inversions. The ride's tagline is \"Discover Pure Energy\"."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 6,
+        "question": "Are Willard Mack and Subhash Ghai both involved in film?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Willard Mack's professional background.",
+                "output": "There is no relevant information about a person named Willard Mack in the provided text.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Subhash Ghai's professional background.",
+                "output": "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and producing short films and has also directed and written English and Marathi films.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Willard Mack is involved in the film industry based on his professional background.",
+                "output": "Based on the lack of relevant information about Willard Mack in the provided text, it is not possible to determine if he is involved in the film industry based on his professional background. Further research or information is needed to make a determination.",
+                "upstream": [
+                    [
+                        "1",
+                        "There is no relevant information about a person named Willard Mack in the provided text."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Subhash Ghai is involved in the film industry based on his professional background.",
+                "output": "Yes, based on his professional background, Subhash Ghai is definitely involved in the film industry as a director, producer, screenwriter, and executive chairman of a film production company. He has also received awards for his contributions to Indian cinema and has founded a film and media institution. Additionally, he has been involved in acting, producing short films, and has worked on English and Marathi films.",
+                "upstream": [
+                    [
+                        "2",
+                        "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and producing short films and has also directed and written English and Marathi films."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Combine results from the analysis of both Willard Mack and Subhash Ghai to conclude if both are involved in film.",
+                "output": "Based on the analysis of both Willard Mack and Subhash Ghai, it can be concluded that Subhash Ghai is definitely involved in the film industry, with a diverse range of roles including director, producer, screenwriter, and executive chairman of a film production company. On the other hand, there is a lack of relevant information about Willard Mack in the provided text, making it difficult to determine if he is involved in the film industry based on his professional background. Therefore, while Subhash Ghai is clearly involved in film, further research or information is needed to determine the extent of Willard Mack's involvement in the industry.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the lack of relevant information about Willard Mack in the provided text, it is not possible to determine if he is involved in the film industry based on his professional background. Further research or information is needed to make a determination."
+                    ],
+                    [
+                        "4",
+                        "Yes, based on his professional background, Subhash Ghai is definitely involved in the film industry as a director, producer, screenwriter, and executive chairman of a film production company. He has also received awards for his contributions to Indian cinema and has founded a film and media institution. Additionally, he has been involved in acting, producing short films, and has worked on English and Marathi films."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "White Knights of the Ku Klux Klan\nThe White Knights of the Ku Klux Klan are considered the most militant as well as the most violent chapter of the Ku Klux Klan in history. They originated in Mississippi in the early 1960s under the leadership of Samuel Bowers, its first Grand Wizard. The White Knights of Mississippi were formed in 1964, and they included roughly 200 members of the Original Knights of Louisiana. The White Knights were not interested in holding public demonstrations or in letting any information about themselves get out to the masses. Similar to the United Klans of America (UKA), the White Knights of Mississippi were very secretive about their group. Within a year, their membership was up to around six thousand, and they had Klaverns in over half of the counties in Mississippi. But by 1967, the number of active members had shrunk to around four hundred.",
+            "Texas hold 'em\nTexas hold 'em (also known as Texas holdem, hold 'em, and holdem) is a variation of the card game of poker. Two cards, known as the hole cards, are dealt face down to each player, and then five community cards are dealt face up in three stages. The stages consist of a series of three cards (\"the flop\"), later an additional single card (\"the turn\" or \"fourth street\"), and a final card (\"the river\" or \"fifth street\"). Each player seeks the best five card poker hand from any combination of the seven cards of the five community cards and their own two hole cards. (If a player's best five-card poker hand consists only of the five community cards and none of the player's hole cards, it is called \"playing the board\". If you play the board on the river, then you can do no better than tie the other player(s) in the game if no player can make a better hand than the board represents, using either or both hole cards.) Players have betting options to check, call, raise, or fold. Rounds of betting take place before the flop is dealt and after each subsequent deal.",
+            "North Sentinel Island\nNorth Sentinel Island is one of the Andaman Islands, which includes South Sentinel Island, in the Bay of Bengal. It is home to the Sentinelese who, often violently, reject any contact with the outside world, and are among the last people worldwide to remain virtually untouched by modern civilization. As such, only limited information about the island is known.",
+            "Wilbur Mack\n\"(for non-related playwright and fellow actor Willard Mack, see Willard Mack)\"",
+            "Tax code (PAYE)\nIn the UK, every person paid under the PAYE scheme is allocated a tax code by HM Revenue and Customs. This is usually in the form of a number followed by a letter suffix, though other 'non-standard' codes are also used. This code describes to employers how much tax to deduct from an employee. The code is normally based on information provided to HMRC by the taxpayer or their employer. Tax codes are usually adjusted once a year to take into account any changes made in the National Budget, but can be altered more often to reflect an employee's circumstances. Tax codes can be changed if someone has paid too much or too little tax the previous tax year, if an employee receives state benefits, or has non-PAYE income (for example, self-employed earnings). Changes in a tax code are to ensure the employee has paid the correct amount of tax by the end of each tax year.",
+            "Against All Will\nAgainst All Will is a rock quartet from Los Angeles, California, whose debut album lineup was formed in Spring 2009 by Jimmy Allen (formerly of Puddle of Mudd), Jeff Current (formerly of Seven Story Drop), Steve \"Boomstick\" Wilson (formerly of Dead Kennedys and t.A.T.u.), and Cello Dias (formerly of Soulfly). Songs \"All About You\" and \"The Drug I Need\" from their debut album entitled A Rhyme & Reason ranked in the national rock radio top 50 in 2010.",
+            "List of Nick Fury comics\nThese are tiles about the characters of Nick Fury, Nick Fury Jr., Ultimate Nick Fury or any other alternative version of the character published by Marvel Comics.",
+            "Kermode bear\nThe Kermode bear (\"Ursus americanus kermodei\"), also known as the \"spirit bear\" (particularly in British Columbia), is a rare subspecies of the American black bear living in the Central and North Coast regions of British Columbia, Canada. It is the official provincial mammal of British Columbia. It is noted for about one-tenth of its population having white or cream-coloured coats like polar bears. This colour is due to a double recessive gene unique in the subspecies. They are not albinos and not any more related to polar bears or the \"blonde\" brown bears of Alaska's \"ABC Islands\" than other members of their species. Sometimes, a mother black bear can have a white cub.",
+            "Subhash Ghai\nSubhash Ghai (born 24 January 1945) is an Indian film director, producer and screenwriter, known for his works predominantly in Hindi cinema. His most notable works include \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and Black & White (2008). In 1982, He started Mukta Arts Private Limited which, in 2000, became a public company, with Subhash Ghai as its executive chairman. In 2006, he received the National Film Award, for producing the social problem film \"Iqbal\", in the same year he founded the Whistling Woods International film and media institution in Mumbai. In 2015, He received the IIFA Award for outstanding contribution to Indian Cinema.",
+            "Karma (1986 film)\nKarma (Hindi:\u0915\u0930\u094d\u092e\u093e) is a 1986 Indian action film directed by Subhash Ghai and featuring an ensemble cast including Dilip Kumar, Nutan, Naseeruddin Shah, Jackie Shroff, Anil Kapoor, Poonam Dhillon, Sridevi and Anupam Kher. The film reunites Subhash Ghai and Dilip Kumar after the success of their last film together \"Vidhaata\" (1982). The film also marked the first time Dilip Kumar was paired with veteran actress Nutan. The film was a huge success at box office.",
+            "Kalicharan\nKalicharan is a 1976 Indian action drama film directed by Subhash Ghai and starring Shatrughan Sinha, Reena Roy, Ajit, Danny Denzongpa, Madan Puri and Premnath. The film became a box office hit. The film was the directorial debut of Subhash Ghai and was the breakthrough role for stars Shatrughan Sinha and Reena Roy. It was later remade into the Telugu film \"Khaidi Kalidasu\" (1977), Kannada film Kaalinga (1980) with Vishnuvardhan and the Tamil film \"Sangili\" (1982) with Prabhu and Sivaji Ganesan in the lead roles and in Malayalam \"Pathamudayam\" (1985) by Mohanlal.",
+            "Fear (1965 film)\nFear (1965) is a 35\u00a0mm short Hindi film directed by legendary filmmaker Ritwik Ghatak. In 1964-65 Ritwik created this documentary for the acting department of Pune Film Institute. Mainly the students of Pune Film Institute participated in this film. Director Subhash Ghai, and actor Asrani then students of that institute acted in this film.",
+            "Joggers' Park (film)\nJoggers' Park is a 2003 Indian drama film made in English and Hindi. It is directed by Anant Balani and written by Subhash Ghai. It stars Bengali actor Victor Bannerjee, Perizaad Zorabian and Divya Dutta in lead roles. It was filmed on location in Mumbai's Jogger's Park. It was inspired from the storyline of 1986 film Anokha Rishta starring Rajesh Khanna.",
+            "Samhita (film)\nSamhita: The Script (or simply Samhita) is a 2013 Indian Marathi film directed by duo Sumitra BhaveSunil Sukthankar and produced by Mukta Arts in association with Ashokk Movies. The film starts Devika Daftardar, Milind Soman, and Rajeshwari Sachdev in the lead roles along with Uttara Baokar and Jyoti Subhash reprising the supporting roles. The film had its theatrical release on 18 October 2013 and won several awards including two National Film Awards at the 60th National Film Awards; the Best Female Playback Singer for Arati Ankalikar-Tikekar and the Best Music Direction (Songs) for Shailendra Barve. The director-producer Subhash Ghai, the founder of Mukta Arts, was not initially part of the film and was approached when the director duo faced a financial problems.",
+            "Yuvvraaj\nYuvvraaj is a 2008 Indian film directed and produced by Subhash Ghai. The film stars Anil Kapoor, Salman Khan, Zayed Khan and Katrina Kaif in the lead roles and is inspired from Hollywood film \"Rain Man\" (1988). \"Yuvvraaj\" is a musical story of a fragmented family of three brothers who try to con each other to inherit their father's wealth. According to the director, the film is about the arrogance and overconfidence of contemporary youth. The film was released on 28 November 2008. Although the film received mixed reviews from critics and bombed at the box-office, its script was added to the library of the Academy of Motion Picture Arts and Sciences in 2009.",
+            "Kisna: The Warrior Poet\nKisna: The Warrior Poet is an Indian Hindi film written, edited, produced and directed by Subhash Ghai and starring Vivek Oberoi (who plays the title role), Antonia Bernath, and Isha Sharvani. The musical film is set in the British India of the tumultuous 1940s when Indian nationalists fighting for the country's independence rose up as one, urging the British Raj to leave. It is a love story about two people who are torn between Karma (the noble deed) and Dharma (the duty). The film has two veteran composers, A. R. Rahman and Ismail Darbar; the lyrics were written by Javed Akhtar. This film also marks Amrish Puri's final performance. The film, however, did not perform well at the box office. The film was premiered in the March\u00e9 du Film section of the 2005 Cannes Film Festival."
+        ],
+        "recall": 0.3333333333333333
+    },
+    {
+        "attempt": 7,
+        "question": "Are Willard Mack and Subhash Ghai both involved in film?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Willard Mack's professional background.",
+                "output": "Willard Mack was a playwright and actor who wrote the 1916 American drama silent film \"Nanette of the Wilds\" and also appeared in the film. He also worked on the 1929 comedy film \"Girl Crazy\" and had a successful career in the entertainment industry. Additionally, there is a mention of a fellow actor named Wilbur Mack, who is not a relative. There is no specific information provided about Willard Mack's professional background outside of his work in the film industry.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Subhash Ghai's professional background.",
+                "output": "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and producing films such as \"Joggers' Park\" (2003) and \"Yuvvraaj\" (2008). He also directed the film \"Kisna: The Warrior Poet\" (2005).",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Willard Mack is involved in the film industry based on his professional background.",
+                "output": "Based on the information provided, it can be determined that Willard Mack was involved in the film industry as a playwright, actor, and writer for American drama and comedy films. Therefore, it can be concluded that Willard Mack was involved in the film industry based on his professional background.",
+                "upstream": [
+                    [
+                        "1",
+                        "Willard Mack was a playwright and actor who wrote the 1916 American drama silent film \"Nanette of the Wilds\" and also appeared in the film. He also worked on the 1929 comedy film \"Girl Crazy\" and had a successful career in the entertainment industry. Additionally, there is a mention of a fellow actor named Wilbur Mack, who is not a relative. There is no specific information provided about Willard Mack's professional background outside of his work in the film industry."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Subhash Ghai is involved in the film industry based on his professional background.",
+                "output": "Yes, based on his professional background, Subhash Ghai is involved in the film industry as a director, producer, screenwriter, and founder of a film and media institution. He has a long and notable career in Hindi cinema, with numerous directorial and production credits to his name.",
+                "upstream": [
+                    [
+                        "2",
+                        "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and producing films such as \"Joggers' Park\" (2003) and \"Yuvvraaj\" (2008). He also directed the film \"Kisna: The Warrior Poet\" (2005)."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Combine results from the analysis of both Willard Mack and Subhash Ghai to conclude if both are involved in film.",
+                "output": "Based on the analysis of both Willard Mack and Subhash Ghai, it can be concluded that both individuals are indeed involved in the film industry. Willard Mack was involved as a playwright, actor, and writer for American drama and comedy films, while Subhash Ghai has a long and notable career in Hindi cinema as a director, producer, screenwriter, and founder of a film and media institution. Therefore, both individuals have significant involvement in the film industry based on their professional backgrounds.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the information provided, it can be determined that Willard Mack was involved in the film industry as a playwright, actor, and writer for American drama and comedy films. Therefore, it can be concluded that Willard Mack was involved in the film industry based on his professional background."
+                    ],
+                    [
+                        "4",
+                        "Yes, based on his professional background, Subhash Ghai is involved in the film industry as a director, producer, screenwriter, and founder of a film and media institution. He has a long and notable career in Hindi cinema, with numerous directorial and production credits to his name."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Wilbur Mack\n\"(for non-related playwright and fellow actor Willard Mack, see Willard Mack)\"",
+            "Willard Mack\n\"(for fellow actor also born 1873, but not a relative, see Wilbur Mack)\"",
+            "Nanette of the Wilds\nNanette of the Wilds is a 1916 American drama silent film directed by Joseph Kaufman and written by Willard Mack. The film stars Pauline Frederick, Willard Mack, Macey Harlam, Charles Brandt, Frank Joyner and Daniel Pennell. The film was released on November 26, 1916, by Paramount Pictures.",
+            "Subhash Ghai\nSubhash Ghai (born 24 January 1945) is an Indian film director, producer and screenwriter, known for his works predominantly in Hindi cinema. His most notable works include \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and Black & White (2008). In 1982, He started Mukta Arts Private Limited which, in 2000, became a public company, with Subhash Ghai as its executive chairman. In 2006, he received the National Film Award, for producing the social problem film \"Iqbal\", in the same year he founded the Whistling Woods International film and media institution in Mumbai. In 2015, He received the IIFA Award for outstanding contribution to Indian Cinema.",
+            "Karma (1986 film)\nKarma (Hindi:\u0915\u0930\u094d\u092e\u093e) is a 1986 Indian action film directed by Subhash Ghai and featuring an ensemble cast including Dilip Kumar, Nutan, Naseeruddin Shah, Jackie Shroff, Anil Kapoor, Poonam Dhillon, Sridevi and Anupam Kher. The film reunites Subhash Ghai and Dilip Kumar after the success of their last film together \"Vidhaata\" (1982). The film also marked the first time Dilip Kumar was paired with veteran actress Nutan. The film was a huge success at box office.",
+            "Kalicharan\nKalicharan is a 1976 Indian action drama film directed by Subhash Ghai and starring Shatrughan Sinha, Reena Roy, Ajit, Danny Denzongpa, Madan Puri and Premnath. The film became a box office hit. The film was the directorial debut of Subhash Ghai and was the breakthrough role for stars Shatrughan Sinha and Reena Roy. It was later remade into the Telugu film \"Khaidi Kalidasu\" (1977), Kannada film Kaalinga (1980) with Vishnuvardhan and the Tamil film \"Sangili\" (1982) with Prabhu and Sivaji Ganesan in the lead roles and in Malayalam \"Pathamudayam\" (1985) by Mohanlal.",
+            "Fear (1965 film)\nFear (1965) is a 35\u00a0mm short Hindi film directed by legendary filmmaker Ritwik Ghatak. In 1964-65 Ritwik created this documentary for the acting department of Pune Film Institute. Mainly the students of Pune Film Institute participated in this film. Director Subhash Ghai, and actor Asrani then students of that institute acted in this film.",
+            "Joggers' Park (film)\nJoggers' Park is a 2003 Indian drama film made in English and Hindi. It is directed by Anant Balani and written by Subhash Ghai. It stars Bengali actor Victor Bannerjee, Perizaad Zorabian and Divya Dutta in lead roles. It was filmed on location in Mumbai's Jogger's Park. It was inspired from the storyline of 1986 film Anokha Rishta starring Rajesh Khanna.",
+            "Samhita (film)\nSamhita: The Script (or simply Samhita) is a 2013 Indian Marathi film directed by duo Sumitra BhaveSunil Sukthankar and produced by Mukta Arts in association with Ashokk Movies. The film starts Devika Daftardar, Milind Soman, and Rajeshwari Sachdev in the lead roles along with Uttara Baokar and Jyoti Subhash reprising the supporting roles. The film had its theatrical release on 18 October 2013 and won several awards including two National Film Awards at the 60th National Film Awards; the Best Female Playback Singer for Arati Ankalikar-Tikekar and the Best Music Direction (Songs) for Shailendra Barve. The director-producer Subhash Ghai, the founder of Mukta Arts, was not initially part of the film and was approached when the director duo faced a financial problems.",
+            "Yuvvraaj\nYuvvraaj is a 2008 Indian film directed and produced by Subhash Ghai. The film stars Anil Kapoor, Salman Khan, Zayed Khan and Katrina Kaif in the lead roles and is inspired from Hollywood film \"Rain Man\" (1988). \"Yuvvraaj\" is a musical story of a fragmented family of three brothers who try to con each other to inherit their father's wealth. According to the director, the film is about the arrogance and overconfidence of contemporary youth. The film was released on 28 November 2008. Although the film received mixed reviews from critics and bombed at the box-office, its script was added to the library of the Academy of Motion Picture Arts and Sciences in 2009.",
+            "Kisna: The Warrior Poet\nKisna: The Warrior Poet is an Indian Hindi film written, edited, produced and directed by Subhash Ghai and starring Vivek Oberoi (who plays the title role), Antonia Bernath, and Isha Sharvani. The musical film is set in the British India of the tumultuous 1940s when Indian nationalists fighting for the country's independence rose up as one, urging the British Raj to leave. It is a love story about two people who are torn between Karma (the noble deed) and Dharma (the duty). The film has two veteran composers, A. R. Rahman and Ismail Darbar; the lyrics were written by Javed Akhtar. This film also marks Amrish Puri's final performance. The film, however, did not perform well at the box office. The film was premiered in the March\u00e9 du Film section of the 2005 Cannes Film Festival.",
+            "Girl Crazy (1929 film)\nGirl Crazy was a 1929 comedy film directed by Mack Sennett and starring Andy Clyde as \"a girl-crazy sexagenarian\". The film's story is credited to Hampton Del Ruth, Alfred J. Goulding, Harry McCoy, Earle Rodney, and Mack Sennett.",
+            "Mack 10 discography\nThe discography of West Coast hip hop artist Mack 10 consists of eight studio albums, two compilation albums, twenty-two singles, and fifteen music videos. He has also collaborated on two albums and was featured in two soundtrack albums. After signing to Priority Records in 1995, Mack 10 released his self-titled debut album in June. The album, produced by fellow rapper Ice Cube, saw considerable commercial success and went Gold in the US. His prosperity continued when he released \"Based on a True Story\", which peaked at number fourteen on the US \"Billboard\" 200. The rapper collaborated with Tha Dogg Pound to record \"Nothin' But the Cavi Hit\" which was released on the \"Rhyme & Reason\" soundtrack. Mack 10's 1998 release, \"The Recipe\", was the rapper's third and final album to be certified Gold in the US by RIAA. Mack 10's album sales began to decline after his first compilation album release, \"Hoo-Bangin': The Mix Tape, Vol. 1\". His fourth studio album, \"The Paper Route\" (2000), debuted at number nineteen on the \"Billboard\" 200; however, it failed to earn the rapper any RIAA certifications.",
+            "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+            "Joya (singer)\nJoya (birth name Joya Owens born 1973) in Detroit, Michigan, United States is an American R&B/soul singer - songwriter, who released her debut album \"Here I Am\" on Atlas/A&M record label. Following her debut album release, Joya was a background session vocalist for various artists' including R&B/soul singer Mary J. Blige. She also toured as a background singer during Blige's \"Share My World Tour\" in 1998.",
+            "Blue Fire\nBlue Fire is a launched roller coaster at Europa-Park. The coaster opened in 2009 as part of a new Iceland-themed expansion to Europa-Park. As the first launched coaster built by MACK Rides, Blue Fire will serve as the park's tenth roller coaster and their first roller coaster with inversions. The ride's tagline is \"Discover Pure Energy\"."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 8,
+        "question": "Are Willard Mack and Subhash Ghai both involved in film?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Willard Mack's professional background.",
+                "output": "Willard Mack was an American actor, director, and playwright. He was known for his work in the entertainment industry, including his involvement in theater and film. Mack had a successful career and made significant contributions to the performing arts.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Subhash Ghai's professional background.",
+                "output": "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and production in various other films, including \"Joggers' Park\" (2003), \"Yuvvraaj\" (2008), and \"Kisna: The Warrior Poet\" (2005).",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Willard Mack is involved in the film industry based on his professional background.",
+                "output": "Based on the information provided, it can be determined that Willard Mack was indeed involved in the film industry, as he was an actor, director, and playwright known for his work in entertainment, including film.",
+                "upstream": [
+                    [
+                        "1",
+                        "Willard Mack was an American actor, director, and playwright. He was known for his work in the entertainment industry, including his involvement in theater and film. Mack had a successful career and made significant contributions to the performing arts."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Subhash Ghai is involved in the film industry based on his professional background.",
+                "output": "Yes, Subhash Ghai is involved in the film industry as a director, producer, screenwriter, and executive chairman of a film production company. He has also received awards for his contributions to Indian cinema and has been involved in acting and production in various films.",
+                "upstream": [
+                    [
+                        "2",
+                        "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and production in various other films, including \"Joggers' Park\" (2003), \"Yuvvraaj\" (2008), and \"Kisna: The Warrior Poet\" (2005)."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Combine results from the analysis of both Willard Mack and Subhash Ghai to conclude if both are involved in film.",
+                "output": "Based on the analysis of both Willard Mack and Subhash Ghai, it can be concluded that both individuals are indeed involved in the film industry. Willard Mack was involved as an actor, director, and playwright, while Subhash Ghai has been involved as a director, producer, screenwriter, and executive chairman of a film production company. Both individuals have made significant contributions to the film industry, further supporting the conclusion that they are involved in film.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the information provided, it can be determined that Willard Mack was indeed involved in the film industry, as he was an actor, director, and playwright known for his work in entertainment, including film."
+                    ],
+                    [
+                        "4",
+                        "Yes, Subhash Ghai is involved in the film industry as a director, producer, screenwriter, and executive chairman of a film production company. He has also received awards for his contributions to Indian cinema and has been involved in acting and production in various films."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Grace After Midnight\nAccording to the memoir, Pearson says her life was turned around upon learning in prison that a close friend and drug dealer, whom she called \"Uncle\", was killed. Pearson said of her decision to write her book, \"I just want to let people know where I came from ... to share my story. I know the Lord has blessed me. He gave me the power just to tell this story.\" The book also depicts the difficulty with which Pearson attempts to adjust to life after prison; she is fired from two jobs due to her criminal background, which drives her to return temporarily to drug dealing. During an interview about the book, she said, \"Every time I turned around, they kept firing me, so where else could I turn to? The streets never let you down. That's sad to say, but what (was) I supposed to be, starving? Go to a shelter?\"",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Can't Count Me Out\nCan't Count Me Out is the sixth studio album by American R&B/jazz singer Miki Howard, released in 1997 under Hush Records. Howard's first studio recording in four years, the album contains a mixture of soulful ballads, some groovy R&B and a duet with father Clay Graham of gospel group, \"The Pilgrim Jubilees\". Also featured are a few cover tunes, including Janis Ian's \"At Seventeen\" produced by Robby Takac, member of the rock group Goo Goo Dolls, and Stevie Wonder's \"I Love Every Little Thing About You\", a duet with pop/R&B singer Terence Trent D'Arby with Chaka Khan singing background vocals.",
+            "How? (song)\n\"How?\" is a song from John Lennon's second solo album \"Imagine\", released in 1971. It is a contemplative song inspired by the Primal Therapy he was undergoing with his wife Yoko Ono, during which he faced many personal questions such as \"How can I go forward when I don't know which way I'm facing?\" This song also shows his thoughts about the world in general (such as \"And the World is so tough; Sometimes I feel I've had enough\").",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Subhash Ghai\nSubhash Ghai (born 24 January 1945) is an Indian film director, producer and screenwriter, known for his works predominantly in Hindi cinema. His most notable works include \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and Black & White (2008). In 1982, He started Mukta Arts Private Limited which, in 2000, became a public company, with Subhash Ghai as its executive chairman. In 2006, he received the National Film Award, for producing the social problem film \"Iqbal\", in the same year he founded the Whistling Woods International film and media institution in Mumbai. In 2015, He received the IIFA Award for outstanding contribution to Indian Cinema.",
+            "Karma (1986 film)\nKarma (Hindi:\u0915\u0930\u094d\u092e\u093e) is a 1986 Indian action film directed by Subhash Ghai and featuring an ensemble cast including Dilip Kumar, Nutan, Naseeruddin Shah, Jackie Shroff, Anil Kapoor, Poonam Dhillon, Sridevi and Anupam Kher. The film reunites Subhash Ghai and Dilip Kumar after the success of their last film together \"Vidhaata\" (1982). The film also marked the first time Dilip Kumar was paired with veteran actress Nutan. The film was a huge success at box office.",
+            "Kalicharan\nKalicharan is a 1976 Indian action drama film directed by Subhash Ghai and starring Shatrughan Sinha, Reena Roy, Ajit, Danny Denzongpa, Madan Puri and Premnath. The film became a box office hit. The film was the directorial debut of Subhash Ghai and was the breakthrough role for stars Shatrughan Sinha and Reena Roy. It was later remade into the Telugu film \"Khaidi Kalidasu\" (1977), Kannada film Kaalinga (1980) with Vishnuvardhan and the Tamil film \"Sangili\" (1982) with Prabhu and Sivaji Ganesan in the lead roles and in Malayalam \"Pathamudayam\" (1985) by Mohanlal.",
+            "Fear (1965 film)\nFear (1965) is a 35\u00a0mm short Hindi film directed by legendary filmmaker Ritwik Ghatak. In 1964-65 Ritwik created this documentary for the acting department of Pune Film Institute. Mainly the students of Pune Film Institute participated in this film. Director Subhash Ghai, and actor Asrani then students of that institute acted in this film.",
+            "Joggers' Park (film)\nJoggers' Park is a 2003 Indian drama film made in English and Hindi. It is directed by Anant Balani and written by Subhash Ghai. It stars Bengali actor Victor Bannerjee, Perizaad Zorabian and Divya Dutta in lead roles. It was filmed on location in Mumbai's Jogger's Park. It was inspired from the storyline of 1986 film Anokha Rishta starring Rajesh Khanna.",
+            "Samhita (film)\nSamhita: The Script (or simply Samhita) is a 2013 Indian Marathi film directed by duo Sumitra BhaveSunil Sukthankar and produced by Mukta Arts in association with Ashokk Movies. The film starts Devika Daftardar, Milind Soman, and Rajeshwari Sachdev in the lead roles along with Uttara Baokar and Jyoti Subhash reprising the supporting roles. The film had its theatrical release on 18 October 2013 and won several awards including two National Film Awards at the 60th National Film Awards; the Best Female Playback Singer for Arati Ankalikar-Tikekar and the Best Music Direction (Songs) for Shailendra Barve. The director-producer Subhash Ghai, the founder of Mukta Arts, was not initially part of the film and was approached when the director duo faced a financial problems.",
+            "Yuvvraaj\nYuvvraaj is a 2008 Indian film directed and produced by Subhash Ghai. The film stars Anil Kapoor, Salman Khan, Zayed Khan and Katrina Kaif in the lead roles and is inspired from Hollywood film \"Rain Man\" (1988). \"Yuvvraaj\" is a musical story of a fragmented family of three brothers who try to con each other to inherit their father's wealth. According to the director, the film is about the arrogance and overconfidence of contemporary youth. The film was released on 28 November 2008. Although the film received mixed reviews from critics and bombed at the box-office, its script was added to the library of the Academy of Motion Picture Arts and Sciences in 2009.",
+            "Kisna: The Warrior Poet\nKisna: The Warrior Poet is an Indian Hindi film written, edited, produced and directed by Subhash Ghai and starring Vivek Oberoi (who plays the title role), Antonia Bernath, and Isha Sharvani. The musical film is set in the British India of the tumultuous 1940s when Indian nationalists fighting for the country's independence rose up as one, urging the British Raj to leave. It is a love story about two people who are torn between Karma (the noble deed) and Dharma (the duty). The film has two veteran composers, A. R. Rahman and Ismail Darbar; the lyrics were written by Javed Akhtar. This film also marks Amrish Puri's final performance. The film, however, did not perform well at the box office. The film was premiered in the March\u00e9 du Film section of the 2005 Cannes Film Festival."
+        ],
+        "recall": 0.3333333333333333
+    },
+    {
+        "attempt": 9,
+        "question": "Are Willard Mack and Subhash Ghai both involved in film?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Willard Mack's professional background.",
+                "output": "Willard Mack was a playwright and actor who wrote the 1916 American drama silent film \"Nanette of the Wilds\" and also appeared in the film. He also worked on the 1929 comedy film \"Girl Crazy\" and had a successful career in the entertainment industry. Additionally, there is a mention of a fellow actor named Wilbur Mack, who is not a relative of Willard Mack.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Subhash Ghai's professional background.",
+                "output": "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and production in films such as \"Fear\" (1965), \"Joggers' Park\" (2003), \"Samhita\" (2013), \"Yuvvraaj\" (2008), and \"Kisna: The Warrior Poet\" (2005).",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Willard Mack is involved in the film industry based on his professional background.",
+                "output": "Based on his professional background as a playwright, actor, and involvement in the production of several films, it can be determined that Willard Mack is indeed involved in the film industry.",
+                "upstream": [
+                    [
+                        "1",
+                        "Willard Mack was a playwright and actor who wrote the 1916 American drama silent film \"Nanette of the Wilds\" and also appeared in the film. He also worked on the 1929 comedy film \"Girl Crazy\" and had a successful career in the entertainment industry. Additionally, there is a mention of a fellow actor named Wilbur Mack, who is not a relative of Willard Mack."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Subhash Ghai is involved in the film industry based on his professional background.",
+                "output": "Yes, based on his professional background, Subhash Ghai is definitely involved in the film industry as a director, producer, screenwriter, actor, and founder of a film and media institution.",
+                "upstream": [
+                    [
+                        "2",
+                        "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and production in films such as \"Fear\" (1965), \"Joggers' Park\" (2003), \"Samhita\" (2013), \"Yuvvraaj\" (2008), and \"Kisna: The Warrior Poet\" (2005)."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Combine results from the analysis of both Willard Mack and Subhash Ghai to conclude if both are involved in film.",
+                "output": "Based on the analysis of both Willard Mack and Subhash Ghai, it can be concluded that both individuals are indeed involved in the film industry. Willard Mack's background as a playwright, actor, and involvement in film production, along with Subhash Ghai's extensive involvement as a director, producer, screenwriter, actor, and founder of a film and media institution, provide strong evidence of their involvement in the film industry.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on his professional background as a playwright, actor, and involvement in the production of several films, it can be determined that Willard Mack is indeed involved in the film industry."
+                    ],
+                    [
+                        "4",
+                        "Yes, based on his professional background, Subhash Ghai is definitely involved in the film industry as a director, producer, screenwriter, actor, and founder of a film and media institution."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Wilbur Mack\n\"(for non-related playwright and fellow actor Willard Mack, see Willard Mack)\"",
+            "Willard Mack\n\"(for fellow actor also born 1873, but not a relative, see Wilbur Mack)\"",
+            "Nanette of the Wilds\nNanette of the Wilds is a 1916 American drama silent film directed by Joseph Kaufman and written by Willard Mack. The film stars Pauline Frederick, Willard Mack, Macey Harlam, Charles Brandt, Frank Joyner and Daniel Pennell. The film was released on November 26, 1916, by Paramount Pictures.",
+            "Subhash Ghai\nSubhash Ghai (born 24 January 1945) is an Indian film director, producer and screenwriter, known for his works predominantly in Hindi cinema. His most notable works include \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and Black & White (2008). In 1982, He started Mukta Arts Private Limited which, in 2000, became a public company, with Subhash Ghai as its executive chairman. In 2006, he received the National Film Award, for producing the social problem film \"Iqbal\", in the same year he founded the Whistling Woods International film and media institution in Mumbai. In 2015, He received the IIFA Award for outstanding contribution to Indian Cinema.",
+            "Karma (1986 film)\nKarma (Hindi:\u0915\u0930\u094d\u092e\u093e) is a 1986 Indian action film directed by Subhash Ghai and featuring an ensemble cast including Dilip Kumar, Nutan, Naseeruddin Shah, Jackie Shroff, Anil Kapoor, Poonam Dhillon, Sridevi and Anupam Kher. The film reunites Subhash Ghai and Dilip Kumar after the success of their last film together \"Vidhaata\" (1982). The film also marked the first time Dilip Kumar was paired with veteran actress Nutan. The film was a huge success at box office.",
+            "Kalicharan\nKalicharan is a 1976 Indian action drama film directed by Subhash Ghai and starring Shatrughan Sinha, Reena Roy, Ajit, Danny Denzongpa, Madan Puri and Premnath. The film became a box office hit. The film was the directorial debut of Subhash Ghai and was the breakthrough role for stars Shatrughan Sinha and Reena Roy. It was later remade into the Telugu film \"Khaidi Kalidasu\" (1977), Kannada film Kaalinga (1980) with Vishnuvardhan and the Tamil film \"Sangili\" (1982) with Prabhu and Sivaji Ganesan in the lead roles and in Malayalam \"Pathamudayam\" (1985) by Mohanlal.",
+            "Fear (1965 film)\nFear (1965) is a 35\u00a0mm short Hindi film directed by legendary filmmaker Ritwik Ghatak. In 1964-65 Ritwik created this documentary for the acting department of Pune Film Institute. Mainly the students of Pune Film Institute participated in this film. Director Subhash Ghai, and actor Asrani then students of that institute acted in this film.",
+            "Joggers' Park (film)\nJoggers' Park is a 2003 Indian drama film made in English and Hindi. It is directed by Anant Balani and written by Subhash Ghai. It stars Bengali actor Victor Bannerjee, Perizaad Zorabian and Divya Dutta in lead roles. It was filmed on location in Mumbai's Jogger's Park. It was inspired from the storyline of 1986 film Anokha Rishta starring Rajesh Khanna.",
+            "Samhita (film)\nSamhita: The Script (or simply Samhita) is a 2013 Indian Marathi film directed by duo Sumitra BhaveSunil Sukthankar and produced by Mukta Arts in association with Ashokk Movies. The film starts Devika Daftardar, Milind Soman, and Rajeshwari Sachdev in the lead roles along with Uttara Baokar and Jyoti Subhash reprising the supporting roles. The film had its theatrical release on 18 October 2013 and won several awards including two National Film Awards at the 60th National Film Awards; the Best Female Playback Singer for Arati Ankalikar-Tikekar and the Best Music Direction (Songs) for Shailendra Barve. The director-producer Subhash Ghai, the founder of Mukta Arts, was not initially part of the film and was approached when the director duo faced a financial problems.",
+            "Yuvvraaj\nYuvvraaj is a 2008 Indian film directed and produced by Subhash Ghai. The film stars Anil Kapoor, Salman Khan, Zayed Khan and Katrina Kaif in the lead roles and is inspired from Hollywood film \"Rain Man\" (1988). \"Yuvvraaj\" is a musical story of a fragmented family of three brothers who try to con each other to inherit their father's wealth. According to the director, the film is about the arrogance and overconfidence of contemporary youth. The film was released on 28 November 2008. Although the film received mixed reviews from critics and bombed at the box-office, its script was added to the library of the Academy of Motion Picture Arts and Sciences in 2009.",
+            "Kisna: The Warrior Poet\nKisna: The Warrior Poet is an Indian Hindi film written, edited, produced and directed by Subhash Ghai and starring Vivek Oberoi (who plays the title role), Antonia Bernath, and Isha Sharvani. The musical film is set in the British India of the tumultuous 1940s when Indian nationalists fighting for the country's independence rose up as one, urging the British Raj to leave. It is a love story about two people who are torn between Karma (the noble deed) and Dharma (the duty). The film has two veteran composers, A. R. Rahman and Ismail Darbar; the lyrics were written by Javed Akhtar. This film also marks Amrish Puri's final performance. The film, however, did not perform well at the box office. The film was premiered in the March\u00e9 du Film section of the 2005 Cannes Film Festival.",
+            "Girl Crazy (1929 film)\nGirl Crazy was a 1929 comedy film directed by Mack Sennett and starring Andy Clyde as \"a girl-crazy sexagenarian\". The film's story is credited to Hampton Del Ruth, Alfred J. Goulding, Harry McCoy, Earle Rodney, and Mack Sennett.",
+            "Mack 10 discography\nThe discography of West Coast hip hop artist Mack 10 consists of eight studio albums, two compilation albums, twenty-two singles, and fifteen music videos. He has also collaborated on two albums and was featured in two soundtrack albums. After signing to Priority Records in 1995, Mack 10 released his self-titled debut album in June. The album, produced by fellow rapper Ice Cube, saw considerable commercial success and went Gold in the US. His prosperity continued when he released \"Based on a True Story\", which peaked at number fourteen on the US \"Billboard\" 200. The rapper collaborated with Tha Dogg Pound to record \"Nothin' But the Cavi Hit\" which was released on the \"Rhyme & Reason\" soundtrack. Mack 10's 1998 release, \"The Recipe\", was the rapper's third and final album to be certified Gold in the US by RIAA. Mack 10's album sales began to decline after his first compilation album release, \"Hoo-Bangin': The Mix Tape, Vol. 1\". His fourth studio album, \"The Paper Route\" (2000), debuted at number nineteen on the \"Billboard\" 200; however, it failed to earn the rapper any RIAA certifications.",
+            "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+            "Joya (singer)\nJoya (birth name Joya Owens born 1973) in Detroit, Michigan, United States is an American R&B/soul singer - songwriter, who released her debut album \"Here I Am\" on Atlas/A&M record label. Following her debut album release, Joya was a background session vocalist for various artists' including R&B/soul singer Mary J. Blige. She also toured as a background singer during Blige's \"Share My World Tour\" in 1998.",
+            "Blue Fire\nBlue Fire is a launched roller coaster at Europa-Park. The coaster opened in 2009 as part of a new Iceland-themed expansion to Europa-Park. As the first launched coaster built by MACK Rides, Blue Fire will serve as the park's tenth roller coaster and their first roller coaster with inversions. The ride's tagline is \"Discover Pure Energy\"."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 10,
+        "question": "Are Willard Mack and Subhash Ghai both involved in film?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Willard Mack's professional background.",
+                "output": "Willard Mack was a playwright and actor, known for his work on the 1916 American drama silent film \"Nanette of the Wilds\" and the 1929 comedy film \"Girl Crazy\". He also collaborated with Tha Dogg Pound on the song \"Nothin' But the Cavi Hit\" for the \"Rhyme & Reason\" soundtrack. Additionally, he has a namesake, Wilbur Mack, who was also an actor.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Subhash Ghai's professional background.",
+                "output": "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and writing for films such as \"Fear\" (1965), \"Joggers' Park\" (2003), \"Samhita\" (2013), \"Yuvvraaj\" (2008), and \"Kisna: The Warrior Poet\" (2005).",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Willard Mack is involved in the film industry based on his professional background.",
+                "output": "Based on his professional background as a playwright, actor, and collaborator on film soundtracks, it can be determined that Willard Mack is indeed involved in the film industry.",
+                "upstream": [
+                    [
+                        "1",
+                        "Willard Mack was a playwright and actor, known for his work on the 1916 American drama silent film \"Nanette of the Wilds\" and the 1929 comedy film \"Girl Crazy\". He also collaborated with Tha Dogg Pound on the song \"Nothin' But the Cavi Hit\" for the \"Rhyme & Reason\" soundtrack. Additionally, he has a namesake, Wilbur Mack, who was also an actor."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Subhash Ghai is involved in the film industry based on his professional background.",
+                "output": "Yes, based on his professional background, it is clear that Subhash Ghai is heavily involved in the film industry as a director, producer, screenwriter, and also as the executive chairman of a film production company. He has also received awards for his contributions to Indian cinema and has founded a film and media institution. Additionally, he has been involved in acting and writing for films. Therefore, it can be concluded that Subhash Ghai is indeed involved in the film industry.",
+                "upstream": [
+                    [
+                        "2",
+                        "Subhash Ghai is an Indian film director, producer, and screenwriter known for his works predominantly in Hindi cinema. He has directed, produced, and written several notable films such as \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and \"Black & White\" (2008). In 1982, he started Mukta Arts Private Limited, which later became a public company, with Subhash Ghai as its executive chairman. He received the National Film Award in 2006 for producing the social problem film \"Iqbal\" and founded the Whistling Woods International film and media institution in Mumbai in the same year. In 2015, he received the IIFA Award for outstanding contribution to Indian Cinema. Additionally, he has been involved in acting and writing for films such as \"Fear\" (1965), \"Joggers' Park\" (2003), \"Samhita\" (2013), \"Yuvvraaj\" (2008), and \"Kisna: The Warrior Poet\" (2005)."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Combine results from the analysis of both Willard Mack and Subhash Ghai to conclude if both are involved in film.",
+                "output": "Based on the analysis of both Willard Mack and Subhash Ghai, it can be concluded that both individuals are indeed involved in the film industry. Willard Mack's background as a playwright, actor, and collaborator on film soundtracks, along with Subhash Ghai's extensive involvement as a director, producer, screenwriter, and executive chairman of a film production company, clearly demonstrate their significant contributions to the film industry. Therefore, it is evident that both Willard Mack and Subhash Ghai are involved in film.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on his professional background as a playwright, actor, and collaborator on film soundtracks, it can be determined that Willard Mack is indeed involved in the film industry."
+                    ],
+                    [
+                        "4",
+                        "Yes, based on his professional background, it is clear that Subhash Ghai is heavily involved in the film industry as a director, producer, screenwriter, and also as the executive chairman of a film production company. He has also received awards for his contributions to Indian cinema and has founded a film and media institution. Additionally, he has been involved in acting and writing for films. Therefore, it can be concluded that Subhash Ghai is indeed involved in the film industry."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Wilbur Mack\n\"(for non-related playwright and fellow actor Willard Mack, see Willard Mack)\"",
+            "Willard Mack\n\"(for fellow actor also born 1873, but not a relative, see Wilbur Mack)\"",
+            "Nanette of the Wilds\nNanette of the Wilds is a 1916 American drama silent film directed by Joseph Kaufman and written by Willard Mack. The film stars Pauline Frederick, Willard Mack, Macey Harlam, Charles Brandt, Frank Joyner and Daniel Pennell. The film was released on November 26, 1916, by Paramount Pictures.",
+            "Subhash Ghai\nSubhash Ghai (born 24 January 1945) is an Indian film director, producer and screenwriter, known for his works predominantly in Hindi cinema. His most notable works include \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and Black & White (2008). In 1982, He started Mukta Arts Private Limited which, in 2000, became a public company, with Subhash Ghai as its executive chairman. In 2006, he received the National Film Award, for producing the social problem film \"Iqbal\", in the same year he founded the Whistling Woods International film and media institution in Mumbai. In 2015, He received the IIFA Award for outstanding contribution to Indian Cinema.",
+            "Karma (1986 film)\nKarma (Hindi:\u0915\u0930\u094d\u092e\u093e) is a 1986 Indian action film directed by Subhash Ghai and featuring an ensemble cast including Dilip Kumar, Nutan, Naseeruddin Shah, Jackie Shroff, Anil Kapoor, Poonam Dhillon, Sridevi and Anupam Kher. The film reunites Subhash Ghai and Dilip Kumar after the success of their last film together \"Vidhaata\" (1982). The film also marked the first time Dilip Kumar was paired with veteran actress Nutan. The film was a huge success at box office.",
+            "Kalicharan\nKalicharan is a 1976 Indian action drama film directed by Subhash Ghai and starring Shatrughan Sinha, Reena Roy, Ajit, Danny Denzongpa, Madan Puri and Premnath. The film became a box office hit. The film was the directorial debut of Subhash Ghai and was the breakthrough role for stars Shatrughan Sinha and Reena Roy. It was later remade into the Telugu film \"Khaidi Kalidasu\" (1977), Kannada film Kaalinga (1980) with Vishnuvardhan and the Tamil film \"Sangili\" (1982) with Prabhu and Sivaji Ganesan in the lead roles and in Malayalam \"Pathamudayam\" (1985) by Mohanlal.",
+            "Fear (1965 film)\nFear (1965) is a 35\u00a0mm short Hindi film directed by legendary filmmaker Ritwik Ghatak. In 1964-65 Ritwik created this documentary for the acting department of Pune Film Institute. Mainly the students of Pune Film Institute participated in this film. Director Subhash Ghai, and actor Asrani then students of that institute acted in this film.",
+            "Joggers' Park (film)\nJoggers' Park is a 2003 Indian drama film made in English and Hindi. It is directed by Anant Balani and written by Subhash Ghai. It stars Bengali actor Victor Bannerjee, Perizaad Zorabian and Divya Dutta in lead roles. It was filmed on location in Mumbai's Jogger's Park. It was inspired from the storyline of 1986 film Anokha Rishta starring Rajesh Khanna.",
+            "Samhita (film)\nSamhita: The Script (or simply Samhita) is a 2013 Indian Marathi film directed by duo Sumitra BhaveSunil Sukthankar and produced by Mukta Arts in association with Ashokk Movies. The film starts Devika Daftardar, Milind Soman, and Rajeshwari Sachdev in the lead roles along with Uttara Baokar and Jyoti Subhash reprising the supporting roles. The film had its theatrical release on 18 October 2013 and won several awards including two National Film Awards at the 60th National Film Awards; the Best Female Playback Singer for Arati Ankalikar-Tikekar and the Best Music Direction (Songs) for Shailendra Barve. The director-producer Subhash Ghai, the founder of Mukta Arts, was not initially part of the film and was approached when the director duo faced a financial problems.",
+            "Yuvvraaj\nYuvvraaj is a 2008 Indian film directed and produced by Subhash Ghai. The film stars Anil Kapoor, Salman Khan, Zayed Khan and Katrina Kaif in the lead roles and is inspired from Hollywood film \"Rain Man\" (1988). \"Yuvvraaj\" is a musical story of a fragmented family of three brothers who try to con each other to inherit their father's wealth. According to the director, the film is about the arrogance and overconfidence of contemporary youth. The film was released on 28 November 2008. Although the film received mixed reviews from critics and bombed at the box-office, its script was added to the library of the Academy of Motion Picture Arts and Sciences in 2009.",
+            "Kisna: The Warrior Poet\nKisna: The Warrior Poet is an Indian Hindi film written, edited, produced and directed by Subhash Ghai and starring Vivek Oberoi (who plays the title role), Antonia Bernath, and Isha Sharvani. The musical film is set in the British India of the tumultuous 1940s when Indian nationalists fighting for the country's independence rose up as one, urging the British Raj to leave. It is a love story about two people who are torn between Karma (the noble deed) and Dharma (the duty). The film has two veteran composers, A. R. Rahman and Ismail Darbar; the lyrics were written by Javed Akhtar. This film also marks Amrish Puri's final performance. The film, however, did not perform well at the box office. The film was premiered in the March\u00e9 du Film section of the 2005 Cannes Film Festival.",
+            "Girl Crazy (1929 film)\nGirl Crazy was a 1929 comedy film directed by Mack Sennett and starring Andy Clyde as \"a girl-crazy sexagenarian\". The film's story is credited to Hampton Del Ruth, Alfred J. Goulding, Harry McCoy, Earle Rodney, and Mack Sennett.",
+            "Mack 10 discography\nThe discography of West Coast hip hop artist Mack 10 consists of eight studio albums, two compilation albums, twenty-two singles, and fifteen music videos. He has also collaborated on two albums and was featured in two soundtrack albums. After signing to Priority Records in 1995, Mack 10 released his self-titled debut album in June. The album, produced by fellow rapper Ice Cube, saw considerable commercial success and went Gold in the US. His prosperity continued when he released \"Based on a True Story\", which peaked at number fourteen on the US \"Billboard\" 200. The rapper collaborated with Tha Dogg Pound to record \"Nothin' But the Cavi Hit\" which was released on the \"Rhyme & Reason\" soundtrack. Mack 10's 1998 release, \"The Recipe\", was the rapper's third and final album to be certified Gold in the US by RIAA. Mack 10's album sales began to decline after his first compilation album release, \"Hoo-Bangin': The Mix Tape, Vol. 1\". His fourth studio album, \"The Paper Route\" (2000), debuted at number nineteen on the \"Billboard\" 200; however, it failed to earn the rapper any RIAA certifications.",
+            "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+            "Joya (singer)\nJoya (birth name Joya Owens born 1973) in Detroit, Michigan, United States is an American R&B/soul singer - songwriter, who released her debut album \"Here I Am\" on Atlas/A&M record label. Following her debut album release, Joya was a background session vocalist for various artists' including R&B/soul singer Mary J. Blige. She also toured as a background singer during Blige's \"Share My World Tour\" in 1998.",
+            "Blue Fire\nBlue Fire is a launched roller coaster at Europa-Park. The coaster opened in 2009 as part of a new Iceland-themed expansion to Europa-Park. As the first launched coaster built by MACK Rides, Blue Fire will serve as the park's tenth roller coaster and their first roller coaster with inversions. The ride's tagline is \"Discover Pure Energy\"."
+        ],
+        "recall": 0.8333333333333334
+    }
+]

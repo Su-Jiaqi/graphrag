@@ -1,0 +1,553 @@
+[
+    {
+        "question": " Which 1970's film was released first, Charley and the Angel or The Boatniks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the release dates of the movies 'Charley and the Angel' and 'The Boatniks'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which movie was released first based on the retrieved release dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph consists of two nodes. The first node retrieves the release dates of both movies, 'Charley and the Angel' and 'The Boatniks'. The second node compares these dates to determine which film was released first. This sequence ensures that the final answer is based on accurately retrieved and analyzed data."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Charley and the Angel\nCharley and the Angel is a 1973 Disney family/comedy film set in an unidentified small city in the 1930s Depression-era Midwestern United States and starring Fred MacMurray in one of his final film appearances and his last movie for Disney. The film, directed by Vincent McEveety, is based on \"The Golden Evenings of Summer\", a 1971 novel written by Will Stanton.",
+            "Kiss an Angel Good Mornin'\n\"Kiss an Angel Good Mornin'\" is a song written by Ben Peters, and recorded by American country music artist Charley Pride. It was released in October 1971 as the first single from the album \"Charley Pride Sings Heart Songs\". The song has since become one of his signature tunes and was his eighth song to reach number one on the country charts. \"Kiss an Angel Good Mornin\" was also Charley Pride's first single to reach the pop charts, peaking at number twenty-one on the \"Billboard\" Hot 100, and also went into the Top Ten of the Adult Contemporary charts. It also reached #19 on the U.S. \"Cash Box\" Top 100. The song spent four months on the pop chart, longer than any of his other hits. \"Billboard\" ranked it as the No. 74 song for 1972.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Boatniks\nThe Boatniks is a 1970 American comedy film starring Robert Morse, Stefanie Powers, Don Ameche and Phil Silvers. It was made by Walt Disney Productions, released by Buena Vista Distribution and directed by Norman Tokar.",
+            "Is Anybody Goin' to San Antone\n\"Is Anybody Goin' to San Antone\" is a song written by Glenn Martin and Dave Kirby, and recorded by American country music artist Charley Pride. It was released in February 1970 as the first single from the album \"Charley Pride's 10th album\". \"Is Anybody Goin' to San Antone\" was Charley Pride's third number one in a row on the country charts. The single spent two weeks at number one and a total of 16 weeks on the country chart.",
+            "Dan Angel\nDan Angel is an American film and television producer, screenwriter, story editor and showrunner. He has written and produced a number of television series and movies, often with his writing partner Billy Brown, including \"The X-Files\", \"Goosebumps\", \"Animorphs\", \"\", \"Door to Door\", \"\", \"Christmas in Canaan\", \"\" and \"Dan Vs.\". His work has won numerous awards, including a Primetime Emmy Award for Outstanding Made for Television Movie and Peabody Award recognizing his work executive producing \"Door to Door\". and another Emmy Award for Outstanding Children's Series in his work on .",
+            "Wonder Could I Live There Anymore\n\"Wonder Could I Live There Anymore\" is a song written by Bill Rice, and recorded by American country music artist Charley Pride. It was released in May 1970 as the first single from the album \"From Me to You\". \"Wonder Could I Live There Anymore\" was Charley Pride's fourth number one in a row on the country charts. The single went to number one for two weeks and spent a total of 15 weeks on the top 40.",
+            "Criss Angel\nChristopher Nicholas Sarantakos (born December 19, 1967), known by the stage name Criss Angel, is an American magician, illusionist and musician. Angel began his career in New York City, before moving his base of operations to the Las Vegas Valley. He is known for starring in the television and stage show \"Criss Angel Mindfreak\" and his previous live performance illusion show \"Criss Angel Believe\" in collaboration with \"Cirque du Soleil\" at the Luxor casino in Las Vegas. The show generated $150 million in tourist revenue to Las Vegas in 2010, but has since been replaced by \"Mindfreak LIVE\" on 11 May 2016 (the show is partly produced by Cirque, however the directive rights are entirely with Criss Angel). He also starred in the television series \"Criss Angel BeLIEve\" on Spike TV, the reality-competition television show \"Phenomenon\" on NBC, and the 2014 stage show \"Criss Angel Magicjam\"."
+        ],
+        "thoughts": [
+            "Charley and the Angel was released in 1973, and The Boatniks was released in 1970.",
+            "The Boatniks was released first in 1970, and Charley and the Angel was released in 1973."
+        ],
+        "is_best": true
+    },
+    {
+        "question": " Which 1970's film was released first, Charley and the Angel or The Boatniks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the release date of the film 'Charley and the Angel'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the release date of the film 'The Boatniks'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the release dates of 'Charley and the Angel' and 'The Boatniks' to determine which was released first.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins with two independent retrieval steps to find the release dates of 'Charley and the Angel' and 'The Boatniks'. Once both dates are retrieved, a reasoning step compares these dates to determine which movie was released first. This setup ensures efficient parallel retrieval before reasoning."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Charley and the Angel\nCharley and the Angel is a 1973 Disney family/comedy film set in an unidentified small city in the 1930s Depression-era Midwestern United States and starring Fred MacMurray in one of his final film appearances and his last movie for Disney. The film, directed by Vincent McEveety, is based on \"The Golden Evenings of Summer\", a 1971 novel written by Will Stanton.",
+            "Kiss an Angel Good Mornin'\n\"Kiss an Angel Good Mornin'\" is a song written by Ben Peters, and recorded by American country music artist Charley Pride. It was released in October 1971 as the first single from the album \"Charley Pride Sings Heart Songs\". The song has since become one of his signature tunes and was his eighth song to reach number one on the country charts. \"Kiss an Angel Good Mornin\" was also Charley Pride's first single to reach the pop charts, peaking at number twenty-one on the \"Billboard\" Hot 100, and also went into the Top Ten of the Adult Contemporary charts. It also reached #19 on the U.S. \"Cash Box\" Top 100. The song spent four months on the pop chart, longer than any of his other hits. \"Billboard\" ranked it as the No. 74 song for 1972.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Boatniks\nThe Boatniks is a 1970 American comedy film starring Robert Morse, Stefanie Powers, Don Ameche and Phil Silvers. It was made by Walt Disney Productions, released by Buena Vista Distribution and directed by Norman Tokar.",
+            "Is Anybody Goin' to San Antone\n\"Is Anybody Goin' to San Antone\" is a song written by Glenn Martin and Dave Kirby, and recorded by American country music artist Charley Pride. It was released in February 1970 as the first single from the album \"Charley Pride's 10th album\". \"Is Anybody Goin' to San Antone\" was Charley Pride's third number one in a row on the country charts. The single spent two weeks at number one and a total of 16 weeks on the country chart.",
+            "Wonder Could I Live There Anymore\n\"Wonder Could I Live There Anymore\" is a song written by Bill Rice, and recorded by American country music artist Charley Pride. It was released in May 1970 as the first single from the album \"From Me to You\". \"Wonder Could I Live There Anymore\" was Charley Pride's fourth number one in a row on the country charts. The single went to number one for two weeks and spent a total of 15 weeks on the top 40.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Lilla J\u00f6nssonligan\nLilla J\u00f6nssonligan (English: The Little J\u00f6nssonleague ) is a Swedish film series that consists of four movies. The film series is a spin-off of the original \"J\u00f6nssonligan\" film series. The main difference about the two series is that the main characters are portrayed as kids instead of adults in this one, hence the word \"little\" in the title. Rocky, the original third member, is not featured in any of the films. Unlike the \"adult J\u00f6nssonligan\", where the gang where bumbling anti-heroes, the \"litte J\u00f6nssonligan\" is often straight up heroic.",
+            "The Wolverine (film)\nThe Wolverine is a 2013 superhero film featuring the Marvel Comics character Wolverine. The film, distributed by 20th Century Fox, is the sixth installment in the \"X-Men\" film series. Hugh Jackman reprises his role from previous films as the title character, with James Mangold directing a screenplay written by Scott Frank and Mark Bomback, based on the 1982 limited series \"Wolverine\" by Chris Claremont and Frank Miller. In the film, which follows the events of \"\", Logan travels to Japan, where he engages an old acquaintance in a struggle that has lasting consequences. Stripped of his healing factor, Wolverine must battle deadly samurai while struggling with guilt.",
+            "Where Sinners Meet\nWhere Sinners Meet is a 1934 American romantic comedy film directed by J. Walter Ruben and starring Diana Wynyard, Clive Brook and Billie Burke. It was adapted by writer Henry William Hanemann from Clara Beranger's 1927 movie \"The Little Adventuress\", which in turn was a rewrite from the 1921 British play \"The Dover Road\" by A. A. Milne. The film used \"The Dover Road\" as a working title prior to its release.",
+            "The Revenge of Pancho Villa\nThe Revenge of Pancho Villa (1930\u201336)\u2014Spanish title La Venganza de Pancho Villa\u2014is a compilation film made by the Padilla family in El Paso, Texas, USA, from dozens of fact-based and fictional films about the celebrated Mexican revolutionary Pancho Villa (1878\u20131923).",
+            "Michael Shayne\nMichael \"Mike\" Shayne is a fictional private detective character created during the late 1930s by writer Brett Halliday, a pseudonym of Davis Dresser. The character appeared in a series of seven films starring Lloyd Nolan for Twentieth Century Fox, five films from the low-budget Producers Releasing Corporation with Hugh Beaumont, a radio series under a variety of titles between 1944 and 1953, and later in 1960\u20131961 in a 32-episode NBC television series starring Richard Denning in the title role."
+        ],
+        "thoughts": [
+            "The film 'Charley and the Angel' was released in 1973.",
+            "The release date of the film 'The Boatniks' is 1970.",
+            "The film 'The Boatniks' was released before 'Charley and the Angel', as it was released in 1970, while 'Charley and the Angel' was released in 1973."
+        ],
+        "is_best": false
+    },
+    {
+        "question": " Which 1970's film was released first, Charley and the Angel or The Boatniks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the release date of the film 'Charley and the Angel'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the release date of the film 'The Boatniks'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the release dates of 'Charley and the Angel' and 'The Boatniks' to determine which was released first.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "To determine which film was released first, the execution graph retrieves the release dates of both films separately and then compares these dates. These steps are divided into retrievals for independent films (can be done in parallel) and a reasoning step that compares the dates to provide the answer."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Charley and the Angel\nCharley and the Angel is a 1973 Disney family/comedy film set in an unidentified small city in the 1930s Depression-era Midwestern United States and starring Fred MacMurray in one of his final film appearances and his last movie for Disney. The film, directed by Vincent McEveety, is based on \"The Golden Evenings of Summer\", a 1971 novel written by Will Stanton.",
+            "Kiss an Angel Good Mornin'\n\"Kiss an Angel Good Mornin'\" is a song written by Ben Peters, and recorded by American country music artist Charley Pride. It was released in October 1971 as the first single from the album \"Charley Pride Sings Heart Songs\". The song has since become one of his signature tunes and was his eighth song to reach number one on the country charts. \"Kiss an Angel Good Mornin\" was also Charley Pride's first single to reach the pop charts, peaking at number twenty-one on the \"Billboard\" Hot 100, and also went into the Top Ten of the Adult Contemporary charts. It also reached #19 on the U.S. \"Cash Box\" Top 100. The song spent four months on the pop chart, longer than any of his other hits. \"Billboard\" ranked it as the No. 74 song for 1972.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Boatniks\nThe Boatniks is a 1970 American comedy film starring Robert Morse, Stefanie Powers, Don Ameche and Phil Silvers. It was made by Walt Disney Productions, released by Buena Vista Distribution and directed by Norman Tokar.",
+            "Is Anybody Goin' to San Antone\n\"Is Anybody Goin' to San Antone\" is a song written by Glenn Martin and Dave Kirby, and recorded by American country music artist Charley Pride. It was released in February 1970 as the first single from the album \"Charley Pride's 10th album\". \"Is Anybody Goin' to San Antone\" was Charley Pride's third number one in a row on the country charts. The single spent two weeks at number one and a total of 16 weeks on the country chart.",
+            "Wonder Could I Live There Anymore\n\"Wonder Could I Live There Anymore\" is a song written by Bill Rice, and recorded by American country music artist Charley Pride. It was released in May 1970 as the first single from the album \"From Me to You\". \"Wonder Could I Live There Anymore\" was Charley Pride's fourth number one in a row on the country charts. The single went to number one for two weeks and spent a total of 15 weeks on the top 40.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Lilla J\u00f6nssonligan\nLilla J\u00f6nssonligan (English: The Little J\u00f6nssonleague ) is a Swedish film series that consists of four movies. The film series is a spin-off of the original \"J\u00f6nssonligan\" film series. The main difference about the two series is that the main characters are portrayed as kids instead of adults in this one, hence the word \"little\" in the title. Rocky, the original third member, is not featured in any of the films. Unlike the \"adult J\u00f6nssonligan\", where the gang where bumbling anti-heroes, the \"litte J\u00f6nssonligan\" is often straight up heroic.",
+            "The Wolverine (film)\nThe Wolverine is a 2013 superhero film featuring the Marvel Comics character Wolverine. The film, distributed by 20th Century Fox, is the sixth installment in the \"X-Men\" film series. Hugh Jackman reprises his role from previous films as the title character, with James Mangold directing a screenplay written by Scott Frank and Mark Bomback, based on the 1982 limited series \"Wolverine\" by Chris Claremont and Frank Miller. In the film, which follows the events of \"\", Logan travels to Japan, where he engages an old acquaintance in a struggle that has lasting consequences. Stripped of his healing factor, Wolverine must battle deadly samurai while struggling with guilt.",
+            "Where Sinners Meet\nWhere Sinners Meet is a 1934 American romantic comedy film directed by J. Walter Ruben and starring Diana Wynyard, Clive Brook and Billie Burke. It was adapted by writer Henry William Hanemann from Clara Beranger's 1927 movie \"The Little Adventuress\", which in turn was a rewrite from the 1921 British play \"The Dover Road\" by A. A. Milne. The film used \"The Dover Road\" as a working title prior to its release.",
+            "The Revenge of Pancho Villa\nThe Revenge of Pancho Villa (1930\u201336)\u2014Spanish title La Venganza de Pancho Villa\u2014is a compilation film made by the Padilla family in El Paso, Texas, USA, from dozens of fact-based and fictional films about the celebrated Mexican revolutionary Pancho Villa (1878\u20131923).",
+            "Michael Shayne\nMichael \"Mike\" Shayne is a fictional private detective character created during the late 1930s by writer Brett Halliday, a pseudonym of Davis Dresser. The character appeared in a series of seven films starring Lloyd Nolan for Twentieth Century Fox, five films from the low-budget Producers Releasing Corporation with Hugh Beaumont, a radio series under a variety of titles between 1944 and 1953, and later in 1960\u20131961 in a 32-episode NBC television series starring Richard Denning in the title role."
+        ],
+        "thoughts": [
+            "The film 'Charley and the Angel' was released in 1973.",
+            "The release date of the film 'The Boatniks' is 1970.",
+            "The film 'The Boatniks' was released before 'Charley and the Angel', as it was released in 1970, while 'Charley and the Angel' was released in 1973."
+        ],
+        "is_best": false
+    },
+    {
+        "question": " Which 1970's film was released first, Charley and the Angel or The Boatniks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the release year of the film 'Charley and the Angel'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the release year of the film 'The Boatniks'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the release years of 'Charley and the Angel' and 'The Boatniks' to determine which film was released first.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of three nodes. The first two nodes are retrieval nodes that independently gather the release years for 'Charley and the Angel' and 'The Boatniks'. The third node is a reasoning node that compares the two release years to determine which film was released first. This structure allows for parallel retrieval of release years, optimizing efficiency before moving on to the reasoning step."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Charley and the Angel\nCharley and the Angel is a 1973 Disney family/comedy film set in an unidentified small city in the 1930s Depression-era Midwestern United States and starring Fred MacMurray in one of his final film appearances and his last movie for Disney. The film, directed by Vincent McEveety, is based on \"The Golden Evenings of Summer\", a 1971 novel written by Will Stanton.",
+            "Kiss an Angel Good Mornin'\n\"Kiss an Angel Good Mornin'\" is a song written by Ben Peters, and recorded by American country music artist Charley Pride. It was released in October 1971 as the first single from the album \"Charley Pride Sings Heart Songs\". The song has since become one of his signature tunes and was his eighth song to reach number one on the country charts. \"Kiss an Angel Good Mornin\" was also Charley Pride's first single to reach the pop charts, peaking at number twenty-one on the \"Billboard\" Hot 100, and also went into the Top Ten of the Adult Contemporary charts. It also reached #19 on the U.S. \"Cash Box\" Top 100. The song spent four months on the pop chart, longer than any of his other hits. \"Billboard\" ranked it as the No. 74 song for 1972.",
+            "Fallen Angel (1945 film)\nFallen Angel is a 1945 black-and-white film noir directed by Otto Preminger, with cinematography by Joseph LaShelle, who had also worked with Preminger on \"Laura\" a year before. The film features Alice Faye, Dana Andrews, Linda Darnell, and Charles Bickford. It was the last film Faye made as a major Hollywood star, and she did not make another film until \"State Fair\" (1962).",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Boatniks\nThe Boatniks is a 1970 American comedy film starring Robert Morse, Stefanie Powers, Don Ameche and Phil Silvers. It was made by Walt Disney Productions, released by Buena Vista Distribution and directed by Norman Tokar.",
+            "The White Angel (1936 film)\nThe White Angel is a 1936 American historical drama film directed by William Dieterle and starring Kay Francis. The film depicts Florence Nightingale's pioneering work in nursing during the Crimean War.",
+            "Criss Angel Believe\nCriss Angel Believe (also written as CRISS ANGEL \"beLIEve\") was the sixth Cirque du Soleil show in Las Vegas, which was premiered at the beLIEve theatre (which holds 1,600 when at capacity) inside the Luxor hotel in Las Vegas in 2008. It is a theatrical production created in partnership of Cirque du Soleil and magician Criss Angel, who is billed as the \"co-writer, illusions creator and designer, original concept creator and star\" of the show. The show had its final performance on April 17, 2016, being replaced by \"Criss Angel MINDFREAK LIVE\" on May 11 of the same year.",
+            "The White Angel (1943 film)\nThe White Angel (Italian: L'angelo bianco) is a 1943 Italian drama film directed by Giulio Antamoro, Federico Sinibaldi and Ettore Giannini and starring  Emma Gramatica, Filippo Scelzo and Beatrice Mancini.",
+            "Is Anybody Goin' to San Antone\n\"Is Anybody Goin' to San Antone\" is a song written by Glenn Martin and Dave Kirby, and recorded by American country music artist Charley Pride. It was released in February 1970 as the first single from the album \"Charley Pride's 10th album\". \"Is Anybody Goin' to San Antone\" was Charley Pride's third number one in a row on the country charts. The single spent two weeks at number one and a total of 16 weeks on the country chart.",
+            "Hell and High Water (1933 film)\nHell and High Water is a 1933 American Pre-Code drama film directed by Grover Jones and William Slavens McNutt and written by Grover Jones, Agnes Brand Leahy, William Slavens McNutt and Max Miller. The film stars Richard Arlen, Judith Allen, Charley Grapewin, Gertrude Hoffman, Guy Standing, and William Frawley. The film was released on October 27, 1933, by Paramount Pictures.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Lilla J\u00f6nssonligan\nLilla J\u00f6nssonligan (English: The Little J\u00f6nssonleague ) is a Swedish film series that consists of four movies. The film series is a spin-off of the original \"J\u00f6nssonligan\" film series. The main difference about the two series is that the main characters are portrayed as kids instead of adults in this one, hence the word \"little\" in the title. Rocky, the original third member, is not featured in any of the films. Unlike the \"adult J\u00f6nssonligan\", where the gang where bumbling anti-heroes, the \"litte J\u00f6nssonligan\" is often straight up heroic.",
+            "The Wolverine (film)\nThe Wolverine is a 2013 superhero film featuring the Marvel Comics character Wolverine. The film, distributed by 20th Century Fox, is the sixth installment in the \"X-Men\" film series. Hugh Jackman reprises his role from previous films as the title character, with James Mangold directing a screenplay written by Scott Frank and Mark Bomback, based on the 1982 limited series \"Wolverine\" by Chris Claremont and Frank Miller. In the film, which follows the events of \"\", Logan travels to Japan, where he engages an old acquaintance in a struggle that has lasting consequences. Stripped of his healing factor, Wolverine must battle deadly samurai while struggling with guilt.",
+            "Where Sinners Meet\nWhere Sinners Meet is a 1934 American romantic comedy film directed by J. Walter Ruben and starring Diana Wynyard, Clive Brook and Billie Burke. It was adapted by writer Henry William Hanemann from Clara Beranger's 1927 movie \"The Little Adventuress\", which in turn was a rewrite from the 1921 British play \"The Dover Road\" by A. A. Milne. The film used \"The Dover Road\" as a working title prior to its release.",
+            "The Revenge of Pancho Villa\nThe Revenge of Pancho Villa (1930\u201336)\u2014Spanish title La Venganza de Pancho Villa\u2014is a compilation film made by the Padilla family in El Paso, Texas, USA, from dozens of fact-based and fictional films about the celebrated Mexican revolutionary Pancho Villa (1878\u20131923).",
+            "Michael Shayne\nMichael \"Mike\" Shayne is a fictional private detective character created during the late 1930s by writer Brett Halliday, a pseudonym of Davis Dresser. The character appeared in a series of seven films starring Lloyd Nolan for Twentieth Century Fox, five films from the low-budget Producers Releasing Corporation with Hugh Beaumont, a radio series under a variety of titles between 1944 and 1953, and later in 1960\u20131961 in a 32-episode NBC television series starring Richard Denning in the title role."
+        ],
+        "thoughts": [
+            "The film 'Charley and the Angel' was released in 1973.",
+            "The release year of the film 'The Boatniks' is 1970.",
+            "The film 'The Boatniks' was released first in 1970, while 'Charley and the Angel' was released in 1973."
+        ],
+        "is_best": false
+    },
+    {
+        "question": " Which 1970's film was released first, Charley and the Angel or The Boatniks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the release year of the film 'Charley and the Angel'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the release year of the film 'The Boatniks'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the release years of 'Charley and the Angel' and 'The Boatniks' to determine which was released first.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is composed of two initial retrieval steps to find the release years of both films. Once the release years are known, a reasoning step compares them to determine which film was released first. This approach ensures the question is answered by isolating the necessary information (release years) and then combining and analyzing this data to make the final comparison."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Charley and the Angel\nCharley and the Angel is a 1973 Disney family/comedy film set in an unidentified small city in the 1930s Depression-era Midwestern United States and starring Fred MacMurray in one of his final film appearances and his last movie for Disney. The film, directed by Vincent McEveety, is based on \"The Golden Evenings of Summer\", a 1971 novel written by Will Stanton.",
+            "Kiss an Angel Good Mornin'\n\"Kiss an Angel Good Mornin'\" is a song written by Ben Peters, and recorded by American country music artist Charley Pride. It was released in October 1971 as the first single from the album \"Charley Pride Sings Heart Songs\". The song has since become one of his signature tunes and was his eighth song to reach number one on the country charts. \"Kiss an Angel Good Mornin\" was also Charley Pride's first single to reach the pop charts, peaking at number twenty-one on the \"Billboard\" Hot 100, and also went into the Top Ten of the Adult Contemporary charts. It also reached #19 on the U.S. \"Cash Box\" Top 100. The song spent four months on the pop chart, longer than any of his other hits. \"Billboard\" ranked it as the No. 74 song for 1972.",
+            "Fallen Angel (1945 film)\nFallen Angel is a 1945 black-and-white film noir directed by Otto Preminger, with cinematography by Joseph LaShelle, who had also worked with Preminger on \"Laura\" a year before. The film features Alice Faye, Dana Andrews, Linda Darnell, and Charles Bickford. It was the last film Faye made as a major Hollywood star, and she did not make another film until \"State Fair\" (1962).",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Boatniks\nThe Boatniks is a 1970 American comedy film starring Robert Morse, Stefanie Powers, Don Ameche and Phil Silvers. It was made by Walt Disney Productions, released by Buena Vista Distribution and directed by Norman Tokar.",
+            "The White Angel (1936 film)\nThe White Angel is a 1936 American historical drama film directed by William Dieterle and starring Kay Francis. The film depicts Florence Nightingale's pioneering work in nursing during the Crimean War.",
+            "Criss Angel Believe\nCriss Angel Believe (also written as CRISS ANGEL \"beLIEve\") was the sixth Cirque du Soleil show in Las Vegas, which was premiered at the beLIEve theatre (which holds 1,600 when at capacity) inside the Luxor hotel in Las Vegas in 2008. It is a theatrical production created in partnership of Cirque du Soleil and magician Criss Angel, who is billed as the \"co-writer, illusions creator and designer, original concept creator and star\" of the show. The show had its final performance on April 17, 2016, being replaced by \"Criss Angel MINDFREAK LIVE\" on May 11 of the same year.",
+            "The White Angel (1943 film)\nThe White Angel (Italian: L'angelo bianco) is a 1943 Italian drama film directed by Giulio Antamoro, Federico Sinibaldi and Ettore Giannini and starring  Emma Gramatica, Filippo Scelzo and Beatrice Mancini.",
+            "Is Anybody Goin' to San Antone\n\"Is Anybody Goin' to San Antone\" is a song written by Glenn Martin and Dave Kirby, and recorded by American country music artist Charley Pride. It was released in February 1970 as the first single from the album \"Charley Pride's 10th album\". \"Is Anybody Goin' to San Antone\" was Charley Pride's third number one in a row on the country charts. The single spent two weeks at number one and a total of 16 weeks on the country chart.",
+            "Hell and High Water (1933 film)\nHell and High Water is a 1933 American Pre-Code drama film directed by Grover Jones and William Slavens McNutt and written by Grover Jones, Agnes Brand Leahy, William Slavens McNutt and Max Miller. The film stars Richard Arlen, Judith Allen, Charley Grapewin, Gertrude Hoffman, Guy Standing, and William Frawley. The film was released on October 27, 1933, by Paramount Pictures.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Lilla J\u00f6nssonligan\nLilla J\u00f6nssonligan (English: The Little J\u00f6nssonleague ) is a Swedish film series that consists of four movies. The film series is a spin-off of the original \"J\u00f6nssonligan\" film series. The main difference about the two series is that the main characters are portrayed as kids instead of adults in this one, hence the word \"little\" in the title. Rocky, the original third member, is not featured in any of the films. Unlike the \"adult J\u00f6nssonligan\", where the gang where bumbling anti-heroes, the \"litte J\u00f6nssonligan\" is often straight up heroic.",
+            "The Wolverine (film)\nThe Wolverine is a 2013 superhero film featuring the Marvel Comics character Wolverine. The film, distributed by 20th Century Fox, is the sixth installment in the \"X-Men\" film series. Hugh Jackman reprises his role from previous films as the title character, with James Mangold directing a screenplay written by Scott Frank and Mark Bomback, based on the 1982 limited series \"Wolverine\" by Chris Claremont and Frank Miller. In the film, which follows the events of \"\", Logan travels to Japan, where he engages an old acquaintance in a struggle that has lasting consequences. Stripped of his healing factor, Wolverine must battle deadly samurai while struggling with guilt.",
+            "Where Sinners Meet\nWhere Sinners Meet is a 1934 American romantic comedy film directed by J. Walter Ruben and starring Diana Wynyard, Clive Brook and Billie Burke. It was adapted by writer Henry William Hanemann from Clara Beranger's 1927 movie \"The Little Adventuress\", which in turn was a rewrite from the 1921 British play \"The Dover Road\" by A. A. Milne. The film used \"The Dover Road\" as a working title prior to its release.",
+            "The Revenge of Pancho Villa\nThe Revenge of Pancho Villa (1930\u201336)\u2014Spanish title La Venganza de Pancho Villa\u2014is a compilation film made by the Padilla family in El Paso, Texas, USA, from dozens of fact-based and fictional films about the celebrated Mexican revolutionary Pancho Villa (1878\u20131923).",
+            "Michael Shayne\nMichael \"Mike\" Shayne is a fictional private detective character created during the late 1930s by writer Brett Halliday, a pseudonym of Davis Dresser. The character appeared in a series of seven films starring Lloyd Nolan for Twentieth Century Fox, five films from the low-budget Producers Releasing Corporation with Hugh Beaumont, a radio series under a variety of titles between 1944 and 1953, and later in 1960\u20131961 in a 32-episode NBC television series starring Richard Denning in the title role."
+        ],
+        "thoughts": [
+            "The film 'Charley and the Angel' was released in 1973.",
+            "The release year of the film 'The Boatniks' is 1970.",
+            "The film 'The Boatniks' was released in 1970, while 'Charley and the Angel' was released in 1973. Therefore, 'The Boatniks' was released first."
+        ],
+        "is_best": false
+    },
+    {
+        "question": " Which 1970's film was released first, Charley and the Angel or The Boatniks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve release date information for the film 'Charley and the Angel'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve release date information for the film 'The Boatniks'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the release dates of 'Charley and the Angel' and 'The Boatniks' to determine which was released first.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of two parallel retrieval nodes to obtain the release dates for the films 'Charley and the Angel' and 'The Boatniks'. After obtaining both dates, a reasoning node compares them to determine which film was released first. Node 1 and Node 2 can be executed in parallel since they are independent of each other. The final answer is produced by Node 3 after reasoning on the information retrieved from the first two nodes."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Charley and the Angel\nCharley and the Angel is a 1973 Disney family/comedy film set in an unidentified small city in the 1930s Depression-era Midwestern United States and starring Fred MacMurray in one of his final film appearances and his last movie for Disney. The film, directed by Vincent McEveety, is based on \"The Golden Evenings of Summer\", a 1971 novel written by Will Stanton.",
+            "Kiss an Angel Good Mornin'\n\"Kiss an Angel Good Mornin'\" is a song written by Ben Peters, and recorded by American country music artist Charley Pride. It was released in October 1971 as the first single from the album \"Charley Pride Sings Heart Songs\". The song has since become one of his signature tunes and was his eighth song to reach number one on the country charts. \"Kiss an Angel Good Mornin\" was also Charley Pride's first single to reach the pop charts, peaking at number twenty-one on the \"Billboard\" Hot 100, and also went into the Top Ten of the Adult Contemporary charts. It also reached #19 on the U.S. \"Cash Box\" Top 100. The song spent four months on the pop chart, longer than any of his other hits. \"Billboard\" ranked it as the No. 74 song for 1972.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Boatniks\nThe Boatniks is a 1970 American comedy film starring Robert Morse, Stefanie Powers, Don Ameche and Phil Silvers. It was made by Walt Disney Productions, released by Buena Vista Distribution and directed by Norman Tokar.",
+            "The Libertine (album)\nThe Libertine: Music for the Film by Laurence Dunmore is the album release of Michael Nyman's score for the 2004 film \"The Libertine\" directed by Laurence Dunmore. It is the third release on Nyman's own label, MN Records, and the first to receive distribution in the United States, by Inner Knot Records. It is his 50th album release overall. When Naxos Records began distributing MN Records in the United States in 2008, it was included and began appearing in large quantitites in stores. This is Nyman's last score for a major motion picture to date, and his last soundtrack release, other than compilation soundtracks.",
+            "The White Angel (1936 film)\nThe White Angel is a 1936 American historical drama film directed by William Dieterle and starring Kay Francis. The film depicts Florence Nightingale's pioneering work in nursing during the Crimean War.",
+            "The White Angel (1943 film)\nThe White Angel (Italian: L'angelo bianco) is a 1943 Italian drama film directed by Giulio Antamoro, Federico Sinibaldi and Ettore Giannini and starring  Emma Gramatica, Filippo Scelzo and Beatrice Mancini.",
+            "Is Anybody Goin' to San Antone\n\"Is Anybody Goin' to San Antone\" is a song written by Glenn Martin and Dave Kirby, and recorded by American country music artist Charley Pride. It was released in February 1970 as the first single from the album \"Charley Pride's 10th album\". \"Is Anybody Goin' to San Antone\" was Charley Pride's third number one in a row on the country charts. The single spent two weeks at number one and a total of 16 weeks on the country chart.",
+            "Illud Divinum Insanus\nIllud Divinum Insanus is the eighth studio album by American death metal band Morbid Angel. It was released on June 7, 2011, by independent French record label Season of Mist. It is Morbid Angel's first album since \"Heretic\" (2003), the band's longest gap to date between studio albums. This is the only Morbid Angel album to feature guitarist Destructhor and drummer Tim Yeung, making it their first not to feature Pete Sandoval, who was recovering from surgery. It is also the band's only album to feature bassist/vocalist David Vincent since he rejoined in 2004.",
+            "Hell and High Water (1933 film)\nHell and High Water is a 1933 American Pre-Code drama film directed by Grover Jones and William Slavens McNutt and written by Grover Jones, Agnes Brand Leahy, William Slavens McNutt and Max Miller. The film stars Richard Arlen, Judith Allen, Charley Grapewin, Gertrude Hoffman, Guy Standing, and William Frawley. The film was released on October 27, 1933, by Paramount Pictures.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Lilla J\u00f6nssonligan\nLilla J\u00f6nssonligan (English: The Little J\u00f6nssonleague ) is a Swedish film series that consists of four movies. The film series is a spin-off of the original \"J\u00f6nssonligan\" film series. The main difference about the two series is that the main characters are portrayed as kids instead of adults in this one, hence the word \"little\" in the title. Rocky, the original third member, is not featured in any of the films. Unlike the \"adult J\u00f6nssonligan\", where the gang where bumbling anti-heroes, the \"litte J\u00f6nssonligan\" is often straight up heroic.",
+            "The Wolverine (film)\nThe Wolverine is a 2013 superhero film featuring the Marvel Comics character Wolverine. The film, distributed by 20th Century Fox, is the sixth installment in the \"X-Men\" film series. Hugh Jackman reprises his role from previous films as the title character, with James Mangold directing a screenplay written by Scott Frank and Mark Bomback, based on the 1982 limited series \"Wolverine\" by Chris Claremont and Frank Miller. In the film, which follows the events of \"\", Logan travels to Japan, where he engages an old acquaintance in a struggle that has lasting consequences. Stripped of his healing factor, Wolverine must battle deadly samurai while struggling with guilt.",
+            "Where Sinners Meet\nWhere Sinners Meet is a 1934 American romantic comedy film directed by J. Walter Ruben and starring Diana Wynyard, Clive Brook and Billie Burke. It was adapted by writer Henry William Hanemann from Clara Beranger's 1927 movie \"The Little Adventuress\", which in turn was a rewrite from the 1921 British play \"The Dover Road\" by A. A. Milne. The film used \"The Dover Road\" as a working title prior to its release.",
+            "The Revenge of Pancho Villa\nThe Revenge of Pancho Villa (1930\u201336)\u2014Spanish title La Venganza de Pancho Villa\u2014is a compilation film made by the Padilla family in El Paso, Texas, USA, from dozens of fact-based and fictional films about the celebrated Mexican revolutionary Pancho Villa (1878\u20131923).",
+            "Michael Shayne\nMichael \"Mike\" Shayne is a fictional private detective character created during the late 1930s by writer Brett Halliday, a pseudonym of Davis Dresser. The character appeared in a series of seven films starring Lloyd Nolan for Twentieth Century Fox, five films from the low-budget Producers Releasing Corporation with Hugh Beaumont, a radio series under a variety of titles between 1944 and 1953, and later in 1960\u20131961 in a 32-episode NBC television series starring Richard Denning in the title role."
+        ],
+        "thoughts": [
+            "The film 'Charley and the Angel' was released in 1973.",
+            "The release date for the film 'The Boatniks' is 1970.",
+            "The film 'The Boatniks' was released before 'Charley and the Angel', as it was released in 1970, while 'Charley and the Angel' was released in 1973."
+        ],
+        "is_best": false
+    },
+    {
+        "question": " Which 1970's film was released first, Charley and the Angel or The Boatniks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the release date of the film Charley and the Angel.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the release date of the film The Boatniks.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the release dates of Charley and the Angel and The Boatniks to determine which film was released first.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the original question into two main retrieval tasks: fetching the release dates of the two films from the 1970s. Once these dates are retrieved, a reasoning step compares the two dates to determine which film was released first. This ensures a clear logical progression from information retrieval to analysis and conclusion."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Charley and the Angel\nCharley and the Angel is a 1973 Disney family/comedy film set in an unidentified small city in the 1930s Depression-era Midwestern United States and starring Fred MacMurray in one of his final film appearances and his last movie for Disney. The film, directed by Vincent McEveety, is based on \"The Golden Evenings of Summer\", a 1971 novel written by Will Stanton.",
+            "Kiss an Angel Good Mornin'\n\"Kiss an Angel Good Mornin'\" is a song written by Ben Peters, and recorded by American country music artist Charley Pride. It was released in October 1971 as the first single from the album \"Charley Pride Sings Heart Songs\". The song has since become one of his signature tunes and was his eighth song to reach number one on the country charts. \"Kiss an Angel Good Mornin\" was also Charley Pride's first single to reach the pop charts, peaking at number twenty-one on the \"Billboard\" Hot 100, and also went into the Top Ten of the Adult Contemporary charts. It also reached #19 on the U.S. \"Cash Box\" Top 100. The song spent four months on the pop chart, longer than any of his other hits. \"Billboard\" ranked it as the No. 74 song for 1972.",
+            "The Boatniks\nThe Boatniks is a 1970 American comedy film starring Robert Morse, Stefanie Powers, Don Ameche and Phil Silvers. It was made by Walt Disney Productions, released by Buena Vista Distribution and directed by Norman Tokar.",
+            "The Libertine (album)\nThe Libertine: Music for the Film by Laurence Dunmore is the album release of Michael Nyman's score for the 2004 film \"The Libertine\" directed by Laurence Dunmore. It is the third release on Nyman's own label, MN Records, and the first to receive distribution in the United States, by Inner Knot Records. It is his 50th album release overall. When Naxos Records began distributing MN Records in the United States in 2008, it was included and began appearing in large quantitites in stores. This is Nyman's last score for a major motion picture to date, and his last soundtrack release, other than compilation soundtracks.",
+            "The White Angel (1936 film)\nThe White Angel is a 1936 American historical drama film directed by William Dieterle and starring Kay Francis. The film depicts Florence Nightingale's pioneering work in nursing during the Crimean War.",
+            "The White Angel (1943 film)\nThe White Angel (Italian: L'angelo bianco) is a 1943 Italian drama film directed by Giulio Antamoro, Federico Sinibaldi and Ettore Giannini and starring  Emma Gramatica, Filippo Scelzo and Beatrice Mancini.",
+            "Is Anybody Goin' to San Antone\n\"Is Anybody Goin' to San Antone\" is a song written by Glenn Martin and Dave Kirby, and recorded by American country music artist Charley Pride. It was released in February 1970 as the first single from the album \"Charley Pride's 10th album\". \"Is Anybody Goin' to San Antone\" was Charley Pride's third number one in a row on the country charts. The single spent two weeks at number one and a total of 16 weeks on the country chart.",
+            "Illud Divinum Insanus\nIllud Divinum Insanus is the eighth studio album by American death metal band Morbid Angel. It was released on June 7, 2011, by independent French record label Season of Mist. It is Morbid Angel's first album since \"Heretic\" (2003), the band's longest gap to date between studio albums. This is the only Morbid Angel album to feature guitarist Destructhor and drummer Tim Yeung, making it their first not to feature Pete Sandoval, who was recovering from surgery. It is also the band's only album to feature bassist/vocalist David Vincent since he rejoined in 2004.",
+            "Hell and High Water (1933 film)\nHell and High Water is a 1933 American Pre-Code drama film directed by Grover Jones and William Slavens McNutt and written by Grover Jones, Agnes Brand Leahy, William Slavens McNutt and Max Miller. The film stars Richard Arlen, Judith Allen, Charley Grapewin, Gertrude Hoffman, Guy Standing, and William Frawley. The film was released on October 27, 1933, by Paramount Pictures.",
+            "The Porcupine\nThe Porcupine is a short novel by Julian Barnes originally published in 1992. Before its British release date the book was first published earlier that year in Bulgarian, with the title \"\u0411\u043e\u0434\u043b\u0438\u0432\u043e \u0441\u0432\u0438\u043d\u0447\u0435\" (Bodlivo Svinche) by Obsidian of Sofia.",
+            "The Meerkats\nThe Meerkats, also known as Meerkats: The Movie, is a feature-length 2008 British wildlife fiction film which anthropomorphises the daily struggles of a clan of meerkats in the Kalahari Desert. It was produced by BBC Films and The Weinstein Company, and filmed by the award-winning BBC Natural History Unit. It is the debut directorial feature of James Honeyborne, previously a producer of natural history programmes for television. The worldwide premiere was held at the Dinard Film Festival, France in October 2008, expanding to a wide release the following week. The film was released in 2009, on 7 August in the UK. A US date has not yet been announced. This was dedicated to actor Paul Newman, who died in 2008, shortly before this movie was released.",
+            "Win a Date with Tad Hamilton!\nWin a Date with Tad Hamilton! is a 2004 American romantic comedy film directed by Robert Luketic, written by Victor Levin, and starring Kate Bosworth, Topher Grace, Josh Duhamel, Gary Cole, Ginnifer Goodwin, Sean Hayes, and Nathan Lane. Heavily inspired by Ram Gopal Varma's 1995 Indian film \"Rangeela\", the film follows a small-town girl (Bosworth) who wins a contest for a date with a male celebrity (Duhamel), and a love triangle forms between the girl, the star, and the girl's best friend (Grace).",
+            "The Lone Wolf Keeps a Date\nThe Lone Wolf Keeps a Date (1941) is the sixth Lone Wolf film produced by Columbia Pictures. It features Warren William in his fourth appearance as the title character Lone Wolf, and Edward Gargan, Lester Matthews and Don Beddoe as the film's antagonists. The film was directed by Sidney Salkow and written by Salkow and Earl Felton.",
+            "The Kingkiller Chronicle\nThe Kingkiller Chronicle is a fantasy series by Patrick Rothfuss, telling the autobiography of Kvothe, an adventurer and famous musician. The first two books, \"The Name of the Wind\" and \"The Wise Man's Fear\", were released in 2007 and 2011, respectively. A third is planned to fill out a trilogy, but a release date has not been announced.",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\"."
+        ],
+        "thoughts": [
+            "The film \"Charley and the Angel\" was released in 1973.",
+            "The film \"The Boatniks\" was released in 1970.",
+            "The film \"The Boatniks\" was released in 1970, while \"Charley and the Angel\" was released in 1973. Therefore, \"The Boatniks\" was released first."
+        ],
+        "is_best": false
+    },
+    {
+        "question": " Which 1970's film was released first, Charley and the Angel or The Boatniks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the release year of the film 'Charley and the Angel'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the release year of the film 'The Boatniks'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the release years of 'Charley and the Angel' and 'The Boatniks' to determine which was released first.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins with two parallel retrieval nodes: one for obtaining the release year of 'Charley and the Angel' and the other for 'The Boatniks'. After gathering these details, the final reasoning node compares the two years to determine which film was released first. The graph structure allows for independent retrieval operations before reaching a final comparative decision."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Charley and the Angel\nCharley and the Angel is a 1973 Disney family/comedy film set in an unidentified small city in the 1930s Depression-era Midwestern United States and starring Fred MacMurray in one of his final film appearances and his last movie for Disney. The film, directed by Vincent McEveety, is based on \"The Golden Evenings of Summer\", a 1971 novel written by Will Stanton.",
+            "Kiss an Angel Good Mornin'\n\"Kiss an Angel Good Mornin'\" is a song written by Ben Peters, and recorded by American country music artist Charley Pride. It was released in October 1971 as the first single from the album \"Charley Pride Sings Heart Songs\". The song has since become one of his signature tunes and was his eighth song to reach number one on the country charts. \"Kiss an Angel Good Mornin\" was also Charley Pride's first single to reach the pop charts, peaking at number twenty-one on the \"Billboard\" Hot 100, and also went into the Top Ten of the Adult Contemporary charts. It also reached #19 on the U.S. \"Cash Box\" Top 100. The song spent four months on the pop chart, longer than any of his other hits. \"Billboard\" ranked it as the No. 74 song for 1972.",
+            "Fallen Angel (1945 film)\nFallen Angel is a 1945 black-and-white film noir directed by Otto Preminger, with cinematography by Joseph LaShelle, who had also worked with Preminger on \"Laura\" a year before. The film features Alice Faye, Dana Andrews, Linda Darnell, and Charles Bickford. It was the last film Faye made as a major Hollywood star, and she did not make another film until \"State Fair\" (1962).",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Boatniks\nThe Boatniks is a 1970 American comedy film starring Robert Morse, Stefanie Powers, Don Ameche and Phil Silvers. It was made by Walt Disney Productions, released by Buena Vista Distribution and directed by Norman Tokar.",
+            "The White Angel (1936 film)\nThe White Angel is a 1936 American historical drama film directed by William Dieterle and starring Kay Francis. The film depicts Florence Nightingale's pioneering work in nursing during the Crimean War.",
+            "Criss Angel Believe\nCriss Angel Believe (also written as CRISS ANGEL \"beLIEve\") was the sixth Cirque du Soleil show in Las Vegas, which was premiered at the beLIEve theatre (which holds 1,600 when at capacity) inside the Luxor hotel in Las Vegas in 2008. It is a theatrical production created in partnership of Cirque du Soleil and magician Criss Angel, who is billed as the \"co-writer, illusions creator and designer, original concept creator and star\" of the show. The show had its final performance on April 17, 2016, being replaced by \"Criss Angel MINDFREAK LIVE\" on May 11 of the same year.",
+            "The White Angel (1943 film)\nThe White Angel (Italian: L'angelo bianco) is a 1943 Italian drama film directed by Giulio Antamoro, Federico Sinibaldi and Ettore Giannini and starring  Emma Gramatica, Filippo Scelzo and Beatrice Mancini.",
+            "Is Anybody Goin' to San Antone\n\"Is Anybody Goin' to San Antone\" is a song written by Glenn Martin and Dave Kirby, and recorded by American country music artist Charley Pride. It was released in February 1970 as the first single from the album \"Charley Pride's 10th album\". \"Is Anybody Goin' to San Antone\" was Charley Pride's third number one in a row on the country charts. The single spent two weeks at number one and a total of 16 weeks on the country chart.",
+            "Hell and High Water (1933 film)\nHell and High Water is a 1933 American Pre-Code drama film directed by Grover Jones and William Slavens McNutt and written by Grover Jones, Agnes Brand Leahy, William Slavens McNutt and Max Miller. The film stars Richard Arlen, Judith Allen, Charley Grapewin, Gertrude Hoffman, Guy Standing, and William Frawley. The film was released on October 27, 1933, by Paramount Pictures.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Lilla J\u00f6nssonligan\nLilla J\u00f6nssonligan (English: The Little J\u00f6nssonleague ) is a Swedish film series that consists of four movies. The film series is a spin-off of the original \"J\u00f6nssonligan\" film series. The main difference about the two series is that the main characters are portrayed as kids instead of adults in this one, hence the word \"little\" in the title. Rocky, the original third member, is not featured in any of the films. Unlike the \"adult J\u00f6nssonligan\", where the gang where bumbling anti-heroes, the \"litte J\u00f6nssonligan\" is often straight up heroic.",
+            "The Wolverine (film)\nThe Wolverine is a 2013 superhero film featuring the Marvel Comics character Wolverine. The film, distributed by 20th Century Fox, is the sixth installment in the \"X-Men\" film series. Hugh Jackman reprises his role from previous films as the title character, with James Mangold directing a screenplay written by Scott Frank and Mark Bomback, based on the 1982 limited series \"Wolverine\" by Chris Claremont and Frank Miller. In the film, which follows the events of \"\", Logan travels to Japan, where he engages an old acquaintance in a struggle that has lasting consequences. Stripped of his healing factor, Wolverine must battle deadly samurai while struggling with guilt.",
+            "Where Sinners Meet\nWhere Sinners Meet is a 1934 American romantic comedy film directed by J. Walter Ruben and starring Diana Wynyard, Clive Brook and Billie Burke. It was adapted by writer Henry William Hanemann from Clara Beranger's 1927 movie \"The Little Adventuress\", which in turn was a rewrite from the 1921 British play \"The Dover Road\" by A. A. Milne. The film used \"The Dover Road\" as a working title prior to its release.",
+            "The Revenge of Pancho Villa\nThe Revenge of Pancho Villa (1930\u201336)\u2014Spanish title La Venganza de Pancho Villa\u2014is a compilation film made by the Padilla family in El Paso, Texas, USA, from dozens of fact-based and fictional films about the celebrated Mexican revolutionary Pancho Villa (1878\u20131923).",
+            "Michael Shayne\nMichael \"Mike\" Shayne is a fictional private detective character created during the late 1930s by writer Brett Halliday, a pseudonym of Davis Dresser. The character appeared in a series of seven films starring Lloyd Nolan for Twentieth Century Fox, five films from the low-budget Producers Releasing Corporation with Hugh Beaumont, a radio series under a variety of titles between 1944 and 1953, and later in 1960\u20131961 in a 32-episode NBC television series starring Richard Denning in the title role."
+        ],
+        "thoughts": [
+            "The film 'Charley and the Angel' was released in 1973.",
+            "The release year of the film 'The Boatniks' is 1970.",
+            "The film 'The Boatniks' was released in 1970, which is earlier than the release year of 'Charley and the Angel' in 1973. Therefore, 'The Boatniks' was released first."
+        ],
+        "is_best": false
+    },
+    {
+        "question": " Which 1970's film was released first, Charley and the Angel or The Boatniks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the release date for the film 'Charley and the Angel'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the release date for the film 'The Boatniks'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the release dates of 'Charley and the Angel' and 'The Boatniks' to determine which was released first.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph breaks down the task into three steps: retrieving the release dates of the two films and then comparing these dates to establish which film was released first. The initial steps (nodes 1 and 2) are retrieval and reasoning nodes that operate independently and in parallel, gathering and providing information necessary for the final reasoning node (node 3) to make the comparison and arrive at the answer."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Charley and the Angel\nCharley and the Angel is a 1973 Disney family/comedy film set in an unidentified small city in the 1930s Depression-era Midwestern United States and starring Fred MacMurray in one of his final film appearances and his last movie for Disney. The film, directed by Vincent McEveety, is based on \"The Golden Evenings of Summer\", a 1971 novel written by Will Stanton.",
+            "Kiss an Angel Good Mornin'\n\"Kiss an Angel Good Mornin'\" is a song written by Ben Peters, and recorded by American country music artist Charley Pride. It was released in October 1971 as the first single from the album \"Charley Pride Sings Heart Songs\". The song has since become one of his signature tunes and was his eighth song to reach number one on the country charts. \"Kiss an Angel Good Mornin\" was also Charley Pride's first single to reach the pop charts, peaking at number twenty-one on the \"Billboard\" Hot 100, and also went into the Top Ten of the Adult Contemporary charts. It also reached #19 on the U.S. \"Cash Box\" Top 100. The song spent four months on the pop chart, longer than any of his other hits. \"Billboard\" ranked it as the No. 74 song for 1972.",
+            "The Boatniks\nThe Boatniks is a 1970 American comedy film starring Robert Morse, Stefanie Powers, Don Ameche and Phil Silvers. It was made by Walt Disney Productions, released by Buena Vista Distribution and directed by Norman Tokar.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Libertine (album)\nThe Libertine: Music for the Film by Laurence Dunmore is the album release of Michael Nyman's score for the 2004 film \"The Libertine\" directed by Laurence Dunmore. It is the third release on Nyman's own label, MN Records, and the first to receive distribution in the United States, by Inner Knot Records. It is his 50th album release overall. When Naxos Records began distributing MN Records in the United States in 2008, it was included and began appearing in large quantitites in stores. This is Nyman's last score for a major motion picture to date, and his last soundtrack release, other than compilation soundtracks.",
+            "Is Anybody Goin' to San Antone\n\"Is Anybody Goin' to San Antone\" is a song written by Glenn Martin and Dave Kirby, and recorded by American country music artist Charley Pride. It was released in February 1970 as the first single from the album \"Charley Pride's 10th album\". \"Is Anybody Goin' to San Antone\" was Charley Pride's third number one in a row on the country charts. The single spent two weeks at number one and a total of 16 weeks on the country chart.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "Wonder Could I Live There Anymore\n\"Wonder Could I Live There Anymore\" is a song written by Bill Rice, and recorded by American country music artist Charley Pride. It was released in May 1970 as the first single from the album \"From Me to You\". \"Wonder Could I Live There Anymore\" was Charley Pride's fourth number one in a row on the country charts. The single went to number one for two weeks and spent a total of 15 weeks on the top 40.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Win a Date with Tad Hamilton!\nWin a Date with Tad Hamilton! is a 2004 American romantic comedy film directed by Robert Luketic, written by Victor Levin, and starring Kate Bosworth, Topher Grace, Josh Duhamel, Gary Cole, Ginnifer Goodwin, Sean Hayes, and Nathan Lane. Heavily inspired by Ram Gopal Varma's 1995 Indian film \"Rangeela\", the film follows a small-town girl (Bosworth) who wins a contest for a date with a male celebrity (Duhamel), and a love triangle forms between the girl, the star, and the girl's best friend (Grace).",
+            "Lilla J\u00f6nssonligan\nLilla J\u00f6nssonligan (English: The Little J\u00f6nssonleague ) is a Swedish film series that consists of four movies. The film series is a spin-off of the original \"J\u00f6nssonligan\" film series. The main difference about the two series is that the main characters are portrayed as kids instead of adults in this one, hence the word \"little\" in the title. Rocky, the original third member, is not featured in any of the films. Unlike the \"adult J\u00f6nssonligan\", where the gang where bumbling anti-heroes, the \"litte J\u00f6nssonligan\" is often straight up heroic.",
+            "The Meerkats\nThe Meerkats, also known as Meerkats: The Movie, is a feature-length 2008 British wildlife fiction film which anthropomorphises the daily struggles of a clan of meerkats in the Kalahari Desert. It was produced by BBC Films and The Weinstein Company, and filmed by the award-winning BBC Natural History Unit. It is the debut directorial feature of James Honeyborne, previously a producer of natural history programmes for television. The worldwide premiere was held at the Dinard Film Festival, France in October 2008, expanding to a wide release the following week. The film was released in 2009, on 7 August in the UK. A US date has not yet been announced. This was dedicated to actor Paul Newman, who died in 2008, shortly before this movie was released.",
+            "The Porcupine\nThe Porcupine is a short novel by Julian Barnes originally published in 1992. Before its British release date the book was first published earlier that year in Bulgarian, with the title \"\u0411\u043e\u0434\u043b\u0438\u0432\u043e \u0441\u0432\u0438\u043d\u0447\u0435\" (Bodlivo Svinche) by Obsidian of Sofia.",
+            "The Wolverine (film)\nThe Wolverine is a 2013 superhero film featuring the Marvel Comics character Wolverine. The film, distributed by 20th Century Fox, is the sixth installment in the \"X-Men\" film series. Hugh Jackman reprises his role from previous films as the title character, with James Mangold directing a screenplay written by Scott Frank and Mark Bomback, based on the 1982 limited series \"Wolverine\" by Chris Claremont and Frank Miller. In the film, which follows the events of \"\", Logan travels to Japan, where he engages an old acquaintance in a struggle that has lasting consequences. Stripped of his healing factor, Wolverine must battle deadly samurai while struggling with guilt.",
+            "Utopia (Bj\u00f6rk album)\nUtopia is the upcoming ninth studio album by Icelandic musician Bj\u00f6rk, scheduled for release in November 2017 through One Little Indian Records. During a Facebook Live event held on 15 September 2017, the release date of the album's first single, Bj\u00f6rk gave insight into the album's theme of utopia in an uncertain political environment: \"We have Trump, we have Brexit, we have our issues in Iceland, we have our environmental issues. I think if there ever was an urgency or necessity to come up with another Utopian model, how we're going to live our lives, I think it's now, and (these are) my proposals.\"",
+            "The SpongeBob SquarePants Movie\nThe SpongeBob SquarePants Movie is a 2004 American live-action/animated comedy film based on the Nickelodeon television series \"SpongeBob SquarePants\". The film was co-written, directed, and co-produced by series creator Stephen Hillenburg and starred the series' cast of Tom Kenny, Bill Fagerbakke, Clancy Brown, Rodger Bumpass and Mr. Lawrence, with guest performances by Scarlett Johansson, Jeffrey Tambor, Alec Baldwin and David Hasselhoff. It was produced by Hillenburg's production company United Plankton Pictures and Nickelodeon Movies, it was distributed by Paramount Pictures and was also the first film in the \"SpongeBob SquarePants\" film series. In the film, Plankton devises a plan to steal King Neptune's crown and send it to Shell City, and SpongeBob and Patrick must retrieve the crown to save Mr. Krabs from King Neptune's wrath and Bikini Bottom from Plankton's plan."
+        ],
+        "thoughts": [
+            "The film 'Charley and the Angel' was released in 1973.",
+            "The release date for the film 'The Boatniks' is 1970.",
+            "The film 'The Boatniks' was released before 'Charley and the Angel', as it was released in 1970, while 'Charley and the Angel' was released in 1973."
+        ],
+        "is_best": false
+    },
+    {
+        "question": " Which 1970's film was released first, Charley and the Angel or The Boatniks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the release year for the film 'Charley and the Angel'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the release year for the film 'The Boatniks'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the release years of the two films to determine which was released first.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph consists of two parallel retrieval nodes to find the release years of 'Charley and the Angel' and 'The Boatniks.' These are independent tasks and can be executed simultaneously. The reasoning node is the comparison of these release years to determine which film came out first. The reasoning step depends on the successful retrieval of both release years."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Charley and the Angel\nCharley and the Angel is a 1973 Disney family/comedy film set in an unidentified small city in the 1930s Depression-era Midwestern United States and starring Fred MacMurray in one of his final film appearances and his last movie for Disney. The film, directed by Vincent McEveety, is based on \"The Golden Evenings of Summer\", a 1971 novel written by Will Stanton.",
+            "Kiss an Angel Good Mornin'\n\"Kiss an Angel Good Mornin'\" is a song written by Ben Peters, and recorded by American country music artist Charley Pride. It was released in October 1971 as the first single from the album \"Charley Pride Sings Heart Songs\". The song has since become one of his signature tunes and was his eighth song to reach number one on the country charts. \"Kiss an Angel Good Mornin\" was also Charley Pride's first single to reach the pop charts, peaking at number twenty-one on the \"Billboard\" Hot 100, and also went into the Top Ten of the Adult Contemporary charts. It also reached #19 on the U.S. \"Cash Box\" Top 100. The song spent four months on the pop chart, longer than any of his other hits. \"Billboard\" ranked it as the No. 74 song for 1972.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Boatniks\nThe Boatniks is a 1970 American comedy film starring Robert Morse, Stefanie Powers, Don Ameche and Phil Silvers. It was made by Walt Disney Productions, released by Buena Vista Distribution and directed by Norman Tokar.",
+            "Is Anybody Goin' to San Antone\n\"Is Anybody Goin' to San Antone\" is a song written by Glenn Martin and Dave Kirby, and recorded by American country music artist Charley Pride. It was released in February 1970 as the first single from the album \"Charley Pride's 10th album\". \"Is Anybody Goin' to San Antone\" was Charley Pride's third number one in a row on the country charts. The single spent two weeks at number one and a total of 16 weeks on the country chart.",
+            "Wonder Could I Live There Anymore\n\"Wonder Could I Live There Anymore\" is a song written by Bill Rice, and recorded by American country music artist Charley Pride. It was released in May 1970 as the first single from the album \"From Me to You\". \"Wonder Could I Live There Anymore\" was Charley Pride's fourth number one in a row on the country charts. The single went to number one for two weeks and spent a total of 15 weeks on the top 40.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Lilla J\u00f6nssonligan\nLilla J\u00f6nssonligan (English: The Little J\u00f6nssonleague ) is a Swedish film series that consists of four movies. The film series is a spin-off of the original \"J\u00f6nssonligan\" film series. The main difference about the two series is that the main characters are portrayed as kids instead of adults in this one, hence the word \"little\" in the title. Rocky, the original third member, is not featured in any of the films. Unlike the \"adult J\u00f6nssonligan\", where the gang where bumbling anti-heroes, the \"litte J\u00f6nssonligan\" is often straight up heroic.",
+            "The Wolverine (film)\nThe Wolverine is a 2013 superhero film featuring the Marvel Comics character Wolverine. The film, distributed by 20th Century Fox, is the sixth installment in the \"X-Men\" film series. Hugh Jackman reprises his role from previous films as the title character, with James Mangold directing a screenplay written by Scott Frank and Mark Bomback, based on the 1982 limited series \"Wolverine\" by Chris Claremont and Frank Miller. In the film, which follows the events of \"\", Logan travels to Japan, where he engages an old acquaintance in a struggle that has lasting consequences. Stripped of his healing factor, Wolverine must battle deadly samurai while struggling with guilt.",
+            "Where Sinners Meet\nWhere Sinners Meet is a 1934 American romantic comedy film directed by J. Walter Ruben and starring Diana Wynyard, Clive Brook and Billie Burke. It was adapted by writer Henry William Hanemann from Clara Beranger's 1927 movie \"The Little Adventuress\", which in turn was a rewrite from the 1921 British play \"The Dover Road\" by A. A. Milne. The film used \"The Dover Road\" as a working title prior to its release.",
+            "The Revenge of Pancho Villa\nThe Revenge of Pancho Villa (1930\u201336)\u2014Spanish title La Venganza de Pancho Villa\u2014is a compilation film made by the Padilla family in El Paso, Texas, USA, from dozens of fact-based and fictional films about the celebrated Mexican revolutionary Pancho Villa (1878\u20131923).",
+            "Michael Shayne\nMichael \"Mike\" Shayne is a fictional private detective character created during the late 1930s by writer Brett Halliday, a pseudonym of Davis Dresser. The character appeared in a series of seven films starring Lloyd Nolan for Twentieth Century Fox, five films from the low-budget Producers Releasing Corporation with Hugh Beaumont, a radio series under a variety of titles between 1944 and 1953, and later in 1960\u20131961 in a 32-episode NBC television series starring Richard Denning in the title role."
+        ],
+        "thoughts": [
+            "The film 'Charley and the Angel' was released in 1973.",
+            "The release year for the film 'The Boatniks' is 1970.",
+            "The film 'The Boatniks' was released in 1970, while 'Charley and the Angel' was released in 1973. Therefore, 'The Boatniks' was released first."
+        ],
+        "is_best": false
+    }
+]

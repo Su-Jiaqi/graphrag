@@ -1,0 +1,703 @@
+[
+    {
+        "question": "Are Mick Jagger and Brett Scallions both musicians?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Mick Jagger's occupation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Brett Scallions's occupation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the information retrieved about Mick Jagger to determine if he is a musician.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the information retrieved about Brett Scallions to determine if he is a musician.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the analyses of Mick Jagger and Brett Scallions to determine if both are musicians.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph breaks down the question into two main retrieval tasks: one for Mick Jagger and one for Brett Scallions, to find information about their occupations. Each of these retrieved pieces of information is then analyzed separately to determine if each person is a musician. Finally, the results of these analyses are combined to answer whether both individuals are musicians."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Brett Scallions\nBrett Allen Scallions (born December 21, 1971) is an American musician. He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+            "Joy (Mick Jagger song)\n\"Joy\" was the second track from English singer-songwriter Mick Jagger's fourth solo album, \"Goddess in the Doorway\" (2001). \"Rolling Stone\" called it \"a rocking, gospel-tinged collaboration with Bono of U2\" - featuring Pete Townshend on guitar. \"Joy\" was one of three tracks from \"Goddess in the Doorway\" to be featured within Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "The Very Best of Mick Jagger\nThe Very Best of Mick Jagger is a compilation album that was released worldwide on 1 October 2007 and the following day in the United States on WEA/Rhino Records. This 17-track release is the first ever overview of Mick Jagger's solo career.",
+            "Lucky in Love (Mick Jagger song)\n\"Lucky in Love\" is a song written and performed by English singer-songwriter Mick Jagger released as the second single from his debut album, \"She's the Boss\", in 1985. \"Lucky in Love\" was the seven track on \"She's the Boss\" and was one of two tracks from \"She's the Boss\" included on Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Disease (song)\n\"Disease\" was released on September 30, 2002 as the first single from Matchbox Twenty's third album, \"More Than You Think You Are\". It was co-written by Matchbox Twenty lead singer Rob Thomas and The Rolling Stones frontman Mick Jagger. The song peaked at #29 on the \"Billboard\" Hot 100. \"Disease\" was one of two songs written and presented to Mick Jagger, by Rob Thomas in which Jagger actually gives back the song, saying \"it would sound better coming from you\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "Mick Jagger\nSir Michael Philip Jagger, MBE (born 26 July 1943) is an English singer-songwriter, multi-instrumentalist, and composer, who gained fame as the lead singer and one of the founder members of the Rolling Stones (1962-present). Jagger's career has spanned over five decades, and he has been described as \"one of the most popular and influential frontmen in the history of rock & roll\". His distinctive voice and performance, along with Keith Richards' guitar style, have been the trademark of the Rolling Stones throughout the career of the band. Jagger gained press notoriety for his admitted drug use and romantic involvements, and was often portrayed as a countercultural figure.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "The Beautiful Occupation\n\"The Beautiful Occupation\" is the second single from Scottish indie rock band Travis' fourth studio album, \"12 Memories\". The single peaked at #48 on the UK Singles Chart, becoming their worst performing single to date. The song was written by frontman Fran Healy and is a reflection of the anti-war sentiments of the War on Iraq, also carrying serious criticism to the invasion itself.",
+            "Perseus\nBecause of the obscurity of the name Perseus and the legendary character of its bearer, most etymologists presume that it might be pre-Greek; however, the name of Perseus\u2019 native city was Greek and so were the names of his wife and relatives. There is some idea that it descended into Greek from the Proto-Indo-European language. In that regard Robert Graves has proposed the only Greek derivation available. Perseus might be from the Greek verb, \"\u03c0\u03ad\u03c1\u03b8\u03b5\u03b9\u03bd\" (\"perthein\"), \u201cto waste, ravage, sack, destroy\u201d, some form of which appears in Homeric epithets. According to Carl Darling Buck (\"Comparative Grammar of Greek and Latin\"), the \"\u2013eus\" suffix is typically used to form an agent noun, in this case from the aorist stem, \"pers-\". \"Pers-eus\" therefore is a sacker of cities; that is, a soldier by occupation, a fitting name for the first Mycenaean warrior.",
+            "Ovambo people\nThe Ovambo people, also called Aawambo, Ambo, Aawambo (Ndonga) or Ovawambo (Kwanyama), are a Southern African tribal ethnic group. They are the largest ethnic group of Namibia, found in its northern regions and more often called Ovambo. They are also found in southern Angolan province of Cunene where the name Ambo is more common. The Ovambo consist of a number of kindred Bantu ethnic tribes who inhabit what was formerly called Owamboland. Accounting for about fifty percent of the Namibian population, the Ovambo are its largest ethnic group. In Angola, they are a minority, accounting for about two percent of the total Angolan population.",
+            "Chonan languages\nThe Chonan languages were spoken in Tierra del Fuego and Patagonia. Two Chon languages are well attested: Selk'nam, spoken by the people of the same name who occupied territory in the northeast of Tierra del Fuego; and Tehuelche spoken by the people of the same name who occupied territory north of Tierra del Fuego. The name 'Chon', or \"Tshon\", is a blend of 'Tehuelche' and 'Ona'.",
+            "Australian Geography Competition\nThe Australian Geography Competition is an Australia-wide competition run by the Royal Geographic Society of Queensland and the Australian Geography Teachers Association and sponsored by the National Geographic Channel. It tests the geographic knowledge of high school students from years 8-12. It starts with a written multiple choice test in early March. In the under 16 competition the winners from each state & the territories (Australian Capital Territory, Northern Territory, Cocos Islands) are taken as well as a runner up who has the highest score after these winners. These people are flown to Sydney at the start of June for a weekend of sightseeing followed by the national final. The winners go on to the National Geographic World Championship to represent Australia. The competition is also used to select the members of the Australian team for the International Geography Olympiad.",
+            "Speedpass\nSpeedpass is a keychain RFID device introduced in 1997 by Mobil Oil Corp. (which merged with Exxon to become ExxonMobil in 1999) for electronic payment. It was originally developed by Verifone. As of 2004, more than seven million people possess Speedpass tags, which can be used at approximately 10,000 Exxon, Mobil and Esso gas stations worldwide. At one point, Speedpass was deployed experimentally in fast-food restaurants and supermarkets in select markets. McDonald's alone deployed Speedpass in over 400 Chicago area restaurants. The test was deemed a failure and McDonald's removed the scanners from all their restaurants in mid-2004. Additionally, the New England grocery chain Stop & Shop tested Speedpass at their Boston area stores; the units were removed in early 2005. Speedpass has also been previously available through a Speedpass Car Tag and a Speedpass-enabled Timex watch."
+        ],
+        "thoughts": [
+            "Mick Jagger is an English singer-songwriter, multi-instrumentalist, and composer, best known as the lead singer and one of the founder members of the Rolling Stones. He has had a successful solo career, with several albums and hit songs. Jagger's career has spanned over five decades, and he has been described as \"one of the most popular and influential frontmen in the history of rock & roll\". In addition to his music career, Jagger has also been involved in collaborations with other artists, such as his work with Rob Thomas on the song \"Disease\". Overall, Mick Jagger's occupation is primarily as a musician and performer.",
+            "Based on the information retrieved, it is clear that Mick Jagger is a musician. He is a singer-songwriter, multi-instrumentalist, and composer, best known as the lead singer and founder member of the Rolling Stones. He has also had a successful solo career and has been involved in collaborations with other artists. Therefore, it can be concluded that Mick Jagger is indeed a musician.",
+            "Brett Scallions is an American musician, known for being the lead vocalist, rhythm guitarist, and lyricist of the post-grunge band Fuel.",
+            "Based on the information retrieved, it can be determined that Brett Scallions is indeed a musician. He is known for being the lead vocalist, rhythm guitarist, and lyricist of the post-grunge band Fuel, which indicates his involvement in the music industry. Therefore, it can be concluded that Brett Scallions is a musician.",
+            "Based on the analyses of Mick Jagger and Brett Scallions, it can be determined that both are indeed musicians. Mick Jagger is a singer-songwriter, multi-instrumentalist, and composer, best known as the lead singer and founder member of the Rolling Stones, as well as having a successful solo career and collaborations with other artists. Brett Scallions is known for being the lead vocalist, rhythm guitarist, and lyricist of the post-grunge band Fuel, indicating his involvement in the music industry. Therefore, both Mick Jagger and Brett Scallions can be classified as musicians."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Are Mick Jagger and Brett Scallions both musicians?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine whether Mick Jagger is a musician.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine whether Brett Scallions is a musician.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Aggregate the information about Mick Jagger and Brett Scallions to determine if both are musicians.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is designed to resolve the question by dividing it into two main retrieval tasks; one for Mick Jagger and one for Brett Scallions. Each task independently retrieves information to verify if the individual is a musician. The final step aggregates these results to conclude if both individuals are indeed musicians."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Brett Scallions\nBrett Allen Scallions (born December 21, 1971) is an American musician. He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+            "The Very Best of Mick Jagger\nThe Very Best of Mick Jagger is a compilation album that was released worldwide on 1 October 2007 and the following day in the United States on WEA/Rhino Records. This 17-track release is the first ever overview of Mick Jagger's solo career.",
+            "Lucky in Love (Mick Jagger song)\n\"Lucky in Love\" is a song written and performed by English singer-songwriter Mick Jagger released as the second single from his debut album, \"She's the Boss\", in 1985. \"Lucky in Love\" was the seven track on \"She's the Boss\" and was one of two tracks from \"She's the Boss\" included on Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "Joy (Mick Jagger song)\n\"Joy\" was the second track from English singer-songwriter Mick Jagger's fourth solo album, \"Goddess in the Doorway\" (2001). \"Rolling Stone\" called it \"a rocking, gospel-tinged collaboration with Bono of U2\" - featuring Pete Townshend on guitar. \"Joy\" was one of three tracks from \"Goddess in the Doorway\" to be featured within Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "Elizabeth Jagger\nElizabeth Scarlett \"Lizzy\" Jagger (born March 2, 1984) is an American-English model and actress. Born in New York City, she is the eldest daughter of Mick Jagger and Jerry Hall. She is the sister of James Leroy Augustin Jagger (born 1985), Georgia May Ayeesha Jagger (born 1992) and Gabriel Luke Beauregard Jagger (born 1997), and paternal half-sister of Karis Hunt Jagger (born 1970), Jade Sheena Jezebel Jagger (born 1971), Lucas Maurice Morad-Jagger (born 1999), and Deveraux Octavian Basil Jagger (born 2016).",
+            "Memo from Turner\n\"Memo from Turner\" is a solo record by Mick Jagger, featuring the slide guitar by Ry Cooder, from the soundtrack of \"Performance\", in which Jagger played the leading role of Turner, a reclusive rock star. It was re-released in October 2007 on a seventeen-song retrospective compilation album \"The Very Best of Mick Jagger\", making a re-appearance as a Jagger solo effort. After its original release in 1970, it had been included on Rolling Stones compilations, such as \"\" as a track credited to the Jagger/Richards songwriting partnership. \"Memo from Turner\" was ranked #92 in the 100 Greatest Guitar Songs list of \"Rolling Stone\".",
+            "Disease (song)\n\"Disease\" was released on September 30, 2002 as the first single from Matchbox Twenty's third album, \"More Than You Think You Are\". It was co-written by Matchbox Twenty lead singer Rob Thomas and The Rolling Stones frontman Mick Jagger. The song peaked at #29 on the \"Billboard\" Hot 100. \"Disease\" was one of two songs written and presented to Mick Jagger, by Rob Thomas in which Jagger actually gives back the song, saying \"it would sound better coming from you\".",
+            "Stray Cat Blues\n\"Stray Cat Blues\" is the eighth song on the Rolling Stones' album \"Beggars Banquet\". It was written by Mick Jagger and Keith Richards and produced by Jimmy Miller. Miller's production of the song is very representative of his style, featuring a very prominent hi hat beat, droning piano performed by Nicky Hopkins, a mellotron performed by Brian Jones, all electric guitars (including slide) performed by Richards and vocals from Jagger kept even in the mix. According to Mick Jagger, the song was inspired by \"Heroin\" by the Velvet Underground. The intro of Stray Cat and Heroin are similar.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Jagger/Richards\nThe songwriting partnership of Mick Jagger and Keith Richards, known as Jagger/Richards (and occasionally Richards/Jagger), is a musical collaboration whose output has produced the majority of the catalogue of the Rolling Stones. It is one of the most successful songwriting partnerships in history. Jagger and Richards adopted the nickname \"The Glimmer Twins\" after a vacation cruise they took to Brazil in December 1968/January 1969 with their then-girlfriends, Marianne Faithfull and Anita Pallenberg. An older English couple on the ship kept asking Richards and Jagger who they were. When they refused to reveal their identities, the woman reportedly kept asking, \"just give us a glimmer\" (as in \"give us a hint about who you are\"), which amused Jagger and Richards. In addition to Jagger and Richards's songwriting partnership, they have also produced or co-produced numerous Rolling Stones albums under the pseudonym The Glimmer Twins, after that experience together.",
+            "Brewer v. Williams\nBrewer v. Williams, 430 U.S. 387 (1977) , is a decision by the United States Supreme Court that clarifies what constitutes \"waiver\" of the right to counsel for the purposes of the Sixth Amendment. Under \"Miranda v. Arizona\", evidence obtained by police during interrogation of a suspect before he has been read his Miranda rights is inadmissible. Here, however, the defendant had been indicted in court, and thus his Sixth Amendment right to counsel had automatically attached. At issue was whether a voluntary admission of incriminating facts in response to police statements constituted a waiver of this right to counsel.",
+            "United States v. Olano\nUnited States v. Olano, 507 U.S. 725 (1993) , was a United States Supreme Court case that distinguished between forfeiture and waiver. Quoting from \"Johnson v. Zerbst\", 304 U.S. 458 (1938) , the Court noted, \"Whereas forfeiture is the failure to make the timely assertion of a right, waiver is the \"intentional relinquishment or abandonment of a known right... Whether a particular right is waivable; whether the defendant must participate personally in the waiver; whether certain procedures are required for waiver; and whether the defendant's choice must be particularly informed or voluntary, all depend on the right at stake.\"",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Martemyan Ryutin\nMartemyan Nikitich Ryutin (Russian: \u041c\u0430\u0440\u0442\u0435\u043c\u044c\u044f\u0301\u043d \u041d\u0438\u043a\u0438\u0301\u0442\u0438\u0447 \u0420\u044e\u0301\u0442\u0438\u043d ) (1890\u20131937) was a Russian Marxist revolutionary, and a political functionary of the Russian Communist Party. Ryutin is best remembered as the leader of a pro-peasant political faction organized against Soviet leader Joseph Stalin in the early 1930s and as the primary author of a 200-page oppositional platform. Ryutin was arrested by the Soviet secret police, along with his co-thinkers, in what has come to be known as the Ryutin Affair. He was executed in January 1937 as part of the Yezhovshchina (Great Purge) conducted against political oppositionists and suspected economic \"wreckers\" and spies.",
+            "Operation Dragoon\nOperation Dragoon (initially Operation Anvil) was the code name for the Allied invasion of Southern France on 15August 1944. The operation was initially planned to be executed in conjunction with Operation Overlord, the Allied landing in the Normandy, but the lack of available resources led to a cancellation of the second landing. By July 1944 the landing was reconsidered, as the clogged-up ports in Normandy did not have the capacity to adequately supply the Allied forces. Concurrently, the French High Command pushed for a revival of the operation that would include large numbers of French troops. As a result, the operation was finally approved in July to be executed in August.",
+            "Anderson\u2013Darling test\nThe Anderson\u2013Darling test is a statistical test of whether a given sample of data is drawn from a given probability distribution. In its basic form, the test assumes that there are no parameters to be estimated in the distribution being tested, in which case the test and its set of critical values is distribution-free. However, the test is most often used in contexts where a family of distributions is being tested, in which case the parameters of that family need to be estimated and account must be taken of this in adjusting either the test-statistic or its critical values. When applied to testing whether a normal distribution adequately describes a set of data, it is one of the most powerful statistical tools for detecting most departures from normality."
+        ],
+        "thoughts": [
+            "Yes, Mick Jagger is a musician. He has released solo albums, written and performed songs, and has been a part of the songwriting partnership of Jagger/Richards, which has produced the majority of the Rolling Stones' catalogue.",
+            "Yes, Brett Scallions is a musician. He is the lead vocalist, rhythm guitarist, and lyricist of the post-grunge band Fuel.",
+            "Both Mick Jagger and Brett Scallions are musicians. Jagger is known for his work with the Rolling Stones and as a solo artist, while Scallions is the lead vocalist and guitarist for the band Fuel."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Mick Jagger and Brett Scallions both musicians?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Mick Jagger's profession.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Brett Scallions' profession.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Mick Jagger is a musician based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Brett Scallions is a musician based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Conclude if both Mick Jagger and Brett Scallions are musicians based on the analysis results.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the question into steps of retrieving and reasoning about the professions of Mick Jagger and Brett Scallions. The process involves independently determining if each individual is a musician and then synthesizing these conclusions to provide a final answer."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Brett Scallions\nBrett Allen Scallions (born December 21, 1971) is an American musician. He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+            "Nurse stereotypes\nA stereotype is a generalized idea or image about a particular person or thing that is often oversimplified and offensive. Stereotypes are victim of prejudice when negative portrayals of a group are untrue of individual members. Nursing has been stereotyped throughout the history of the profession. A common misconception is that all nurses are female; this has led to the stereotype of male nurses as effeminate. These generalized ideas of the nursing profession have formed a skewed image of nurses in the media. The image of a nurse projected by the media is typically of a young white single female being over-sexualized as well as diminished intellectually; this idea is then portrayed in get-well cards, television shows and novels. The over-sexualized nurse is commonly referred to as a naughty nurse and is shown as a sex symbol or nymphomaniac. Along with these common stereotypes, studies have identified several other popular images used in media such as handmaiden, angel, torturer, homosexual male, alcoholic, buffoon and woman in white. Common stereotypes of nursing and portrayal of these misconceptions have fueled a discussion on the effects they have on the profession, harmful or good.",
+            "Peter Bales\nPeter Bales (1547\u20131610?) was an English calligrapher and one of the inventors of shorthand writing. He was born in London in 1547, and is described by Anthony Wood as a \"most dexterous person in his profession, to the great wonder of scholars and others\". We are also informed that \"he spent several years in sciences among Oxonians, particularly, as it seems, in Gloucester Hall; but that study, which he used for a diversion only, proved at length an employment of profit.\" He is mentioned for his skill in micrography in \"Holinshed's Chronicle\".",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Joy (Mick Jagger song)\n\"Joy\" was the second track from English singer-songwriter Mick Jagger's fourth solo album, \"Goddess in the Doorway\" (2001). \"Rolling Stone\" called it \"a rocking, gospel-tinged collaboration with Bono of U2\" - featuring Pete Townshend on guitar. \"Joy\" was one of three tracks from \"Goddess in the Doorway\" to be featured within Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle.",
+            "The Very Best of Mick Jagger\nThe Very Best of Mick Jagger is a compilation album that was released worldwide on 1 October 2007 and the following day in the United States on WEA/Rhino Records. This 17-track release is the first ever overview of Mick Jagger's solo career.",
+            "Lucky in Love (Mick Jagger song)\n\"Lucky in Love\" is a song written and performed by English singer-songwriter Mick Jagger released as the second single from his debut album, \"She's the Boss\", in 1985. \"Lucky in Love\" was the seven track on \"She's the Boss\" and was one of two tracks from \"She's the Boss\" included on Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "Mursm\u00e4cka\nMursm\u00e4cka, also called \"bruksm\u00e4cka\" or only \"sm\u00e4cka\", was an historical profession for women in Sweden. A mursm\u00e4cka was a female construction worker with the task to hand mortar during construction work. The profession is recorded from at least 1691 (though it is not confirmed by name until the 1830s) and discontinued in 1922. This was a very hard but common work for a poor uneducated women during the 19th century, particularly in Stockholm. In July 1888, the Mursm\u00e4cka of Stockholm performed a great strike action which attracted considerable attention in contemporary Sweden.",
+            "Reading law\nReading law is the method by which persons in common law countries, particularly the United States, entered the legal profession before the advent of law schools. This usage specifically refers to a means of entering the profession (although in England it is still customary to say that a university undergraduate is \"reading\" a course, which may be law or any other). \"Reading the law\" consists of an extended internship or apprenticeship under the tutelage or mentoring of an experienced lawyer. A small number of U.S. jurisdictions still permit this practice today.",
+            "Convention (meeting)\nA convention, in the sense of a meeting, is a gathering of individuals who meet at an arranged place and time in order to discuss or engage in some common interest. The most common conventions are based upon industry, profession, and fandom. Trade conventions typically focus on a particular industry or industry segment, and feature keynote speakers, vendor displays, and other information and activities of interest to the event organizers and attendees. Professional conventions focus on issues of concern to the profession and advancements in the profession. Such conventions are generally organized by societies or communities dedicated to promotion of the topic of interest. Fan conventions usually feature displays, shows, and sales based on pop culture and guest celebrities. Science fiction conventions traditionally partake of the nature of both professional conventions and fan conventions, with the balance varying from one to another. Conventions also exist for various hobbies, such as gaming or model railroads.",
+            "Mick Jagger\nSir Michael Philip Jagger, MBE (born 26 July 1943) is an English singer-songwriter, multi-instrumentalist, and composer, who gained fame as the lead singer and one of the founder members of the Rolling Stones (1962-present). Jagger's career has spanned over five decades, and he has been described as \"one of the most popular and influential frontmen in the history of rock & roll\". His distinctive voice and performance, along with Keith Richards' guitar style, have been the trademark of the Rolling Stones throughout the career of the band. Jagger gained press notoriety for his admitted drug use and romantic involvements, and was often portrayed as a countercultural figure.",
+            "Mick (DJ)\nMick Batyske (known by his stage name Mick, sometimes styled as MICK, and formerly Mick Boogie) is an American DJ and entrepreneur. He is an A-list DJ and spun private parties for celebrities including Kanye West, LeBron James, Jay-Z and Will Smith. In addition to his mix tape releases, he has performed in venues internationally, including New York City, Dubai, Tokyo, Las Vegas, and Los Angeles. As an entrepreneur, he has invested in various start-up companies including Localeur, in which he is also an advisor and consultant.",
+            "Mick Malthouse\nMichael \"Mick\" Malthouse (born 17 August 1953) is a former Australian rules footballer and former Australian Football League (AFL) coach and current media personality. Although his playing career included a premiership for Richmond in 1980, he is best known for his long coaching career at four clubs."
+        ],
+        "thoughts": [
+            "Mick Jagger is an English singer-songwriter, multi-instrumentalist, and composer, best known as the lead singer and one of the founder members of the Rolling Stones. He has had a successful solo career, with several albums and hit songs. In addition to his music career, there is no information to suggest that Mick Jagger is involved in any other profession.",
+            "Based on the retrieved information, Mick Jagger is indeed a musician, as he is a singer-songwriter, multi-instrumentalist, and composer, best known as the lead singer and founder member of the Rolling Stones, and has had a successful solo career with several albums and hit songs.",
+            "Brett Scallions is a professional musician, known as the lead vocalist, rhythm guitarist, and lyricist of the post-grunge band Fuel.",
+            "Based on the retrieved information, Brett Scallions is indeed a musician, known for his role as the lead vocalist, rhythm guitarist, and lyricist of the band Fuel.",
+            "Both Mick Jagger and Brett Scallions are indeed musicians based on the analysis results. Mick Jagger is a singer-songwriter, multi-instrumentalist, and composer, best known as the lead singer and founder member of the Rolling Stones, and has had a successful solo career. Brett Scallions is known for his role as the lead vocalist, rhythm guitarist, and lyricist of the band Fuel. Therefore, both individuals can be concluded as musicians."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Mick Jagger and Brett Scallions both musicians?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine the profession of Mick Jagger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the profession of Brett Scallions.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Evaluate if Mick Jagger is a musician based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Evaluate if Brett Scallions is a musician based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Conclude whether both Mick Jagger and Brett Scallions are musicians based on the evaluated information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The task is to determine if Mick Jagger and Brett Scallions are both musicians. The graph starts with two retrieval and reasoning nodes: one for Mick Jagger and one for Brett Scallions. These nodes independently gather and analyze information about each individual's profession. Following these, there are reasoning nodes to independently evaluate if each person is confirmed to be a musician based on the gathered data. The final node synthesizes the results to conclude whether both individuals are musicians."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Brett Scallions\nBrett Allen Scallions (born December 21, 1971) is an American musician. He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+            "The Very Best of Mick Jagger\nThe Very Best of Mick Jagger is a compilation album that was released worldwide on 1 October 2007 and the following day in the United States on WEA/Rhino Records. This 17-track release is the first ever overview of Mick Jagger's solo career.",
+            "Lucky in Love (Mick Jagger song)\n\"Lucky in Love\" is a song written and performed by English singer-songwriter Mick Jagger released as the second single from his debut album, \"She's the Boss\", in 1985. \"Lucky in Love\" was the seven track on \"She's the Boss\" and was one of two tracks from \"She's the Boss\" included on Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "Joy (Mick Jagger song)\n\"Joy\" was the second track from English singer-songwriter Mick Jagger's fourth solo album, \"Goddess in the Doorway\" (2001). \"Rolling Stone\" called it \"a rocking, gospel-tinged collaboration with Bono of U2\" - featuring Pete Townshend on guitar. \"Joy\" was one of three tracks from \"Goddess in the Doorway\" to be featured within Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "Elizabeth Jagger\nElizabeth Scarlett \"Lizzy\" Jagger (born March 2, 1984) is an American-English model and actress. Born in New York City, she is the eldest daughter of Mick Jagger and Jerry Hall. She is the sister of James Leroy Augustin Jagger (born 1985), Georgia May Ayeesha Jagger (born 1992) and Gabriel Luke Beauregard Jagger (born 1997), and paternal half-sister of Karis Hunt Jagger (born 1970), Jade Sheena Jezebel Jagger (born 1971), Lucas Maurice Morad-Jagger (born 1999), and Deveraux Octavian Basil Jagger (born 2016).",
+            "Memo from Turner\n\"Memo from Turner\" is a solo record by Mick Jagger, featuring the slide guitar by Ry Cooder, from the soundtrack of \"Performance\", in which Jagger played the leading role of Turner, a reclusive rock star. It was re-released in October 2007 on a seventeen-song retrospective compilation album \"The Very Best of Mick Jagger\", making a re-appearance as a Jagger solo effort. After its original release in 1970, it had been included on Rolling Stones compilations, such as \"\" as a track credited to the Jagger/Richards songwriting partnership. \"Memo from Turner\" was ranked #92 in the 100 Greatest Guitar Songs list of \"Rolling Stone\".",
+            "Disease (song)\n\"Disease\" was released on September 30, 2002 as the first single from Matchbox Twenty's third album, \"More Than You Think You Are\". It was co-written by Matchbox Twenty lead singer Rob Thomas and The Rolling Stones frontman Mick Jagger. The song peaked at #29 on the \"Billboard\" Hot 100. \"Disease\" was one of two songs written and presented to Mick Jagger, by Rob Thomas in which Jagger actually gives back the song, saying \"it would sound better coming from you\".",
+            "Stray Cat Blues\n\"Stray Cat Blues\" is the eighth song on the Rolling Stones' album \"Beggars Banquet\". It was written by Mick Jagger and Keith Richards and produced by Jimmy Miller. Miller's production of the song is very representative of his style, featuring a very prominent hi hat beat, droning piano performed by Nicky Hopkins, a mellotron performed by Brian Jones, all electric guitars (including slide) performed by Richards and vocals from Jagger kept even in the mix. According to Mick Jagger, the song was inspired by \"Heroin\" by the Velvet Underground. The intro of Stray Cat and Heroin are similar.",
+            "Jagger/Richards\nThe songwriting partnership of Mick Jagger and Keith Richards, known as Jagger/Richards (and occasionally Richards/Jagger), is a musical collaboration whose output has produced the majority of the catalogue of the Rolling Stones. It is one of the most successful songwriting partnerships in history. Jagger and Richards adopted the nickname \"The Glimmer Twins\" after a vacation cruise they took to Brazil in December 1968/January 1969 with their then-girlfriends, Marianne Faithfull and Anita Pallenberg. An older English couple on the ship kept asking Richards and Jagger who they were. When they refused to reveal their identities, the woman reportedly kept asking, \"just give us a glimmer\" (as in \"give us a hint about who you are\"), which amused Jagger and Richards. In addition to Jagger and Richards's songwriting partnership, they have also produced or co-produced numerous Rolling Stones albums under the pseudonym The Glimmer Twins, after that experience together.",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle.",
+            "Reading law\nReading law is the method by which persons in common law countries, particularly the United States, entered the legal profession before the advent of law schools. This usage specifically refers to a means of entering the profession (although in England it is still customary to say that a university undergraduate is \"reading\" a course, which may be law or any other). \"Reading the law\" consists of an extended internship or apprenticeship under the tutelage or mentoring of an experienced lawyer. A small number of U.S. jurisdictions still permit this practice today.",
+            "Jianbing\nJianbing () is a traditional Chinese street food similar to crepes. It is a type of \"bing\" generally eaten for breakfast and hailed as \"one of the China's most popular street breakfasts.\" The main ingredients of jianbing are a batter of wheat and grain flour, eggs and sauces. It can be topped with different fillings and sauces such as \"buocui\" (\u8584\u8106 crispy fried cracker), chopped or diced mustard pickles, scallions and coriander, chili sauce or hoisin sauce depending on personal preference. It is often folded several times before serving.",
+            "Mursm\u00e4cka\nMursm\u00e4cka, also called \"bruksm\u00e4cka\" or only \"sm\u00e4cka\", was an historical profession for women in Sweden. A mursm\u00e4cka was a female construction worker with the task to hand mortar during construction work. The profession is recorded from at least 1691 (though it is not confirmed by name until the 1830s) and discontinued in 1922. This was a very hard but common work for a poor uneducated women during the 19th century, particularly in Stockholm. In July 1888, the Mursm\u00e4cka of Stockholm performed a great strike action which attracted considerable attention in contemporary Sweden.",
+            "Convention (meeting)\nA convention, in the sense of a meeting, is a gathering of individuals who meet at an arranged place and time in order to discuss or engage in some common interest. The most common conventions are based upon industry, profession, and fandom. Trade conventions typically focus on a particular industry or industry segment, and feature keynote speakers, vendor displays, and other information and activities of interest to the event organizers and attendees. Professional conventions focus on issues of concern to the profession and advancements in the profession. Such conventions are generally organized by societies or communities dedicated to promotion of the topic of interest. Fan conventions usually feature displays, shows, and sales based on pop culture and guest celebrities. Science fiction conventions traditionally partake of the nature of both professional conventions and fan conventions, with the balance varying from one to another. Conventions also exist for various hobbies, such as gaming or model railroads.",
+            "Suede (band)\nSuede are an English alternative rock band formed in London in 1989. The band is composed of singer Brett Anderson, guitarist Richard Oakes, bass player Mat Osman, drummer Simon Gilbert and keyboardist/rhythm guitarist Neil Codling."
+        ],
+        "thoughts": [
+            "Mick Jagger is a singer-songwriter and musician, known for his solo career as well as his role as the frontman of the Rolling Stones. He is also a member of the songwriting partnership Jagger/Richards, which has produced the majority of the Rolling Stones' catalogue.",
+            "Based on the retrieved information, Mick Jagger is indeed a musician. He is a singer-songwriter, frontman of the Rolling Stones, and a member of the songwriting partnership Jagger/Richards. Therefore, it can be concluded that Mick Jagger is a musician.",
+            "Brett Scallions is a musician, specifically the lead vocalist, rhythm guitarist, and lyricist of the post-grunge band Fuel.",
+            "Based on the retrieved information, Brett Scallions is indeed a musician. He is the lead vocalist, rhythm guitarist, and lyricist of the post-grunge band Fuel, which indicates that he is actively involved in creating and performing music. Therefore, it can be concluded that Brett Scallions is a musician.",
+            "Both Mick Jagger and Brett Scallions are musicians based on the evaluated information."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Mick Jagger and Brett Scallions both musicians?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine if Mick Jagger is a musician.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine if Brett Scallions is a musician.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine the information from Nodes 1 and 2 to conclude whether both Mick Jagger and Brett Scallions are musicians.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph consists of three nodes. The first two nodes (1 and 2) involve the retrieval and reasoning steps required to check if Mick Jagger and Brett Scallions are musicians, respectively. These nodes are independent and can be executed in parallel. The final node (3) synthesizes the information from nodes 1 and 2 to provide the answer to the question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Brett Scallions\nBrett Allen Scallions (born December 21, 1971) is an American musician. He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+            "The Very Best of Mick Jagger\nThe Very Best of Mick Jagger is a compilation album that was released worldwide on 1 October 2007 and the following day in the United States on WEA/Rhino Records. This 17-track release is the first ever overview of Mick Jagger's solo career.",
+            "Lucky in Love (Mick Jagger song)\n\"Lucky in Love\" is a song written and performed by English singer-songwriter Mick Jagger released as the second single from his debut album, \"She's the Boss\", in 1985. \"Lucky in Love\" was the seven track on \"She's the Boss\" and was one of two tracks from \"She's the Boss\" included on Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "Joy (Mick Jagger song)\n\"Joy\" was the second track from English singer-songwriter Mick Jagger's fourth solo album, \"Goddess in the Doorway\" (2001). \"Rolling Stone\" called it \"a rocking, gospel-tinged collaboration with Bono of U2\" - featuring Pete Townshend on guitar. \"Joy\" was one of three tracks from \"Goddess in the Doorway\" to be featured within Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "Elizabeth Jagger\nElizabeth Scarlett \"Lizzy\" Jagger (born March 2, 1984) is an American-English model and actress. Born in New York City, she is the eldest daughter of Mick Jagger and Jerry Hall. She is the sister of James Leroy Augustin Jagger (born 1985), Georgia May Ayeesha Jagger (born 1992) and Gabriel Luke Beauregard Jagger (born 1997), and paternal half-sister of Karis Hunt Jagger (born 1970), Jade Sheena Jezebel Jagger (born 1971), Lucas Maurice Morad-Jagger (born 1999), and Deveraux Octavian Basil Jagger (born 2016).",
+            "Memo from Turner\n\"Memo from Turner\" is a solo record by Mick Jagger, featuring the slide guitar by Ry Cooder, from the soundtrack of \"Performance\", in which Jagger played the leading role of Turner, a reclusive rock star. It was re-released in October 2007 on a seventeen-song retrospective compilation album \"The Very Best of Mick Jagger\", making a re-appearance as a Jagger solo effort. After its original release in 1970, it had been included on Rolling Stones compilations, such as \"\" as a track credited to the Jagger/Richards songwriting partnership. \"Memo from Turner\" was ranked #92 in the 100 Greatest Guitar Songs list of \"Rolling Stone\".",
+            "Disease (song)\n\"Disease\" was released on September 30, 2002 as the first single from Matchbox Twenty's third album, \"More Than You Think You Are\". It was co-written by Matchbox Twenty lead singer Rob Thomas and The Rolling Stones frontman Mick Jagger. The song peaked at #29 on the \"Billboard\" Hot 100. \"Disease\" was one of two songs written and presented to Mick Jagger, by Rob Thomas in which Jagger actually gives back the song, saying \"it would sound better coming from you\".",
+            "Stray Cat Blues\n\"Stray Cat Blues\" is the eighth song on the Rolling Stones' album \"Beggars Banquet\". It was written by Mick Jagger and Keith Richards and produced by Jimmy Miller. Miller's production of the song is very representative of his style, featuring a very prominent hi hat beat, droning piano performed by Nicky Hopkins, a mellotron performed by Brian Jones, all electric guitars (including slide) performed by Richards and vocals from Jagger kept even in the mix. According to Mick Jagger, the song was inspired by \"Heroin\" by the Velvet Underground. The intro of Stray Cat and Heroin are similar.",
+            "Jagger/Richards\nThe songwriting partnership of Mick Jagger and Keith Richards, known as Jagger/Richards (and occasionally Richards/Jagger), is a musical collaboration whose output has produced the majority of the catalogue of the Rolling Stones. It is one of the most successful songwriting partnerships in history. Jagger and Richards adopted the nickname \"The Glimmer Twins\" after a vacation cruise they took to Brazil in December 1968/January 1969 with their then-girlfriends, Marianne Faithfull and Anita Pallenberg. An older English couple on the ship kept asking Richards and Jagger who they were. When they refused to reveal their identities, the woman reportedly kept asking, \"just give us a glimmer\" (as in \"give us a hint about who you are\"), which amused Jagger and Richards. In addition to Jagger and Richards's songwriting partnership, they have also produced or co-produced numerous Rolling Stones albums under the pseudonym The Glimmer Twins, after that experience together.",
+            "Jianbing\nJianbing () is a traditional Chinese street food similar to crepes. It is a type of \"bing\" generally eaten for breakfast and hailed as \"one of the China's most popular street breakfasts.\" The main ingredients of jianbing are a batter of wheat and grain flour, eggs and sauces. It can be topped with different fillings and sauces such as \"buocui\" (\u8584\u8106 crispy fried cracker), chopped or diced mustard pickles, scallions and coriander, chili sauce or hoisin sauce depending on personal preference. It is often folded several times before serving.",
+            "Suede (band)\nSuede are an English alternative rock band formed in London in 1989. The band is composed of singer Brett Anderson, guitarist Richard Oakes, bass player Mat Osman, drummer Simon Gilbert and keyboardist/rhythm guitarist Neil Codling.",
+            "Love and Poison (book)\nLove and Poison is the official biography of the English alternative rock band Suede. The book, written by long-time band associate David Barnett, reveals the real stories behind singer Brett Anderson's battle with drugs, his relationship with Elastica's Justine Frischmann and the subsequent feud with Blur after she started stepping out with Damon Albarn.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "Watch What Happens Live with Andy Cohen\nWatch What Happens Live with Andy Cohen (previously named Watch What Happens Live until December 19, 2016) is an American pop culture-based late-night talk show hosted by Andy Cohen that premiered on July 16, 2009. It features Bravo's own reality programming in the manner of an aftershow, and celebrities' recent news. The show is produced live from New York City, making possible interaction with viewers by phone and social media. In November 2013, Bravo renewed \"Watch What Happens: Live\" for two additional seasons. On March 2, 2016, the show aired its 1000th episode.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "Yes, Mick Jagger is a musician. He has released solo albums, written and performed songs, and has been a part of the songwriting partnership of Jagger/Richards for the Rolling Stones.",
+            "Brett Scallions is a musician, as he is the lead vocalist, rhythm guitarist, and lyricist of the post-grunge band Fuel.",
+            "Based on the information from Nodes 1 and 2, it can be concluded that both Mick Jagger and Brett Scallions are musicians. Mick Jagger is a musician known for his work with the Rolling Stones and his solo albums, while Brett Scallions is the lead vocalist and rhythm guitarist of the band Fuel. Therefore, both individuals are confirmed to be musicians."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Mick Jagger and Brett Scallions both musicians?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Mick Jagger's occupation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Brett Scallions' occupation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Mick Jagger is a musician based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Brett Scallions is a musician based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the conclusions to answer if Mick Jagger and Brett Scallions are both musicians.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the task of determining if Mick Jagger and Brett Scallions are both musicians into several logical steps. The process includes retrieving occupation information for each individual, then analyzing this data to determine if they are musicians. Finally, the conclusions for each person are combined to provide a final answer."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Brett Scallions\nBrett Allen Scallions (born December 21, 1971) is an American musician. He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+            "Joy (Mick Jagger song)\n\"Joy\" was the second track from English singer-songwriter Mick Jagger's fourth solo album, \"Goddess in the Doorway\" (2001). \"Rolling Stone\" called it \"a rocking, gospel-tinged collaboration with Bono of U2\" - featuring Pete Townshend on guitar. \"Joy\" was one of three tracks from \"Goddess in the Doorway\" to be featured within Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "The Very Best of Mick Jagger\nThe Very Best of Mick Jagger is a compilation album that was released worldwide on 1 October 2007 and the following day in the United States on WEA/Rhino Records. This 17-track release is the first ever overview of Mick Jagger's solo career.",
+            "Lucky in Love (Mick Jagger song)\n\"Lucky in Love\" is a song written and performed by English singer-songwriter Mick Jagger released as the second single from his debut album, \"She's the Boss\", in 1985. \"Lucky in Love\" was the seven track on \"She's the Boss\" and was one of two tracks from \"She's the Boss\" included on Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Disease (song)\n\"Disease\" was released on September 30, 2002 as the first single from Matchbox Twenty's third album, \"More Than You Think You Are\". It was co-written by Matchbox Twenty lead singer Rob Thomas and The Rolling Stones frontman Mick Jagger. The song peaked at #29 on the \"Billboard\" Hot 100. \"Disease\" was one of two songs written and presented to Mick Jagger, by Rob Thomas in which Jagger actually gives back the song, saying \"it would sound better coming from you\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "Mick Jagger\nSir Michael Philip Jagger, MBE (born 26 July 1943) is an English singer-songwriter, multi-instrumentalist, and composer, who gained fame as the lead singer and one of the founder members of the Rolling Stones (1962-present). Jagger's career has spanned over five decades, and he has been described as \"one of the most popular and influential frontmen in the history of rock & roll\". His distinctive voice and performance, along with Keith Richards' guitar style, have been the trademark of the Rolling Stones throughout the career of the band. Jagger gained press notoriety for his admitted drug use and romantic involvements, and was often portrayed as a countercultural figure.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "The Beautiful Occupation\n\"The Beautiful Occupation\" is the second single from Scottish indie rock band Travis' fourth studio album, \"12 Memories\". The single peaked at #48 on the UK Singles Chart, becoming their worst performing single to date. The song was written by frontman Fran Healy and is a reflection of the anti-war sentiments of the War on Iraq, also carrying serious criticism to the invasion itself.",
+            "Perseus\nBecause of the obscurity of the name Perseus and the legendary character of its bearer, most etymologists presume that it might be pre-Greek; however, the name of Perseus\u2019 native city was Greek and so were the names of his wife and relatives. There is some idea that it descended into Greek from the Proto-Indo-European language. In that regard Robert Graves has proposed the only Greek derivation available. Perseus might be from the Greek verb, \"\u03c0\u03ad\u03c1\u03b8\u03b5\u03b9\u03bd\" (\"perthein\"), \u201cto waste, ravage, sack, destroy\u201d, some form of which appears in Homeric epithets. According to Carl Darling Buck (\"Comparative Grammar of Greek and Latin\"), the \"\u2013eus\" suffix is typically used to form an agent noun, in this case from the aorist stem, \"pers-\". \"Pers-eus\" therefore is a sacker of cities; that is, a soldier by occupation, a fitting name for the first Mycenaean warrior.",
+            "Ovambo people\nThe Ovambo people, also called Aawambo, Ambo, Aawambo (Ndonga) or Ovawambo (Kwanyama), are a Southern African tribal ethnic group. They are the largest ethnic group of Namibia, found in its northern regions and more often called Ovambo. They are also found in southern Angolan province of Cunene where the name Ambo is more common. The Ovambo consist of a number of kindred Bantu ethnic tribes who inhabit what was formerly called Owamboland. Accounting for about fifty percent of the Namibian population, the Ovambo are its largest ethnic group. In Angola, they are a minority, accounting for about two percent of the total Angolan population.",
+            "Chonan languages\nThe Chonan languages were spoken in Tierra del Fuego and Patagonia. Two Chon languages are well attested: Selk'nam, spoken by the people of the same name who occupied territory in the northeast of Tierra del Fuego; and Tehuelche spoken by the people of the same name who occupied territory north of Tierra del Fuego. The name 'Chon', or \"Tshon\", is a blend of 'Tehuelche' and 'Ona'.",
+            "Australian Geography Competition\nThe Australian Geography Competition is an Australia-wide competition run by the Royal Geographic Society of Queensland and the Australian Geography Teachers Association and sponsored by the National Geographic Channel. It tests the geographic knowledge of high school students from years 8-12. It starts with a written multiple choice test in early March. In the under 16 competition the winners from each state & the territories (Australian Capital Territory, Northern Territory, Cocos Islands) are taken as well as a runner up who has the highest score after these winners. These people are flown to Sydney at the start of June for a weekend of sightseeing followed by the national final. The winners go on to the National Geographic World Championship to represent Australia. The competition is also used to select the members of the Australian team for the International Geography Olympiad.",
+            "Speedpass\nSpeedpass is a keychain RFID device introduced in 1997 by Mobil Oil Corp. (which merged with Exxon to become ExxonMobil in 1999) for electronic payment. It was originally developed by Verifone. As of 2004, more than seven million people possess Speedpass tags, which can be used at approximately 10,000 Exxon, Mobil and Esso gas stations worldwide. At one point, Speedpass was deployed experimentally in fast-food restaurants and supermarkets in select markets. McDonald's alone deployed Speedpass in over 400 Chicago area restaurants. The test was deemed a failure and McDonald's removed the scanners from all their restaurants in mid-2004. Additionally, the New England grocery chain Stop & Shop tested Speedpass at their Boston area stores; the units were removed in early 2005. Speedpass has also been previously available through a Speedpass Car Tag and a Speedpass-enabled Timex watch."
+        ],
+        "thoughts": [
+            "Mick Jagger is an English singer-songwriter, multi-instrumentalist, and composer, best known as the lead singer and one of the founder members of the Rolling Stones. He has had a successful solo career, with several albums and hit songs. Jagger's career has spanned over five decades, and he has been described as \"one of the most popular and influential frontmen in the history of rock & roll\". In addition to his music career, Jagger has also been involved in collaborations with other artists, such as his work with Matchbox Twenty's Rob Thomas on the song \"Disease\".",
+            "Based on the retrieved information, Mick Jagger is indeed a musician. He is an English singer-songwriter, multi-instrumentalist, and composer, best known as the lead singer and one of the founder members of the Rolling Stones. He has also had a successful solo career with several albums and hit songs, spanning over five decades. Therefore, it can be concluded that Mick Jagger is a musician.",
+            "Brett Scallions is an American musician, known as the lead vocalist, rhythm guitarist, and lyricist of the post-grunge band Fuel. He is primarily known for his work in the music industry.",
+            "Based on the retrieved information, it can be determined that Brett Scallions is indeed a musician, known for his work as the lead vocalist, rhythm guitarist, and lyricist of the band Fuel.",
+            "Both Mick Jagger and Brett Scallions are musicians."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Mick Jagger and Brett Scallions both musicians?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Mick Jagger to determine if he is a musician.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Brett Scallions to determine if he is a musician.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the information about Mick Jagger to confirm if he is a musician.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the information about Brett Scallions to confirm if he is a musician.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Determine if both Mick Jagger and Brett Scallions are musicians based on the analyses.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph begins with retrieving information about Mick Jagger and Brett Scallions (nodes 1 and 2), to ascertain their professions. Each node retrieves and reasons about whether the individual is a musician. These initial retrieval steps are independent and can be executed in parallel. Nodes 3 and 4 then analyze the retrieved data to determine if each person is indeed a musician. Finally, the information is synthesized in node 5 to assess whether both individuals are musicians, providing a direct answer to the question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Brett Scallions\nBrett Allen Scallions (born December 21, 1971) is an American musician. He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+            "Lucky in Love (Mick Jagger song)\n\"Lucky in Love\" is a song written and performed by English singer-songwriter Mick Jagger released as the second single from his debut album, \"She's the Boss\", in 1985. \"Lucky in Love\" was the seven track on \"She's the Boss\" and was one of two tracks from \"She's the Boss\" included on Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "Joy (Mick Jagger song)\n\"Joy\" was the second track from English singer-songwriter Mick Jagger's fourth solo album, \"Goddess in the Doorway\" (2001). \"Rolling Stone\" called it \"a rocking, gospel-tinged collaboration with Bono of U2\" - featuring Pete Townshend on guitar. \"Joy\" was one of three tracks from \"Goddess in the Doorway\" to be featured within Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "Memo from Turner\n\"Memo from Turner\" is a solo record by Mick Jagger, featuring the slide guitar by Ry Cooder, from the soundtrack of \"Performance\", in which Jagger played the leading role of Turner, a reclusive rock star. It was re-released in October 2007 on a seventeen-song retrospective compilation album \"The Very Best of Mick Jagger\", making a re-appearance as a Jagger solo effort. After its original release in 1970, it had been included on Rolling Stones compilations, such as \"\" as a track credited to the Jagger/Richards songwriting partnership. \"Memo from Turner\" was ranked #92 in the 100 Greatest Guitar Songs list of \"Rolling Stone\".",
+            "The Very Best of Mick Jagger\nThe Very Best of Mick Jagger is a compilation album that was released worldwide on 1 October 2007 and the following day in the United States on WEA/Rhino Records. This 17-track release is the first ever overview of Mick Jagger's solo career.",
+            "Disease (song)\n\"Disease\" was released on September 30, 2002 as the first single from Matchbox Twenty's third album, \"More Than You Think You Are\". It was co-written by Matchbox Twenty lead singer Rob Thomas and The Rolling Stones frontman Mick Jagger. The song peaked at #29 on the \"Billboard\" Hot 100. \"Disease\" was one of two songs written and presented to Mick Jagger, by Rob Thomas in which Jagger actually gives back the song, saying \"it would sound better coming from you\".",
+            "Stray Cat Blues\n\"Stray Cat Blues\" is the eighth song on the Rolling Stones' album \"Beggars Banquet\". It was written by Mick Jagger and Keith Richards and produced by Jimmy Miller. Miller's production of the song is very representative of his style, featuring a very prominent hi hat beat, droning piano performed by Nicky Hopkins, a mellotron performed by Brian Jones, all electric guitars (including slide) performed by Richards and vocals from Jagger kept even in the mix. According to Mick Jagger, the song was inspired by \"Heroin\" by the Velvet Underground. The intro of Stray Cat and Heroin are similar.",
+            "Elizabeth Jagger\nElizabeth Scarlett \"Lizzy\" Jagger (born March 2, 1984) is an American-English model and actress. Born in New York City, she is the eldest daughter of Mick Jagger and Jerry Hall. She is the sister of James Leroy Augustin Jagger (born 1985), Georgia May Ayeesha Jagger (born 1992) and Gabriel Luke Beauregard Jagger (born 1997), and paternal half-sister of Karis Hunt Jagger (born 1970), Jade Sheena Jezebel Jagger (born 1971), Lucas Maurice Morad-Jagger (born 1999), and Deveraux Octavian Basil Jagger (born 2016).",
+            "Jagger/Richards\nThe songwriting partnership of Mick Jagger and Keith Richards, known as Jagger/Richards (and occasionally Richards/Jagger), is a musical collaboration whose output has produced the majority of the catalogue of the Rolling Stones. It is one of the most successful songwriting partnerships in history. Jagger and Richards adopted the nickname \"The Glimmer Twins\" after a vacation cruise they took to Brazil in December 1968/January 1969 with their then-girlfriends, Marianne Faithfull and Anita Pallenberg. An older English couple on the ship kept asking Richards and Jagger who they were. When they refused to reveal their identities, the woman reportedly kept asking, \"just give us a glimmer\" (as in \"give us a hint about who you are\"), which amused Jagger and Richards. In addition to Jagger and Richards's songwriting partnership, they have also produced or co-produced numerous Rolling Stones albums under the pseudonym The Glimmer Twins, after that experience together.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Jianbing\nJianbing () is a traditional Chinese street food similar to crepes. It is a type of \"bing\" generally eaten for breakfast and hailed as \"one of the China's most popular street breakfasts.\" The main ingredients of jianbing are a batter of wheat and grain flour, eggs and sauces. It can be topped with different fillings and sauces such as \"buocui\" (\u8584\u8106 crispy fried cracker), chopped or diced mustard pickles, scallions and coriander, chili sauce or hoisin sauce depending on personal preference. It is often folded several times before serving.",
+            "Suede (band)\nSuede are an English alternative rock band formed in London in 1989. The band is composed of singer Brett Anderson, guitarist Richard Oakes, bass player Mat Osman, drummer Simon Gilbert and keyboardist/rhythm guitarist Neil Codling.",
+            "Love and Poison (book)\nLove and Poison is the official biography of the English alternative rock band Suede. The book, written by long-time band associate David Barnett, reveals the real stories behind singer Brett Anderson's battle with drugs, his relationship with Elastica's Justine Frischmann and the subsequent feud with Blur after she started stepping out with Damon Albarn.",
+            "Chris White (musician)\nChristopher Taylor \"Chris\" White (born 7 March 1943) is an English singer, songwriter, musician, and record producer.",
+            "Gunnar Nelson (musician)\nGunnar Eric Nelson (born September 20, 1967) is an American musician, singer, and songwriter and international multi-platinum recording artist.",
+            "The Tic Code\nThe Tic Code (also known as Lessons in the Tic Code) is a drama film directed by Gary Winick and written by Polly Draper. It tells of a single mother, the relationship she forms with a jazz musician who has Tourette syndrome, and her young son\u2014a jazz piano prodigy\u2014also with the disorder. The musician and the boy form a friendship, and the film is loosely based upon the experiences of Draper's jazz musician husband Michael Wolff, who provided the film's score. Draper, known for her role in \"Thirtysomething\", portrays the mother; Gregory Hines plays the musician; and Christopher George Marquette stars as the young boy."
+        ],
+        "thoughts": [
+            "Based on the information provided, Mick Jagger is indeed a musician. He has released several solo albums, including \"She's the Boss\" and \"Goddess in the Doorway\", and has collaborated with other artists such as Bono of U2 and Rob Thomas of Matchbox Twenty. Additionally, he is a member of the Rolling Stones and has a successful songwriting partnership with Keith Richards, known as Jagger/Richards.",
+            "Mick Jagger is confirmed to be a musician based on the information provided. He has released solo albums, collaborated with other artists, and is a member of the Rolling Stones with a successful songwriting partnership. Therefore, it can be concluded that Mick Jagger is indeed a musician.",
+            "Based on the information provided, Brett Scallions is indeed a musician. He is the lead vocalist, rhythm guitarist, and lyricist of the post-grunge band Fuel.",
+            "Brett Scallions is a musician as he is the lead vocalist, rhythm guitarist, and lyricist of the post-grunge band Fuel. This information confirms that he is actively involved in the music industry as a performer and songwriter. Therefore, it can be concluded that Brett Scallions is a musician.",
+            "Based on the analyses, both Mick Jagger and Brett Scallions are confirmed to be musicians."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Mick Jagger and Brett Scallions both musicians?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Verify if Mick Jagger is a musician.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Verify if Brett Scallions is a musician.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine the results to determine if both Mick Jagger and Brett Scallions are musicians.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "3",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of two parallel retrieval and reasoning tasks, one for determining Mick Jagger's status as a musician and the other for Brett Scallions. The roots of these tasks are nodes 1 and 2, respectively, where each node is responsible for gathering information and making a determination about the individual's career in music. Node 3 then takes the results of these two nodes and combines them to provide a final answer to the question of whether both individuals are musicians."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Brett Scallions\nBrett Allen Scallions (born December 21, 1971) is an American musician. He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+            "The Very Best of Mick Jagger\nThe Very Best of Mick Jagger is a compilation album that was released worldwide on 1 October 2007 and the following day in the United States on WEA/Rhino Records. This 17-track release is the first ever overview of Mick Jagger's solo career.",
+            "Lucky in Love (Mick Jagger song)\n\"Lucky in Love\" is a song written and performed by English singer-songwriter Mick Jagger released as the second single from his debut album, \"She's the Boss\", in 1985. \"Lucky in Love\" was the seven track on \"She's the Boss\" and was one of two tracks from \"She's the Boss\" included on Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "Joy (Mick Jagger song)\n\"Joy\" was the second track from English singer-songwriter Mick Jagger's fourth solo album, \"Goddess in the Doorway\" (2001). \"Rolling Stone\" called it \"a rocking, gospel-tinged collaboration with Bono of U2\" - featuring Pete Townshend on guitar. \"Joy\" was one of three tracks from \"Goddess in the Doorway\" to be featured within Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "Elizabeth Jagger\nElizabeth Scarlett \"Lizzy\" Jagger (born March 2, 1984) is an American-English model and actress. Born in New York City, she is the eldest daughter of Mick Jagger and Jerry Hall. She is the sister of James Leroy Augustin Jagger (born 1985), Georgia May Ayeesha Jagger (born 1992) and Gabriel Luke Beauregard Jagger (born 1997), and paternal half-sister of Karis Hunt Jagger (born 1970), Jade Sheena Jezebel Jagger (born 1971), Lucas Maurice Morad-Jagger (born 1999), and Deveraux Octavian Basil Jagger (born 2016).",
+            "Memo from Turner\n\"Memo from Turner\" is a solo record by Mick Jagger, featuring the slide guitar by Ry Cooder, from the soundtrack of \"Performance\", in which Jagger played the leading role of Turner, a reclusive rock star. It was re-released in October 2007 on a seventeen-song retrospective compilation album \"The Very Best of Mick Jagger\", making a re-appearance as a Jagger solo effort. After its original release in 1970, it had been included on Rolling Stones compilations, such as \"\" as a track credited to the Jagger/Richards songwriting partnership. \"Memo from Turner\" was ranked #92 in the 100 Greatest Guitar Songs list of \"Rolling Stone\".",
+            "Disease (song)\n\"Disease\" was released on September 30, 2002 as the first single from Matchbox Twenty's third album, \"More Than You Think You Are\". It was co-written by Matchbox Twenty lead singer Rob Thomas and The Rolling Stones frontman Mick Jagger. The song peaked at #29 on the \"Billboard\" Hot 100. \"Disease\" was one of two songs written and presented to Mick Jagger, by Rob Thomas in which Jagger actually gives back the song, saying \"it would sound better coming from you\".",
+            "Stray Cat Blues\n\"Stray Cat Blues\" is the eighth song on the Rolling Stones' album \"Beggars Banquet\". It was written by Mick Jagger and Keith Richards and produced by Jimmy Miller. Miller's production of the song is very representative of his style, featuring a very prominent hi hat beat, droning piano performed by Nicky Hopkins, a mellotron performed by Brian Jones, all electric guitars (including slide) performed by Richards and vocals from Jagger kept even in the mix. According to Mick Jagger, the song was inspired by \"Heroin\" by the Velvet Underground. The intro of Stray Cat and Heroin are similar.",
+            "Jagger/Richards\nThe songwriting partnership of Mick Jagger and Keith Richards, known as Jagger/Richards (and occasionally Richards/Jagger), is a musical collaboration whose output has produced the majority of the catalogue of the Rolling Stones. It is one of the most successful songwriting partnerships in history. Jagger and Richards adopted the nickname \"The Glimmer Twins\" after a vacation cruise they took to Brazil in December 1968/January 1969 with their then-girlfriends, Marianne Faithfull and Anita Pallenberg. An older English couple on the ship kept asking Richards and Jagger who they were. When they refused to reveal their identities, the woman reportedly kept asking, \"just give us a glimmer\" (as in \"give us a hint about who you are\"), which amused Jagger and Richards. In addition to Jagger and Richards's songwriting partnership, they have also produced or co-produced numerous Rolling Stones albums under the pseudonym The Glimmer Twins, after that experience together.",
+            "Smoke testing (software)\nIn computer programming and software testing, smoke testing (also confidence testing, sanity testing, build verification test (BVT) and build acceptance test) is preliminary testing to reveal simple failures severe enough to (for example) reject a prospective software release. A smoke tester will select and run a subset of test cases that cover the most important functionality of a component or system, to ascertain if crucial functions of the software work correctly. When used to determine if a computer program should be subjected to further, more fine-grained testing, a smoke test may be called an intake test. Alternately, it is a set of tests run on each new build of a product to verify that the build is testable before the build is released into the hands of the test team. In the DevOps paradigm, use of a BVT step is one hallmark of the continuous integration maturity stage.",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\".",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Martemyan Ryutin\nMartemyan Nikitich Ryutin (Russian: \u041c\u0430\u0440\u0442\u0435\u043c\u044c\u044f\u0301\u043d \u041d\u0438\u043a\u0438\u0301\u0442\u0438\u0447 \u0420\u044e\u0301\u0442\u0438\u043d ) (1890\u20131937) was a Russian Marxist revolutionary, and a political functionary of the Russian Communist Party. Ryutin is best remembered as the leader of a pro-peasant political faction organized against Soviet leader Joseph Stalin in the early 1930s and as the primary author of a 200-page oppositional platform. Ryutin was arrested by the Soviet secret police, along with his co-thinkers, in what has come to be known as the Ryutin Affair. He was executed in January 1937 as part of the Yezhovshchina (Great Purge) conducted against political oppositionists and suspected economic \"wreckers\" and spies.",
+            "Operation Dragoon\nOperation Dragoon (initially Operation Anvil) was the code name for the Allied invasion of Southern France on 15August 1944. The operation was initially planned to be executed in conjunction with Operation Overlord, the Allied landing in the Normandy, but the lack of available resources led to a cancellation of the second landing. By July 1944 the landing was reconsidered, as the clogged-up ports in Normandy did not have the capacity to adequately supply the Allied forces. Concurrently, the French High Command pushed for a revival of the operation that would include large numbers of French troops. As a result, the operation was finally approved in July to be executed in August.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "Louise Peete\nLouise Peete (September 20, 1880 \u2013 April 11, 1947) was a convicted American murderer. Peete was first convicted of murdering wealthy mining engineer Jacob C. Denton in 1920 and was sentenced to life in prison. She was paroled in April 1939. In May 1945, she was convicted of murdering her employer, Margaret Logan, and sentenced to death. She was executed in April 1947 making her the second, and one of only four women, to be executed in the California gas chamber."
+        ],
+        "thoughts": [
+            "Mick Jagger is indeed a musician, as he has released solo albums, written and performed songs, and has been a part of the songwriting partnership of Jagger/Richards, which has produced the majority of the Rolling Stones' catalogue.",
+            "Brett Scallions is indeed a musician, as he is the lead vocalist, rhythm guitarist, and lyricist of the post-grunge band Fuel.",
+            "Based on the results of the upstream tasks, it can be determined that both Mick Jagger and Brett Scallions are indeed musicians. Mick Jagger is a musician as a member of the Rolling Stones and as a solo artist, while Brett Scallions is a musician as the lead vocalist and guitarist of the band Fuel."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Mick Jagger and Brett Scallions both musicians?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find out who Mick Jagger is and determine his profession.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find out who Brett Scallions is and determine his profession.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Mick Jagger is a musician based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Brett Scallions is a musician based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Evaluate if both Mick Jagger and Brett Scallions are musicians based on previous conclusions.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph is designed to independently retrieve and reason about the professions of Mick Jagger and Brett Scallions. Nodes 1 and 2 are responsible for gathering the necessary information about each individual. Nodes 3 and 4 process this information to determine if each person is a musician. Finally, node 5 synthesizes the results to answer the original question of whether both individuals are musicians."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Brett Scallions\nBrett Allen Scallions (born December 21, 1971) is an American musician. He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+            "Joy (Mick Jagger song)\n\"Joy\" was the second track from English singer-songwriter Mick Jagger's fourth solo album, \"Goddess in the Doorway\" (2001). \"Rolling Stone\" called it \"a rocking, gospel-tinged collaboration with Bono of U2\" - featuring Pete Townshend on guitar. \"Joy\" was one of three tracks from \"Goddess in the Doorway\" to be featured within Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "The Very Best of Mick Jagger\nThe Very Best of Mick Jagger is a compilation album that was released worldwide on 1 October 2007 and the following day in the United States on WEA/Rhino Records. This 17-track release is the first ever overview of Mick Jagger's solo career.",
+            "Lucky in Love (Mick Jagger song)\n\"Lucky in Love\" is a song written and performed by English singer-songwriter Mick Jagger released as the second single from his debut album, \"She's the Boss\", in 1985. \"Lucky in Love\" was the seven track on \"She's the Boss\" and was one of two tracks from \"She's the Boss\" included on Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Drew Barry\nDrew William Barry (born February 17, 1973) is an American retired professional basketball player. He is the son of Basketball Hall of Famer Rick Barry and has three brothers: Scooter, Jon and Brent, who also share his profession. His grandfather Bruce Hale also played in the NBA and was Rick's college coach at Miami of Florida. His stepmother is Lynn Barry.",
+            "Mick Jagger\nSir Michael Philip Jagger, MBE (born 26 July 1943) is an English singer-songwriter, multi-instrumentalist, and composer, who gained fame as the lead singer and one of the founder members of the Rolling Stones (1962-present). Jagger's career has spanned over five decades, and he has been described as \"one of the most popular and influential frontmen in the history of rock & roll\". His distinctive voice and performance, along with Keith Richards' guitar style, have been the trademark of the Rolling Stones throughout the career of the band. Jagger gained press notoriety for his admitted drug use and romantic involvements, and was often portrayed as a countercultural figure.",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Mikhail Krichman\nMikhail Krichman (\u041c\u0438\u0445\u0430\u0438\u043b \u0412\u043b\u0430\u0434\u0438\u043c\u0438\u0440\u043e\u0432\u0438\u0447 \u041a\u0440\u0438\u0447\u043c\u0430\u043d; born 1967) is a Russian cinematographer who received a Golden Osella award at the 67th Venice Film Festival for \"Silent Souls\". He photographed all of Andrey Zvyagintsev's films, including \"The Return\" (2003), \"The Banishment\" (2007), \"Elena\" (2010) and \"Leviathan\" (2014). Zvyagintsev claims that Krichman (an engineer by profession) learned his craft by reading \"American Cinematographer\". Krichman also shot \"Miss Julie\" for Norwegian director Liv Ullmann.",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle.",
+            "Convention (meeting)\nA convention, in the sense of a meeting, is a gathering of individuals who meet at an arranged place and time in order to discuss or engage in some common interest. The most common conventions are based upon industry, profession, and fandom. Trade conventions typically focus on a particular industry or industry segment, and feature keynote speakers, vendor displays, and other information and activities of interest to the event organizers and attendees. Professional conventions focus on issues of concern to the profession and advancements in the profession. Such conventions are generally organized by societies or communities dedicated to promotion of the topic of interest. Fan conventions usually feature displays, shows, and sales based on pop culture and guest celebrities. Science fiction conventions traditionally partake of the nature of both professional conventions and fan conventions, with the balance varying from one to another. Conventions also exist for various hobbies, such as gaming or model railroads.",
+            "Legacy of Che Guevara\nThe legacy of Argentine Marxist revolutionary Che Guevara (June 14, 1928 \u2013 October 9, 1967) is constantly evolving in the collective imagination. As a ubiquitous symbol of counterculture worldwide, Guevara is one of the most recognizable and influential revolutionary figures of the twentieth century. However, during his life, and even more since his death, Che has elicited controversy and wildly divergent opinions as to who he was and what he represented. Mostly revered and occasionally reviled, he is passionately characterized along the entire continuum as everything from a heroic defender of the poor, to a cold-hearted executioner. Admired, sanctified, romanticized and derided, his crystallized status as either a brilliant intellectual or a violent ideologue is usually dependent on where one falls along the left and right of the political spectrum. The debate around his legacy is further complicated by the fact that Guevara exists simultaneously as several different entities, both literal man and global emblem, leading to disputes between what people contend he did and what he now represents.",
+            "Mick (DJ)\nMick Batyske (known by his stage name Mick, sometimes styled as MICK, and formerly Mick Boogie) is an American DJ and entrepreneur. He is an A-list DJ and spun private parties for celebrities including Kanye West, LeBron James, Jay-Z and Will Smith. In addition to his mix tape releases, he has performed in venues internationally, including New York City, Dubai, Tokyo, Las Vegas, and Los Angeles. As an entrepreneur, he has invested in various start-up companies including Localeur, in which he is also an advisor and consultant.",
+            "Mick Malthouse\nMichael \"Mick\" Malthouse (born 17 August 1953) is a former Australian rules footballer and former Australian Football League (AFL) coach and current media personality. Although his playing career included a premiership for Richmond in 1980, he is best known for his long coaching career at four clubs."
+        ],
+        "thoughts": [
+            "Mick Jagger is an English singer-songwriter, multi-instrumentalist, and composer, best known as the lead singer and one of the founder members of the Rolling Stones. He has had a successful solo career in addition to his work with the band. Mick Jagger is a prominent figure in the history of rock & roll and has been described as one of the most popular and influential frontmen in the genre.",
+            "Based on the retrieved information, Mick Jagger is indeed a musician, as he is a singer-songwriter, multi-instrumentalist, and composer, and is best known as the lead singer and founder member of the Rolling Stones. He has also had a successful solo career in addition to his work with the band. Therefore, it can be determined that Mick Jagger is a musician.",
+            "Brett Scallions is an American musician, known as the lead vocalist, rhythm guitarist, and lyricist of the post-grunge band Fuel.",
+            "Based on the retrieved information, Brett Scallions is indeed a musician, known for his role as the lead vocalist, rhythm guitarist, and lyricist of the band Fuel.",
+            "Both Mick Jagger and Brett Scallions are musicians based on the previous conclusions. Mick Jagger is a singer-songwriter, multi-instrumentalist, and composer, known for his work with the Rolling Stones and his successful solo career. Brett Scallions is known for his role as the lead vocalist, rhythm guitarist, and lyricist of the band Fuel. Therefore, both individuals can be classified as musicians."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Mick Jagger and Brett Scallions both musicians?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information on Mick Jagger's occupation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on Brett Scallions' occupation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Mick Jagger is a musician based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Brett Scallions is a musician based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the analysis to conclude if both Mick Jagger and Brett Scallions are musicians.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the task into two parallel retrieval tasks, where information about the occupations of Mick Jagger and Brett Scallions is gathered independently. These are followed by individual reasoning steps to assess whether each person is a musician. Finally, a synthesis step combines the results to address the question directly, determining if both individuals are musicians based on the previous findings."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Brett Scallions\nBrett Allen Scallions (born December 21, 1971) is an American musician. He is the lead vocalist, rhythm guitarist, and lyricist of post-grunge band Fuel.",
+            "Joy (Mick Jagger song)\n\"Joy\" was the second track from English singer-songwriter Mick Jagger's fourth solo album, \"Goddess in the Doorway\" (2001). \"Rolling Stone\" called it \"a rocking, gospel-tinged collaboration with Bono of U2\" - featuring Pete Townshend on guitar. \"Joy\" was one of three tracks from \"Goddess in the Doorway\" to be featured within Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "The Very Best of Mick Jagger\nThe Very Best of Mick Jagger is a compilation album that was released worldwide on 1 October 2007 and the following day in the United States on WEA/Rhino Records. This 17-track release is the first ever overview of Mick Jagger's solo career.",
+            "Lucky in Love (Mick Jagger song)\n\"Lucky in Love\" is a song written and performed by English singer-songwriter Mick Jagger released as the second single from his debut album, \"She's the Boss\", in 1985. \"Lucky in Love\" was the seven track on \"She's the Boss\" and was one of two tracks from \"She's the Boss\" included on Jagger's greatest hits album, \"The Very Best of Mick Jagger\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Mick Jagger\nSir Michael Philip Jagger, MBE (born 26 July 1943) is an English singer-songwriter, multi-instrumentalist, and composer, who gained fame as the lead singer and one of the founder members of the Rolling Stones (1962-present). Jagger's career has spanned over five decades, and he has been described as \"one of the most popular and influential frontmen in the history of rock & roll\". His distinctive voice and performance, along with Keith Richards' guitar style, have been the trademark of the Rolling Stones throughout the career of the band. Jagger gained press notoriety for his admitted drug use and romantic involvements, and was often portrayed as a countercultural figure.",
+            "The Beautiful Occupation\n\"The Beautiful Occupation\" is the second single from Scottish indie rock band Travis' fourth studio album, \"12 Memories\". The single peaked at #48 on the UK Singles Chart, becoming their worst performing single to date. The song was written by frontman Fran Healy and is a reflection of the anti-war sentiments of the War on Iraq, also carrying serious criticism to the invasion itself.",
+            "Perseus\nBecause of the obscurity of the name Perseus and the legendary character of its bearer, most etymologists presume that it might be pre-Greek; however, the name of Perseus\u2019 native city was Greek and so were the names of his wife and relatives. There is some idea that it descended into Greek from the Proto-Indo-European language. In that regard Robert Graves has proposed the only Greek derivation available. Perseus might be from the Greek verb, \"\u03c0\u03ad\u03c1\u03b8\u03b5\u03b9\u03bd\" (\"perthein\"), \u201cto waste, ravage, sack, destroy\u201d, some form of which appears in Homeric epithets. According to Carl Darling Buck (\"Comparative Grammar of Greek and Latin\"), the \"\u2013eus\" suffix is typically used to form an agent noun, in this case from the aorist stem, \"pers-\". \"Pers-eus\" therefore is a sacker of cities; that is, a soldier by occupation, a fitting name for the first Mycenaean warrior.",
+            "Ovambo people\nThe Ovambo people, also called Aawambo, Ambo, Aawambo (Ndonga) or Ovawambo (Kwanyama), are a Southern African tribal ethnic group. They are the largest ethnic group of Namibia, found in its northern regions and more often called Ovambo. They are also found in southern Angolan province of Cunene where the name Ambo is more common. The Ovambo consist of a number of kindred Bantu ethnic tribes who inhabit what was formerly called Owamboland. Accounting for about fifty percent of the Namibian population, the Ovambo are its largest ethnic group. In Angola, they are a minority, accounting for about two percent of the total Angolan population.",
+            "Mick (DJ)\nMick Batyske (known by his stage name Mick, sometimes styled as MICK, and formerly Mick Boogie) is an American DJ and entrepreneur. He is an A-list DJ and spun private parties for celebrities including Kanye West, LeBron James, Jay-Z and Will Smith. In addition to his mix tape releases, he has performed in venues internationally, including New York City, Dubai, Tokyo, Las Vegas, and Los Angeles. As an entrepreneur, he has invested in various start-up companies including Localeur, in which he is also an advisor and consultant.",
+            "Chonan languages\nThe Chonan languages were spoken in Tierra del Fuego and Patagonia. Two Chon languages are well attested: Selk'nam, spoken by the people of the same name who occupied territory in the northeast of Tierra del Fuego; and Tehuelche spoken by the people of the same name who occupied territory north of Tierra del Fuego. The name 'Chon', or \"Tshon\", is a blend of 'Tehuelche' and 'Ona'.",
+            "Australian Geography Competition\nThe Australian Geography Competition is an Australia-wide competition run by the Royal Geographic Society of Queensland and the Australian Geography Teachers Association and sponsored by the National Geographic Channel. It tests the geographic knowledge of high school students from years 8-12. It starts with a written multiple choice test in early March. In the under 16 competition the winners from each state & the territories (Australian Capital Territory, Northern Territory, Cocos Islands) are taken as well as a runner up who has the highest score after these winners. These people are flown to Sydney at the start of June for a weekend of sightseeing followed by the national final. The winners go on to the National Geographic World Championship to represent Australia. The competition is also used to select the members of the Australian team for the International Geography Olympiad.",
+            "Speedpass\nSpeedpass is a keychain RFID device introduced in 1997 by Mobil Oil Corp. (which merged with Exxon to become ExxonMobil in 1999) for electronic payment. It was originally developed by Verifone. As of 2004, more than seven million people possess Speedpass tags, which can be used at approximately 10,000 Exxon, Mobil and Esso gas stations worldwide. At one point, Speedpass was deployed experimentally in fast-food restaurants and supermarkets in select markets. McDonald's alone deployed Speedpass in over 400 Chicago area restaurants. The test was deemed a failure and McDonald's removed the scanners from all their restaurants in mid-2004. Additionally, the New England grocery chain Stop & Shop tested Speedpass at their Boston area stores; the units were removed in early 2005. Speedpass has also been previously available through a Speedpass Car Tag and a Speedpass-enabled Timex watch.",
+            "Mick Malthouse\nMichael \"Mick\" Malthouse (born 17 August 1953) is a former Australian rules footballer and former Australian Football League (AFL) coach and current media personality. Although his playing career included a premiership for Richmond in 1980, he is best known for his long coaching career at four clubs.",
+            "Ian Hunter (album)\nIan Hunter is the first solo album by Ian Hunter, recorded following his departure from Mott the Hoople. Released in 1975, it is also the first of many solo albums on which he collaborates with Mick Ronson. The bassist, Geoff Appleby, was from Hull like Mick Ronson and they had played together in The Rats in the late 1960s."
+        ],
+        "thoughts": [
+            "Mick Jagger is an English singer-songwriter, multi-instrumentalist, and composer, best known as the lead singer and one of the founder members of the Rolling Stones. He has had a successful solo career, with several albums and compilation releases. In addition to his music career, there is also a mention of Mick Batyske, an American DJ and entrepreneur, and Mick Malthouse, a former Australian rules footballer and coach.",
+            "Based on the retrieved information, Mick Jagger is indeed a musician, as he is a singer-songwriter, multi-instrumentalist, and composer, best known as the lead singer and founder member of the Rolling Stones.",
+            "Brett Scallions is an American musician, known as the lead vocalist, rhythm guitarist, and lyricist of the post-grunge band Fuel. He is also the host of the public radio show and podcast interview series \"Here's the Thing\" by Alec Baldwin.",
+            "Based on the retrieved information, Brett Scallions is indeed a musician, as he is the lead vocalist, rhythm guitarist, and lyricist of the band Fuel.",
+            "Based on the analysis, both Mick Jagger and Brett Scallions are indeed musicians. Mick Jagger is a singer-songwriter, multi-instrumentalist, and composer, best known as the lead singer and founder member of the Rolling Stones. Brett Scallions is the lead vocalist, rhythm guitarist, and lyricist of the band Fuel. Therefore, both individuals meet the criteria of being musicians."
+        ],
+        "is_best": false
+    }
+]

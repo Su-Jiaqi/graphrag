@@ -1,0 +1,739 @@
+[
+    {
+        "question": "A wide receiver for the Toronto Argonauts played college football for a team that represents the University of Oklahoma, which belongs to what conference?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the name of the team that represents the University of Oklahoma in college football.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about which wide receivers have played for the Toronto Argonauts who also played college football at the University of Oklahoma.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which conference the team representing the University of Oklahoma belongs to.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Verify if any wide receiver identified (if specific) also confirms the 'University of Oklahoma' detail and ensure the connection from being a Toronto Argonauts player to playing for the specified University.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compile the verified college team and conference connection for the wide receiver(s) associated with the Toronto Argonauts.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph starts by separately identifying the team that represents the University of Oklahoma (Node 1) and listing wide receivers who played for the Toronto Argonauts and attended Oklahoma (Node 2). With the team's identity established, the graph next determines the conference the team belongs to (Node 3). Meanwhile, another node (Node 4) verifies any specific wide receiver's college affiliation. The final step (Node 5) synthesizes these paths to establish both a specific player link, if applicable, and confirm the conference of the college team."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Rashaun Woods\nRashaun Dorrell Woods (born October 17, 1980) is a former American college and professional football player who was a wide receiver in the National Football League (NFL) and Canadian Football League (CFL) for two seasons during the early 2000s. Woods played college football for Oklahoma State University, and received All-American honors. He was selected by the San Francisco 49ers in the first round of the 2004 NFL Draft, and played professionally for the NFL's 49ers and the CFL's Toronto Argonauts.",
+            "Mike Eben\nMichael Eben (born January 29, 1946) is a former wide receiver who played ten seasons in the Canadian Football League, mainly for the Toronto Argonauts. Eben also played for the Hamilton Tiger-Cats, Ottawa Rough Riders and Edmonton Eskimos. Eben was initially drafted by the BC Lions in 1968 as the first overall draft pick in the CFL draft. Eben played college football at the University of Toronto and won the Hec Crighton Trophy in 1967 as the most outstanding Canadian university player. While playing professional football he earned his doctorate in German literature from the University of Toronto.",
+            "Mike Bradwell\nMike Bradwell (born July 11, 1986) is a former Canadian football wide receiver who played for the Toronto Argonauts of the Canadian Football League. He was drafted in the second round of the 2008 CFL Draft by the Toronto Argonauts. He began playing football in his final year at Leaside High School and played CIS football with McMaster University.",
+            "Emanuel Tolbert\nEmanuel Tolbert (born December 2, 1958) is a former American college and professional football player who was a slotback and wide receiver in the Canadian Football League (CFL) for eleven seasons during the 1980s and early 1990s. Tolbert played college football for Southern Methodist University, where he was an All-American. He played professionally for the Saskatchewan Roughriders, Toronto Argonauts, Calgary Stampeders and British Columbia Lions of the CFL, and was a part of the Argonauts' 1983 Grey Cup victory.",
+            "Chad Plummer\nChad J. Plummer (born November 30, 1975) is a former American and Canadian football wide receiver in the National Football League and Canadian Football League. He was drafted by the Denver Broncos in the sixth round of the 1999 NFL Draft. He also played for the Indianapolis Colts, Toronto Argonauts, Winnipeg Blue Bombers and Hamilton Tiger-Cats. He played college football at Cincinnati as a quarterback and wide receiver. He was the MVP of the 1997 Humanitarian Bowl.",
+            "Djems Kouam\u00e9\nDjems Kouam\u00e9 (born April 5, 1989, in Montreal, Quebec) is a professional Canadian football wide receiver and defensive back in the Canadian Football League who is currently a free agent. He was drafted 18th overall by the Toronto Argonauts in the 2011 CFL Draft and signed with the team on May 31, 2011. He played college football for the Montreal Carabins. On June 17, 2013, Kouam\u00e9 was released by the Argonauts.",
+            "Justin Brown (wide receiver)\nJustin Brown (born March 10, 1991) is a wide receiver for the Toronto Argonauts of the Canadian Football League (CFL). Before his 2013 draft selection by the Pittsburgh Steelers, he played college football at Oklahoma for his senior season after transferring from Penn State. After being drafted, Brown was on the Steelers practice squad for his rookie season. He played eight games during the 2014 season for a total of 12 passes for 94 yards and one lost fumble. Following the 2014 NFL season, Brown was waived by the Steelers. On February 3, 2015, the Buffalo Bills claimed Brown off waivers. On August 9, 2015, Brown was waived/injured by the Bills. On August 13, 2015, he reached an injury settlement with the Bills and was released.",
+            "Toronto Argonauts\nThe Toronto Argonauts are a professional Canadian football team competing in the East Division of the Canadian Football League (CFL). Based in Toronto, Ontario, the team was founded in 1873, and is the oldest existing professional sports team in North America still using its original name. The team's origins date back to a modified version of rugby football that emerged in North America in the latter half of the nineteenth century. The Argonauts played their home games at Rogers Centre from 1989 until 2016 when the team moved to BMO Field, the fifth stadium site to host the team.",
+            "1956 Oklahoma Sooners football team\nThe 1956 Oklahoma Sooners football team (variously \"Oklahoma\", \"OU\", or the \"Sooners\") represented the University of Oklahoma in the 1956 college football season. It was the 62nd season of play for the Sooners. The team was led by Hall of Fame head coach Bud Wilkinson. They were led on offense by quarterback Jim Harris, and played their home games at Oklahoma Memorial Stadium in Norman, Oklahoma.",
+            "1895 Oklahoma Sooners football team\nThe 1895 Oklahoma Sooners football team represented the Oklahoma Sooners of the University of Oklahoma during the 1895 college football season and was its first football team ever fielded. The team completed its inaugural season with a 0\u20131 record. The Sooners played their first football game in history against a town team from Oklahoma City and lost by a final score of 34\u20130. This was the program's one and only season under the guidance of head coach John A. Harts, the next season he was gold prospecting in the Arctic.",
+            "Oklahoma State Cowboys football\nThe Oklahoma State Cowboys football program represents Oklahoma State University\u2013Stillwater in college football. The team is a member of the Big 12 Conference and competes at the NCAA Division I Football Bowl Subdivision level. The Cowboys are led by Mike Gundy, who is in his thirteenth year as head coach. Oklahoma State plays their home games at Boone Pickens Stadium in Stillwater, Oklahoma.",
+            "1984 Oklahoma Sooners football team\nThe 1984 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1984 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted a 9\u20132\u20131 overall record and a 6\u20131 conference record to earn a share of the Conference title under head coach Barry Switzer who took the helm in 1973. This was Switzer's ninth conference title in twelve seasons.",
+            "1978 Oklahoma Sooners football team\nThe 1978 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1978 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 6\u20131 conference record to earn a share of the conference title under head coach Barry Switzer. This was Switzer's sixth conference title in six seasons since taking the helm in 1973.",
+            "1979 Oklahoma Sooners football team\nThe 1979 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1979 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 7\u20130 conference record to earn the Conference title outright under head coach Barry Switzer who took the helm in 1973. This was Switzer's seventh conference title and fourth undefeated conference record in seven seasons.",
+            "1987 Oklahoma State Cowboys football team\nThe 1987 Oklahoma State Cowboys football team represented the Oklahoma State University in the 1987 NCAA Division I-A college football season. The Cowboys finished the regular season with a 9\u20132 record. Thurman Thomas was in his senior year for the Cowboys. In his career at Oklahoma State, Thomas had 897 rushes for 4,595 yards, 43 touchdowns, and 21 100-yard rushing games. He also a Heisman Trophy candidate and a first team selection on the College Football All-America Team in 1987. In the 1987 Sun Bowl, Thomas ran for 157 yards and four touchdowns in the 35\u201333 victory over West Virginia, keeping Barry Sanders on the sidelines for the majority of the game. Thomas left OSU as the school's all-time leading rusher and his number 34 is one of only three jerseys retired at Oklahoma State. Sanders replaced Thomas as starter the next year in 1988.",
+            "1981 Oklahoma Sooners football team\nThe 1981 Oklahoma Sooners football team represented the University of Oklahoma during the 1981 NCAA Division I-A football season. They played their home games at Oklahoma Memorial Stadium and competed as members of the Big Eight Conference. They were coached by head coach Barry Switzer. The Sooners defeated the <a href=\"\">Houston Cougars",
+            "Hawaii Rainbow Warriors football\nThe Hawaii Rainbow Warriors football team represents the University of Hawaii at Manoa in NCAA Division I FBS college football. On November 27, 2015, Nick Rolovich was hired as the new head football coach at the University of Hawaii replacing Norm Chow. It was part of the Western Athletic Conference until July 2012, when the team joined the Mountain West Conference.",
+            "Boise State\u2013Nevada football rivalry\nThe Boise State\u2013Nevada football rivalry is a college football rivalry between the Boise State Broncos football team of Boise State University and Nevada Wolf Pack football team of University of Nevada, Reno. The game has been played every year since 1971 with the exception of 1978, 1992, 1995, 2000, 2015 and 2016. The game was also played twice in 1990 as the second game was a Division I-AA semifinal playoff game, and to date has been the only post-season game played between the two programs. The series has mostly been a conference match-up, with the exception of the first seven games as well as the 1993, 1994, and 2011 games. Boise State and Nevada have faced each other as conference rivals in four separate conferences - the Big Sky Conference, Big West Conference, Western Athletic Conference and the Mountain West Conference. The two teams have played each other from the NCAA Division II level all the way up to the highest level of college football, NCAA Division I FBS.",
+            "1988 Baylor Bears football team\nThe 1988 Baylor Bears football team represented the Baylor University in the 1988 NCAA Division I-A football season. The Bears finished the season fourth in the Southwest Conference. Baylor Stadium's name was officially changed to Floyd Casey Stadium during halftime of the homecoming game against Arkansas on November 5.",
+            "1992 Boise State Broncos football team\nThe 1992 Boise State Broncos football team represented Boise State University in the 1992 NCAA Division I-AA football season. The Broncos competed in the Big Sky Conference and played their home games at Bronco Stadium in Boise, Idaho. Led by sixth-year head coach Skip Hall, Boise State finished the season 5\u20136 overall and 3\u20134 in conference.",
+            "Notre Dame Fighting Irish football\nThe Notre Dame Fighting Irish football team is the intercollegiate football team representing the University of Notre Dame in Notre Dame, Indiana. The team is currently coached by Brian Kelly and plays its home games at the campus's Notre Dame Stadium, which has a capacity of 80,795 fans. Notre Dame is one of four schools that competes as an Independent at the National Collegiate Athletic Association (NCAA) Football Bowl Subdivision level; however, they play five games a year against opponents from the Atlantic Coast Conference (ACC), which Notre Dame is a member of in all other sports except ice hockey."
+        ],
+        "thoughts": [
+            "The team that represents the University of Oklahoma in college football is the Oklahoma Sooners.",
+            "The team representing the University of Oklahoma belongs to the Big Eight Conference, as indicated by their participation in that conference during the 1978, 1979, and 1984 NCAA Division I-A football seasons.",
+            "The wide receivers who have played for the Toronto Argonauts and also played college football at the University of Oklahoma are Rashaun Woods and Justin Brown.",
+            "Based on the upstream task, it has been verified that Rashaun Woods and Justin Brown are wide receivers who have played for the Toronto Argonauts and also played college football at the University of Oklahoma. Therefore, the connection from being a Toronto Argonauts player to playing for the University of Oklahoma has been confirmed for these specific wide receivers.",
+            "The verified college team and conference connection for the wide receiver(s) associated with the Toronto Argonauts is as follows:\n\n- Rashaun Woods and Justin Brown are wide receivers who have played for the Toronto Argonauts.\n- They both played college football at the University of Oklahoma.\n- The University of Oklahoma belongs to the Big Eight Conference, as indicated by their participation in that conference during the 1978, 1979, and 1984 NCAA Division I-A football seasons.\n\nTherefore, the verified college team and conference connection for the wide receiver(s) associated with the Toronto Argonauts is the University of Oklahoma in the Big Eight Conference."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "A wide receiver for the Toronto Argonauts played college football for a team that represents the University of Oklahoma, which belongs to what conference?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the current or recent wide receivers for the Toronto Argonauts football team.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "For each wide receiver identified in Step 1, determine if they played college football for a team representing the University of Oklahoma (e.g., Oklahoma Sooners).",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify which wide receiver from the Toronto Argonauts is the one who played for the University of Oklahoma team by checking official team rosters or player profiles.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the athletic conference to which the University of Oklahoma's football team belongs.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the information to answer which conference the University of Oklahoma football team belongs to, given the context of the Argonauts' player history.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph first identifies wide receivers from the Toronto Argonauts as potential candidates who may have played for Oklahoma. It then filters these candidates to find the specific player, if any, who played at the University of Oklahoma. Separately, it determines the conference association of the University of Oklahoma football team. Finally, it synthesizes this information to answer the question, ensuring the link between the Argonauts and the University of Oklahoma is established accurately."
+        },
+        "recall": 0.6666666666666666,
+        "retrieved_passages": [
+            "Rashaun Woods\nRashaun Dorrell Woods (born October 17, 1980) is a former American college and professional football player who was a wide receiver in the National Football League (NFL) and Canadian Football League (CFL) for two seasons during the early 2000s. Woods played college football for Oklahoma State University, and received All-American honors. He was selected by the San Francisco 49ers in the first round of the 2004 NFL Draft, and played professionally for the NFL's 49ers and the CFL's Toronto Argonauts.",
+            "Mike Bradwell\nMike Bradwell (born July 11, 1986) is a former Canadian football wide receiver who played for the Toronto Argonauts of the Canadian Football League. He was drafted in the second round of the 2008 CFL Draft by the Toronto Argonauts. He began playing football in his final year at Leaside High School and played CIS football with McMaster University.",
+            "Emanuel Tolbert\nEmanuel Tolbert (born December 2, 1958) is a former American college and professional football player who was a slotback and wide receiver in the Canadian Football League (CFL) for eleven seasons during the 1980s and early 1990s. Tolbert played college football for Southern Methodist University, where he was an All-American. He played professionally for the Saskatchewan Roughriders, Toronto Argonauts, Calgary Stampeders and British Columbia Lions of the CFL, and was a part of the Argonauts' 1983 Grey Cup victory.",
+            "Mike Eben\nMichael Eben (born January 29, 1946) is a former wide receiver who played ten seasons in the Canadian Football League, mainly for the Toronto Argonauts. Eben also played for the Hamilton Tiger-Cats, Ottawa Rough Riders and Edmonton Eskimos. Eben was initially drafted by the BC Lions in 1968 as the first overall draft pick in the CFL draft. Eben played college football at the University of Toronto and won the Hec Crighton Trophy in 1967 as the most outstanding Canadian university player. While playing professional football he earned his doctorate in German literature from the University of Toronto.",
+            "Justin Brown (wide receiver)\nJustin Brown (born March 10, 1991) is a wide receiver for the Toronto Argonauts of the Canadian Football League (CFL). Before his 2013 draft selection by the Pittsburgh Steelers, he played college football at Oklahoma for his senior season after transferring from Penn State. After being drafted, Brown was on the Steelers practice squad for his rookie season. He played eight games during the 2014 season for a total of 12 passes for 94 yards and one lost fumble. Following the 2014 NFL season, Brown was waived by the Steelers. On February 3, 2015, the Buffalo Bills claimed Brown off waivers. On August 9, 2015, Brown was waived/injured by the Bills. On August 13, 2015, he reached an injury settlement with the Bills and was released.",
+            "Arland Bruce III\nArland Richard Bruce III (born November 23, 1977) is a former Canadian football wide receiver. He is a two-time Grey Cup champion, having won in 2004 with the Toronto Argonauts and in 2011 with the Lions. He has played 10 seasons in the CFL with the Winnipeg Blue Bombers, Toronto Argonauts, Hamilton Tiger-Cats and BC Lions. During the 2011 season, he became the 14th CFL receiver to record over 10,000 yards receiving in a career.",
+            "Chad Plummer\nChad J. Plummer (born November 30, 1975) is a former American and Canadian football wide receiver in the National Football League and Canadian Football League. He was drafted by the Denver Broncos in the sixth round of the 1999 NFL Draft. He also played for the Indianapolis Colts, Toronto Argonauts, Winnipeg Blue Bombers and Hamilton Tiger-Cats. He played college football at Cincinnati as a quarterback and wide receiver. He was the MVP of the 1997 Humanitarian Bowl.",
+            "Djems Kouam\u00e9\nDjems Kouam\u00e9 (born April 5, 1989, in Montreal, Quebec) is a professional Canadian football wide receiver and defensive back in the Canadian Football League who is currently a free agent. He was drafted 18th overall by the Toronto Argonauts in the 2011 CFL Draft and signed with the team on May 31, 2011. He played college football for the Montreal Carabins. On June 17, 2013, Kouam\u00e9 was released by the Argonauts.",
+            "Oklahoma State Cowboys and Cowgirls\nOklahoma State Cowboys and Cowgirls are the athletic teams that represent Oklahoma State University. The program's mascot is a cowboy named Pistol Pete. Oklahoma State participates at the National Collegiate Athletic Association (NCAA)'s Division I Football Bowl Subdivision (FBS) as a member of the Big 12 Conference. The university's current athletic director is Mike Holder. In total, Oklahoma State has 51 NCAA team national titles, which ranks fourth in most NCAA team national championships. These national titles have come in wrestling (34), golf (10), basketball (2), baseball (1), and cross country (4). The 1945 Oklahoma A&M football team was retroactively awarded a national title in October 2016 by the American Football Coaches Association.",
+            "1984 Oklahoma Sooners football team\nThe 1984 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1984 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted a 9\u20132\u20131 overall record and a 6\u20131 conference record to earn a share of the Conference title under head coach Barry Switzer who took the helm in 1973. This was Switzer's ninth conference title in twelve seasons.",
+            "1978 Oklahoma Sooners football team\nThe 1978 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1978 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 6\u20131 conference record to earn a share of the conference title under head coach Barry Switzer. This was Switzer's sixth conference title in six seasons since taking the helm in 1973.",
+            "1979 Oklahoma Sooners football team\nThe 1979 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1979 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 7\u20130 conference record to earn the Conference title outright under head coach Barry Switzer who took the helm in 1973. This was Switzer's seventh conference title and fourth undefeated conference record in seven seasons.",
+            "1981 Oklahoma Sooners football team\nThe 1981 Oklahoma Sooners football team represented the University of Oklahoma during the 1981 NCAA Division I-A football season. They played their home games at Oklahoma Memorial Stadium and competed as members of the Big Eight Conference. They were coached by head coach Barry Switzer. The Sooners defeated the <a href=\"\">Houston Cougars",
+            "1956 Oklahoma Sooners football team\nThe 1956 Oklahoma Sooners football team (variously \"Oklahoma\", \"OU\", or the \"Sooners\") represented the University of Oklahoma in the 1956 college football season. It was the 62nd season of play for the Sooners. The team was led by Hall of Fame head coach Bud Wilkinson. They were led on offense by quarterback Jim Harris, and played their home games at Oklahoma Memorial Stadium in Norman, Oklahoma.",
+            "Oklahoma Sooners football\nThe Oklahoma Sooners football program is a college football team that represents the University of Oklahoma (variously \"Oklahoma\" or \"OU\"). The team is currently a member of the Big 12 Conference, which is in Division I Football Bowl Subdivision (formerly Division I-A) of the National Collegiate Athletic Association (NCAA). The program began in 1895 and is one of the most successful programs since World War II with the most wins (606) and the highest winning percentage (.762) since 1945. The program has 7 national championships, 45 conference championships, 154 All-Americans (76 consensus), and five Heisman Trophy winners. In addition, the school has had 23 members (five coaches and 18 players) inducted into the College Football Hall of Fame and holds the record for the longest winning streak in Division I history with 47 straight victories, a record that stands to this day. Oklahoma is also the only program that has had four coaches with 100+ wins. They became the sixth NCAA FBS team to win 850 games when they defeated the Kansas Jayhawks on November 22, 2014. The Sooners play their home games at Gaylord Family Oklahoma Memorial Stadium in Norman, Oklahoma. Lincoln Riley is currently the team's head coach.",
+            "Oklahoma State Cowboys football\nThe Oklahoma State Cowboys football program represents Oklahoma State University\u2013Stillwater in college football. The team is a member of the Big 12 Conference and competes at the NCAA Division I Football Bowl Subdivision level. The Cowboys are led by Mike Gundy, who is in his thirteenth year as head coach. Oklahoma State plays their home games at Boone Pickens Stadium in Stillwater, Oklahoma.",
+            "Hawaii Rainbow Warriors football\nThe Hawaii Rainbow Warriors football team represents the University of Hawaii at Manoa in NCAA Division I FBS college football. On November 27, 2015, Nick Rolovich was hired as the new head football coach at the University of Hawaii replacing Norm Chow. It was part of the Western Athletic Conference until July 2012, when the team joined the Mountain West Conference.",
+            "1895 Oklahoma Sooners football team\nThe 1895 Oklahoma Sooners football team represented the Oklahoma Sooners of the University of Oklahoma during the 1895 college football season and was its first football team ever fielded. The team completed its inaugural season with a 0\u20131 record. The Sooners played their first football game in history against a town team from Oklahoma City and lost by a final score of 34\u20130. This was the program's one and only season under the guidance of head coach John A. Harts, the next season he was gold prospecting in the Arctic.",
+            "Toronto Argonauts\nThe Toronto Argonauts are a professional Canadian football team competing in the East Division of the Canadian Football League (CFL). Based in Toronto, Ontario, the team was founded in 1873, and is the oldest existing professional sports team in North America still using its original name. The team's origins date back to a modified version of rugby football that emerged in North America in the latter half of the nineteenth century. The Argonauts played their home games at Rogers Centre from 1989 until 2016 when the team moved to BMO Field, the fifth stadium site to host the team."
+        ],
+        "thoughts": [
+            "The recent wide receivers for the Toronto Argonauts football team include Mike Bradwell, Arland Bruce III, Djems Kouam\u00e9, Emanuel Tolbert, Chad Plummer, Mike Eben, and Rashaun Woods.",
+            "Rashaun Woods did not play college football for the University of Oklahoma. He played for Oklahoma State University.\n\nJustin Brown did play college football at Oklahoma for his senior season after transferring from Penn State.\n\nChad Plummer did not play college football for the University of Oklahoma. He played at Cincinnati.",
+            "The wide receiver from the Toronto Argonauts who played for the University of Oklahoma team is Justin Brown. He played college football at Oklahoma for his senior season after transferring from Penn State.",
+            "The University of Oklahoma's football team belongs to the Big 12 Conference.",
+            "The University of Oklahoma football team belongs to the Big 12 Conference. This is evident from the fact that the wide receiver from the Toronto Argonauts, Justin Brown, played college football at Oklahoma for his senior season after transferring from Penn State."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "A wide receiver for the Toronto Argonauts played college football for a team that represents the University of Oklahoma, which belongs to what conference?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the wide receiver for the Toronto Argonauts who played college football for the University of Oklahoma.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the team that represents the University of Oklahoma.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which conference the University of Oklahoma football team belongs to.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Synthesize information to answer the conference question.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The task requires first identifying the player to ensure accurate context. Then, we gather information on the University of Oklahoma's football representation to determine its conference affiliation. Information from these steps is synthesized to answer the conference question."
+        },
+        "recall": 0.6111111111111112,
+        "retrieved_passages": [
+            "Rashaun Woods\nRashaun Dorrell Woods (born October 17, 1980) is a former American college and professional football player who was a wide receiver in the National Football League (NFL) and Canadian Football League (CFL) for two seasons during the early 2000s. Woods played college football for Oklahoma State University, and received All-American honors. He was selected by the San Francisco 49ers in the first round of the 2004 NFL Draft, and played professionally for the NFL's 49ers and the CFL's Toronto Argonauts.",
+            "Mike Bradwell\nMike Bradwell (born July 11, 1986) is a former Canadian football wide receiver who played for the Toronto Argonauts of the Canadian Football League. He was drafted in the second round of the 2008 CFL Draft by the Toronto Argonauts. He began playing football in his final year at Leaside High School and played CIS football with McMaster University.",
+            "Emanuel Tolbert\nEmanuel Tolbert (born December 2, 1958) is a former American college and professional football player who was a slotback and wide receiver in the Canadian Football League (CFL) for eleven seasons during the 1980s and early 1990s. Tolbert played college football for Southern Methodist University, where he was an All-American. He played professionally for the Saskatchewan Roughriders, Toronto Argonauts, Calgary Stampeders and British Columbia Lions of the CFL, and was a part of the Argonauts' 1983 Grey Cup victory.",
+            "Mike Eben\nMichael Eben (born January 29, 1946) is a former wide receiver who played ten seasons in the Canadian Football League, mainly for the Toronto Argonauts. Eben also played for the Hamilton Tiger-Cats, Ottawa Rough Riders and Edmonton Eskimos. Eben was initially drafted by the BC Lions in 1968 as the first overall draft pick in the CFL draft. Eben played college football at the University of Toronto and won the Hec Crighton Trophy in 1967 as the most outstanding Canadian university player. While playing professional football he earned his doctorate in German literature from the University of Toronto.",
+            "Djems Kouam\u00e9\nDjems Kouam\u00e9 (born April 5, 1989, in Montreal, Quebec) is a professional Canadian football wide receiver and defensive back in the Canadian Football League who is currently a free agent. He was drafted 18th overall by the Toronto Argonauts in the 2011 CFL Draft and signed with the team on May 31, 2011. He played college football for the Montreal Carabins. On June 17, 2013, Kouam\u00e9 was released by the Argonauts.",
+            "Chad Plummer\nChad J. Plummer (born November 30, 1975) is a former American and Canadian football wide receiver in the National Football League and Canadian Football League. He was drafted by the Denver Broncos in the sixth round of the 1999 NFL Draft. He also played for the Indianapolis Colts, Toronto Argonauts, Winnipeg Blue Bombers and Hamilton Tiger-Cats. He played college football at Cincinnati as a quarterback and wide receiver. He was the MVP of the 1997 Humanitarian Bowl.",
+            "Justin Brown (wide receiver)\nJustin Brown (born March 10, 1991) is a wide receiver for the Toronto Argonauts of the Canadian Football League (CFL). Before his 2013 draft selection by the Pittsburgh Steelers, he played college football at Oklahoma for his senior season after transferring from Penn State. After being drafted, Brown was on the Steelers practice squad for his rookie season. He played eight games during the 2014 season for a total of 12 passes for 94 yards and one lost fumble. Following the 2014 NFL season, Brown was waived by the Steelers. On February 3, 2015, the Buffalo Bills claimed Brown off waivers. On August 9, 2015, Brown was waived/injured by the Bills. On August 13, 2015, he reached an injury settlement with the Bills and was released.",
+            "Arland Bruce III\nArland Richard Bruce III (born November 23, 1977) is a former Canadian football wide receiver. He is a two-time Grey Cup champion, having won in 2004 with the Toronto Argonauts and in 2011 with the Lions. He has played 10 seasons in the CFL with the Winnipeg Blue Bombers, Toronto Argonauts, Hamilton Tiger-Cats and BC Lions. During the 2011 season, he became the 14th CFL receiver to record over 10,000 yards receiving in a career.",
+            "1984 Oklahoma Sooners football team\nThe 1984 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1984 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted a 9\u20132\u20131 overall record and a 6\u20131 conference record to earn a share of the Conference title under head coach Barry Switzer who took the helm in 1973. This was Switzer's ninth conference title in twelve seasons.",
+            "1978 Oklahoma Sooners football team\nThe 1978 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1978 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 6\u20131 conference record to earn a share of the conference title under head coach Barry Switzer. This was Switzer's sixth conference title in six seasons since taking the helm in 1973.",
+            "1979 Oklahoma Sooners football team\nThe 1979 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1979 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 7\u20130 conference record to earn the Conference title outright under head coach Barry Switzer who took the helm in 1973. This was Switzer's seventh conference title and fourth undefeated conference record in seven seasons.",
+            "1981 Oklahoma Sooners football team\nThe 1981 Oklahoma Sooners football team represented the University of Oklahoma during the 1981 NCAA Division I-A football season. They played their home games at Oklahoma Memorial Stadium and competed as members of the Big Eight Conference. They were coached by head coach Barry Switzer. The Sooners defeated the <a href=\"\">Houston Cougars",
+            "Oklahoma State Cowboys football\nThe Oklahoma State Cowboys football program represents Oklahoma State University\u2013Stillwater in college football. The team is a member of the Big 12 Conference and competes at the NCAA Division I Football Bowl Subdivision level. The Cowboys are led by Mike Gundy, who is in his thirteenth year as head coach. Oklahoma State plays their home games at Boone Pickens Stadium in Stillwater, Oklahoma.",
+            "Oklahoma State Cowboys and Cowgirls\nOklahoma State Cowboys and Cowgirls are the athletic teams that represent Oklahoma State University. The program's mascot is a cowboy named Pistol Pete. Oklahoma State participates at the National Collegiate Athletic Association (NCAA)'s Division I Football Bowl Subdivision (FBS) as a member of the Big 12 Conference. The university's current athletic director is Mike Holder. In total, Oklahoma State has 51 NCAA team national titles, which ranks fourth in most NCAA team national championships. These national titles have come in wrestling (34), golf (10), basketball (2), baseball (1), and cross country (4). The 1945 Oklahoma A&M football team was retroactively awarded a national title in October 2016 by the American Football Coaches Association.",
+            "Oklahoma Sooners football\nThe Oklahoma Sooners football program is a college football team that represents the University of Oklahoma (variously \"Oklahoma\" or \"OU\"). The team is currently a member of the Big 12 Conference, which is in Division I Football Bowl Subdivision (formerly Division I-A) of the National Collegiate Athletic Association (NCAA). The program began in 1895 and is one of the most successful programs since World War II with the most wins (606) and the highest winning percentage (.762) since 1945. The program has 7 national championships, 45 conference championships, 154 All-Americans (76 consensus), and five Heisman Trophy winners. In addition, the school has had 23 members (five coaches and 18 players) inducted into the College Football Hall of Fame and holds the record for the longest winning streak in Division I history with 47 straight victories, a record that stands to this day. Oklahoma is also the only program that has had four coaches with 100+ wins. They became the sixth NCAA FBS team to win 850 games when they defeated the Kansas Jayhawks on November 22, 2014. The Sooners play their home games at Gaylord Family Oklahoma Memorial Stadium in Norman, Oklahoma. Lincoln Riley is currently the team's head coach.",
+            "Oklahoma Sooners men's basketball\nThe Oklahoma Sooners men's basketball team represents the University of Oklahoma in men's NCAA Division I basketball. The Sooners play in the Big 12 Conference.",
+            "1956 Oklahoma Sooners football team\nThe 1956 Oklahoma Sooners football team (variously \"Oklahoma\", \"OU\", or the \"Sooners\") represented the University of Oklahoma in the 1956 college football season. It was the 62nd season of play for the Sooners. The team was led by Hall of Fame head coach Bud Wilkinson. They were led on offense by quarterback Jim Harris, and played their home games at Oklahoma Memorial Stadium in Norman, Oklahoma.",
+            "Bengalized\nBengalized is a term with origins among Cincinnati Bengals football fans and/or players. It usually refers to a Cincinnati Bengals player who, after multiple seasons of poor team performance, develops hostility with the coaching staff or ownership operation, and cultivates pessimism about remaining with the team. This results in efforts by the player to prompt a trade or release from the team. \"Bengalized\" can also refer to a Cincinnati Bengals fan who becomes frustrated after years of futility in losing seasons and/or playoff losses, ultimately ending their support of the franchise. As of the conclusion of the 2016-17 season, the Bengals have had 26 seasons without a playoff win - currently the longest streak in the NFL.",
+            "1895 Oklahoma Sooners football team\nThe 1895 Oklahoma Sooners football team represented the Oklahoma Sooners of the University of Oklahoma during the 1895 college football season and was its first football team ever fielded. The team completed its inaugural season with a 0\u20131 record. The Sooners played their first football game in history against a town team from Oklahoma City and lost by a final score of 34\u20130. This was the program's one and only season under the guidance of head coach John A. Harts, the next season he was gold prospecting in the Arctic.",
+            "2001 Oklahoma State Cowboys football team\nThe 2001 Oklahoma State Cowboys football team represented Oklahoma State University in the 2001 NCAA Division I-A football season. Les Miles was in his first season at Oklahoma State as head coach. In the three years prior to Miles' arrival in Stillwater, the Cowboys finished 5\u20136, 5\u20136, and 3\u20138. Oklahoma State posted another losing record (4\u20137) in Miles' first season at the helm."
+        ],
+        "thoughts": [
+            "The wide receiver for the Toronto Argonauts who played college football for the University of Oklahoma is Justin Brown.",
+            "The University of Oklahoma is represented by various sports teams, including the football and men's basketball teams. The football team has a long history, with notable seasons in 1956, 1981, 1984, and 1978. The men's basketball team competes in the Big 12 Conference. Additionally, the university's first football team was fielded in 1895, and the program has since had a successful and storied history.",
+            "The University of Oklahoma football team belongs to the Big 12 Conference.",
+            "Based on the upstream tasks, we can conclude that Justin Brown, the wide receiver for the Toronto Argonauts, played college football for the University of Oklahoma, which belongs to the Big 12 Conference. Therefore, the answer to the conference question is the Big 12 Conference."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "A wide receiver for the Toronto Argonauts played college football for a team that represents the University of Oklahoma, which belongs to what conference?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the current wide receivers for the Toronto Argonauts.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which wide receiver played college football for the University of Oklahoma.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Confirm the college football team that represents the University of Oklahoma.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the athletic conference to which the University of Oklahoma's football team belongs.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the information about the wide receiver and the conference of University of Oklahoma's football team to answer the question.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "To answer the question, we break it down into parts: first, we need to find out who the wide receivers are for the Toronto Argonauts and which of them played for the University of Oklahoma. Then we confirm the team representing the University of Oklahoma and find out which conference they belong to. The final step is to synthesize this information to answer the original question."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Oklahoma State Cowboys football\nThe Oklahoma State Cowboys football program represents Oklahoma State University\u2013Stillwater in college football. The team is a member of the Big 12 Conference and competes at the NCAA Division I Football Bowl Subdivision level. The Cowboys are led by Mike Gundy, who is in his thirteenth year as head coach. Oklahoma State plays their home games at Boone Pickens Stadium in Stillwater, Oklahoma.",
+            "Rashaun Woods\nRashaun Dorrell Woods (born October 17, 1980) is a former American college and professional football player who was a wide receiver in the National Football League (NFL) and Canadian Football League (CFL) for two seasons during the early 2000s. Woods played college football for Oklahoma State University, and received All-American honors. He was selected by the San Francisco 49ers in the first round of the 2004 NFL Draft, and played professionally for the NFL's 49ers and the CFL's Toronto Argonauts.",
+            "Oklahoma Sooners football\nThe Oklahoma Sooners football program is a college football team that represents the University of Oklahoma (variously \"Oklahoma\" or \"OU\"). The team is currently a member of the Big 12 Conference, which is in Division I Football Bowl Subdivision (formerly Division I-A) of the National Collegiate Athletic Association (NCAA). The program began in 1895 and is one of the most successful programs since World War II with the most wins (606) and the highest winning percentage (.762) since 1945. The program has 7 national championships, 45 conference championships, 154 All-Americans (76 consensus), and five Heisman Trophy winners. In addition, the school has had 23 members (five coaches and 18 players) inducted into the College Football Hall of Fame and holds the record for the longest winning streak in Division I history with 47 straight victories, a record that stands to this day. Oklahoma is also the only program that has had four coaches with 100+ wins. They became the sixth NCAA FBS team to win 850 games when they defeated the Kansas Jayhawks on November 22, 2014. The Sooners play their home games at Gaylord Family Oklahoma Memorial Stadium in Norman, Oklahoma. Lincoln Riley is currently the team's head coach.",
+            "1956 Oklahoma Sooners football team\nThe 1956 Oklahoma Sooners football team (variously \"Oklahoma\", \"OU\", or the \"Sooners\") represented the University of Oklahoma in the 1956 college football season. It was the 62nd season of play for the Sooners. The team was led by Hall of Fame head coach Bud Wilkinson. They were led on offense by quarterback Jim Harris, and played their home games at Oklahoma Memorial Stadium in Norman, Oklahoma.",
+            "1984 Oklahoma Sooners football team\nThe 1984 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1984 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted a 9\u20132\u20131 overall record and a 6\u20131 conference record to earn a share of the Conference title under head coach Barry Switzer who took the helm in 1973. This was Switzer's ninth conference title in twelve seasons.",
+            "1978 Oklahoma Sooners football team\nThe 1978 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1978 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 6\u20131 conference record to earn a share of the conference title under head coach Barry Switzer. This was Switzer's sixth conference title in six seasons since taking the helm in 1973.",
+            "Hawaii Rainbow Warriors football\nThe Hawaii Rainbow Warriors football team represents the University of Hawaii at Manoa in NCAA Division I FBS college football. On November 27, 2015, Nick Rolovich was hired as the new head football coach at the University of Hawaii replacing Norm Chow. It was part of the Western Athletic Conference until July 2012, when the team joined the Mountain West Conference.",
+            "1979 Oklahoma Sooners football team\nThe 1979 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1979 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 7\u20130 conference record to earn the Conference title outright under head coach Barry Switzer who took the helm in 1973. This was Switzer's seventh conference title and fourth undefeated conference record in seven seasons.",
+            "1895 Oklahoma Sooners football team\nThe 1895 Oklahoma Sooners football team represented the Oklahoma Sooners of the University of Oklahoma during the 1895 college football season and was its first football team ever fielded. The team completed its inaugural season with a 0\u20131 record. The Sooners played their first football game in history against a town team from Oklahoma City and lost by a final score of 34\u20130. This was the program's one and only season under the guidance of head coach John A. Harts, the next season he was gold prospecting in the Arctic.",
+            "Emanuel Tolbert\nEmanuel Tolbert (born December 2, 1958) is a former American college and professional football player who was a slotback and wide receiver in the Canadian Football League (CFL) for eleven seasons during the 1980s and early 1990s. Tolbert played college football for Southern Methodist University, where he was an All-American. He played professionally for the Saskatchewan Roughriders, Toronto Argonauts, Calgary Stampeders and British Columbia Lions of the CFL, and was a part of the Argonauts' 1983 Grey Cup victory.",
+            "Josh Heupel\nJoshua Kenneth Heupel (born March 22, 1978) is the offensive coordinator and quarterbacks coach for the Missouri Tigers. He is also a former college football player who played quarterback for the Oklahoma Sooners football team at the University of Oklahoma. During his college playing career, he was recognized as a consensus All-American, won numerous awards, and led Oklahoma to the 2000 BCS National Championship. Heupel became a coach after his playing career ended. He served as co-offensive coordinator for the Oklahoma Sooners until January 6, 2015, when he was fired from his position. He was named the assistant head coach, offensive coordinator, and quarterbacks coach at Utah State on January 23, 2015. After one season at Utah State, he was hired at the University of Missouri under Barry Odom's new staff.",
+            "Oklahoma Sooners men's basketball\nThe Oklahoma Sooners men's basketball team represents the University of Oklahoma in men's NCAA Division I basketball. The Sooners play in the Big 12 Conference.",
+            "Mike Eben\nMichael Eben (born January 29, 1946) is a former wide receiver who played ten seasons in the Canadian Football League, mainly for the Toronto Argonauts. Eben also played for the Hamilton Tiger-Cats, Ottawa Rough Riders and Edmonton Eskimos. Eben was initially drafted by the BC Lions in 1968 as the first overall draft pick in the CFL draft. Eben played college football at the University of Toronto and won the Hec Crighton Trophy in 1967 as the most outstanding Canadian university player. While playing professional football he earned his doctorate in German literature from the University of Toronto.",
+            "Wayne State Warriors football\nThe Wayne State Warriors football team is the college football team at Wayne State University in Detroit, Michigan. The Wayne State football team played their first game in October 1918. The Wayne State Warriors have competed in the Great Lakes Intercollegiate Athletic Conference since 1999 (and previously from 1975-1989), and are currently a Division II member of the National Collegiate Athletic Association (NCAA). Wayne State plays their home games at Tom Adams Field at Wayne State Stadium. All Wayne State games are broadcast on WDTK radio.",
+            "1896 Tennessee Volunteers football team\nThe 1896 Tennessee Volunteers football team represented the University of Tennessee in the 1896 college football season. It was the first official Tennessee Volunteers football team since 1893. The 1896 Vols went undefeated at 4\u20130 for the first winning season in school history. This was also the Tennessee's first season in the Southern Intercollegiate Athletic Association (SIAA), though they did not play a conference opponent.",
+            "Akron Zips\nThe Akron Zips are the National Collegiate Athletic Association Division I athletic teams that represent the University of Akron , located in Akron, Ohio. United States. The football team competes in the Football Bowl Subdivision (FBS), the highest level for college football. Since 1992, the Zips have been members of the Mid-American Conference (MAC). A member of the East Division of the MAC, Akron sponsors teams in six men's, ten women's, and one coed NCAA sanctioned sports:",
+            "Oklahoma State Cowboys and Cowgirls\nOklahoma State Cowboys and Cowgirls are the athletic teams that represent Oklahoma State University. The program's mascot is a cowboy named Pistol Pete. Oklahoma State participates at the National Collegiate Athletic Association (NCAA)'s Division I Football Bowl Subdivision (FBS) as a member of the Big 12 Conference. The university's current athletic director is Mike Holder. In total, Oklahoma State has 51 NCAA team national titles, which ranks fourth in most NCAA team national championships. These national titles have come in wrestling (34), golf (10), basketball (2), baseball (1), and cross country (4). The 1945 Oklahoma A&M football team was retroactively awarded a national title in October 2016 by the American Football Coaches Association.",
+            "Boise State\u2013Nevada football rivalry\nThe Boise State\u2013Nevada football rivalry is a college football rivalry between the Boise State Broncos football team of Boise State University and Nevada Wolf Pack football team of University of Nevada, Reno. The game has been played every year since 1971 with the exception of 1978, 1992, 1995, 2000, 2015 and 2016. The game was also played twice in 1990 as the second game was a Division I-AA semifinal playoff game, and to date has been the only post-season game played between the two programs. The series has mostly been a conference match-up, with the exception of the first seven games as well as the 1993, 1994, and 2011 games. Boise State and Nevada have faced each other as conference rivals in four separate conferences - the Big Sky Conference, Big West Conference, Western Athletic Conference and the Mountain West Conference. The two teams have played each other from the NCAA Division II level all the way up to the highest level of college football, NCAA Division I FBS.",
+            "Southeastern Conference\nThe Southeastern Conference (SEC) is an American college athletic conference whose member institutions are located primarily in the Southern part of the United States. Its fourteen members include the flagship public universities of ten states, three additional public land grant universities, and one private research university. The conference is headquartered in Birmingham, Alabama. The SEC participates in the National Collegiate Athletic Association (NCAA) Division I in sports competitions; for football, it is part of the Football Bowl Subdivision (FBS), formerly known as Division I-A.",
+            "Notre Dame Fighting Irish football\nThe Notre Dame Fighting Irish football team is the intercollegiate football team representing the University of Notre Dame in Notre Dame, Indiana. The team is currently coached by Brian Kelly and plays its home games at the campus's Notre Dame Stadium, which has a capacity of 80,795 fans. Notre Dame is one of four schools that competes as an Independent at the National Collegiate Athletic Association (NCAA) Football Bowl Subdivision level; however, they play five games a year against opponents from the Atlantic Coast Conference (ACC), which Notre Dame is a member of in all other sports except ice hockey.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "Watch What Happens Live with Andy Cohen\nWatch What Happens Live with Andy Cohen (previously named Watch What Happens Live until December 19, 2016) is an American pop culture-based late-night talk show hosted by Andy Cohen that premiered on July 16, 2009. It features Bravo's own reality programming in the manner of an aftershow, and celebrities' recent news. The show is produced live from New York City, making possible interaction with viewers by phone and social media. In November 2013, Bravo renewed \"Watch What Happens: Live\" for two additional seasons. On March 2, 2016, the show aired its 1000th episode.",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "The Five Obstructions\nThe Five Obstructions is a 2003 Danish documentary film directed by Lars von Trier and J\u00f8rgen Leth. The film is conceived as a documentary, but incorporates lengthy sections of experimental films produced by the filmmakers. The premise is that von Trier has created a challenge for his friend and mentor, J\u00f8rgen Leth, another renowned filmmaker. von Trier's favorite film is Leth's \"The Perfect Human\" (1967), and von Trier gives Leth the task of remaking \"The Perfect Human\" five times, each time with a different \"obstruction\" (or obstacle) imposed by von Trier."
+        ],
+        "thoughts": [
+            "I cannot provide the current wide receivers for the Toronto Argonauts as the information provided does not contain any relevant details about the team's roster.",
+            "Josh Heupel played college football for the University of Oklahoma.",
+            "The college football team that represents the University of Oklahoma is the Oklahoma Sooners football team.",
+            "The University of Oklahoma's football team belongs to the Big 12 Conference.",
+            "Josh Heupel played college football for the University of Oklahoma, which belongs to the Big 12 Conference."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "A wide receiver for the Toronto Argonauts played college football for a team that represents the University of Oklahoma, which belongs to what conference?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the wide receiver for the Toronto Argonauts who played college football for the University of Oklahoma.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the college team that represents the University of Oklahoma in football.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find out what conference the University of Oklahoma's football team belongs to.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Confirm that the wide receiver identified indeed played for the University of Oklahoma's college football team.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins by identifying the wide receiver for the Toronto Argonauts who played college football at the University of Oklahoma (Node 1). Simultaneously, we determine the specific team that represents the University of Oklahoma in football (Node 2). Node 3 retrieves the conference to which this team belongs. Node 4 involves a reasoning step confirming that the wide receiver indeed played for the identified team, ensuring coherence between the returns of nodes 1 and 2."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "1984 Oklahoma Sooners football team\nThe 1984 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1984 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted a 9\u20132\u20131 overall record and a 6\u20131 conference record to earn a share of the Conference title under head coach Barry Switzer who took the helm in 1973. This was Switzer's ninth conference title in twelve seasons.",
+            "1978 Oklahoma Sooners football team\nThe 1978 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1978 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 6\u20131 conference record to earn a share of the conference title under head coach Barry Switzer. This was Switzer's sixth conference title in six seasons since taking the helm in 1973.",
+            "1979 Oklahoma Sooners football team\nThe 1979 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1979 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 7\u20130 conference record to earn the Conference title outright under head coach Barry Switzer who took the helm in 1973. This was Switzer's seventh conference title and fourth undefeated conference record in seven seasons.",
+            "1981 Oklahoma Sooners football team\nThe 1981 Oklahoma Sooners football team represented the University of Oklahoma during the 1981 NCAA Division I-A football season. They played their home games at Oklahoma Memorial Stadium and competed as members of the Big Eight Conference. They were coached by head coach Barry Switzer. The Sooners defeated the <a href=\"\">Houston Cougars",
+            "Oklahoma State Cowboys football\nThe Oklahoma State Cowboys football program represents Oklahoma State University\u2013Stillwater in college football. The team is a member of the Big 12 Conference and competes at the NCAA Division I Football Bowl Subdivision level. The Cowboys are led by Mike Gundy, who is in his thirteenth year as head coach. Oklahoma State plays their home games at Boone Pickens Stadium in Stillwater, Oklahoma.",
+            "1956 Oklahoma Sooners football team\nThe 1956 Oklahoma Sooners football team (variously \"Oklahoma\", \"OU\", or the \"Sooners\") represented the University of Oklahoma in the 1956 college football season. It was the 62nd season of play for the Sooners. The team was led by Hall of Fame head coach Bud Wilkinson. They were led on offense by quarterback Jim Harris, and played their home games at Oklahoma Memorial Stadium in Norman, Oklahoma.",
+            "Oklahoma Sooners men's basketball\nThe Oklahoma Sooners men's basketball team represents the University of Oklahoma in men's NCAA Division I basketball. The Sooners play in the Big 12 Conference.",
+            "1895 Oklahoma Sooners football team\nThe 1895 Oklahoma Sooners football team represented the Oklahoma Sooners of the University of Oklahoma during the 1895 college football season and was its first football team ever fielded. The team completed its inaugural season with a 0\u20131 record. The Sooners played their first football game in history against a town team from Oklahoma City and lost by a final score of 34\u20130. This was the program's one and only season under the guidance of head coach John A. Harts, the next season he was gold prospecting in the Arctic.",
+            "Oklahoma Sooners football\nThe Oklahoma Sooners football program is a college football team that represents the University of Oklahoma (variously \"Oklahoma\" or \"OU\"). The team is currently a member of the Big 12 Conference, which is in Division I Football Bowl Subdivision (formerly Division I-A) of the National Collegiate Athletic Association (NCAA). The program began in 1895 and is one of the most successful programs since World War II with the most wins (606) and the highest winning percentage (.762) since 1945. The program has 7 national championships, 45 conference championships, 154 All-Americans (76 consensus), and five Heisman Trophy winners. In addition, the school has had 23 members (five coaches and 18 players) inducted into the College Football Hall of Fame and holds the record for the longest winning streak in Division I history with 47 straight victories, a record that stands to this day. Oklahoma is also the only program that has had four coaches with 100+ wins. They became the sixth NCAA FBS team to win 850 games when they defeated the Kansas Jayhawks on November 22, 2014. The Sooners play their home games at Gaylord Family Oklahoma Memorial Stadium in Norman, Oklahoma. Lincoln Riley is currently the team's head coach."
+        ],
+        "thoughts": [
+            "The college team that represents the University of Oklahoma in football is the Oklahoma Sooners football team.",
+            "The University of Oklahoma's football team belongs to the Big 12 Conference."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "A wide receiver for the Toronto Argonauts played college football for a team that represents the University of Oklahoma, which belongs to what conference?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the wide receiver for the Toronto Argonauts.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Verify if the identified wide receiver played college football for a team representing the University of Oklahoma.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the conference to which the University of Oklahoma belongs.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "To answer the question, the graph first retrieves the identity of the wide receiver for the Toronto Argonauts (Node 1). Then, it verifies if that player indeed played for a team representing the University of Oklahoma (Node 2). Meanwhile, it independently identifies the conference that the University of Oklahoma belongs to (Node 3). The answer to the original question is derived from Node 3."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "1984 Oklahoma Sooners football team\nThe 1984 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1984 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted a 9\u20132\u20131 overall record and a 6\u20131 conference record to earn a share of the Conference title under head coach Barry Switzer who took the helm in 1973. This was Switzer's ninth conference title in twelve seasons.",
+            "1978 Oklahoma Sooners football team\nThe 1978 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1978 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 6\u20131 conference record to earn a share of the conference title under head coach Barry Switzer. This was Switzer's sixth conference title in six seasons since taking the helm in 1973.",
+            "1979 Oklahoma Sooners football team\nThe 1979 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1979 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 7\u20130 conference record to earn the Conference title outright under head coach Barry Switzer who took the helm in 1973. This was Switzer's seventh conference title and fourth undefeated conference record in seven seasons.",
+            "Oklahoma Sooners men's basketball\nThe Oklahoma Sooners men's basketball team represents the University of Oklahoma in men's NCAA Division I basketball. The Sooners play in the Big 12 Conference.",
+            "1981 Oklahoma Sooners football team\nThe 1981 Oklahoma Sooners football team represented the University of Oklahoma during the 1981 NCAA Division I-A football season. They played their home games at Oklahoma Memorial Stadium and competed as members of the Big Eight Conference. They were coached by head coach Barry Switzer. The Sooners defeated the <a href=\"\">Houston Cougars",
+            "Oklahoma State Cowboys football\nThe Oklahoma State Cowboys football program represents Oklahoma State University\u2013Stillwater in college football. The team is a member of the Big 12 Conference and competes at the NCAA Division I Football Bowl Subdivision level. The Cowboys are led by Mike Gundy, who is in his thirteenth year as head coach. Oklahoma State plays their home games at Boone Pickens Stadium in Stillwater, Oklahoma.",
+            "Oklahoma Sooners football\nThe Oklahoma Sooners football program is a college football team that represents the University of Oklahoma (variously \"Oklahoma\" or \"OU\"). The team is currently a member of the Big 12 Conference, which is in Division I Football Bowl Subdivision (formerly Division I-A) of the National Collegiate Athletic Association (NCAA). The program began in 1895 and is one of the most successful programs since World War II with the most wins (606) and the highest winning percentage (.762) since 1945. The program has 7 national championships, 45 conference championships, 154 All-Americans (76 consensus), and five Heisman Trophy winners. In addition, the school has had 23 members (five coaches and 18 players) inducted into the College Football Hall of Fame and holds the record for the longest winning streak in Division I history with 47 straight victories, a record that stands to this day. Oklahoma is also the only program that has had four coaches with 100+ wins. They became the sixth NCAA FBS team to win 850 games when they defeated the Kansas Jayhawks on November 22, 2014. The Sooners play their home games at Gaylord Family Oklahoma Memorial Stadium in Norman, Oklahoma. Lincoln Riley is currently the team's head coach.",
+            "Oklahoma State Cowboys and Cowgirls\nOklahoma State Cowboys and Cowgirls are the athletic teams that represent Oklahoma State University. The program's mascot is a cowboy named Pistol Pete. Oklahoma State participates at the National Collegiate Athletic Association (NCAA)'s Division I Football Bowl Subdivision (FBS) as a member of the Big 12 Conference. The university's current athletic director is Mike Holder. In total, Oklahoma State has 51 NCAA team national titles, which ranks fourth in most NCAA team national championships. These national titles have come in wrestling (34), golf (10), basketball (2), baseball (1), and cross country (4). The 1945 Oklahoma A&M football team was retroactively awarded a national title in October 2016 by the American Football Coaches Association."
+        ],
+        "thoughts": [
+            "The University of Oklahoma belongs to the Big 12 Conference for its football and men's basketball teams."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "A wide receiver for the Toronto Argonauts played college football for a team that represents the University of Oklahoma, which belongs to what conference?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the university the Toronto Argonauts wide receiver played college football for.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Verify that the university identified has a team that represents it.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which university's team the wide receiver played for during his college career.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the conference to which the University of Oklahoma belongs.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Confirm if the university identified is the University of Oklahoma.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "If confirmed that the university is the University of Oklahoma, provide the conference name from node 4 as the final answer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4",
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "The execution graph begins with identifying which university's team the Toronto Argonauts wide receiver played for in college (Node 1). We further verify that this university has a team that represents it (Node 2) to ensure correct matching to the sports context. We then determine if this university is the University of Oklahoma (Node 3). In parallel, we find out which conference the University of Oklahoma belongs to (Node 4). The reasoning step combines the verification of the university (Node 5) and ties the correct conference to the answer (Node 6). This way, the graph ensures all retrievals and verifications are in place before answering the original question."
+        },
+        "recall": 0.6111111111111112,
+        "retrieved_passages": [
+            "Mike Bradwell\nMike Bradwell (born July 11, 1986) is a former Canadian football wide receiver who played for the Toronto Argonauts of the Canadian Football League. He was drafted in the second round of the 2008 CFL Draft by the Toronto Argonauts. He began playing football in his final year at Leaside High School and played CIS football with McMaster University.",
+            "Arland Bruce III\nArland Richard Bruce III (born November 23, 1977) is a former Canadian football wide receiver. He is a two-time Grey Cup champion, having won in 2004 with the Toronto Argonauts and in 2011 with the Lions. He has played 10 seasons in the CFL with the Winnipeg Blue Bombers, Toronto Argonauts, Hamilton Tiger-Cats and BC Lions. During the 2011 season, he became the 14th CFL receiver to record over 10,000 yards receiving in a career.",
+            "Chad Plummer\nChad J. Plummer (born November 30, 1975) is a former American and Canadian football wide receiver in the National Football League and Canadian Football League. He was drafted by the Denver Broncos in the sixth round of the 1999 NFL Draft. He also played for the Indianapolis Colts, Toronto Argonauts, Winnipeg Blue Bombers and Hamilton Tiger-Cats. He played college football at Cincinnati as a quarterback and wide receiver. He was the MVP of the 1997 Humanitarian Bowl.",
+            "Djems Kouam\u00e9\nDjems Kouam\u00e9 (born April 5, 1989, in Montreal, Quebec) is a professional Canadian football wide receiver and defensive back in the Canadian Football League who is currently a free agent. He was drafted 18th overall by the Toronto Argonauts in the 2011 CFL Draft and signed with the team on May 31, 2011. He played college football for the Montreal Carabins. On June 17, 2013, Kouam\u00e9 was released by the Argonauts.",
+            "Emanuel Tolbert\nEmanuel Tolbert (born December 2, 1958) is a former American college and professional football player who was a slotback and wide receiver in the Canadian Football League (CFL) for eleven seasons during the 1980s and early 1990s. Tolbert played college football for Southern Methodist University, where he was an All-American. He played professionally for the Saskatchewan Roughriders, Toronto Argonauts, Calgary Stampeders and British Columbia Lions of the CFL, and was a part of the Argonauts' 1983 Grey Cup victory.",
+            "Mike Eben\nMichael Eben (born January 29, 1946) is a former wide receiver who played ten seasons in the Canadian Football League, mainly for the Toronto Argonauts. Eben also played for the Hamilton Tiger-Cats, Ottawa Rough Riders and Edmonton Eskimos. Eben was initially drafted by the BC Lions in 1968 as the first overall draft pick in the CFL draft. Eben played college football at the University of Toronto and won the Hec Crighton Trophy in 1967 as the most outstanding Canadian university player. While playing professional football he earned his doctorate in German literature from the University of Toronto.",
+            "Rashaun Woods\nRashaun Dorrell Woods (born October 17, 1980) is a former American college and professional football player who was a wide receiver in the National Football League (NFL) and Canadian Football League (CFL) for two seasons during the early 2000s. Woods played college football for Oklahoma State University, and received All-American honors. He was selected by the San Francisco 49ers in the first round of the 2004 NFL Draft, and played professionally for the NFL's 49ers and the CFL's Toronto Argonauts.",
+            "Justin Brown (wide receiver)\nJustin Brown (born March 10, 1991) is a wide receiver for the Toronto Argonauts of the Canadian Football League (CFL). Before his 2013 draft selection by the Pittsburgh Steelers, he played college football at Oklahoma for his senior season after transferring from Penn State. After being drafted, Brown was on the Steelers practice squad for his rookie season. He played eight games during the 2014 season for a total of 12 passes for 94 yards and one lost fumble. Following the 2014 NFL season, Brown was waived by the Steelers. On February 3, 2015, the Buffalo Bills claimed Brown off waivers. On August 9, 2015, Brown was waived/injured by the Bills. On August 13, 2015, he reached an injury settlement with the Bills and was released.",
+            "1984 Oklahoma Sooners football team\nThe 1984 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1984 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted a 9\u20132\u20131 overall record and a 6\u20131 conference record to earn a share of the Conference title under head coach Barry Switzer who took the helm in 1973. This was Switzer's ninth conference title in twelve seasons.",
+            "1978 Oklahoma Sooners football team\nThe 1978 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1978 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 6\u20131 conference record to earn a share of the conference title under head coach Barry Switzer. This was Switzer's sixth conference title in six seasons since taking the helm in 1973.",
+            "1979 Oklahoma Sooners football team\nThe 1979 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1979 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 7\u20130 conference record to earn the Conference title outright under head coach Barry Switzer who took the helm in 1973. This was Switzer's seventh conference title and fourth undefeated conference record in seven seasons.",
+            "Oklahoma Sooners men's basketball\nThe Oklahoma Sooners men's basketball team represents the University of Oklahoma in men's NCAA Division I basketball. The Sooners play in the Big 12 Conference.",
+            "1981 Oklahoma Sooners football team\nThe 1981 Oklahoma Sooners football team represented the University of Oklahoma during the 1981 NCAA Division I-A football season. They played their home games at Oklahoma Memorial Stadium and competed as members of the Big Eight Conference. They were coached by head coach Barry Switzer. The Sooners defeated the <a href=\"\">Houston Cougars",
+            "Oklahoma State Cowboys football\nThe Oklahoma State Cowboys football program represents Oklahoma State University\u2013Stillwater in college football. The team is a member of the Big 12 Conference and competes at the NCAA Division I Football Bowl Subdivision level. The Cowboys are led by Mike Gundy, who is in his thirteenth year as head coach. Oklahoma State plays their home games at Boone Pickens Stadium in Stillwater, Oklahoma.",
+            "Oklahoma Sooners football\nThe Oklahoma Sooners football program is a college football team that represents the University of Oklahoma (variously \"Oklahoma\" or \"OU\"). The team is currently a member of the Big 12 Conference, which is in Division I Football Bowl Subdivision (formerly Division I-A) of the National Collegiate Athletic Association (NCAA). The program began in 1895 and is one of the most successful programs since World War II with the most wins (606) and the highest winning percentage (.762) since 1945. The program has 7 national championships, 45 conference championships, 154 All-Americans (76 consensus), and five Heisman Trophy winners. In addition, the school has had 23 members (five coaches and 18 players) inducted into the College Football Hall of Fame and holds the record for the longest winning streak in Division I history with 47 straight victories, a record that stands to this day. Oklahoma is also the only program that has had four coaches with 100+ wins. They became the sixth NCAA FBS team to win 850 games when they defeated the Kansas Jayhawks on November 22, 2014. The Sooners play their home games at Gaylord Family Oklahoma Memorial Stadium in Norman, Oklahoma. Lincoln Riley is currently the team's head coach.",
+            "Oklahoma State Cowboys and Cowgirls\nOklahoma State Cowboys and Cowgirls are the athletic teams that represent Oklahoma State University. The program's mascot is a cowboy named Pistol Pete. Oklahoma State participates at the National Collegiate Athletic Association (NCAA)'s Division I Football Bowl Subdivision (FBS) as a member of the Big 12 Conference. The university's current athletic director is Mike Holder. In total, Oklahoma State has 51 NCAA team national titles, which ranks fourth in most NCAA team national championships. These national titles have come in wrestling (34), golf (10), basketball (2), baseball (1), and cross country (4). The 1945 Oklahoma A&M football team was retroactively awarded a national title in October 2016 by the American Football Coaches Association."
+        ],
+        "thoughts": [
+            "The University of Oklahoma belongs to the Big 12 Conference for its football and men's basketball teams.",
+            "Mike Bradwell played college football for McMaster University.",
+            "Based on the information from the upstream task, it is verified that McMaster University has a football team, as Mike Bradwell played college football for McMaster University. Therefore, the university identified does have a team that represents it.",
+            "Mike Bradwell played college football for McMaster University.",
+            "The identified university is McMaster University, not the University of Oklahoma.",
+            "Since the identified university is not the University of Oklahoma, we cannot provide the conference name from node 4 as the final answer."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "A wide receiver for the Toronto Argonauts played college football for a team that represents the University of Oklahoma, which belongs to what conference?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the team that represents the University of Oklahoma in college football.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the football conference affiliations.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which conference the Oklahoma Sooners football team belongs to based on their college football affiliations.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "To answer the question, it is essential to first identify the college football team representing the University of Oklahoma, which is the Oklahoma Sooners. Independently, we need to gather information on current college football conference affiliations. By analyzing both sources, we can determine that the Oklahoma Sooners are part of the Big 12 Conference, thus providing the answer to the original question."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Boise State\u2013Nevada football rivalry\nThe Boise State\u2013Nevada football rivalry is a college football rivalry between the Boise State Broncos football team of Boise State University and Nevada Wolf Pack football team of University of Nevada, Reno. The game has been played every year since 1971 with the exception of 1978, 1992, 1995, 2000, 2015 and 2016. The game was also played twice in 1990 as the second game was a Division I-AA semifinal playoff game, and to date has been the only post-season game played between the two programs. The series has mostly been a conference match-up, with the exception of the first seven games as well as the 1993, 1994, and 2011 games. Boise State and Nevada have faced each other as conference rivals in four separate conferences - the Big Sky Conference, Big West Conference, Western Athletic Conference and the Mountain West Conference. The two teams have played each other from the NCAA Division II level all the way up to the highest level of college football, NCAA Division I FBS.",
+            "Southern Miss Golden Eagles football\nThe Southern Miss Golden Eagles football program represents the University of Southern Mississippi in college football at the NCAA Division I Football Bowl Subdivision. The Eagles are members of Conference USA and play their home games at M. M. Roberts Stadium in Hattiesburg, Mississippi.",
+            "Southeastern Conference\nThe Southeastern Conference (SEC) is an American college athletic conference whose member institutions are located primarily in the Southern part of the United States. Its fourteen members include the flagship public universities of ten states, three additional public land grant universities, and one private research university. The conference is headquartered in Birmingham, Alabama. The SEC participates in the National Collegiate Athletic Association (NCAA) Division I in sports competitions; for football, it is part of the Football Bowl Subdivision (FBS), formerly known as Division I-A.",
+            "Oklahoma State Cowboys football\nThe Oklahoma State Cowboys football program represents Oklahoma State University\u2013Stillwater in college football. The team is a member of the Big 12 Conference and competes at the NCAA Division I Football Bowl Subdivision level. The Cowboys are led by Mike Gundy, who is in his thirteenth year as head coach. Oklahoma State plays their home games at Boone Pickens Stadium in Stillwater, Oklahoma.",
+            "Akron Zips\nThe Akron Zips are the National Collegiate Athletic Association Division I athletic teams that represent the University of Akron , located in Akron, Ohio. United States. The football team competes in the Football Bowl Subdivision (FBS), the highest level for college football. Since 1992, the Zips have been members of the Mid-American Conference (MAC). A member of the East Division of the MAC, Akron sponsors teams in six men's, ten women's, and one coed NCAA sanctioned sports:",
+            "Stephen Sieradzki\nStephen Henry Sieradzki (April 5, 1923 \u2013 May 1968) was an American football player. He played college football for Michigan State College (later known as Michigan State University) in 1946 and 1947. He also played also played college baseball for Michigan State. He played professional football in the National Football League for the New York Yankees (NFL) in 1948. He was released by the Brooklyn Dodgers of the All-American Football Conference in April 1949.",
+            "Eric Hansen (sportswriter)\nEric C. Hansen is an American sportswriter with the \"South Bend Tribune\". The University of Notre Dame football beat writer and an assistant sports editor for the newspaper, Hansen has also written two books on Notre Dame football. \"Stadium Stories: Notre Dame Fighting Irish: Colorful Tales of the Blue and Gold\" (2004) won a first-place prize for non-fiction books from the Indiana chapter of the Society of Professional Journalists. The book recounted many tales of Notre Dame's football history. In 2005 Hansen published \"Notre Dame Fighting Irish: Where Have You Gone?\", a collection of stories and interviews about former Notre Dame football players. Hansen has won a number of national writing awards from the Football Writers Association of America, and was a member of the FWAA committee that chose the 2006 college All-American team.",
+            "Hank Foldberg\nHenry Christian \"Hank\" Foldberg, Sr. (March 12, 1923 \u2013 March 7, 2001) was an American college and professional football player who became a college football coach. Foldberg played college football for Texas A&M University and the United States Military Academy, and thereafter, he played professionally for Brooklyn Dodgers and the Chicago Hornets of the All-America Football Conference (AAFC). He later served as the head football coach of Wichita State University and Texas A&M University.",
+            "Oklahoma Sooners football\nThe Oklahoma Sooners football program is a college football team that represents the University of Oklahoma (variously \"Oklahoma\" or \"OU\"). The team is currently a member of the Big 12 Conference, which is in Division I Football Bowl Subdivision (formerly Division I-A) of the National Collegiate Athletic Association (NCAA). The program began in 1895 and is one of the most successful programs since World War II with the most wins (606) and the highest winning percentage (.762) since 1945. The program has 7 national championships, 45 conference championships, 154 All-Americans (76 consensus), and five Heisman Trophy winners. In addition, the school has had 23 members (five coaches and 18 players) inducted into the College Football Hall of Fame and holds the record for the longest winning streak in Division I history with 47 straight victories, a record that stands to this day. Oklahoma is also the only program that has had four coaches with 100+ wins. They became the sixth NCAA FBS team to win 850 games when they defeated the Kansas Jayhawks on November 22, 2014. The Sooners play their home games at Gaylord Family Oklahoma Memorial Stadium in Norman, Oklahoma. Lincoln Riley is currently the team's head coach.",
+            "1956 Oklahoma Sooners football team\nThe 1956 Oklahoma Sooners football team (variously \"Oklahoma\", \"OU\", or the \"Sooners\") represented the University of Oklahoma in the 1956 college football season. It was the 62nd season of play for the Sooners. The team was led by Hall of Fame head coach Bud Wilkinson. They were led on offense by quarterback Jim Harris, and played their home games at Oklahoma Memorial Stadium in Norman, Oklahoma.",
+            "1984 Oklahoma Sooners football team\nThe 1984 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1984 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted a 9\u20132\u20131 overall record and a 6\u20131 conference record to earn a share of the Conference title under head coach Barry Switzer who took the helm in 1973. This was Switzer's ninth conference title in twelve seasons.",
+            "1978 Oklahoma Sooners football team\nThe 1978 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1978 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 6\u20131 conference record to earn a share of the conference title under head coach Barry Switzer. This was Switzer's sixth conference title in six seasons since taking the helm in 1973.",
+            "1895 Oklahoma Sooners football team\nThe 1895 Oklahoma Sooners football team represented the Oklahoma Sooners of the University of Oklahoma during the 1895 college football season and was its first football team ever fielded. The team completed its inaugural season with a 0\u20131 record. The Sooners played their first football game in history against a town team from Oklahoma City and lost by a final score of 34\u20130. This was the program's one and only season under the guidance of head coach John A. Harts, the next season he was gold prospecting in the Arctic.",
+            "1979 Oklahoma Sooners football team\nThe 1979 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1979 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 7\u20130 conference record to earn the Conference title outright under head coach Barry Switzer who took the helm in 1973. This was Switzer's seventh conference title and fourth undefeated conference record in seven seasons.",
+            "Oklahoma Sooners men's basketball\nThe Oklahoma Sooners men's basketball team represents the University of Oklahoma in men's NCAA Division I basketball. The Sooners play in the Big 12 Conference."
+        ],
+        "thoughts": [
+            "The team that represents the University of Oklahoma in college football is the Oklahoma Sooners football team.",
+            "The Boise State Broncos football team and Nevada Wolf Pack football team have a long-standing rivalry, having faced each other in various conferences including the Big Sky Conference, Big West Conference, Western Athletic Conference, and the Mountain West Conference. The Southern Miss Golden Eagles football team is a member of Conference USA, while the Oklahoma State Cowboys football team is a member of the Big 12 Conference. The Akron Zips football team competes in the Football Bowl Subdivision (FBS) and has been a member of the Mid-American Conference (MAC) since 1992. These teams are part of the NCAA Division I Football Bowl Subdivision and compete in various conferences across the United States.",
+            "The Oklahoma Sooners football team belongs to the Big 12 Conference."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "A wide receiver for the Toronto Argonauts played college football for a team that represents the University of Oklahoma, which belongs to what conference?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the name of the wide receiver currently playing for the Toronto Argonauts.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the college where this wide receiver played football.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find out the team that represents the University of Oklahoma in college football.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the college football team of the wide receiver from the previous steps and verify if it matches the team that represents the University of Oklahoma.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Determine the conference to which the University of Oklahoma's football team belongs.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Provide the conference name if the wide receiver played for the University of Oklahoma's team.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4",
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "To answer the question about which conference the University of Oklahoma's football team belongs to, given a wide receiver currently playing for the Toronto Argonauts, we follow these steps: First, we identify the wide receiver. Then, we find out which college they played for. Independently, we determine the football team representing the University of Oklahoma and identify its conference. We ensure the player's college team is indeed the University of Oklahoma's team before confirming the conference, synthesizing these results to answer the original question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Justin Brown (wide receiver)\nJustin Brown (born March 10, 1991) is a wide receiver for the Toronto Argonauts of the Canadian Football League (CFL). Before his 2013 draft selection by the Pittsburgh Steelers, he played college football at Oklahoma for his senior season after transferring from Penn State. After being drafted, Brown was on the Steelers practice squad for his rookie season. He played eight games during the 2014 season for a total of 12 passes for 94 yards and one lost fumble. Following the 2014 NFL season, Brown was waived by the Steelers. On February 3, 2015, the Buffalo Bills claimed Brown off waivers. On August 9, 2015, Brown was waived/injured by the Bills. On August 13, 2015, he reached an injury settlement with the Bills and was released.",
+            "Mike Bradwell\nMike Bradwell (born July 11, 1986) is a former Canadian football wide receiver who played for the Toronto Argonauts of the Canadian Football League. He was drafted in the second round of the 2008 CFL Draft by the Toronto Argonauts. He began playing football in his final year at Leaside High School and played CIS football with McMaster University.",
+            "Justin Harper (American football)\nJustin Harper (born February 24, 1985 in Catawba, North Carolina) is an American college football coach and former professional Canadian football wide receiver. He is currently the Interim Head Coach at Virginia State. He was most recently a member of the BC Lions of the CFL. He was drafted by the Baltimore Ravens in the seventh round of the 2008 NFL Draft. He played college football at Virginia Tech.",
+            "Djems Kouam\u00e9\nDjems Kouam\u00e9 (born April 5, 1989, in Montreal, Quebec) is a professional Canadian football wide receiver and defensive back in the Canadian Football League who is currently a free agent. He was drafted 18th overall by the Toronto Argonauts in the 2011 CFL Draft and signed with the team on May 31, 2011. He played college football for the Montreal Carabins. On June 17, 2013, Kouam\u00e9 was released by the Argonauts.",
+            "Arland Bruce III\nArland Richard Bruce III (born November 23, 1977) is a former Canadian football wide receiver. He is a two-time Grey Cup champion, having won in 2004 with the Toronto Argonauts and in 2011 with the Lions. He has played 10 seasons in the CFL with the Winnipeg Blue Bombers, Toronto Argonauts, Hamilton Tiger-Cats and BC Lions. During the 2011 season, he became the 14th CFL receiver to record over 10,000 yards receiving in a career.",
+            "Mike Eben\nMichael Eben (born January 29, 1946) is a former wide receiver who played ten seasons in the Canadian Football League, mainly for the Toronto Argonauts. Eben also played for the Hamilton Tiger-Cats, Ottawa Rough Riders and Edmonton Eskimos. Eben was initially drafted by the BC Lions in 1968 as the first overall draft pick in the CFL draft. Eben played college football at the University of Toronto and won the Hec Crighton Trophy in 1967 as the most outstanding Canadian university player. While playing professional football he earned his doctorate in German literature from the University of Toronto.",
+            "Chad Plummer\nChad J. Plummer (born November 30, 1975) is a former American and Canadian football wide receiver in the National Football League and Canadian Football League. He was drafted by the Denver Broncos in the sixth round of the 1999 NFL Draft. He also played for the Indianapolis Colts, Toronto Argonauts, Winnipeg Blue Bombers and Hamilton Tiger-Cats. He played college football at Cincinnati as a quarterback and wide receiver. He was the MVP of the 1997 Humanitarian Bowl.",
+            "Emanuel Tolbert\nEmanuel Tolbert (born December 2, 1958) is a former American college and professional football player who was a slotback and wide receiver in the Canadian Football League (CFL) for eleven seasons during the 1980s and early 1990s. Tolbert played college football for Southern Methodist University, where he was an All-American. He played professionally for the Saskatchewan Roughriders, Toronto Argonauts, Calgary Stampeders and British Columbia Lions of the CFL, and was a part of the Argonauts' 1983 Grey Cup victory.",
+            "Rashaun Woods\nRashaun Dorrell Woods (born October 17, 1980) is a former American college and professional football player who was a wide receiver in the National Football League (NFL) and Canadian Football League (CFL) for two seasons during the early 2000s. Woods played college football for Oklahoma State University, and received All-American honors. He was selected by the San Francisco 49ers in the first round of the 2004 NFL Draft, and played professionally for the NFL's 49ers and the CFL's Toronto Argonauts.",
+            "1956 Oklahoma Sooners football team\nThe 1956 Oklahoma Sooners football team (variously \"Oklahoma\", \"OU\", or the \"Sooners\") represented the University of Oklahoma in the 1956 college football season. It was the 62nd season of play for the Sooners. The team was led by Hall of Fame head coach Bud Wilkinson. They were led on offense by quarterback Jim Harris, and played their home games at Oklahoma Memorial Stadium in Norman, Oklahoma.",
+            "1895 Oklahoma Sooners football team\nThe 1895 Oklahoma Sooners football team represented the Oklahoma Sooners of the University of Oklahoma during the 1895 college football season and was its first football team ever fielded. The team completed its inaugural season with a 0\u20131 record. The Sooners played their first football game in history against a town team from Oklahoma City and lost by a final score of 34\u20130. This was the program's one and only season under the guidance of head coach John A. Harts, the next season he was gold prospecting in the Arctic.",
+            "Oklahoma State Cowboys football\nThe Oklahoma State Cowboys football program represents Oklahoma State University\u2013Stillwater in college football. The team is a member of the Big 12 Conference and competes at the NCAA Division I Football Bowl Subdivision level. The Cowboys are led by Mike Gundy, who is in his thirteenth year as head coach. Oklahoma State plays their home games at Boone Pickens Stadium in Stillwater, Oklahoma.",
+            "1984 Oklahoma Sooners football team\nThe 1984 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1984 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted a 9\u20132\u20131 overall record and a 6\u20131 conference record to earn a share of the Conference title under head coach Barry Switzer who took the helm in 1973. This was Switzer's ninth conference title in twelve seasons.",
+            "1978 Oklahoma Sooners football team\nThe 1978 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1978 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 6\u20131 conference record to earn a share of the conference title under head coach Barry Switzer. This was Switzer's sixth conference title in six seasons since taking the helm in 1973.",
+            "1979 Oklahoma Sooners football team\nThe 1979 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1979 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 7\u20130 conference record to earn the Conference title outright under head coach Barry Switzer who took the helm in 1973. This was Switzer's seventh conference title and fourth undefeated conference record in seven seasons.",
+            "1987 Oklahoma State Cowboys football team\nThe 1987 Oklahoma State Cowboys football team represented the Oklahoma State University in the 1987 NCAA Division I-A college football season. The Cowboys finished the regular season with a 9\u20132 record. Thurman Thomas was in his senior year for the Cowboys. In his career at Oklahoma State, Thomas had 897 rushes for 4,595 yards, 43 touchdowns, and 21 100-yard rushing games. He also a Heisman Trophy candidate and a first team selection on the College Football All-America Team in 1987. In the 1987 Sun Bowl, Thomas ran for 157 yards and four touchdowns in the 35\u201333 victory over West Virginia, keeping Barry Sanders on the sidelines for the majority of the game. Thomas left OSU as the school's all-time leading rusher and his number 34 is one of only three jerseys retired at Oklahoma State. Sanders replaced Thomas as starter the next year in 1988.",
+            "1981 Oklahoma Sooners football team\nThe 1981 Oklahoma Sooners football team represented the University of Oklahoma during the 1981 NCAA Division I-A football season. They played their home games at Oklahoma Memorial Stadium and competed as members of the Big Eight Conference. They were coached by head coach Barry Switzer. The Sooners defeated the <a href=\"\">Houston Cougars",
+            "Hawaii Rainbow Warriors football\nThe Hawaii Rainbow Warriors football team represents the University of Hawaii at Manoa in NCAA Division I FBS college football. On November 27, 2015, Nick Rolovich was hired as the new head football coach at the University of Hawaii replacing Norm Chow. It was part of the Western Athletic Conference until July 2012, when the team joined the Mountain West Conference.",
+            "Boise State\u2013Nevada football rivalry\nThe Boise State\u2013Nevada football rivalry is a college football rivalry between the Boise State Broncos football team of Boise State University and Nevada Wolf Pack football team of University of Nevada, Reno. The game has been played every year since 1971 with the exception of 1978, 1992, 1995, 2000, 2015 and 2016. The game was also played twice in 1990 as the second game was a Division I-AA semifinal playoff game, and to date has been the only post-season game played between the two programs. The series has mostly been a conference match-up, with the exception of the first seven games as well as the 1993, 1994, and 2011 games. Boise State and Nevada have faced each other as conference rivals in four separate conferences - the Big Sky Conference, Big West Conference, Western Athletic Conference and the Mountain West Conference. The two teams have played each other from the NCAA Division II level all the way up to the highest level of college football, NCAA Division I FBS.",
+            "1988 Baylor Bears football team\nThe 1988 Baylor Bears football team represented the Baylor University in the 1988 NCAA Division I-A football season. The Bears finished the season fourth in the Southwest Conference. Baylor Stadium's name was officially changed to Floyd Casey Stadium during halftime of the homecoming game against Arkansas on November 5.",
+            "1992 Boise State Broncos football team\nThe 1992 Boise State Broncos football team represented Boise State University in the 1992 NCAA Division I-AA football season. The Broncos competed in the Big Sky Conference and played their home games at Bronco Stadium in Boise, Idaho. Led by sixth-year head coach Skip Hall, Boise State finished the season 5\u20136 overall and 3\u20134 in conference.",
+            "Notre Dame Fighting Irish football\nThe Notre Dame Fighting Irish football team is the intercollegiate football team representing the University of Notre Dame in Notre Dame, Indiana. The team is currently coached by Brian Kelly and plays its home games at the campus's Notre Dame Stadium, which has a capacity of 80,795 fans. Notre Dame is one of four schools that competes as an Independent at the National Collegiate Athletic Association (NCAA) Football Bowl Subdivision level; however, they play five games a year against opponents from the Atlantic Coast Conference (ACC), which Notre Dame is a member of in all other sports except ice hockey."
+        ],
+        "thoughts": [
+            "The wide receiver currently playing for the Toronto Argonauts is Justin Brown.",
+            "Justin Brown played college football at Oklahoma for his senior season after transferring from Penn State.",
+            "The team that represents the University of Oklahoma in college football is the Oklahoma Sooners.",
+            "The college football team of the wide receiver from the previous steps is the Oklahoma Sooners, as Justin Brown played for Oklahoma during his senior season. Therefore, it matches the team that represents the University of Oklahoma.",
+            "The University of Oklahoma's football team belongs to the Big 12 Conference. This is evident from the information provided about the team's participation in the former Big Eight Conference, which eventually became the Big 12 Conference. The team's conference titles and records also align with its membership in the Big 12 Conference.",
+            "The conference name for the wide receiver who played for the University of Oklahoma's team is the Big 12 Conference."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "A wide receiver for the Toronto Argonauts played college football for a team that represents the University of Oklahoma, which belongs to what conference?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve all wide receivers for the Toronto Argonauts.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find out which of these wide receivers played college football for a team representing the University of Oklahoma.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the team that represents the University of Oklahoma in college football.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the conference affiliation of the team from the University of Oklahoma.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the information to determine the conference of the college team for the wide receiver found.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to systematically determine the conference affiliation for a Toronto Argonauts wide receiver who played college football for a team representing the University of Oklahoma. It starts with finding potential wide receivers from the team, checks their college affiliation, identifies the college team, determines its conference, and finally synthesizes this information to answer the original query."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "1984 Oklahoma Sooners football team\nThe 1984 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1984 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted a 9\u20132\u20131 overall record and a 6\u20131 conference record to earn a share of the Conference title under head coach Barry Switzer who took the helm in 1973. This was Switzer's ninth conference title in twelve seasons.",
+            "1978 Oklahoma Sooners football team\nThe 1978 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1978 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 6\u20131 conference record to earn a share of the conference title under head coach Barry Switzer. This was Switzer's sixth conference title in six seasons since taking the helm in 1973.",
+            "1979 Oklahoma Sooners football team\nThe 1979 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1979 NCAA Division I-A season. Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923. The team posted an 11\u20131 overall record and a 7\u20130 conference record to earn the Conference title outright under head coach Barry Switzer who took the helm in 1973. This was Switzer's seventh conference title and fourth undefeated conference record in seven seasons.",
+            "1981 Oklahoma Sooners football team\nThe 1981 Oklahoma Sooners football team represented the University of Oklahoma during the 1981 NCAA Division I-A football season. They played their home games at Oklahoma Memorial Stadium and competed as members of the Big Eight Conference. They were coached by head coach Barry Switzer. The Sooners defeated the <a href=\"\">Houston Cougars",
+            "Oklahoma State Cowboys football\nThe Oklahoma State Cowboys football program represents Oklahoma State University\u2013Stillwater in college football. The team is a member of the Big 12 Conference and competes at the NCAA Division I Football Bowl Subdivision level. The Cowboys are led by Mike Gundy, who is in his thirteenth year as head coach. Oklahoma State plays their home games at Boone Pickens Stadium in Stillwater, Oklahoma.",
+            "1956 Oklahoma Sooners football team\nThe 1956 Oklahoma Sooners football team (variously \"Oklahoma\", \"OU\", or the \"Sooners\") represented the University of Oklahoma in the 1956 college football season. It was the 62nd season of play for the Sooners. The team was led by Hall of Fame head coach Bud Wilkinson. They were led on offense by quarterback Jim Harris, and played their home games at Oklahoma Memorial Stadium in Norman, Oklahoma.",
+            "Oklahoma Sooners men's basketball\nThe Oklahoma Sooners men's basketball team represents the University of Oklahoma in men's NCAA Division I basketball. The Sooners play in the Big 12 Conference.",
+            "1895 Oklahoma Sooners football team\nThe 1895 Oklahoma Sooners football team represented the Oklahoma Sooners of the University of Oklahoma during the 1895 college football season and was its first football team ever fielded. The team completed its inaugural season with a 0\u20131 record. The Sooners played their first football game in history against a town team from Oklahoma City and lost by a final score of 34\u20130. This was the program's one and only season under the guidance of head coach John A. Harts, the next season he was gold prospecting in the Arctic.",
+            "Rashaun Woods\nRashaun Dorrell Woods (born October 17, 1980) is a former American college and professional football player who was a wide receiver in the National Football League (NFL) and Canadian Football League (CFL) for two seasons during the early 2000s. Woods played college football for Oklahoma State University, and received All-American honors. He was selected by the San Francisco 49ers in the first round of the 2004 NFL Draft, and played professionally for the NFL's 49ers and the CFL's Toronto Argonauts.",
+            "Oklahoma Sooners football\nThe Oklahoma Sooners football program is a college football team that represents the University of Oklahoma (variously \"Oklahoma\" or \"OU\"). The team is currently a member of the Big 12 Conference, which is in Division I Football Bowl Subdivision (formerly Division I-A) of the National Collegiate Athletic Association (NCAA). The program began in 1895 and is one of the most successful programs since World War II with the most wins (606) and the highest winning percentage (.762) since 1945. The program has 7 national championships, 45 conference championships, 154 All-Americans (76 consensus), and five Heisman Trophy winners. In addition, the school has had 23 members (five coaches and 18 players) inducted into the College Football Hall of Fame and holds the record for the longest winning streak in Division I history with 47 straight victories, a record that stands to this day. Oklahoma is also the only program that has had four coaches with 100+ wins. They became the sixth NCAA FBS team to win 850 games when they defeated the Kansas Jayhawks on November 22, 2014. The Sooners play their home games at Gaylord Family Oklahoma Memorial Stadium in Norman, Oklahoma. Lincoln Riley is currently the team's head coach.",
+            "Josh Heupel\nJoshua Kenneth Heupel (born March 22, 1978) is the offensive coordinator and quarterbacks coach for the Missouri Tigers. He is also a former college football player who played quarterback for the Oklahoma Sooners football team at the University of Oklahoma. During his college playing career, he was recognized as a consensus All-American, won numerous awards, and led Oklahoma to the 2000 BCS National Championship. Heupel became a coach after his playing career ended. He served as co-offensive coordinator for the Oklahoma Sooners until January 6, 2015, when he was fired from his position. He was named the assistant head coach, offensive coordinator, and quarterbacks coach at Utah State on January 23, 2015. After one season at Utah State, he was hired at the University of Missouri under Barry Odom's new staff.",
+            "International business\nInternational business comprises all international trades services or investments (bonds, stocks) conducted by both the private and public sectors that take place between two or more countries beyond their political boundaries. The term \"international business\" refers to all those business activities which involve cross-border transactions of goods, services, and resources between two or more nations. Transactions of economic resources include capital, skills, people for the purpose of the international production of physical goods and services such as finance, banking, insurance, and construction. International business can also be referred to as globalization. Globalization is the shift toward a more integrated and interdependent economy. In order to conduct business overseas, multinational companies need to separate national markets into one huge global marketplace. Two macro factors underline the trend of greater globalization. The first is falling of barriers to make cross-border trade easier such as the free flow of goods and services, and capital, and the second factor is technological change, particularly the developments in communication, information processing, and transportation technologies.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Against All Will\nAgainst All Will is a rock quartet from Los Angeles, California, whose debut album lineup was formed in Spring 2009 by Jimmy Allen (formerly of Puddle of Mudd), Jeff Current (formerly of Seven Story Drop), Steve \"Boomstick\" Wilson (formerly of Dead Kennedys and t.A.T.u.), and Cello Dias (formerly of Soulfly). Songs \"All About You\" and \"The Drug I Need\" from their debut album entitled A Rhyme & Reason ranked in the national rock radio top 50 in 2010.",
+            "R. Kelly (album)\nR. Kelly is the second studio album by R&B singer R. Kelly. It was released on November 14, 1995. The album was somewhat of a departure from his previous album's sexual innuendos, featuring slightly more introspective lyrics. \"R. Kelly\" was the artist's second number 1 R&B album and the first one to top the \"Billboard\" 200; it spawned three number 1 R&B singles in chronological order: \"You Remind Me of Something\", \"Down Low (Nobody Has to Know)\" and \"I Can't Sleep Baby (If I)\".",
+            "Construct (album)\nConstruct is the tenth full-length studio album by Swedish melodic death metal band Dark Tranquillity. It was released on 27 May 2013 through Century Media Records. A music video for \"Uniformity\", directed by Patric Ullaeus, was released on 10 May 2013. The album was written during what the band described as their \"darkest period\" and drew critical praise for its melodrama and darkness. Construct would be the band's last studio album with founding member guitarist Martin Henriksson as he left the band in early 2016 due to loss of passion for playing music.",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "BBC Sky at Night\nBBC Sky at Night magazine is a British monthly magazine about astronomy aimed at amateur astronomers and published by Immediate Media Company. The title of the periodical derives for the likenamed Television program produced by the BBC, \"The Sky at Night\". The magazine, in comparison with the TV series, includes more technical and scientific information. It also includes a bonus CD-ROM with software programs, latest astronomical photographs, written materials and in some issues, a 'classic' episode of \"The Sky at Night\" from the BBC archives."
+        ],
+        "thoughts": [
+            "I'm sorry, but I couldn't find any wide receivers for the Toronto Argonauts in the provided information.",
+            "Josh Heupel played college football for the University of Oklahoma Sooners.",
+            "The team that represents the University of Oklahoma in college football is the Oklahoma Sooners football team.",
+            "The University of Oklahoma's football team has been affiliated with the Big Eight Conference and later the Big 12 Conference. The men's basketball team also competes in the Big 12 Conference.",
+            "Based on the information provided, the college team for the wide receiver found is the University of Oklahoma Sooners, which is affiliated with the Big 12 Conference for football."
+        ],
+        "is_best": false
+    }
+]

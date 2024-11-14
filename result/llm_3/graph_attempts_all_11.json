@@ -1,0 +1,546 @@
+[
+    {
+        "question": "Who produced the 2004 major release sequel of Shrek 2?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the movie Shrek 2, including its release year and production company.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Verify that Shrek 2 is a sequel released in 2004 by checking its predecessor and ensuring continuity in the series.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the production company of Shrek (the prequel) to verify continuity in production companies for sequels in the series if necessary.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the production company for Shrek 2 using information from the nodes ensuring continuity with Shrek's producer if applicable.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph outlines a process to identify the producer of the movie 'Shrek 2', released in 2004. The process begins by retrieving information about the movie 'Shrek 2', including its production company (Node 1). We verify that Shrek 2 is a sequel from 2004 and identify its predecessor (Node 2). To ensure continuity, we further check the production company of the first Shrek movie if needed (Node 3). Finally, we confirm the production company of 'Shrek 2', ensuring that it aligns with the series production history (Node 4), thus answering the question."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "Shrek (franchise)\nThe \"Shrek\" franchise from DreamWorks Animation, based on William Steig's picture book \"Shrek!\", consists of four computer-animated films including: \"Shrek\" (2001), \"Shrek 2\" (2004), \"Shrek the Third\" (2007), and \"Shrek Forever After\" (2010), with a fifth film planned for a 2019 or 2020 release. A short 4-D film, \"Shrek 4-D\", which originally was a theme park ride, was released in 2003.",
+            "Shrek 2\nShrek 2 is a 2004 American computer-animated fantasy film produced by DreamWorks Animation and directed by Andrew Adamson, Kelly Asbury and Conrad Vernon. It is the sequel to 2001's \"Shrek\", with Mike Myers, Eddie Murphy and Cameron Diaz reprising their respective voice roles of Shrek, Donkey, and Fiona from the first film, joined by Antonio Banderas, Julie Andrews, John Cleese, Rupert Everett, and Jennifer Saunders. Sometime after the first film, Shrek, Donkey and Fiona go to visit Fiona's parents (voiced by Andrews and Cleese), while Shrek and Donkey discover that a greedy Fairy God Mother (voiced by Saunders) is plotting to destroy Shrek and Fiona's marriage so Fiona can marry her son, Prince Charming (voiced by Everett). Shrek and Donkey team up with a swashing cat named Puss in Boots (voiced by Banderas) to stop her.",
+            "Shrek the Third\nShrek the Third is a 2007 American computer-animated fantasy comedy film and the third installment in the \"Shrek\" franchise, produced by DreamWorks Animation. It is the sequel to 2004's \"Shrek 2\", and is the first in the series to be distributed by Paramount Pictures , which acquired DreamWorks Pictures, the former parent of DreamWorks Animation, in 2006. Chris Miller and Raman Hui directed and co-directed the film, respectively, with the former also co-writing the screenplay with Jeffrey Price, Peter S. Seaman, and Aron Warner. In addition to Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas, Rupert Everett, Julie Andrews, and John Cleese, who reprise their roles from \"Shrek 2\", the film also features Justin Timberlake in the role of Arthur Pendragon and Eric Idle as Merlin. Harry Gregson-Williams composed the original music for the film. The story takes place eight months after the marriage of Shrek and Fiona in the first film. Reluctantly reigning over the kingdom of Far, Far Away, Shrek sets out to find the next heir to the throne\u2014Fiona's cousin Artie, while Prince Charming is plotting to overthrow Shrek and become king.",
+            "Andrew Adamson\nAndrew Ralph Adamson, MNZM (born 1 December 1966) is a New Zealand film director, producer and screenwriter based mainly in Los Angeles, where he made the blockbuster animation films, \"Shrek\" and \"Shrek 2\" for which he received an Academy Award nomination. He was director, executive producer, and scriptwriter for the 2005 production of \"\". Shooting took place in New Zealand, primarily in and around Auckland, but also in South Island where much of Peter Jackson's \"The Lord of the Rings\" trilogy was filmed. He also worked on the movies \"Batman Forever\" and \"Batman & Robin\" as a visual effects supervisor.",
+            "Big Daddy (1999 film)\nBig Daddy is a 1999 American comedy film directed by Dennis Dugan and starring Adam Sandler and the Sprouse twins. The film was produced by Robert Simonds and released on June 25, 1999, by Columbia Pictures, where it opened #1 at the box office with a $41,536,370 first weekend. It was Sandler's last film before starting his production company, Happy Madison Productions, his first film distributed by Columbia Pictures, and his highest-grossing film until \"Hotel Transylvania 2\" (2015).",
+            "Chuffilly-Roche\nArthur Rimbaud, French poet, lived for a while in Roche, where his family had a farm. He wrote several works there, notably \"Une saison en enfer\" (\"A Season in Hell\") and \"Le bateau ivre\" (\"The Drunken Boat\").",
+            "2 steg fr\u00e5n Paradise\n2 steg fr\u00e5n Paradise is the sixth studio album by Swedish singer H\u00e5kan Hellstr\u00f6m, released on October 13, 2010. It was produced by H\u00e5kan Hellstr\u00f6m in collaboration with Joakim \u00c5hlund. Many of the songs were written together with The Soundtrack of our Lives' guitarist Bj\u00f6rn Olsson, who also produced Hellstr\u00f6m's third studio album \"Ett kolikbarns bek\u00e4nnelser. \"A double A-side single featuring \"Saknade te havs\" and \"River en vacker dr\u00f6m\" was released prior to the album, on September 11. \"River en vacker dr\u00f6m\" was originally meant to be performed at the current year's edition of Way Out West only. However, nearing the release of the album, Hellstr\u00f6m chose to record it as well.",
+            "The Rage: Carrie 2\nThe Rage: Carrie 2 is a 1999 American supernatural horror film directed by Katt Shea and a sequel to the 1976 horror film \"Carrie\", based on the novel of the same name by Stephen King, and features Carrie White's baby half sister Rachel Lang in the lead role. Directed by Katt Shea, the film stars Emily Bergl, Jason London, Dylan Bruno, J. Smith-Cameron, and Amy Irving who reprises her role of Sue Snell from the previous film.",
+            "Shrek: Hassle at the Castle\nShrek: Hassle at the Castle is a 2D fighting video game, released for Game Boy Advance. It is based on the movie \"Shrek\", and features characters from it. Players progress through the game playing, Shrek, Princess Fiona, and Shrek's companion, Donkey. They travel through various chapters of the game, that represent different stages of the movie. It is the only game in the series that follows the plot of the first movie. A year later a sequel was released, called Shrek: Reekin' Havoc.",
+            "Shrek 2 (video game)\nShrek 2 (also known as Shrek 2: The Game and ported for the PC as Shrek 2: Team Action at Beenox) is a 2004 action-adventure video game published by Activision and released in 2004. The game was developed by Luxoflux for the PlayStation 2, Xbox and GameCube, while a version for PC was developed by KnowWonder. The Game Boy Advance version was also released on a \"Twin Pack\" cartridge bundled with \"Shark Tale\" in 2005.",
+            "Company Pictures\nCompany Pictures is an independent British television production company which has produced drama programming for many broadcasters. It was set up in 1998 by Charles Pattinson and George Faber, colleagues at BBC Films. Their first film was \"Morvern Callar\", which was credited as a co-production with BBC Films as they had begun developing it while still employed there. In 2003 Company Pictures became part of All3Media. The founders, Pattinson and Faber, left in 2012 to set up another independent production company, and John Yorke became managing director until 2015. He was succeeded by Michele Buck, former joint managing director of Mammoth Screen.",
+            "Christopher Knights\nChristopher Knights is an English voice actor, film editor and camera operator best known for providing the voice of Private the Penguin in \"Madagascar\". He worked on several DreamWorks films \"Shrek\", \"Shrek 2\", \"Shrek the Third\", and \"Shrek 4-D.\" He started his filming career at Amblimation studios and worked on \"We're Back! A Dinosaur's Story\" and \"Balto\". When he joined DreamWorks he not only started his editing career but also his acting career. He worked on the \"Shrek\" series as an associate editor and voice of the Three Blind Mice and Thelonious, Lord Farquad's Henchman. He worked many times with another English cameraman and voice actor, Simon J. Smith."
+        ],
+        "thoughts": [
+            "The movie \"Shrek 2\" was released in 2004 and was produced by DreamWorks Animation.",
+            "Based on the information provided, \"Shrek 2\" is indeed a sequel to the original \"Shrek\" movie, which was released in 2001. The continuity in the series can be verified by the presence of the same main characters, such as Shrek, Fiona, and Donkey, as well as the continuation of their storylines from the first movie. Additionally, the release date of \"Shrek 2\" in 2004 aligns with the typical timeline for a sequel to be released, further confirming its status as a sequel. Therefore, it can be concluded that \"Shrek 2\" is a sequel released in 2004.",
+            "The production company for the \"Shrek\" franchise is DreamWorks Animation. The first two films, \"Shrek\" and \"Shrek 2\", were directed by Andrew Adamson and produced by DreamWorks Animation. The third installment, \"Shrek the Third\", was also produced by DreamWorks Animation. Therefore, there is continuity in the production company for the sequels in the series.",
+            "Based on the information provided, the production company for \"Shrek 2\" is DreamWorks Animation, ensuring continuity with the production company for the original \"Shrek\" movie."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who produced the 2004 major release sequel of Shrek 2?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the production company or companies involved in producing the movie Shrek 2, released in 2004.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the major production studio responsible for the sequel Shrek 2 in 2004 based on the retrieved production company information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph begins with node 1, which involves retrieving information about the production companies involved in the making of Shrek 2, specifically focusing on the 2004 release. Node 2 then reasons over the retrieved information to identify which of the involved companies is the major production studio responsible for releasing Shrek 2."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "Shrek (franchise)\nThe \"Shrek\" franchise from DreamWorks Animation, based on William Steig's picture book \"Shrek!\", consists of four computer-animated films including: \"Shrek\" (2001), \"Shrek 2\" (2004), \"Shrek the Third\" (2007), and \"Shrek Forever After\" (2010), with a fifth film planned for a 2019 or 2020 release. A short 4-D film, \"Shrek 4-D\", which originally was a theme park ride, was released in 2003.",
+            "Shrek 2 (video game)\nShrek 2 (also known as Shrek 2: The Game and ported for the PC as Shrek 2: Team Action at Beenox) is a 2004 action-adventure video game published by Activision and released in 2004. The game was developed by Luxoflux for the PlayStation 2, Xbox and GameCube, while a version for PC was developed by KnowWonder. The Game Boy Advance version was also released on a \"Twin Pack\" cartridge bundled with \"Shark Tale\" in 2005.",
+            "2004 in film\nThe year 2004 in film involved some significant events. Major releases of sequels took place. It included blockbuster films like \"Shrek 2\", \"Harry Potter and the Prisoner of Azkaban\", \"The Bourne Supremacy\", \"Van Helsing\", \"The Passion of the Christ\", \"\", \"Thunderbirds\", \"Meet the Fockers\", \"Harold and Kumar\", \"The Day After Tomorrow\", \"Anchorman\", \"Saw\", \"\", \"Spider-Man 2\", \"Alien vs. Predator\", \"The Incredibles\", \"Kill Bill Vol. 2\", \"Fahrenheit 9/11\", \"I, Robot\", \"Ocean's Twelve\" and \"\".",
+            "Shrek: Hassle at the Castle\nShrek: Hassle at the Castle is a 2D fighting video game, released for Game Boy Advance. It is based on the movie \"Shrek\", and features characters from it. Players progress through the game playing, Shrek, Princess Fiona, and Shrek's companion, Donkey. They travel through various chapters of the game, that represent different stages of the movie. It is the only game in the series that follows the plot of the first movie. A year later a sequel was released, called Shrek: Reekin' Havoc.",
+            "Yuehua Entertainment\nYuehua Entertainment (Chinese: \u4e50\u534e\u5a31\u4e50) (Korean: \uc704\uc5d0\ud654 \uc5d4\ud130\ud14c\uc778\uba3c\ud2b8) is a privately held multinational entertainment group and talent agency based in Beijing. The company was founded in June 2009. Yuehua is involved in television production and distribution, movie production, artist management and training, music and music video production, public relations, and entertainment marketing. Yuehua Entertainment has partnerships with the South Korean companies Pledis Entertainment and Starship Entertainment. Yuehua Entertainment received series-B financing from Gravity Media and CMC Capital in August 2014. CMC Capital invested $49 million USD into the group and became its strategic shareholder at the completion of financing. In 2014 Yuehua Entertainment established a Korean branch located in Gangnam-gu, Seoul, South Korea. Yuehua announced plans for further expansion of their Korean branch operations beginning in February 2016.",
+            "Shrek 2\nShrek 2 is a 2004 American computer-animated fantasy film produced by DreamWorks Animation and directed by Andrew Adamson, Kelly Asbury and Conrad Vernon. It is the sequel to 2001's \"Shrek\", with Mike Myers, Eddie Murphy and Cameron Diaz reprising their respective voice roles of Shrek, Donkey, and Fiona from the first film, joined by Antonio Banderas, Julie Andrews, John Cleese, Rupert Everett, and Jennifer Saunders. Sometime after the first film, Shrek, Donkey and Fiona go to visit Fiona's parents (voiced by Andrews and Cleese), while Shrek and Donkey discover that a greedy Fairy God Mother (voiced by Saunders) is plotting to destroy Shrek and Fiona's marriage so Fiona can marry her son, Prince Charming (voiced by Everett). Shrek and Donkey team up with a swashing cat named Puss in Boots (voiced by Banderas) to stop her.",
+            "Shrek the Third\nShrek the Third is a 2007 American computer-animated fantasy comedy film and the third installment in the \"Shrek\" franchise, produced by DreamWorks Animation. It is the sequel to 2004's \"Shrek 2\", and is the first in the series to be distributed by Paramount Pictures , which acquired DreamWorks Pictures, the former parent of DreamWorks Animation, in 2006. Chris Miller and Raman Hui directed and co-directed the film, respectively, with the former also co-writing the screenplay with Jeffrey Price, Peter S. Seaman, and Aron Warner. In addition to Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas, Rupert Everett, Julie Andrews, and John Cleese, who reprise their roles from \"Shrek 2\", the film also features Justin Timberlake in the role of Arthur Pendragon and Eric Idle as Merlin. Harry Gregson-Williams composed the original music for the film. The story takes place eight months after the marriage of Shrek and Fiona in the first film. Reluctantly reigning over the kingdom of Far, Far Away, Shrek sets out to find the next heir to the throne\u2014Fiona's cousin Artie, while Prince Charming is plotting to overthrow Shrek and become king.",
+            "Andrew Adamson\nAndrew Ralph Adamson, MNZM (born 1 December 1966) is a New Zealand film director, producer and screenwriter based mainly in Los Angeles, where he made the blockbuster animation films, \"Shrek\" and \"Shrek 2\" for which he received an Academy Award nomination. He was director, executive producer, and scriptwriter for the 2005 production of \"\". Shooting took place in New Zealand, primarily in and around Auckland, but also in South Island where much of Peter Jackson's \"The Lord of the Rings\" trilogy was filmed. He also worked on the movies \"Batman Forever\" and \"Batman & Robin\" as a visual effects supervisor."
+        ],
+        "thoughts": [
+            "The production company involved in producing the movie Shrek 2, released in 2004, is DreamWorks Animation.",
+            "Based on the retrieved production company information, the major production studio responsible for the sequel Shrek 2 in 2004 is DreamWorks Animation."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who produced the 2004 major release sequel of Shrek 2?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the production companies associated with Shrek 2.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about major film production companies involved with sequels like Shrek 2 in 2004.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine who the producers of Shrek 2 (2004) were by analyzing data from nodes 1 and 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins with gathering information on the production companies involved with Shrek 2, as well as general information on film production companies that might handle similar films. This setup helps ensure that all potential producers are considered. Finally, a reasoning step analyzes this retrieved data to determine the specific producers of the 2004 sequel Shrek 2."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "2004 in film\nThe year 2004 in film involved some significant events. Major releases of sequels took place. It included blockbuster films like \"Shrek 2\", \"Harry Potter and the Prisoner of Azkaban\", \"The Bourne Supremacy\", \"Van Helsing\", \"The Passion of the Christ\", \"\", \"Thunderbirds\", \"Meet the Fockers\", \"Harold and Kumar\", \"The Day After Tomorrow\", \"Anchorman\", \"Saw\", \"\", \"Spider-Man 2\", \"Alien vs. Predator\", \"The Incredibles\", \"Kill Bill Vol. 2\", \"Fahrenheit 9/11\", \"I, Robot\", \"Ocean's Twelve\" and \"\".",
+            "Shrek 2\nShrek 2 is a 2004 American computer-animated fantasy film produced by DreamWorks Animation and directed by Andrew Adamson, Kelly Asbury and Conrad Vernon. It is the sequel to 2001's \"Shrek\", with Mike Myers, Eddie Murphy and Cameron Diaz reprising their respective voice roles of Shrek, Donkey, and Fiona from the first film, joined by Antonio Banderas, Julie Andrews, John Cleese, Rupert Everett, and Jennifer Saunders. Sometime after the first film, Shrek, Donkey and Fiona go to visit Fiona's parents (voiced by Andrews and Cleese), while Shrek and Donkey discover that a greedy Fairy God Mother (voiced by Saunders) is plotting to destroy Shrek and Fiona's marriage so Fiona can marry her son, Prince Charming (voiced by Everett). Shrek and Donkey team up with a swashing cat named Puss in Boots (voiced by Banderas) to stop her.",
+            "Shrek (franchise)\nThe \"Shrek\" franchise from DreamWorks Animation, based on William Steig's picture book \"Shrek!\", consists of four computer-animated films including: \"Shrek\" (2001), \"Shrek 2\" (2004), \"Shrek the Third\" (2007), and \"Shrek Forever After\" (2010), with a fifth film planned for a 2019 or 2020 release. A short 4-D film, \"Shrek 4-D\", which originally was a theme park ride, was released in 2003.",
+            "Shrek 2 (video game)\nShrek 2 (also known as Shrek 2: The Game and ported for the PC as Shrek 2: Team Action at Beenox) is a 2004 action-adventure video game published by Activision and released in 2004. The game was developed by Luxoflux for the PlayStation 2, Xbox and GameCube, while a version for PC was developed by KnowWonder. The Game Boy Advance version was also released on a \"Twin Pack\" cartridge bundled with \"Shark Tale\" in 2005.",
+            "Shrek the Third\nShrek the Third is a 2007 American computer-animated fantasy comedy film and the third installment in the \"Shrek\" franchise, produced by DreamWorks Animation. It is the sequel to 2004's \"Shrek 2\", and is the first in the series to be distributed by Paramount Pictures , which acquired DreamWorks Pictures, the former parent of DreamWorks Animation, in 2006. Chris Miller and Raman Hui directed and co-directed the film, respectively, with the former also co-writing the screenplay with Jeffrey Price, Peter S. Seaman, and Aron Warner. In addition to Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas, Rupert Everett, Julie Andrews, and John Cleese, who reprise their roles from \"Shrek 2\", the film also features Justin Timberlake in the role of Arthur Pendragon and Eric Idle as Merlin. Harry Gregson-Williams composed the original music for the film. The story takes place eight months after the marriage of Shrek and Fiona in the first film. Reluctantly reigning over the kingdom of Far, Far Away, Shrek sets out to find the next heir to the throne\u2014Fiona's cousin Artie, while Prince Charming is plotting to overthrow Shrek and become king.",
+            "Andrew Adamson\nAndrew Ralph Adamson, MNZM (born 1 December 1966) is a New Zealand film director, producer and screenwriter based mainly in Los Angeles, where he made the blockbuster animation films, \"Shrek\" and \"Shrek 2\" for which he received an Academy Award nomination. He was director, executive producer, and scriptwriter for the 2005 production of \"\". Shooting took place in New Zealand, primarily in and around Auckland, but also in South Island where much of Peter Jackson's \"The Lord of the Rings\" trilogy was filmed. He also worked on the movies \"Batman Forever\" and \"Batman & Robin\" as a visual effects supervisor.",
+            "Christopher Knights\nChristopher Knights is an English voice actor, film editor and camera operator best known for providing the voice of Private the Penguin in \"Madagascar\". He worked on several DreamWorks films \"Shrek\", \"Shrek 2\", \"Shrek the Third\", and \"Shrek 4-D.\" He started his filming career at Amblimation studios and worked on \"We're Back! A Dinosaur's Story\" and \"Balto\". When he joined DreamWorks he not only started his editing career but also his acting career. He worked on the \"Shrek\" series as an associate editor and voice of the Three Blind Mice and Thelonious, Lord Farquad's Henchman. He worked many times with another English cameraman and voice actor, Simon J. Smith.",
+            "Shrek: Hassle at the Castle\nShrek: Hassle at the Castle is a 2D fighting video game, released for Game Boy Advance. It is based on the movie \"Shrek\", and features characters from it. Players progress through the game playing, Shrek, Princess Fiona, and Shrek's companion, Donkey. They travel through various chapters of the game, that represent different stages of the movie. It is the only game in the series that follows the plot of the first movie. A year later a sequel was released, called Shrek: Reekin' Havoc.",
+            "Bussunda\nCl\u00e1udio Besserman Vianna (Rio de Janeiro, June 25, 1962 \u2014 Vaterstetten, June 17, 2006), commonly known as Bussunda (] ), was a Brazilian humorist and TV comedian, member of the Casseta & Planeta troupe. He was born in Rio de Janeiro, where he lived and worked, having started his career in the 1980s as a writer for satirical magazine \"Casseta Popular\". One of the most popular Brazilian comedians of his generation, the overweight Bussunda was famous for his impersonations of football striker Ronaldo and of Brazil's president Lula. He also did the voice of Shrek in the Brazilian Portuguese version of \"Shrek\" and \"Shrek 2\". He was of Jewish descent.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein."
+        ],
+        "thoughts": [
+            "The production companies associated with Shrek 2 are DreamWorks Animation and Paramount Pictures.",
+            "Major film production companies involved with the sequel \"Shrek 2\" in 2004 include DreamWorks Animation, which produced the film. The game adaptation, \"Shrek 2: The Game,\" was published by Activision and developed by Luxoflux for various gaming platforms. The distribution of \"Shrek the Third\" in 2007 was handled by Paramount Pictures, which had acquired DreamWorks Pictures, the former parent of DreamWorks Animation, in 2006. Additionally, Andrew Adamson, a New Zealand film director, producer, and screenwriter, played a significant role in the production of the \"Shrek\" franchise, including \"Shrek\" and \"Shrek 2\". Christopher Knights, an English voice actor, film editor, and camera operator, also contributed to the \"Shrek\" series, providing the voice for characters and working as an associate editor.",
+            "The producers of Shrek 2 (2004) were DreamWorks Animation and Paramount Pictures. Additionally, Andrew Adamson, a New Zealand film director, producer, and screenwriter, played a significant role in the production of the \"Shrek\" franchise, including \"Shrek\" and \"Shrek 2\"."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Who produced the 2004 major release sequel of Shrek 2?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the producer(s) of the movie 'Shrek 2'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify any major release sequel of 'Shrek 2' from the year 2004.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if 'Shrek 2' itself, released in 2004, is the major release sequel, or if another film from that year also qualifies as a sequel.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The question asks about the producer of a 2004 major release sequel of 'Shrek 2'. The steps involve identifying the producer of 'Shrek 2' and determining if it also counts as its own sequel (a tricky wording). The key task is identifying if there was a sequel released in 2004 or if the confusion in the question implies 'Shrek 2' itself. The execution graph tackles this by separating retrieval tasks: one to find the producer of 'Shrek 2' and another to check if there was a different sequel released in 2004. Finally, reasoning is used to deduce the final answer based on these retrievals."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Shrek (franchise)\nThe \"Shrek\" franchise from DreamWorks Animation, based on William Steig's picture book \"Shrek!\", consists of four computer-animated films including: \"Shrek\" (2001), \"Shrek 2\" (2004), \"Shrek the Third\" (2007), and \"Shrek Forever After\" (2010), with a fifth film planned for a 2019 or 2020 release. A short 4-D film, \"Shrek 4-D\", which originally was a theme park ride, was released in 2003.",
+            "Shrek 2\nShrek 2 is a 2004 American computer-animated fantasy film produced by DreamWorks Animation and directed by Andrew Adamson, Kelly Asbury and Conrad Vernon. It is the sequel to 2001's \"Shrek\", with Mike Myers, Eddie Murphy and Cameron Diaz reprising their respective voice roles of Shrek, Donkey, and Fiona from the first film, joined by Antonio Banderas, Julie Andrews, John Cleese, Rupert Everett, and Jennifer Saunders. Sometime after the first film, Shrek, Donkey and Fiona go to visit Fiona's parents (voiced by Andrews and Cleese), while Shrek and Donkey discover that a greedy Fairy God Mother (voiced by Saunders) is plotting to destroy Shrek and Fiona's marriage so Fiona can marry her son, Prince Charming (voiced by Everett). Shrek and Donkey team up with a swashing cat named Puss in Boots (voiced by Banderas) to stop her.",
+            "2004 in film\nThe year 2004 in film involved some significant events. Major releases of sequels took place. It included blockbuster films like \"Shrek 2\", \"Harry Potter and the Prisoner of Azkaban\", \"The Bourne Supremacy\", \"Van Helsing\", \"The Passion of the Christ\", \"\", \"Thunderbirds\", \"Meet the Fockers\", \"Harold and Kumar\", \"The Day After Tomorrow\", \"Anchorman\", \"Saw\", \"\", \"Spider-Man 2\", \"Alien vs. Predator\", \"The Incredibles\", \"Kill Bill Vol. 2\", \"Fahrenheit 9/11\", \"I, Robot\", \"Ocean's Twelve\" and \"\".",
+            "Shrek 2 (video game)\nShrek 2 (also known as Shrek 2: The Game and ported for the PC as Shrek 2: Team Action at Beenox) is a 2004 action-adventure video game published by Activision and released in 2004. The game was developed by Luxoflux for the PlayStation 2, Xbox and GameCube, while a version for PC was developed by KnowWonder. The Game Boy Advance version was also released on a \"Twin Pack\" cartridge bundled with \"Shark Tale\" in 2005.",
+            "Shrek the Third\nShrek the Third is a 2007 American computer-animated fantasy comedy film and the third installment in the \"Shrek\" franchise, produced by DreamWorks Animation. It is the sequel to 2004's \"Shrek 2\", and is the first in the series to be distributed by Paramount Pictures , which acquired DreamWorks Pictures, the former parent of DreamWorks Animation, in 2006. Chris Miller and Raman Hui directed and co-directed the film, respectively, with the former also co-writing the screenplay with Jeffrey Price, Peter S. Seaman, and Aron Warner. In addition to Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas, Rupert Everett, Julie Andrews, and John Cleese, who reprise their roles from \"Shrek 2\", the film also features Justin Timberlake in the role of Arthur Pendragon and Eric Idle as Merlin. Harry Gregson-Williams composed the original music for the film. The story takes place eight months after the marriage of Shrek and Fiona in the first film. Reluctantly reigning over the kingdom of Far, Far Away, Shrek sets out to find the next heir to the throne\u2014Fiona's cousin Artie, while Prince Charming is plotting to overthrow Shrek and become king.",
+            "Shrek: Hassle at the Castle\nShrek: Hassle at the Castle is a 2D fighting video game, released for Game Boy Advance. It is based on the movie \"Shrek\", and features characters from it. Players progress through the game playing, Shrek, Princess Fiona, and Shrek's companion, Donkey. They travel through various chapters of the game, that represent different stages of the movie. It is the only game in the series that follows the plot of the first movie. A year later a sequel was released, called Shrek: Reekin' Havoc.",
+            "Andrew Adamson\nAndrew Ralph Adamson, MNZM (born 1 December 1966) is a New Zealand film director, producer and screenwriter based mainly in Los Angeles, where he made the blockbuster animation films, \"Shrek\" and \"Shrek 2\" for which he received an Academy Award nomination. He was director, executive producer, and scriptwriter for the 2005 production of \"\". Shooting took place in New Zealand, primarily in and around Auckland, but also in South Island where much of Peter Jackson's \"The Lord of the Rings\" trilogy was filmed. He also worked on the movies \"Batman Forever\" and \"Batman & Robin\" as a visual effects supervisor.",
+            "Christopher Knights\nChristopher Knights is an English voice actor, film editor and camera operator best known for providing the voice of Private the Penguin in \"Madagascar\". He worked on several DreamWorks films \"Shrek\", \"Shrek 2\", \"Shrek the Third\", and \"Shrek 4-D.\" He started his filming career at Amblimation studios and worked on \"We're Back! A Dinosaur's Story\" and \"Balto\". When he joined DreamWorks he not only started his editing career but also his acting career. He worked on the \"Shrek\" series as an associate editor and voice of the Three Blind Mice and Thelonious, Lord Farquad's Henchman. He worked many times with another English cameraman and voice actor, Simon J. Smith.",
+            "Raymond S. Persi\nRaymond S. Persi is an American animator, director, screenwriter, producer, storyboard artist and voice actor. He has directed many episodes of \"The Simpsons\", including \"Mobile Homer\", \"The Girl Who Slept Too Little\", \"The Monkey Suit\", \"Little Big Girl\", \"24 Minutes\", \"Love, Springfieldian Style\" and the Emmy-award winning \"The Seemingly Never-Ending Story\". Persi went on to work as a sequence director for \"The Simpsons Movie\" (2007).",
+            "Teen Titans (2005 video game)\nTeen Titans is a video game released for the Game Boy Advance on October 16, 2005. The game is based on the television show \"Teen Titans\" and features the five main characters from the show as playable characters: Robin, Raven, Beast Boy, Starfire, and Cyborg. The game's boss characters are Gizmo, Jinx, Mammoth, and Brother Blood. The game was going to be released in Europe shortly after its release in North America, though the European release was later cancelled. A sequel, \"Teen Titans 2: The Brotherhood's Revenge\", often shortened to simply \"Teen Titans 2\", was released exclusively in North America for the Game Boy Advance on October 23, 2006."
+        ],
+        "thoughts": [
+            "The producer(s) of the movie 'Shrek 2' are Andrew Adamson and Aron Warner.",
+            "The major release sequel of 'Shrek 2' from the year 2004 is \"Shrek the Third\" (2007).",
+            "Based on the information gathered, 'Shrek 2' released in 2004 is indeed the major release sequel. The next sequel, \"Shrek the Third,\" was released in 2007, making 'Shrek 2' the primary sequel from 2004."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who produced the 2004 major release sequel of Shrek 2?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify what kind of information is needed to determine the producer of the 2004 sequel Shrek 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve details about the 2004 sequel Shrek 2, such as production company and producers.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Extract and verify the name of the production company and individual producers from the information about Shrek 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph is constructed to first identify the type of information needed to answer the question, which involves details about the production of the movie Shrek 2. Then, it retrieves relevant data about the movie, focusing specifically on production details. Finally, it extracts and verifies the information about the producers to ensure accuracy in answering the original question."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Shrek (franchise)\nThe \"Shrek\" franchise from DreamWorks Animation, based on William Steig's picture book \"Shrek!\", consists of four computer-animated films including: \"Shrek\" (2001), \"Shrek 2\" (2004), \"Shrek the Third\" (2007), and \"Shrek Forever After\" (2010), with a fifth film planned for a 2019 or 2020 release. A short 4-D film, \"Shrek 4-D\", which originally was a theme park ride, was released in 2003.",
+            "Shrek 2\nShrek 2 is a 2004 American computer-animated fantasy film produced by DreamWorks Animation and directed by Andrew Adamson, Kelly Asbury and Conrad Vernon. It is the sequel to 2001's \"Shrek\", with Mike Myers, Eddie Murphy and Cameron Diaz reprising their respective voice roles of Shrek, Donkey, and Fiona from the first film, joined by Antonio Banderas, Julie Andrews, John Cleese, Rupert Everett, and Jennifer Saunders. Sometime after the first film, Shrek, Donkey and Fiona go to visit Fiona's parents (voiced by Andrews and Cleese), while Shrek and Donkey discover that a greedy Fairy God Mother (voiced by Saunders) is plotting to destroy Shrek and Fiona's marriage so Fiona can marry her son, Prince Charming (voiced by Everett). Shrek and Donkey team up with a swashing cat named Puss in Boots (voiced by Banderas) to stop her.",
+            "Shrek 2 (video game)\nShrek 2 (also known as Shrek 2: The Game and ported for the PC as Shrek 2: Team Action at Beenox) is a 2004 action-adventure video game published by Activision and released in 2004. The game was developed by Luxoflux for the PlayStation 2, Xbox and GameCube, while a version for PC was developed by KnowWonder. The Game Boy Advance version was also released on a \"Twin Pack\" cartridge bundled with \"Shark Tale\" in 2005.",
+            "Shrek the Third\nShrek the Third is a 2007 American computer-animated fantasy comedy film and the third installment in the \"Shrek\" franchise, produced by DreamWorks Animation. It is the sequel to 2004's \"Shrek 2\", and is the first in the series to be distributed by Paramount Pictures , which acquired DreamWorks Pictures, the former parent of DreamWorks Animation, in 2006. Chris Miller and Raman Hui directed and co-directed the film, respectively, with the former also co-writing the screenplay with Jeffrey Price, Peter S. Seaman, and Aron Warner. In addition to Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas, Rupert Everett, Julie Andrews, and John Cleese, who reprise their roles from \"Shrek 2\", the film also features Justin Timberlake in the role of Arthur Pendragon and Eric Idle as Merlin. Harry Gregson-Williams composed the original music for the film. The story takes place eight months after the marriage of Shrek and Fiona in the first film. Reluctantly reigning over the kingdom of Far, Far Away, Shrek sets out to find the next heir to the throne\u2014Fiona's cousin Artie, while Prince Charming is plotting to overthrow Shrek and become king.",
+            "At. Long. Last. ASAP\nAt. Long. Last. ASAP (stylized as AT.LONG.LAST.A$AP) is the second studio album by American rapper ASAP Rocky . It was released on May 26, 2015, by A$AP Worldwide, Polo Grounds Music, and RCA Records. The record serves as a sequel from Rocky's previous studio effort \"Long. Live. ASAP\" (2013). In 2013, the recording sessions first took place, during a release of \"Long. Live. A$AP\". The album's executive production was provided by Danger Mouse, mentor ASAP Yams and Rocky himself, featuring production by Rocky and Danger Mouse, as well as a variety of several high-profile producers, including co-executive producers Hector Delgado and Juicy J, Jim Jonsin, FNZ, Frans Mernick, Kanye West, Thelonious Martin and Mark Ronson, among others.",
+            "2004 in film\nThe year 2004 in film involved some significant events. Major releases of sequels took place. It included blockbuster films like \"Shrek 2\", \"Harry Potter and the Prisoner of Azkaban\", \"The Bourne Supremacy\", \"Van Helsing\", \"The Passion of the Christ\", \"\", \"Thunderbirds\", \"Meet the Fockers\", \"Harold and Kumar\", \"The Day After Tomorrow\", \"Anchorman\", \"Saw\", \"\", \"Spider-Man 2\", \"Alien vs. Predator\", \"The Incredibles\", \"Kill Bill Vol. 2\", \"Fahrenheit 9/11\", \"I, Robot\", \"Ocean's Twelve\" and \"\".",
+            "Shrek: Hassle at the Castle\nShrek: Hassle at the Castle is a 2D fighting video game, released for Game Boy Advance. It is based on the movie \"Shrek\", and features characters from it. Players progress through the game playing, Shrek, Princess Fiona, and Shrek's companion, Donkey. They travel through various chapters of the game, that represent different stages of the movie. It is the only game in the series that follows the plot of the first movie. A year later a sequel was released, called Shrek: Reekin' Havoc.",
+            "Andrew Adamson\nAndrew Ralph Adamson, MNZM (born 1 December 1966) is a New Zealand film director, producer and screenwriter based mainly in Los Angeles, where he made the blockbuster animation films, \"Shrek\" and \"Shrek 2\" for which he received an Academy Award nomination. He was director, executive producer, and scriptwriter for the 2005 production of \"\". Shooting took place in New Zealand, primarily in and around Auckland, but also in South Island where much of Peter Jackson's \"The Lord of the Rings\" trilogy was filmed. He also worked on the movies \"Batman Forever\" and \"Batman & Robin\" as a visual effects supervisor."
+        ],
+        "thoughts": [
+            "To determine the producer of the 2004 sequel Shrek 2, we would need to gather information such as the credits at the end of the movie, official production documents, interviews with the filmmakers, or reliable sources such as industry databases or websites. This information would provide the names of the individuals or production companies responsible for producing the film.",
+            "Production Company: DreamWorks Animation\nProducers: Andrew Adamson, Kelly Asbury, Conrad Vernon",
+            "The production company for Shrek 2 is DreamWorks Animation, and the individual producers are Andrew Adamson, Kelly Asbury, and Conrad Vernon."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who produced the 2004 major release sequel of Shrek 2?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the production companies involved in the creation of Shrek 2, released in 2004.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the major studio or corporation parent that oversaw the production of films from the information gathered regarding production companies involved in Shrek 2.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Extract and verify the production company name that led the production of Shrek 2 from the identified companies involved.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph breaks down the question into steps needed to identify the production company responsible for the 'major release sequel' of Shrek 2 in 2004. Nodes systematically retrieve and reason through information such as production companies involved and the overseeing studio or corporation. Synthesis of this information determines the company that led the production."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "Shrek the Third\nShrek the Third is a 2007 American computer-animated fantasy comedy film and the third installment in the \"Shrek\" franchise, produced by DreamWorks Animation. It is the sequel to 2004's \"Shrek 2\", and is the first in the series to be distributed by Paramount Pictures , which acquired DreamWorks Pictures, the former parent of DreamWorks Animation, in 2006. Chris Miller and Raman Hui directed and co-directed the film, respectively, with the former also co-writing the screenplay with Jeffrey Price, Peter S. Seaman, and Aron Warner. In addition to Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas, Rupert Everett, Julie Andrews, and John Cleese, who reprise their roles from \"Shrek 2\", the film also features Justin Timberlake in the role of Arthur Pendragon and Eric Idle as Merlin. Harry Gregson-Williams composed the original music for the film. The story takes place eight months after the marriage of Shrek and Fiona in the first film. Reluctantly reigning over the kingdom of Far, Far Away, Shrek sets out to find the next heir to the throne\u2014Fiona's cousin Artie, while Prince Charming is plotting to overthrow Shrek and become king.",
+            "Shrek (franchise)\nThe \"Shrek\" franchise from DreamWorks Animation, based on William Steig's picture book \"Shrek!\", consists of four computer-animated films including: \"Shrek\" (2001), \"Shrek 2\" (2004), \"Shrek the Third\" (2007), and \"Shrek Forever After\" (2010), with a fifth film planned for a 2019 or 2020 release. A short 4-D film, \"Shrek 4-D\", which originally was a theme park ride, was released in 2003.",
+            "Shrek 2\nShrek 2 is a 2004 American computer-animated fantasy film produced by DreamWorks Animation and directed by Andrew Adamson, Kelly Asbury and Conrad Vernon. It is the sequel to 2001's \"Shrek\", with Mike Myers, Eddie Murphy and Cameron Diaz reprising their respective voice roles of Shrek, Donkey, and Fiona from the first film, joined by Antonio Banderas, Julie Andrews, John Cleese, Rupert Everett, and Jennifer Saunders. Sometime after the first film, Shrek, Donkey and Fiona go to visit Fiona's parents (voiced by Andrews and Cleese), while Shrek and Donkey discover that a greedy Fairy God Mother (voiced by Saunders) is plotting to destroy Shrek and Fiona's marriage so Fiona can marry her son, Prince Charming (voiced by Everett). Shrek and Donkey team up with a swashing cat named Puss in Boots (voiced by Banderas) to stop her.",
+            "Christopher Knights\nChristopher Knights is an English voice actor, film editor and camera operator best known for providing the voice of Private the Penguin in \"Madagascar\". He worked on several DreamWorks films \"Shrek\", \"Shrek 2\", \"Shrek the Third\", and \"Shrek 4-D.\" He started his filming career at Amblimation studios and worked on \"We're Back! A Dinosaur's Story\" and \"Balto\". When he joined DreamWorks he not only started his editing career but also his acting career. He worked on the \"Shrek\" series as an associate editor and voice of the Three Blind Mice and Thelonious, Lord Farquad's Henchman. He worked many times with another English cameraman and voice actor, Simon J. Smith.",
+            "Andrew Adamson\nAndrew Ralph Adamson, MNZM (born 1 December 1966) is a New Zealand film director, producer and screenwriter based mainly in Los Angeles, where he made the blockbuster animation films, \"Shrek\" and \"Shrek 2\" for which he received an Academy Award nomination. He was director, executive producer, and scriptwriter for the 2005 production of \"\". Shooting took place in New Zealand, primarily in and around Auckland, but also in South Island where much of Peter Jackson's \"The Lord of the Rings\" trilogy was filmed. He also worked on the movies \"Batman Forever\" and \"Batman & Robin\" as a visual effects supervisor.",
+            "Shrek 2 (video game)\nShrek 2 (also known as Shrek 2: The Game and ported for the PC as Shrek 2: Team Action at Beenox) is a 2004 action-adventure video game published by Activision and released in 2004. The game was developed by Luxoflux for the PlayStation 2, Xbox and GameCube, while a version for PC was developed by KnowWonder. The Game Boy Advance version was also released on a \"Twin Pack\" cartridge bundled with \"Shark Tale\" in 2005.",
+            "RKO General\nRKO General, Inc. was the main holding company through 1991 for the noncore businesses of the General Tire and Rubber Company and, after General Tire's reorganization in the 1980s, GenCorp. The business was based around the consolidation of its parent company's broadcasting interests, dating to 1943, and the RKO Pictures movie studio General Tire purchased in 1955. The holding company acquired the name of RKO General in 1959 after General Tire dissolved the film studio. The original RKO Radio Pictures, Inc. corporation name was then changed to the present day RKO General, Inc. Current RKO Radio Pictures copyrights are held by this corporate name. Headquartered in New York City, the company operated six television stations and more than a dozen major radio stations around North America between 1959 and 1991.",
+            "Paramount Pictures\nParamount Pictures Corporation (also known simply as Paramount) is an American film studio based in Hollywood, California, that has been a subsidiary of the American media conglomerate Viacom since 1994. Paramount is the fifth oldest surviving film studio in the world, the second oldest in the United States, and the sole member of the \"Big Six\" film studios still located in the Los Angeles neighborhood of Hollywood. In 1916, film producer Adolph Zukor contracted 22 actors and actresses and honored each with a star on the logo. These fortunate few would become the first \"movie stars.\" In 2014, Paramount Pictures became the first major Hollywood studio to distribute all of its films in digital form only.",
+            "2004 in film\nThe year 2004 in film involved some significant events. Major releases of sequels took place. It included blockbuster films like \"Shrek 2\", \"Harry Potter and the Prisoner of Azkaban\", \"The Bourne Supremacy\", \"Van Helsing\", \"The Passion of the Christ\", \"\", \"Thunderbirds\", \"Meet the Fockers\", \"Harold and Kumar\", \"The Day After Tomorrow\", \"Anchorman\", \"Saw\", \"\", \"Spider-Man 2\", \"Alien vs. Predator\", \"The Incredibles\", \"Kill Bill Vol. 2\", \"Fahrenheit 9/11\", \"I, Robot\", \"Ocean's Twelve\" and \"\".",
+            "Shrek: Hassle at the Castle\nShrek: Hassle at the Castle is a 2D fighting video game, released for Game Boy Advance. It is based on the movie \"Shrek\", and features characters from it. Players progress through the game playing, Shrek, Princess Fiona, and Shrek's companion, Donkey. They travel through various chapters of the game, that represent different stages of the movie. It is the only game in the series that follows the plot of the first movie. A year later a sequel was released, called Shrek: Reekin' Havoc.",
+            "Chevron Corporation\nChevron Corporation () is an American multinational energy corporation. One of the successor companies of Standard Oil, it is headquartered in San Ramon, California, and active in more than 180 countries. Chevron is engaged in every aspect of the oil, natural gas, and geothermal energy industries, including hydrocarbon exploration and production; refining, marketing and transport; chemicals manufacturing and sales; and power generation. Chevron is one of the world's largest oil companies; as of 2014 , it ranked third in the Fortune 500 list of the top US closely held and public corporations and sixteenth on the Fortune Global 500 list of the top 500 corporations worldwide. It was also one of the Seven Sisters that dominated the global petroleum industry from the mid-1940s to the 1970s."
+        ],
+        "thoughts": [
+            "The production companies involved in the creation of Shrek 2 (the film) are DreamWorks Animation and Paramount Pictures. DreamWorks Animation produced the film, while Paramount Pictures distributed it.",
+            "The major studio or corporation parent that oversaw the production of \"Shrek 2\" is DreamWorks Animation, which was acquired by Paramount Pictures in 2006. Therefore, Paramount Pictures is the parent company that oversaw the production of \"Shrek 2\".",
+            "The production company that led the production of Shrek 2 is DreamWorks Animation."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who produced the 2004 major release sequel of Shrek 2?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the movie 'Shrek 2'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the production company of 'Shrek 2' from the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "To determine who produced 'Shrek 2', the task begins by retrieving detailed information about the movie, specifically focusing on the year 2004, which is when the sequel was released. Once this information is gathered, the key detail to extract is the production company associated with this major release. This approach ensures that all relevant data about the film is considered before identifying the producer, which in this case is the production company."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Andrew Adamson\nAndrew Ralph Adamson, MNZM (born 1 December 1966) is a New Zealand film director, producer and screenwriter based mainly in Los Angeles, where he made the blockbuster animation films, \"Shrek\" and \"Shrek 2\" for which he received an Academy Award nomination. He was director, executive producer, and scriptwriter for the 2005 production of \"\". Shooting took place in New Zealand, primarily in and around Auckland, but also in South Island where much of Peter Jackson's \"The Lord of the Rings\" trilogy was filmed. He also worked on the movies \"Batman Forever\" and \"Batman & Robin\" as a visual effects supervisor.",
+            "Shrek (franchise)\nThe \"Shrek\" franchise from DreamWorks Animation, based on William Steig's picture book \"Shrek!\", consists of four computer-animated films including: \"Shrek\" (2001), \"Shrek 2\" (2004), \"Shrek the Third\" (2007), and \"Shrek Forever After\" (2010), with a fifth film planned for a 2019 or 2020 release. A short 4-D film, \"Shrek 4-D\", which originally was a theme park ride, was released in 2003.",
+            "Shrek 2 (video game)\nShrek 2 (also known as Shrek 2: The Game and ported for the PC as Shrek 2: Team Action at Beenox) is a 2004 action-adventure video game published by Activision and released in 2004. The game was developed by Luxoflux for the PlayStation 2, Xbox and GameCube, while a version for PC was developed by KnowWonder. The Game Boy Advance version was also released on a \"Twin Pack\" cartridge bundled with \"Shark Tale\" in 2005.",
+            "Shrek 2\nShrek 2 is a 2004 American computer-animated fantasy film produced by DreamWorks Animation and directed by Andrew Adamson, Kelly Asbury and Conrad Vernon. It is the sequel to 2001's \"Shrek\", with Mike Myers, Eddie Murphy and Cameron Diaz reprising their respective voice roles of Shrek, Donkey, and Fiona from the first film, joined by Antonio Banderas, Julie Andrews, John Cleese, Rupert Everett, and Jennifer Saunders. Sometime after the first film, Shrek, Donkey and Fiona go to visit Fiona's parents (voiced by Andrews and Cleese), while Shrek and Donkey discover that a greedy Fairy God Mother (voiced by Saunders) is plotting to destroy Shrek and Fiona's marriage so Fiona can marry her son, Prince Charming (voiced by Everett). Shrek and Donkey team up with a swashing cat named Puss in Boots (voiced by Banderas) to stop her.",
+            "Bussunda\nCl\u00e1udio Besserman Vianna (Rio de Janeiro, June 25, 1962 \u2014 Vaterstetten, June 17, 2006), commonly known as Bussunda (] ), was a Brazilian humorist and TV comedian, member of the Casseta & Planeta troupe. He was born in Rio de Janeiro, where he lived and worked, having started his career in the 1980s as a writer for satirical magazine \"Casseta Popular\". One of the most popular Brazilian comedians of his generation, the overweight Bussunda was famous for his impersonations of football striker Ronaldo and of Brazil's president Lula. He also did the voice of Shrek in the Brazilian Portuguese version of \"Shrek\" and \"Shrek 2\". He was of Jewish descent.",
+            "Shrek the Third\nShrek the Third is a 2007 American computer-animated fantasy comedy film and the third installment in the \"Shrek\" franchise, produced by DreamWorks Animation. It is the sequel to 2004's \"Shrek 2\", and is the first in the series to be distributed by Paramount Pictures , which acquired DreamWorks Pictures, the former parent of DreamWorks Animation, in 2006. Chris Miller and Raman Hui directed and co-directed the film, respectively, with the former also co-writing the screenplay with Jeffrey Price, Peter S. Seaman, and Aron Warner. In addition to Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas, Rupert Everett, Julie Andrews, and John Cleese, who reprise their roles from \"Shrek 2\", the film also features Justin Timberlake in the role of Arthur Pendragon and Eric Idle as Merlin. Harry Gregson-Williams composed the original music for the film. The story takes place eight months after the marriage of Shrek and Fiona in the first film. Reluctantly reigning over the kingdom of Far, Far Away, Shrek sets out to find the next heir to the throne\u2014Fiona's cousin Artie, while Prince Charming is plotting to overthrow Shrek and become king.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Christopher Knights\nChristopher Knights is an English voice actor, film editor and camera operator best known for providing the voice of Private the Penguin in \"Madagascar\". He worked on several DreamWorks films \"Shrek\", \"Shrek 2\", \"Shrek the Third\", and \"Shrek 4-D.\" He started his filming career at Amblimation studios and worked on \"We're Back! A Dinosaur's Story\" and \"Balto\". When he joined DreamWorks he not only started his editing career but also his acting career. He worked on the \"Shrek\" series as an associate editor and voice of the Three Blind Mice and Thelonious, Lord Farquad's Henchman. He worked many times with another English cameraman and voice actor, Simon J. Smith."
+        ],
+        "thoughts": [
+            "\"Shrek 2\" is a 2004 American computer-animated fantasy film produced by DreamWorks Animation and directed by Andrew Adamson, Kelly Asbury, and Conrad Vernon. It is the sequel to 2001's \"Shrek\" and features the voice talents of Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas, Julie Andrews, John Cleese, Rupert Everett, and Jennifer Saunders. The story follows Shrek, Donkey, and Fiona as they visit Fiona's parents and encounter a plot by a greedy Fairy God Mother to destroy their marriage. The film was a blockbuster success and received an Academy Award nomination. Additionally, a video game based on the movie was released in 2004.",
+            "The production company of 'Shrek 2' is DreamWorks Animation."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who produced the 2004 major release sequel of Shrek 2?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the film 'Shrek 2' and confirm its release year to ensure it was 2004.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the production studio or company responsible for producing 'Shrek 2'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify key personnel such as directors or producers who were involved in the production of 'Shrek 2'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Synthesize information from the production company and key personnel to determine the primary producer or producing entity of 'Shrek 2'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The graph begins by confirming the basic premise of the question: that 'Shrek 2' is indeed a 2004 release. This step ensures accuracy in subsequent information retrieval. Next, we separately determine the production studio or company responsible for 'Shrek 2', and identify key individuals (like directors or producers) involved in its production. The final step synthesizes the retrieved information to pinpoint the primary producer or producing entity, answering the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Shrek (franchise)\nThe \"Shrek\" franchise from DreamWorks Animation, based on William Steig's picture book \"Shrek!\", consists of four computer-animated films including: \"Shrek\" (2001), \"Shrek 2\" (2004), \"Shrek the Third\" (2007), and \"Shrek Forever After\" (2010), with a fifth film planned for a 2019 or 2020 release. A short 4-D film, \"Shrek 4-D\", which originally was a theme park ride, was released in 2003.",
+            "2004 in film\nThe year 2004 in film involved some significant events. Major releases of sequels took place. It included blockbuster films like \"Shrek 2\", \"Harry Potter and the Prisoner of Azkaban\", \"The Bourne Supremacy\", \"Van Helsing\", \"The Passion of the Christ\", \"\", \"Thunderbirds\", \"Meet the Fockers\", \"Harold and Kumar\", \"The Day After Tomorrow\", \"Anchorman\", \"Saw\", \"\", \"Spider-Man 2\", \"Alien vs. Predator\", \"The Incredibles\", \"Kill Bill Vol. 2\", \"Fahrenheit 9/11\", \"I, Robot\", \"Ocean's Twelve\" and \"\".",
+            "Shrek the Third\nShrek the Third is a 2007 American computer-animated fantasy comedy film and the third installment in the \"Shrek\" franchise, produced by DreamWorks Animation. It is the sequel to 2004's \"Shrek 2\", and is the first in the series to be distributed by Paramount Pictures , which acquired DreamWorks Pictures, the former parent of DreamWorks Animation, in 2006. Chris Miller and Raman Hui directed and co-directed the film, respectively, with the former also co-writing the screenplay with Jeffrey Price, Peter S. Seaman, and Aron Warner. In addition to Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas, Rupert Everett, Julie Andrews, and John Cleese, who reprise their roles from \"Shrek 2\", the film also features Justin Timberlake in the role of Arthur Pendragon and Eric Idle as Merlin. Harry Gregson-Williams composed the original music for the film. The story takes place eight months after the marriage of Shrek and Fiona in the first film. Reluctantly reigning over the kingdom of Far, Far Away, Shrek sets out to find the next heir to the throne\u2014Fiona's cousin Artie, while Prince Charming is plotting to overthrow Shrek and become king.",
+            "Grass Root Film Company\nGrass Root Film Company is an Indian film production studio established by director Vetrimaaran's film production house which debuted Udhayam NH4 in collaboration with Meeka Entertainment. Currently the company is in collaboration with Wunderbar Films for several film projects committed in 2013, it has since gone on to produce several Tamil language films.",
+            "Shrek 2\nShrek 2 is a 2004 American computer-animated fantasy film produced by DreamWorks Animation and directed by Andrew Adamson, Kelly Asbury and Conrad Vernon. It is the sequel to 2001's \"Shrek\", with Mike Myers, Eddie Murphy and Cameron Diaz reprising their respective voice roles of Shrek, Donkey, and Fiona from the first film, joined by Antonio Banderas, Julie Andrews, John Cleese, Rupert Everett, and Jennifer Saunders. Sometime after the first film, Shrek, Donkey and Fiona go to visit Fiona's parents (voiced by Andrews and Cleese), while Shrek and Donkey discover that a greedy Fairy God Mother (voiced by Saunders) is plotting to destroy Shrek and Fiona's marriage so Fiona can marry her son, Prince Charming (voiced by Everett). Shrek and Donkey team up with a swashing cat named Puss in Boots (voiced by Banderas) to stop her.",
+            "Andrew Adamson\nAndrew Ralph Adamson, MNZM (born 1 December 1966) is a New Zealand film director, producer and screenwriter based mainly in Los Angeles, where he made the blockbuster animation films, \"Shrek\" and \"Shrek 2\" for which he received an Academy Award nomination. He was director, executive producer, and scriptwriter for the 2005 production of \"\". Shooting took place in New Zealand, primarily in and around Auckland, but also in South Island where much of Peter Jackson's \"The Lord of the Rings\" trilogy was filmed. He also worked on the movies \"Batman Forever\" and \"Batman & Robin\" as a visual effects supervisor.",
+            "Shrek 2 (video game)\nShrek 2 (also known as Shrek 2: The Game and ported for the PC as Shrek 2: Team Action at Beenox) is a 2004 action-adventure video game published by Activision and released in 2004. The game was developed by Luxoflux for the PlayStation 2, Xbox and GameCube, while a version for PC was developed by KnowWonder. The Game Boy Advance version was also released on a \"Twin Pack\" cartridge bundled with \"Shark Tale\" in 2005.",
+            "Christopher Knights\nChristopher Knights is an English voice actor, film editor and camera operator best known for providing the voice of Private the Penguin in \"Madagascar\". He worked on several DreamWorks films \"Shrek\", \"Shrek 2\", \"Shrek the Third\", and \"Shrek 4-D.\" He started his filming career at Amblimation studios and worked on \"We're Back! A Dinosaur's Story\" and \"Balto\". When he joined DreamWorks he not only started his editing career but also his acting career. He worked on the \"Shrek\" series as an associate editor and voice of the Three Blind Mice and Thelonious, Lord Farquad's Henchman. He worked many times with another English cameraman and voice actor, Simon J. Smith.",
+            "I.T. (film)\nI.T. is a 2016 thriller film directed by John Moore and written by Dan Kay and William Wisher. It stars Pierce Brosnan, James Frecheville, Anna Friel, Stefanie Scott and Michael Nyqvist and was produced by David T. Friendly and Beau St. Clair, who was Brosnan's producing partner at the production company Irish DreamTime before her death. The film was released on September 23, 2016, with a limited release and on video on demand.",
+            "Easy Riders, Raging Bulls\nEasy Riders, Raging Bulls: How the Sex-Drugs-and-Rock 'N Roll Generation Saved Hollywood is a book written by Peter Biskind and published by Simon & Schuster in 1998. \"Easy Riders, Raging Bulls\" is about the 1970s Hollywood, a period of American film known for the production of such films such as \"The Godfather,\" \"The Godfather Part II,\" \"Chinatown,\" \"Taxi Driver,\" \"Jaws,\" \"Star Wars,\" \"The Exorcist,\" and \"The Last Picture Show\". The title is taken from films which bookend the era: \"Easy Rider\" (1969) and \"Raging Bull\" (1980). The book follows Hollywood on the brink of the Vietnam War, when a group of young Hollywood film directors known as the \"movie brats\" are making their names. It begins in the 1960s and ends in the 1980s.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "See Yourself\n\"See Yourself\" is a song by English musician George Harrison, released on his 1976 album \"Thirty Three & 1/3\". Harrison began writing the song in 1967, while he was a member of the Beatles, in response to the public outcry surrounding bandmate Paul McCartney's admission that he had taken the hallucinogenic drug LSD. McCartney's announcement created a reaction in the press similar to that caused in 1966 by John Lennon's statement that the Beatles were more popular than Christianity. In its finished form, the song's lyrics advocate self-awareness and consideration for the consequences of one's actions. Musically, the composition contains unusual shifts in time signature from standard 4/4 to 9/8, while the songwords reflect the era of its genesis by recalling themes first espoused in the Beatles tracks \"Within You Without You\" and \"All You Need Is Love\"."
+        ],
+        "thoughts": [
+            "The film 'Shrek 2' was released in 2004.",
+            "The production studio responsible for producing 'Shrek 2' is DreamWorks Animation.",
+            "Key personnel involved in the production of 'Shrek 2' include:\n\n1. Andrew Adamson - Director, producer, and screenwriter\n2. Kelly Asbury - Director\n3. Conrad Vernon - Director\n4. Christopher Knights - Voice actor for the Three Blind Mice and Thelonious, Lord Farquad's Henchman\n5. Mike Myers - Voice actor for Shrek\n6. Eddie Murphy - Voice actor for Donkey\n7. Cameron Diaz - Voice actor for Fiona\n8. Antonio Banderas - Voice actor for Puss in Boots\n9. Julie Andrews - Voice actor for Queen Lillian\n10. John Cleese - Voice actor for King Harold",
+            "Based on the information provided, the primary producer or producing entity of 'Shrek 2' is DreamWorks Animation. The key personnel involved in the production of the film include directors Andrew Adamson, Kelly Asbury, and Conrad Vernon, as well as voice actors Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas, Julie Andrews, and John Cleese."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who produced the 2004 major release sequel of Shrek 2?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the producers of the sequel movie Shrek 2, released in 2004.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Verify whether Shrek 2 was indeed released in 2004 and identify any alternative known producers for the film.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Consolidate the information obtained about the producers from nodes 1 and 2 to provide a final answer regarding who produced the 2004 release of Shrek 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The task involves identifying the producers of the movie 'Shrek 2' which is known to have been released in 2004. The execution graph starts with retrieving and reasoning about the list of producers directly associated with this film (Node 1). In parallel, Node 2 ensures the accuracy of the release date and checks for any additional or alternative producer credits that might exist. Finally, the outputs from both nodes are consolidated in Node 3 to ensure we get a complete and verified answer."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "Shrek (franchise)\nThe \"Shrek\" franchise from DreamWorks Animation, based on William Steig's picture book \"Shrek!\", consists of four computer-animated films including: \"Shrek\" (2001), \"Shrek 2\" (2004), \"Shrek the Third\" (2007), and \"Shrek Forever After\" (2010), with a fifth film planned for a 2019 or 2020 release. A short 4-D film, \"Shrek 4-D\", which originally was a theme park ride, was released in 2003.",
+            "Shrek: Hassle at the Castle\nShrek: Hassle at the Castle is a 2D fighting video game, released for Game Boy Advance. It is based on the movie \"Shrek\", and features characters from it. Players progress through the game playing, Shrek, Princess Fiona, and Shrek's companion, Donkey. They travel through various chapters of the game, that represent different stages of the movie. It is the only game in the series that follows the plot of the first movie. A year later a sequel was released, called Shrek: Reekin' Havoc.",
+            "Shrek the Third\nShrek the Third is a 2007 American computer-animated fantasy comedy film and the third installment in the \"Shrek\" franchise, produced by DreamWorks Animation. It is the sequel to 2004's \"Shrek 2\", and is the first in the series to be distributed by Paramount Pictures , which acquired DreamWorks Pictures, the former parent of DreamWorks Animation, in 2006. Chris Miller and Raman Hui directed and co-directed the film, respectively, with the former also co-writing the screenplay with Jeffrey Price, Peter S. Seaman, and Aron Warner. In addition to Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas, Rupert Everett, Julie Andrews, and John Cleese, who reprise their roles from \"Shrek 2\", the film also features Justin Timberlake in the role of Arthur Pendragon and Eric Idle as Merlin. Harry Gregson-Williams composed the original music for the film. The story takes place eight months after the marriage of Shrek and Fiona in the first film. Reluctantly reigning over the kingdom of Far, Far Away, Shrek sets out to find the next heir to the throne\u2014Fiona's cousin Artie, while Prince Charming is plotting to overthrow Shrek and become king.",
+            "Shrek 2 (video game)\nShrek 2 (also known as Shrek 2: The Game and ported for the PC as Shrek 2: Team Action at Beenox) is a 2004 action-adventure video game published by Activision and released in 2004. The game was developed by Luxoflux for the PlayStation 2, Xbox and GameCube, while a version for PC was developed by KnowWonder. The Game Boy Advance version was also released on a \"Twin Pack\" cartridge bundled with \"Shark Tale\" in 2005.",
+            "Shrek 2\nShrek 2 is a 2004 American computer-animated fantasy film produced by DreamWorks Animation and directed by Andrew Adamson, Kelly Asbury and Conrad Vernon. It is the sequel to 2001's \"Shrek\", with Mike Myers, Eddie Murphy and Cameron Diaz reprising their respective voice roles of Shrek, Donkey, and Fiona from the first film, joined by Antonio Banderas, Julie Andrews, John Cleese, Rupert Everett, and Jennifer Saunders. Sometime after the first film, Shrek, Donkey and Fiona go to visit Fiona's parents (voiced by Andrews and Cleese), while Shrek and Donkey discover that a greedy Fairy God Mother (voiced by Saunders) is plotting to destroy Shrek and Fiona's marriage so Fiona can marry her son, Prince Charming (voiced by Everett). Shrek and Donkey team up with a swashing cat named Puss in Boots (voiced by Banderas) to stop her.",
+            "Christopher Knights\nChristopher Knights is an English voice actor, film editor and camera operator best known for providing the voice of Private the Penguin in \"Madagascar\". He worked on several DreamWorks films \"Shrek\", \"Shrek 2\", \"Shrek the Third\", and \"Shrek 4-D.\" He started his filming career at Amblimation studios and worked on \"We're Back! A Dinosaur's Story\" and \"Balto\". When he joined DreamWorks he not only started his editing career but also his acting career. He worked on the \"Shrek\" series as an associate editor and voice of the Three Blind Mice and Thelonious, Lord Farquad's Henchman. He worked many times with another English cameraman and voice actor, Simon J. Smith.",
+            "2004 in film\nThe year 2004 in film involved some significant events. Major releases of sequels took place. It included blockbuster films like \"Shrek 2\", \"Harry Potter and the Prisoner of Azkaban\", \"The Bourne Supremacy\", \"Van Helsing\", \"The Passion of the Christ\", \"\", \"Thunderbirds\", \"Meet the Fockers\", \"Harold and Kumar\", \"The Day After Tomorrow\", \"Anchorman\", \"Saw\", \"\", \"Spider-Man 2\", \"Alien vs. Predator\", \"The Incredibles\", \"Kill Bill Vol. 2\", \"Fahrenheit 9/11\", \"I, Robot\", \"Ocean's Twelve\" and \"\".",
+            "Hole in One (2010 film)\nHole in One (also known as \"ParFection: The Golf Movie\") is a 2010 comedy movie starring Steve Talley. It is about a cool undergraduate boy who gets tricked by some surgeons and they operate on him, giving him a set of breasts. Now, he has to earn money through golf for the reverse surgery. The movie was released by Universal Studios via Universal Pictures and launched in the United Kingdom on September 12, 2010. With a wide release in an additional 65 territories and countries. It is awaiting a US Domestic release. Universal 'Tagged' the movie as 'American Pie Plays Golf' and so many people have mistaken for it being an American Pie movie because Steve Talley, who appeared in and stars in it. Further evidence shows that Steve Talley is called 'Eric Keller' in Hole in One and is called 'Dwight Stifler' in the American Pie movie Franchise series which shows the distinct differences between the movies. Box Office figures report $1,600,000 GBP in London England. Universal release Hole in One in a total of 65 countries. No other figures reported.",
+            "Lykan HyperSport\nThe Lykan Hypersport is a Lebanese limited production supercar built by W Motors, a United Arab Emirates based company, founded in 2012 in Lebanon with the collaboration of Lebanese, French and Italian engineers. It is the first supercar to be produced in the Middle East, and is featured in the film \"Furious 7\", and the video games \"Project CARS\", \"Driveclub\", \"\", \"Asphalt Nitro\", \"Forza Motorsport 6\", \" and \", \"Forza Horizon 3\", \"CSR Racing\" and \"CSR Racing 2\". The Lykan can also be briefly seen in the second \"Fate of the Furious\" trailer, however, the Lykan does not make an appearance, the footage is from the seventh movie, \"Fast and Furious 7\". It is the first car to be designed and produced indigenously in the Arab World.",
+            "Andrew Adamson\nAndrew Ralph Adamson, MNZM (born 1 December 1966) is a New Zealand film director, producer and screenwriter based mainly in Los Angeles, where he made the blockbuster animation films, \"Shrek\" and \"Shrek 2\" for which he received an Academy Award nomination. He was director, executive producer, and scriptwriter for the 2005 production of \"\". Shooting took place in New Zealand, primarily in and around Auckland, but also in South Island where much of Peter Jackson's \"The Lord of the Rings\" trilogy was filmed. He also worked on the movies \"Batman Forever\" and \"Batman & Robin\" as a visual effects supervisor.",
+            "Premium Picture Productions\nPremium Picture Productions is a former movie studio located in Beaverton, Oregon, which was active in the early 1920s. It was founded in 1921, with J.J. Fleming as president and Dr. G.E. Watts and three others as directors of the corporation, and it opened its production lot in 1922. The company went out of business in late 1925. The studio produced approximately fifteen silent films, including the following:"
+        ],
+        "thoughts": [
+            "The producers of the sequel movie Shrek 2, released in 2004, are DreamWorks Animation and the directors of the film are Andrew Adamson, Kelly Asbury, and Conrad Vernon.",
+            "Shrek 2 was indeed released in 2004. It is a 2004 American computer-animated fantasy film produced by DreamWorks Animation and directed by Andrew Adamson, Kelly Asbury, and Conrad Vernon. The film features the voice talents of Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas, Julie Andrews, John Cleese, Rupert Everett, and Jennifer Saunders.\n\nAs for alternative known producers for the film, the only known producer for Shrek 2 is DreamWorks Animation. The film was directed by Andrew Adamson, Kelly Asbury, and Conrad Vernon, with no other alternative known producers listed.",
+            "The 2004 release of Shrek 2 was produced by DreamWorks Animation. The film was also directed by Andrew Adamson, Kelly Asbury, and Conrad Vernon. There are no alternative known producers for the film."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who produced the 2004 major release sequel of Shrek 2?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the movie Shrek 2, specifically its release year, genre, and basic details.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Confirm that Shrek 2 was a major release sequel of the original Shrek movie and identify its release year as 2004.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about the production company or companies involved in producing Shrek 2.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the retrieved production company information to determine which company was responsible for producing Shrek 2 in 2004.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph is structured to first ensure we have the correct context and basic details about Shrek 2, establishing it as a sequel released in 2004. Subsequent steps focus on retrieving and analyzing information about the production companies involved with Shrek 2, ultimately determining which was responsible for producing this major release sequel."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "Shrek (franchise)\nThe \"Shrek\" franchise from DreamWorks Animation, based on William Steig's picture book \"Shrek!\", consists of four computer-animated films including: \"Shrek\" (2001), \"Shrek 2\" (2004), \"Shrek the Third\" (2007), and \"Shrek Forever After\" (2010), with a fifth film planned for a 2019 or 2020 release. A short 4-D film, \"Shrek 4-D\", which originally was a theme park ride, was released in 2003.",
+            "Shrek: Hassle at the Castle\nShrek: Hassle at the Castle is a 2D fighting video game, released for Game Boy Advance. It is based on the movie \"Shrek\", and features characters from it. Players progress through the game playing, Shrek, Princess Fiona, and Shrek's companion, Donkey. They travel through various chapters of the game, that represent different stages of the movie. It is the only game in the series that follows the plot of the first movie. A year later a sequel was released, called Shrek: Reekin' Havoc.",
+            "2004 in film\nThe year 2004 in film involved some significant events. Major releases of sequels took place. It included blockbuster films like \"Shrek 2\", \"Harry Potter and the Prisoner of Azkaban\", \"The Bourne Supremacy\", \"Van Helsing\", \"The Passion of the Christ\", \"\", \"Thunderbirds\", \"Meet the Fockers\", \"Harold and Kumar\", \"The Day After Tomorrow\", \"Anchorman\", \"Saw\", \"\", \"Spider-Man 2\", \"Alien vs. Predator\", \"The Incredibles\", \"Kill Bill Vol. 2\", \"Fahrenheit 9/11\", \"I, Robot\", \"Ocean's Twelve\" and \"\".",
+            "Shrek 2 (video game)\nShrek 2 (also known as Shrek 2: The Game and ported for the PC as Shrek 2: Team Action at Beenox) is a 2004 action-adventure video game published by Activision and released in 2004. The game was developed by Luxoflux for the PlayStation 2, Xbox and GameCube, while a version for PC was developed by KnowWonder. The Game Boy Advance version was also released on a \"Twin Pack\" cartridge bundled with \"Shark Tale\" in 2005.",
+            "Tarkett\nTarkett S.A., known until 2008 as Sommer-Allibert S.A., is a French multinational corporation specialised in the production of floor and wall coverings. Headquartered in La D\u00e9fense, near Paris, the present company was formed in October 1997 by the merging of two others: French Sommer-Allibert and German Tarkett AG. These two companies were in turn formed by the combination of various smaller companies in Sweden, Germany and France. The Tarkett name came from a product developed by a Swedish predecessor.",
+            "Yuehua Entertainment\nYuehua Entertainment (Chinese: \u4e50\u534e\u5a31\u4e50) (Korean: \uc704\uc5d0\ud654 \uc5d4\ud130\ud14c\uc778\uba3c\ud2b8) is a privately held multinational entertainment group and talent agency based in Beijing. The company was founded in June 2009. Yuehua is involved in television production and distribution, movie production, artist management and training, music and music video production, public relations, and entertainment marketing. Yuehua Entertainment has partnerships with the South Korean companies Pledis Entertainment and Starship Entertainment. Yuehua Entertainment received series-B financing from Gravity Media and CMC Capital in August 2014. CMC Capital invested $49 million USD into the group and became its strategic shareholder at the completion of financing. In 2014 Yuehua Entertainment established a Korean branch located in Gangnam-gu, Seoul, South Korea. Yuehua announced plans for further expansion of their Korean branch operations beginning in February 2016.",
+            "Andrew Adamson\nAndrew Ralph Adamson, MNZM (born 1 December 1966) is a New Zealand film director, producer and screenwriter based mainly in Los Angeles, where he made the blockbuster animation films, \"Shrek\" and \"Shrek 2\" for which he received an Academy Award nomination. He was director, executive producer, and scriptwriter for the 2005 production of \"\". Shooting took place in New Zealand, primarily in and around Auckland, but also in South Island where much of Peter Jackson's \"The Lord of the Rings\" trilogy was filmed. He also worked on the movies \"Batman Forever\" and \"Batman & Robin\" as a visual effects supervisor.",
+            "Shrek 2\nShrek 2 is a 2004 American computer-animated fantasy film produced by DreamWorks Animation and directed by Andrew Adamson, Kelly Asbury and Conrad Vernon. It is the sequel to 2001's \"Shrek\", with Mike Myers, Eddie Murphy and Cameron Diaz reprising their respective voice roles of Shrek, Donkey, and Fiona from the first film, joined by Antonio Banderas, Julie Andrews, John Cleese, Rupert Everett, and Jennifer Saunders. Sometime after the first film, Shrek, Donkey and Fiona go to visit Fiona's parents (voiced by Andrews and Cleese), while Shrek and Donkey discover that a greedy Fairy God Mother (voiced by Saunders) is plotting to destroy Shrek and Fiona's marriage so Fiona can marry her son, Prince Charming (voiced by Everett). Shrek and Donkey team up with a swashing cat named Puss in Boots (voiced by Banderas) to stop her.",
+            "Shrek the Third\nShrek the Third is a 2007 American computer-animated fantasy comedy film and the third installment in the \"Shrek\" franchise, produced by DreamWorks Animation. It is the sequel to 2004's \"Shrek 2\", and is the first in the series to be distributed by Paramount Pictures , which acquired DreamWorks Pictures, the former parent of DreamWorks Animation, in 2006. Chris Miller and Raman Hui directed and co-directed the film, respectively, with the former also co-writing the screenplay with Jeffrey Price, Peter S. Seaman, and Aron Warner. In addition to Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas, Rupert Everett, Julie Andrews, and John Cleese, who reprise their roles from \"Shrek 2\", the film also features Justin Timberlake in the role of Arthur Pendragon and Eric Idle as Merlin. Harry Gregson-Williams composed the original music for the film. The story takes place eight months after the marriage of Shrek and Fiona in the first film. Reluctantly reigning over the kingdom of Far, Far Away, Shrek sets out to find the next heir to the throne\u2014Fiona's cousin Artie, while Prince Charming is plotting to overthrow Shrek and become king.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Christopher Knights\nChristopher Knights is an English voice actor, film editor and camera operator best known for providing the voice of Private the Penguin in \"Madagascar\". He worked on several DreamWorks films \"Shrek\", \"Shrek 2\", \"Shrek the Third\", and \"Shrek 4-D.\" He started his filming career at Amblimation studios and worked on \"We're Back! A Dinosaur's Story\" and \"Balto\". When he joined DreamWorks he not only started his editing career but also his acting career. He worked on the \"Shrek\" series as an associate editor and voice of the Three Blind Mice and Thelonious, Lord Farquad's Henchman. He worked many times with another English cameraman and voice actor, Simon J. Smith."
+        ],
+        "thoughts": [
+            "The movie \"Shrek 2\" is a 2004 American computer-animated fantasy film produced by DreamWorks Animation. It is the sequel to the 2001 film \"Shrek\" and features the voices of Mike Myers, Eddie Murphy, Cameron Diaz, and Antonio Banderas. The plot revolves around Shrek, Donkey, and Fiona visiting Fiona's parents, only to discover a plot by a greedy Fairy God Mother to destroy their marriage. The film falls under the genre of comedy and adventure.",
+            "Based on the information from the upstream task, it is confirmed that \"Shrek 2\" is indeed a major release sequel of the original \"Shrek\" movie. Additionally, the release year of \"Shrek 2\" is 2004.",
+            "The production company involved in producing \"Shrek 2\" is DreamWorks Animation. The film was directed by Andrew Adamson, Kelly Asbury, and Conrad Vernon. DreamWorks Animation is a major player in the animation industry and has been responsible for producing all the films in the \"Shrek\" franchise. Andrew Adamson, the director of \"Shrek 2\", is a New Zealand film director, producer, and screenwriter who has also worked on other blockbuster animation films. The film features a star-studded cast including Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas, Julie Andrews, John Cleese, Rupert Everett, and Jennifer Saunders.",
+            "Based on the retrieved information, the production company responsible for producing \"Shrek 2\" in 2004 is DreamWorks Animation."
+        ],
+        "is_best": false
+    }
+]

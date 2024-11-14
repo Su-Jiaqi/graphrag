@@ -1,0 +1,727 @@
+[
+    {
+        "question": "Have James Schuyler and H. G. Wells both published books?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve a list of works published by James Schuyler.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve a list of works published by H. G. Wells.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Check if any items in the list of works published by James Schuyler are books.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Check if any items in the list of works published by H. G. Wells are books.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine results to determine if both authors have published books.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the question into two main retrieval tasks: obtaining publication lists for both James Schuyler and H. G. Wells. Next, it requires reasoning steps to specifically identify if any of the publications in those lists are books. The final step combines these results to provide a comprehensive answer to the question about both authors having published books."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "H. G. Wells\nHerbert George Wells (21 September 1866 \u2013 13 August 1946), usually referred to as H. G. Wells, was an English writer. He was prolific in many genres, including the novel, history, politics, social commentary, and textbooks and rules for war games. Wells is now best remembered for his science fiction novels and is called a \"father of science fiction\", along with Jules Verne and Hugo Gernsback. His most notable science fiction works include \"The Time Machine\" (1895), \"The Island of Doctor Moreau\" (1896), \"The Invisible Man\" (1897), and \"The War of the Worlds\" (1898). He was nominated for the Nobel Prize in Literature four times.",
+            "First and Last Things\nFirst and Last Things is a 1908 work of philosophy by H. G. Wells setting forth his beliefs in four \"books\" entitled \"Metaphysics,\" \"Of Belief,\" \"Of General Conduct,\" and \"Some Personal Things.\" Parts of the book were published in the \"Independent Magazine\" in July and August 1908. Wells revised the book extensively in 1917, in response to his religious conversion, but later published a further revision in 1929 that restored much of the book to its earlier form. Its main intellectual influences are Darwinism and certain German thinkers Wells had read, such as August Weismann. The pragmatism of William James, who had become a friend of Wells, was also an influence.",
+            "The Story of a Great Schoolmaster\nThe Story of a Great Schoolmaster is a 1924 biography of Frederick William Sanderson (1857-1922) by H. G. Wells. It is the only biography Wells wrote. Sanderson was a personal friend, having met Wells in 1914 when his sons George Philip ('Gip'), born in 1901, and Frank Richard, born in 1903, became pupils at Oundle School, of which Sanderson was headmaster from 1892 to 1922. After Sanderson died while giving a lecture at University College London at which he was introduced by Wells, the famous author agreed to help produce a biography to raise money for the school. But in December 1922, after disagreements emerged with Sanderson's widow about his approach to the subject, Wells withdrew from the official biography (published in 1923 as \"Sanderson of Oundle\"; Wells wrote much of the text but the volume was published without listing an author) and published his own work separately.",
+            "Star Begotten\nStar Begotten is a 1937 novel by H. G. Wells. It tells the story of a series of men who conjecture upon the possibility of the human race being altered, by genetic modification, by Martians to replace their own dying planet.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "Kristin Hersh\nKristin Hersh (born August 7, 1966) is an American singer, songwriter and author, known for her solo work and with her rock bands Throwing Muses and 50FootWave. She has released ten solo albums. Her guitar work and composition style ranges from jaggedly dissonant to traditional folk. Hersh's lyrics have a stream-of-consciousness style, reflecting her personal experiences.",
+            "Karen Joy Fowler\nKaren Joy Fowler (born February 7, 1950) is an American author of science fiction, fantasy, and literary fiction. Her work often centers on the nineteenth century, the lives of women, and alienation.",
+            "Bambi's Children\nBambi's Children: The Story of a Forest Family (German: Bambis Kinder: Eine Familie im Walde ) is a novel written by Austrian author Felix Salten as a sequel to his successful work \"Bambi, A Life in the Woods\".",
+            "Samuel R. Delany\nSamuel Ray Delany Jr. ( ; born April 1, 1942), Chip Delany to his friends, is an American author, professor and literary critic. His work includes fiction (especially science fiction), memoir, criticism, and essays on sexuality and society.",
+            "Finn's Hotel\nFinn's Hotel is a posthumously-published collection of ten short narrative pieces written by Irish author James Joyce. Written in 1923, the works were not published until 2013 by Ithys Press, who claimed the work to be a precursor to Joyce's \"Finnegans Wake\".",
+            "Comics artist\nA comics artist (also comic book artist or graphic novel artist, comic book producer, comic book illustrator, comic book writer, and comic book author) is a person working within the comics medium on comic strips, comic books, or graphic novels. The term may refer to any number of artists who contribute to produce a work in the comics form, from those who oversee all aspects of the work to those who contribute only a part.",
+            "Gottfried von Strassburg\nGottfried von Strassburg (died c. 1210) is the author of the Middle High German courtly romance \"Tristan\", an adaptation of the 12th-century \"Tristan and Iseult\" legend. Gottfried's work is regarded, alongside Wolfram von Eschenbach's \"Parzival\" and the \"Nibelungenlied\", as one of the great narrative masterpieces of the German Middle Ages. He is probably also the composer of a small number of surviving lyrics. His work became a source of inspiration for Richard Wagner's opera \"Tristan und Isolde\" (1865).",
+            "Meech Wells\nMeech Wells (born Cecil D. Womack, Jr.) is a music producer from the United States. He works primarily on hip hop music, and has produced or co-produced for artists Snoop Dogg and Shaquille O'Neal. Wells is also the son of Motown singer Mary Wells and musician/songwriter, Cecil Womack. Being the son of Motown legend Mary Wells may have helped jumpstart Meech Wells' career, but the West Coast rap producer quickly proved his talent and eventually aligned himself with Snoop Dogg, another relationship that definitely didn't hurt his career. Before being Snoop's producer of choice during the late 1990s and early 2000s, Wells began his career as part of a funk band called Trey Lewd that also featured Tracey Lewis, George Clinton's son; this provided him with the opportunity to work with Clinton himself. By 1993, Wells found himself working alongside producer/rapper Def Jef; the two's production on Shaquille O'Neil's \"I Got Skillz\" (a surprise hit single) won them instant credentials. Throughout the mid-'90s, he continued to hone his craft, working on a number of remix projects before eventually being introduced to Snoop through a friend. Before long, the two were working together as a potent duo, beginning with \"Still a G Thang,\" one of the better songs on Snoop's Da Game Is to Be Sold, Not to Be Told. Wells produced a few No Limit songs featuring Snoop\u2014Tru's \"It's a Beautiful Thang,\" Silkk the Shocker's \"Get It Up\"\u2014before playing a major role in bringing a West Coast sound to Snoop's Top Dogg album in 1999: \"In Love With a Thug,\" \"Better Days,\" \"Gangsta Ride,\" among others. In 2000 he reprised his role as one of Snoop's producers of choice, producing tracks for Tha Eastsidaz' self-titled debut and Doggy's Angels' Pleezbalevit, as well as Snoop's own Tha Last Meal (\"Go Away,\" \"Issues\").",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Where the Dead Men Lie, and Other Poems\nWhere the Dead Men Lie, and Other Poems (1897) is the first and only collection of poems by Australian poet Barcroft Boake. Edited by A. G. Stephens, it was released in hardback by Angus and Robertson in 1897, five years after the poet's death. It contains an introduction by the editor, an introductory poem by Will H. Ogilvie, and features the poet's major works \"Jack's Last Muster\", \"Jim's Whip\" and \"Where the Dead Men Lie\".",
+            "Robert E. Howard bibliography (poems A\u2013H)\nA list of poems by Robert E. Howard (1906\u20131936), an American writer and poet in early 20th century Texas. His love of poetry came from being read to by his mother at a young age. However, his attempts to make a living by poetry were unsuccessful and he is today most remembered for his short stories and fiction. Nevertheless, Howard wrote hundreds of poems; many were published within his lifetime and the others published after his 1936 suicide."
+        ],
+        "thoughts": [
+            "Unfortunately, there is no information available about works published by James Schuyler in the provided text.",
+            "Since there is no information available about works published by James Schuyler in the provided text, we are unable to check if any items in the list are books.",
+            "1. The Time Machine (1895)\n2. The Island of Doctor Moreau (1896)\n3. The Invisible Man (1897)\n4. The War of the Worlds (1898)\n5. First and Last Things (1908)\n6. The Story of a Great Schoolmaster (1924)\n7. Star Begotten (1937)",
+            "Yes, the following items in the list are books:\n1. The Time Machine (1895)\n2. The Island of Doctor Moreau (1896)\n3. The Invisible Man (1897)\n4. The War of the Worlds (1898)\n5. First and Last Things (1908)\n6. The Story of a Great Schoolmaster (1924)\n7. Star Begotten (1937)",
+            "Based on the combined results of the upstream tasks, it is determined that only one of the authors, H.G. Wells, has published books. There is no information available about works published by James Schuyler."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Have James Schuyler and H. G. Wells both published books?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Search for published books by James Schuyler.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Search for published books by H. G. Wells.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if any books by James Schuyler were found.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if any books by H. G. Wells were found.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Evaluate if both James Schuyler and H. G. Wells have published books based on gathered information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph breaks down the task into independent retrieval and reasoning nodes for each author. Nodes 1 and 2 independently search for books by each author. Nodes 3 and 4 assess the existence of published books by James Schuyler and H. G. Wells, respectively. Finally, Node 5 synthesizes this information to conclusively determine if both authors have published books."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "First and Last Things\nFirst and Last Things is a 1908 work of philosophy by H. G. Wells setting forth his beliefs in four \"books\" entitled \"Metaphysics,\" \"Of Belief,\" \"Of General Conduct,\" and \"Some Personal Things.\" Parts of the book were published in the \"Independent Magazine\" in July and August 1908. Wells revised the book extensively in 1917, in response to his religious conversion, but later published a further revision in 1929 that restored much of the book to its earlier form. Its main intellectual influences are Darwinism and certain German thinkers Wells had read, such as August Weismann. The pragmatism of William James, who had become a friend of Wells, was also an influence.",
+            "H. G. Wells\nHerbert George Wells (21 September 1866 \u2013 13 August 1946), usually referred to as H. G. Wells, was an English writer. He was prolific in many genres, including the novel, history, politics, social commentary, and textbooks and rules for war games. Wells is now best remembered for his science fiction novels and is called a \"father of science fiction\", along with Jules Verne and Hugo Gernsback. His most notable science fiction works include \"The Time Machine\" (1895), \"The Island of Doctor Moreau\" (1896), \"The Invisible Man\" (1897), and \"The War of the Worlds\" (1898). He was nominated for the Nobel Prize in Literature four times.",
+            "The Story of a Great Schoolmaster\nThe Story of a Great Schoolmaster is a 1924 biography of Frederick William Sanderson (1857-1922) by H. G. Wells. It is the only biography Wells wrote. Sanderson was a personal friend, having met Wells in 1914 when his sons George Philip ('Gip'), born in 1901, and Frank Richard, born in 1903, became pupils at Oundle School, of which Sanderson was headmaster from 1892 to 1922. After Sanderson died while giving a lecture at University College London at which he was introduced by Wells, the famous author agreed to help produce a biography to raise money for the school. But in December 1922, after disagreements emerged with Sanderson's widow about his approach to the subject, Wells withdrew from the official biography (published in 1923 as \"Sanderson of Oundle\"; Wells wrote much of the text but the volume was published without listing an author) and published his own work separately.",
+            "Star Begotten\nStar Begotten is a 1937 novel by H. G. Wells. It tells the story of a series of men who conjecture upon the possibility of the human race being altered, by genetic modification, by Martians to replace their own dying planet.",
+            "Locus Solus (journal)\nLocus Solus was an American journal of experimental poetry and prose that published four issues in 1961 and 1962, one a double issue. The magazine was edited by the poets John Ashbery, Kenneth Koch, and James Schuyler, all of whom contributed to its four issues. The content was completely in English but the journal was published in France (in Lans-en-Vercors) by Harry Mathews.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "James Schuyler\nJames Marcus Schuyler (November 9, 1923 \u2013 April 12, 1991) was an American poet. His awards include the Pulitzer Prize for Poetry for his 1980 collection \"The Morning of the Poem\". He was a central figure in the New York School and is often associated with fellow New York School poets John Ashbery, Frank O'Hara, Kenneth Koch, and Barbara Guest.",
+            "List of James Bond novels and short stories\nThe James Bond literary franchise is a series of novels and short stories, first published in 1953 by Ian Fleming, a British author, journalist, and former naval intelligence officer. James Bond, often referred to by his code name, 007, is a British Secret Service agent; the character was created by journalist and author Ian Fleming, and first appeared in his 1953 novel \"Casino Royale\"; the books are set in a contemporary period, between May 1951 and February 1964. Fleming went on to write a total of twelve novels and two collections of short stories, all written at his Jamaican home Goldeneye and published annually. Two of his books were published after his death in 1964.",
+            "Meech Wells\nMeech Wells (born Cecil D. Womack, Jr.) is a music producer from the United States. He works primarily on hip hop music, and has produced or co-produced for artists Snoop Dogg and Shaquille O'Neal. Wells is also the son of Motown singer Mary Wells and musician/songwriter, Cecil Womack. Being the son of Motown legend Mary Wells may have helped jumpstart Meech Wells' career, but the West Coast rap producer quickly proved his talent and eventually aligned himself with Snoop Dogg, another relationship that definitely didn't hurt his career. Before being Snoop's producer of choice during the late 1990s and early 2000s, Wells began his career as part of a funk band called Trey Lewd that also featured Tracey Lewis, George Clinton's son; this provided him with the opportunity to work with Clinton himself. By 1993, Wells found himself working alongside producer/rapper Def Jef; the two's production on Shaquille O'Neil's \"I Got Skillz\" (a surprise hit single) won them instant credentials. Throughout the mid-'90s, he continued to hone his craft, working on a number of remix projects before eventually being introduced to Snoop through a friend. Before long, the two were working together as a potent duo, beginning with \"Still a G Thang,\" one of the better songs on Snoop's Da Game Is to Be Sold, Not to Be Told. Wells produced a few No Limit songs featuring Snoop\u2014Tru's \"It's a Beautiful Thang,\" Silkk the Shocker's \"Get It Up\"\u2014before playing a major role in bringing a West Coast sound to Snoop's Top Dogg album in 1999: \"In Love With a Thug,\" \"Better Days,\" \"Gangsta Ride,\" among others. In 2000 he reprised his role as one of Snoop's producers of choice, producing tracks for Tha Eastsidaz' self-titled debut and Doggy's Angels' Pleezbalevit, as well as Snoop's own Tha Last Meal (\"Go Away,\" \"Issues\").",
+            "Jack Shoemaker\nJack Shoemaker (born 1946) is an American editor and publisher, and current editorial director and vice-president at Counterpoint Press in Berkeley, California. Shoemaker has edited and published books under several imprints, including North Point, Pantheon Books, Shoemaker & Hoard, and Counterpoint. Shoemaker has published books by Guy Davenport, Romulus Linney, Gary Snyder, Wendell Berry, Evan S. Connell, MFK Fisher, James Salter, Gina Berriault, Reynolds Price, W.S. Merwin, Michael Palmer, Donald Hall, Anne Lamott, Kay Boyle, Gary Nabhan, Jane Vandenburgh, Carole Maso, and Robert Aitken. Shoemaker supports author-driven literary publishing ventures and mindfulness and political awareness in publishing. Shoemaker was one of the first American publisher of Thich Nhat Hanh, and a major publisher of Wendell Berry.",
+            "Pierre Martory\nPierre Martory (December 1, 1920 \u2013 October 5, 1998) was a French poet whose influence on New York School poets was quiet but profound. His work was admired by Frank O'Hara, James Schuyler, Harry Mathews, and others, and translated extensively by John Ashbery, with whom he shared his life in Paris for nearly a decade. His work has appeared in many books in both England and the United States, as well as in \"The New Yorker\" and \"Poetry\". Martory\u2019s personal \u201ccharm,\u201d the poet Ann Lauterbach once said, \u201cdevolved back to the original meaning of \u2018spell.\u2019\u201d However, as Ashbery has noted, \u201cBoth the humor and the sadness in his poems are always rendered with an unemphatic clarity that is certainly Mozartian.\u201d",
+            "Fifty Shades Darker\nFifty Shades Darker is a 2012 erotic romance novel by British author E. L. James. It is the second instalment in the \"Fifty Shades\" trilogy that traces the deepening relationship between a college graduate, Anastasia Steele, and a young business magnate, Christian Grey. The first and third volumes, \"Fifty Shades of Grey\" and \"Fifty Shades Freed\", were published in 2011 and 2012. The novel is published by Vintage Books and reached No. 1 on the \"USA Today\" best seller list.",
+            "Trevor Winkfield\nTrevor Winkfield (born 1944) is a British-born artist and writer. Drawing upon his interest in both modernist literary movements and medieval architecture and pageantry, Winkfield has collaborated with many contemporary poets and writers, including John Ashbery, Harry Mathews, James Schuyler, and Ron Padgett.",
+            "Angels (Denis Johnson novel)\nAngels is a 1983 novel by American author Denis Johnson. It was Johnson's first novel; previously, he had published several books of poetry. Alice Hoffman, writing for the \"New York Times\", referred to the novel as \"a mixture of poetry and obscenity\". A character from \"Angels\", Bill Houston, also appears in Johnson's 2007 novel \"Tree of Smoke\". In 1999, David Foster Wallace included the novel on his list of overlooked American books published after 1960.",
+            "Where the Dead Men Lie, and Other Poems\nWhere the Dead Men Lie, and Other Poems (1897) is the first and only collection of poems by Australian poet Barcroft Boake. Edited by A. G. Stephens, it was released in hardback by Angus and Robertson in 1897, five years after the poet's death. It contains an introduction by the editor, an introductory poem by Will H. Ogilvie, and features the poet's major works \"Jack's Last Muster\", \"Jim's Whip\" and \"Where the Dead Men Lie\"."
+        ],
+        "thoughts": [
+            "Books by James Schuyler:\n1. \"The Morning of the Poem\" - Pulitzer Prize-winning collection of poetry published in 1980\n\nIt appears that James Schuyler is primarily known for his poetry, and \"The Morning of the Poem\" is his most notable work.",
+            "Yes, a book by James Schuyler was found. \"The Morning of the Poem\" is a Pulitzer Prize-winning collection of poetry published in 1980.",
+            "Some published books by H. G. Wells include \"First and Last Things,\" \"The Story of a Great Schoolmaster,\" and \"Star Begotten.\"",
+            "Yes, books by H. G. Wells were found.",
+            "Both James Schuyler and H. G. Wells have published books based on gathered information. James Schuyler published \"The Morning of the Poem\" in 1980, and H. G. Wells has published multiple books throughout his career."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Have James Schuyler and H. G. Wells both published books?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve a list of books published by James Schuyler.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve a list of books published by H. G. Wells.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if James Schuyler has published any books based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if H. G. Wells has published any books based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine results from both authors to conclude if both James Schuyler and H. G. Wells have published books.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph begins by retrieving the list of books for each author separately. Each retrieval node is followed by a reasoning node that determines whether the respective author has published any books. Finally, a reasoning node combines these results to determine whether both authors have published books."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Orthodox Jewish feminism\nOrthodox Jewish feminism (also known as Orthodox feminism amongst Jews) is a movement in Orthodox Judaism which seeks to further the cause of a more egalitarian approach to Jewish practice within the bounds of Jewish Law. The major organizations of this movement is the Jewish Orthodox Feminist Alliance (JOFA) in North America, and Women of the Wall (WOW) and its affiliates in Israel and internationally, known as ICWOW - The International Committee for Women of the Wall. In Israel, the leading Orthodox feminist organization is Kolech (http://www.kolech.org.il), started by Dr. Hannah Kehat. Australia has one Orthodox partnership minyan, Shira Hadasha (http://www.shira.org.au), in Melbourne.",
+            "The Kill Order\nThe Kill Order is a 2012 young adult dystopian science fiction novel written by American author James Dashner and published on August 14, 2012 by Delacorte Press. It is the first prequel book in \"The Maze Runner\" series and the fourth installment overall. The book is set prior to the events of \"The Fever Code\" and 13 years before \"The Maze Runner\" book.",
+            "The Fever Code\nThe Fever Code is a 2016 young adult dystopian science fiction novel written by American author James Dashner and published on September 27, 2016 by Delacorte Press. It is the second prequel book in \"The Maze Runner\" series and the fifth installment overall. The book is chronologically set in between the events of \"The Kill Order\" and immediately before \"The Maze Runner\" book.",
+            "Comics artist\nA comics artist (also comic book artist or graphic novel artist, comic book producer, comic book illustrator, comic book writer, and comic book author) is a person working within the comics medium on comic strips, comic books, or graphic novels. The term may refer to any number of artists who contribute to produce a work in the comics form, from those who oversee all aspects of the work to those who contribute only a part.",
+            "The Jane Austen Book Club\nThe Jane Austen Book Club is a 2004 novel by American author Karen Joy Fowler. The story, which takes place near Sacramento, California, centers on a book club consisting of five women and one man who meet once a month to discuss Jane Austen's six novels. It was a critical success and became a national bestseller.",
+            "Morrie Schwartz\nMorris \"Morrie\" S. Schwartz (December 20, 1916 \u2013 November 4, 1995) was a sociology professor at Brandeis University and an author. He was the subject of the best-selling book \"Tuesdays with Morrie\", which was written by Mitch Albom, a sportswriter who was a former student of his, and published in 1997. The book was followed by a film version based on the book that was made for television.",
+            "Scientology: The Now Religion\nScientology: The Now Religion is a non-fiction book on Scientology, written by George Malko. The book was the first full length analysis of the history surrounding the founding of the Church of Scientology, and L. Ron Hubbard. The author conducted interviews with members, and provides analysis about certain practices. The book was published in 1970 in Hardcover format by Delacorte Press, and then in a paperback edition in 1971, by Dell Publishing.",
+            "Will Jacobs\nWill Jacobs (born 1955) is an American comics and humor writer. He was a coauthor with Gerard Jones on \"The Beaver Papers\", \"The Comic Book Heroes\", and the comic book \"The Trouble with Girls\" (1987\u20131993). He was a contributor to \"National Lampoon magazine\" and various DC Comics. Jacobs left professional writing in the 1990s to start a used and antiquarian book service, Avalon Books. He co-wrote with Jones \"The Comic Book Heroes\", a book dedicated to the history of the American comic book industry from the Silver Age to the present.",
+            "The Warren Buffett Way\nThe Warren Buffett Way, a book by author Robert Hagstrom, outlines the principles of value investing practiced by successful investor Warren Buffett.",
+            "Sarah Ban Breathnach\nSarah Ban Breathnach (pronounced \u201cBon Brannock\u201d), is a best-selling author, philanthropist and public speaker. She is the author of thirteen books, including \"Simple Abundance: A Daybook of Comfort and Joy\" which spent more than two years on The New York Times Best Seller list where it held the number one position for a year. To date, \"Simple Abundance\" has sold over 5 million copies and has been translated into 28 languages. Ban Breathnach's follow up book \"Simple Abundance\", \"Something More\", debuted at the number one spot on the best selling book lists of the \"New York Times\", \"USA Today\", \"The Wall Street Journal\" and \"Publisher's Weekly\". To date, \"Something More\" has sold over 1.2 million copies. Ban Breathnach was also the first author in the history of the \"Wall Street Journal's\" list of best-selling books, to appear in both the number one (\"Simple Abundance\") and number two (\"The Simple Abundance Journal of Gratitude\") slots."
+        ],
+        "thoughts": [
+            "There are no books published by James Schuyler in the provided information.",
+            "Based on the retrieved information, it appears that James Schuyler has not published any books.",
+            "Unfortunately, there is no information available on the specific books published by H. G. Wells.",
+            "Based on the lack of specific information available, it is not possible to determine if H. G. Wells has published any books. Further research or a different source of information may be needed to confirm this.",
+            "Based on the combined results from both authors, it can be concluded that James Schuyler has not published any books. However, it is inconclusive whether H. G. Wells has published any books due to the lack of specific information available. Further research or a different source of information may be needed to confirm this."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Have James Schuyler and H. G. Wells both published books?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about books published by James Schuyler.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about books published by H. G. Wells.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if James Schuyler has published any books from the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if H. G. Wells has published any books from the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to answer whether both authors have published books.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to handle the task by first retrieving and reasoning about the publication history of each author separately. Nodes 1 and 2 are retrieval and reasoning tasks that gather book publication information for James Schuyler and H. G. Wells, respectively. Nodes 3 and 4 analyze the retrieved information to determine if each author has published books. Finally, Node 5 compiles these findings to conclude whether both authors have published books, which answers the original question."
+        },
+        "recall": 0.6666666666666666,
+        "retrieved_passages": [
+            "First and Last Things\nFirst and Last Things is a 1908 work of philosophy by H. G. Wells setting forth his beliefs in four \"books\" entitled \"Metaphysics,\" \"Of Belief,\" \"Of General Conduct,\" and \"Some Personal Things.\" Parts of the book were published in the \"Independent Magazine\" in July and August 1908. Wells revised the book extensively in 1917, in response to his religious conversion, but later published a further revision in 1929 that restored much of the book to its earlier form. Its main intellectual influences are Darwinism and certain German thinkers Wells had read, such as August Weismann. The pragmatism of William James, who had become a friend of Wells, was also an influence.",
+            "The Story of a Great Schoolmaster\nThe Story of a Great Schoolmaster is a 1924 biography of Frederick William Sanderson (1857-1922) by H. G. Wells. It is the only biography Wells wrote. Sanderson was a personal friend, having met Wells in 1914 when his sons George Philip ('Gip'), born in 1901, and Frank Richard, born in 1903, became pupils at Oundle School, of which Sanderson was headmaster from 1892 to 1922. After Sanderson died while giving a lecture at University College London at which he was introduced by Wells, the famous author agreed to help produce a biography to raise money for the school. But in December 1922, after disagreements emerged with Sanderson's widow about his approach to the subject, Wells withdrew from the official biography (published in 1923 as \"Sanderson of Oundle\"; Wells wrote much of the text but the volume was published without listing an author) and published his own work separately.",
+            "H. G. Wells\nHerbert George Wells (21 September 1866 \u2013 13 August 1946), usually referred to as H. G. Wells, was an English writer. He was prolific in many genres, including the novel, history, politics, social commentary, and textbooks and rules for war games. Wells is now best remembered for his science fiction novels and is called a \"father of science fiction\", along with Jules Verne and Hugo Gernsback. His most notable science fiction works include \"The Time Machine\" (1895), \"The Island of Doctor Moreau\" (1896), \"The Invisible Man\" (1897), and \"The War of the Worlds\" (1898). He was nominated for the Nobel Prize in Literature four times.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Star Begotten\nStar Begotten is a 1937 novel by H. G. Wells. It tells the story of a series of men who conjecture upon the possibility of the human race being altered, by genetic modification, by Martians to replace their own dying planet.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "How? (song)\n\"How?\" is a song from John Lennon's second solo album \"Imagine\", released in 1971. It is a contemplative song inspired by the Primal Therapy he was undergoing with his wife Yoko Ono, during which he faced many personal questions such as \"How can I go forward when I don't know which way I'm facing?\" This song also shows his thoughts about the world in general (such as \"And the World is so tough; Sometimes I feel I've had enough\").",
+            "James Fieser\nJames Fieser is professor of philosophy at the University of Tennessee at Martin. He received his B.A. from Berea College, and his M.A. and Ph.D. in philosophy from Purdue University. He is founder and general editor of the Internet Encyclopedia of Philosophy. He is author, coauthor or editor of more than ten text books.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "List of James Bond novels and short stories\nThe James Bond literary franchise is a series of novels and short stories, first published in 1953 by Ian Fleming, a British author, journalist, and former naval intelligence officer. James Bond, often referred to by his code name, 007, is a British Secret Service agent; the character was created by journalist and author Ian Fleming, and first appeared in his 1953 novel \"Casino Royale\"; the books are set in a contemporary period, between May 1951 and February 1964. Fleming went on to write a total of twelve novels and two collections of short stories, all written at his Jamaican home Goldeneye and published annually. Two of his books were published after his death in 1964.",
+            "James Schuyler\nJames Marcus Schuyler (November 9, 1923 \u2013 April 12, 1991) was an American poet. His awards include the Pulitzer Prize for Poetry for his 1980 collection \"The Morning of the Poem\". He was a central figure in the New York School and is often associated with fellow New York School poets John Ashbery, Frank O'Hara, Kenneth Koch, and Barbara Guest.",
+            "Mariana Griswold Van Rensselaer\nMariana Griswold Van Rensselaer (February 21, 1851 \u2013 January 20, 1934), usually known as Mrs. Schuyler Van Rensselaer, was an American author.",
+            "Mrs. Schuyler Van Rensselaer (Mariana Griswold)\nMrs. Schuyler Van Rensselaer (Mariana Griswold) is a bronze sculpture by American artist Augustus Saint-Gaudens. It was designed in 1888 and cast in 1890. This artwork portrays the American author, art critic, and reformer Mariana Griswold Van Rensselaer (1851\u20131934), who \"championed Saint-Gaudens in articles on his public monuments and relief sculptures\".",
+            "Philip Jeremiah Schuyler\nPhilip Jeremiah Schuyler (January 21, 1768 Albany, New York \u2013 February 21, 1835 New York City) was an American politician from New York. His siblings included Angelica Schuyler Church, Elizabeth Schuyler Hamilton, and Margarita \"Peggy\" Schuyler Van Renesslaer.",
+            "Charles North (poet)\nCharles North (born June 9, 1941) is an American poet, essayist and teacher. Described by the poet James Schuyler as \u201cthe most stimulating poet of his generation,\u201d he has received two National Endowment for the Arts Creative Writing Fellowships, an Individual Artist\u2019s Grant from the Foundation for Contemporary Arts, four Fund for Poetry awards, and a Poets Foundation award."
+        ],
+        "thoughts": [
+            "James Schuyler was an American poet, known for his association with the New York School of poets. He won the Pulitzer Prize for Poetry for his 1980 collection \"The Morning of the Poem\". Some of his notable contemporaries in the New York School include John Ashbery, Frank O'Hara, Kenneth Koch, and Barbara Guest.",
+            "Yes, James Schuyler has published at least one book, \"The Morning of the Poem\", for which he won the Pulitzer Prize for Poetry in 1980.",
+            "H. G. Wells was an English writer known for his prolific work in various genres, including science fiction. Some of his notable science fiction novels include \"The Time Machine,\" \"The Island of Doctor Moreau,\" \"The Invisible Man,\" and \"The War of the Worlds.\" In addition to his science fiction works, Wells also wrote non-fiction books such as \"First and Last Things,\" a work of philosophy, and \"The Story of a Great Schoolmaster,\" a biography of Frederick William Sanderson. Wells was also nominated for the Nobel Prize in Literature four times.\n\nOther works mentioned in the input, such as \"My Heidelberg, I Can Not Forget You,\" \"Star Begotten,\" \"Publication bias,\" \"Postpipe,\" and \"How?\" are not directly related to books published by H. G. Wells.",
+            "Yes, H. G. Wells has published several books, including \"The Time Machine,\" \"The Island of Doctor Moreau,\" \"The Invisible Man,\" and \"The War of the Worlds,\" as well as non-fiction works such as \"First and Last Things\" and \"The Story of a Great Schoolmaster.\"",
+            "Both authors have published books. James Schuyler has published \"The Morning of the Poem\" and H. G. Wells has published several books including \"The Time Machine,\" \"The Island of Doctor Moreau,\" \"The Invisible Man,\" and \"The War of the Worlds.\""
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Have James Schuyler and H. G. Wells both published books?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Search for the list of books published by James Schuyler.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Search for the list of books published by H. G. Wells.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if James Schuyler has published any books by analyzing the list of works retrieved in Node 1.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if H. G. Wells has published any books by analyzing the list of works retrieved in Node 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results from Node 3 and Node 4 to conclude whether both James Schuyler and H. G. Wells have published books.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph begins by retrieving information about the published works of both James Schuyler and H. G. Wells in parallel retrieval steps. The subsequent reasoning steps analyze the retrieved information to determine if each author has published any books. Finally, the results from these analyses are combined to answer the original question about whether both authors have published books."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Job sharing\nJob sharing or work sharing is an employment arrangement where typically two people are retained on a part-time or reduced-time basis to perform a job normally fulfilled by one person working full-time. Since all positions are shared thus leads to a net reduction in per-employee income. The people sharing the job work as a team to complete the job task and are equally responsible for the job workload. Compensation is apportioned between the workers, Working hours, pay and holidays are divided equally. The Pay As You Go system helps make deductions for national insurance and superannuations are made as a straightforward percentage.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Mursm\u00e4cka\nMursm\u00e4cka, also called \"bruksm\u00e4cka\" or only \"sm\u00e4cka\", was an historical profession for women in Sweden. A mursm\u00e4cka was a female construction worker with the task to hand mortar during construction work. The profession is recorded from at least 1691 (though it is not confirmed by name until the 1830s) and discontinued in 1922. This was a very hard but common work for a poor uneducated women during the 19th century, particularly in Stockholm. In July 1888, the Mursm\u00e4cka of Stockholm performed a great strike action which attracted considerable attention in contemporary Sweden.",
+            "James Schuyler\nJames Marcus Schuyler (November 9, 1923 \u2013 April 12, 1991) was an American poet. His awards include the Pulitzer Prize for Poetry for his 1980 collection \"The Morning of the Poem\". He was a central figure in the New York School and is often associated with fellow New York School poets John Ashbery, Frank O'Hara, Kenneth Koch, and Barbara Guest.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Chess problem\nA chess problem, also called a chess composition, is a puzzle set by somebody using chess pieces on a chess board, that presents the solver with a particular task to be achieved. For instance, a position might be given with the instruction that White is to move first, and checkmate Black in two moves against any possible defense. A person who creates such problems is known as a composer. There is a good deal of specialized jargon used in connection with chess problems; see glossary of chess problems for a list.",
+            "The Five Obstructions\nThe Five Obstructions is a 2003 Danish documentary film directed by Lars von Trier and J\u00f8rgen Leth. The film is conceived as a documentary, but incorporates lengthy sections of experimental films produced by the filmmakers. The premise is that von Trier has created a challenge for his friend and mentor, J\u00f8rgen Leth, another renowned filmmaker. von Trier's favorite film is Leth's \"The Perfect Human\" (1967), and von Trier gives Leth the task of remaking \"The Perfect Human\" five times, each time with a different \"obstruction\" (or obstacle) imposed by von Trier.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Pierre Martory\nPierre Martory (December 1, 1920 \u2013 October 5, 1998) was a French poet whose influence on New York School poets was quiet but profound. His work was admired by Frank O'Hara, James Schuyler, Harry Mathews, and others, and translated extensively by John Ashbery, with whom he shared his life in Paris for nearly a decade. His work has appeared in many books in both England and the United States, as well as in \"The New Yorker\" and \"Poetry\". Martory\u2019s personal \u201ccharm,\u201d the poet Ann Lauterbach once said, \u201cdevolved back to the original meaning of \u2018spell.\u2019\u201d However, as Ashbery has noted, \u201cBoth the humor and the sadness in his poems are always rendered with an unemphatic clarity that is certainly Mozartian.\u201d",
+            "Charles North (poet)\nCharles North (born June 9, 1941) is an American poet, essayist and teacher. Described by the poet James Schuyler as \u201cthe most stimulating poet of his generation,\u201d he has received two National Endowment for the Arts Creative Writing Fellowships, an Individual Artist\u2019s Grant from the Foundation for Contemporary Arts, four Fund for Poetry awards, and a Poets Foundation award.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Angelica Schuyler Church\nAngelica Church (n\u00e9e Schuyler ; February 20, 1756 \u2013 March 13, 1814) was the eldest daughter of Continental Army General Philip Schuyler, wife of British MP John Barker Church, sister of Elizabeth Schuyler Hamilton (wife of Alexander Hamilton), Margarita \"Peggy\" Schuyler Van Rensselaer and Philip Jeremiah Schuyler.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song."
+        ],
+        "thoughts": [
+            "Unfortunately, there is no specific list of books published by James Schuyler available in the provided information. It seems that the information provided is not relevant to the search for books published by James Schuyler, the American poet.",
+            "Based on the information retrieved in Node 1, it is not possible to determine if James Schuyler has published any books. The provided information does not include a specific list of books published by James Schuyler. Therefore, it is inconclusive whether he has published any books based on the current information available.",
+            "I'm sorry, but I was unable to find the list of books published by H. G. Wells.",
+            "Based on the result from the upstream task, it appears that there is no list of books published by H. G. Wells available. Therefore, it cannot be determined if H. G. Wells has published any books based on the information retrieved in Node 2.",
+            "Based on the information retrieved from Node 3 and Node 4, it is inconclusive whether both James Schuyler and H. G. Wells have published books. The provided information does not include specific lists of books published by either author, therefore it cannot be determined if they have published any books based on the current information available."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Have James Schuyler and H. G. Wells both published books?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve a list of all published works by James Schuyler.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve a list of all published works by H. G. Wells.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if James Schuyler has published any books by checking the list for any entry classified as a book.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if H. G. Wells has published any books by checking the list for any entry classified as a book.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine results to conclude whether both James Schuyler and H. G. Wells have published books.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the task by first retrieving published works of both authors separately. It then checks each list to determine if either author has any works classified as books. Finally, it combines the results to answer the original question whether both have published books."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "Device (metal band)\nDevice was an industrial metal band started by David Draiman, frontman of the heavy metal group Disturbed. Draiman was approached by Geno Lenardo, former guitarist of Filter, and together they started to work on new material. The two started work on a debut album in June 2012. The result of those sessions, \"Device\", was released on April 9, 2013. The first single and third track, \"Vilify\" was released to radio ahead of the album on February 19, 2013, alongside its first music video, directed by P. R. Brown. The second single and the introductory track, \"You Think You Know\", was released on June 11, 2013, alongside its music video, directed once again by Brown.",
+            "Sleep Tonight\n\"Sleep Tonight\" appeared on the Rolling Stones' 1986 album \"Dirty Work\". It is the second song on the ten-track album where lead vocals are performed by Keith Richards, \"Too Rude\" being the first. This was the first time two songs sung by Richards appeared on a Rolling Stones album; since \"Dirty Work\" all their studio albums have included at least two tracks featuring Richards' lead vocals.",
+            "Arthur Roberts (editor)\nArthur Roberts July 17, 1890 \u2013 February 5, 1961), also known as Arthur E. Roberts, was an American film editor who edited over 100 films during his almost 30 year career. He began ending towards the end of the silent era of the film industry, his first film being 1927's \"The College Hero\", directed by Walter Lang. His last film was Republic's \"Lay That Rifle Down\" in 1955, after which he spent a brief period as the editor for the television series, \"Lassie\", before retiring in 1956. During his career he would work with many famous directors, including Frank Capra (on several films, including \"The Donovan Affair\"), Lowell Sherman (on \"The Royal Bed\"), William Seiter (on several films, including \"Way Back Home\"), Edward Cline (on \"Cracked Nuts\"), George Cukor (\"A Bill of Divorcement\"), Dorothy Arzner (the first female member of the DGA, on \"Christopher Strong\"), Anthony Mann (\"Strangers in the Night\"), George Archainbaud (\"Girls of the Big House\"), Fritz Lang (\"House by the River\"),",
+            "Hans Bocksberger der \u00c4ltere\nHans Bocksberger was born in Mondsee, the son of Ulrich and Anna Bocksberger. The work of his father Ulrich Bocksberger is largely unknown. Hans may have initially studied with his father, then later traveled to Italy where he picked up styles he would later incorporate into his own work. Hans married his wife Margaret in 1542. They had nine children together: sons Hans Bocksberger the Younger and D. J. Heinrich were both painters, in addition to Anna, George, Sabine, Catharina, Elisabeth, Margarethe, Lucia. Hans died in Salzburg in 1561. His wife Margaret died in 1579.",
+            "Yameen\nYameen is a hiphop producer from Philadelphia, PA. His most recent work, \"Come On & Go Off\" was released on September 2nd, 2014 on Rumble Pack Records. His music can be heard weekly on the Activision videogames podcast, One of Swords where he is also occasionally a guest commentator.",
+            "Job sharing\nJob sharing or work sharing is an employment arrangement where typically two people are retained on a part-time or reduced-time basis to perform a job normally fulfilled by one person working full-time. Since all positions are shared thus leads to a net reduction in per-employee income. The people sharing the job work as a team to complete the job task and are equally responsible for the job workload. Compensation is apportioned between the workers, Working hours, pay and holidays are divided equally. The Pay As You Go system helps make deductions for national insurance and superannuations are made as a straightforward percentage.",
+            "The Dream of Gerontius\nThe Dream of Gerontius, Op. 38, is a work for voices and orchestra in two parts composed by Sir Edward Elgar in 1900, to text from the poem by John Henry Newman. It relates the journey of a pious man's soul from his deathbed to his judgment before God and settling into Purgatory. Elgar disapproved of the use of the term \"oratorio\" for the work, though his wishes are not always followed. The piece is widely regarded as Elgar's finest choral work, and some consider it his masterpiece."
+        ],
+        "thoughts": [
+            "There are no published works by James Schuyler mentioned in the provided information.",
+            "Based on the provided information, there are no published works by James Schuyler mentioned in the list. Therefore, it can be concluded that James Schuyler has not published any books.",
+            "Unfortunately, there is no information available on the published works of H. G. Wells in the provided text.",
+            "Based on the provided information, it is not possible to determine if H. G. Wells has published any books.",
+            "Based on the combined results, it can be concluded that James Schuyler has not published any books, while it is not possible to determine if H. G. Wells has published any books."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Have James Schuyler and H. G. Wells both published books?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine if James Schuyler has published any books.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine if H. G. Wells has published any books.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Synthesize the information to determine if both James Schuyler and H. G. Wells have published books.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the task into individual verification steps for each author. First, it retrieves and checks if each author has published books independently. After gathering information about both authors, it then combines the findings to provide the final answer to the original question."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "First and Last Things\nFirst and Last Things is a 1908 work of philosophy by H. G. Wells setting forth his beliefs in four \"books\" entitled \"Metaphysics,\" \"Of Belief,\" \"Of General Conduct,\" and \"Some Personal Things.\" Parts of the book were published in the \"Independent Magazine\" in July and August 1908. Wells revised the book extensively in 1917, in response to his religious conversion, but later published a further revision in 1929 that restored much of the book to its earlier form. Its main intellectual influences are Darwinism and certain German thinkers Wells had read, such as August Weismann. The pragmatism of William James, who had become a friend of Wells, was also an influence.",
+            "H. G. Wells\nHerbert George Wells (21 September 1866 \u2013 13 August 1946), usually referred to as H. G. Wells, was an English writer. He was prolific in many genres, including the novel, history, politics, social commentary, and textbooks and rules for war games. Wells is now best remembered for his science fiction novels and is called a \"father of science fiction\", along with Jules Verne and Hugo Gernsback. His most notable science fiction works include \"The Time Machine\" (1895), \"The Island of Doctor Moreau\" (1896), \"The Invisible Man\" (1897), and \"The War of the Worlds\" (1898). He was nominated for the Nobel Prize in Literature four times.",
+            "Star Begotten\nStar Begotten is a 1937 novel by H. G. Wells. It tells the story of a series of men who conjecture upon the possibility of the human race being altered, by genetic modification, by Martians to replace their own dying planet.",
+            "The Story of a Great Schoolmaster\nThe Story of a Great Schoolmaster is a 1924 biography of Frederick William Sanderson (1857-1922) by H. G. Wells. It is the only biography Wells wrote. Sanderson was a personal friend, having met Wells in 1914 when his sons George Philip ('Gip'), born in 1901, and Frank Richard, born in 1903, became pupils at Oundle School, of which Sanderson was headmaster from 1892 to 1922. After Sanderson died while giving a lecture at University College London at which he was introduced by Wells, the famous author agreed to help produce a biography to raise money for the school. But in December 1922, after disagreements emerged with Sanderson's widow about his approach to the subject, Wells withdrew from the official biography (published in 1923 as \"Sanderson of Oundle\"; Wells wrote much of the text but the volume was published without listing an author) and published his own work separately.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Bond Girls Are Forever\nBond Girls Are Forever is a 2002 James Bond documentary film hosted by actress Maryam d'Abo, who had played the role of Kara Milovy in the 15th James Bond film \"The Living Daylights\". It was accompanied by a 2003 book written by John Cork and d'Abo. The book is subtitled The Women of James Bond. Both the film and the book is a tribute to the elite club of women who have played the role of a Bond girl.",
+            "James Schuyler\nJames Marcus Schuyler (November 9, 1923 \u2013 April 12, 1991) was an American poet. His awards include the Pulitzer Prize for Poetry for his 1980 collection \"The Morning of the Poem\". He was a central figure in the New York School and is often associated with fellow New York School poets John Ashbery, Frank O'Hara, Kenneth Koch, and Barbara Guest.",
+            "Darragh Park\nDarragh Park (July 24, 1939 \u2013 April 17, 2009) was an American Artist, and the literary executor of the estate of Pulitzer Prize\u2013winning poet James Schuyler. Perhaps best known for his book cover illustrations, Park painted landscapes as well as cityscapes in the style of Fairfield Porter. He was based in Bridgehampton, NY and his works were on exhibit at the Parrish Art Museum. and at the Guild Hall in East Hampton.",
+            "Nick Fury (2017 comic book)\nNick Fury is a 2017 ongoing comic book series published by Marvel Comics. The series is written by James Dale Robinson and primarily drawn by ACO. It is the first series to feature Nick Fury Jr. as its main character.",
+            "The Kill Order\nThe Kill Order is a 2012 young adult dystopian science fiction novel written by American author James Dashner and published on August 14, 2012 by Delacorte Press. It is the first prequel book in \"The Maze Runner\" series and the fourth installment overall. The book is set prior to the events of \"The Fever Code\" and 13 years before \"The Maze Runner\" book.",
+            "The Fever Code\nThe Fever Code is a 2016 young adult dystopian science fiction novel written by American author James Dashner and published on September 27, 2016 by Delacorte Press. It is the second prequel book in \"The Maze Runner\" series and the fifth installment overall. The book is chronologically set in between the events of \"The Kill Order\" and immediately before \"The Maze Runner\" book.",
+            "Meech Wells\nMeech Wells (born Cecil D. Womack, Jr.) is a music producer from the United States. He works primarily on hip hop music, and has produced or co-produced for artists Snoop Dogg and Shaquille O'Neal. Wells is also the son of Motown singer Mary Wells and musician/songwriter, Cecil Womack. Being the son of Motown legend Mary Wells may have helped jumpstart Meech Wells' career, but the West Coast rap producer quickly proved his talent and eventually aligned himself with Snoop Dogg, another relationship that definitely didn't hurt his career. Before being Snoop's producer of choice during the late 1990s and early 2000s, Wells began his career as part of a funk band called Trey Lewd that also featured Tracey Lewis, George Clinton's son; this provided him with the opportunity to work with Clinton himself. By 1993, Wells found himself working alongside producer/rapper Def Jef; the two's production on Shaquille O'Neil's \"I Got Skillz\" (a surprise hit single) won them instant credentials. Throughout the mid-'90s, he continued to hone his craft, working on a number of remix projects before eventually being introduced to Snoop through a friend. Before long, the two were working together as a potent duo, beginning with \"Still a G Thang,\" one of the better songs on Snoop's Da Game Is to Be Sold, Not to Be Told. Wells produced a few No Limit songs featuring Snoop\u2014Tru's \"It's a Beautiful Thang,\" Silkk the Shocker's \"Get It Up\"\u2014before playing a major role in bringing a West Coast sound to Snoop's Top Dogg album in 1999: \"In Love With a Thug,\" \"Better Days,\" \"Gangsta Ride,\" among others. In 2000 he reprised his role as one of Snoop's producers of choice, producing tracks for Tha Eastsidaz' self-titled debut and Doggy's Angels' Pleezbalevit, as well as Snoop's own Tha Last Meal (\"Go Away,\" \"Issues\").",
+            "Anita G.\n\"Anita G.\" is a short story written by Alexander Kluge in 1962, which was adapted into the film \"Yesterday Girl\" in 1966."
+        ],
+        "thoughts": [
+            "James Schuyler has published a book titled \"The Morning of the Poem\", for which he won the Pulitzer Prize for Poetry in 1980.",
+            "Yes, H. G. Wells has published several books, including \"First and Last Things,\" \"Star Begotten,\" and \"The Story of a Great Schoolmaster.\" He is also known for his science fiction novels such as \"The Time Machine,\" \"The Island of Doctor Moreau,\" \"The Invisible Man,\" and \"The War of the Worlds.\"",
+            "Both James Schuyler and H. G. Wells have published books. James Schuyler won the Pulitzer Prize for Poetry in 1980 for his book \"The Morning of the Poem,\" while H. G. Wells is known for his science fiction novels such as \"The Time Machine,\" \"The Island of Doctor Moreau,\" \"The Invisible Man,\" and \"The War of the Worlds,\" as well as other books such as \"First and Last Things\" and \"Star Begotten.\""
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Have James Schuyler and H. G. Wells both published books?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve a list of works published by James Schuyler.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve a list of works published by H. G. Wells.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the retrieved works of James Schuyler to determine if any are books.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the retrieved works of H. G. Wells to determine if any are books.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the analyses from the previous nodes to determine if both James Schuyler and H. G. Wells have published books.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph is designed to first gather information about the works of both authors, ensuring that we have comprehensive lists for each. The retrieval nodes (1 and 2) focus on collecting data about their publications. The reasoning nodes (3 and 4) then assess whether any of these publications are books. Finally, node 5 synthesizes this information to determine if both authors have published books, thus answering the original question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "H. G. Wells\nHerbert George Wells (21 September 1866 \u2013 13 August 1946), usually referred to as H. G. Wells, was an English writer. He was prolific in many genres, including the novel, history, politics, social commentary, and textbooks and rules for war games. Wells is now best remembered for his science fiction novels and is called a \"father of science fiction\", along with Jules Verne and Hugo Gernsback. His most notable science fiction works include \"The Time Machine\" (1895), \"The Island of Doctor Moreau\" (1896), \"The Invisible Man\" (1897), and \"The War of the Worlds\" (1898). He was nominated for the Nobel Prize in Literature four times.",
+            "First and Last Things\nFirst and Last Things is a 1908 work of philosophy by H. G. Wells setting forth his beliefs in four \"books\" entitled \"Metaphysics,\" \"Of Belief,\" \"Of General Conduct,\" and \"Some Personal Things.\" Parts of the book were published in the \"Independent Magazine\" in July and August 1908. Wells revised the book extensively in 1917, in response to his religious conversion, but later published a further revision in 1929 that restored much of the book to its earlier form. Its main intellectual influences are Darwinism and certain German thinkers Wells had read, such as August Weismann. The pragmatism of William James, who had become a friend of Wells, was also an influence.",
+            "The Story of a Great Schoolmaster\nThe Story of a Great Schoolmaster is a 1924 biography of Frederick William Sanderson (1857-1922) by H. G. Wells. It is the only biography Wells wrote. Sanderson was a personal friend, having met Wells in 1914 when his sons George Philip ('Gip'), born in 1901, and Frank Richard, born in 1903, became pupils at Oundle School, of which Sanderson was headmaster from 1892 to 1922. After Sanderson died while giving a lecture at University College London at which he was introduced by Wells, the famous author agreed to help produce a biography to raise money for the school. But in December 1922, after disagreements emerged with Sanderson's widow about his approach to the subject, Wells withdrew from the official biography (published in 1923 as \"Sanderson of Oundle\"; Wells wrote much of the text but the volume was published without listing an author) and published his own work separately.",
+            "Star Begotten\nStar Begotten is a 1937 novel by H. G. Wells. It tells the story of a series of men who conjecture upon the possibility of the human race being altered, by genetic modification, by Martians to replace their own dying planet.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "Kristin Hersh\nKristin Hersh (born August 7, 1966) is an American singer, songwriter and author, known for her solo work and with her rock bands Throwing Muses and 50FootWave. She has released ten solo albums. Her guitar work and composition style ranges from jaggedly dissonant to traditional folk. Hersh's lyrics have a stream-of-consciousness style, reflecting her personal experiences.",
+            "Karen Joy Fowler\nKaren Joy Fowler (born February 7, 1950) is an American author of science fiction, fantasy, and literary fiction. Her work often centers on the nineteenth century, the lives of women, and alienation.",
+            "Bambi's Children\nBambi's Children: The Story of a Forest Family (German: Bambis Kinder: Eine Familie im Walde ) is a novel written by Austrian author Felix Salten as a sequel to his successful work \"Bambi, A Life in the Woods\".",
+            "Samuel R. Delany\nSamuel Ray Delany Jr. ( ; born April 1, 1942), Chip Delany to his friends, is an American author, professor and literary critic. His work includes fiction (especially science fiction), memoir, criticism, and essays on sexuality and society.",
+            "Finn's Hotel\nFinn's Hotel is a posthumously-published collection of ten short narrative pieces written by Irish author James Joyce. Written in 1923, the works were not published until 2013 by Ithys Press, who claimed the work to be a precursor to Joyce's \"Finnegans Wake\".",
+            "Comics artist\nA comics artist (also comic book artist or graphic novel artist, comic book producer, comic book illustrator, comic book writer, and comic book author) is a person working within the comics medium on comic strips, comic books, or graphic novels. The term may refer to any number of artists who contribute to produce a work in the comics form, from those who oversee all aspects of the work to those who contribute only a part.",
+            "Gottfried von Strassburg\nGottfried von Strassburg (died c. 1210) is the author of the Middle High German courtly romance \"Tristan\", an adaptation of the 12th-century \"Tristan and Iseult\" legend. Gottfried's work is regarded, alongside Wolfram von Eschenbach's \"Parzival\" and the \"Nibelungenlied\", as one of the great narrative masterpieces of the German Middle Ages. He is probably also the composer of a small number of surviving lyrics. His work became a source of inspiration for Richard Wagner's opera \"Tristan und Isolde\" (1865).",
+            "Meech Wells\nMeech Wells (born Cecil D. Womack, Jr.) is a music producer from the United States. He works primarily on hip hop music, and has produced or co-produced for artists Snoop Dogg and Shaquille O'Neal. Wells is also the son of Motown singer Mary Wells and musician/songwriter, Cecil Womack. Being the son of Motown legend Mary Wells may have helped jumpstart Meech Wells' career, but the West Coast rap producer quickly proved his talent and eventually aligned himself with Snoop Dogg, another relationship that definitely didn't hurt his career. Before being Snoop's producer of choice during the late 1990s and early 2000s, Wells began his career as part of a funk band called Trey Lewd that also featured Tracey Lewis, George Clinton's son; this provided him with the opportunity to work with Clinton himself. By 1993, Wells found himself working alongside producer/rapper Def Jef; the two's production on Shaquille O'Neil's \"I Got Skillz\" (a surprise hit single) won them instant credentials. Throughout the mid-'90s, he continued to hone his craft, working on a number of remix projects before eventually being introduced to Snoop through a friend. Before long, the two were working together as a potent duo, beginning with \"Still a G Thang,\" one of the better songs on Snoop's Da Game Is to Be Sold, Not to Be Told. Wells produced a few No Limit songs featuring Snoop\u2014Tru's \"It's a Beautiful Thang,\" Silkk the Shocker's \"Get It Up\"\u2014before playing a major role in bringing a West Coast sound to Snoop's Top Dogg album in 1999: \"In Love With a Thug,\" \"Better Days,\" \"Gangsta Ride,\" among others. In 2000 he reprised his role as one of Snoop's producers of choice, producing tracks for Tha Eastsidaz' self-titled debut and Doggy's Angels' Pleezbalevit, as well as Snoop's own Tha Last Meal (\"Go Away,\" \"Issues\").",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Where the Dead Men Lie, and Other Poems\nWhere the Dead Men Lie, and Other Poems (1897) is the first and only collection of poems by Australian poet Barcroft Boake. Edited by A. G. Stephens, it was released in hardback by Angus and Robertson in 1897, five years after the poet's death. It contains an introduction by the editor, an introductory poem by Will H. Ogilvie, and features the poet's major works \"Jack's Last Muster\", \"Jim's Whip\" and \"Where the Dead Men Lie\".",
+            "Robert E. Howard bibliography (poems A\u2013H)\nA list of poems by Robert E. Howard (1906\u20131936), an American writer and poet in early 20th century Texas. His love of poetry came from being read to by his mother at a young age. However, his attempts to make a living by poetry were unsuccessful and he is today most remembered for his short stories and fiction. Nevertheless, Howard wrote hundreds of poems; many were published within his lifetime and the others published after his 1936 suicide."
+        ],
+        "thoughts": [
+            "Unfortunately, there is no information available about works published by James Schuyler in the provided text.",
+            "Based on the lack of information about works published by James Schuyler in the provided text, it is not possible to determine if any of his works are books. Further research or access to a different source of information would be needed to answer this question.",
+            "1. The Time Machine (1895)\n2. The Island of Doctor Moreau (1896)\n3. The Invisible Man (1897)\n4. The War of the Worlds (1898)\n5. First and Last Things (1908)\n6. The Story of a Great Schoolmaster (1924)\n7. Star Begotten (1937)",
+            "Based on the retrieved works of H. G. Wells, it is evident that several of his works are indeed books. The following works can be identified as books: \n1. The Time Machine (1895)\n2. The Island of Doctor Moreau (1896)\n3. The Invisible Man (1897)\n4. The War of the Worlds (1898)\n5. First and Last Things (1908)\n6. The Story of a Great Schoolmaster (1924)\n7. Star Begotten (1937)\n\nTherefore, it can be concluded that H. G. Wells has written several books among his works.",
+            "Based on the analyses from the previous nodes, it can be determined that H. G. Wells has indeed published books, as evidenced by the list of his works which includes several books. However, it is not possible to determine if James Schuyler has published any books based on the lack of information in the provided text."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Have James Schuyler and H. G. Wells both published books?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve a list of published works by James Schuyler.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve a list of published works by H. G. Wells.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if James Schuyler has published any books by checking the list of his works.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if H. G. Wells has published any books by checking the list of his works.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to determine if both James Schuyler and H. G. Wells have published books.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph consists of independent retrieval steps for both authors, James Schuyler and H. G. Wells, to gather a list of their published works (nodes 1 and 2). Each retrieval output is fed into a reasoning step (nodes 3 and 4) to check if either has published books. The final reasoning node (node 5) synthesizes the results of these checks to answer the original question."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "List of James Tiptree Jr. Award winners\nThe following is a list of winners and shortlisted works of the James Tiptree Jr. Award, an annual literary prize for works of science fiction or fantasy that expand or explore one's understanding of gender. It was initiated in February 1991 by science fiction authors Pat Murphy and Karen Joy Fowler, and is awarded and discussed yearly at WisCon.",
+            "Locus Solus (journal)\nLocus Solus was an American journal of experimental poetry and prose that published four issues in 1961 and 1962, one a double issue. The magazine was edited by the poets John Ashbery, Kenneth Koch, and James Schuyler, all of whom contributed to its four issues. The content was completely in English but the journal was published in France (in Lans-en-Vercors) by Harry Mathews.",
+            "Finn's Hotel\nFinn's Hotel is a posthumously-published collection of ten short narrative pieces written by Irish author James Joyce. Written in 1923, the works were not published until 2013 by Ithys Press, who claimed the work to be a precursor to Joyce's \"Finnegans Wake\".",
+            "Darragh Park\nDarragh Park (July 24, 1939 \u2013 April 17, 2009) was an American Artist, and the literary executor of the estate of Pulitzer Prize\u2013winning poet James Schuyler. Perhaps best known for his book cover illustrations, Park painted landscapes as well as cityscapes in the style of Fairfield Porter. He was based in Bridgehampton, NY and his works were on exhibit at the Parrish Art Museum. and at the Guild Hall in East Hampton.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "James Schuyler\nJames Marcus Schuyler (November 9, 1923 \u2013 April 12, 1991) was an American poet. His awards include the Pulitzer Prize for Poetry for his 1980 collection \"The Morning of the Poem\". He was a central figure in the New York School and is often associated with fellow New York School poets John Ashbery, Frank O'Hara, Kenneth Koch, and Barbara Guest.",
+            "Christopher Elrington\nChristopher Robin Elrington FRHistS FSA (20 January 1930 \u2013 3 August 2009) was an English historian, known primarily for his work with the \"Victoria County History\". Elrington was born in Farnborough, as the second of three sons of Brigadier Maxwell Elrington, and his wife Beryl. Christopher's father died in active service in Germany, while the son was 15. Elrington was educated at Wellington College, Berkshire, before performing his military service. He later went to University College, Oxford, where he took a BA. After this he did his MA in medieval history at Bedford College, University of London.",
+            "List of James Bond novels and short stories\nThe James Bond literary franchise is a series of novels and short stories, first published in 1953 by Ian Fleming, a British author, journalist, and former naval intelligence officer. James Bond, often referred to by his code name, 007, is a British Secret Service agent; the character was created by journalist and author Ian Fleming, and first appeared in his 1953 novel \"Casino Royale\"; the books are set in a contemporary period, between May 1951 and February 1964. Fleming went on to write a total of twelve novels and two collections of short stories, all written at his Jamaican home Goldeneye and published annually. Two of his books were published after his death in 1964.",
+            "Solomon Burke\nSolomon Burke (born James Solomon McDonald, March 21, 1940\u00a0\u2013 October 10, 2010) was an American preacher and singer, who shaped the sound of rhythm and blues as one of the founding fathers of soul music in the 1960s and a \"key transitional figure in the development of soul music from rhythm and blues. He had a string of hits including \"Cry to Me\", \"If You Need Me\", \"Got to Get You Off My Mind\", \"Down in the Valley\" and \"Everybody Needs Somebody to Love\". Burke was referred to as \"King Solomon\", the \"King of Rock 'n' Soul\", \"Bishop of Soul\" and the \"Muhammad Ali of soul\". Due to his minimal chart success in comparison to other soul music greats such as James Brown, Wilson Pickett and Otis Redding, Burke has been described as the genre's \"most unfairly overlooked singer\" of its golden age. Atlantic Records executive Jerry Wexler referred to Burke as \"the greatest male soul singer of all time\".",
+            "Integrated Service Provider\nAn Integrated Service Provider (ISP) is a for-hire firm that performs a variety of logistics service activities such as warehousing, transportation, and other functional activities that constitute a total service package. In addition, other categories of spend may fall under the ISP's scope such as maintenance, repair, and operations (MRO) services. Firms that provide such services typically have a good understanding of their customers needs and are responsible for executing services in accordance with contract documents. Normally the scope of work (SOW) and the ISP contract are finalized only after an extensive due diligence period.",
+            "Sleep Tonight\n\"Sleep Tonight\" appeared on the Rolling Stones' 1986 album \"Dirty Work\". It is the second song on the ten-track album where lead vocals are performed by Keith Richards, \"Too Rude\" being the first. This was the first time two songs sung by Richards appeared on a Rolling Stones album; since \"Dirty Work\" all their studio albums have included at least two tracks featuring Richards' lead vocals.",
+            "Fifty Shades Darker\nFifty Shades Darker is a 2012 erotic romance novel by British author E. L. James. It is the second instalment in the \"Fifty Shades\" trilogy that traces the deepening relationship between a college graduate, Anastasia Steele, and a young business magnate, Christian Grey. The first and third volumes, \"Fifty Shades of Grey\" and \"Fifty Shades Freed\", were published in 2011 and 2012. The novel is published by Vintage Books and reached No. 1 on the \"USA Today\" best seller list.",
+            "Chuffilly-Roche\nArthur Rimbaud, French poet, lived for a while in Roche, where his family had a farm. He wrote several works there, notably \"Une saison en enfer\" (\"A Season in Hell\") and \"Le bateau ivre\" (\"The Drunken Boat\").",
+            "Yameen\nYameen is a hiphop producer from Philadelphia, PA. His most recent work, \"Come On & Go Off\" was released on September 2nd, 2014 on Rumble Pack Records. His music can be heard weekly on the Activision videogames podcast, One of Swords where he is also occasionally a guest commentator.",
+            "Job sharing\nJob sharing or work sharing is an employment arrangement where typically two people are retained on a part-time or reduced-time basis to perform a job normally fulfilled by one person working full-time. Since all positions are shared thus leads to a net reduction in per-employee income. The people sharing the job work as a team to complete the job task and are equally responsible for the job workload. Compensation is apportioned between the workers, Working hours, pay and holidays are divided equally. The Pay As You Go system helps make deductions for national insurance and superannuations are made as a straightforward percentage."
+        ],
+        "thoughts": [
+            "Unfortunately, there is no specific list of published works by James Schuyler provided in the given information. However, James Schuyler was a Pulitzer Prize-winning poet associated with the New York School of poets, and his notable work includes the collection \"The Morning of the Poem\", for which he received the Pulitzer Prize for Poetry in 1980.",
+            "Based on the information provided, it is unclear if James Schuyler has published any books. However, he is known for his notable work \"The Morning of the Poem\", for which he received the Pulitzer Prize for Poetry in 1980. Further research or access to a comprehensive list of his works would be needed to determine if he has published any books.",
+            "Some of the published works by H. G. Wells include:\n- The Time Machine\n- The War of the Worlds\n- The Invisible Man\n- The Island of Doctor Moreau\n- The First Men in the Moon\n- The Shape of Things to Come\n- The Outline of History\n- The World Set Free\n- The Food of the Gods and How It Came to Earth\n- The Sleeper Awakes",
+            "Based on the list of works, it is evident that H. G. Wells has indeed published books.",
+            "Based on the results, it is unclear if James Schuyler has published any books, but H. G. Wells has definitely published books."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Have James Schuyler and H. G. Wells both published books?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve a list of works published by James Schuyler.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve a list of works published by H. G. Wells.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if James Schuyler has published any books based on the list of works.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if H. G. Wells has published any books based on the list of works.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to determine if both James Schuyler and H. G. Wells have published books.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is structured to first retrieve information about the published works of both James Schuyler and H. G. Wells separately. Nodes 1 and 2 handle these retrieval tasks. Nodes 3 and 4 then analyze these lists to check if they contain any books specifically. Finally, Node 5 combines the results from Nodes 3 and 4 to determine if both authors have published books, thus providing the answer to the original question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "H. G. Wells\nHerbert George Wells (21 September 1866 \u2013 13 August 1946), usually referred to as H. G. Wells, was an English writer. He was prolific in many genres, including the novel, history, politics, social commentary, and textbooks and rules for war games. Wells is now best remembered for his science fiction novels and is called a \"father of science fiction\", along with Jules Verne and Hugo Gernsback. His most notable science fiction works include \"The Time Machine\" (1895), \"The Island of Doctor Moreau\" (1896), \"The Invisible Man\" (1897), and \"The War of the Worlds\" (1898). He was nominated for the Nobel Prize in Literature four times.",
+            "First and Last Things\nFirst and Last Things is a 1908 work of philosophy by H. G. Wells setting forth his beliefs in four \"books\" entitled \"Metaphysics,\" \"Of Belief,\" \"Of General Conduct,\" and \"Some Personal Things.\" Parts of the book were published in the \"Independent Magazine\" in July and August 1908. Wells revised the book extensively in 1917, in response to his religious conversion, but later published a further revision in 1929 that restored much of the book to its earlier form. Its main intellectual influences are Darwinism and certain German thinkers Wells had read, such as August Weismann. The pragmatism of William James, who had become a friend of Wells, was also an influence.",
+            "The Story of a Great Schoolmaster\nThe Story of a Great Schoolmaster is a 1924 biography of Frederick William Sanderson (1857-1922) by H. G. Wells. It is the only biography Wells wrote. Sanderson was a personal friend, having met Wells in 1914 when his sons George Philip ('Gip'), born in 1901, and Frank Richard, born in 1903, became pupils at Oundle School, of which Sanderson was headmaster from 1892 to 1922. After Sanderson died while giving a lecture at University College London at which he was introduced by Wells, the famous author agreed to help produce a biography to raise money for the school. But in December 1922, after disagreements emerged with Sanderson's widow about his approach to the subject, Wells withdrew from the official biography (published in 1923 as \"Sanderson of Oundle\"; Wells wrote much of the text but the volume was published without listing an author) and published his own work separately.",
+            "Star Begotten\nStar Begotten is a 1937 novel by H. G. Wells. It tells the story of a series of men who conjecture upon the possibility of the human race being altered, by genetic modification, by Martians to replace their own dying planet.",
+            "Kristin Hersh\nKristin Hersh (born August 7, 1966) is an American singer, songwriter and author, known for her solo work and with her rock bands Throwing Muses and 50FootWave. She has released ten solo albums. Her guitar work and composition style ranges from jaggedly dissonant to traditional folk. Hersh's lyrics have a stream-of-consciousness style, reflecting her personal experiences.",
+            "Karen Joy Fowler\nKaren Joy Fowler (born February 7, 1950) is an American author of science fiction, fantasy, and literary fiction. Her work often centers on the nineteenth century, the lives of women, and alienation.",
+            "Bambi's Children\nBambi's Children: The Story of a Forest Family (German: Bambis Kinder: Eine Familie im Walde ) is a novel written by Austrian author Felix Salten as a sequel to his successful work \"Bambi, A Life in the Woods\".",
+            "Samuel R. Delany\nSamuel Ray Delany Jr. ( ; born April 1, 1942), Chip Delany to his friends, is an American author, professor and literary critic. His work includes fiction (especially science fiction), memoir, criticism, and essays on sexuality and society.",
+            "Finn's Hotel\nFinn's Hotel is a posthumously-published collection of ten short narrative pieces written by Irish author James Joyce. Written in 1923, the works were not published until 2013 by Ithys Press, who claimed the work to be a precursor to Joyce's \"Finnegans Wake\".",
+            "Comics artist\nA comics artist (also comic book artist or graphic novel artist, comic book producer, comic book illustrator, comic book writer, and comic book author) is a person working within the comics medium on comic strips, comic books, or graphic novels. The term may refer to any number of artists who contribute to produce a work in the comics form, from those who oversee all aspects of the work to those who contribute only a part.",
+            "Gottfried von Strassburg\nGottfried von Strassburg (died c. 1210) is the author of the Middle High German courtly romance \"Tristan\", an adaptation of the 12th-century \"Tristan and Iseult\" legend. Gottfried's work is regarded, alongside Wolfram von Eschenbach's \"Parzival\" and the \"Nibelungenlied\", as one of the great narrative masterpieces of the German Middle Ages. He is probably also the composer of a small number of surviving lyrics. His work became a source of inspiration for Richard Wagner's opera \"Tristan und Isolde\" (1865).",
+            "Ken St. Andre\nKenneth Eugene St. Andre (born on April 28, 1947 in Ogden, Utah) is an American fantasy author and game designer, best known for his work with \"Tunnels & Trolls\" and \"Wasteland\". He has been an active member of \"The Science Fiction and Fantasy Writers of America\" since 1989.",
+            "Meech Wells\nMeech Wells (born Cecil D. Womack, Jr.) is a music producer from the United States. He works primarily on hip hop music, and has produced or co-produced for artists Snoop Dogg and Shaquille O'Neal. Wells is also the son of Motown singer Mary Wells and musician/songwriter, Cecil Womack. Being the son of Motown legend Mary Wells may have helped jumpstart Meech Wells' career, but the West Coast rap producer quickly proved his talent and eventually aligned himself with Snoop Dogg, another relationship that definitely didn't hurt his career. Before being Snoop's producer of choice during the late 1990s and early 2000s, Wells began his career as part of a funk band called Trey Lewd that also featured Tracey Lewis, George Clinton's son; this provided him with the opportunity to work with Clinton himself. By 1993, Wells found himself working alongside producer/rapper Def Jef; the two's production on Shaquille O'Neil's \"I Got Skillz\" (a surprise hit single) won them instant credentials. Throughout the mid-'90s, he continued to hone his craft, working on a number of remix projects before eventually being introduced to Snoop through a friend. Before long, the two were working together as a potent duo, beginning with \"Still a G Thang,\" one of the better songs on Snoop's Da Game Is to Be Sold, Not to Be Told. Wells produced a few No Limit songs featuring Snoop\u2014Tru's \"It's a Beautiful Thang,\" Silkk the Shocker's \"Get It Up\"\u2014before playing a major role in bringing a West Coast sound to Snoop's Top Dogg album in 1999: \"In Love With a Thug,\" \"Better Days,\" \"Gangsta Ride,\" among others. In 2000 he reprised his role as one of Snoop's producers of choice, producing tracks for Tha Eastsidaz' self-titled debut and Doggy's Angels' Pleezbalevit, as well as Snoop's own Tha Last Meal (\"Go Away,\" \"Issues\").",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Where the Dead Men Lie, and Other Poems\nWhere the Dead Men Lie, and Other Poems (1897) is the first and only collection of poems by Australian poet Barcroft Boake. Edited by A. G. Stephens, it was released in hardback by Angus and Robertson in 1897, five years after the poet's death. It contains an introduction by the editor, an introductory poem by Will H. Ogilvie, and features the poet's major works \"Jack's Last Muster\", \"Jim's Whip\" and \"Where the Dead Men Lie\".",
+            "Robert E. Howard bibliography (poems A\u2013H)\nA list of poems by Robert E. Howard (1906\u20131936), an American writer and poet in early 20th century Texas. His love of poetry came from being read to by his mother at a young age. However, his attempts to make a living by poetry were unsuccessful and he is today most remembered for his short stories and fiction. Nevertheless, Howard wrote hundreds of poems; many were published within his lifetime and the others published after his 1936 suicide."
+        ],
+        "thoughts": [
+            "Unfortunately, there is no information available on works published by James Schuyler.",
+            "Based on the lack of information available, it is not possible to determine if James Schuyler has published any books.",
+            "- The Time Machine (1895)\n- The Island of Doctor Moreau (1896)\n- The Invisible Man (1897)\n- The War of the Worlds (1898)\n- First and Last Things (1908)\n- The Story of a Great Schoolmaster (1924)\n- Star Begotten (1937)",
+            "Yes, H. G. Wells has published several books, including \"The Time Machine,\" \"The Island of Doctor Moreau,\" \"The Invisible Man,\" \"The War of the Worlds,\" \"First and Last Things,\" \"The Story of a Great Schoolmaster,\" and \"Star Begotten.\"",
+            "Based on the results, it is not possible to determine if James Schuyler has published any books. However, H. G. Wells has published several books."
+        ],
+        "is_best": false
+    }
+]

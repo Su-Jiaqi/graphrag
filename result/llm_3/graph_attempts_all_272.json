@@ -1,0 +1,735 @@
+[
+    {
+        "question": "Are Horace Ov\u00e9 and A. Edward Sutherland both photographers?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve biographical information about Horace Ov\u00e9.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine if Horace Ov\u00e9 is a photographer based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve biographical information about A. Edward Sutherland.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if A. Edward Sutherland is a photographer based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Analyze the results to conclude whether both Horace Ov\u00e9 and A. Edward Sutherland are photographers.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The question requires confirming if both individuals are photographers. The execution graph is structured to first retrieve biographical data for each individual (Nodes 1 and 3), then determine their professions (Nodes 2 and 4). The final step (Node 5) synthesizes this information to answer the main question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Horace Ov\u00e9\nHorace Ov\u00e9, CBE (born 1939), is a British filmmaker, photographer, painter and writer, one of the leading black independent film-makers to emerge in Britain since the post-war period. Ov\u00e9 holds the \"Guinness World Record\" for being the first black British film-maker to direct a feature-length film, \"Pressure\" (1975). In its retrospective history, \"100 Years of Cinema\", the British Film Institute (BFI) declared: \"Horace Ov\u00e9 is undoubtedly a pioneer in Black British history and his work provides a perspective on the Black experience in Britain.\"",
+            "Zak Ov\u00e9\nZak Ov\u00e9 (born 1966) is a British visual artist who works between sculpture, film and photography, living in London, UK, and Trinidad. His themes reflect \"his documentation of and anthropological interest in diasporic and African history, specifically that which is explored through Trinidadian carnival.\" In work that is \"filtered through his own personal and cultural upbringing, with a black Trinidadian father and white Irish mother\", he has exhibited widely in Europe, the United States and Africa, participating in international museum shows in London, Dakar, Paris, Dubai, Prague, Berlin, Johannesburg, Bamako and New York City. His father is the filmmaker Horace Ov\u00e9 and his sister is the actress Indra Ov\u00e9.",
+            "A. Edward Sutherland\nAlbert Edward Sutherland (January 5, 1895 \u2013 December 31, 1973) was a film director and actor. Born in London, he was from a theatrical family. His father, Al Sutherland, was a theatre manager and producer and his mother, Julie Ring, was a vaudeville performer. He was a nephew of both Blanche Ring and Thomas Meighan, who was married to Frances Ring, another of his mother's sisters.",
+            "Pressure (film)\nPressure is a 1976 British drama film and the first feature-length fiction film directed by a Black film-maker in Britain. Directed by Horace Ov\u00e9, and co-written by him with Samuel Selvon, \"Pressure\" is a powerful portrait of inter-generational tensions between first- and second-generation West Indian migrants in London's Notting Hill area. According to Julia Toppin,",
+            "The Orchid House (TV serial)\nThe Orchid House is a four-part television serial that first aired on British television's Channel 4 from 21 February to 14 March 1991, directed by Horace Ov\u00e9. Its cast featured Diana Quick, Madge Sinclair, Nigel Terry, Elizabeth Hurley, Kate Buffery and Frances Barber, and was based on Phyllis Shand Allfrey's only novel of the same name.",
+            "Playing Away\nPlaying Away is a 1987 TV comedy film directed by Horace Ov\u00e9, from a screenplay by Caryl Phillips. In the story, an English cricket team, fictitiously named \"Sneddington\" (based in Lavenham, Suffolk), invites a team of West Indian heritage based in Brixton (South London) to play a charity game in support of their \"Third World Week.\" According to Screenonline, \"The gentle comedy of manners and unexpected reversal of white and black stereotypes in \"Playing Away\" contrasts sharply with the stylistic experimentation and the militant denunciations of racial prejudice in director Horace Ov\u00e9's earlier feature, \"Pressure\" (1975).\" \"New York Times\" reviewer Vincent Canby called it \"witty and wise without being seriously disturbing for a minute\".",
+            "Coming Through\nComing Through (1925) is a silent film directed by A. Edward Sutherland starring Thomas Meighan and Lila Lee. The film was Sutherland's directorial debut and is now considered a lost film.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Hunter Davies\nEdward Hunter Davies, OBE (born 7 January 1936) is a British author, journalist and broadcaster. He is the author of a number of books, including the only authorised biography of the Beatles.",
+            "It's the Old Army Game\nIt's the Old Army Game is a 1926 American silent comedy film starring W. C. Fields and Louise Brooks. The \"army game\" is the shell game, a con-trick which WC Fields observes being played. \"It's the old army game\" he says, sagely. The film was directed by A. Edward Sutherland, billed as Eddie Sutherland, and co-stars Sutherland's aunt, the stage actress Blanche Ring in one of her few silent film appearances. The film is based on the revue \"The Comic Supplement\" by Joseph P. McEvoy and Fields, and included several skits from Fields' stage plays.",
+            "Ivan Sutherland\nIvan Edward Sutherland (born May 16, 1938) is an American computer scientist and Internet pioneer, widely regarded as the \"father of computer graphics.\" His early work in computer graphics as well as his teaching with David C. Evans in that subject at the University of Utah in the 1970s was pioneering in the field. Sutherland, Evans, and his students from that era invented several foundations of modern computer graphics. He received the Turing Award from the Association for Computing Machinery in 1988 for the invention of Sketchpad, an early predecessor to the sort of graphical user interface that has become ubiquitous in personal computers. He is a member of the National Academy of Engineering, as well as the National Academy of Sciences among many other major awards. In 2012 he was awarded the Kyoto Prize in Advanced Technology for \"pioneering achievements in the development of computer graphics and interactive interfaces\".",
+            "Palmy Days\nPalmy Days (1931) is an American Pre-Code musical comedy film written by Eddie Cantor, Morrie Ryskind, and David Freedman, directed by A. Edward Sutherland, and choreographed by Busby Berkeley (who makes a cameo appearance as a fortune teller). The film stars Eddie Cantor. The famed Goldwyn Girls make appearances during elaborate production numbers set in a gymnasium and a bakery (\"Glorifying the American Doughnut\"). Betty Grable, Paulette Goddard, Virginia Grey, and Toby Wing are among the bevy of chorines.",
+            "Burning Up (film)\nBurning Up is a 1930 American Pre-Code action film directed by A. Edward Sutherland and written by Grover Jones and William Slavens McNutt. The film stars Richard Arlen as a racing driver and Mary Brian as his love interest, the daughter of a fellow driver. An early talkie, the film also features motorcycle stunts, and also stars Francis McDonald, Sam Hardy, Charles Sellon, and Tully Marshall. The film was released on February 1, 1930, by Paramount Pictures.",
+            "Biography (Horslips album)\nBiography is a greatest hits compilation album by Irish Celtic rock band Horslips. The first disc comprises each of the band's singles that were released in the UK. The second comprises the B-sides to each of those singles, some of which have never been released on CD before. The album was released on 1 November 2013, to coincide with the release of the book \"Tall Tales: The Official Biography of Horslips\".",
+            "The Story of a Great Schoolmaster\nThe Story of a Great Schoolmaster is a 1924 biography of Frederick William Sanderson (1857-1922) by H. G. Wells. It is the only biography Wells wrote. Sanderson was a personal friend, having met Wells in 1914 when his sons George Philip ('Gip'), born in 1901, and Frank Richard, born in 1903, became pupils at Oundle School, of which Sanderson was headmaster from 1892 to 1922. After Sanderson died while giving a lecture at University College London at which he was introduced by Wells, the famous author agreed to help produce a biography to raise money for the school. But in December 1922, after disagreements emerged with Sanderson's widow about his approach to the subject, Wells withdrew from the official biography (published in 1923 as \"Sanderson of Oundle\"; Wells wrote much of the text but the volume was published without listing an author) and published his own work separately."
+        ],
+        "thoughts": [
+            "Horace Ov\u00e9 is a British filmmaker, photographer, painter, and writer, born in 1939. He is considered one of the leading black independent filmmakers to emerge in Britain since the post-war period. Ov\u00e9 holds the \"Guinness World Record\" for being the first black British filmmaker to direct a feature-length film, \"Pressure\" (1975). His work provides a perspective on the Black experience in Britain and he is considered a pioneer in Black British history.\n\nIn addition to his work as a filmmaker, Ov\u00e9 has directed television serials such as \"The Orchid House\" and \"Playing Away\". He has also been involved in the visual arts, with his son Zak Ov\u00e9 following in his footsteps as a British visual artist working in sculpture, film, and photography.\n\nOv\u00e9's impact on British cinema and his exploration of the Black experience in Britain have solidified his place as a pioneering figure in the industry.",
+            "Based on the retrieved information, Horace Ov\u00e9 is not only a filmmaker but also a photographer, painter, and writer. Therefore, he can be considered a photographer based on the information provided.",
+            "A. Edward Sutherland was a film director and actor born on January 5, 1895, in London. He came from a theatrical family, with his father being a theatre manager and producer, and his mother being a vaudeville performer. Sutherland made his directorial debut with the silent film \"Coming Through\" in 1925, which is now considered a lost film. He also directed films such as \"It's the Old Army Game\" (1926), \"Palmy Days\" (1931), and \"Burning Up\" (1930). Sutherland was also known for his work in the American Pre-Code film era. He passed away on December 31, 1973.",
+            "Based on the retrieved information, A. Edward Sutherland was a film director and actor, not a photographer. Therefore, he is not a photographer based on the information provided.",
+            "Based on the analysis of the results, it can be concluded that Horace Ov\u00e9 is indeed a photographer, as he is known for his work in photography, among other artistic pursuits. On the other hand, A. Edward Sutherland, while a film director and actor, does not have a known association with photography. Therefore, Horace Ov\u00e9 can be considered a photographer, while A. Edward Sutherland cannot."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Are Horace Ov\u00e9 and A. Edward Sutherland both photographers?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Horace Ov\u00e9's occupations.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about A. Edward Sutherland's occupations.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Horace Ov\u00e9 is a photographer based on the retrieved occupations.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if A. Edward Sutherland is a photographer based on the retrieved occupations.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Conclude if both Horace Ov\u00e9 and A. Edward Sutherland are photographers based on previous findings.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The task is to determine if both Horace Ov\u00e9 and A. Edward Sutherland are photographers. First, retrieve information about each individual's occupations. Then, for each person, reason whether they are photographers based on that information. Finally, synthesize the results to conclude if both are photographers."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Coming Through\nComing Through (1925) is a silent film directed by A. Edward Sutherland starring Thomas Meighan and Lila Lee. The film was Sutherland's directorial debut and is now considered a lost film.",
+            "Playing Away\nPlaying Away is a 1987 TV comedy film directed by Horace Ov\u00e9, from a screenplay by Caryl Phillips. In the story, an English cricket team, fictitiously named \"Sneddington\" (based in Lavenham, Suffolk), invites a team of West Indian heritage based in Brixton (South London) to play a charity game in support of their \"Third World Week.\" According to Screenonline, \"The gentle comedy of manners and unexpected reversal of white and black stereotypes in \"Playing Away\" contrasts sharply with the stylistic experimentation and the militant denunciations of racial prejudice in director Horace Ov\u00e9's earlier feature, \"Pressure\" (1975).\" \"New York Times\" reviewer Vincent Canby called it \"witty and wise without being seriously disturbing for a minute\".",
+            "It's the Old Army Game\nIt's the Old Army Game is a 1926 American silent comedy film starring W. C. Fields and Louise Brooks. The \"army game\" is the shell game, a con-trick which WC Fields observes being played. \"It's the old army game\" he says, sagely. The film was directed by A. Edward Sutherland, billed as Eddie Sutherland, and co-stars Sutherland's aunt, the stage actress Blanche Ring in one of her few silent film appearances. The film is based on the revue \"The Comic Supplement\" by Joseph P. McEvoy and Fields, and included several skits from Fields' stage plays.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Horace Ov\u00e9\nHorace Ov\u00e9, CBE (born 1939), is a British filmmaker, photographer, painter and writer, one of the leading black independent film-makers to emerge in Britain since the post-war period. Ov\u00e9 holds the \"Guinness World Record\" for being the first black British film-maker to direct a feature-length film, \"Pressure\" (1975). In its retrospective history, \"100 Years of Cinema\", the British Film Institute (BFI) declared: \"Horace Ov\u00e9 is undoubtedly a pioneer in Black British history and his work provides a perspective on the Black experience in Britain.\"",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "Gen. Edward F. Jones House\nGen. Edward F. Jones House is a historic home located at Binghamton in Broome County, New York. It was constructed in 1872 and is a large 2\u00a0\u2044 -story, irregularly shaped building built of an eclectic combination of materials and textures. It was part of a large estate assembled by General Edward F. Jones (1828\u20131913) by 1883. The foundation and first floor are constructed of brick while the upper stories are of wood with shingle, beaded board, and clapboard siding. It is an exceptional example of the Queen Anne style.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "Edward Cochrane McLean\nEdward Cochrane McLean (October 16, 1903 \u2013 October 12, 1972), also known as Edward C. McLean and Edward C. McLean, Sr., was a 20th-Century American lawyer and federal judge.",
+            "Edward Curtis Smith\nEdward Curtis Smith (January 5, 1854 \u2013 April 6, 1935) was an American politician from the US state of Vermont. He was a Republican. The son of Governor J. Gregory Smith, Edward C. Smith also served one term as governor of the state.",
+            "Pressure (film)\nPressure is a 1976 British drama film and the first feature-length fiction film directed by a Black film-maker in Britain. Directed by Horace Ov\u00e9, and co-written by him with Samuel Selvon, \"Pressure\" is a powerful portrait of inter-generational tensions between first- and second-generation West Indian migrants in London's Notting Hill area. According to Julia Toppin,",
+            "The Orchid House (TV serial)\nThe Orchid House is a four-part television serial that first aired on British television's Channel 4 from 21 February to 14 March 1991, directed by Horace Ov\u00e9. Its cast featured Diana Quick, Madge Sinclair, Nigel Terry, Elizabeth Hurley, Kate Buffery and Frances Barber, and was based on Phyllis Shand Allfrey's only novel of the same name."
+        ],
+        "thoughts": [
+            "Horace Ov\u00e9 is a multi-talented individual with a diverse range of occupations. He is known as a British filmmaker, photographer, painter, and writer. Ov\u00e9 is recognized as one of the leading black independent filmmakers to emerge in Britain since the post-war period. He holds the \"Guinness World Record\" for being the first black British filmmaker to direct a feature-length film, \"Pressure\" (1975). Additionally, Ov\u00e9 has directed TV comedy films such as \"Playing Away\" and television serials like \"The Orchid House.\" His work provides a perspective on the Black experience in Britain and has made significant contributions to the film industry.",
+            "Based on the retrieved occupations, Horace Ov\u00e9 is not only a photographer but also a filmmaker, painter, and writer. Therefore, he is not solely a photographer but has a diverse range of talents and occupations.",
+            "A. Edward Sutherland was a film director, known for directing silent films such as \"Coming Through\" (1925) and \"It's the Old Army Game\" (1926). He also directed other films and was involved in the entertainment industry.",
+            "Based on the retrieved occupations, A. Edward Sutherland was not identified as a photographer. Instead, he was known for his work as a film director in the entertainment industry. Therefore, it can be concluded that A. Edward Sutherland was not a photographer.",
+            "Based on the previous findings, it can be concluded that Horace Ov\u00e9 is not solely a photographer, but also a filmmaker, painter, and writer. On the other hand, A. Edward Sutherland was not identified as a photographer, but rather as a film director. Therefore, neither Horace Ov\u00e9 nor A. Edward Sutherland can be conclusively categorized as photographers based on the information available."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Horace Ov\u00e9 and A. Edward Sutherland both photographers?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Horace Ov\u00e9's professions.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about A. Edward Sutherland's professions.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Check if Horace Ov\u00e9 is identified as a photographer from the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Check if A. Edward Sutherland is identified as a photographer from the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine results to determine if both Horace Ov\u00e9 and A. Edward Sutherland are photographers.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the question into two main retrieval steps (one for each individual) to gather information about their professions. Subsequently, reasoning steps assess whether each individual is a photographer. Finally, the results are combined to answer whether both are photographers, thus synthesizing all necessary information to provide a complete answer."
+        },
+        "recall": 0.2777777777777778,
+        "retrieved_passages": [
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Playing Away\nPlaying Away is a 1987 TV comedy film directed by Horace Ov\u00e9, from a screenplay by Caryl Phillips. In the story, an English cricket team, fictitiously named \"Sneddington\" (based in Lavenham, Suffolk), invites a team of West Indian heritage based in Brixton (South London) to play a charity game in support of their \"Third World Week.\" According to Screenonline, \"The gentle comedy of manners and unexpected reversal of white and black stereotypes in \"Playing Away\" contrasts sharply with the stylistic experimentation and the militant denunciations of racial prejudice in director Horace Ov\u00e9's earlier feature, \"Pressure\" (1975).\" \"New York Times\" reviewer Vincent Canby called it \"witty and wise without being seriously disturbing for a minute\".",
+            "Qu You\nQu You (, 1341\u20131427), courtesy name Zongji (\u5b97\u5409) and self-nicknamed Cunzhai (\u5b58\u9f4b, \"Reading Studio of Existence\"), was a Chinese novelist who lived in the Ming Dynasty, and whose works inspired a new genre fantasy works with political subtext of the Qing Dynasty.",
+            "The Apple Tree\nThe Apple Tree is a series of three musical playlets with music by Jerry Bock, lyrics by Sheldon Harnick, and a book by Bock and Harnick with contributions from Jerome Coopersmith. Each act has its own storyline, but all three are tied together by a common theme (someone who believes that they want something, but once they get what they wanted they realize that it wasn't what they wanted) and common references, such as references to the color brown. The first act is based on Mark Twain's \"The Diary of Adam and Eve\"; the second act is based on Frank R. Stockton's \"The Lady or the Tiger?\"; the third act is based on Jules Feiffer's \"Passionella\". The working title for the evening of three musicals was \"Come Back! Go Away! I Love You!\"",
+            "Vertical Horizon\nVertical Horizon is an American alternative rock band formed at Georgetown University in Washington, D.C. in 1991. The band is best known for their 1999 hit, \"Everything You Want\". Their most recent album, \"Echoes from the Underground,\" was released in October 2013.",
+            "Grace After Midnight\nAccording to the memoir, Pearson says her life was turned around upon learning in prison that a close friend and drug dealer, whom she called \"Uncle\", was killed. Pearson said of her decision to write her book, \"I just want to let people know where I came from ... to share my story. I know the Lord has blessed me. He gave me the power just to tell this story.\" The book also depicts the difficulty with which Pearson attempts to adjust to life after prison; she is fired from two jobs due to her criminal background, which drives her to return temporarily to drug dealing. During an interview about the book, she said, \"Every time I turned around, they kept firing me, so where else could I turn to? The streets never let you down. That's sad to say, but what (was) I supposed to be, starving? Go to a shelter?\"",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Haven't You Heard? I'm Sakamoto\nHaven't You Heard? I'm Sakamoto (\u5742\u672c\u3067\u3059\u304c? , Sakamoto desu ga? , lit. \"I'm Sakamoto, You Know?\") is a Japanese manga series written and illustrated by Nami Sano. The manga follows a high school student named Sakamoto, who has a reputation for being the \"coolest\" person among the entire student body. The series has been licensed for an English release by Seven Seas Entertainment. An anime television adaptation by Studio Deen aired between April 8, 2016 and July 1, 2016.",
+            "The Inventors\nThe Inventors is a children's novel, co-written by Alexander Gordon Smith and his brother Jamie Webb. It follows the story of two best friends, Nate and Cat, young inventors who win a year-long scholarship at Saint Solutions, a giant skyscraper. There, under the eye of the world's greatest inventor, Ebenezer Saint, they are given free rein to invent whatever they want. But things take a dark turn when Saint refuses to let them leave the complex, and what started as the opportunity of a lifetime turns to a fight for not only their lives, but for the world.",
+            "Horace Ov\u00e9\nHorace Ov\u00e9, CBE (born 1939), is a British filmmaker, photographer, painter and writer, one of the leading black independent film-makers to emerge in Britain since the post-war period. Ov\u00e9 holds the \"Guinness World Record\" for being the first black British film-maker to direct a feature-length film, \"Pressure\" (1975). In its retrospective history, \"100 Years of Cinema\", the British Film Institute (BFI) declared: \"Horace Ov\u00e9 is undoubtedly a pioneer in Black British history and his work provides a perspective on the Black experience in Britain.\"",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "Pressure (film)\nPressure is a 1976 British drama film and the first feature-length fiction film directed by a Black film-maker in Britain. Directed by Horace Ov\u00e9, and co-written by him with Samuel Selvon, \"Pressure\" is a powerful portrait of inter-generational tensions between first- and second-generation West Indian migrants in London's Notting Hill area. According to Julia Toppin,",
+            "The Orchid House (TV serial)\nThe Orchid House is a four-part television serial that first aired on British television's Channel 4 from 21 February to 14 March 1991, directed by Horace Ov\u00e9. Its cast featured Diana Quick, Madge Sinclair, Nigel Terry, Elizabeth Hurley, Kate Buffery and Frances Barber, and was based on Phyllis Shand Allfrey's only novel of the same name."
+        ],
+        "thoughts": [
+            "Horace Ov\u00e9 is a multi-talented individual with a diverse range of professions. He is known as a British filmmaker, photographer, painter, and writer. Ov\u00e9 is recognized as one of the leading black independent filmmakers to emerge in Britain since the post-war period. He holds the \"Guinness World Record\" for being the first black British filmmaker to direct a feature-length film, \"Pressure\" (1975). Additionally, he has directed TV comedy films such as \"Playing Away\" and television serials like \"The Orchid House\". Ov\u00e9's work provides a perspective on the Black experience in Britain and he is considered a pioneer in Black British history.",
+            "Based on the retrieved information, Horace Ov\u00e9 is not specifically identified as a photographer. He is primarily recognized as a British filmmaker, painter, and writer. While he may have engaged in photography as part of his diverse range of talents, it is not the primary focus of his recognition.",
+            "A. Edward Sutherland was an American film director and actor. He was known for directing films such as \"The Flying Fleet\" and \"The Better 'Ole\".",
+            "Based on the retrieved information, A. Edward Sutherland is not identified as a photographer. Instead, he is known as an American film director and actor.",
+            "Based on the combined results, neither Horace Ov\u00e9 nor A. Edward Sutherland are primarily recognized as photographers. Therefore, it can be concluded that neither of them are photographers."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Horace Ov\u00e9 and A. Edward Sutherland both photographers?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine if Horace Ov\u00e9 is a photographer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine if A. Edward Sutherland is a photographer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine findings on Horace Ov\u00e9 and A. Edward Sutherland to answer if both are photographers.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The question asks about the professions of two individuals: Horace Ov\u00e9 and A. Edward Sutherland. To answer this, the execution graph is structured into three main steps. The first step is to check if Horace Ov\u00e9 is a photographer. The second step involves verifying if A. Edward Sutherland is a photographer. These two steps can be executed independently and in parallel as they do not depend on each other. The final step synthesizes the information gathered from the first two steps to answer whether both individuals are photographers. This structure effectively breaks down the task into manageable parts, ensuring each aspect of the question is addressed and then combined in the final reasoning step."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Horace Ov\u00e9\nHorace Ov\u00e9, CBE (born 1939), is a British filmmaker, photographer, painter and writer, one of the leading black independent film-makers to emerge in Britain since the post-war period. Ov\u00e9 holds the \"Guinness World Record\" for being the first black British film-maker to direct a feature-length film, \"Pressure\" (1975). In its retrospective history, \"100 Years of Cinema\", the British Film Institute (BFI) declared: \"Horace Ov\u00e9 is undoubtedly a pioneer in Black British history and his work provides a perspective on the Black experience in Britain.\"",
+            "Zak Ov\u00e9\nZak Ov\u00e9 (born 1966) is a British visual artist who works between sculpture, film and photography, living in London, UK, and Trinidad. His themes reflect \"his documentation of and anthropological interest in diasporic and African history, specifically that which is explored through Trinidadian carnival.\" In work that is \"filtered through his own personal and cultural upbringing, with a black Trinidadian father and white Irish mother\", he has exhibited widely in Europe, the United States and Africa, participating in international museum shows in London, Dakar, Paris, Dubai, Prague, Berlin, Johannesburg, Bamako and New York City. His father is the filmmaker Horace Ov\u00e9 and his sister is the actress Indra Ov\u00e9.",
+            "A. Edward Sutherland\nAlbert Edward Sutherland (January 5, 1895 \u2013 December 31, 1973) was a film director and actor. Born in London, he was from a theatrical family. His father, Al Sutherland, was a theatre manager and producer and his mother, Julie Ring, was a vaudeville performer. He was a nephew of both Blanche Ring and Thomas Meighan, who was married to Frances Ring, another of his mother's sisters.",
+            "Pressure (film)\nPressure is a 1976 British drama film and the first feature-length fiction film directed by a Black film-maker in Britain. Directed by Horace Ov\u00e9, and co-written by him with Samuel Selvon, \"Pressure\" is a powerful portrait of inter-generational tensions between first- and second-generation West Indian migrants in London's Notting Hill area. According to Julia Toppin,",
+            "The Orchid House (TV serial)\nThe Orchid House is a four-part television serial that first aired on British television's Channel 4 from 21 February to 14 March 1991, directed by Horace Ov\u00e9. Its cast featured Diana Quick, Madge Sinclair, Nigel Terry, Elizabeth Hurley, Kate Buffery and Frances Barber, and was based on Phyllis Shand Allfrey's only novel of the same name.",
+            "Playing Away\nPlaying Away is a 1987 TV comedy film directed by Horace Ov\u00e9, from a screenplay by Caryl Phillips. In the story, an English cricket team, fictitiously named \"Sneddington\" (based in Lavenham, Suffolk), invites a team of West Indian heritage based in Brixton (South London) to play a charity game in support of their \"Third World Week.\" According to Screenonline, \"The gentle comedy of manners and unexpected reversal of white and black stereotypes in \"Playing Away\" contrasts sharply with the stylistic experimentation and the militant denunciations of racial prejudice in director Horace Ov\u00e9's earlier feature, \"Pressure\" (1975).\" \"New York Times\" reviewer Vincent Canby called it \"witty and wise without being seriously disturbing for a minute\".",
+            "Coming Through\nComing Through (1925) is a silent film directed by A. Edward Sutherland starring Thomas Meighan and Lila Lee. The film was Sutherland's directorial debut and is now considered a lost film.",
+            "It's the Old Army Game\nIt's the Old Army Game is a 1926 American silent comedy film starring W. C. Fields and Louise Brooks. The \"army game\" is the shell game, a con-trick which WC Fields observes being played. \"It's the old army game\" he says, sagely. The film was directed by A. Edward Sutherland, billed as Eddie Sutherland, and co-stars Sutherland's aunt, the stage actress Blanche Ring in one of her few silent film appearances. The film is based on the revue \"The Comic Supplement\" by Joseph P. McEvoy and Fields, and included several skits from Fields' stage plays.",
+            "Ivan Sutherland\nIvan Edward Sutherland (born May 16, 1938) is an American computer scientist and Internet pioneer, widely regarded as the \"father of computer graphics.\" His early work in computer graphics as well as his teaching with David C. Evans in that subject at the University of Utah in the 1970s was pioneering in the field. Sutherland, Evans, and his students from that era invented several foundations of modern computer graphics. He received the Turing Award from the Association for Computing Machinery in 1988 for the invention of Sketchpad, an early predecessor to the sort of graphical user interface that has become ubiquitous in personal computers. He is a member of the National Academy of Engineering, as well as the National Academy of Sciences among many other major awards. In 2012 he was awarded the Kyoto Prize in Advanced Technology for \"pioneering achievements in the development of computer graphics and interactive interfaces\".",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Palmy Days\nPalmy Days (1931) is an American Pre-Code musical comedy film written by Eddie Cantor, Morrie Ryskind, and David Freedman, directed by A. Edward Sutherland, and choreographed by Busby Berkeley (who makes a cameo appearance as a fortune teller). The film stars Eddie Cantor. The famed Goldwyn Girls make appearances during elaborate production numbers set in a gymnasium and a bakery (\"Glorifying the American Doughnut\"). Betty Grable, Paulette Goddard, Virginia Grey, and Toby Wing are among the bevy of chorines.",
+            "Burning Up (film)\nBurning Up is a 1930 American Pre-Code action film directed by A. Edward Sutherland and written by Grover Jones and William Slavens McNutt. The film stars Richard Arlen as a racing driver and Mary Brian as his love interest, the daughter of a fellow driver. An early talkie, the film also features motorcycle stunts, and also stars Francis McDonald, Sam Hardy, Charles Sellon, and Tully Marshall. The film was released on February 1, 1930, by Paramount Pictures.",
+            "Donald Sutherland\nDonald McNichol Sutherland, {'1': \", '2': \", '3': \", '4': \"} (born 17 July 1935) is a Canadian actor whose film career spans more than five decades.",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle."
+        ],
+        "thoughts": [
+            "Horace Ov\u00e9 is not primarily known as a photographer. He is recognized as a British filmmaker, painter, and writer, with a significant impact on Black British history and cinema. While his work may involve visual elements, his primary contributions are in the fields of film and writing.",
+            "Based on the information provided, A. Edward Sutherland was not a photographer. He was a film director and actor, known for directing silent films and early talkies. There is no indication that he was involved in photography as a profession.",
+            "Based on the findings, neither Horace Ov\u00e9 nor A. Edward Sutherland are primarily known as photographers. Horace Ov\u00e9 is recognized as a British filmmaker, painter, and writer, while A. Edward Sutherland was a film director and actor. Therefore, both individuals are not photographers."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Horace Ov\u00e9 and A. Edward Sutherland both photographers?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information on Horace Ov\u00e9's professional background, focusing on whether he is a photographer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on A. Edward Sutherland's professional background, focusing on whether he is a photographer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Horace Ov\u00e9 is a photographer based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if A. Edward Sutherland is a photographer based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Analyze both determinations to conclude whether Horace Ov\u00e9 and A. Edward Sutherland are both photographers.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph consists of five nodes. First, we retrieve information about each individual's professional background to determine if they are photographers. This involves two parallel retrieval steps: one for Horace Ov\u00e9 and one for A. Edward Sutherland. The next two nodes independently determine, based on the retrieved data, whether each individual is a photographer. Finally, we synthesize these determinations to answer whether both are photographers."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Horace Ov\u00e9\nHorace Ov\u00e9, CBE (born 1939), is a British filmmaker, photographer, painter and writer, one of the leading black independent film-makers to emerge in Britain since the post-war period. Ov\u00e9 holds the \"Guinness World Record\" for being the first black British film-maker to direct a feature-length film, \"Pressure\" (1975). In its retrospective history, \"100 Years of Cinema\", the British Film Institute (BFI) declared: \"Horace Ov\u00e9 is undoubtedly a pioneer in Black British history and his work provides a perspective on the Black experience in Britain.\"",
+            "Playing Away\nPlaying Away is a 1987 TV comedy film directed by Horace Ov\u00e9, from a screenplay by Caryl Phillips. In the story, an English cricket team, fictitiously named \"Sneddington\" (based in Lavenham, Suffolk), invites a team of West Indian heritage based in Brixton (South London) to play a charity game in support of their \"Third World Week.\" According to Screenonline, \"The gentle comedy of manners and unexpected reversal of white and black stereotypes in \"Playing Away\" contrasts sharply with the stylistic experimentation and the militant denunciations of racial prejudice in director Horace Ov\u00e9's earlier feature, \"Pressure\" (1975).\" \"New York Times\" reviewer Vincent Canby called it \"witty and wise without being seriously disturbing for a minute\".",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Coming Through\nComing Through (1925) is a silent film directed by A. Edward Sutherland starring Thomas Meighan and Lila Lee. The film was Sutherland's directorial debut and is now considered a lost film.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Sean McNamara (Nip/Tuck)\nDr. Sean McNamara is a fictional character on FX Networks' drama series \"Nip/Tuck\", portrayed by Dylan Walsh. His character opens the show with the trademark catchphrase, \"Tell me what you don't like about yourself.\" His partner, Christian Troy, has been his best friend since attending college together at the University of Miami, which is partly why they went into business together. Sean is portrayed as the more skilled, yet more troubled surgeon, who apparently specializes in craniofacial surgery. He is often plagued by family distresses involving his wife Julia and son Matt. The two also have a daughter, Annie, and a newborn son named Conor.",
+            "Grace After Midnight\nAccording to the memoir, Pearson says her life was turned around upon learning in prison that a close friend and drug dealer, whom she called \"Uncle\", was killed. Pearson said of her decision to write her book, \"I just want to let people know where I came from ... to share my story. I know the Lord has blessed me. He gave me the power just to tell this story.\" The book also depicts the difficulty with which Pearson attempts to adjust to life after prison; she is fired from two jobs due to her criminal background, which drives her to return temporarily to drug dealing. During an interview about the book, she said, \"Every time I turned around, they kept firing me, so where else could I turn to? The streets never let you down. That's sad to say, but what (was) I supposed to be, starving? Go to a shelter?\"",
+            "Edward N. Zalta\nEdward N. Zalta (born 1952) is a Senior research scholar at the Center for the Study of Language and Information. He received his Ph.D. in philosophy from the University of Massachusetts Amherst in 1980. Zalta has taught courses at Stanford University, Rice University, the University of Salzburg, and the University of Auckland. Zalta is also the Principal Editor of the \"Stanford Encyclopedia of Philosophy\".",
+            "It's the Old Army Game\nIt's the Old Army Game is a 1926 American silent comedy film starring W. C. Fields and Louise Brooks. The \"army game\" is the shell game, a con-trick which WC Fields observes being played. \"It's the old army game\" he says, sagely. The film was directed by A. Edward Sutherland, billed as Eddie Sutherland, and co-stars Sutherland's aunt, the stage actress Blanche Ring in one of her few silent film appearances. The film is based on the revue \"The Comic Supplement\" by Joseph P. McEvoy and Fields, and included several skits from Fields' stage plays.",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Toby Amies\nTobias \"Toby\" Amies (born 27 June 1967 in Birmingham, Warwickshire) is a broadcaster, filmmaker and photographer, best known for his feature-length documentary \"The Man Whose Mind Exploded\", and his work on Radio4, MTV UK's \"Alternative Nation\", FilmFour, \"Lonely Planet Six Degrees\" and \"The Rough Guides\". Toby has specialised in making programmes about art, music and travel, with a special emphasis on fringe culture and alternative perspectives. In addition, he is a widely published portrait photographer and writer.",
+            "Silviu Vulc\nSilviu Dorin Vulc more commonly known as Silviu Vulc is a Romanian heavyweight mixed martial artist. Silviu Vulc spent his early career boxing in Romania, he then moved to Russia to train with Red Devil Sport Club team mates with Fedor Emelianenko and Alexander Emelianenko. Vulc spent two years there training and fighting. During this time he had ten MMA fights with eight wins and three losses, the first seven fights being semi-professional before moving into the professional league. Vulc had a short professional career, defeating Rodrigo Mendes in the Desert Combat Challenge in Israel and losing twice. His last fight being in 2008 for M-1 Global. Silviu has spent most of his time and energy over the years coaching others in boxing and MMA around the world including time spent in Russia, Romania and London, England.",
+            "Johny Hendricks\nJohny Harvey Hendricks (born September 12, 1983) is an American mixed martial artist and an accomplished former collegiate wrestler . He currently competes in the Ultimate Fighting Championship's (UFC) Middleweight division and is the former UFC Welterweight Champion. He is known for his powerful punches, particularly from his left hand, as well as his extensive wrestling background.",
+            "Raphael Xavier\nRaphael Xavier Williams (born December 7, 1970) is known as an Inmoc-ographer (innovative movement conceptualist). He is a professional breaker/dancer, rapper, music producer, comedian, photographer, author and multifaceted artist. He is known for re-invigorating the B-boying community in Philadelphia. He started choreographing dance with the Brandywine School of Ballet in 1995. He then became recognized as a theatre artist when he joined Rennie Harris Puremovement, the longest running Hip-Hop dance company, in their production of \"Rome & Jewels\" in 1997. He moved to the role of Tybalt shortly after. He would continue on to become a core member of the RHPM company and is now an alumnus. He has received many awards and recognition for his choreographic work from 1999 to the present and for various projects he has worked on including: music recordings and compositions, film, and photography. Raphael gives lectures and dance classes internationally on Hip-Hop and its history. In 2013, Raphael was honored with a Pew Fellowships in the Arts award. He is a 2016 Guggenheim fellow and a 2016 United States Artist Knight fellow. He is also An appointed professor at Princeton University teaching special topics in hip hop dance with a focus on Breaking.",
+            "\u00c9mile Brugsch\n\u00c9mile Brugsch (February 24, 1842 in Berlin, Germany \u2013 January 14, 1930 in Nice, France) was a German-born Egyptologist whose career spanned the late 19th and early 20th centuries. He is known as the official who \"evacuated\" the mummies from the Deir el-Bahri Cache in 1881, and as being assistant curator of the Bulaq Museum - the core element of what is today's Egyptian Museum. He was the brother of the Egyptologist Heinrich Karl Brugsch."
+        ],
+        "thoughts": [
+            "Horace Ov\u00e9 is a British filmmaker, photographer, painter, and writer. While he is primarily known for his work in film, he is also involved in photography as part of his multifaceted artistic career. His contributions to the black independent film-making scene in Britain have solidified his place as a pioneer in Black British history, and his work provides a perspective on the Black experience in Britain.",
+            "Based on the retrieved information, Horace Ov\u00e9 is indeed a photographer as part of his multifaceted artistic career, in addition to being a filmmaker, painter, and writer.",
+            "There is no information available to suggest that A. Edward Sutherland is a photographer. He is primarily known for his work as a film director, with his directorial debut being the silent film \"Coming Through\" in 1925. He also directed the 1926 silent comedy film \"It's the Old Army Game\" starring W.C. Fields and Louise Brooks. Therefore, it can be concluded that A. Edward Sutherland is not primarily known for being a photographer, but rather as a film director.",
+            "Based on the retrieved information, A. Edward Sutherland is not primarily known for being a photographer. He is primarily known for his work as a film director, with no evidence to suggest that he is a photographer. Therefore, it can be concluded that A. Edward Sutherland is not a photographer.",
+            "Based on the analysis of both determinations, it can be concluded that Horace Ov\u00e9 is indeed a photographer, as he is known for his work in this field along with his other artistic pursuits. On the other hand, A. Edward Sutherland is not primarily known for being a photographer and is instead recognized for his work as a film director. Therefore, Horace Ov\u00e9 can be considered a photographer, while A. Edward Sutherland cannot."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Horace Ov\u00e9 and A. Edward Sutherland both photographers?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Horace Ov\u00e9's professions.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about A. Edward Sutherland's professions.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Horace Ov\u00e9 is a photographer based on retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if A. Edward Sutherland is a photographer based on retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to decide if both Horace Ov\u00e9 and A. Edward Sutherland are photographers.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph begins by retrieving information about the professions of both Horace Ov\u00e9 and A. Edward Sutherland. Then, reasoning nodes assess whether each individual is a photographer. Finally, a concluding reasoning node determines if both individuals are indeed photographers based on the previous reasoning steps."
+        },
+        "recall": 0.2777777777777778,
+        "retrieved_passages": [
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Playing Away\nPlaying Away is a 1987 TV comedy film directed by Horace Ov\u00e9, from a screenplay by Caryl Phillips. In the story, an English cricket team, fictitiously named \"Sneddington\" (based in Lavenham, Suffolk), invites a team of West Indian heritage based in Brixton (South London) to play a charity game in support of their \"Third World Week.\" According to Screenonline, \"The gentle comedy of manners and unexpected reversal of white and black stereotypes in \"Playing Away\" contrasts sharply with the stylistic experimentation and the militant denunciations of racial prejudice in director Horace Ov\u00e9's earlier feature, \"Pressure\" (1975).\" \"New York Times\" reviewer Vincent Canby called it \"witty and wise without being seriously disturbing for a minute\".",
+            "Qu You\nQu You (, 1341\u20131427), courtesy name Zongji (\u5b97\u5409) and self-nicknamed Cunzhai (\u5b58\u9f4b, \"Reading Studio of Existence\"), was a Chinese novelist who lived in the Ming Dynasty, and whose works inspired a new genre fantasy works with political subtext of the Qing Dynasty.",
+            "The Apple Tree\nThe Apple Tree is a series of three musical playlets with music by Jerry Bock, lyrics by Sheldon Harnick, and a book by Bock and Harnick with contributions from Jerome Coopersmith. Each act has its own storyline, but all three are tied together by a common theme (someone who believes that they want something, but once they get what they wanted they realize that it wasn't what they wanted) and common references, such as references to the color brown. The first act is based on Mark Twain's \"The Diary of Adam and Eve\"; the second act is based on Frank R. Stockton's \"The Lady or the Tiger?\"; the third act is based on Jules Feiffer's \"Passionella\". The working title for the evening of three musicals was \"Come Back! Go Away! I Love You!\"",
+            "Vertical Horizon\nVertical Horizon is an American alternative rock band formed at Georgetown University in Washington, D.C. in 1991. The band is best known for their 1999 hit, \"Everything You Want\". Their most recent album, \"Echoes from the Underground,\" was released in October 2013.",
+            "Grace After Midnight\nAccording to the memoir, Pearson says her life was turned around upon learning in prison that a close friend and drug dealer, whom she called \"Uncle\", was killed. Pearson said of her decision to write her book, \"I just want to let people know where I came from ... to share my story. I know the Lord has blessed me. He gave me the power just to tell this story.\" The book also depicts the difficulty with which Pearson attempts to adjust to life after prison; she is fired from two jobs due to her criminal background, which drives her to return temporarily to drug dealing. During an interview about the book, she said, \"Every time I turned around, they kept firing me, so where else could I turn to? The streets never let you down. That's sad to say, but what (was) I supposed to be, starving? Go to a shelter?\"",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Haven't You Heard? I'm Sakamoto\nHaven't You Heard? I'm Sakamoto (\u5742\u672c\u3067\u3059\u304c? , Sakamoto desu ga? , lit. \"I'm Sakamoto, You Know?\") is a Japanese manga series written and illustrated by Nami Sano. The manga follows a high school student named Sakamoto, who has a reputation for being the \"coolest\" person among the entire student body. The series has been licensed for an English release by Seven Seas Entertainment. An anime television adaptation by Studio Deen aired between April 8, 2016 and July 1, 2016.",
+            "The Inventors\nThe Inventors is a children's novel, co-written by Alexander Gordon Smith and his brother Jamie Webb. It follows the story of two best friends, Nate and Cat, young inventors who win a year-long scholarship at Saint Solutions, a giant skyscraper. There, under the eye of the world's greatest inventor, Ebenezer Saint, they are given free rein to invent whatever they want. But things take a dark turn when Saint refuses to let them leave the complex, and what started as the opportunity of a lifetime turns to a fight for not only their lives, but for the world.",
+            "Horace Ov\u00e9\nHorace Ov\u00e9, CBE (born 1939), is a British filmmaker, photographer, painter and writer, one of the leading black independent film-makers to emerge in Britain since the post-war period. Ov\u00e9 holds the \"Guinness World Record\" for being the first black British film-maker to direct a feature-length film, \"Pressure\" (1975). In its retrospective history, \"100 Years of Cinema\", the British Film Institute (BFI) declared: \"Horace Ov\u00e9 is undoubtedly a pioneer in Black British history and his work provides a perspective on the Black experience in Britain.\"",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "Pressure (film)\nPressure is a 1976 British drama film and the first feature-length fiction film directed by a Black film-maker in Britain. Directed by Horace Ov\u00e9, and co-written by him with Samuel Selvon, \"Pressure\" is a powerful portrait of inter-generational tensions between first- and second-generation West Indian migrants in London's Notting Hill area. According to Julia Toppin,",
+            "The Orchid House (TV serial)\nThe Orchid House is a four-part television serial that first aired on British television's Channel 4 from 21 February to 14 March 1991, directed by Horace Ov\u00e9. Its cast featured Diana Quick, Madge Sinclair, Nigel Terry, Elizabeth Hurley, Kate Buffery and Frances Barber, and was based on Phyllis Shand Allfrey's only novel of the same name."
+        ],
+        "thoughts": [
+            "Horace Ov\u00e9 is a multi-talented individual with a diverse range of professions. He is known as a British filmmaker, photographer, painter, and writer. Ov\u00e9 is recognized as one of the leading black independent filmmakers to emerge in Britain since the post-war period. He holds the \"Guinness World Record\" for being the first black British filmmaker to direct a feature-length film, \"Pressure\" (1975). Ov\u00e9 has also directed TV comedy films such as \"Playing Away\" and TV serials like \"The Orchid House\". His work provides a perspective on the Black experience in Britain and he is considered a pioneer in Black British history.",
+            "Based on the retrieved information, Horace Ov\u00e9 is not only a filmmaker, painter, and writer, but also a photographer. Therefore, it can be determined that Horace Ov\u00e9 is indeed a photographer.",
+            "A. Edward Sutherland was an American film director and actor. He was known for directing films such as \"The Flying Fleet\" and \"The Better 'Ole\". He also had a career as an actor, appearing in films such as \"The Man from Blankley's\" and \"The Man Who Came Back\".",
+            "Based on the retrieved information, A. Edward Sutherland was not a photographer, but rather an American film director and actor.",
+            "Based on the combined results, it can be concluded that Horace Ov\u00e9 is a photographer, while A. Edward Sutherland is not a photographer."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Horace Ov\u00e9 and A. Edward Sutherland both photographers?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find biographical information about Horace Ov\u00e9.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find biographical information about A. Edward Sutherland.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Horace Ov\u00e9 is a photographer based on his biographical information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if A. Edward Sutherland is a photographer based on his biographical information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Conclude whether both Horace Ov\u00e9 and A. Edward Sutherland are photographers based on the previous findings.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph first retrieves biographical information about Horace Ov\u00e9 and A. Edward Sutherland separately. Then, it reasons about each person's profession to check if they are photographers. Finally, it synthesizes the information to answer whether both individuals are photographers."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Horace Ov\u00e9\nHorace Ov\u00e9, CBE (born 1939), is a British filmmaker, photographer, painter and writer, one of the leading black independent film-makers to emerge in Britain since the post-war period. Ov\u00e9 holds the \"Guinness World Record\" for being the first black British film-maker to direct a feature-length film, \"Pressure\" (1975). In its retrospective history, \"100 Years of Cinema\", the British Film Institute (BFI) declared: \"Horace Ov\u00e9 is undoubtedly a pioneer in Black British history and his work provides a perspective on the Black experience in Britain.\"",
+            "Zak Ov\u00e9\nZak Ov\u00e9 (born 1966) is a British visual artist who works between sculpture, film and photography, living in London, UK, and Trinidad. His themes reflect \"his documentation of and anthropological interest in diasporic and African history, specifically that which is explored through Trinidadian carnival.\" In work that is \"filtered through his own personal and cultural upbringing, with a black Trinidadian father and white Irish mother\", he has exhibited widely in Europe, the United States and Africa, participating in international museum shows in London, Dakar, Paris, Dubai, Prague, Berlin, Johannesburg, Bamako and New York City. His father is the filmmaker Horace Ov\u00e9 and his sister is the actress Indra Ov\u00e9.",
+            "A. Edward Sutherland\nAlbert Edward Sutherland (January 5, 1895 \u2013 December 31, 1973) was a film director and actor. Born in London, he was from a theatrical family. His father, Al Sutherland, was a theatre manager and producer and his mother, Julie Ring, was a vaudeville performer. He was a nephew of both Blanche Ring and Thomas Meighan, who was married to Frances Ring, another of his mother's sisters.",
+            "Pressure (film)\nPressure is a 1976 British drama film and the first feature-length fiction film directed by a Black film-maker in Britain. Directed by Horace Ov\u00e9, and co-written by him with Samuel Selvon, \"Pressure\" is a powerful portrait of inter-generational tensions between first- and second-generation West Indian migrants in London's Notting Hill area. According to Julia Toppin,",
+            "The Orchid House (TV serial)\nThe Orchid House is a four-part television serial that first aired on British television's Channel 4 from 21 February to 14 March 1991, directed by Horace Ov\u00e9. Its cast featured Diana Quick, Madge Sinclair, Nigel Terry, Elizabeth Hurley, Kate Buffery and Frances Barber, and was based on Phyllis Shand Allfrey's only novel of the same name.",
+            "Playing Away\nPlaying Away is a 1987 TV comedy film directed by Horace Ov\u00e9, from a screenplay by Caryl Phillips. In the story, an English cricket team, fictitiously named \"Sneddington\" (based in Lavenham, Suffolk), invites a team of West Indian heritage based in Brixton (South London) to play a charity game in support of their \"Third World Week.\" According to Screenonline, \"The gentle comedy of manners and unexpected reversal of white and black stereotypes in \"Playing Away\" contrasts sharply with the stylistic experimentation and the militant denunciations of racial prejudice in director Horace Ov\u00e9's earlier feature, \"Pressure\" (1975).\" \"New York Times\" reviewer Vincent Canby called it \"witty and wise without being seriously disturbing for a minute\".",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Coming Through\nComing Through (1925) is a silent film directed by A. Edward Sutherland starring Thomas Meighan and Lila Lee. The film was Sutherland's directorial debut and is now considered a lost film.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Hunter Davies\nEdward Hunter Davies, OBE (born 7 January 1936) is a British author, journalist and broadcaster. He is the author of a number of books, including the only authorised biography of the Beatles.",
+            "It's the Old Army Game\nIt's the Old Army Game is a 1926 American silent comedy film starring W. C. Fields and Louise Brooks. The \"army game\" is the shell game, a con-trick which WC Fields observes being played. \"It's the old army game\" he says, sagely. The film was directed by A. Edward Sutherland, billed as Eddie Sutherland, and co-stars Sutherland's aunt, the stage actress Blanche Ring in one of her few silent film appearances. The film is based on the revue \"The Comic Supplement\" by Joseph P. McEvoy and Fields, and included several skits from Fields' stage plays.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Ivan Sutherland\nIvan Edward Sutherland (born May 16, 1938) is an American computer scientist and Internet pioneer, widely regarded as the \"father of computer graphics.\" His early work in computer graphics as well as his teaching with David C. Evans in that subject at the University of Utah in the 1970s was pioneering in the field. Sutherland, Evans, and his students from that era invented several foundations of modern computer graphics. He received the Turing Award from the Association for Computing Machinery in 1988 for the invention of Sketchpad, an early predecessor to the sort of graphical user interface that has become ubiquitous in personal computers. He is a member of the National Academy of Engineering, as well as the National Academy of Sciences among many other major awards. In 2012 he was awarded the Kyoto Prize in Advanced Technology for \"pioneering achievements in the development of computer graphics and interactive interfaces\".",
+            "Palmy Days\nPalmy Days (1931) is an American Pre-Code musical comedy film written by Eddie Cantor, Morrie Ryskind, and David Freedman, directed by A. Edward Sutherland, and choreographed by Busby Berkeley (who makes a cameo appearance as a fortune teller). The film stars Eddie Cantor. The famed Goldwyn Girls make appearances during elaborate production numbers set in a gymnasium and a bakery (\"Glorifying the American Doughnut\"). Betty Grable, Paulette Goddard, Virginia Grey, and Toby Wing are among the bevy of chorines.",
+            "Burning Up (film)\nBurning Up is a 1930 American Pre-Code action film directed by A. Edward Sutherland and written by Grover Jones and William Slavens McNutt. The film stars Richard Arlen as a racing driver and Mary Brian as his love interest, the daughter of a fellow driver. An early talkie, the film also features motorcycle stunts, and also stars Francis McDonald, Sam Hardy, Charles Sellon, and Tully Marshall. The film was released on February 1, 1930, by Paramount Pictures."
+        ],
+        "thoughts": [
+            "Horace Ov\u00e9 is a British filmmaker, photographer, painter, and writer, born in 1939. He is considered one of the leading black independent filmmakers to emerge in Britain since the post-war period. Ov\u00e9 holds the Guinness World Record for being the first black British filmmaker to direct a feature-length film, \"Pressure\" (1975). His work provides a perspective on the Black experience in Britain and he is considered a pioneer in Black British history.\n\nIn addition to his work in film, Ov\u00e9 has also directed television serials such as \"The Orchid House\" and \"Playing Away\". He has made significant contributions to the representation of black experiences in British media.\n\nOv\u00e9's son, Zak Ov\u00e9, is a visual artist who works between sculpture, film, and photography. His work reflects his interest in diasporic and African history, particularly through the lens of Trinidadian carnival. Zak Ov\u00e9 has exhibited widely in Europe, the United States, and Africa, and his work is influenced by his cultural upbringing with a black Trinidadian father and white Irish mother.\n\nOverall, Horace Ov\u00e9's impact on British cinema and his representation of the Black experience in Britain has solidified his place as a pioneering figure in the industry.",
+            "Based on the biographical information provided, Horace Ov\u00e9 is not primarily known as a photographer. He is best known as a British filmmaker, painter, and writer, with significant contributions to the representation of the Black experience in Britain through his work in film and television. While his son, Zak Ov\u00e9, is a visual artist who works in photography among other mediums, there is no indication that Horace Ov\u00e9 himself is primarily recognized as a photographer.",
+            "A. Edward Sutherland was a film director and actor, born on January 5, 1895, in London. He came from a theatrical family, with his father being a theatre manager and producer, and his mother being a vaudeville performer. Sutherland's directorial debut was the silent film \"Coming Through\" in 1925, which is now considered a lost film. He also directed films such as \"It's the Old Army Game\" (1926), \"Palmy Days\" (1931), and \"Burning Up\" (1930). Sutherland was also known for his work in the film \"Burning Up,\" which featured motorcycle stunts and was released by Paramount Pictures. He passed away on December 31, 1973.",
+            "Based on the biographical information provided, A. Edward Sutherland was a film director and actor, not a photographer. Therefore, he is not a photographer based on his biographical information.",
+            "Neither Horace Ov\u00e9 nor A. Edward Sutherland are primarily known as photographers based on the previous findings. Horace Ov\u00e9 is best known as a British filmmaker, painter, and writer, while A. Edward Sutherland was a film director and actor. Therefore, they are not photographers based on their biographical information."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Horace Ov\u00e9 and A. Edward Sutherland both photographers?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Horace Ov\u00e9's professional background.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about A. Edward Sutherland's professional background.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Horace Ov\u00e9 is a photographer based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if A. Edward Sutherland is a photographer based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine results and determine if both Horace Ov\u00e9 and A. Edward Sutherland are photographers.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to first retrieve and analyze information about each individual's professional background separately. Once we have the necessary details, individual reasoning steps are performed to check if each person is a photographer. Finally, a synthesis step combines these insights to answer the ultimate query about both individuals."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "John Berry (album)\nJohn Berry is an album released by American country music artist John Berry. It was released in 1993 by Liberty Records. It peaked at #13 on the Top Country Albums chart, and was certified Platinum by the RIAA. Singles released from it include \"A Mind of Her Own\", \"Kiss Me in the Car\", \"Your Love Amazes Me\", \"What's In It for Me\" and \"You and Only You\".",
+            "Never Let Me Go (Johnny Ace song)\n\"Never Let Me Go\" is a blues ballad song by American R&B/blues singer Johnny Ace, written by Joseph Scott and released in 1954 under Duke Records. The song is featured on the albums \"My Songs\" and \"Memorial\". \"Never Let Me Go\" was one of his eighth consecutive top ten R&B hits in a row, including \"My Song\", \"Cross My Heart,\" \"Please Forgive Me,\" \"The Clock,\" \"Pledging My Love,\" \"Saving My Love for You,\" and \"Anymore\". The song was R&B hit and peaked to No. 9 in October 1954 on \"Billboards\" Rhythm & Blues Records chart.",
+            "Kim Tae-yeon discography\nKim Tae-yeon, better known by the mononym Taeyeon, is a South Korean singer. Her discography consists of one studio album, two extended plays (EPs), twenty singles (including four as featured artist), and three promotional singles. She debuted as a member of South Korean girl group Girls' Generation in August 2007 and initially gained some popularity as a singer upon recording soundtrack songs \"If\" for \"Hong Gil Dong\" and \"Can You Hear Me\" for \"Beethoven Virus\" (2008). She subsequently established herself as one of the most renowned vocalist on the South Korean music scene with further soundtrack recordings, notably \"I Love You\" for \"\" (2010), \"Missing You like Crazy\" for \"The King 2 Hearts\", \"Closer\" for \"To the Beautiful You\" (2012), and \"And One\" for \"That Winter, the Wind Blows\" (2013), all of which managed to enter the top ten of South Korea's Gaon Digital Chart. Apart from soundtrack recordings, Taeyeon has also recorded duets with other artists, most notably \"Like a Star\" with The One and \"Different\" with Kim Bum-soo, which peaked at numbers one and two on the Gaon Digital Chart, respectively.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "You Belong with Me\n\"You Belong with Me\" is a song performed by American singer-songwriter Taylor Swift. The song was co-written by Swift and Liz Rose and produced by Nathan Chapman with Swift's aid. It was released on April 18, 2009, by Big Machine Records as the third single from Swift's second studio album, \"Fearless\" (2008). Swift was inspired to write \"You Belong with Me\" after overhearing a male friend of hers arguing with his girlfriend through a phone call; she continued to develop a story line afterward. The song contains many pop music elements and its lyrics have Swift desiring an out-of-reach love interest.",
+            "Cynthia Mort\nCynthia Mort (born June 18, 1956) is an American director, screenwriter, and producer. Mort has worked primarily in television since beginning her career in 1994, writing for the sitcom \"Roseanne\". Her notable works include the HBO series \"Tell Me You Love Me\" as a creator and executive producer, the revenge film \"The Brave One\" (2007) as a screenwriter, and the biopic \"Nina\" (2016) as a director.",
+            "Pattern of My Life\n\"Pattern of My Life\" is the second and last single released from Annie Lennox's first greatest hits album \"The Annie Lennox Collection\". The song is a cover version of \"Closer Now\" by Keane which was a b-side to their debut single \"Call Me What You Like\". Lennox retitled the song, referring to a lyric in the song. This single was released on 24 May 2009 in the United Kingdom.",
+            "A. Edward Sutherland\nAlbert Edward Sutherland (January 5, 1895 \u2013 December 31, 1973) was a film director and actor. Born in London, he was from a theatrical family. His father, Al Sutherland, was a theatre manager and producer and his mother, Julie Ring, was a vaudeville performer. He was a nephew of both Blanche Ring and Thomas Meighan, who was married to Frances Ring, another of his mother's sisters.",
+            "Coming Through\nComing Through (1925) is a silent film directed by A. Edward Sutherland starring Thomas Meighan and Lila Lee. The film was Sutherland's directorial debut and is now considered a lost film.",
+            "It's the Old Army Game\nIt's the Old Army Game is a 1926 American silent comedy film starring W. C. Fields and Louise Brooks. The \"army game\" is the shell game, a con-trick which WC Fields observes being played. \"It's the old army game\" he says, sagely. The film was directed by A. Edward Sutherland, billed as Eddie Sutherland, and co-stars Sutherland's aunt, the stage actress Blanche Ring in one of her few silent film appearances. The film is based on the revue \"The Comic Supplement\" by Joseph P. McEvoy and Fields, and included several skits from Fields' stage plays.",
+            "Ivan Sutherland\nIvan Edward Sutherland (born May 16, 1938) is an American computer scientist and Internet pioneer, widely regarded as the \"father of computer graphics.\" His early work in computer graphics as well as his teaching with David C. Evans in that subject at the University of Utah in the 1970s was pioneering in the field. Sutherland, Evans, and his students from that era invented several foundations of modern computer graphics. He received the Turing Award from the Association for Computing Machinery in 1988 for the invention of Sketchpad, an early predecessor to the sort of graphical user interface that has become ubiquitous in personal computers. He is a member of the National Academy of Engineering, as well as the National Academy of Sciences among many other major awards. In 2012 he was awarded the Kyoto Prize in Advanced Technology for \"pioneering achievements in the development of computer graphics and interactive interfaces\".",
+            "Palmy Days\nPalmy Days (1931) is an American Pre-Code musical comedy film written by Eddie Cantor, Morrie Ryskind, and David Freedman, directed by A. Edward Sutherland, and choreographed by Busby Berkeley (who makes a cameo appearance as a fortune teller). The film stars Eddie Cantor. The famed Goldwyn Girls make appearances during elaborate production numbers set in a gymnasium and a bakery (\"Glorifying the American Doughnut\"). Betty Grable, Paulette Goddard, Virginia Grey, and Toby Wing are among the bevy of chorines.",
+            "Burning Up (film)\nBurning Up is a 1930 American Pre-Code action film directed by A. Edward Sutherland and written by Grover Jones and William Slavens McNutt. The film stars Richard Arlen as a racing driver and Mary Brian as his love interest, the daughter of a fellow driver. An early talkie, the film also features motorcycle stunts, and also stars Francis McDonald, Sam Hardy, Charles Sellon, and Tully Marshall. The film was released on February 1, 1930, by Paramount Pictures.",
+            "Donald Sutherland\nDonald McNichol Sutherland, {'1': \", '2': \", '3': \", '4': \"} (born 17 July 1935) is a Canadian actor whose film career spans more than five decades.",
+            "Edward Schulmerich\nEdward C. Schulmerich (1863 \u2013 1937) was a businessman and politician in the U.S. state of Oregon. A native of California, his German family moved to Oregon when he was a boy, settling near Hillsboro. There he worked in the banking industry and other professional pursuits. A Republican, he served in both houses of the Oregon Legislative Assembly and prior to that on the city council of Hillsboro. His former home, the Edward Schulmerich House, is listed on the National Register of Historic Places."
+        ],
+        "thoughts": [
+            "There is no information about Horace Ov\u00e9's professional background in the provided text.",
+            "Based on the retrieved information, it is not possible to determine if Horace Ov\u00e9 is a photographer. There is no specific mention of his professional background in the provided text. Additional research or information is needed to make a definitive determination.",
+            "A. Edward Sutherland was a film director and actor, born in London on January 5, 1895. He came from a theatrical family, with his father being a theatre manager and producer, and his mother being a vaudeville performer. Sutherland's directorial debut was the silent film \"Coming Through\" in 1925, which is now considered a lost film. He also directed \"It's the Old Army Game\" in 1926, \"Palmy Days\" in 1931, and \"Burning Up\" in 1930. Additionally, he directed several other films and worked with notable actors such as W.C. Fields and Eddie Cantor. Sutherland's professional background primarily revolved around his work in the film industry.",
+            "Based on the retrieved information, A. Edward Sutherland was a film director and actor, not a photographer. His professional background primarily revolved around his work in the film industry, and he directed several films. Therefore, he is not a photographer.",
+            "Based on the combined results, it is inconclusive whether Horace Ov\u00e9 is a photographer, as there is no specific mention of his professional background in the provided information. However, A. Edward Sutherland is not a photographer, as his professional background primarily revolved around his work as a film director and actor."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Horace Ov\u00e9 and A. Edward Sutherland both photographers?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve biographical information about Horace Ov\u00e9.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve biographical information about A. Edward Sutherland.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Horace Ov\u00e9 is known for photography based on the biographical information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if A. Edward Sutherland is known for photography based on the biographical information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to determine if both Horace Ov\u00e9 and A. Edward Sutherland are photographers.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the task by first retrieving biographical information for both Horace Ov\u00e9 and A. Edward Sutherland separately. Next, it involves reasoning steps to check their involvement in photography. Finally, the information gathered is synthesized to address whether both individuals are photographers."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Horace Ov\u00e9\nHorace Ov\u00e9, CBE (born 1939), is a British filmmaker, photographer, painter and writer, one of the leading black independent film-makers to emerge in Britain since the post-war period. Ov\u00e9 holds the \"Guinness World Record\" for being the first black British film-maker to direct a feature-length film, \"Pressure\" (1975). In its retrospective history, \"100 Years of Cinema\", the British Film Institute (BFI) declared: \"Horace Ov\u00e9 is undoubtedly a pioneer in Black British history and his work provides a perspective on the Black experience in Britain.\"",
+            "Zak Ov\u00e9\nZak Ov\u00e9 (born 1966) is a British visual artist who works between sculpture, film and photography, living in London, UK, and Trinidad. His themes reflect \"his documentation of and anthropological interest in diasporic and African history, specifically that which is explored through Trinidadian carnival.\" In work that is \"filtered through his own personal and cultural upbringing, with a black Trinidadian father and white Irish mother\", he has exhibited widely in Europe, the United States and Africa, participating in international museum shows in London, Dakar, Paris, Dubai, Prague, Berlin, Johannesburg, Bamako and New York City. His father is the filmmaker Horace Ov\u00e9 and his sister is the actress Indra Ov\u00e9.",
+            "A. Edward Sutherland\nAlbert Edward Sutherland (January 5, 1895 \u2013 December 31, 1973) was a film director and actor. Born in London, he was from a theatrical family. His father, Al Sutherland, was a theatre manager and producer and his mother, Julie Ring, was a vaudeville performer. He was a nephew of both Blanche Ring and Thomas Meighan, who was married to Frances Ring, another of his mother's sisters.",
+            "Pressure (film)\nPressure is a 1976 British drama film and the first feature-length fiction film directed by a Black film-maker in Britain. Directed by Horace Ov\u00e9, and co-written by him with Samuel Selvon, \"Pressure\" is a powerful portrait of inter-generational tensions between first- and second-generation West Indian migrants in London's Notting Hill area. According to Julia Toppin,",
+            "The Orchid House (TV serial)\nThe Orchid House is a four-part television serial that first aired on British television's Channel 4 from 21 February to 14 March 1991, directed by Horace Ov\u00e9. Its cast featured Diana Quick, Madge Sinclair, Nigel Terry, Elizabeth Hurley, Kate Buffery and Frances Barber, and was based on Phyllis Shand Allfrey's only novel of the same name.",
+            "Playing Away\nPlaying Away is a 1987 TV comedy film directed by Horace Ov\u00e9, from a screenplay by Caryl Phillips. In the story, an English cricket team, fictitiously named \"Sneddington\" (based in Lavenham, Suffolk), invites a team of West Indian heritage based in Brixton (South London) to play a charity game in support of their \"Third World Week.\" According to Screenonline, \"The gentle comedy of manners and unexpected reversal of white and black stereotypes in \"Playing Away\" contrasts sharply with the stylistic experimentation and the militant denunciations of racial prejudice in director Horace Ov\u00e9's earlier feature, \"Pressure\" (1975).\" \"New York Times\" reviewer Vincent Canby called it \"witty and wise without being seriously disturbing for a minute\".",
+            "Coming Through\nComing Through (1925) is a silent film directed by A. Edward Sutherland starring Thomas Meighan and Lila Lee. The film was Sutherland's directorial debut and is now considered a lost film.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Hunter Davies\nEdward Hunter Davies, OBE (born 7 January 1936) is a British author, journalist and broadcaster. He is the author of a number of books, including the only authorised biography of the Beatles.",
+            "It's the Old Army Game\nIt's the Old Army Game is a 1926 American silent comedy film starring W. C. Fields and Louise Brooks. The \"army game\" is the shell game, a con-trick which WC Fields observes being played. \"It's the old army game\" he says, sagely. The film was directed by A. Edward Sutherland, billed as Eddie Sutherland, and co-stars Sutherland's aunt, the stage actress Blanche Ring in one of her few silent film appearances. The film is based on the revue \"The Comic Supplement\" by Joseph P. McEvoy and Fields, and included several skits from Fields' stage plays.",
+            "Ivan Sutherland\nIvan Edward Sutherland (born May 16, 1938) is an American computer scientist and Internet pioneer, widely regarded as the \"father of computer graphics.\" His early work in computer graphics as well as his teaching with David C. Evans in that subject at the University of Utah in the 1970s was pioneering in the field. Sutherland, Evans, and his students from that era invented several foundations of modern computer graphics. He received the Turing Award from the Association for Computing Machinery in 1988 for the invention of Sketchpad, an early predecessor to the sort of graphical user interface that has become ubiquitous in personal computers. He is a member of the National Academy of Engineering, as well as the National Academy of Sciences among many other major awards. In 2012 he was awarded the Kyoto Prize in Advanced Technology for \"pioneering achievements in the development of computer graphics and interactive interfaces\".",
+            "Palmy Days\nPalmy Days (1931) is an American Pre-Code musical comedy film written by Eddie Cantor, Morrie Ryskind, and David Freedman, directed by A. Edward Sutherland, and choreographed by Busby Berkeley (who makes a cameo appearance as a fortune teller). The film stars Eddie Cantor. The famed Goldwyn Girls make appearances during elaborate production numbers set in a gymnasium and a bakery (\"Glorifying the American Doughnut\"). Betty Grable, Paulette Goddard, Virginia Grey, and Toby Wing are among the bevy of chorines.",
+            "Burning Up (film)\nBurning Up is a 1930 American Pre-Code action film directed by A. Edward Sutherland and written by Grover Jones and William Slavens McNutt. The film stars Richard Arlen as a racing driver and Mary Brian as his love interest, the daughter of a fellow driver. An early talkie, the film also features motorcycle stunts, and also stars Francis McDonald, Sam Hardy, Charles Sellon, and Tully Marshall. The film was released on February 1, 1930, by Paramount Pictures.",
+            "Biography (Horslips album)\nBiography is a greatest hits compilation album by Irish Celtic rock band Horslips. The first disc comprises each of the band's singles that were released in the UK. The second comprises the B-sides to each of those singles, some of which have never been released on CD before. The album was released on 1 November 2013, to coincide with the release of the book \"Tall Tales: The Official Biography of Horslips\".",
+            "The Story of a Great Schoolmaster\nThe Story of a Great Schoolmaster is a 1924 biography of Frederick William Sanderson (1857-1922) by H. G. Wells. It is the only biography Wells wrote. Sanderson was a personal friend, having met Wells in 1914 when his sons George Philip ('Gip'), born in 1901, and Frank Richard, born in 1903, became pupils at Oundle School, of which Sanderson was headmaster from 1892 to 1922. After Sanderson died while giving a lecture at University College London at which he was introduced by Wells, the famous author agreed to help produce a biography to raise money for the school. But in December 1922, after disagreements emerged with Sanderson's widow about his approach to the subject, Wells withdrew from the official biography (published in 1923 as \"Sanderson of Oundle\"; Wells wrote much of the text but the volume was published without listing an author) and published his own work separately."
+        ],
+        "thoughts": [
+            "Horace Ov\u00e9, CBE, is a British filmmaker, photographer, painter, and writer, born in 1939. He is considered one of the leading black independent filmmakers to emerge in Britain since the post-war period. Ov\u00e9 holds the Guinness World Record for being the first black British filmmaker to direct a feature-length film, \"Pressure\" (1975). His work provides a perspective on the Black experience in Britain and is considered pioneering in Black British history.\n\nOv\u00e9's son, Zak Ov\u00e9, is a British visual artist who works between sculpture, film, and photography, with themes reflecting his documentation of and anthropological interest in diasporic and African history.\n\nHorace Ov\u00e9 has directed several notable films, including \"Pressure\" (1976), \"The Orchid House\" (1991), and \"Playing Away\" (1987). \"Pressure\" is a powerful portrait of inter-generational tensions between first- and second-generation West Indian migrants in London's Notting Hill area.\n\nIn addition to his film work, Ov\u00e9 has also directed a television serial, \"The Orchid House,\" and a TV comedy film, \"Playing Away.\"\n\nOverall, Horace Ov\u00e9's contributions to the film industry and his exploration of the Black experience in Britain have solidified his place as a pioneering figure in Black British history.",
+            "Based on the biographical information provided, Horace Ov\u00e9 is primarily known for his work as a filmmaker, painter, and writer. While his son, Zak Ov\u00e9, is involved in visual arts and photography, there is no specific mention of Horace Ov\u00e9 being known for photography. Therefore, it can be concluded that Horace Ov\u00e9 is not primarily known for photography based on the biographical information.",
+            "A. Edward Sutherland was a film director and actor born on January 5, 1895, in London. He came from a theatrical family, with his father being a theatre manager and producer, and his mother being a vaudeville performer. Sutherland made his directorial debut with the silent film \"Coming Through\" in 1925, which is now considered a lost film. He also directed films such as \"It's the Old Army Game\" (1926), \"Palmy Days\" (1931), and \"Burning Up\" (1930). Sutherland was also known for his work in the American Pre-Code film era. He passed away on December 31, 1973.",
+            "Based on the biographical information provided, A. Edward Sutherland is not known for photography. He is primarily known for his work as a film director and actor.",
+            "Based on the results of the upstream tasks, it can be determined that neither Horace Ov\u00e9 nor A. Edward Sutherland are primarily known for their work as photographers."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Horace Ov\u00e9 and A. Edward Sutherland both photographers?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine the professions and notable works of Horace Ov\u00e9.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the professions and notable works of A. Edward Sutherland.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze retrieved data to check if Horace Ov\u00e9 is a photographer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze retrieved data to check if A. Edward Sutherland is a photographer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine analyses to determine if both Horace Ov\u00e9 and A. Edward Sutherland are photographers.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is built to first gather information about each individual separately with nodes dedicated to retrieving their professions. Each of those retrieval nodes is followed by a reasoning step to determine if the individuals are photographers based on the retrieved information. Finally, a reasoning node synthesizes both results to answer the initial question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "A. Edward Sutherland\nAlbert Edward Sutherland (January 5, 1895 \u2013 December 31, 1973) was a film director and actor. Born in London, he was from a theatrical family. His father, Al Sutherland, was a theatre manager and producer and his mother, Julie Ring, was a vaudeville performer. He was a nephew of both Blanche Ring and Thomas Meighan, who was married to Frances Ring, another of his mother's sisters.",
+            "Playing Away\nPlaying Away is a 1987 TV comedy film directed by Horace Ov\u00e9, from a screenplay by Caryl Phillips. In the story, an English cricket team, fictitiously named \"Sneddington\" (based in Lavenham, Suffolk), invites a team of West Indian heritage based in Brixton (South London) to play a charity game in support of their \"Third World Week.\" According to Screenonline, \"The gentle comedy of manners and unexpected reversal of white and black stereotypes in \"Playing Away\" contrasts sharply with the stylistic experimentation and the militant denunciations of racial prejudice in director Horace Ov\u00e9's earlier feature, \"Pressure\" (1975).\" \"New York Times\" reviewer Vincent Canby called it \"witty and wise without being seriously disturbing for a minute\".",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Coming Through\nComing Through (1925) is a silent film directed by A. Edward Sutherland starring Thomas Meighan and Lila Lee. The film was Sutherland's directorial debut and is now considered a lost film.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "The Nerdist Podcast\nThe Nerdist Podcast is a weekly interview show \"about what it really means to be a nerd\" hosted by Chris Hardwick, usually accompanied by Jonah Ray and Matt Mira. The audio podcasts are typically an hour in length and include conversations with notable comedians or entertainers, sometimes at their own home. The show launched February 8, 2010. It serves as the flagship podcast for Nerdist Industries, which was founded in 2012 after the success of \"The Nerdist Podcast\". The show's theme song is \"Jetpack Blues, Sunset Hues\" by the chiptune band Anamanaguchi.",
+            "Palmy Days\nPalmy Days (1931) is an American Pre-Code musical comedy film written by Eddie Cantor, Morrie Ryskind, and David Freedman, directed by A. Edward Sutherland, and choreographed by Busby Berkeley (who makes a cameo appearance as a fortune teller). The film stars Eddie Cantor. The famed Goldwyn Girls make appearances during elaborate production numbers set in a gymnasium and a bakery (\"Glorifying the American Doughnut\"). Betty Grable, Paulette Goddard, Virginia Grey, and Toby Wing are among the bevy of chorines.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Ivan Sutherland\nIvan Edward Sutherland (born May 16, 1938) is an American computer scientist and Internet pioneer, widely regarded as the \"father of computer graphics.\" His early work in computer graphics as well as his teaching with David C. Evans in that subject at the University of Utah in the 1970s was pioneering in the field. Sutherland, Evans, and his students from that era invented several foundations of modern computer graphics. He received the Turing Award from the Association for Computing Machinery in 1988 for the invention of Sketchpad, an early predecessor to the sort of graphical user interface that has become ubiquitous in personal computers. He is a member of the National Academy of Engineering, as well as the National Academy of Sciences among many other major awards. In 2012 he was awarded the Kyoto Prize in Advanced Technology for \"pioneering achievements in the development of computer graphics and interactive interfaces\".",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Cynthia Mort\nCynthia Mort (born June 18, 1956) is an American director, screenwriter, and producer. Mort has worked primarily in television since beginning her career in 1994, writing for the sitcom \"Roseanne\". Her notable works include the HBO series \"Tell Me You Love Me\" as a creator and executive producer, the revenge film \"The Brave One\" (2007) as a screenwriter, and the biopic \"Nina\" (2016) as a director.",
+            "Viva Dead Ponies\nViva Dead Ponies (originally titled \"Bugs Fucking Bunny\" ) was the second album by The Fatima Mansions, and features elements of both their original, more synth-led and melodic sound on songs such as \"You're A Rose\", as well as the noiser, guitar-oriented style that would become more prominent in their later works (a notable example of this being \"Look What I Stole For Us, Darling\")."
+        ],
+        "thoughts": [
+            "Horace Ov\u00e9 was a Trinidadian-born British filmmaker, photographer, painter, and writer. He is best known for his notable works such as \"Pressure\" (1975), a film that explores racial prejudice, and \"Playing Away\" (1987), a comedy film that challenges racial stereotypes. Ov\u00e9's work often addressed social and political issues, particularly related to race and identity. He was a pioneering figure in black British cinema and made significant contributions to the film industry.",
+            "Based on the retrieved data, it is evident that Horace Ov\u00e9 was indeed a photographer, among other creative pursuits such as filmmaking, painting, and writing. His notable works and contributions to black British cinema further support the fact that he was involved in photography as part of his artistic endeavors.",
+            "Professions:\n1. Film director\n2. Actor\n\nNotable Works:\n1. Coming Through (1925) - Sutherland's directorial debut\n2. Palmy Days (1931) - American Pre-Code musical comedy film\n3. Through the Looking-Glass, and What Alice Found There - Directed by A. Edward Sutherland\n4. Tweedledum and Tweedledee - Fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\"",
+            "Based on the retrieved data, A. Edward Sutherland is not identified as a photographer. Instead, he is known for his work as a film director and actor. His notable works include directing films such as \"Coming Through\" and \"Through the Looking-Glass, and What Alice Found There.\" Therefore, it can be concluded that A. Edward Sutherland is not a photographer based on the analyzed data.",
+            "Based on the combined analyses, it can be determined that Horace Ov\u00e9 was indeed a photographer, as evidenced by his notable works and contributions to black British cinema. On the other hand, A. Edward Sutherland is not identified as a photographer, but rather known for his work as a film director and actor. Therefore, Horace Ov\u00e9 is a photographer, while A. Edward Sutherland is not."
+        ],
+        "is_best": false
+    }
+]

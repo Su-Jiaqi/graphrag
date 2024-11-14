@@ -1,0 +1,562 @@
+[
+    {
+        "question": "Who currently has more store locations? Bearno's or Patxi's Chicago Pizza?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Search for the current number of store locations for Bearno's.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Search for the current number of store locations for Patxi's Chicago Pizza.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of store locations found for Bearno's and Patxi's Chicago Pizza to determine which has more.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is designed to first gather information on the number of store locations for Bearno's and Patxi's Chicago Pizza. This involves two parallel retrieval and reasoning tasks (Nodes 1 and 2) to find this data for each pizza chain. Once we have the number of locations for both, Node 3 then reasons about the retrieved information to compare them and determine which one has more store locations. The graph efficiently breaks down the problem into gathering data and then reasoning based on that data to provide an answer to the original question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Patxi's Chicago Pizza\nPatxi's is a small pizzeria chain based in the San Francisco Bay Area, founded in San Francisco, California by William Freeman and Francisco \u201cPatxi\u201d Azpiroz. They specialize in Chicago-style pizza. Current locations include Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver. In April, 2014, Patxi's announced plans to open sixty new stores over the next five years. On November 6, 2015, Patxi's partnered with UberEATS to offer $10.00 cheese pizzas that were delivered in a box that said \"Little Nero's\" to honor the twenty-fifth anniversary of the release of the comedy film \"Home Alone\".",
+            "Aurelio's Pizza\nAurelio's Pizza is an Illinois restaurant chain which centers its business around the thin crust variety of Chicago-style pizza. Aurelio's Pizza has three corporate owned stores and 37 franchised locations in 6 states. Aurelio's Pizza is the oldest Chicago pizza franchise restaurant, franchising since 1974.",
+            "Bearno's\nBearno's Pizza is a pizza franchise based in Louisville, Kentucky with about 14 locations in Kentucky and Indiana.",
+            "Mr. Jim's Pizza\nMrJims.Pizza is a U.S. chain of pizza restaurants based in Farmers Branch, Texas. Jim Johnson opened the first restaurant in Detroit, Michigan in 1975. There are currently 42 locations in Louisiana, Texas, North Carolina, Nevada and Wyoming, with the majority located in northern Texas. MrJims.Pizza is widely known for their crust. Their hand stretched pizza dough is made fresh in the store daily from flour containing 100% spring wheat. Every single MrJims.Pizza franchise has online ordering capabilities. In 2006, MrJims.Pizza introduced a unique new item, Nacho Stix, to their menu. It quickly became one of their bestsellers, and lead to a resurgence in the popularity of MrJims.",
+            "The UPS Store\nThe UPS Store network is the world's largest franchisor of retail shipping, postal, printing and business service centers. Today, there are nearly 4,700 independently owned The UPS Store locations in the U.S., Puerto Rico, and Canada. The UPS Store, Inc., franchiser of The UPS Store brand, is a wholly owned subsidiary of United Parcel Service (UPS). As of August 2014, internal company web pages place the number of open UPS Stores to about 4300.",
+            "Chicago Pizza and Oven Grinder Company\nChicago Pizza and Oven Grinder Company is a restaurant located in Chicago, Illinois. The restaurant was founded in 1972, and specializes in a signature dish called the \"pizza pot pie.\" It enjoys local popularity and has appeared in many publications and television shows.",
+            "East of Chicago Pizza\nEast of Chicago Pizza is a restaurant chain based in Lima, Ohio offering different styles of pizza, buffalo wings, breadsticks, and subs. They have 75 restaurants in Ohio, Georgia, Indiana, Kentucky, West Virginia, New York, Michigan and South Carolina. The first restaurant was opened in 1982 as the Greenwich Pizza Barn in Greenwich, OH.",
+            "The Chicago Pizza Pie Factory\nThe Chicago Pizza Pie Factory was a chain of pizza restaurants. The chain originated in Crown Passage (off Pall Mall) as The Chicago Pizza Pie Factory and was started by entrepreneur Bob Payton in 1976-7. The London establishment also had a bar. This was the start of a series of restaurants forming the My Kinda Town chain. The chain opened restaurants in places such as Paris and Barcelona, where they operated successfully for several decades. The Paris site now houses a Burger King.",
+            "Drug Emporium\nDrug Emporium is the name of a discount drug store corporation, founded in 1977 in Columbus, Ohio, that was sold to several different buyers during 2000 to 2001. Although several store locations continue to use the Drug Emporium name, these locations are no longer affiliated with the now-defunct Columbus-based corporation. At the company's high water mark in the 1990s, there were almost 300 locations scattered throughout the United States, including stores that operated under the F&M and VIX banners.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Toyota Tercel\nThe Toyota Tercel is a subcompact manufactured by Toyota from 1978 to 1999 across five generations, in five body configurations sized between the Corolla and the Starlet. Manufactured at the Takaoka plant in Toyota City, Japan, and sharing its platform with the Cynos (a.k.a. Paseo) and the Starlet, the Tercel was marketed variously as the Toyota Corolla II\u2014sold at Toyota Japanese dealerships called \"Toyota Corolla Store\"s\u2014and was replaced by the Toyota Platz in 1999. It was also known as the Toyota Corsa and sold at Toyopet Store locations. Starting with the second generation, the Tercel dealership network was changed to Toyota Vista Stores, as its badge engineered sibling, the Corolla II, was exclusive to Toyota Corolla Store locations.",
+            "J. L. Robinson General Store\nThe J. L. Robinson General Store is a historic general store located on Hagaman Road in Hagaman, Macoupin County, Illinois. Railroad worker Charles Crossland Robinson opened the store in 1881; his son James Leo Robinson took over the store upon his father's death, giving it its current name. The store was the main seller of household and farming supplies in Western Mound Township and the Hagaman and Chesterfield areas. In addition, the building served as the township's post office, a railway express office for Macoupin County's two railroads, and the local Democratic Party headquarters. The store was also the first building in the area to receive electricity and telephone service. It is now the only surviving building in the area built before 1900.",
+            "Kentucky Gambler\n\"Kentucky Gambler\" is a 1974 song written and performed by Dolly Parton. \"Kentucky Gambler\" was issued as a track from Dolly Parton's, \"The Bargain Store\" album from 1975. That same year, Merle Haggard, covered \"Kentucky Gambler\" where it was his nineteenth number one song on the country chart. (Coincidentally, Parton's \"The Bargain Store\" album featured a cover of a Haggard composition, \"You'll Always Be Special to Me\".) The Merle Haggard version stayed at number one for a single week and spent a total of eleven weeks on the chart. (The following year, Haggard would cover another Dolly Parton song, \"The Seeker\".)",
+            "Towne West Square\nTowne West Square is an enclosed shopping mall located in Wichita, Kansas, United States. Opened in 1980, it comprises more than 100 stores in 951447 sqft of gross leasable area. The mall's five anchor stores include Convergys, Dick's Sporting Goods, two Dillard's locations and JCPenney. Sears (the sixth anchor store) closed in December 2014, leaving one anchor space vacant. The original anchor stores in the mall were: Dillard's, Henry's, JC Penney, Montgomery Ward and Service Merchandise. Sears opened in 1994 (14 years after the rest of the mall) moving a store from the open air Twin Lakes Shopping Center. There is a drop in daycare closest to JCPenny that opened in May 2015 called the Kiddie Klubhouse."
+        ],
+        "thoughts": [
+            "The current number of store locations for Bearno's Pizza is approximately 14, with locations in Kentucky and Indiana.",
+            "Patxi's Chicago Pizza currently has locations in Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver.",
+            "Based on the information provided, Bearno's Pizza has approximately 14 store locations, while Patxi's Chicago Pizza has 8 store locations. Therefore, Bearno's Pizza has more store locations than Patxi's Chicago Pizza."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who currently has more store locations? Bearno's or Patxi's Chicago Pizza?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the current number of store locations for Bearno's Pizza.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the current number of store locations for Patxi's Chicago Pizza.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of store locations of Bearno's and Patxi's Chicago Pizza to determine which has more locations.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The task requires comparing the number of store locations for two pizza chains. We break this down by first retrieving the current number of locations for Bearno's (Node 1) and Patxi's Chicago Pizza (Node 2). These retrieval steps can be done in parallel as they are independent. Once we have both pieces of information, we proceed to the reasoning step (Node 3) where we compare the two counts to determine which chain currently has more store locations. The final answer is derived from this comparison."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Bearno's\nBearno's Pizza is a pizza franchise based in Louisville, Kentucky with about 14 locations in Kentucky and Indiana.",
+            "Patxi's Chicago Pizza\nPatxi's is a small pizzeria chain based in the San Francisco Bay Area, founded in San Francisco, California by William Freeman and Francisco \u201cPatxi\u201d Azpiroz. They specialize in Chicago-style pizza. Current locations include Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver. In April, 2014, Patxi's announced plans to open sixty new stores over the next five years. On November 6, 2015, Patxi's partnered with UberEATS to offer $10.00 cheese pizzas that were delivered in a box that said \"Little Nero's\" to honor the twenty-fifth anniversary of the release of the comedy film \"Home Alone\".",
+            "Chicago Pizza and Oven Grinder Company\nChicago Pizza and Oven Grinder Company is a restaurant located in Chicago, Illinois. The restaurant was founded in 1972, and specializes in a signature dish called the \"pizza pot pie.\" It enjoys local popularity and has appeared in many publications and television shows.",
+            "Mr. Jim's Pizza\nMrJims.Pizza is a U.S. chain of pizza restaurants based in Farmers Branch, Texas. Jim Johnson opened the first restaurant in Detroit, Michigan in 1975. There are currently 42 locations in Louisiana, Texas, North Carolina, Nevada and Wyoming, with the majority located in northern Texas. MrJims.Pizza is widely known for their crust. Their hand stretched pizza dough is made fresh in the store daily from flour containing 100% spring wheat. Every single MrJims.Pizza franchise has online ordering capabilities. In 2006, MrJims.Pizza introduced a unique new item, Nacho Stix, to their menu. It quickly became one of their bestsellers, and lead to a resurgence in the popularity of MrJims.",
+            "The Chicago Pizza Pie Factory\nThe Chicago Pizza Pie Factory was a chain of pizza restaurants. The chain originated in Crown Passage (off Pall Mall) as The Chicago Pizza Pie Factory and was started by entrepreneur Bob Payton in 1976-7. The London establishment also had a bar. This was the start of a series of restaurants forming the My Kinda Town chain. The chain opened restaurants in places such as Paris and Barcelona, where they operated successfully for several decades. The Paris site now houses a Burger King.",
+            "The UPS Store\nThe UPS Store network is the world's largest franchisor of retail shipping, postal, printing and business service centers. Today, there are nearly 4,700 independently owned The UPS Store locations in the U.S., Puerto Rico, and Canada. The UPS Store, Inc., franchiser of The UPS Store brand, is a wholly owned subsidiary of United Parcel Service (UPS). As of August 2014, internal company web pages place the number of open UPS Stores to about 4300.",
+            "Aurelio's Pizza\nAurelio's Pizza is an Illinois restaurant chain which centers its business around the thin crust variety of Chicago-style pizza. Aurelio's Pizza has three corporate owned stores and 37 franchised locations in 6 states. Aurelio's Pizza is the oldest Chicago pizza franchise restaurant, franchising since 1974.",
+            "East of Chicago Pizza\nEast of Chicago Pizza is a restaurant chain based in Lima, Ohio offering different styles of pizza, buffalo wings, breadsticks, and subs. They have 75 restaurants in Ohio, Georgia, Indiana, Kentucky, West Virginia, New York, Michigan and South Carolina. The first restaurant was opened in 1982 as the Greenwich Pizza Barn in Greenwich, OH.",
+            "Pizza Capers\nPizza Capers is an Australian fast food chain specialising in pizza and Italian cuisine, based in Queensland. Pizza Capers has over 110 stores throughout Australia, located in the Australian Capital Territory (ACT), New South Wales, Queensland, South Australia, Tasmania and Victoria. The company has also expanded internationally into Singapore. Pizza Capers offers delivery in addition to in-store pick up or restaurant dining. The company is owned by parent company Retail Food Group.",
+            "Drug Emporium\nDrug Emporium is the name of a discount drug store corporation, founded in 1977 in Columbus, Ohio, that was sold to several different buyers during 2000 to 2001. Although several store locations continue to use the Drug Emporium name, these locations are no longer affiliated with the now-defunct Columbus-based corporation. At the company's high water mark in the 1990s, there were almost 300 locations scattered throughout the United States, including stores that operated under the F&M and VIX banners.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Papa Murphy's\nPapa Murphy's, a business based in Vancouver, Washington, United States, is a take-and-bake pizza company. It began in 1995 as the merger of two take-and-bake pizza companies: Papa Aldo's Pizza (founded in 1981) and Murphy's Pizza (founded in 1981). The company and its franchisees operate more than 1,300 outlets in the United States and Canada. Papa Murphy's is the fifth-largest pizza chain in the United States.",
+            "Pizza Factory\nPizza Factory Inc. is a chain of pizza restaurants in the western United States, based in Oakhurst, California. The company began in 1979, when Danny Wheeler and his wife Carol opened Danny's Red Devil Pizza in Oakhurst. Ron Willey and his wife Joyce subsequently opened a second location in 1981, known as Pizza Factory."
+        ],
+        "thoughts": [
+            "Bearno's Pizza currently has about 14 locations in Kentucky and Indiana.",
+            "Patxi's Chicago Pizza currently has 8 store locations, including Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver.",
+            "Bearno's Pizza has more locations than Patxi's Chicago Pizza, with 14 locations compared to Patxi's 8 locations."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Who currently has more store locations? Bearno's or Patxi's Chicago Pizza?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the current number of store locations for Bearno's Pizza.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the current number of store locations for Patxi's Chicago Pizza.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of store locations of Bearno's Pizza and Patxi's Chicago Pizza to determine which has more locations.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts with the retrieval of the current number of store locations for both Bearno's Pizza (Node 1) and Patxi's Chicago Pizza (Node 2) independently and allows these to run in parallel since they are independent tasks. In Node 3, we perform a reasoning step where the information collected from Nodes 1 and 2 is compared to determine which chain has more store locations. The outcome of Node 3 provides the final answer to the original question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Bearno's\nBearno's Pizza is a pizza franchise based in Louisville, Kentucky with about 14 locations in Kentucky and Indiana.",
+            "Patxi's Chicago Pizza\nPatxi's is a small pizzeria chain based in the San Francisco Bay Area, founded in San Francisco, California by William Freeman and Francisco \u201cPatxi\u201d Azpiroz. They specialize in Chicago-style pizza. Current locations include Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver. In April, 2014, Patxi's announced plans to open sixty new stores over the next five years. On November 6, 2015, Patxi's partnered with UberEATS to offer $10.00 cheese pizzas that were delivered in a box that said \"Little Nero's\" to honor the twenty-fifth anniversary of the release of the comedy film \"Home Alone\".",
+            "Chicago Pizza and Oven Grinder Company\nChicago Pizza and Oven Grinder Company is a restaurant located in Chicago, Illinois. The restaurant was founded in 1972, and specializes in a signature dish called the \"pizza pot pie.\" It enjoys local popularity and has appeared in many publications and television shows.",
+            "Mr. Jim's Pizza\nMrJims.Pizza is a U.S. chain of pizza restaurants based in Farmers Branch, Texas. Jim Johnson opened the first restaurant in Detroit, Michigan in 1975. There are currently 42 locations in Louisiana, Texas, North Carolina, Nevada and Wyoming, with the majority located in northern Texas. MrJims.Pizza is widely known for their crust. Their hand stretched pizza dough is made fresh in the store daily from flour containing 100% spring wheat. Every single MrJims.Pizza franchise has online ordering capabilities. In 2006, MrJims.Pizza introduced a unique new item, Nacho Stix, to their menu. It quickly became one of their bestsellers, and lead to a resurgence in the popularity of MrJims.",
+            "The Chicago Pizza Pie Factory\nThe Chicago Pizza Pie Factory was a chain of pizza restaurants. The chain originated in Crown Passage (off Pall Mall) as The Chicago Pizza Pie Factory and was started by entrepreneur Bob Payton in 1976-7. The London establishment also had a bar. This was the start of a series of restaurants forming the My Kinda Town chain. The chain opened restaurants in places such as Paris and Barcelona, where they operated successfully for several decades. The Paris site now houses a Burger King.",
+            "The UPS Store\nThe UPS Store network is the world's largest franchisor of retail shipping, postal, printing and business service centers. Today, there are nearly 4,700 independently owned The UPS Store locations in the U.S., Puerto Rico, and Canada. The UPS Store, Inc., franchiser of The UPS Store brand, is a wholly owned subsidiary of United Parcel Service (UPS). As of August 2014, internal company web pages place the number of open UPS Stores to about 4300.",
+            "Aurelio's Pizza\nAurelio's Pizza is an Illinois restaurant chain which centers its business around the thin crust variety of Chicago-style pizza. Aurelio's Pizza has three corporate owned stores and 37 franchised locations in 6 states. Aurelio's Pizza is the oldest Chicago pizza franchise restaurant, franchising since 1974.",
+            "East of Chicago Pizza\nEast of Chicago Pizza is a restaurant chain based in Lima, Ohio offering different styles of pizza, buffalo wings, breadsticks, and subs. They have 75 restaurants in Ohio, Georgia, Indiana, Kentucky, West Virginia, New York, Michigan and South Carolina. The first restaurant was opened in 1982 as the Greenwich Pizza Barn in Greenwich, OH.",
+            "Pizza Capers\nPizza Capers is an Australian fast food chain specialising in pizza and Italian cuisine, based in Queensland. Pizza Capers has over 110 stores throughout Australia, located in the Australian Capital Territory (ACT), New South Wales, Queensland, South Australia, Tasmania and Victoria. The company has also expanded internationally into Singapore. Pizza Capers offers delivery in addition to in-store pick up or restaurant dining. The company is owned by parent company Retail Food Group.",
+            "Drug Emporium\nDrug Emporium is the name of a discount drug store corporation, founded in 1977 in Columbus, Ohio, that was sold to several different buyers during 2000 to 2001. Although several store locations continue to use the Drug Emporium name, these locations are no longer affiliated with the now-defunct Columbus-based corporation. At the company's high water mark in the 1990s, there were almost 300 locations scattered throughout the United States, including stores that operated under the F&M and VIX banners.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Papa Murphy's\nPapa Murphy's, a business based in Vancouver, Washington, United States, is a take-and-bake pizza company. It began in 1995 as the merger of two take-and-bake pizza companies: Papa Aldo's Pizza (founded in 1981) and Murphy's Pizza (founded in 1981). The company and its franchisees operate more than 1,300 outlets in the United States and Canada. Papa Murphy's is the fifth-largest pizza chain in the United States.",
+            "Pizza Factory\nPizza Factory Inc. is a chain of pizza restaurants in the western United States, based in Oakhurst, California. The company began in 1979, when Danny Wheeler and his wife Carol opened Danny's Red Devil Pizza in Oakhurst. Ron Willey and his wife Joyce subsequently opened a second location in 1981, known as Pizza Factory."
+        ],
+        "thoughts": [
+            "Bearno's Pizza currently has about 14 locations in Kentucky and Indiana.",
+            "Patxi's Chicago Pizza currently has 8 store locations, including Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver.",
+            "Bearno's Pizza has more locations than Patxi's Chicago Pizza, with 14 locations compared to 8."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who currently has more store locations? Bearno's or Patxi's Chicago Pizza?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the current number of store locations for Bearno's.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the current number of store locations for Patxi's Chicago Pizza.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of store locations for Bearno's and Patxi's Chicago Pizza to determine which has more locations.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins with two parallel retrieval steps to gather information on the number of store locations for both Bearno's and Patxi's Chicago Pizza. Once both pieces of data have been retrieved, a reasoning step compares the two to determine which has more store locations. This structured approach ensures that each piece of information is collected independently before making the comparison, which is necessary to answer the original question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Patxi's Chicago Pizza\nPatxi's is a small pizzeria chain based in the San Francisco Bay Area, founded in San Francisco, California by William Freeman and Francisco \u201cPatxi\u201d Azpiroz. They specialize in Chicago-style pizza. Current locations include Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver. In April, 2014, Patxi's announced plans to open sixty new stores over the next five years. On November 6, 2015, Patxi's partnered with UberEATS to offer $10.00 cheese pizzas that were delivered in a box that said \"Little Nero's\" to honor the twenty-fifth anniversary of the release of the comedy film \"Home Alone\".",
+            "Chicago Pizza and Oven Grinder Company\nChicago Pizza and Oven Grinder Company is a restaurant located in Chicago, Illinois. The restaurant was founded in 1972, and specializes in a signature dish called the \"pizza pot pie.\" It enjoys local popularity and has appeared in many publications and television shows.",
+            "The Chicago Pizza Pie Factory\nThe Chicago Pizza Pie Factory was a chain of pizza restaurants. The chain originated in Crown Passage (off Pall Mall) as The Chicago Pizza Pie Factory and was started by entrepreneur Bob Payton in 1976-7. The London establishment also had a bar. This was the start of a series of restaurants forming the My Kinda Town chain. The chain opened restaurants in places such as Paris and Barcelona, where they operated successfully for several decades. The Paris site now houses a Burger King.",
+            "Aurelio's Pizza\nAurelio's Pizza is an Illinois restaurant chain which centers its business around the thin crust variety of Chicago-style pizza. Aurelio's Pizza has three corporate owned stores and 37 franchised locations in 6 states. Aurelio's Pizza is the oldest Chicago pizza franchise restaurant, franchising since 1974.",
+            "East of Chicago Pizza\nEast of Chicago Pizza is a restaurant chain based in Lima, Ohio offering different styles of pizza, buffalo wings, breadsticks, and subs. They have 75 restaurants in Ohio, Georgia, Indiana, Kentucky, West Virginia, New York, Michigan and South Carolina. The first restaurant was opened in 1982 as the Greenwich Pizza Barn in Greenwich, OH.",
+            "Pizza Capers\nPizza Capers is an Australian fast food chain specialising in pizza and Italian cuisine, based in Queensland. Pizza Capers has over 110 stores throughout Australia, located in the Australian Capital Territory (ACT), New South Wales, Queensland, South Australia, Tasmania and Victoria. The company has also expanded internationally into Singapore. Pizza Capers offers delivery in addition to in-store pick up or restaurant dining. The company is owned by parent company Retail Food Group.",
+            "Papa Murphy's\nPapa Murphy's, a business based in Vancouver, Washington, United States, is a take-and-bake pizza company. It began in 1995 as the merger of two take-and-bake pizza companies: Papa Aldo's Pizza (founded in 1981) and Murphy's Pizza (founded in 1981). The company and its franchisees operate more than 1,300 outlets in the United States and Canada. Papa Murphy's is the fifth-largest pizza chain in the United States.",
+            "Pizza Factory\nPizza Factory Inc. is a chain of pizza restaurants in the western United States, based in Oakhurst, California. The company began in 1979, when Danny Wheeler and his wife Carol opened Danny's Red Devil Pizza in Oakhurst. Ron Willey and his wife Joyce subsequently opened a second location in 1981, known as Pizza Factory.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Count von Count\nCount von Count, often known simply as \"the Count\" or \"Count Count\", is one of the Muppet characters on \"Sesame Street\". The Count is a vampire modeled after Bela Lugosi's interpretation of Count Dracula.",
+            "Prince Michel, Count of \u00c9vreux\nPrince Michel of Orl\u00e9ans, Fils de France, Count of \u00c9vreux (Michel Joseph Beno\u00eet Marie; born 25 June 1941, Rabat, Morocco) is a French nobleman and part of the claimant family to the French throne. He is the son of the late Prince Henri, Count of Paris (the Orleanist claimant to the French throne from 1940 until his death) and Princess Isabelle of Orl\u00e9ans-Braganza. Prince Michel is styled as the Count of \u00c9vreux.",
+            "Henry II, Count of Holstein-Rendsburg\nCount Henry II of Holstein-Rendsburg (nickname \"Iron Henry\"; \u20091317 \u2013 \u20091384 ) was count of Holstein-Rendsburg and pledge lord of Southern Schleswig. He ruled jointly with his younger brother, Count Nicholas (d. 1397).",
+            "Burchard I, Duke of Swabia\nBurchard I (died 5 or 23 November 911) was the Duke of Alamannia from 909 to his death and margrave of Raetia Curiensis, as well as Count in the Thurgau and Baar. Born between 855 and 860, He was the son of Adalbert II, Count in the Thurgau. Burchard married Liutgard of Saxony. He is a direct ancestor of Queen Elizabeth II .",
+            "Count Luitpold of Castell-Castell\nCount \"Luitpold\" Alfred Friedrich Karl of Castell-Castell (German: \"Luitpold Alfred Friedrich Karl Graf zu Castell-Castell\" ) (born 14 November 1904 in Langenzell, Wiesenbach, Grand Duchy of Baden; died 6 or 8 November 1941 in Bankya near Sofia, Kingdom of Bulgaria) was a staff officer in the German Army during World War II and a member of the extended Danish Royal Family through his marriage to Princess Alexandrine-Louise of Denmark. Luitpold was a Count of Castell-Castell and a member of the Countly House of Castell-Castell.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Carl von Donop\nCount Carl Emil Ulrich von Donop (January 1, 1732 \u2013 October 25, 1777) was a Hessian colonel who fought in the American Revolutionary War."
+        ],
+        "thoughts": [
+            "The current number of store locations for Bearno's is not provided in the given information.",
+            "The current number of store locations for Patxi's Chicago Pizza is 8, with locations in Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver.",
+            "Based on the information provided, Patxi's Chicago Pizza has 8 store locations, while the current number of store locations for Bearno's is not provided. Therefore, Patxi's Chicago Pizza has more locations than Bearno's."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who currently has more store locations? Bearno's or Patxi's Chicago Pizza?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the current number of store locations for Bearno's.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the current number of store locations for Patxi's Chicago Pizza.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of store locations between Bearno's and Patxi's Chicago Pizza to determine which has more locations.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The question requires information about the number of store locations for two specific pizza chains. We start by retrieving the number of store locations for each chain independently, which allows these two retrieval tasks to be conducted in parallel (Nodes 1 and 2). Once the information on the number of locations is gathered for both chains, a reasoning step (Node 3) is involved to compare the numbers and determine which chain currently has more store locations. The final node provides the comparison result based on the retrieved data."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Patxi's Chicago Pizza\nPatxi's is a small pizzeria chain based in the San Francisco Bay Area, founded in San Francisco, California by William Freeman and Francisco \u201cPatxi\u201d Azpiroz. They specialize in Chicago-style pizza. Current locations include Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver. In April, 2014, Patxi's announced plans to open sixty new stores over the next five years. On November 6, 2015, Patxi's partnered with UberEATS to offer $10.00 cheese pizzas that were delivered in a box that said \"Little Nero's\" to honor the twenty-fifth anniversary of the release of the comedy film \"Home Alone\".",
+            "Chicago Pizza and Oven Grinder Company\nChicago Pizza and Oven Grinder Company is a restaurant located in Chicago, Illinois. The restaurant was founded in 1972, and specializes in a signature dish called the \"pizza pot pie.\" It enjoys local popularity and has appeared in many publications and television shows.",
+            "The Chicago Pizza Pie Factory\nThe Chicago Pizza Pie Factory was a chain of pizza restaurants. The chain originated in Crown Passage (off Pall Mall) as The Chicago Pizza Pie Factory and was started by entrepreneur Bob Payton in 1976-7. The London establishment also had a bar. This was the start of a series of restaurants forming the My Kinda Town chain. The chain opened restaurants in places such as Paris and Barcelona, where they operated successfully for several decades. The Paris site now houses a Burger King.",
+            "Aurelio's Pizza\nAurelio's Pizza is an Illinois restaurant chain which centers its business around the thin crust variety of Chicago-style pizza. Aurelio's Pizza has three corporate owned stores and 37 franchised locations in 6 states. Aurelio's Pizza is the oldest Chicago pizza franchise restaurant, franchising since 1974.",
+            "East of Chicago Pizza\nEast of Chicago Pizza is a restaurant chain based in Lima, Ohio offering different styles of pizza, buffalo wings, breadsticks, and subs. They have 75 restaurants in Ohio, Georgia, Indiana, Kentucky, West Virginia, New York, Michigan and South Carolina. The first restaurant was opened in 1982 as the Greenwich Pizza Barn in Greenwich, OH.",
+            "Pizza Capers\nPizza Capers is an Australian fast food chain specialising in pizza and Italian cuisine, based in Queensland. Pizza Capers has over 110 stores throughout Australia, located in the Australian Capital Territory (ACT), New South Wales, Queensland, South Australia, Tasmania and Victoria. The company has also expanded internationally into Singapore. Pizza Capers offers delivery in addition to in-store pick up or restaurant dining. The company is owned by parent company Retail Food Group.",
+            "Papa Murphy's\nPapa Murphy's, a business based in Vancouver, Washington, United States, is a take-and-bake pizza company. It began in 1995 as the merger of two take-and-bake pizza companies: Papa Aldo's Pizza (founded in 1981) and Murphy's Pizza (founded in 1981). The company and its franchisees operate more than 1,300 outlets in the United States and Canada. Papa Murphy's is the fifth-largest pizza chain in the United States.",
+            "Pizza Factory\nPizza Factory Inc. is a chain of pizza restaurants in the western United States, based in Oakhurst, California. The company began in 1979, when Danny Wheeler and his wife Carol opened Danny's Red Devil Pizza in Oakhurst. Ron Willey and his wife Joyce subsequently opened a second location in 1981, known as Pizza Factory.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Count von Count\nCount von Count, often known simply as \"the Count\" or \"Count Count\", is one of the Muppet characters on \"Sesame Street\". The Count is a vampire modeled after Bela Lugosi's interpretation of Count Dracula.",
+            "Prince Michel, Count of \u00c9vreux\nPrince Michel of Orl\u00e9ans, Fils de France, Count of \u00c9vreux (Michel Joseph Beno\u00eet Marie; born 25 June 1941, Rabat, Morocco) is a French nobleman and part of the claimant family to the French throne. He is the son of the late Prince Henri, Count of Paris (the Orleanist claimant to the French throne from 1940 until his death) and Princess Isabelle of Orl\u00e9ans-Braganza. Prince Michel is styled as the Count of \u00c9vreux.",
+            "Henry II, Count of Holstein-Rendsburg\nCount Henry II of Holstein-Rendsburg (nickname \"Iron Henry\"; \u20091317 \u2013 \u20091384 ) was count of Holstein-Rendsburg and pledge lord of Southern Schleswig. He ruled jointly with his younger brother, Count Nicholas (d. 1397).",
+            "Burchard I, Duke of Swabia\nBurchard I (died 5 or 23 November 911) was the Duke of Alamannia from 909 to his death and margrave of Raetia Curiensis, as well as Count in the Thurgau and Baar. Born between 855 and 860, He was the son of Adalbert II, Count in the Thurgau. Burchard married Liutgard of Saxony. He is a direct ancestor of Queen Elizabeth II .",
+            "Count Luitpold of Castell-Castell\nCount \"Luitpold\" Alfred Friedrich Karl of Castell-Castell (German: \"Luitpold Alfred Friedrich Karl Graf zu Castell-Castell\" ) (born 14 November 1904 in Langenzell, Wiesenbach, Grand Duchy of Baden; died 6 or 8 November 1941 in Bankya near Sofia, Kingdom of Bulgaria) was a staff officer in the German Army during World War II and a member of the extended Danish Royal Family through his marriage to Princess Alexandrine-Louise of Denmark. Luitpold was a Count of Castell-Castell and a member of the Countly House of Castell-Castell.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Carl von Donop\nCount Carl Emil Ulrich von Donop (January 1, 1732 \u2013 October 25, 1777) was a Hessian colonel who fought in the American Revolutionary War."
+        ],
+        "thoughts": [
+            "The current number of store locations for Bearno's is not provided in the given information.",
+            "The current number of store locations for Patxi's Chicago Pizza is 8, with locations in Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver.",
+            "Based on the information provided, Patxi's Chicago Pizza has 8 store locations, while the current number of store locations for Bearno's is not provided. Therefore, Patxi's Chicago Pizza has more locations than Bearno's."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who currently has more store locations? Bearno's or Patxi's Chicago Pizza?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the current number of store locations for Bearno's.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the current number of store locations for Patxi's Chicago Pizza.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of store locations for Bearno's and Patxi's Chicago Pizza to determine which has more.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is structured to first independently retrieve the number of store locations for Bearno's and Patxi's Chicago Pizza. These retrieval tasks (Node 1 and Node 2) can be executed in parallel as they do not depend on each other. After gathering the required data, Node 3 processes the retrieved information to perform a comparison and determine which chain has more locations. This structure ensures that all necessary information is collected before analysis."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Patxi's Chicago Pizza\nPatxi's is a small pizzeria chain based in the San Francisco Bay Area, founded in San Francisco, California by William Freeman and Francisco \u201cPatxi\u201d Azpiroz. They specialize in Chicago-style pizza. Current locations include Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver. In April, 2014, Patxi's announced plans to open sixty new stores over the next five years. On November 6, 2015, Patxi's partnered with UberEATS to offer $10.00 cheese pizzas that were delivered in a box that said \"Little Nero's\" to honor the twenty-fifth anniversary of the release of the comedy film \"Home Alone\".",
+            "Aurelio's Pizza\nAurelio's Pizza is an Illinois restaurant chain which centers its business around the thin crust variety of Chicago-style pizza. Aurelio's Pizza has three corporate owned stores and 37 franchised locations in 6 states. Aurelio's Pizza is the oldest Chicago pizza franchise restaurant, franchising since 1974.",
+            "Bearno's\nBearno's Pizza is a pizza franchise based in Louisville, Kentucky with about 14 locations in Kentucky and Indiana.",
+            "Mr. Jim's Pizza\nMrJims.Pizza is a U.S. chain of pizza restaurants based in Farmers Branch, Texas. Jim Johnson opened the first restaurant in Detroit, Michigan in 1975. There are currently 42 locations in Louisiana, Texas, North Carolina, Nevada and Wyoming, with the majority located in northern Texas. MrJims.Pizza is widely known for their crust. Their hand stretched pizza dough is made fresh in the store daily from flour containing 100% spring wheat. Every single MrJims.Pizza franchise has online ordering capabilities. In 2006, MrJims.Pizza introduced a unique new item, Nacho Stix, to their menu. It quickly became one of their bestsellers, and lead to a resurgence in the popularity of MrJims.",
+            "The UPS Store\nThe UPS Store network is the world's largest franchisor of retail shipping, postal, printing and business service centers. Today, there are nearly 4,700 independently owned The UPS Store locations in the U.S., Puerto Rico, and Canada. The UPS Store, Inc., franchiser of The UPS Store brand, is a wholly owned subsidiary of United Parcel Service (UPS). As of August 2014, internal company web pages place the number of open UPS Stores to about 4300.",
+            "The Chicago Pizza Pie Factory\nThe Chicago Pizza Pie Factory was a chain of pizza restaurants. The chain originated in Crown Passage (off Pall Mall) as The Chicago Pizza Pie Factory and was started by entrepreneur Bob Payton in 1976-7. The London establishment also had a bar. This was the start of a series of restaurants forming the My Kinda Town chain. The chain opened restaurants in places such as Paris and Barcelona, where they operated successfully for several decades. The Paris site now houses a Burger King.",
+            "Chicago Pizza and Oven Grinder Company\nChicago Pizza and Oven Grinder Company is a restaurant located in Chicago, Illinois. The restaurant was founded in 1972, and specializes in a signature dish called the \"pizza pot pie.\" It enjoys local popularity and has appeared in many publications and television shows.",
+            "East of Chicago Pizza\nEast of Chicago Pizza is a restaurant chain based in Lima, Ohio offering different styles of pizza, buffalo wings, breadsticks, and subs. They have 75 restaurants in Ohio, Georgia, Indiana, Kentucky, West Virginia, New York, Michigan and South Carolina. The first restaurant was opened in 1982 as the Greenwich Pizza Barn in Greenwich, OH.",
+            "Drug Emporium\nDrug Emporium is the name of a discount drug store corporation, founded in 1977 in Columbus, Ohio, that was sold to several different buyers during 2000 to 2001. Although several store locations continue to use the Drug Emporium name, these locations are no longer affiliated with the now-defunct Columbus-based corporation. At the company's high water mark in the 1990s, there were almost 300 locations scattered throughout the United States, including stores that operated under the F&M and VIX banners.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Toyota Tercel\nThe Toyota Tercel is a subcompact manufactured by Toyota from 1978 to 1999 across five generations, in five body configurations sized between the Corolla and the Starlet. Manufactured at the Takaoka plant in Toyota City, Japan, and sharing its platform with the Cynos (a.k.a. Paseo) and the Starlet, the Tercel was marketed variously as the Toyota Corolla II\u2014sold at Toyota Japanese dealerships called \"Toyota Corolla Store\"s\u2014and was replaced by the Toyota Platz in 1999. It was also known as the Toyota Corsa and sold at Toyopet Store locations. Starting with the second generation, the Tercel dealership network was changed to Toyota Vista Stores, as its badge engineered sibling, the Corolla II, was exclusive to Toyota Corolla Store locations.",
+            "J. L. Robinson General Store\nThe J. L. Robinson General Store is a historic general store located on Hagaman Road in Hagaman, Macoupin County, Illinois. Railroad worker Charles Crossland Robinson opened the store in 1881; his son James Leo Robinson took over the store upon his father's death, giving it its current name. The store was the main seller of household and farming supplies in Western Mound Township and the Hagaman and Chesterfield areas. In addition, the building served as the township's post office, a railway express office for Macoupin County's two railroads, and the local Democratic Party headquarters. The store was also the first building in the area to receive electricity and telephone service. It is now the only surviving building in the area built before 1900.",
+            "Kentucky Gambler\n\"Kentucky Gambler\" is a 1974 song written and performed by Dolly Parton. \"Kentucky Gambler\" was issued as a track from Dolly Parton's, \"The Bargain Store\" album from 1975. That same year, Merle Haggard, covered \"Kentucky Gambler\" where it was his nineteenth number one song on the country chart. (Coincidentally, Parton's \"The Bargain Store\" album featured a cover of a Haggard composition, \"You'll Always Be Special to Me\".) The Merle Haggard version stayed at number one for a single week and spent a total of eleven weeks on the chart. (The following year, Haggard would cover another Dolly Parton song, \"The Seeker\".)",
+            "Towne West Square\nTowne West Square is an enclosed shopping mall located in Wichita, Kansas, United States. Opened in 1980, it comprises more than 100 stores in 951447 sqft of gross leasable area. The mall's five anchor stores include Convergys, Dick's Sporting Goods, two Dillard's locations and JCPenney. Sears (the sixth anchor store) closed in December 2014, leaving one anchor space vacant. The original anchor stores in the mall were: Dillard's, Henry's, JC Penney, Montgomery Ward and Service Merchandise. Sears opened in 1994 (14 years after the rest of the mall) moving a store from the open air Twin Lakes Shopping Center. There is a drop in daycare closest to JCPenny that opened in May 2015 called the Kiddie Klubhouse."
+        ],
+        "thoughts": [
+            "Bearno's currently has about 14 locations in Kentucky and Indiana.",
+            "Patxi's Chicago Pizza currently has 8 store locations.",
+            "Based on the information provided, Bearno's has more store locations than Patxi's Chicago Pizza. Bearno's has approximately 14 locations in Kentucky and Indiana, while Patxi's Chicago Pizza has 8 store locations. Therefore, Bearno's has a greater number of store locations."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who currently has more store locations? Bearno's or Patxi's Chicago Pizza?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the current number of store locations for Bearno's.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the current number of store locations for Patxi's Chicago Pizza.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of store locations between Bearno's and Patxi's Chicago Pizza to determine which has more.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "3",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts with two parallel nodes focusing on retrieving the current number of store locations for both Bearno's and Patxi's Chicago Pizza. These nodes are retrieval and reasoning because they involve a bit of investigation and ensuring the information is current. The results from these retrieval steps are then fed into a reasoning node that compares both quantities to answer the initial question about which chain has more store locations."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Patxi's Chicago Pizza\nPatxi's is a small pizzeria chain based in the San Francisco Bay Area, founded in San Francisco, California by William Freeman and Francisco \u201cPatxi\u201d Azpiroz. They specialize in Chicago-style pizza. Current locations include Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver. In April, 2014, Patxi's announced plans to open sixty new stores over the next five years. On November 6, 2015, Patxi's partnered with UberEATS to offer $10.00 cheese pizzas that were delivered in a box that said \"Little Nero's\" to honor the twenty-fifth anniversary of the release of the comedy film \"Home Alone\".",
+            "Aurelio's Pizza\nAurelio's Pizza is an Illinois restaurant chain which centers its business around the thin crust variety of Chicago-style pizza. Aurelio's Pizza has three corporate owned stores and 37 franchised locations in 6 states. Aurelio's Pizza is the oldest Chicago pizza franchise restaurant, franchising since 1974.",
+            "Bearno's\nBearno's Pizza is a pizza franchise based in Louisville, Kentucky with about 14 locations in Kentucky and Indiana.",
+            "Mr. Jim's Pizza\nMrJims.Pizza is a U.S. chain of pizza restaurants based in Farmers Branch, Texas. Jim Johnson opened the first restaurant in Detroit, Michigan in 1975. There are currently 42 locations in Louisiana, Texas, North Carolina, Nevada and Wyoming, with the majority located in northern Texas. MrJims.Pizza is widely known for their crust. Their hand stretched pizza dough is made fresh in the store daily from flour containing 100% spring wheat. Every single MrJims.Pizza franchise has online ordering capabilities. In 2006, MrJims.Pizza introduced a unique new item, Nacho Stix, to their menu. It quickly became one of their bestsellers, and lead to a resurgence in the popularity of MrJims.",
+            "The UPS Store\nThe UPS Store network is the world's largest franchisor of retail shipping, postal, printing and business service centers. Today, there are nearly 4,700 independently owned The UPS Store locations in the U.S., Puerto Rico, and Canada. The UPS Store, Inc., franchiser of The UPS Store brand, is a wholly owned subsidiary of United Parcel Service (UPS). As of August 2014, internal company web pages place the number of open UPS Stores to about 4300.",
+            "Chicago Pizza and Oven Grinder Company\nChicago Pizza and Oven Grinder Company is a restaurant located in Chicago, Illinois. The restaurant was founded in 1972, and specializes in a signature dish called the \"pizza pot pie.\" It enjoys local popularity and has appeared in many publications and television shows.",
+            "East of Chicago Pizza\nEast of Chicago Pizza is a restaurant chain based in Lima, Ohio offering different styles of pizza, buffalo wings, breadsticks, and subs. They have 75 restaurants in Ohio, Georgia, Indiana, Kentucky, West Virginia, New York, Michigan and South Carolina. The first restaurant was opened in 1982 as the Greenwich Pizza Barn in Greenwich, OH.",
+            "The Chicago Pizza Pie Factory\nThe Chicago Pizza Pie Factory was a chain of pizza restaurants. The chain originated in Crown Passage (off Pall Mall) as The Chicago Pizza Pie Factory and was started by entrepreneur Bob Payton in 1976-7. The London establishment also had a bar. This was the start of a series of restaurants forming the My Kinda Town chain. The chain opened restaurants in places such as Paris and Barcelona, where they operated successfully for several decades. The Paris site now houses a Burger King.",
+            "Drug Emporium\nDrug Emporium is the name of a discount drug store corporation, founded in 1977 in Columbus, Ohio, that was sold to several different buyers during 2000 to 2001. Although several store locations continue to use the Drug Emporium name, these locations are no longer affiliated with the now-defunct Columbus-based corporation. At the company's high water mark in the 1990s, there were almost 300 locations scattered throughout the United States, including stores that operated under the F&M and VIX banners.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Toyota Tercel\nThe Toyota Tercel is a subcompact manufactured by Toyota from 1978 to 1999 across five generations, in five body configurations sized between the Corolla and the Starlet. Manufactured at the Takaoka plant in Toyota City, Japan, and sharing its platform with the Cynos (a.k.a. Paseo) and the Starlet, the Tercel was marketed variously as the Toyota Corolla II\u2014sold at Toyota Japanese dealerships called \"Toyota Corolla Store\"s\u2014and was replaced by the Toyota Platz in 1999. It was also known as the Toyota Corsa and sold at Toyopet Store locations. Starting with the second generation, the Tercel dealership network was changed to Toyota Vista Stores, as its badge engineered sibling, the Corolla II, was exclusive to Toyota Corolla Store locations.",
+            "J. L. Robinson General Store\nThe J. L. Robinson General Store is a historic general store located on Hagaman Road in Hagaman, Macoupin County, Illinois. Railroad worker Charles Crossland Robinson opened the store in 1881; his son James Leo Robinson took over the store upon his father's death, giving it its current name. The store was the main seller of household and farming supplies in Western Mound Township and the Hagaman and Chesterfield areas. In addition, the building served as the township's post office, a railway express office for Macoupin County's two railroads, and the local Democratic Party headquarters. The store was also the first building in the area to receive electricity and telephone service. It is now the only surviving building in the area built before 1900.",
+            "Kentucky Gambler\n\"Kentucky Gambler\" is a 1974 song written and performed by Dolly Parton. \"Kentucky Gambler\" was issued as a track from Dolly Parton's, \"The Bargain Store\" album from 1975. That same year, Merle Haggard, covered \"Kentucky Gambler\" where it was his nineteenth number one song on the country chart. (Coincidentally, Parton's \"The Bargain Store\" album featured a cover of a Haggard composition, \"You'll Always Be Special to Me\".) The Merle Haggard version stayed at number one for a single week and spent a total of eleven weeks on the chart. (The following year, Haggard would cover another Dolly Parton song, \"The Seeker\".)",
+            "Towne West Square\nTowne West Square is an enclosed shopping mall located in Wichita, Kansas, United States. Opened in 1980, it comprises more than 100 stores in 951447 sqft of gross leasable area. The mall's five anchor stores include Convergys, Dick's Sporting Goods, two Dillard's locations and JCPenney. Sears (the sixth anchor store) closed in December 2014, leaving one anchor space vacant. The original anchor stores in the mall were: Dillard's, Henry's, JC Penney, Montgomery Ward and Service Merchandise. Sears opened in 1994 (14 years after the rest of the mall) moving a store from the open air Twin Lakes Shopping Center. There is a drop in daycare closest to JCPenny that opened in May 2015 called the Kiddie Klubhouse."
+        ],
+        "thoughts": [
+            "Bearno's currently has about 14 locations in Kentucky and Indiana.",
+            "Patxi's Chicago Pizza currently has 8 store locations.",
+            "Bearno's has more store locations than Patxi's Chicago Pizza, with 14 locations compared to 8."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who currently has more store locations? Bearno's or Patxi's Chicago Pizza?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the current number of store locations for Bearno's.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the current number of store locations for Patxi's Chicago Pizza.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of store locations for Bearno's and Patxi's Chicago Pizza to determine which has more.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph begins with two parallel retrieval steps, each obtaining the number of store locations for Bearno's and Patxi's Chicago Pizza respectively. The reasoning node then compares these numbers to determine which of the two has more store locations, providing the final answer."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Patxi's Chicago Pizza\nPatxi's is a small pizzeria chain based in the San Francisco Bay Area, founded in San Francisco, California by William Freeman and Francisco \u201cPatxi\u201d Azpiroz. They specialize in Chicago-style pizza. Current locations include Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver. In April, 2014, Patxi's announced plans to open sixty new stores over the next five years. On November 6, 2015, Patxi's partnered with UberEATS to offer $10.00 cheese pizzas that were delivered in a box that said \"Little Nero's\" to honor the twenty-fifth anniversary of the release of the comedy film \"Home Alone\".",
+            "Chicago Pizza and Oven Grinder Company\nChicago Pizza and Oven Grinder Company is a restaurant located in Chicago, Illinois. The restaurant was founded in 1972, and specializes in a signature dish called the \"pizza pot pie.\" It enjoys local popularity and has appeared in many publications and television shows.",
+            "The Chicago Pizza Pie Factory\nThe Chicago Pizza Pie Factory was a chain of pizza restaurants. The chain originated in Crown Passage (off Pall Mall) as The Chicago Pizza Pie Factory and was started by entrepreneur Bob Payton in 1976-7. The London establishment also had a bar. This was the start of a series of restaurants forming the My Kinda Town chain. The chain opened restaurants in places such as Paris and Barcelona, where they operated successfully for several decades. The Paris site now houses a Burger King.",
+            "Aurelio's Pizza\nAurelio's Pizza is an Illinois restaurant chain which centers its business around the thin crust variety of Chicago-style pizza. Aurelio's Pizza has three corporate owned stores and 37 franchised locations in 6 states. Aurelio's Pizza is the oldest Chicago pizza franchise restaurant, franchising since 1974.",
+            "East of Chicago Pizza\nEast of Chicago Pizza is a restaurant chain based in Lima, Ohio offering different styles of pizza, buffalo wings, breadsticks, and subs. They have 75 restaurants in Ohio, Georgia, Indiana, Kentucky, West Virginia, New York, Michigan and South Carolina. The first restaurant was opened in 1982 as the Greenwich Pizza Barn in Greenwich, OH.",
+            "Pizza Capers\nPizza Capers is an Australian fast food chain specialising in pizza and Italian cuisine, based in Queensland. Pizza Capers has over 110 stores throughout Australia, located in the Australian Capital Territory (ACT), New South Wales, Queensland, South Australia, Tasmania and Victoria. The company has also expanded internationally into Singapore. Pizza Capers offers delivery in addition to in-store pick up or restaurant dining. The company is owned by parent company Retail Food Group.",
+            "Papa Murphy's\nPapa Murphy's, a business based in Vancouver, Washington, United States, is a take-and-bake pizza company. It began in 1995 as the merger of two take-and-bake pizza companies: Papa Aldo's Pizza (founded in 1981) and Murphy's Pizza (founded in 1981). The company and its franchisees operate more than 1,300 outlets in the United States and Canada. Papa Murphy's is the fifth-largest pizza chain in the United States.",
+            "Pizza Factory\nPizza Factory Inc. is a chain of pizza restaurants in the western United States, based in Oakhurst, California. The company began in 1979, when Danny Wheeler and his wife Carol opened Danny's Red Devil Pizza in Oakhurst. Ron Willey and his wife Joyce subsequently opened a second location in 1981, known as Pizza Factory.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Count von Count\nCount von Count, often known simply as \"the Count\" or \"Count Count\", is one of the Muppet characters on \"Sesame Street\". The Count is a vampire modeled after Bela Lugosi's interpretation of Count Dracula.",
+            "Prince Michel, Count of \u00c9vreux\nPrince Michel of Orl\u00e9ans, Fils de France, Count of \u00c9vreux (Michel Joseph Beno\u00eet Marie; born 25 June 1941, Rabat, Morocco) is a French nobleman and part of the claimant family to the French throne. He is the son of the late Prince Henri, Count of Paris (the Orleanist claimant to the French throne from 1940 until his death) and Princess Isabelle of Orl\u00e9ans-Braganza. Prince Michel is styled as the Count of \u00c9vreux.",
+            "Henry II, Count of Holstein-Rendsburg\nCount Henry II of Holstein-Rendsburg (nickname \"Iron Henry\"; \u20091317 \u2013 \u20091384 ) was count of Holstein-Rendsburg and pledge lord of Southern Schleswig. He ruled jointly with his younger brother, Count Nicholas (d. 1397).",
+            "Burchard I, Duke of Swabia\nBurchard I (died 5 or 23 November 911) was the Duke of Alamannia from 909 to his death and margrave of Raetia Curiensis, as well as Count in the Thurgau and Baar. Born between 855 and 860, He was the son of Adalbert II, Count in the Thurgau. Burchard married Liutgard of Saxony. He is a direct ancestor of Queen Elizabeth II .",
+            "Count Luitpold of Castell-Castell\nCount \"Luitpold\" Alfred Friedrich Karl of Castell-Castell (German: \"Luitpold Alfred Friedrich Karl Graf zu Castell-Castell\" ) (born 14 November 1904 in Langenzell, Wiesenbach, Grand Duchy of Baden; died 6 or 8 November 1941 in Bankya near Sofia, Kingdom of Bulgaria) was a staff officer in the German Army during World War II and a member of the extended Danish Royal Family through his marriage to Princess Alexandrine-Louise of Denmark. Luitpold was a Count of Castell-Castell and a member of the Countly House of Castell-Castell.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Carl von Donop\nCount Carl Emil Ulrich von Donop (January 1, 1732 \u2013 October 25, 1777) was a Hessian colonel who fought in the American Revolutionary War."
+        ],
+        "thoughts": [
+            "The current number of store locations for Bearno's is not provided in the given information.",
+            "Patxi's Chicago Pizza currently has 8 store locations, including Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver.",
+            "Based on the information provided, Patxi's Chicago Pizza has 8 store locations, while the number of store locations for Bearno's is not provided. Therefore, Patxi's Chicago Pizza has more store locations than Bearno's."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who currently has more store locations? Bearno's or Patxi's Chicago Pizza?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the current number of store locations for Bearno's Pizza.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the current number of store locations for Patxi's Chicago Pizza.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of store locations for Bearno's and Patxi's to determine who has more.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph breaks down the task into two main retrieval steps followed by a reasoning step. The first two nodes are retrieval nodes that independently gather the current number of store locations for Bearno's and Patxi's Chicago Pizza. The third node then takes the results from these retrieval nodes and performs a reasoning step to compare the two numbers and determine which pizza chain has more store locations."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Bearno's\nBearno's Pizza is a pizza franchise based in Louisville, Kentucky with about 14 locations in Kentucky and Indiana.",
+            "Patxi's Chicago Pizza\nPatxi's is a small pizzeria chain based in the San Francisco Bay Area, founded in San Francisco, California by William Freeman and Francisco \u201cPatxi\u201d Azpiroz. They specialize in Chicago-style pizza. Current locations include Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver. In April, 2014, Patxi's announced plans to open sixty new stores over the next five years. On November 6, 2015, Patxi's partnered with UberEATS to offer $10.00 cheese pizzas that were delivered in a box that said \"Little Nero's\" to honor the twenty-fifth anniversary of the release of the comedy film \"Home Alone\".",
+            "Chicago Pizza and Oven Grinder Company\nChicago Pizza and Oven Grinder Company is a restaurant located in Chicago, Illinois. The restaurant was founded in 1972, and specializes in a signature dish called the \"pizza pot pie.\" It enjoys local popularity and has appeared in many publications and television shows.",
+            "Mr. Jim's Pizza\nMrJims.Pizza is a U.S. chain of pizza restaurants based in Farmers Branch, Texas. Jim Johnson opened the first restaurant in Detroit, Michigan in 1975. There are currently 42 locations in Louisiana, Texas, North Carolina, Nevada and Wyoming, with the majority located in northern Texas. MrJims.Pizza is widely known for their crust. Their hand stretched pizza dough is made fresh in the store daily from flour containing 100% spring wheat. Every single MrJims.Pizza franchise has online ordering capabilities. In 2006, MrJims.Pizza introduced a unique new item, Nacho Stix, to their menu. It quickly became one of their bestsellers, and lead to a resurgence in the popularity of MrJims.",
+            "The Chicago Pizza Pie Factory\nThe Chicago Pizza Pie Factory was a chain of pizza restaurants. The chain originated in Crown Passage (off Pall Mall) as The Chicago Pizza Pie Factory and was started by entrepreneur Bob Payton in 1976-7. The London establishment also had a bar. This was the start of a series of restaurants forming the My Kinda Town chain. The chain opened restaurants in places such as Paris and Barcelona, where they operated successfully for several decades. The Paris site now houses a Burger King.",
+            "The UPS Store\nThe UPS Store network is the world's largest franchisor of retail shipping, postal, printing and business service centers. Today, there are nearly 4,700 independently owned The UPS Store locations in the U.S., Puerto Rico, and Canada. The UPS Store, Inc., franchiser of The UPS Store brand, is a wholly owned subsidiary of United Parcel Service (UPS). As of August 2014, internal company web pages place the number of open UPS Stores to about 4300.",
+            "Aurelio's Pizza\nAurelio's Pizza is an Illinois restaurant chain which centers its business around the thin crust variety of Chicago-style pizza. Aurelio's Pizza has three corporate owned stores and 37 franchised locations in 6 states. Aurelio's Pizza is the oldest Chicago pizza franchise restaurant, franchising since 1974.",
+            "East of Chicago Pizza\nEast of Chicago Pizza is a restaurant chain based in Lima, Ohio offering different styles of pizza, buffalo wings, breadsticks, and subs. They have 75 restaurants in Ohio, Georgia, Indiana, Kentucky, West Virginia, New York, Michigan and South Carolina. The first restaurant was opened in 1982 as the Greenwich Pizza Barn in Greenwich, OH.",
+            "Pizza Capers\nPizza Capers is an Australian fast food chain specialising in pizza and Italian cuisine, based in Queensland. Pizza Capers has over 110 stores throughout Australia, located in the Australian Capital Territory (ACT), New South Wales, Queensland, South Australia, Tasmania and Victoria. The company has also expanded internationally into Singapore. Pizza Capers offers delivery in addition to in-store pick up or restaurant dining. The company is owned by parent company Retail Food Group.",
+            "Drug Emporium\nDrug Emporium is the name of a discount drug store corporation, founded in 1977 in Columbus, Ohio, that was sold to several different buyers during 2000 to 2001. Although several store locations continue to use the Drug Emporium name, these locations are no longer affiliated with the now-defunct Columbus-based corporation. At the company's high water mark in the 1990s, there were almost 300 locations scattered throughout the United States, including stores that operated under the F&M and VIX banners.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Papa Murphy's\nPapa Murphy's, a business based in Vancouver, Washington, United States, is a take-and-bake pizza company. It began in 1995 as the merger of two take-and-bake pizza companies: Papa Aldo's Pizza (founded in 1981) and Murphy's Pizza (founded in 1981). The company and its franchisees operate more than 1,300 outlets in the United States and Canada. Papa Murphy's is the fifth-largest pizza chain in the United States.",
+            "Pizza Factory\nPizza Factory Inc. is a chain of pizza restaurants in the western United States, based in Oakhurst, California. The company began in 1979, when Danny Wheeler and his wife Carol opened Danny's Red Devil Pizza in Oakhurst. Ron Willey and his wife Joyce subsequently opened a second location in 1981, known as Pizza Factory."
+        ],
+        "thoughts": [
+            "Bearno's Pizza currently has about 14 locations in Kentucky and Indiana.",
+            "Patxi's Chicago Pizza currently has 8 store locations, including Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver.",
+            "Bearno's Pizza has more store locations than Patxi's, with 14 locations compared to Patxi's 8 locations."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who currently has more store locations? Bearno's or Patxi's Chicago Pizza?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the current number of store locations for Bearno's Pizza.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the current number of store locations for Patxi's Chicago Pizza.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the number of store locations for Bearno's Pizza and Patxi's Chicago Pizza and determine which one has more locations.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of three nodes. The first two nodes are parallel retrieval and reasoning nodes that independently find the current number of store locations for Bearno's Pizza and Patxi's Chicago Pizza. The third node compares these counts to determine which chain has more locations."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Patxi's Chicago Pizza\nPatxi's is a small pizzeria chain based in the San Francisco Bay Area, founded in San Francisco, California by William Freeman and Francisco \u201cPatxi\u201d Azpiroz. They specialize in Chicago-style pizza. Current locations include Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver. In April, 2014, Patxi's announced plans to open sixty new stores over the next five years. On November 6, 2015, Patxi's partnered with UberEATS to offer $10.00 cheese pizzas that were delivered in a box that said \"Little Nero's\" to honor the twenty-fifth anniversary of the release of the comedy film \"Home Alone\".",
+            "Bearno's\nBearno's Pizza is a pizza franchise based in Louisville, Kentucky with about 14 locations in Kentucky and Indiana.",
+            "Aurelio's Pizza\nAurelio's Pizza is an Illinois restaurant chain which centers its business around the thin crust variety of Chicago-style pizza. Aurelio's Pizza has three corporate owned stores and 37 franchised locations in 6 states. Aurelio's Pizza is the oldest Chicago pizza franchise restaurant, franchising since 1974.",
+            "Mr. Jim's Pizza\nMrJims.Pizza is a U.S. chain of pizza restaurants based in Farmers Branch, Texas. Jim Johnson opened the first restaurant in Detroit, Michigan in 1975. There are currently 42 locations in Louisiana, Texas, North Carolina, Nevada and Wyoming, with the majority located in northern Texas. MrJims.Pizza is widely known for their crust. Their hand stretched pizza dough is made fresh in the store daily from flour containing 100% spring wheat. Every single MrJims.Pizza franchise has online ordering capabilities. In 2006, MrJims.Pizza introduced a unique new item, Nacho Stix, to their menu. It quickly became one of their bestsellers, and lead to a resurgence in the popularity of MrJims.",
+            "The UPS Store\nThe UPS Store network is the world's largest franchisor of retail shipping, postal, printing and business service centers. Today, there are nearly 4,700 independently owned The UPS Store locations in the U.S., Puerto Rico, and Canada. The UPS Store, Inc., franchiser of The UPS Store brand, is a wholly owned subsidiary of United Parcel Service (UPS). As of August 2014, internal company web pages place the number of open UPS Stores to about 4300.",
+            "Chicago Pizza and Oven Grinder Company\nChicago Pizza and Oven Grinder Company is a restaurant located in Chicago, Illinois. The restaurant was founded in 1972, and specializes in a signature dish called the \"pizza pot pie.\" It enjoys local popularity and has appeared in many publications and television shows.",
+            "East of Chicago Pizza\nEast of Chicago Pizza is a restaurant chain based in Lima, Ohio offering different styles of pizza, buffalo wings, breadsticks, and subs. They have 75 restaurants in Ohio, Georgia, Indiana, Kentucky, West Virginia, New York, Michigan and South Carolina. The first restaurant was opened in 1982 as the Greenwich Pizza Barn in Greenwich, OH.",
+            "The Chicago Pizza Pie Factory\nThe Chicago Pizza Pie Factory was a chain of pizza restaurants. The chain originated in Crown Passage (off Pall Mall) as The Chicago Pizza Pie Factory and was started by entrepreneur Bob Payton in 1976-7. The London establishment also had a bar. This was the start of a series of restaurants forming the My Kinda Town chain. The chain opened restaurants in places such as Paris and Barcelona, where they operated successfully for several decades. The Paris site now houses a Burger King.",
+            "Pizza Capers\nPizza Capers is an Australian fast food chain specialising in pizza and Italian cuisine, based in Queensland. Pizza Capers has over 110 stores throughout Australia, located in the Australian Capital Territory (ACT), New South Wales, Queensland, South Australia, Tasmania and Victoria. The company has also expanded internationally into Singapore. Pizza Capers offers delivery in addition to in-store pick up or restaurant dining. The company is owned by parent company Retail Food Group.",
+            "Drug Emporium\nDrug Emporium is the name of a discount drug store corporation, founded in 1977 in Columbus, Ohio, that was sold to several different buyers during 2000 to 2001. Although several store locations continue to use the Drug Emporium name, these locations are no longer affiliated with the now-defunct Columbus-based corporation. At the company's high water mark in the 1990s, there were almost 300 locations scattered throughout the United States, including stores that operated under the F&M and VIX banners.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein."
+        ],
+        "thoughts": [
+            "Bearno's Pizza currently has about 14 locations in Kentucky and Indiana.",
+            "Patxi's Chicago Pizza currently has locations in Palo Alto, Campbell, Lafayette, San Francisco, Greenbrae, San Jose, Seattle, and Denver, totaling 8 store locations.",
+            "Bearno's Pizza has more locations with 14 stores, compared to Patxi's Chicago Pizza which has 8 locations."
+        ],
+        "is_best": false
+    }
+]

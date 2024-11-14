@@ -1,0 +1,600 @@
+[
+    {
+        "question": "The birthplace of George McCall Theal is a port city of what bay?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about George McCall Theal's birthplace.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the port city that is George McCall Theal's birthplace.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about the bay associated with the identified port city.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the name of the bay that the port city is associated with.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The task is to identify the bay associated with George McCall Theal's birthplace, which is described as a port city. The solution process involves several steps: \n\n1. **Node 1:** Retrieve the birthplace details of George McCall Theal, specifically focusing on the city.\n2. **Node 2:** Determine if this city functions as a port city.\n3. **Node 3:** Once the port city is known, retrieve geographic or maritime data linking this city to nearby bays.\n4. **Node 4:** Use the retrieved geographical data to identify the bay with which the city is associated.\n\nThe reasoning and retrieval steps are broken down to ensure each piece of requisite information is gathered and processed logically from one step to the next."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Saint John, New Brunswick\nSaint John (] ) is the port city of the Bay of Fundy in the Canadian province of New Brunswick. The port is Canada\u2019s third largest port by tonnage with a cargo base that includes dry and liquid bulk, break bulk, containers, and cruise. In 2016, after a decades long decline, the city fell from being the most populous city in New Brunswick to the second most populous city in the province for the first time, with a population of 67,575 over an area of 315.82 sqkm . The Saint John metropolitan area covers a land area of 3,362.95 sqkm across the Caledonia Highlands, with a population (as of 2016) of 126,202. After the partitioning of the colony of Nova Scotia in 1784, the new colony of New Brunswick was thought to be named 'New Ireland' with the capital to be in Saint John before being vetoed by Britain's King George III. Saint John is the oldest incorporated city in Canada. During the reign of George III, the municipality was created by royal charter in 1785.",
+            "George McCall Theal\nGeorge McCall Theal (11 April 1837, Saint John, New Brunswick \u2013 17 April 1919, Wynberg, Cape Town), was the most prolific and influential South African historian, archivist and genealogist of the late nineteenth and early twentieth century.",
+            "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick. Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties. The university is a member of the U15, a group of research-intensive universities in Canada.",
+            "First Nations in New Brunswick\nThe First Nations of New Brunswick, Canada number more than 10,000, mostly Mi'kmaq and Maliseet. Although the Passamaquoddy maintain a land claim at St. Andrews, New Brunswick and historically occurred in New Brunswick, they have no reserves in the province, and have no official status in Canada.",
+            "Meductic Indian Village / Fort Meductic\nMeductic Indian Village / Fort Meductic (also known as Medoctec, Mehtawtik meaning \"the end of the path\") was a Maliseet settlement until the mid-eighteenth century. It was located near the confluence of the Eel River and Saint John River in New Brunswick, four miles upriver from present-day Meductic, New Brunswick. The fortified village of Meductic was the principal settlement of the Maliseet First Nation from before the 17th century until the middle of the 18th, and it was an important fur trading centre. (The other two significant native villages in the region were the Abenaki village of Norridgewock (present-day Madison, Maine) on the Kennebec River and Penobscot (present-day Penobscot Indian Island Reservation) on the Penobscot River. Only during King George's War, after the French established Saint Anne (present-day Fredericton, New Brunswick), did the village Aukpaque, present-day Springhill, New Brunswick, become of equal importance to Meductic).",
+            "Oakland, California\nOakland is the largest city and the county seat of Alameda County, California, United States. A major West Coast port city, Oakland is the largest city in the East Bay region of the San Francisco Bay Area, the third largest city overall in the San Francisco Bay Area, the eighth largest city in California, and the 45th largest city in the United States, with a population of 419,267 as of 2015 . It serves as a trade center for the San Francisco Bay Area; its Port of Oakland is the busiest port in the San Francisco Bay, the entirety of Northern California, and the fifth busiest in the United States of America. The city was incorporated in 1852.",
+            "Balmoral, New Brunswick\nBalmoral (2011 population: 1,719) is a Canadian village in Restigouche County, New Brunswick. It is located approximately 10 kilometres south of Dalhousie. Although Balmoral's population presently meets the requirements for \"town\" status under the Municipalities Act of the Province of New Brunswick, the community has not yet made any change to its municipal status. The village also contains the neighbourhoods of Blair Athol, Saint-Maure, Selwood, and Upper Balmoral.",
+            "George A. McCall School\nGeneral George A. McCall School is a public K\u20138 school in the Society Hill section of Center City, Philadelphia. The McCall School, located at 325 S. 7th Street, serves Society Hill, Chinatown, and Old City. The school, a part of the School District of Philadelphia, is named after George A. McCall.",
+            "Port of Chittagong\nThe Port of Chittagong (Bengali: \u099a\u099f\u09cd\u099f\u0997\u09cd\u09b0\u09be\u09ae \u09ac\u09a8\u09cd\u09a6\u09b0 ) is the busiest seaport on the coastline of the Bay of Bengal, and the second busiest in the overall region of countries dependent on the Bay of Bengal. According to Lloyd's, it ranked as the 76th busiest port in the world in 2016. Located in the Bangladeshi port city of Chittagong and on the banks of the Karnaphuli River, the port of Chittagong handles 90% of Bangladesh's export-import trade, and has been used by India, Nepal and Bhutan for transshipment.",
+            "George McCall Courts\nGeorge McCall Courts (February 16, 1888 \u2013 August 1, 1932) was born in the District of Columbia. He graduated from the United States Naval Academy in 1907. He received the Medal of Honor for actions at the United States occupation of Veracruz, 1914.",
+            "August Frederik Beutler\nAugust Frederik Beutler (c. 1728 in Dinkelsb\u00fchl \u2013 ? in Cape Town) was an ensign (sergeant 1747\u201349, ensign 1749\u201354) in the employ of the Dutch East India Company who headed an epic 1752 reconnaissance expedition lasting 8 months from 29 February to November, eastward from Cape Town as far as the present-day site of Butterworth. Beutler wrote a comprehensive account of his pioneering expedition which was first published in 1896 by the historian George McCall Theal and in 1922 by the Dutch historian Everhardus Cornelis God\u00e9e Molsbergen (1875\u20131940). The mandate of the expedition was to report on the tribes living along the route, the possibility of trade and on anything else that might be profitable to the Dutch East India Company.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "1968 Men's National Tennis League\nThe 1968 Men's National Tennis League (NTL) was the inaugural series of professional tennis tournaments founded by George McCall, among others: Rod Laver, Roy Emerson, Ken Rosewall, Andr\u00e9s Gimeno, Pancho Gonzales and Fred Stolle.",
+            "East Knoyle\nEast Knoyle is a village and civil parish in Wiltshire, in the south west of England. The village lies just west of the A350 road about 9 mi south of Warminster and 5 mi north of Shaftesbury, Dorset. It is the birthplace of Sir Christopher Wren.",
+            "Point Anne, Ontario\nPoint Anne is a ghost town on the Bay of Quinte near Belleville, Ontario, Canada. It was the birthplace of hockey greats Bobby Hull and Dennis Hull, as well as painter Manley MacDonald. During the late 19th and early 20th centuries, the Portland cement industry was positively booming. Portland cement, now a staple in today's building industry, first hit the market in the late 1800s and instantly captured worldwide attention. The product was much harder and far more durable than the earlier lime mortars and the world couldn't get enough of it."
+        ],
+        "thoughts": [
+            "George McCall Theal was born in Saint John, New Brunswick, Canada.",
+            "The port city that is George McCall Theal's birthplace is Saint John, New Brunswick, Canada.",
+            "The port city of Saint John, New Brunswick is associated with the Bay of Fundy. The Bay of Fundy is known for having the highest tides in the world and is located between the Canadian provinces of New Brunswick and Nova Scotia.",
+            "The port city of Saint John, New Brunswick is associated with the Bay of Fundy."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "The birthplace of George McCall Theal is a port city of what bay?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the birthplace of George McCall Theal.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the country or specific location associated with George McCall Theal's birthplace.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the major port cities in the country or specific location identified in the previous step.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the bay associated with the port city identified as George McCall Theal's birthplace.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins by identifying George McCall Theal's birthplace. Once this is known, the task proceeds to determine the country or specific location of this birthplace. The next step is to identify major port cities within that location to find a match for Theal's birthplace. Finally, the graph concludes with identifying the bay associated with the port city that matches the earlier retrieval, thus answering the original question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Saint John, New Brunswick\nSaint John (] ) is the port city of the Bay of Fundy in the Canadian province of New Brunswick. The port is Canada\u2019s third largest port by tonnage with a cargo base that includes dry and liquid bulk, break bulk, containers, and cruise. In 2016, after a decades long decline, the city fell from being the most populous city in New Brunswick to the second most populous city in the province for the first time, with a population of 67,575 over an area of 315.82 sqkm . The Saint John metropolitan area covers a land area of 3,362.95 sqkm across the Caledonia Highlands, with a population (as of 2016) of 126,202. After the partitioning of the colony of Nova Scotia in 1784, the new colony of New Brunswick was thought to be named 'New Ireland' with the capital to be in Saint John before being vetoed by Britain's King George III. Saint John is the oldest incorporated city in Canada. During the reign of George III, the municipality was created by royal charter in 1785.",
+            "George McCall Theal\nGeorge McCall Theal (11 April 1837, Saint John, New Brunswick \u2013 17 April 1919, Wynberg, Cape Town), was the most prolific and influential South African historian, archivist and genealogist of the late nineteenth and early twentieth century.",
+            "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick. Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties. The university is a member of the U15, a group of research-intensive universities in Canada.",
+            "First Nations in New Brunswick\nThe First Nations of New Brunswick, Canada number more than 10,000, mostly Mi'kmaq and Maliseet. Although the Passamaquoddy maintain a land claim at St. Andrews, New Brunswick and historically occurred in New Brunswick, they have no reserves in the province, and have no official status in Canada.",
+            "Oakland, California\nOakland is the largest city and the county seat of Alameda County, California, United States. A major West Coast port city, Oakland is the largest city in the East Bay region of the San Francisco Bay Area, the third largest city overall in the San Francisco Bay Area, the eighth largest city in California, and the 45th largest city in the United States, with a population of 419,267 as of 2015 . It serves as a trade center for the San Francisco Bay Area; its Port of Oakland is the busiest port in the San Francisco Bay, the entirety of Northern California, and the fifth busiest in the United States of America. The city was incorporated in 1852.",
+            "Meductic Indian Village / Fort Meductic\nMeductic Indian Village / Fort Meductic (also known as Medoctec, Mehtawtik meaning \"the end of the path\") was a Maliseet settlement until the mid-eighteenth century. It was located near the confluence of the Eel River and Saint John River in New Brunswick, four miles upriver from present-day Meductic, New Brunswick. The fortified village of Meductic was the principal settlement of the Maliseet First Nation from before the 17th century until the middle of the 18th, and it was an important fur trading centre. (The other two significant native villages in the region were the Abenaki village of Norridgewock (present-day Madison, Maine) on the Kennebec River and Penobscot (present-day Penobscot Indian Island Reservation) on the Penobscot River. Only during King George's War, after the French established Saint Anne (present-day Fredericton, New Brunswick), did the village Aukpaque, present-day Springhill, New Brunswick, become of equal importance to Meductic).",
+            "Balmoral, New Brunswick\nBalmoral (2011 population: 1,719) is a Canadian village in Restigouche County, New Brunswick. It is located approximately 10 kilometres south of Dalhousie. Although Balmoral's population presently meets the requirements for \"town\" status under the Municipalities Act of the Province of New Brunswick, the community has not yet made any change to its municipal status. The village also contains the neighbourhoods of Blair Athol, Saint-Maure, Selwood, and Upper Balmoral.",
+            "George A. McCall School\nGeneral George A. McCall School is a public K\u20138 school in the Society Hill section of Center City, Philadelphia. The McCall School, located at 325 S. 7th Street, serves Society Hill, Chinatown, and Old City. The school, a part of the School District of Philadelphia, is named after George A. McCall.",
+            "Port of Chittagong\nThe Port of Chittagong (Bengali: \u099a\u099f\u09cd\u099f\u0997\u09cd\u09b0\u09be\u09ae \u09ac\u09a8\u09cd\u09a6\u09b0 ) is the busiest seaport on the coastline of the Bay of Bengal, and the second busiest in the overall region of countries dependent on the Bay of Bengal. According to Lloyd's, it ranked as the 76th busiest port in the world in 2016. Located in the Bangladeshi port city of Chittagong and on the banks of the Karnaphuli River, the port of Chittagong handles 90% of Bangladesh's export-import trade, and has been used by India, Nepal and Bhutan for transshipment.",
+            "George McCall Courts\nGeorge McCall Courts (February 16, 1888 \u2013 August 1, 1932) was born in the District of Columbia. He graduated from the United States Naval Academy in 1907. He received the Medal of Honor for actions at the United States occupation of Veracruz, 1914.",
+            "August Frederik Beutler\nAugust Frederik Beutler (c. 1728 in Dinkelsb\u00fchl \u2013 ? in Cape Town) was an ensign (sergeant 1747\u201349, ensign 1749\u201354) in the employ of the Dutch East India Company who headed an epic 1752 reconnaissance expedition lasting 8 months from 29 February to November, eastward from Cape Town as far as the present-day site of Butterworth. Beutler wrote a comprehensive account of his pioneering expedition which was first published in 1896 by the historian George McCall Theal and in 1922 by the Dutch historian Everhardus Cornelis God\u00e9e Molsbergen (1875\u20131940). The mandate of the expedition was to report on the tribes living along the route, the possibility of trade and on anything else that might be profitable to the Dutch East India Company.",
+            "1968 Men's National Tennis League\nThe 1968 Men's National Tennis League (NTL) was the inaugural series of professional tennis tournaments founded by George McCall, among others: Rod Laver, Roy Emerson, Ken Rosewall, Andr\u00e9s Gimeno, Pancho Gonzales and Fred Stolle.",
+            "New Brunswick Route 785\nRoute 785 is a 68.8 km long mostly north-south secondary highway in the southwestern portion of New Brunswick, Canada. Locally, this road may be known as either the \"Shin Crick Road\" or the \"Mine Road\". In the early 1980s, a mine was established off Route 785, at Mount Pleasant. Today, Adex Mining holds a mineral claim on the mine however the mine is currently in an idle state. As a result of mine development at Mount Pleasant, Route 785 was heavily developed and rerouted from the original stage coach trail. Another name for the road is the \"Sheldon Lee Highway\", a satirical reference to former New Brunswick Minister of Transportation, Hon. Sheldon Lee, who continued developed the road during his terms in office, especially on the portion of road north of Mount Pleasant. Mr. Lee lived in the community of Bonny River, which is located near the southern end of Route 785, and likely many people today, frequently used the Route 785 for travel to Fredericton from the St. George area. Today, the road is heavily used by forest operations.",
+            "History of Northwest Territories capital cities\nThe history of Northwest Territories capital cities begins with the purchase of the Territories by Canada from the Hudson's Bay Company in 1869, and includes a varied and often difficult evolution. Northwest Territories is unique amongst the other provinces and territories of Canada in that it has had seven capital cities in its history. The territory has changed the seat of government for numerous reasons, including civil conflict, development of infrastructure, and a history of significant revisions to its territorial boundaries.",
+            "Professional sports in Canada\nThere are professional teams based in Canada in several professional sports leagues. The National Hockey League has seven Canadian franchises and is the most popular professional sports league in Canada. The second most popular sports league in Canada is the Canadian Football League. Major League Baseball, the National Basketball Association and Major League Soccer are also popular in Canada, more so in Ontario than the rest of the country.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "East Knoyle\nEast Knoyle is a village and civil parish in Wiltshire, in the south west of England. The village lies just west of the A350 road about 9 mi south of Warminster and 5 mi north of Shaftesbury, Dorset. It is the birthplace of Sir Christopher Wren.",
+            "Karine Nahon\nKarine Nahon (Hebrew: \u05e7\u05e8\u05d9\u05df \u05e0\u05d4\u05d5\u05df\u200e \u200e ), is an Israeli information scientist and public intellectual active in the area of information, technology and society. She holds a dual position as an associate professor in the The Information School at University of Washington and the Interdisciplinary Center Herzliya. In July 2017, Nahon was named #24 on Forbes' list of 50 Most Influential Women in Israel .Her co-authored book \u201cGoing Viral\u201d was awarded Best Information Science Book Award by the Association for Information Science and Technology and the 2014 Outstanding Academic Title Award by the American Library Association.",
+            "Point Anne, Ontario\nPoint Anne is a ghost town on the Bay of Quinte near Belleville, Ontario, Canada. It was the birthplace of hockey greats Bobby Hull and Dennis Hull, as well as painter Manley MacDonald. During the late 19th and early 20th centuries, the Portland cement industry was positively booming. Portland cement, now a staple in today's building industry, first hit the market in the late 1800s and instantly captured worldwide attention. The product was much harder and far more durable than the earlier lime mortars and the world couldn't get enough of it.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko."
+        ],
+        "thoughts": [
+            "George McCall Theal was born in Saint John, New Brunswick, Canada.",
+            "George McCall Theal was born in Saint John, New Brunswick, Canada.",
+            "The major port cities in the province of New Brunswick, Canada are Saint John and Dalhousie. Saint John is the third largest port in Canada and has a population of 67,575, while Dalhousie is a port city with medical teaching facilities.",
+            "The port city associated with George McCall Theal's birthplace is Saint John, New Brunswick, which is located on the Bay of Fundy."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "The birthplace of George McCall Theal is a port city of what bay?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the birthplace of George McCall Theal.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the port city where George McCall Theal was born.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the bay where the port city of George McCall Theal's birthplace is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph breaks down the question into a series of steps. First, we need to find out where George McCall Theal was born. Once we have the birthplace, we determine if it is a port city. Finally, we find out which bay this port city is associated with. Each node represents a step in the logical reasoning and retrieval process needed to answer the original question."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Shamwari Game Reserve\nShamwari Game Reserve is located 75\u00a0km outside Port Elizabeth, Eastern Cape, South Africa. It has been voted the World's Leading Safari and Game Reserve and Conservation Company for many consecutive years.",
+            "Port of Chittagong\nThe Port of Chittagong (Bengali: \u099a\u099f\u09cd\u099f\u0997\u09cd\u09b0\u09be\u09ae \u09ac\u09a8\u09cd\u09a6\u09b0 ) is the busiest seaport on the coastline of the Bay of Bengal, and the second busiest in the overall region of countries dependent on the Bay of Bengal. According to Lloyd's, it ranked as the 76th busiest port in the world in 2016. Located in the Bangladeshi port city of Chittagong and on the banks of the Karnaphuli River, the port of Chittagong handles 90% of Bangladesh's export-import trade, and has been used by India, Nepal and Bhutan for transshipment.",
+            "Oakland, California\nOakland is the largest city and the county seat of Alameda County, California, United States. A major West Coast port city, Oakland is the largest city in the East Bay region of the San Francisco Bay Area, the third largest city overall in the San Francisco Bay Area, the eighth largest city in California, and the 45th largest city in the United States, with a population of 419,267 as of 2015 . It serves as a trade center for the San Francisco Bay Area; its Port of Oakland is the busiest port in the San Francisco Bay, the entirety of Northern California, and the fifth busiest in the United States of America. The city was incorporated in 1852.",
+            "Port Sudan\nPort Sudan (Arabic: \u0628\u0648\u0631 \u0633\u0648\u062f\u0627\u0646\u200e \u200e \"B\u016br S\u016bd\u0101n \") is a port city in eastern Sudan, and the capital of the state of Red Sea. s of 2007 , it has 489,725 residents. Located on the Red Sea, it is the Republic of Sudan's main port city.",
+            "Palmeira, Cape Verde\nPalmeira (Cape Verde Creole: \"Palm\u00e9ra\") is a village in the northwestern part of the island of Sal, Cape Verde. Its 2010 population was 1,420, doubled in more than a decade from around 700 and is also the island's third most populated place. The village is situated on the west coast, about 4\u00a0km west of the island capital Espargos. Located at Ba\u00eda de Palmeira, a small bay south of the village, it is home to the main port of the island of Sal which serves ferry services with the islands of S\u00e3o Nicolau and Boa Vista which connects to further islands of S\u00e3o Vicente and Santiago, the port is being the third busiest in freight traffic, especially fish from the waters surrounding the island and outside and goods and foodstuff supplied to the island.",
+            "Backford Cross\nBackford Cross is a village on the Wirral Peninsula, Cheshire, England. It is a suburb of the town of Ellesmere Port and part of Cheshire West and Chester. Backford Cross is located around the A41/A5117 junction, south of Great Sutton and about 1.5 mi north of the village of Backford, near Chester. Backford Cross is largely made up of residential homes built from 1990 onwards and serves as a commuter village to Ellesmere Port and Chester, although inhabitants show no allegiance to either locality. The area is split between postcode districts, with parts of the village in Great Sutton, Ellesmere Port CH66 and other areas in Backford, Chester CH1.",
+            "Flinders, Victoria\nFlinders once known as Mendi-Moke, is a town south of Melbourne, Victoria, Australia, located on the Mornington Peninsula at the point where Western Port meets Bass Strait. Its local government area is the Shire of Mornington Peninsula. At the 2011 census, Flinders had a population of 860.",
+            "Saint John, New Brunswick\nSaint John (] ) is the port city of the Bay of Fundy in the Canadian province of New Brunswick. The port is Canada\u2019s third largest port by tonnage with a cargo base that includes dry and liquid bulk, break bulk, containers, and cruise. In 2016, after a decades long decline, the city fell from being the most populous city in New Brunswick to the second most populous city in the province for the first time, with a population of 67,575 over an area of 315.82 sqkm . The Saint John metropolitan area covers a land area of 3,362.95 sqkm across the Caledonia Highlands, with a population (as of 2016) of 126,202. After the partitioning of the colony of Nova Scotia in 1784, the new colony of New Brunswick was thought to be named 'New Ireland' with the capital to be in Saint John before being vetoed by Britain's King George III. Saint John is the oldest incorporated city in Canada. During the reign of George III, the municipality was created by royal charter in 1785.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "George McCall Theal was born in South Africa.",
+            "Since George McCall Theal was born in South Africa, the port city where he was born is Port Elizabeth.",
+            "The port city of George McCall Theal's birthplace is located in Port Elizabeth, Eastern Cape, South Africa, which is situated on the coastline of the Bay of Bengal."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "The birthplace of George McCall Theal is a port city of what bay?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the birthplace of George McCall Theal.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the city that corresponds to the birthplace identified in step 1.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify which bay the city identified in step 2 is a port of.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph outlines a series of steps to answer the question about George McCall Theal's birthplace and its geographical location. The first step retrieves his birthplace, then it identifies the corresponding city, and finally determines the bay associated with that port city."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Saint John, New Brunswick\nSaint John (] ) is the port city of the Bay of Fundy in the Canadian province of New Brunswick. The port is Canada\u2019s third largest port by tonnage with a cargo base that includes dry and liquid bulk, break bulk, containers, and cruise. In 2016, after a decades long decline, the city fell from being the most populous city in New Brunswick to the second most populous city in the province for the first time, with a population of 67,575 over an area of 315.82 sqkm . The Saint John metropolitan area covers a land area of 3,362.95 sqkm across the Caledonia Highlands, with a population (as of 2016) of 126,202. After the partitioning of the colony of Nova Scotia in 1784, the new colony of New Brunswick was thought to be named 'New Ireland' with the capital to be in Saint John before being vetoed by Britain's King George III. Saint John is the oldest incorporated city in Canada. During the reign of George III, the municipality was created by royal charter in 1785.",
+            "George McCall Theal\nGeorge McCall Theal (11 April 1837, Saint John, New Brunswick \u2013 17 April 1919, Wynberg, Cape Town), was the most prolific and influential South African historian, archivist and genealogist of the late nineteenth and early twentieth century.",
+            "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick. Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties. The university is a member of the U15, a group of research-intensive universities in Canada.",
+            "Meductic Indian Village / Fort Meductic\nMeductic Indian Village / Fort Meductic (also known as Medoctec, Mehtawtik meaning \"the end of the path\") was a Maliseet settlement until the mid-eighteenth century. It was located near the confluence of the Eel River and Saint John River in New Brunswick, four miles upriver from present-day Meductic, New Brunswick. The fortified village of Meductic was the principal settlement of the Maliseet First Nation from before the 17th century until the middle of the 18th, and it was an important fur trading centre. (The other two significant native villages in the region were the Abenaki village of Norridgewock (present-day Madison, Maine) on the Kennebec River and Penobscot (present-day Penobscot Indian Island Reservation) on the Penobscot River. Only during King George's War, after the French established Saint Anne (present-day Fredericton, New Brunswick), did the village Aukpaque, present-day Springhill, New Brunswick, become of equal importance to Meductic).",
+            "First Nations in New Brunswick\nThe First Nations of New Brunswick, Canada number more than 10,000, mostly Mi'kmaq and Maliseet. Although the Passamaquoddy maintain a land claim at St. Andrews, New Brunswick and historically occurred in New Brunswick, they have no reserves in the province, and have no official status in Canada.",
+            "George A. McCall School\nGeneral George A. McCall School is a public K\u20138 school in the Society Hill section of Center City, Philadelphia. The McCall School, located at 325 S. 7th Street, serves Society Hill, Chinatown, and Old City. The school, a part of the School District of Philadelphia, is named after George A. McCall.",
+            "Balmoral, New Brunswick\nBalmoral (2011 population: 1,719) is a Canadian village in Restigouche County, New Brunswick. It is located approximately 10 kilometres south of Dalhousie. Although Balmoral's population presently meets the requirements for \"town\" status under the Municipalities Act of the Province of New Brunswick, the community has not yet made any change to its municipal status. The village also contains the neighbourhoods of Blair Athol, Saint-Maure, Selwood, and Upper Balmoral.",
+            "George McCall Courts\nGeorge McCall Courts (February 16, 1888 \u2013 August 1, 1932) was born in the District of Columbia. He graduated from the United States Naval Academy in 1907. He received the Medal of Honor for actions at the United States occupation of Veracruz, 1914.",
+            "August Frederik Beutler\nAugust Frederik Beutler (c. 1728 in Dinkelsb\u00fchl \u2013 ? in Cape Town) was an ensign (sergeant 1747\u201349, ensign 1749\u201354) in the employ of the Dutch East India Company who headed an epic 1752 reconnaissance expedition lasting 8 months from 29 February to November, eastward from Cape Town as far as the present-day site of Butterworth. Beutler wrote a comprehensive account of his pioneering expedition which was first published in 1896 by the historian George McCall Theal and in 1922 by the Dutch historian Everhardus Cornelis God\u00e9e Molsbergen (1875\u20131940). The mandate of the expedition was to report on the tribes living along the route, the possibility of trade and on anything else that might be profitable to the Dutch East India Company.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "New Brunswick Route 785\nRoute 785 is a 68.8 km long mostly north-south secondary highway in the southwestern portion of New Brunswick, Canada. Locally, this road may be known as either the \"Shin Crick Road\" or the \"Mine Road\". In the early 1980s, a mine was established off Route 785, at Mount Pleasant. Today, Adex Mining holds a mineral claim on the mine however the mine is currently in an idle state. As a result of mine development at Mount Pleasant, Route 785 was heavily developed and rerouted from the original stage coach trail. Another name for the road is the \"Sheldon Lee Highway\", a satirical reference to former New Brunswick Minister of Transportation, Hon. Sheldon Lee, who continued developed the road during his terms in office, especially on the portion of road north of Mount Pleasant. Mr. Lee lived in the community of Bonny River, which is located near the southern end of Route 785, and likely many people today, frequently used the Route 785 for travel to Fredericton from the St. George area. Today, the road is heavily used by forest operations.",
+            "1968 Men's National Tennis League\nThe 1968 Men's National Tennis League (NTL) was the inaugural series of professional tennis tournaments founded by George McCall, among others: Rod Laver, Roy Emerson, Ken Rosewall, Andr\u00e9s Gimeno, Pancho Gonzales and Fred Stolle.",
+            "East Knoyle\nEast Knoyle is a village and civil parish in Wiltshire, in the south west of England. The village lies just west of the A350 road about 9 mi south of Warminster and 5 mi north of Shaftesbury, Dorset. It is the birthplace of Sir Christopher Wren.",
+            "Point Anne, Ontario\nPoint Anne is a ghost town on the Bay of Quinte near Belleville, Ontario, Canada. It was the birthplace of hockey greats Bobby Hull and Dennis Hull, as well as painter Manley MacDonald. During the late 19th and early 20th centuries, the Portland cement industry was positively booming. Portland cement, now a staple in today's building industry, first hit the market in the late 1800s and instantly captured worldwide attention. The product was much harder and far more durable than the earlier lime mortars and the world couldn't get enough of it.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko."
+        ],
+        "thoughts": [
+            "George McCall Theal was born in Saint John, New Brunswick, Canada.",
+            "The city that corresponds to the birthplace identified in step 1 is Saint John, New Brunswick, Canada.",
+            "Saint John, New Brunswick is a port city of the Bay of Fundy."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "The birthplace of George McCall Theal is a port city of what bay?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information on George McCall Theal's birthplace, including the city name and any related geographical details.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Using the city name obtained from node 1, retrieve information about the geographical features related to the city, specifically identifying any bay associated with the city.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the name of the bay associated with the port city obtained from node 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the task of finding the bay associated with the port city where George McCall Theal was born. The first step is to retrieve the birthplace information, focusing on the city. Subsequently, the second step is to identify geographical features related to the city to determine if a specific bay is associated with it. Finally, the reasoning step synthesizes this information to extract the bay's name, thus answering the original question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Saint John, New Brunswick\nSaint John (] ) is the port city of the Bay of Fundy in the Canadian province of New Brunswick. The port is Canada\u2019s third largest port by tonnage with a cargo base that includes dry and liquid bulk, break bulk, containers, and cruise. In 2016, after a decades long decline, the city fell from being the most populous city in New Brunswick to the second most populous city in the province for the first time, with a population of 67,575 over an area of 315.82 sqkm . The Saint John metropolitan area covers a land area of 3,362.95 sqkm across the Caledonia Highlands, with a population (as of 2016) of 126,202. After the partitioning of the colony of Nova Scotia in 1784, the new colony of New Brunswick was thought to be named 'New Ireland' with the capital to be in Saint John before being vetoed by Britain's King George III. Saint John is the oldest incorporated city in Canada. During the reign of George III, the municipality was created by royal charter in 1785.",
+            "George McCall Theal\nGeorge McCall Theal (11 April 1837, Saint John, New Brunswick \u2013 17 April 1919, Wynberg, Cape Town), was the most prolific and influential South African historian, archivist and genealogist of the late nineteenth and early twentieth century.",
+            "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick. Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties. The university is a member of the U15, a group of research-intensive universities in Canada.",
+            "Balmoral, New Brunswick\nBalmoral (2011 population: 1,719) is a Canadian village in Restigouche County, New Brunswick. It is located approximately 10 kilometres south of Dalhousie. Although Balmoral's population presently meets the requirements for \"town\" status under the Municipalities Act of the Province of New Brunswick, the community has not yet made any change to its municipal status. The village also contains the neighbourhoods of Blair Athol, Saint-Maure, Selwood, and Upper Balmoral.",
+            "First Nations in New Brunswick\nThe First Nations of New Brunswick, Canada number more than 10,000, mostly Mi'kmaq and Maliseet. Although the Passamaquoddy maintain a land claim at St. Andrews, New Brunswick and historically occurred in New Brunswick, they have no reserves in the province, and have no official status in Canada.",
+            "Meductic Indian Village / Fort Meductic\nMeductic Indian Village / Fort Meductic (also known as Medoctec, Mehtawtik meaning \"the end of the path\") was a Maliseet settlement until the mid-eighteenth century. It was located near the confluence of the Eel River and Saint John River in New Brunswick, four miles upriver from present-day Meductic, New Brunswick. The fortified village of Meductic was the principal settlement of the Maliseet First Nation from before the 17th century until the middle of the 18th, and it was an important fur trading centre. (The other two significant native villages in the region were the Abenaki village of Norridgewock (present-day Madison, Maine) on the Kennebec River and Penobscot (present-day Penobscot Indian Island Reservation) on the Penobscot River. Only during King George's War, after the French established Saint Anne (present-day Fredericton, New Brunswick), did the village Aukpaque, present-day Springhill, New Brunswick, become of equal importance to Meductic).",
+            "North Sentinel Island\nNorth Sentinel Island is one of the Andaman Islands, which includes South Sentinel Island, in the Bay of Bengal. It is home to the Sentinelese who, often violently, reject any contact with the outside world, and are among the last people worldwide to remain virtually untouched by modern civilization. As such, only limited information about the island is known.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "George A. McCall School\nGeneral George A. McCall School is a public K\u20138 school in the Society Hill section of Center City, Philadelphia. The McCall School, located at 325 S. 7th Street, serves Society Hill, Chinatown, and Old City. The school, a part of the School District of Philadelphia, is named after George A. McCall.",
+            "George McCall Courts\nGeorge McCall Courts (February 16, 1888 \u2013 August 1, 1932) was born in the District of Columbia. He graduated from the United States Naval Academy in 1907. He received the Medal of Honor for actions at the United States occupation of Veracruz, 1914.",
+            "August Frederik Beutler\nAugust Frederik Beutler (c. 1728 in Dinkelsb\u00fchl \u2013 ? in Cape Town) was an ensign (sergeant 1747\u201349, ensign 1749\u201354) in the employ of the Dutch East India Company who headed an epic 1752 reconnaissance expedition lasting 8 months from 29 February to November, eastward from Cape Town as far as the present-day site of Butterworth. Beutler wrote a comprehensive account of his pioneering expedition which was first published in 1896 by the historian George McCall Theal and in 1922 by the Dutch historian Everhardus Cornelis God\u00e9e Molsbergen (1875\u20131940). The mandate of the expedition was to report on the tribes living along the route, the possibility of trade and on anything else that might be profitable to the Dutch East India Company.",
+            "1968 Men's National Tennis League\nThe 1968 Men's National Tennis League (NTL) was the inaugural series of professional tennis tournaments founded by George McCall, among others: Rod Laver, Roy Emerson, Ken Rosewall, Andr\u00e9s Gimeno, Pancho Gonzales and Fred Stolle.",
+            "David Gregory (physician)\nDavid Gregory (20 December 1625 \u2013 1720) was a Scottish physician and inventor. His surname is sometimes spelt as Gregorie, the original Scottish spelling. He inherited Kinnairdy Castle in 1664. Three of his twenty-nine children became mathematics professors. He is credited with inventing a military cannon that Isaac Newton described as \"being destructive to the human species\". Copies and details of the model no longer exist. Gregory's use of a barometer to predict farming-related weather conditions led him to be accused of witchcraft by Presbyterian ministers from Aberdeen, although he was never convicted.",
+            "Salt Lake City Air Route Traffic Control Center\nSalt Lake City Air Route Traffic Control Center (ZLC) (radio communications \"Salt Lake Center\") is one of 22 FAA Area Control Centers in the United States. It is located in Salt Lake City, Utah, adjacent to Salt Lake City International Airport. It was opened in 1939 and was originally located on the third floor of the old Salt Lake City International Airport terminal. The Salt Lake Center (ZLC) covers one of the largest geographical areas of any other control center, totaling approximately 350,000 squares miles.",
+            "Dog anatomy\nDog anatomy comprises the anatomical studies of the visible parts of the body of a canine. Details of structures vary tremendously from breed to breed, more than in any other animal species, wild or domesticated, as dogs are highly variable in height and weight. The smallest known adult dog was a Yorkshire Terrier that stood only 6.3 cm at the shoulder, 9.5 cm in length along the head and body, and weighed only 113 g . The largest known adult dog was an English Mastiff which weighed 155.6 kg and was 250 cm from the snout to the tail. The tallest known adult dog is a Great Dane that stands 106.7 cm at the shoulder."
+        ],
+        "thoughts": [
+            "George McCall Theal was born in Saint John, New Brunswick, Canada. This city is located on the Bay of Fundy, which is known for having the highest tides in the world. Saint John is also the largest city in the province of New Brunswick and has a rich history as one of the oldest incorporated cities in Canada.",
+            "Saint John, New Brunswick is a port city located on the Bay of Fundy. The city's port is the third largest in Canada by tonnage and handles a variety of cargo including dry and liquid bulk, break bulk, containers, and cruise ships. The city is also the oldest incorporated city in Canada. Additionally, the city is home to the Meductic Indian Village / Fort Meductic, a historic Maliseet settlement located near the confluence of the Eel River and Saint John River. This settlement was an important fur trading center and was the principal settlement of the Maliseet First Nation from before the 17th century until the middle of the 18th century.",
+            "The bay associated with the port city of Saint John, New Brunswick is the Bay of Fundy."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "The birthplace of George McCall Theal is a port city of what bay?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the birthplace of George McCall Theal.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which bay the port city identified in Node 1 is associated with.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "To answer the question, we break it down into two main steps: First, find the birthplace of George McCall Theal, specifically the port city of his birth. Second, identify the bay that this port city is associated with. The graph starts with retrieving information about Theal's birthplace and then uses that information to find out about the corresponding bay."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "George McCall Theal\nGeorge McCall Theal (11 April 1837, Saint John, New Brunswick \u2013 17 April 1919, Wynberg, Cape Town), was the most prolific and influential South African historian, archivist and genealogist of the late nineteenth and early twentieth century.",
+            "George A. McCall School\nGeneral George A. McCall School is a public K\u20138 school in the Society Hill section of Center City, Philadelphia. The McCall School, located at 325 S. 7th Street, serves Society Hill, Chinatown, and Old City. The school, a part of the School District of Philadelphia, is named after George A. McCall.",
+            "August Frederik Beutler\nAugust Frederik Beutler (c. 1728 in Dinkelsb\u00fchl \u2013 ? in Cape Town) was an ensign (sergeant 1747\u201349, ensign 1749\u201354) in the employ of the Dutch East India Company who headed an epic 1752 reconnaissance expedition lasting 8 months from 29 February to November, eastward from Cape Town as far as the present-day site of Butterworth. Beutler wrote a comprehensive account of his pioneering expedition which was first published in 1896 by the historian George McCall Theal and in 1922 by the Dutch historian Everhardus Cornelis God\u00e9e Molsbergen (1875\u20131940). The mandate of the expedition was to report on the tribes living along the route, the possibility of trade and on anything else that might be profitable to the Dutch East India Company.",
+            "George McCall Courts\nGeorge McCall Courts (February 16, 1888 \u2013 August 1, 1932) was born in the District of Columbia. He graduated from the United States Naval Academy in 1907. He received the Medal of Honor for actions at the United States occupation of Veracruz, 1914.",
+            "Saint John, New Brunswick\nSaint John (] ) is the port city of the Bay of Fundy in the Canadian province of New Brunswick. The port is Canada\u2019s third largest port by tonnage with a cargo base that includes dry and liquid bulk, break bulk, containers, and cruise. In 2016, after a decades long decline, the city fell from being the most populous city in New Brunswick to the second most populous city in the province for the first time, with a population of 67,575 over an area of 315.82 sqkm . The Saint John metropolitan area covers a land area of 3,362.95 sqkm across the Caledonia Highlands, with a population (as of 2016) of 126,202. After the partitioning of the colony of Nova Scotia in 1784, the new colony of New Brunswick was thought to be named 'New Ireland' with the capital to be in Saint John before being vetoed by Britain's King George III. Saint John is the oldest incorporated city in Canada. During the reign of George III, the municipality was created by royal charter in 1785.",
+            "Shamwari Game Reserve\nShamwari Game Reserve is located 75\u00a0km outside Port Elizabeth, Eastern Cape, South Africa. It has been voted the World's Leading Safari and Game Reserve and Conservation Company for many consecutive years.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "Port Sudan\nPort Sudan (Arabic: \u0628\u0648\u0631 \u0633\u0648\u062f\u0627\u0646\u200e \u200e \"B\u016br S\u016bd\u0101n \") is a port city in eastern Sudan, and the capital of the state of Red Sea. s of 2007 , it has 489,725 residents. Located on the Red Sea, it is the Republic of Sudan's main port city.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "George McCall Theal was born in South Africa.",
+            "The port city identified in Node 1, Saint John, New Brunswick, is associated with the Bay of Fundy."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "The birthplace of George McCall Theal is a port city of what bay?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve birthplace of George McCall Theal.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine if the birthplace is a port city.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the name of the bay associated with the port city identified.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is structured to first identify George McCall Theal's birthplace through a retrieval step. Once obtained, it checks if the birthplace is a port city. If it is, the next step retrieves the name of the bay associated with that port city. This approach ensures that each piece of information required to answer the question is retrieved and reasoned through in a logical manner."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Saint John, New Brunswick\nSaint John (] ) is the port city of the Bay of Fundy in the Canadian province of New Brunswick. The port is Canada\u2019s third largest port by tonnage with a cargo base that includes dry and liquid bulk, break bulk, containers, and cruise. In 2016, after a decades long decline, the city fell from being the most populous city in New Brunswick to the second most populous city in the province for the first time, with a population of 67,575 over an area of 315.82 sqkm . The Saint John metropolitan area covers a land area of 3,362.95 sqkm across the Caledonia Highlands, with a population (as of 2016) of 126,202. After the partitioning of the colony of Nova Scotia in 1784, the new colony of New Brunswick was thought to be named 'New Ireland' with the capital to be in Saint John before being vetoed by Britain's King George III. Saint John is the oldest incorporated city in Canada. During the reign of George III, the municipality was created by royal charter in 1785.",
+            "George McCall Theal\nGeorge McCall Theal (11 April 1837, Saint John, New Brunswick \u2013 17 April 1919, Wynberg, Cape Town), was the most prolific and influential South African historian, archivist and genealogist of the late nineteenth and early twentieth century.",
+            "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick. Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties. The university is a member of the U15, a group of research-intensive universities in Canada.",
+            "First Nations in New Brunswick\nThe First Nations of New Brunswick, Canada number more than 10,000, mostly Mi'kmaq and Maliseet. Although the Passamaquoddy maintain a land claim at St. Andrews, New Brunswick and historically occurred in New Brunswick, they have no reserves in the province, and have no official status in Canada.",
+            "Meductic Indian Village / Fort Meductic\nMeductic Indian Village / Fort Meductic (also known as Medoctec, Mehtawtik meaning \"the end of the path\") was a Maliseet settlement until the mid-eighteenth century. It was located near the confluence of the Eel River and Saint John River in New Brunswick, four miles upriver from present-day Meductic, New Brunswick. The fortified village of Meductic was the principal settlement of the Maliseet First Nation from before the 17th century until the middle of the 18th, and it was an important fur trading centre. (The other two significant native villages in the region were the Abenaki village of Norridgewock (present-day Madison, Maine) on the Kennebec River and Penobscot (present-day Penobscot Indian Island Reservation) on the Penobscot River. Only during King George's War, after the French established Saint Anne (present-day Fredericton, New Brunswick), did the village Aukpaque, present-day Springhill, New Brunswick, become of equal importance to Meductic).",
+            "Oakland, California\nOakland is the largest city and the county seat of Alameda County, California, United States. A major West Coast port city, Oakland is the largest city in the East Bay region of the San Francisco Bay Area, the third largest city overall in the San Francisco Bay Area, the eighth largest city in California, and the 45th largest city in the United States, with a population of 419,267 as of 2015 . It serves as a trade center for the San Francisco Bay Area; its Port of Oakland is the busiest port in the San Francisco Bay, the entirety of Northern California, and the fifth busiest in the United States of America. The city was incorporated in 1852.",
+            "Balmoral, New Brunswick\nBalmoral (2011 population: 1,719) is a Canadian village in Restigouche County, New Brunswick. It is located approximately 10 kilometres south of Dalhousie. Although Balmoral's population presently meets the requirements for \"town\" status under the Municipalities Act of the Province of New Brunswick, the community has not yet made any change to its municipal status. The village also contains the neighbourhoods of Blair Athol, Saint-Maure, Selwood, and Upper Balmoral.",
+            "George A. McCall School\nGeneral George A. McCall School is a public K\u20138 school in the Society Hill section of Center City, Philadelphia. The McCall School, located at 325 S. 7th Street, serves Society Hill, Chinatown, and Old City. The school, a part of the School District of Philadelphia, is named after George A. McCall.",
+            "Port of Chittagong\nThe Port of Chittagong (Bengali: \u099a\u099f\u09cd\u099f\u0997\u09cd\u09b0\u09be\u09ae \u09ac\u09a8\u09cd\u09a6\u09b0 ) is the busiest seaport on the coastline of the Bay of Bengal, and the second busiest in the overall region of countries dependent on the Bay of Bengal. According to Lloyd's, it ranked as the 76th busiest port in the world in 2016. Located in the Bangladeshi port city of Chittagong and on the banks of the Karnaphuli River, the port of Chittagong handles 90% of Bangladesh's export-import trade, and has been used by India, Nepal and Bhutan for transshipment.",
+            "George McCall Courts\nGeorge McCall Courts (February 16, 1888 \u2013 August 1, 1932) was born in the District of Columbia. He graduated from the United States Naval Academy in 1907. He received the Medal of Honor for actions at the United States occupation of Veracruz, 1914.",
+            "August Frederik Beutler\nAugust Frederik Beutler (c. 1728 in Dinkelsb\u00fchl \u2013 ? in Cape Town) was an ensign (sergeant 1747\u201349, ensign 1749\u201354) in the employ of the Dutch East India Company who headed an epic 1752 reconnaissance expedition lasting 8 months from 29 February to November, eastward from Cape Town as far as the present-day site of Butterworth. Beutler wrote a comprehensive account of his pioneering expedition which was first published in 1896 by the historian George McCall Theal and in 1922 by the Dutch historian Everhardus Cornelis God\u00e9e Molsbergen (1875\u20131940). The mandate of the expedition was to report on the tribes living along the route, the possibility of trade and on anything else that might be profitable to the Dutch East India Company.",
+            "1968 Men's National Tennis League\nThe 1968 Men's National Tennis League (NTL) was the inaugural series of professional tennis tournaments founded by George McCall, among others: Rod Laver, Roy Emerson, Ken Rosewall, Andr\u00e9s Gimeno, Pancho Gonzales and Fred Stolle.",
+            "East Knoyle\nEast Knoyle is a village and civil parish in Wiltshire, in the south west of England. The village lies just west of the A350 road about 9 mi south of Warminster and 5 mi north of Shaftesbury, Dorset. It is the birthplace of Sir Christopher Wren.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "Point Anne, Ontario\nPoint Anne is a ghost town on the Bay of Quinte near Belleville, Ontario, Canada. It was the birthplace of hockey greats Bobby Hull and Dennis Hull, as well as painter Manley MacDonald. During the late 19th and early 20th centuries, the Portland cement industry was positively booming. Portland cement, now a staple in today's building industry, first hit the market in the late 1800s and instantly captured worldwide attention. The product was much harder and far more durable than the earlier lime mortars and the world couldn't get enough of it."
+        ],
+        "thoughts": [
+            "George McCall Theal was born in Saint John, New Brunswick, Canada.",
+            "Yes, Saint John, New Brunswick, Canada is a port city, as it is located on the Bay of Fundy and has a long history as a major port.",
+            "The bay associated with the port city of Saint John, New Brunswick is the Bay of Fundy."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "The birthplace of George McCall Theal is a port city of what bay?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the birthplace of George McCall Theal.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the port city associated with the identified birthplace of George McCall Theal.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the bay associated with the port city determined in the previous step.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins with retrieving the birthplace of George McCall Theal (Node 1). Once this is identified, we deduce the port city linked to this birthplace (Node 2). Finally, leveraging this port city information, we determine which bay it is associated with (Node 3). The answer to the original question will be the bay identified in Node 3."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Saint John, New Brunswick\nSaint John (] ) is the port city of the Bay of Fundy in the Canadian province of New Brunswick. The port is Canada\u2019s third largest port by tonnage with a cargo base that includes dry and liquid bulk, break bulk, containers, and cruise. In 2016, after a decades long decline, the city fell from being the most populous city in New Brunswick to the second most populous city in the province for the first time, with a population of 67,575 over an area of 315.82 sqkm . The Saint John metropolitan area covers a land area of 3,362.95 sqkm across the Caledonia Highlands, with a population (as of 2016) of 126,202. After the partitioning of the colony of Nova Scotia in 1784, the new colony of New Brunswick was thought to be named 'New Ireland' with the capital to be in Saint John before being vetoed by Britain's King George III. Saint John is the oldest incorporated city in Canada. During the reign of George III, the municipality was created by royal charter in 1785.",
+            "George McCall Theal\nGeorge McCall Theal (11 April 1837, Saint John, New Brunswick \u2013 17 April 1919, Wynberg, Cape Town), was the most prolific and influential South African historian, archivist and genealogist of the late nineteenth and early twentieth century.",
+            "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick. Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties. The university is a member of the U15, a group of research-intensive universities in Canada.",
+            "First Nations in New Brunswick\nThe First Nations of New Brunswick, Canada number more than 10,000, mostly Mi'kmaq and Maliseet. Although the Passamaquoddy maintain a land claim at St. Andrews, New Brunswick and historically occurred in New Brunswick, they have no reserves in the province, and have no official status in Canada.",
+            "Meductic Indian Village / Fort Meductic\nMeductic Indian Village / Fort Meductic (also known as Medoctec, Mehtawtik meaning \"the end of the path\") was a Maliseet settlement until the mid-eighteenth century. It was located near the confluence of the Eel River and Saint John River in New Brunswick, four miles upriver from present-day Meductic, New Brunswick. The fortified village of Meductic was the principal settlement of the Maliseet First Nation from before the 17th century until the middle of the 18th, and it was an important fur trading centre. (The other two significant native villages in the region were the Abenaki village of Norridgewock (present-day Madison, Maine) on the Kennebec River and Penobscot (present-day Penobscot Indian Island Reservation) on the Penobscot River. Only during King George's War, after the French established Saint Anne (present-day Fredericton, New Brunswick), did the village Aukpaque, present-day Springhill, New Brunswick, become of equal importance to Meductic).",
+            "Oakland, California\nOakland is the largest city and the county seat of Alameda County, California, United States. A major West Coast port city, Oakland is the largest city in the East Bay region of the San Francisco Bay Area, the third largest city overall in the San Francisco Bay Area, the eighth largest city in California, and the 45th largest city in the United States, with a population of 419,267 as of 2015 . It serves as a trade center for the San Francisco Bay Area; its Port of Oakland is the busiest port in the San Francisco Bay, the entirety of Northern California, and the fifth busiest in the United States of America. The city was incorporated in 1852.",
+            "George A. McCall School\nGeneral George A. McCall School is a public K\u20138 school in the Society Hill section of Center City, Philadelphia. The McCall School, located at 325 S. 7th Street, serves Society Hill, Chinatown, and Old City. The school, a part of the School District of Philadelphia, is named after George A. McCall.",
+            "Balmoral, New Brunswick\nBalmoral (2011 population: 1,719) is a Canadian village in Restigouche County, New Brunswick. It is located approximately 10 kilometres south of Dalhousie. Although Balmoral's population presently meets the requirements for \"town\" status under the Municipalities Act of the Province of New Brunswick, the community has not yet made any change to its municipal status. The village also contains the neighbourhoods of Blair Athol, Saint-Maure, Selwood, and Upper Balmoral.",
+            "Port of Chittagong\nThe Port of Chittagong (Bengali: \u099a\u099f\u09cd\u099f\u0997\u09cd\u09b0\u09be\u09ae \u09ac\u09a8\u09cd\u09a6\u09b0 ) is the busiest seaport on the coastline of the Bay of Bengal, and the second busiest in the overall region of countries dependent on the Bay of Bengal. According to Lloyd's, it ranked as the 76th busiest port in the world in 2016. Located in the Bangladeshi port city of Chittagong and on the banks of the Karnaphuli River, the port of Chittagong handles 90% of Bangladesh's export-import trade, and has been used by India, Nepal and Bhutan for transshipment.",
+            "George McCall Courts\nGeorge McCall Courts (February 16, 1888 \u2013 August 1, 1932) was born in the District of Columbia. He graduated from the United States Naval Academy in 1907. He received the Medal of Honor for actions at the United States occupation of Veracruz, 1914.",
+            "August Frederik Beutler\nAugust Frederik Beutler (c. 1728 in Dinkelsb\u00fchl \u2013 ? in Cape Town) was an ensign (sergeant 1747\u201349, ensign 1749\u201354) in the employ of the Dutch East India Company who headed an epic 1752 reconnaissance expedition lasting 8 months from 29 February to November, eastward from Cape Town as far as the present-day site of Butterworth. Beutler wrote a comprehensive account of his pioneering expedition which was first published in 1896 by the historian George McCall Theal and in 1922 by the Dutch historian Everhardus Cornelis God\u00e9e Molsbergen (1875\u20131940). The mandate of the expedition was to report on the tribes living along the route, the possibility of trade and on anything else that might be profitable to the Dutch East India Company.",
+            "1968 Men's National Tennis League\nThe 1968 Men's National Tennis League (NTL) was the inaugural series of professional tennis tournaments founded by George McCall, among others: Rod Laver, Roy Emerson, Ken Rosewall, Andr\u00e9s Gimeno, Pancho Gonzales and Fred Stolle.",
+            "East Knoyle\nEast Knoyle is a village and civil parish in Wiltshire, in the south west of England. The village lies just west of the A350 road about 9 mi south of Warminster and 5 mi north of Shaftesbury, Dorset. It is the birthplace of Sir Christopher Wren.",
+            "Point Anne, Ontario\nPoint Anne is a ghost town on the Bay of Quinte near Belleville, Ontario, Canada. It was the birthplace of hockey greats Bobby Hull and Dennis Hull, as well as painter Manley MacDonald. During the late 19th and early 20th centuries, the Portland cement industry was positively booming. Portland cement, now a staple in today's building industry, first hit the market in the late 1800s and instantly captured worldwide attention. The product was much harder and far more durable than the earlier lime mortars and the world couldn't get enough of it.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko."
+        ],
+        "thoughts": [
+            "George McCall Theal was born in Saint John, New Brunswick, Canada.",
+            "The port city associated with the birthplace of George McCall Theal is Saint John, New Brunswick, Canada.",
+            "The bay associated with the port city of Saint John, New Brunswick is the Bay of Fundy."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "The birthplace of George McCall Theal is a port city of what bay?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the birthplace of George McCall Theal.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the port city from the birthplace information of George McCall Theal.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about the geographical location of the identified port city, specifically which bay it is located on.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts with retrieving the birthplace of George McCall Theal to identify the port city. Once the port city is known, the next step is retrieving information about this city's geographical location to determine which bay it is a port of."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Saint John, New Brunswick\nSaint John (] ) is the port city of the Bay of Fundy in the Canadian province of New Brunswick. The port is Canada\u2019s third largest port by tonnage with a cargo base that includes dry and liquid bulk, break bulk, containers, and cruise. In 2016, after a decades long decline, the city fell from being the most populous city in New Brunswick to the second most populous city in the province for the first time, with a population of 67,575 over an area of 315.82 sqkm . The Saint John metropolitan area covers a land area of 3,362.95 sqkm across the Caledonia Highlands, with a population (as of 2016) of 126,202. After the partitioning of the colony of Nova Scotia in 1784, the new colony of New Brunswick was thought to be named 'New Ireland' with the capital to be in Saint John before being vetoed by Britain's King George III. Saint John is the oldest incorporated city in Canada. During the reign of George III, the municipality was created by royal charter in 1785.",
+            "George McCall Theal\nGeorge McCall Theal (11 April 1837, Saint John, New Brunswick \u2013 17 April 1919, Wynberg, Cape Town), was the most prolific and influential South African historian, archivist and genealogist of the late nineteenth and early twentieth century.",
+            "Meductic Indian Village / Fort Meductic\nMeductic Indian Village / Fort Meductic (also known as Medoctec, Mehtawtik meaning \"the end of the path\") was a Maliseet settlement until the mid-eighteenth century. It was located near the confluence of the Eel River and Saint John River in New Brunswick, four miles upriver from present-day Meductic, New Brunswick. The fortified village of Meductic was the principal settlement of the Maliseet First Nation from before the 17th century until the middle of the 18th, and it was an important fur trading centre. (The other two significant native villages in the region were the Abenaki village of Norridgewock (present-day Madison, Maine) on the Kennebec River and Penobscot (present-day Penobscot Indian Island Reservation) on the Penobscot River. Only during King George's War, after the French established Saint Anne (present-day Fredericton, New Brunswick), did the village Aukpaque, present-day Springhill, New Brunswick, become of equal importance to Meductic).",
+            "Dalhousie University\nDalhousie University (commonly known as Dal) is a public research university in Nova Scotia, Canada, with three campuses in Halifax, a fourth in Bible Hill, and medical teaching facilities in Saint John, New Brunswick. Dalhousie offers more than 4,000 courses and 180 degree programs in twelve undergraduate, graduate, and professional faculties. The university is a member of the U15, a group of research-intensive universities in Canada.",
+            "Balmoral, New Brunswick\nBalmoral (2011 population: 1,719) is a Canadian village in Restigouche County, New Brunswick. It is located approximately 10 kilometres south of Dalhousie. Although Balmoral's population presently meets the requirements for \"town\" status under the Municipalities Act of the Province of New Brunswick, the community has not yet made any change to its municipal status. The village also contains the neighbourhoods of Blair Athol, Saint-Maure, Selwood, and Upper Balmoral.",
+            "First Nations in New Brunswick\nThe First Nations of New Brunswick, Canada number more than 10,000, mostly Mi'kmaq and Maliseet. Although the Passamaquoddy maintain a land claim at St. Andrews, New Brunswick and historically occurred in New Brunswick, they have no reserves in the province, and have no official status in Canada.",
+            "Constantine Bay\nConstantine Bay (Cornish: Eglos Costentin , meaning \"church of St Constantine\") is a village and beach on the Atlantic coast of north Cornwall, England, United Kingdom. It is situated approximately three miles (5\u00a0km) west of Padstow and is in the parish of St Merryn. The beach is popular with surfers and has lifeguard patrols in the summer. Constantine Bay is named after Saint Constantine, a 6th-century Cornish saint possibly identified with a minor British king Constantine. St Constantine's Well, an historic site, is accessible by public right of way on Trevose Golf Club's golf course. The area was a favourite holiday location of Margaret Thatcher during her premiership and also of former Prime Minister David Cameron.",
+            "George A. McCall School\nGeneral George A. McCall School is a public K\u20138 school in the Society Hill section of Center City, Philadelphia. The McCall School, located at 325 S. 7th Street, serves Society Hill, Chinatown, and Old City. The school, a part of the School District of Philadelphia, is named after George A. McCall.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "George McCall Courts\nGeorge McCall Courts (February 16, 1888 \u2013 August 1, 1932) was born in the District of Columbia. He graduated from the United States Naval Academy in 1907. He received the Medal of Honor for actions at the United States occupation of Veracruz, 1914.",
+            "August Frederik Beutler\nAugust Frederik Beutler (c. 1728 in Dinkelsb\u00fchl \u2013 ? in Cape Town) was an ensign (sergeant 1747\u201349, ensign 1749\u201354) in the employ of the Dutch East India Company who headed an epic 1752 reconnaissance expedition lasting 8 months from 29 February to November, eastward from Cape Town as far as the present-day site of Butterworth. Beutler wrote a comprehensive account of his pioneering expedition which was first published in 1896 by the historian George McCall Theal and in 1922 by the Dutch historian Everhardus Cornelis God\u00e9e Molsbergen (1875\u20131940). The mandate of the expedition was to report on the tribes living along the route, the possibility of trade and on anything else that might be profitable to the Dutch East India Company.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "1968 Men's National Tennis League\nThe 1968 Men's National Tennis League (NTL) was the inaugural series of professional tennis tournaments founded by George McCall, among others: Rod Laver, Roy Emerson, Ken Rosewall, Andr\u00e9s Gimeno, Pancho Gonzales and Fred Stolle.",
+            "East Knoyle\nEast Knoyle is a village and civil parish in Wiltshire, in the south west of England. The village lies just west of the A350 road about 9 mi south of Warminster and 5 mi north of Shaftesbury, Dorset. It is the birthplace of Sir Christopher Wren.",
+            "Point Anne, Ontario\nPoint Anne is a ghost town on the Bay of Quinte near Belleville, Ontario, Canada. It was the birthplace of hockey greats Bobby Hull and Dennis Hull, as well as painter Manley MacDonald. During the late 19th and early 20th centuries, the Portland cement industry was positively booming. Portland cement, now a staple in today's building industry, first hit the market in the late 1800s and instantly captured worldwide attention. The product was much harder and far more durable than the earlier lime mortars and the world couldn't get enough of it."
+        ],
+        "thoughts": [
+            "George McCall Theal was born in Saint John, New Brunswick, Canada on April 11, 1837.",
+            "The port city from the birthplace information of George McCall Theal is Saint John, New Brunswick, Canada.",
+            "Saint John, New Brunswick is located on the Bay of Fundy."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "The birthplace of George McCall Theal is a port city of what bay?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the birthplace of George McCall Theal.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the port city associated with George McCall Theal's birthplace.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the bay associated with the port city from Node 2.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "To determine the bay associated with the port city that is the birthplace of George McCall Theal, we first need to find out his birthplace. This will likely provide the name of a city. Once we identify the city, we need to determine if it is a port city. Finally, we seek to link this port city to a bay, which completes the answer to the original question."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Shamwari Game Reserve\nShamwari Game Reserve is located 75\u00a0km outside Port Elizabeth, Eastern Cape, South Africa. It has been voted the World's Leading Safari and Game Reserve and Conservation Company for many consecutive years.",
+            "Oakland, California\nOakland is the largest city and the county seat of Alameda County, California, United States. A major West Coast port city, Oakland is the largest city in the East Bay region of the San Francisco Bay Area, the third largest city overall in the San Francisco Bay Area, the eighth largest city in California, and the 45th largest city in the United States, with a population of 419,267 as of 2015 . It serves as a trade center for the San Francisco Bay Area; its Port of Oakland is the busiest port in the San Francisco Bay, the entirety of Northern California, and the fifth busiest in the United States of America. The city was incorporated in 1852.",
+            "Port of Chittagong\nThe Port of Chittagong (Bengali: \u099a\u099f\u09cd\u099f\u0997\u09cd\u09b0\u09be\u09ae \u09ac\u09a8\u09cd\u09a6\u09b0 ) is the busiest seaport on the coastline of the Bay of Bengal, and the second busiest in the overall region of countries dependent on the Bay of Bengal. According to Lloyd's, it ranked as the 76th busiest port in the world in 2016. Located in the Bangladeshi port city of Chittagong and on the banks of the Karnaphuli River, the port of Chittagong handles 90% of Bangladesh's export-import trade, and has been used by India, Nepal and Bhutan for transshipment.",
+            "Port Sudan\nPort Sudan (Arabic: \u0628\u0648\u0631 \u0633\u0648\u062f\u0627\u0646\u200e \u200e \"B\u016br S\u016bd\u0101n \") is a port city in eastern Sudan, and the capital of the state of Red Sea. s of 2007 , it has 489,725 residents. Located on the Red Sea, it is the Republic of Sudan's main port city.",
+            "Saint John, New Brunswick\nSaint John (] ) is the port city of the Bay of Fundy in the Canadian province of New Brunswick. The port is Canada\u2019s third largest port by tonnage with a cargo base that includes dry and liquid bulk, break bulk, containers, and cruise. In 2016, after a decades long decline, the city fell from being the most populous city in New Brunswick to the second most populous city in the province for the first time, with a population of 67,575 over an area of 315.82 sqkm . The Saint John metropolitan area covers a land area of 3,362.95 sqkm across the Caledonia Highlands, with a population (as of 2016) of 126,202. After the partitioning of the colony of Nova Scotia in 1784, the new colony of New Brunswick was thought to be named 'New Ireland' with the capital to be in Saint John before being vetoed by Britain's King George III. Saint John is the oldest incorporated city in Canada. During the reign of George III, the municipality was created by royal charter in 1785.",
+            "Palmeira, Cape Verde\nPalmeira (Cape Verde Creole: \"Palm\u00e9ra\") is a village in the northwestern part of the island of Sal, Cape Verde. Its 2010 population was 1,420, doubled in more than a decade from around 700 and is also the island's third most populated place. The village is situated on the west coast, about 4\u00a0km west of the island capital Espargos. Located at Ba\u00eda de Palmeira, a small bay south of the village, it is home to the main port of the island of Sal which serves ferry services with the islands of S\u00e3o Nicolau and Boa Vista which connects to further islands of S\u00e3o Vicente and Santiago, the port is being the third busiest in freight traffic, especially fish from the waters surrounding the island and outside and goods and foodstuff supplied to the island.",
+            "Backford Cross\nBackford Cross is a village on the Wirral Peninsula, Cheshire, England. It is a suburb of the town of Ellesmere Port and part of Cheshire West and Chester. Backford Cross is located around the A41/A5117 junction, south of Great Sutton and about 1.5 mi north of the village of Backford, near Chester. Backford Cross is largely made up of residential homes built from 1990 onwards and serves as a commuter village to Ellesmere Port and Chester, although inhabitants show no allegiance to either locality. The area is split between postcode districts, with parts of the village in Great Sutton, Ellesmere Port CH66 and other areas in Backford, Chester CH1.",
+            "Albert Park, Victoria\nAlbert Park is an inner suburb of Melbourne, Australia, 3 km south of Melbourne's central business district. Its local government area is the City of Port Phillip. At the 2011 census , Albert Park had a population of 5,955.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "George McCall Theal was born in South Africa.",
+            "Since George McCall Theal was born in South Africa, the port city associated with his birthplace is Port Elizabeth.",
+            "The port city associated with Node 2 is Oakland, California, which is located in the East Bay region of the San Francisco Bay Area."
+        ],
+        "is_best": false
+    }
+]

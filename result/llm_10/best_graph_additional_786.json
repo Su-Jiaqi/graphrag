@@ -1,0 +1,792 @@
+[
+    {
+        "attempt": 1,
+        "question": "Are Wolfgang Becker and Paul Andrew Williams both film directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Wolfgang Becker, specifically focusing on his occupation or notable roles.",
+                "output": "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed the 1958 West German drama film \"I Was All His\".",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Paul Andrew Williams, specifically focusing on his occupation or notable roles.",
+                "output": "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\"",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Wolfgang Becker is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the information retrieved, Wolfgang Becker is indeed a film director. This is evident from his work on \"Good Bye Lenin!\" and \"I Was All His\", indicating his role as a director in the film industry.",
+                "upstream": [
+                    [
+                        "1",
+                        "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed the 1958 West German drama film \"I Was All His\"."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Paul Andrew Williams is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the information retrieved, Paul Andrew Williams is indeed a film director, as he is known for his work on several films and has received recognition for his directing work, including winning an award for his directorial debut \"London to Brighton.\"",
+                "upstream": [
+                    [
+                        "2",
+                        "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\""
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Analyze the results of both analyses to conclude if both Wolfgang Becker and Paul Andrew Williams are film directors.",
+                "output": "Based on the results of both analyses, it can be concluded that both Wolfgang Becker and Paul Andrew Williams are indeed film directors. The information retrieved from the analyses clearly indicates their involvement in directing films, with specific examples of their work and recognition for their directorial efforts. Therefore, it is evident that both Wolfgang Becker and Paul Andrew Williams have established themselves as film directors in the industry.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the information retrieved, Wolfgang Becker is indeed a film director. This is evident from his work on \"Good Bye Lenin!\" and \"I Was All His\", indicating his role as a director in the film industry."
+                    ],
+                    [
+                        "4",
+                        "Based on the information retrieved, Paul Andrew Williams is indeed a film director, as he is known for his work on several films and has received recognition for his directing work, including winning an award for his directorial debut \"London to Brighton.\""
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Wolfgang Becker\nWolfgang Becker (born 22 June 1954) is a German film director and writer. He is best known to the international audience for his work \"Good Bye Lenin!\" (2003).",
+            "Paul Andrew Williams\nPaul Andrew Williams is a British film writer and director, born in Portsmouth, England in 1973. He won the New Director's Award for his film London to Brighton in the 2006 Edinburgh International Film Festival.",
+            "I Was All His\nI Was All His (German: Ich war ihm h\u00f6rig) is a 1958 West German drama film directed by Wolfgang Becker and starring Barbara R\u00fctting, Carlos Thompson and Wolfgang Preiss.",
+            "Paul Williams (Northern Ireland footballer)\nPaul Andrew Williams (born 8 September 1965) is a retired Northern Irish footballer. He won one cap for the Northern Ireland national football team. He played as a forward.",
+            "London to Brighton (disambiguation)\nLondon to Brighton is a 2006 film by Paul Andrew Williams.",
+            "London to Brighton\nLondon to Brighton is a 2006 British film written and directed by Paul Andrew Williams.",
+            "The Cottage (film)\nThe Cottage is a 2008 British darkly comic horror film, written and directed by Paul Andrew Williams.",
+            "Cherry Tree Lane\nCherry Tree Lane is a 2010 British urban dramatic real-time horror-thriller film, written and directed by Paul Andrew Williams.",
+            "The Eichmann Show\nThe Eichmann Show is a 2015 British BBC TV drama film produced by Laurence Bowen and Ken Marshall for Feelgood Fiction and directed by Paul Andrew Williams.",
+            "Song for Marion\nSong for Marion (released in the United States as Unfinished Song) is a 2012 British-German comedy-drama film written and directed by Paul Andrew Williams and starring Terence Stamp, Gemma Arterton, Christopher Eccleston and Vanessa Redgrave.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Crab trap\nCrab traps are used to bait, lure, and catch crabs for commercial or recreational use. Crabbing or crab fishing is the recreational hobby and commercial occupation of fishing for crabs. Different types of traps are used depending on the type of crab being fished for, geographic location, and personal preference.",
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "Bjarte Hjelmeland\nBjarte Hjelmeland (born 24 February 1970) is a Norwegian actor and theatre director. He was born in Bergen. He made his stage debut in 1991 at Oslo Nye Teater, and also had notable roles at the National Theatre, Rogaland Teater, Torshovteatret, Den Nationale Scene and Chateau Neuf. In 2008 he was hired as director of Den Nationale Scene.",
+            "Domestic Disturbance\nDomestic Disturbance is a 2001 American psychological thriller film directed by Harold Becker (his last film to date) and starring John Travolta, Vince Vaughn, Teri Polo, Steve Buscemi, and Matt O'Leary.",
+            "The Bone Man\nThe Bone Man (German: Der Knochenmann) is a 2009 Austrian film directed by Wolfgang Murnberger. The script is based on the novel \"Der Knochenmann\" by Austrian author Wolf Haas."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 2,
+        "question": "Are Wolfgang Becker and Paul Andrew Williams both film directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Wolfgang Becker, specifically focusing on his occupation or notable roles.",
+                "output": "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed the 1958 West German drama film \"I Was All His\" and has had notable roles in the film industry.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Paul Andrew Williams, specifically focusing on his occupation or notable roles.",
+                "output": "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\"",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Wolfgang Becker is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the retrieved information, Wolfgang Becker is indeed a film director. This is evident from his work on \"Good Bye Lenin!\" and \"I Was All His,\" as well as his notable roles in the film industry. Therefore, it can be concluded that Wolfgang Becker is a film director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed the 1958 West German drama film \"I Was All His\" and has had notable roles in the film industry."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Paul Andrew Williams is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the information retrieved, Paul Andrew Williams is indeed a film director, as he is known for his work on several films and has received recognition for his directing work, including winning an award for his directorial debut \"London to Brighton.\"",
+                "upstream": [
+                    [
+                        "2",
+                        "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\""
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Analyze the results of both analyses to conclude if both Wolfgang Becker and Paul Andrew Williams are film directors.",
+                "output": "Based on the results of both analyses, it can be concluded that both Wolfgang Becker and Paul Andrew Williams are indeed film directors. This conclusion is supported by the evidence of their work in the film industry, including directing notable films and receiving recognition for their directorial work. Therefore, both Wolfgang Becker and Paul Andrew Williams can be confirmed as film directors.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, Wolfgang Becker is indeed a film director. This is evident from his work on \"Good Bye Lenin!\" and \"I Was All His,\" as well as his notable roles in the film industry. Therefore, it can be concluded that Wolfgang Becker is a film director."
+                    ],
+                    [
+                        "4",
+                        "Based on the information retrieved, Paul Andrew Williams is indeed a film director, as he is known for his work on several films and has received recognition for his directing work, including winning an award for his directorial debut \"London to Brighton.\""
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Wolfgang Becker\nWolfgang Becker (born 22 June 1954) is a German film director and writer. He is best known to the international audience for his work \"Good Bye Lenin!\" (2003).",
+            "Paul Andrew Williams\nPaul Andrew Williams is a British film writer and director, born in Portsmouth, England in 1973. He won the New Director's Award for his film London to Brighton in the 2006 Edinburgh International Film Festival.",
+            "I Was All His\nI Was All His (German: Ich war ihm h\u00f6rig) is a 1958 West German drama film directed by Wolfgang Becker and starring Barbara R\u00fctting, Carlos Thompson and Wolfgang Preiss.",
+            "Paul Williams (Northern Ireland footballer)\nPaul Andrew Williams (born 8 September 1965) is a retired Northern Irish footballer. He won one cap for the Northern Ireland national football team. He played as a forward.",
+            "London to Brighton (disambiguation)\nLondon to Brighton is a 2006 film by Paul Andrew Williams.",
+            "London to Brighton\nLondon to Brighton is a 2006 British film written and directed by Paul Andrew Williams.",
+            "The Cottage (film)\nThe Cottage is a 2008 British darkly comic horror film, written and directed by Paul Andrew Williams.",
+            "Cherry Tree Lane\nCherry Tree Lane is a 2010 British urban dramatic real-time horror-thriller film, written and directed by Paul Andrew Williams.",
+            "The Eichmann Show\nThe Eichmann Show is a 2015 British BBC TV drama film produced by Laurence Bowen and Ken Marshall for Feelgood Fiction and directed by Paul Andrew Williams.",
+            "Song for Marion\nSong for Marion (released in the United States as Unfinished Song) is a 2012 British-German comedy-drama film written and directed by Paul Andrew Williams and starring Terence Stamp, Gemma Arterton, Christopher Eccleston and Vanessa Redgrave.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Crab trap\nCrab traps are used to bait, lure, and catch crabs for commercial or recreational use. Crabbing or crab fishing is the recreational hobby and commercial occupation of fishing for crabs. Different types of traps are used depending on the type of crab being fished for, geographic location, and personal preference.",
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "Bjarte Hjelmeland\nBjarte Hjelmeland (born 24 February 1970) is a Norwegian actor and theatre director. He was born in Bergen. He made his stage debut in 1991 at Oslo Nye Teater, and also had notable roles at the National Theatre, Rogaland Teater, Torshovteatret, Den Nationale Scene and Chateau Neuf. In 2008 he was hired as director of Den Nationale Scene.",
+            "Domestic Disturbance\nDomestic Disturbance is a 2001 American psychological thriller film directed by Harold Becker (his last film to date) and starring John Travolta, Vince Vaughn, Teri Polo, Steve Buscemi, and Matt O'Leary.",
+            "The Bone Man\nThe Bone Man (German: Der Knochenmann) is a 2009 Austrian film directed by Wolfgang Murnberger. The script is based on the novel \"Der Knochenmann\" by Austrian author Wolf Haas."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 3,
+        "question": "Are Wolfgang Becker and Paul Andrew Williams both film directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Wolfgang Becker, specifically focusing on his occupation or notable roles.",
+                "output": "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed the 1958 West German drama film \"I Was All His\" and is known for his work in the film industry.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Paul Andrew Williams, specifically focusing on his occupation or notable roles.",
+                "output": "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\"",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Wolfgang Becker is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the retrieved information, Wolfgang Becker is indeed a film director. This is evident from his work on \"Good Bye Lenin!\" and \"I Was All His,\" as well as his reputation in the film industry. Therefore, it can be concluded that Wolfgang Becker is a film director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed the 1958 West German drama film \"I Was All His\" and is known for his work in the film industry."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Paul Andrew Williams is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the information retrieved, Paul Andrew Williams is indeed a film director, as he is known for his work on several films and has received recognition for his directing work, including winning an award for his directorial debut \"London to Brighton.\"",
+                "upstream": [
+                    [
+                        "2",
+                        "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\""
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Analyze the results of both analyses to conclude if both Wolfgang Becker and Paul Andrew Williams are film directors.",
+                "output": "Based on the results of both analyses, it can be concluded that both Wolfgang Becker and Paul Andrew Williams are indeed film directors. This is supported by their work on multiple films and their recognition and reputation in the film industry. Therefore, both Wolfgang Becker and Paul Andrew Williams can be confirmed as film directors.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, Wolfgang Becker is indeed a film director. This is evident from his work on \"Good Bye Lenin!\" and \"I Was All His,\" as well as his reputation in the film industry. Therefore, it can be concluded that Wolfgang Becker is a film director."
+                    ],
+                    [
+                        "4",
+                        "Based on the information retrieved, Paul Andrew Williams is indeed a film director, as he is known for his work on several films and has received recognition for his directing work, including winning an award for his directorial debut \"London to Brighton.\""
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Wolfgang Becker\nWolfgang Becker (born 22 June 1954) is a German film director and writer. He is best known to the international audience for his work \"Good Bye Lenin!\" (2003).",
+            "Paul Andrew Williams\nPaul Andrew Williams is a British film writer and director, born in Portsmouth, England in 1973. He won the New Director's Award for his film London to Brighton in the 2006 Edinburgh International Film Festival.",
+            "I Was All His\nI Was All His (German: Ich war ihm h\u00f6rig) is a 1958 West German drama film directed by Wolfgang Becker and starring Barbara R\u00fctting, Carlos Thompson and Wolfgang Preiss.",
+            "Paul Williams (Northern Ireland footballer)\nPaul Andrew Williams (born 8 September 1965) is a retired Northern Irish footballer. He won one cap for the Northern Ireland national football team. He played as a forward.",
+            "London to Brighton (disambiguation)\nLondon to Brighton is a 2006 film by Paul Andrew Williams.",
+            "London to Brighton\nLondon to Brighton is a 2006 British film written and directed by Paul Andrew Williams.",
+            "The Cottage (film)\nThe Cottage is a 2008 British darkly comic horror film, written and directed by Paul Andrew Williams.",
+            "Cherry Tree Lane\nCherry Tree Lane is a 2010 British urban dramatic real-time horror-thriller film, written and directed by Paul Andrew Williams.",
+            "The Eichmann Show\nThe Eichmann Show is a 2015 British BBC TV drama film produced by Laurence Bowen and Ken Marshall for Feelgood Fiction and directed by Paul Andrew Williams.",
+            "Song for Marion\nSong for Marion (released in the United States as Unfinished Song) is a 2012 British-German comedy-drama film written and directed by Paul Andrew Williams and starring Terence Stamp, Gemma Arterton, Christopher Eccleston and Vanessa Redgrave.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Crab trap\nCrab traps are used to bait, lure, and catch crabs for commercial or recreational use. Crabbing or crab fishing is the recreational hobby and commercial occupation of fishing for crabs. Different types of traps are used depending on the type of crab being fished for, geographic location, and personal preference.",
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "Bjarte Hjelmeland\nBjarte Hjelmeland (born 24 February 1970) is a Norwegian actor and theatre director. He was born in Bergen. He made his stage debut in 1991 at Oslo Nye Teater, and also had notable roles at the National Theatre, Rogaland Teater, Torshovteatret, Den Nationale Scene and Chateau Neuf. In 2008 he was hired as director of Den Nationale Scene.",
+            "Domestic Disturbance\nDomestic Disturbance is a 2001 American psychological thriller film directed by Harold Becker (his last film to date) and starring John Travolta, Vince Vaughn, Teri Polo, Steve Buscemi, and Matt O'Leary.",
+            "The Bone Man\nThe Bone Man (German: Der Knochenmann) is a 2009 Austrian film directed by Wolfgang Murnberger. The script is based on the novel \"Der Knochenmann\" by Austrian author Wolf Haas."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 4,
+        "question": "Are Wolfgang Becker and Paul Andrew Williams both film directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Wolfgang Becker, specifically focusing on his occupation or notable roles.",
+                "output": "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed the 1958 West German drama film \"I Was All His\" and has had notable roles in the film industry.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Paul Andrew Williams, specifically focusing on his occupation or notable roles.",
+                "output": "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\"",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Wolfgang Becker is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the retrieved information, Wolfgang Becker is indeed a film director. This is evident from his work on \"Good Bye Lenin!\" and \"I Was All His,\" as well as his notable roles in the film industry. Therefore, it can be concluded that Wolfgang Becker is a film director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed the 1958 West German drama film \"I Was All His\" and has had notable roles in the film industry."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Paul Andrew Williams is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the information retrieved, Paul Andrew Williams is indeed a film director. He is known for his work on several films and has received recognition for his directing, including winning an award at the Edinburgh International Film Festival. Therefore, it can be concluded that Paul Andrew Williams is a film director.",
+                "upstream": [
+                    [
+                        "2",
+                        "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\""
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Analyze the results of both analyses to conclude if both Wolfgang Becker and Paul Andrew Williams are film directors.",
+                "output": "Based on the results of both analyses, it can be concluded that both Wolfgang Becker and Paul Andrew Williams are indeed film directors. This conclusion is supported by the evidence of their work in the film industry, including directing notable films and receiving recognition for their directing abilities. Therefore, both Wolfgang Becker and Paul Andrew Williams can be confirmed as film directors.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, Wolfgang Becker is indeed a film director. This is evident from his work on \"Good Bye Lenin!\" and \"I Was All His,\" as well as his notable roles in the film industry. Therefore, it can be concluded that Wolfgang Becker is a film director."
+                    ],
+                    [
+                        "4",
+                        "Based on the information retrieved, Paul Andrew Williams is indeed a film director. He is known for his work on several films and has received recognition for his directing, including winning an award at the Edinburgh International Film Festival. Therefore, it can be concluded that Paul Andrew Williams is a film director."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Wolfgang Becker\nWolfgang Becker (born 22 June 1954) is a German film director and writer. He is best known to the international audience for his work \"Good Bye Lenin!\" (2003).",
+            "Paul Andrew Williams\nPaul Andrew Williams is a British film writer and director, born in Portsmouth, England in 1973. He won the New Director's Award for his film London to Brighton in the 2006 Edinburgh International Film Festival.",
+            "I Was All His\nI Was All His (German: Ich war ihm h\u00f6rig) is a 1958 West German drama film directed by Wolfgang Becker and starring Barbara R\u00fctting, Carlos Thompson and Wolfgang Preiss.",
+            "Paul Williams (Northern Ireland footballer)\nPaul Andrew Williams (born 8 September 1965) is a retired Northern Irish footballer. He won one cap for the Northern Ireland national football team. He played as a forward.",
+            "London to Brighton (disambiguation)\nLondon to Brighton is a 2006 film by Paul Andrew Williams.",
+            "London to Brighton\nLondon to Brighton is a 2006 British film written and directed by Paul Andrew Williams.",
+            "The Cottage (film)\nThe Cottage is a 2008 British darkly comic horror film, written and directed by Paul Andrew Williams.",
+            "Cherry Tree Lane\nCherry Tree Lane is a 2010 British urban dramatic real-time horror-thriller film, written and directed by Paul Andrew Williams.",
+            "The Eichmann Show\nThe Eichmann Show is a 2015 British BBC TV drama film produced by Laurence Bowen and Ken Marshall for Feelgood Fiction and directed by Paul Andrew Williams.",
+            "Song for Marion\nSong for Marion (released in the United States as Unfinished Song) is a 2012 British-German comedy-drama film written and directed by Paul Andrew Williams and starring Terence Stamp, Gemma Arterton, Christopher Eccleston and Vanessa Redgrave.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Crab trap\nCrab traps are used to bait, lure, and catch crabs for commercial or recreational use. Crabbing or crab fishing is the recreational hobby and commercial occupation of fishing for crabs. Different types of traps are used depending on the type of crab being fished for, geographic location, and personal preference.",
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "Bjarte Hjelmeland\nBjarte Hjelmeland (born 24 February 1970) is a Norwegian actor and theatre director. He was born in Bergen. He made his stage debut in 1991 at Oslo Nye Teater, and also had notable roles at the National Theatre, Rogaland Teater, Torshovteatret, Den Nationale Scene and Chateau Neuf. In 2008 he was hired as director of Den Nationale Scene.",
+            "Domestic Disturbance\nDomestic Disturbance is a 2001 American psychological thriller film directed by Harold Becker (his last film to date) and starring John Travolta, Vince Vaughn, Teri Polo, Steve Buscemi, and Matt O'Leary.",
+            "The Bone Man\nThe Bone Man (German: Der Knochenmann) is a 2009 Austrian film directed by Wolfgang Murnberger. The script is based on the novel \"Der Knochenmann\" by Austrian author Wolf Haas."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 5,
+        "question": "Are Wolfgang Becker and Paul Andrew Williams both film directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Wolfgang Becker, specifically focusing on his occupation or notable roles.",
+                "output": "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed the 1958 West German drama film \"I Was All His\" and is known for his work in the film industry.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Paul Andrew Williams, specifically focusing on his occupation or notable roles.",
+                "output": "Paul Andrew Williams is a British film writer and director, known for his work on films such as London to Brighton, The Cottage, Cherry Tree Lane, The Eichmann Show, and Song for Marion. He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for London to Brighton.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Wolfgang Becker is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the information retrieved, Wolfgang Becker is indeed a film director. This is evident from his work on \"Good Bye Lenin!\" and \"I Was All His,\" as well as his reputation and recognition in the film industry. Therefore, it can be concluded that Wolfgang Becker is a film director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed the 1958 West German drama film \"I Was All His\" and is known for his work in the film industry."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Paul Andrew Williams is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the information retrieved, Paul Andrew Williams is indeed a film director. He is known for his work on several films and has received recognition for his directing, including winning an award at the Edinburgh International Film Festival. Therefore, it can be concluded that Paul Andrew Williams is a film director.",
+                "upstream": [
+                    [
+                        "2",
+                        "Paul Andrew Williams is a British film writer and director, known for his work on films such as London to Brighton, The Cottage, Cherry Tree Lane, The Eichmann Show, and Song for Marion. He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for London to Brighton."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Analyze the results of both analyses to conclude if both Wolfgang Becker and Paul Andrew Williams are film directors.",
+                "output": "Based on the results of both analyses, it can be concluded that both Wolfgang Becker and Paul Andrew Williams are indeed film directors. This conclusion is supported by their work on multiple films, as well as their recognition and reputation in the film industry. Therefore, both Wolfgang Becker and Paul Andrew Williams can be confirmed as film directors.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the information retrieved, Wolfgang Becker is indeed a film director. This is evident from his work on \"Good Bye Lenin!\" and \"I Was All His,\" as well as his reputation and recognition in the film industry. Therefore, it can be concluded that Wolfgang Becker is a film director."
+                    ],
+                    [
+                        "4",
+                        "Based on the information retrieved, Paul Andrew Williams is indeed a film director. He is known for his work on several films and has received recognition for his directing, including winning an award at the Edinburgh International Film Festival. Therefore, it can be concluded that Paul Andrew Williams is a film director."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Wolfgang Becker\nWolfgang Becker (born 22 June 1954) is a German film director and writer. He is best known to the international audience for his work \"Good Bye Lenin!\" (2003).",
+            "Paul Andrew Williams\nPaul Andrew Williams is a British film writer and director, born in Portsmouth, England in 1973. He won the New Director's Award for his film London to Brighton in the 2006 Edinburgh International Film Festival.",
+            "I Was All His\nI Was All His (German: Ich war ihm h\u00f6rig) is a 1958 West German drama film directed by Wolfgang Becker and starring Barbara R\u00fctting, Carlos Thompson and Wolfgang Preiss.",
+            "Paul Williams (Northern Ireland footballer)\nPaul Andrew Williams (born 8 September 1965) is a retired Northern Irish footballer. He won one cap for the Northern Ireland national football team. He played as a forward.",
+            "London to Brighton (disambiguation)\nLondon to Brighton is a 2006 film by Paul Andrew Williams.",
+            "London to Brighton\nLondon to Brighton is a 2006 British film written and directed by Paul Andrew Williams.",
+            "The Cottage (film)\nThe Cottage is a 2008 British darkly comic horror film, written and directed by Paul Andrew Williams.",
+            "Cherry Tree Lane\nCherry Tree Lane is a 2010 British urban dramatic real-time horror-thriller film, written and directed by Paul Andrew Williams.",
+            "The Eichmann Show\nThe Eichmann Show is a 2015 British BBC TV drama film produced by Laurence Bowen and Ken Marshall for Feelgood Fiction and directed by Paul Andrew Williams.",
+            "Song for Marion\nSong for Marion (released in the United States as Unfinished Song) is a 2012 British-German comedy-drama film written and directed by Paul Andrew Williams and starring Terence Stamp, Gemma Arterton, Christopher Eccleston and Vanessa Redgrave.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Crab trap\nCrab traps are used to bait, lure, and catch crabs for commercial or recreational use. Crabbing or crab fishing is the recreational hobby and commercial occupation of fishing for crabs. Different types of traps are used depending on the type of crab being fished for, geographic location, and personal preference.",
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "Bjarte Hjelmeland\nBjarte Hjelmeland (born 24 February 1970) is a Norwegian actor and theatre director. He was born in Bergen. He made his stage debut in 1991 at Oslo Nye Teater, and also had notable roles at the National Theatre, Rogaland Teater, Torshovteatret, Den Nationale Scene and Chateau Neuf. In 2008 he was hired as director of Den Nationale Scene.",
+            "Domestic Disturbance\nDomestic Disturbance is a 2001 American psychological thriller film directed by Harold Becker (his last film to date) and starring John Travolta, Vince Vaughn, Teri Polo, Steve Buscemi, and Matt O'Leary.",
+            "The Bone Man\nThe Bone Man (German: Der Knochenmann) is a 2009 Austrian film directed by Wolfgang Murnberger. The script is based on the novel \"Der Knochenmann\" by Austrian author Wolf Haas."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 6,
+        "question": "Are Wolfgang Becker and Paul Andrew Williams both film directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Wolfgang Becker, specifically focusing on his occupation or notable roles.",
+                "output": "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed the 1958 West German drama film \"I Was All His\" and has had notable roles in other films such as \"The Bone Man\" (2009).",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Paul Andrew Williams, specifically focusing on his occupation or notable roles.",
+                "output": "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\"",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Wolfgang Becker is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the retrieved information, Wolfgang Becker is indeed a film director. He is best known for his work on \"Good Bye Lenin!\" and has also directed other notable films. Therefore, it can be concluded that Wolfgang Becker is a film director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed the 1958 West German drama film \"I Was All His\" and has had notable roles in other films such as \"The Bone Man\" (2009)."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Paul Andrew Williams is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the information retrieved, Paul Andrew Williams is indeed a film director, as he is known for his work on several films and has received recognition for his directing work, including winning an award for his directorial debut \"London to Brighton.\"",
+                "upstream": [
+                    [
+                        "2",
+                        "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\""
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Analyze the results of both analyses to conclude if both Wolfgang Becker and Paul Andrew Williams are film directors.",
+                "output": "Based on the results of both analyses, it can be concluded that both Wolfgang Becker and Paul Andrew Williams are indeed film directors. Wolfgang Becker is known for his work on \"Good Bye Lenin!\" and has directed other notable films, while Paul Andrew Williams has received recognition for his directing work, including winning an award for his directorial debut \"London to Brighton.\" Therefore, both individuals meet the criteria of being film directors based on the information retrieved.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, Wolfgang Becker is indeed a film director. He is best known for his work on \"Good Bye Lenin!\" and has also directed other notable films. Therefore, it can be concluded that Wolfgang Becker is a film director."
+                    ],
+                    [
+                        "4",
+                        "Based on the information retrieved, Paul Andrew Williams is indeed a film director, as he is known for his work on several films and has received recognition for his directing work, including winning an award for his directorial debut \"London to Brighton.\""
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Wolfgang Becker\nWolfgang Becker (born 22 June 1954) is a German film director and writer. He is best known to the international audience for his work \"Good Bye Lenin!\" (2003).",
+            "Paul Andrew Williams\nPaul Andrew Williams is a British film writer and director, born in Portsmouth, England in 1973. He won the New Director's Award for his film London to Brighton in the 2006 Edinburgh International Film Festival.",
+            "I Was All His\nI Was All His (German: Ich war ihm h\u00f6rig) is a 1958 West German drama film directed by Wolfgang Becker and starring Barbara R\u00fctting, Carlos Thompson and Wolfgang Preiss.",
+            "Paul Williams (Northern Ireland footballer)\nPaul Andrew Williams (born 8 September 1965) is a retired Northern Irish footballer. He won one cap for the Northern Ireland national football team. He played as a forward.",
+            "London to Brighton (disambiguation)\nLondon to Brighton is a 2006 film by Paul Andrew Williams.",
+            "London to Brighton\nLondon to Brighton is a 2006 British film written and directed by Paul Andrew Williams.",
+            "The Cottage (film)\nThe Cottage is a 2008 British darkly comic horror film, written and directed by Paul Andrew Williams.",
+            "Cherry Tree Lane\nCherry Tree Lane is a 2010 British urban dramatic real-time horror-thriller film, written and directed by Paul Andrew Williams.",
+            "The Eichmann Show\nThe Eichmann Show is a 2015 British BBC TV drama film produced by Laurence Bowen and Ken Marshall for Feelgood Fiction and directed by Paul Andrew Williams.",
+            "Song for Marion\nSong for Marion (released in the United States as Unfinished Song) is a 2012 British-German comedy-drama film written and directed by Paul Andrew Williams and starring Terence Stamp, Gemma Arterton, Christopher Eccleston and Vanessa Redgrave.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Crab trap\nCrab traps are used to bait, lure, and catch crabs for commercial or recreational use. Crabbing or crab fishing is the recreational hobby and commercial occupation of fishing for crabs. Different types of traps are used depending on the type of crab being fished for, geographic location, and personal preference.",
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "Bjarte Hjelmeland\nBjarte Hjelmeland (born 24 February 1970) is a Norwegian actor and theatre director. He was born in Bergen. He made his stage debut in 1991 at Oslo Nye Teater, and also had notable roles at the National Theatre, Rogaland Teater, Torshovteatret, Den Nationale Scene and Chateau Neuf. In 2008 he was hired as director of Den Nationale Scene.",
+            "Domestic Disturbance\nDomestic Disturbance is a 2001 American psychological thriller film directed by Harold Becker (his last film to date) and starring John Travolta, Vince Vaughn, Teri Polo, Steve Buscemi, and Matt O'Leary.",
+            "The Bone Man\nThe Bone Man (German: Der Knochenmann) is a 2009 Austrian film directed by Wolfgang Murnberger. The script is based on the novel \"Der Knochenmann\" by Austrian author Wolf Haas."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 7,
+        "question": "Are Wolfgang Becker and Paul Andrew Williams both film directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Wolfgang Becker, specifically focusing on his occupation or notable roles.",
+                "output": "Wolfgang Becker is best known as a German film director and writer, with his most notable work being \"Good Bye Lenin!\" (2003). He is not known for any notable roles in cricket, wrestling, literature, or any other field mentioned in the provided information.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Paul Andrew Williams, specifically focusing on his occupation or notable roles.",
+                "output": "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\"",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Wolfgang Becker is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the information retrieved, Wolfgang Becker is indeed a film director and writer, as he is best known for his work in the film \"Good Bye Lenin!\" (2003). Therefore, it can be determined that Wolfgang Becker is a film director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Wolfgang Becker is best known as a German film director and writer, with his most notable work being \"Good Bye Lenin!\" (2003). He is not known for any notable roles in cricket, wrestling, literature, or any other field mentioned in the provided information."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Paul Andrew Williams is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the information retrieved, Paul Andrew Williams is indeed a film director. He is known for his work on several films and has received recognition for his directing, including winning an award at the Edinburgh International Film Festival. Therefore, it can be concluded that Paul Andrew Williams is a film director.",
+                "upstream": [
+                    [
+                        "2",
+                        "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\""
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Analyze the results of both analyses to conclude if both Wolfgang Becker and Paul Andrew Williams are film directors.",
+                "output": "Based on the results of the analyses, it can be concluded that both Wolfgang Becker and Paul Andrew Williams are indeed film directors. Wolfgang Becker is best known for his work on the film \"Good Bye Lenin!\" (2003), and Paul Andrew Williams has received recognition for his directing, including winning an award at the Edinburgh International Film Festival. Therefore, both individuals can be confirmed as film directors.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the information retrieved, Wolfgang Becker is indeed a film director and writer, as he is best known for his work in the film \"Good Bye Lenin!\" (2003). Therefore, it can be determined that Wolfgang Becker is a film director."
+                    ],
+                    [
+                        "4",
+                        "Based on the information retrieved, Paul Andrew Williams is indeed a film director. He is known for his work on several films and has received recognition for his directing, including winning an award at the Edinburgh International Film Festival. Therefore, it can be concluded that Paul Andrew Williams is a film director."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "List of England Test cricketers\nThis is a list of England Test cricketers. A Test match is an international two-innings per side cricket match between two of the leading cricketing nations. The list is arranged in the order in which each player won his Test cap by playing for the England cricket team. Where more than one player won his first Test cap in the same Test match, those players are listed alphabetically by surname. In the text, the numbers that follow the players' names correspond to their place in the chronological list of English Test cricketers. Current players have their chronological number on the front of their shirts.",
+            "Wolfgang Becker\nWolfgang Becker (born 22 June 1954) is a German film director and writer. He is best known to the international audience for his work \"Good Bye Lenin!\" (2003).",
+            "Ladder match\nA ladder match is a type of match in professional wrestling, most commonly one where an item (usually a title belt) is hung above the ring, and the winner is the contestant who climbs a ladder and retrieves the item. The ladder itself becomes a key feature of the match, as wrestlers will use the ladder as a weapon to strike the opponent(s), as a launching pad for acrobatic attacks, and frequently these matches include impressive falls from the top of the ladder. However, there were very few matches in which the hung item must be used in a special manner in order to win the match, such as striking the opponent with the item (see Bam Bam Bigelow Vs. Scott Hall taser match, where one must strike the opponent with the taser, regardless of who retrieved the taser first).",
+            "Paul Andrew Williams\nPaul Andrew Williams is a British film writer and director, born in Portsmouth, England in 1973. He won the New Director's Award for his film London to Brighton in the 2006 Edinburgh International Film Festival.",
+            "I Was All His\nI Was All His (German: Ich war ihm h\u00f6rig) is a 1958 West German drama film directed by Wolfgang Becker and starring Barbara R\u00fctting, Carlos Thompson and Wolfgang Preiss.",
+            "Paul Williams (Northern Ireland footballer)\nPaul Andrew Williams (born 8 September 1965) is a retired Northern Irish footballer. He won one cap for the Northern Ireland national football team. He played as a forward.",
+            "London to Brighton (disambiguation)\nLondon to Brighton is a 2006 film by Paul Andrew Williams.",
+            "London to Brighton\nLondon to Brighton is a 2006 British film written and directed by Paul Andrew Williams.",
+            "The Cottage (film)\nThe Cottage is a 2008 British darkly comic horror film, written and directed by Paul Andrew Williams.",
+            "Cherry Tree Lane\nCherry Tree Lane is a 2010 British urban dramatic real-time horror-thriller film, written and directed by Paul Andrew Williams.",
+            "The Eichmann Show\nThe Eichmann Show is a 2015 British BBC TV drama film produced by Laurence Bowen and Ken Marshall for Feelgood Fiction and directed by Paul Andrew Williams.",
+            "Song for Marion\nSong for Marion (released in the United States as Unfinished Song) is a 2012 British-German comedy-drama film written and directed by Paul Andrew Williams and starring Terence Stamp, Gemma Arterton, Christopher Eccleston and Vanessa Redgrave.",
+            "A Skeleton Key to Finnegans Wake\nA Skeleton Key to Finnegans Wake is a 1944 work of literary criticism by mythologist Joseph Campbell and Henry Morton Robinson. The first major text to provide an in-depth analysis of \"Finnegans Wake\" (James Joyce's final novel), \"A Skeleton Key to Finnegans Wake\" is considered by many scholars to be a seminal work on the text. The term \"monomyth\", which Campbell used to describe his journey of the hero in his book, \"The Hero with a Thousand Faces\", came from \"Finnegans Wake.\"",
+            "Roberta Allen\nRoberta Allen is a short story writer, novelist, memoirist, conceptual artist, sculptor, photographer, and creative writing instructor. Language has been the inspiration for both her writing and her art. In her conceptual works - which include drawings, collages, artist books, photo/text works,\u00a0installations and digital prints -\u00a0she explores how text informs or changes our perception of images, often with more than a hint of humor and a philosophical bent. With dark humor, her books present characters at odds with themselves and others, sometimes in exotic locales.",
+            "The SpongeBob Movie: Sponge Out of Water\nThe SpongeBob Movie: Sponge Out of Water is a 2015 American 3D live-action/animated comedy film based on the animated television series \"SpongeBob SquarePants\". A stand-alone sequel to \"The SpongeBob SquarePants Movie\" (2004), it was directed by former series showrunner Paul Tibbitt in his directorial debut, with live-action sequences directed by Mike Mitchell. It was the first film to be produced by Paramount Animation and second film in the \"SpongeBob SquarePants\" film series. The film stars Antonio Banderas and features the show's regular voice cast, who returned to reprise their respective roles from the series and the previous film. The plot follows a pirate called Burger-Beard, who steals the Krabby Patty secret formula using a magical book that makes any text written upon it come true. SpongeBob and his friends must travel to the surface to confront Burger-Beard and get the formula back.",
+            "2008 FA Cup Final\nThe 2008 FA Cup Final was a football match held at Wembley Stadium on 17 May 2008 and was the final match of the 2007\u201308 FA Cup competition. The match was the 127th FA Cup Final, and the second to be held at the new Wembley Stadium since its redevelopment. The match was contested by Portsmouth and Cardiff City, with Portsmouth winning 1\u20130. This was the first time that the two sides have ever met in the competition. Both teams were aiming to win the FA Cup for the second time, Cardiff having won it in 1927 and Portsmouth in 1939. Had Cardiff won, they would have been the first club from outside the top division of English football to have won the competition since West Ham United in 1980. The match had an attendance of 89,874, a record which still stands as the largest ever for an FA Cup Final at the new Wembley Stadium."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 8,
+        "question": "Are Wolfgang Becker and Paul Andrew Williams both film directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Wolfgang Becker, specifically focusing on his occupation or notable roles.",
+                "output": "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed the 1958 West German drama film \"I Was All His\" and is notable for his contributions to the film industry.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Paul Andrew Williams, specifically focusing on his occupation or notable roles.",
+                "output": "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\"",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Wolfgang Becker is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the retrieved information, Wolfgang Becker is indeed a film director. This is evident from his work on \"Good Bye Lenin!\" and \"I Was All His,\" as well as his notable contributions to the film industry. Therefore, it can be concluded that Wolfgang Becker is a film director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed the 1958 West German drama film \"I Was All His\" and is notable for his contributions to the film industry."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Paul Andrew Williams is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the information retrieved, Paul Andrew Williams is indeed a film director. He is known for his work on several films and has received recognition for his directing, including winning an award at the Edinburgh International Film Festival. Therefore, it can be concluded that Paul Andrew Williams is a film director.",
+                "upstream": [
+                    [
+                        "2",
+                        "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\""
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Analyze the results of both analyses to conclude if both Wolfgang Becker and Paul Andrew Williams are film directors.",
+                "output": "Based on the results of both analyses, it can be concluded that both Wolfgang Becker and Paul Andrew Williams are indeed film directors. This is supported by their notable contributions to the film industry, their work on multiple films, and the recognition they have received for their directing. Therefore, both Wolfgang Becker and Paul Andrew Williams can be confirmed as film directors.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, Wolfgang Becker is indeed a film director. This is evident from his work on \"Good Bye Lenin!\" and \"I Was All His,\" as well as his notable contributions to the film industry. Therefore, it can be concluded that Wolfgang Becker is a film director."
+                    ],
+                    [
+                        "4",
+                        "Based on the information retrieved, Paul Andrew Williams is indeed a film director. He is known for his work on several films and has received recognition for his directing, including winning an award at the Edinburgh International Film Festival. Therefore, it can be concluded that Paul Andrew Williams is a film director."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Wolfgang Becker\nWolfgang Becker (born 22 June 1954) is a German film director and writer. He is best known to the international audience for his work \"Good Bye Lenin!\" (2003).",
+            "Paul Andrew Williams\nPaul Andrew Williams is a British film writer and director, born in Portsmouth, England in 1973. He won the New Director's Award for his film London to Brighton in the 2006 Edinburgh International Film Festival.",
+            "I Was All His\nI Was All His (German: Ich war ihm h\u00f6rig) is a 1958 West German drama film directed by Wolfgang Becker and starring Barbara R\u00fctting, Carlos Thompson and Wolfgang Preiss.",
+            "Paul Williams (Northern Ireland footballer)\nPaul Andrew Williams (born 8 September 1965) is a retired Northern Irish footballer. He won one cap for the Northern Ireland national football team. He played as a forward.",
+            "London to Brighton (disambiguation)\nLondon to Brighton is a 2006 film by Paul Andrew Williams.",
+            "London to Brighton\nLondon to Brighton is a 2006 British film written and directed by Paul Andrew Williams.",
+            "The Cottage (film)\nThe Cottage is a 2008 British darkly comic horror film, written and directed by Paul Andrew Williams.",
+            "Cherry Tree Lane\nCherry Tree Lane is a 2010 British urban dramatic real-time horror-thriller film, written and directed by Paul Andrew Williams.",
+            "The Eichmann Show\nThe Eichmann Show is a 2015 British BBC TV drama film produced by Laurence Bowen and Ken Marshall for Feelgood Fiction and directed by Paul Andrew Williams.",
+            "Song for Marion\nSong for Marion (released in the United States as Unfinished Song) is a 2012 British-German comedy-drama film written and directed by Paul Andrew Williams and starring Terence Stamp, Gemma Arterton, Christopher Eccleston and Vanessa Redgrave.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Crab trap\nCrab traps are used to bait, lure, and catch crabs for commercial or recreational use. Crabbing or crab fishing is the recreational hobby and commercial occupation of fishing for crabs. Different types of traps are used depending on the type of crab being fished for, geographic location, and personal preference.",
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "Bjarte Hjelmeland\nBjarte Hjelmeland (born 24 February 1970) is a Norwegian actor and theatre director. He was born in Bergen. He made his stage debut in 1991 at Oslo Nye Teater, and also had notable roles at the National Theatre, Rogaland Teater, Torshovteatret, Den Nationale Scene and Chateau Neuf. In 2008 he was hired as director of Den Nationale Scene.",
+            "Domestic Disturbance\nDomestic Disturbance is a 2001 American psychological thriller film directed by Harold Becker (his last film to date) and starring John Travolta, Vince Vaughn, Teri Polo, Steve Buscemi, and Matt O'Leary.",
+            "The Bone Man\nThe Bone Man (German: Der Knochenmann) is a 2009 Austrian film directed by Wolfgang Murnberger. The script is based on the novel \"Der Knochenmann\" by Austrian author Wolf Haas."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 9,
+        "question": "Are Wolfgang Becker and Paul Andrew Williams both film directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Wolfgang Becker, specifically focusing on his occupation or notable roles.",
+                "output": "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed the 1958 West German drama film \"I Was All His\" and has had notable roles in the film industry.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Paul Andrew Williams, specifically focusing on his occupation or notable roles.",
+                "output": "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\"",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Wolfgang Becker is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the information retrieved, Wolfgang Becker is indeed a film director. He is best known for his work on \"Good Bye Lenin!\" and has also directed other films. Therefore, it can be concluded that Wolfgang Becker is a film director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed the 1958 West German drama film \"I Was All His\" and has had notable roles in the film industry."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Paul Andrew Williams is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the information retrieved, Paul Andrew Williams is indeed a film director, as he is known for his work on several films and has received recognition for his directing work, including winning an award for his directorial debut \"London to Brighton.\"",
+                "upstream": [
+                    [
+                        "2",
+                        "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\""
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Analyze the results of both analyses to conclude if both Wolfgang Becker and Paul Andrew Williams are film directors.",
+                "output": "Based on the results of both analyses, it can be concluded that both Wolfgang Becker and Paul Andrew Williams are indeed film directors. Wolfgang Becker is known for his work on \"Good Bye Lenin!\" and has directed other films, while Paul Andrew Williams has received recognition for his directing work, including winning an award for his directorial debut \"London to Brighton.\" Therefore, both individuals meet the criteria of being film directors.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the information retrieved, Wolfgang Becker is indeed a film director. He is best known for his work on \"Good Bye Lenin!\" and has also directed other films. Therefore, it can be concluded that Wolfgang Becker is a film director."
+                    ],
+                    [
+                        "4",
+                        "Based on the information retrieved, Paul Andrew Williams is indeed a film director, as he is known for his work on several films and has received recognition for his directing work, including winning an award for his directorial debut \"London to Brighton.\""
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Wolfgang Becker\nWolfgang Becker (born 22 June 1954) is a German film director and writer. He is best known to the international audience for his work \"Good Bye Lenin!\" (2003).",
+            "Paul Andrew Williams\nPaul Andrew Williams is a British film writer and director, born in Portsmouth, England in 1973. He won the New Director's Award for his film London to Brighton in the 2006 Edinburgh International Film Festival.",
+            "I Was All His\nI Was All His (German: Ich war ihm h\u00f6rig) is a 1958 West German drama film directed by Wolfgang Becker and starring Barbara R\u00fctting, Carlos Thompson and Wolfgang Preiss.",
+            "Paul Williams (Northern Ireland footballer)\nPaul Andrew Williams (born 8 September 1965) is a retired Northern Irish footballer. He won one cap for the Northern Ireland national football team. He played as a forward.",
+            "London to Brighton (disambiguation)\nLondon to Brighton is a 2006 film by Paul Andrew Williams.",
+            "London to Brighton\nLondon to Brighton is a 2006 British film written and directed by Paul Andrew Williams.",
+            "The Cottage (film)\nThe Cottage is a 2008 British darkly comic horror film, written and directed by Paul Andrew Williams.",
+            "Cherry Tree Lane\nCherry Tree Lane is a 2010 British urban dramatic real-time horror-thriller film, written and directed by Paul Andrew Williams.",
+            "The Eichmann Show\nThe Eichmann Show is a 2015 British BBC TV drama film produced by Laurence Bowen and Ken Marshall for Feelgood Fiction and directed by Paul Andrew Williams.",
+            "Song for Marion\nSong for Marion (released in the United States as Unfinished Song) is a 2012 British-German comedy-drama film written and directed by Paul Andrew Williams and starring Terence Stamp, Gemma Arterton, Christopher Eccleston and Vanessa Redgrave.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Crab trap\nCrab traps are used to bait, lure, and catch crabs for commercial or recreational use. Crabbing or crab fishing is the recreational hobby and commercial occupation of fishing for crabs. Different types of traps are used depending on the type of crab being fished for, geographic location, and personal preference.",
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "Bjarte Hjelmeland\nBjarte Hjelmeland (born 24 February 1970) is a Norwegian actor and theatre director. He was born in Bergen. He made his stage debut in 1991 at Oslo Nye Teater, and also had notable roles at the National Theatre, Rogaland Teater, Torshovteatret, Den Nationale Scene and Chateau Neuf. In 2008 he was hired as director of Den Nationale Scene.",
+            "Domestic Disturbance\nDomestic Disturbance is a 2001 American psychological thriller film directed by Harold Becker (his last film to date) and starring John Travolta, Vince Vaughn, Teri Polo, Steve Buscemi, and Matt O'Leary.",
+            "The Bone Man\nThe Bone Man (German: Der Knochenmann) is a 2009 Austrian film directed by Wolfgang Murnberger. The script is based on the novel \"Der Knochenmann\" by Austrian author Wolf Haas."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 10,
+        "question": "Are Wolfgang Becker and Paul Andrew Williams both film directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about Wolfgang Becker, specifically focusing on his occupation or notable roles.",
+                "output": "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed films such as \"I Was All His\" and has made notable contributions to the film industry.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about Paul Andrew Williams, specifically focusing on his occupation or notable roles.",
+                "output": "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\"",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Wolfgang Becker is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the information retrieved, Wolfgang Becker is indeed a film director. This is evident from his notable work on \"Good Bye Lenin!\" and other films, as well as his contributions to the film industry. Therefore, it can be concluded that Wolfgang Becker is a film director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Wolfgang Becker is a German film director and writer, best known for his work on \"Good Bye Lenin!\" (2003). He has also directed films such as \"I Was All His\" and has made notable contributions to the film industry."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Paul Andrew Williams is a film director by analyzing the retrieved information about his occupation and roles.",
+                "output": "Based on the information retrieved, Paul Andrew Williams is indeed a film director, as he is known for his work on several films and has received recognition for his directing work, including winning an award for his directorial debut \"London to Brighton.\"",
+                "upstream": [
+                    [
+                        "2",
+                        "Paul Andrew Williams is a British film writer and director, known for his work on films such as \"London to Brighton,\" \"The Cottage,\" \"Cherry Tree Lane,\" \"The Eichmann Show,\" and \"Song for Marion.\" He has received recognition for his work, including winning the New Director's Award at the 2006 Edinburgh International Film Festival for \"London to Brighton.\""
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Analyze the results of both analyses to conclude if both Wolfgang Becker and Paul Andrew Williams are film directors.",
+                "output": "Based on the results of both analyses, it can be concluded that both Wolfgang Becker and Paul Andrew Williams are indeed film directors. Wolfgang Becker has notable work on \"Good Bye Lenin!\" and other films, and Paul Andrew Williams is known for his work on several films and has received recognition for his directing work. Therefore, both individuals meet the criteria of being film directors.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the information retrieved, Wolfgang Becker is indeed a film director. This is evident from his notable work on \"Good Bye Lenin!\" and other films, as well as his contributions to the film industry. Therefore, it can be concluded that Wolfgang Becker is a film director."
+                    ],
+                    [
+                        "4",
+                        "Based on the information retrieved, Paul Andrew Williams is indeed a film director, as he is known for his work on several films and has received recognition for his directing work, including winning an award for his directorial debut \"London to Brighton.\""
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Wolfgang Becker\nWolfgang Becker (born 22 June 1954) is a German film director and writer. He is best known to the international audience for his work \"Good Bye Lenin!\" (2003).",
+            "I Was All His\nI Was All His (German: Ich war ihm h\u00f6rig) is a 1958 West German drama film directed by Wolfgang Becker and starring Barbara R\u00fctting, Carlos Thompson and Wolfgang Preiss.",
+            "Paul Andrew Williams\nPaul Andrew Williams is a British film writer and director, born in Portsmouth, England in 1973. He won the New Director's Award for his film London to Brighton in the 2006 Edinburgh International Film Festival.",
+            "Paul Williams (Northern Ireland footballer)\nPaul Andrew Williams (born 8 September 1965) is a retired Northern Irish footballer. He won one cap for the Northern Ireland national football team. He played as a forward.",
+            "London to Brighton (disambiguation)\nLondon to Brighton is a 2006 film by Paul Andrew Williams.",
+            "London to Brighton\nLondon to Brighton is a 2006 British film written and directed by Paul Andrew Williams.",
+            "The Cottage (film)\nThe Cottage is a 2008 British darkly comic horror film, written and directed by Paul Andrew Williams.",
+            "Cherry Tree Lane\nCherry Tree Lane is a 2010 British urban dramatic real-time horror-thriller film, written and directed by Paul Andrew Williams.",
+            "The Eichmann Show\nThe Eichmann Show is a 2015 British BBC TV drama film produced by Laurence Bowen and Ken Marshall for Feelgood Fiction and directed by Paul Andrew Williams.",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "Song for Marion\nSong for Marion (released in the United States as Unfinished Song) is a 2012 British-German comedy-drama film written and directed by Paul Andrew Williams and starring Terence Stamp, Gemma Arterton, Christopher Eccleston and Vanessa Redgrave.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "The Nerdist Podcast\nThe Nerdist Podcast is a weekly interview show \"about what it really means to be a nerd\" hosted by Chris Hardwick, usually accompanied by Jonah Ray and Matt Mira. The audio podcasts are typically an hour in length and include conversations with notable comedians or entertainers, sometimes at their own home. The show launched February 8, 2010. It serves as the flagship podcast for Nerdist Industries, which was founded in 2012 after the success of \"The Nerdist Podcast\". The show's theme song is \"Jetpack Blues, Sunset Hues\" by the chiptune band Anamanaguchi.",
+            "Ben Falcone\nBenjamin Scott Falcone (born August 25, 1973) is an American actor, comedian and filmmaker. He is married to actress Melissa McCarthy, with whom he has two children. He appeared in small roles of McCarthy's films \"Bridesmaids\", \"Identity Thief\", and \"The Heat\", and co-starred in \"What to Expect When You're Expecting\" and \"Enough Said\".",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko."
+        ],
+        "recall": 0.8888888888888888
+    }
+]

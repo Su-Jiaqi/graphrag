@@ -1,0 +1,625 @@
+[
+    {
+        "question": "Which singer of the Bee Gees sung a middle part of a song in which the majority was sung by Barry Gibb?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine which songs by the Bee Gees have a majority of the vocals sung by Barry Gibb.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the Bee Gees songs with middle parts sung by a member other than Barry Gibb.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine the results to find a match where a song has the majority sung by Barry Gibb and a middle part sung by another Bee Gees member.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which Bee Gees member sings the middle part for the matched song.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The question involves identifying a song where Barry Gibb sings most of the vocals and another singer from the Bee Gees handles a middle part. The execution graph first retrieves songs performed mainly by Barry Gibb, then checks for any sections sung by other members. These results are combined to find a specific song matching the criteria, and finally, the singer responsible for the middle part is identified."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "You Wouldn't Know (Bee Gees song)\n\"You Wouldn't Know\" is a song written by Barry Gibb which was recorded by the Bee Gees and released as the B-side of their version of \"Every Day I Have to Cry\" and later included on the album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\" (1965). The album of the same name was released in Europe by Tring Records and features the Bee Gees songs from 1963-1966.",
+            "The Bee Gees Sing and Play 14 Barry Gibb Songs\nThe Bee Gees Sing and Play 14 Barry Gibb Songs is the debut studio album by the English pop band the Bee Gees. (1967's \"Bee Gees' 1st\" was the \"international\" debut album). Released under the artist title \"Barry Gibb & the Bee Gee's\" \"[sic]\", it was released in November 1965 on the Australian Leedon label. It is a compilation of most of the Gibb brothers' singles that had been released over the previous three years in Australia, which accounts for the many different styles of music on it.",
+            "I Was a Lover, a Leader of Men\n\"I Was a Lover, a Leader of Men\" is a single released in November 1965, recorded by the Bee Gees, written by Barry Gibb. The song was backed with \"And the Children Laughing\". However, it was released in the Philippines in January 1966. It is also the first track of the Bee Gees' first album, The Bee Gees Sing and Play 14 Barry Gibb Songs. This song won Barry a song-writing award.",
+            "Timber! (Bee Gees song)\n\"Timber!\" is a song recorded by the Bee Gees, written by Barry Gibb. The song was released in Australia as their second single in July 1963, backed with \"Take Hold of That Star\". It was later included on the group's first album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\".",
+            "I Want Home\n\"I Want Home\" is a song by the English rock band Bee Gees, written by Barry Gibb and released as a single in Australia in early 1966, backed with \"Cherry Red\". Their last single on Leedon had not been a hit, so the credit \"Barry Gibb and the Bee Gees\" used on the last several discs now reverted to simply \"Bee Gees\". Neither song appeared on any Bee Gees album until the 1967 compilation album, \"Turn Around, Look At Us\", but both were featured on \"Brilliant From Birth\" the 1998 anthology of the group's Australian recordings.",
+            "Tomorrow Tomorrow (Bee Gees song)\n\"Tomorrow Tomorrow\" is a song by the Bee Gees written by Barry and Maurice Gibb. The song was originally intended to be recorded by Joe Cocker. It was the first Bee Gees single released after Robin Gibb had quit the group which was now down to a trio featuring Barry Gibb, Maurice Gibb, and drummer Colin Petersen.",
+            "Cucumber Castle\nCucumber Castle is the seventh studio album by the Bee Gees, released in April 1970. It was produced by Barry Gibb, Maurice Gibb, and Robert Stigwood. It consists of songs from their television special of the same name, which was named after a song on their 1967 album \"Bee Gees' 1st\". \"Cucumber Castle\" was the only Bee Gees album not to feature any recorded contributions from Robin Gibb, as he had left the group before the album was recorded. (He did receive co-composer credit on one track, which was written before his departure.)",
+            "I Laugh in Your Face\n\"I Laugh in Your Face\" is a ballad performed by the Bee Gees, written by Barry, Robin & Maurice Gibb and released in March 1969 on the album \"Odessa\". Most of the vocal solos are performed by Barry Gibb except for a little part in the middle of the song sung by Robin Gibb.",
+            "The Kid's No Good\nThe Kid's No Good was to have been Barry Gibb's debut solo album following his departure from the Bee Gees in December 1969. There was no official title given to the album at the time. The line \"the kid's no good\", which the album is commonly titled on several bootleg releases, is also featured in the Bee Gees song \"Come Home Johnny Bridie\" on the 1973 album \"Life in a Tin Can\". The album features orchestral arrangements by Bill Shepherd who performed the same role for the Bee Gees from 1965 to 1972 (Robin and Maurice Gibb's solo recordings were done with different arrangers).",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Only What I Feel\nOnly What I Feel is the sixth album, and the first since signing with Epic Records in 1992, recorded by country music artist Patty Loveless. It was released in 1993. Four tracks from the album made in into the Billboard top 20 country singles charts, including the #1 \"Blame It on Your Heart\" and the #3 \"How Can I Help You Say Goodbye,\" later covered by Laura Branigan. The #6 hit \"You Will\" was originally recorded by Anne Murray as the title track of her 1990 album. The only single to not make the top ten was the #20 hit \"Nothin' But The Wheel\", considered by many Patty fans to be one of her finest works. The album peaked at #9, and was certified platinum for shipments of over 1,000,000 copies in the U.S. This album was Loveless' first album since she had surgery to repair burst nodes on her vocal cords in 1992.",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\".",
+            "Pattern of My Life\n\"Pattern of My Life\" is the second and last single released from Annie Lennox's first greatest hits album \"The Annie Lennox Collection\". The song is a cover version of \"Closer Now\" by Keane which was a b-side to their debut single \"Call Me What You Like\". Lennox retitled the song, referring to a lyric in the song. This single was released on 24 May 2009 in the United Kingdom.",
+            "Job sharing\nJob sharing or work sharing is an employment arrangement where typically two people are retained on a part-time or reduced-time basis to perform a job normally fulfilled by one person working full-time. Since all positions are shared thus leads to a net reduction in per-employee income. The people sharing the job work as a team to complete the job task and are equally responsible for the job workload. Compensation is apportioned between the workers, Working hours, pay and holidays are divided equally. The Pay As You Go system helps make deductions for national insurance and superannuations are made as a straightforward percentage."
+        ],
+        "thoughts": [
+            "The songs by the Bee Gees with a majority of the vocals sung by Barry Gibb are:\n- You Wouldn't Know\n- I Was a Lover, a Leader of Men\n- Timber!\n- I Want Home\n- Tomorrow Tomorrow",
+            "Bee Gees songs with middle parts sung by a member other than Barry Gibb:\n- \"How Can You Mend a Broken Heart\" - sung by Robin Gibb\n- \"Nights on Broadway\" - sung by Robin Gibb\n- \"Fanny (Be Tender with My Love)\" - sung by Maurice Gibb",
+            "Based on the results from the upstream tasks, the song \"Nights on Broadway\" by the Bee Gees meets the criteria, as it is sung by Barry Gibb for the majority of the song, with a middle part sung by Robin Gibb.",
+            "For the song \"I Laugh in Your Face,\" most of the vocal solos are performed by Barry Gibb, except for a little part in the middle of the song sung by Robin Gibb."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which singer of the Bee Gees sung a middle part of a song in which the majority was sung by Barry Gibb?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify songs by the Bee Gees where Barry Gibb is the primary singer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "For each identified song, determine the parts sung by Barry Gibb.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the singer of the middle part of each song identified in step 2.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which singer is singing the middle part of a song in which the majority is sung by Barry Gibb.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins by identifying songs by the Bee Gees where Barry Gibb is the primary singer. Once these songs are identified, the next step is to retrieve details on which parts are sung by Barry Gibb. The following step is to determine who sings the middle parts of these songs. Finally, the reasoning node synthesizes this information to identify the singer of a middle part in a song primarily sung by Barry Gibb."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "The Bee Gees Sing and Play 14 Barry Gibb Songs\nThe Bee Gees Sing and Play 14 Barry Gibb Songs is the debut studio album by the English pop band the Bee Gees. (1967's \"Bee Gees' 1st\" was the \"international\" debut album). Released under the artist title \"Barry Gibb & the Bee Gee's\" \"[sic]\", it was released in November 1965 on the Australian Leedon label. It is a compilation of most of the Gibb brothers' singles that had been released over the previous three years in Australia, which accounts for the many different styles of music on it.",
+            "You Wouldn't Know (Bee Gees song)\n\"You Wouldn't Know\" is a song written by Barry Gibb which was recorded by the Bee Gees and released as the B-side of their version of \"Every Day I Have to Cry\" and later included on the album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\" (1965). The album of the same name was released in Europe by Tring Records and features the Bee Gees songs from 1963-1966.",
+            "Timber! (Bee Gees song)\n\"Timber!\" is a song recorded by the Bee Gees, written by Barry Gibb. The song was released in Australia as their second single in July 1963, backed with \"Take Hold of That Star\". It was later included on the group's first album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\".",
+            "I Was a Lover, a Leader of Men\n\"I Was a Lover, a Leader of Men\" is a single released in November 1965, recorded by the Bee Gees, written by Barry Gibb. The song was backed with \"And the Children Laughing\". However, it was released in the Philippines in January 1966. It is also the first track of the Bee Gees' first album, The Bee Gees Sing and Play 14 Barry Gibb Songs. This song won Barry a song-writing award.",
+            "Tomorrow Tomorrow (Bee Gees song)\n\"Tomorrow Tomorrow\" is a song by the Bee Gees written by Barry and Maurice Gibb. The song was originally intended to be recorded by Joe Cocker. It was the first Bee Gees single released after Robin Gibb had quit the group which was now down to a trio featuring Barry Gibb, Maurice Gibb, and drummer Colin Petersen.",
+            "I Laugh in Your Face\n\"I Laugh in Your Face\" is a ballad performed by the Bee Gees, written by Barry, Robin & Maurice Gibb and released in March 1969 on the album \"Odessa\". Most of the vocal solos are performed by Barry Gibb except for a little part in the middle of the song sung by Robin Gibb.",
+            "Cucumber Castle\nCucumber Castle is the seventh studio album by the Bee Gees, released in April 1970. It was produced by Barry Gibb, Maurice Gibb, and Robert Stigwood. It consists of songs from their television special of the same name, which was named after a song on their 1967 album \"Bee Gees' 1st\". \"Cucumber Castle\" was the only Bee Gees album not to feature any recorded contributions from Robin Gibb, as he had left the group before the album was recorded. (He did receive co-composer credit on one track, which was written before his departure.)",
+            "I Want Home\n\"I Want Home\" is a song by the English rock band Bee Gees, written by Barry Gibb and released as a single in Australia in early 1966, backed with \"Cherry Red\". Their last single on Leedon had not been a hit, so the credit \"Barry Gibb and the Bee Gees\" used on the last several discs now reverted to simply \"Bee Gees\". Neither song appeared on any Bee Gees album until the 1967 compilation album, \"Turn Around, Look At Us\", but both were featured on \"Brilliant From Birth\" the 1998 anthology of the group's Australian recordings.",
+            "Step by Step (Annie Lennox song)\n\"Step by Step\" is a song written and originally recorded by singer Annie Lennox, later a cross over pop hit by R&B/pop singer Whitney Houston. The song served as the second single from Houston's 1996 soundtrack album, \"The Preacher's Wife\". Lennox's recording originally appeared as the B-side to her 1992 single \"Precious\" Largely, Houston's version replaces Lennox's verses with new lyrics and omits portions from the bridge as well. Annie Lennox also provides background vocals in Houston's rendition.",
+            "Job sharing\nJob sharing or work sharing is an employment arrangement where typically two people are retained on a part-time or reduced-time basis to perform a job normally fulfilled by one person working full-time. Since all positions are shared thus leads to a net reduction in per-employee income. The people sharing the job work as a team to complete the job task and are equally responsible for the job workload. Compensation is apportioned between the workers, Working hours, pay and holidays are divided equally. The Pay As You Go system helps make deductions for national insurance and superannuations are made as a straightforward percentage.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Step Back (album)\nStep Back is an album by blues guitarist and singer Johnny Winter. It features performances by a number of guest musicians, including Eric Clapton, Dr. John, Billy Gibbons from ZZ Top, Joe Perry from Aerosmith, Leslie West from Mountain, and Brian Setzer from the Stray Cats. It was released by Megaforce Records on September 2, 2014.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Mursm\u00e4cka\nMursm\u00e4cka, also called \"bruksm\u00e4cka\" or only \"sm\u00e4cka\", was an historical profession for women in Sweden. A mursm\u00e4cka was a female construction worker with the task to hand mortar during construction work. The profession is recorded from at least 1691 (though it is not confirmed by name until the 1830s) and discontinued in 1922. This was a very hard but common work for a poor uneducated women during the 19th century, particularly in Stockholm. In July 1888, the Mursm\u00e4cka of Stockholm performed a great strike action which attracted considerable attention in contemporary Sweden.",
+            "Chess problem\nA chess problem, also called a chess composition, is a puzzle set by somebody using chess pieces on a chess board, that presents the solver with a particular task to be achieved. For instance, a position might be given with the instruction that White is to move first, and checkmate Black in two moves against any possible defense. A person who creates such problems is known as a composer. There is a good deal of specialized jargon used in connection with chess problems; see glossary of chess problems for a list.",
+            "The Middle of Starting Over\n\"The Middle of Starting Over\" is a song performed by American singer Sabrina Carpenter, taken from her debut EP, \"Can't Blame a Girl for Trying\" (2014) and the track appears at her debut studio album, \"Eyes Wide Open\", released a year later. It was released by Hollywood Records as the album's second single. The song was produced by Brian Malouf and co-produced by Jim McGorman with Robb Vallier, the last two wrote the song with Michelle Moyer. Musically, \"The Middle of Starting Over\" is an midtempo teen pop song which relies on country pop and folk pop. The song's lyrics speak of moving on, starting all over again and forgetting the mistakes. The song impacted at Radio Disney on July 2014, and was released officially on August 19, 2014.",
+            "The Five Obstructions\nThe Five Obstructions is a 2003 Danish documentary film directed by Lars von Trier and J\u00f8rgen Leth. The film is conceived as a documentary, but incorporates lengthy sections of experimental films produced by the filmmakers. The premise is that von Trier has created a challenge for his friend and mentor, J\u00f8rgen Leth, another renowned filmmaker. von Trier's favorite film is Leth's \"The Perfect Human\" (1967), and von Trier gives Leth the task of remaking \"The Perfect Human\" five times, each time with a different \"obstruction\" (or obstacle) imposed by von Trier.",
+            "Jaws (band)\nJaws are an English indie pop band formed in Birmingham, England in 2012 after singer Connor Schofield had posted a demo (Cameron) online that received enough positive feedback to encourage him to start a band with friends from Halesowen College. They have often been identified as part of the Digbeth-based B-Town scene and hotly tipped as ones to watch.",
+            "American Lesion\nAmerican Lesion is a solo album by Greg Graffin, the lead singer of the punk band Bad Religion. Like the album \"Into the Unknown\", this album is a massive departure for Graffin, whose songs generally revolve around loud guitars and harmonies. \"American Lesion\" for the most part features Graffin's voice alone, and each song features acoustic guitar or piano rather than electric guitars. The song \"Cease\" (track 6 on this album) is a slow piano ballad that is also featured on Bad Religion's album \"The Gray Race\" as a fast-paced punk rock song. The album was re-released by Epitaph Records on September 15, 2008.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Blue Origin\nBlue Origin is an American privately funded aerospace manufacturer and spaceflight services company set up by Amazon.com founder Jeff Bezos with its headquarters in Kent, Washington. The company is developing technologies to enable private human access to space with the goal to dramatically lower costs and increase reliability. Blue Origin is employing an incremental approach from suborbital to orbital flight, with each developmental step building on its prior work. The company motto is \"\"Gradatim Ferociter\"\", Latin for \"Step by Step, Ferociously\". Blue Origin is developing a variety of technologies, with a focus on rocket-powered Vertical Takeoff and Vertical Landing (VTVL) vehicles for access to suborbital and orbital space. The company's name refers to the blue planet, Earth, as the point of origin.",
+            "The Monster (song)\n\"The Monster\" is a song by American rapper Eminem, featuring guest vocals from Barbadian singer Rihanna, taken from Eminem's album \"The Marshall Mathers LP 2\" (2013). The song was written by Eminem, Jon Bellion, and Bebe Rexha, with production handled by Frequency. \"The Monster\" marks the fourth collaboration between Eminem and Rihanna, following \"Love the Way You Lie\", its sequel \"Love the Way You Lie (Part II)\" (2010), and \"Numb\" (2012). \"The Monster\" was released on October 29, 2013, as the fourth single from the album. The song's lyrics present Rihanna coming to grips with her inner demons, while Eminem ponders the negative effects of his fame."
+        ],
+        "thoughts": [
+            "Songs by the Bee Gees where Barry Gibb is the primary singer include \"How Deep Is Your Love\", \"To Love Somebody\", \"I Started a Joke\", \"Words\", \"Run to Me\", \"I've Gotta Get a Message to You\", \"Lonely Days\", \"Massachusetts\", \"First of May\", and \"Don't Forget to Remember\".",
+            "The parts sung by Barry Gibb in the identified songs are as follows:\n\n- \"You Wouldn't Know\": The song was written by Barry Gibb and recorded by the Bee Gees, so it can be assumed that Barry Gibb sang the lead vocals.\n- \"Timber!\": As the song was written by Barry Gibb and included on the album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\", it can be assumed that Barry Gibb sang the lead vocals.\n- \"I Was a Lover, a Leader of Men\": This song was written by Barry Gibb and is the first track of the album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\", so it can be assumed that Barry Gibb sang the lead vocals.\n- \"Tomorrow Tomorrow\": The song was written by Barry and Maurice Gibb, and as it was released after Robin Gibb had quit the group, it can be assumed that Barry Gibb sang the lead vocals.\n- \"I Laugh in Your Face\": Most of the vocal solos are performed by Barry Gibb, except for a little part in the middle of the song sung by Robin Gibb.\n- \"Cucumber Castle\": As this album was produced by Barry Gibb and did not feature any recorded contributions from Robin Gibb, it can be assumed that Barry Gibb sang the lead vocals on the songs included in the album.\n- \"I Want Home\": The song was written by Barry Gibb, and as it was released as a single by the Bee Gees, it can be assumed that Barry Gibb sang the lead vocals.",
+            "Step by Step (Annie Lennox song) - Annie Lennox\nStep Back (album) - Johnny Winter\nThe Middle of Starting Over - Sabrina Carpenter\nAmerican Lesion - Greg Graffin\nI Laugh in Your Face - Bee Gees",
+            "The singer singing the middle part of the song in which the majority is sung by Barry Gibb is Annie Lennox."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which singer of the Bee Gees sung a middle part of a song in which the majority was sung by Barry Gibb?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify songs performed by the Bee Gees where Barry Gibb is the lead singer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "For each identified song with Barry Gibb as lead, determine if there are significant solo parts by other Bee Gees members.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the list of Bee Gees members and their respective vocal contributions in songs.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Cross-reference the solo parts identified in step 2 with the vocal contributions data to find which singer sung a middle part of such a song.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks down the question into a series of logical steps. It begins by identifying songs by the Bee Gees where Barry Gibb is the primary singer. The task then involves checking if there are other significant parts sung by different members. It retrieves data about vocal roles of Bee Gees members to help identify who sung particular parts within those songs. Finally, it cross-references these findings to answer the original question."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "The Bee Gees Sing and Play 14 Barry Gibb Songs\nThe Bee Gees Sing and Play 14 Barry Gibb Songs is the debut studio album by the English pop band the Bee Gees. (1967's \"Bee Gees' 1st\" was the \"international\" debut album). Released under the artist title \"Barry Gibb & the Bee Gee's\" \"[sic]\", it was released in November 1965 on the Australian Leedon label. It is a compilation of most of the Gibb brothers' singles that had been released over the previous three years in Australia, which accounts for the many different styles of music on it.",
+            "You Wouldn't Know (Bee Gees song)\n\"You Wouldn't Know\" is a song written by Barry Gibb which was recorded by the Bee Gees and released as the B-side of their version of \"Every Day I Have to Cry\" and later included on the album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\" (1965). The album of the same name was released in Europe by Tring Records and features the Bee Gees songs from 1963-1966.",
+            "Timber! (Bee Gees song)\n\"Timber!\" is a song recorded by the Bee Gees, written by Barry Gibb. The song was released in Australia as their second single in July 1963, backed with \"Take Hold of That Star\". It was later included on the group's first album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\".",
+            "I Laugh in Your Face\n\"I Laugh in Your Face\" is a ballad performed by the Bee Gees, written by Barry, Robin & Maurice Gibb and released in March 1969 on the album \"Odessa\". Most of the vocal solos are performed by Barry Gibb except for a little part in the middle of the song sung by Robin Gibb.",
+            "I Was a Lover, a Leader of Men\n\"I Was a Lover, a Leader of Men\" is a single released in November 1965, recorded by the Bee Gees, written by Barry Gibb. The song was backed with \"And the Children Laughing\". However, it was released in the Philippines in January 1966. It is also the first track of the Bee Gees' first album, The Bee Gees Sing and Play 14 Barry Gibb Songs. This song won Barry a song-writing award.",
+            "Tomorrow Tomorrow (Bee Gees song)\n\"Tomorrow Tomorrow\" is a song by the Bee Gees written by Barry and Maurice Gibb. The song was originally intended to be recorded by Joe Cocker. It was the first Bee Gees single released after Robin Gibb had quit the group which was now down to a trio featuring Barry Gibb, Maurice Gibb, and drummer Colin Petersen.",
+            "Cucumber Castle\nCucumber Castle is the seventh studio album by the Bee Gees, released in April 1970. It was produced by Barry Gibb, Maurice Gibb, and Robert Stigwood. It consists of songs from their television special of the same name, which was named after a song on their 1967 album \"Bee Gees' 1st\". \"Cucumber Castle\" was the only Bee Gees album not to feature any recorded contributions from Robin Gibb, as he had left the group before the album was recorded. (He did receive co-composer credit on one track, which was written before his departure.)",
+            "I Want Home\n\"I Want Home\" is a song by the English rock band Bee Gees, written by Barry Gibb and released as a single in Australia in early 1966, backed with \"Cherry Red\". Their last single on Leedon had not been a hit, so the credit \"Barry Gibb and the Bee Gees\" used on the last several discs now reverted to simply \"Bee Gees\". Neither song appeared on any Bee Gees album until the 1967 compilation album, \"Turn Around, Look At Us\", but both were featured on \"Brilliant From Birth\" the 1998 anthology of the group's Australian recordings."
+        ],
+        "thoughts": [
+            "Songs performed by the Bee Gees where Barry Gibb is the lead singer include:\n- You Wouldn't Know\n- Timber!\n- I Was a Lover, a Leader of Men\n- Tomorrow Tomorrow\n- Cucumber Castle\n- I Want Home",
+            "Based on the information provided, it is not clear if there are significant solo parts by other Bee Gees members in the identified songs where Barry Gibb is the lead singer. Further research or listening to the songs is needed to determine if there are significant solo parts by other members.",
+            "Bee Gees Members and Their Vocal Contributions in Songs:\n\n- Barry Gibb: Vocals on \"You Wouldn't Know\", \"Timber!\", \"I Was a Lover, a Leader of Men\", \"I Want Home\", \"I Laugh in Your Face\", \"Tomorrow Tomorrow\"\n- Maurice Gibb: Vocals on \"I Laugh in Your Face\", \"Tomorrow Tomorrow\"\n- Robin Gibb: Vocals on \"I Laugh in Your Face\"",
+            "Based on the vocal contributions data, it is clear that Maurice Gibb and Robin Gibb both contributed vocals to the song \"I Laugh in Your Face\" and \"Tomorrow Tomorrow\". Therefore, it is likely that one of them sung the middle part of the song. Further research or listening to the songs is needed to determine which singer specifically sung the middle part."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which singer of the Bee Gees sung a middle part of a song in which the majority was sung by Barry Gibb?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify songs predominantly sung by Barry Gibb in the Bee Gees discography.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on the vocal distribution in Bee Gees' songs, focusing on middle sections sung by other members.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Cross-reference the list of songs from Node 1 with information from Node 2 to find which singer performs the middle part in those songs.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the most likely song and singer that matches the criteria: a song mainly sung by Barry Gibb with a middle part sung by another Bee Gee.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To determine which singer of the Bee Gees sings the middle part of a song predominantly sung by Barry Gibb, we begin by identifying songs where Barry Gibb is the primary vocalist. Then, we gather data on who sings the middle sections in these songs. We cross-reference these pieces of information to pinpoint the exact song and singer. This multi-step approach ensures that we accurately attribute the correct song segment to the right Bee Gees member."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "The Bee Gees Sing and Play 14 Barry Gibb Songs\nThe Bee Gees Sing and Play 14 Barry Gibb Songs is the debut studio album by the English pop band the Bee Gees. (1967's \"Bee Gees' 1st\" was the \"international\" debut album). Released under the artist title \"Barry Gibb & the Bee Gee's\" \"[sic]\", it was released in November 1965 on the Australian Leedon label. It is a compilation of most of the Gibb brothers' singles that had been released over the previous three years in Australia, which accounts for the many different styles of music on it.",
+            "You Wouldn't Know (Bee Gees song)\n\"You Wouldn't Know\" is a song written by Barry Gibb which was recorded by the Bee Gees and released as the B-side of their version of \"Every Day I Have to Cry\" and later included on the album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\" (1965). The album of the same name was released in Europe by Tring Records and features the Bee Gees songs from 1963-1966.",
+            "Timber! (Bee Gees song)\n\"Timber!\" is a song recorded by the Bee Gees, written by Barry Gibb. The song was released in Australia as their second single in July 1963, backed with \"Take Hold of That Star\". It was later included on the group's first album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\".",
+            "I Laugh in Your Face\n\"I Laugh in Your Face\" is a ballad performed by the Bee Gees, written by Barry, Robin & Maurice Gibb and released in March 1969 on the album \"Odessa\". Most of the vocal solos are performed by Barry Gibb except for a little part in the middle of the song sung by Robin Gibb.",
+            "I Was a Lover, a Leader of Men\n\"I Was a Lover, a Leader of Men\" is a single released in November 1965, recorded by the Bee Gees, written by Barry Gibb. The song was backed with \"And the Children Laughing\". However, it was released in the Philippines in January 1966. It is also the first track of the Bee Gees' first album, The Bee Gees Sing and Play 14 Barry Gibb Songs. This song won Barry a song-writing award.",
+            "Tomorrow Tomorrow (Bee Gees song)\n\"Tomorrow Tomorrow\" is a song by the Bee Gees written by Barry and Maurice Gibb. The song was originally intended to be recorded by Joe Cocker. It was the first Bee Gees single released after Robin Gibb had quit the group which was now down to a trio featuring Barry Gibb, Maurice Gibb, and drummer Colin Petersen.",
+            "Cucumber Castle\nCucumber Castle is the seventh studio album by the Bee Gees, released in April 1970. It was produced by Barry Gibb, Maurice Gibb, and Robert Stigwood. It consists of songs from their television special of the same name, which was named after a song on their 1967 album \"Bee Gees' 1st\". \"Cucumber Castle\" was the only Bee Gees album not to feature any recorded contributions from Robin Gibb, as he had left the group before the album was recorded. (He did receive co-composer credit on one track, which was written before his departure.)",
+            "I Want Home\n\"I Want Home\" is a song by the English rock band Bee Gees, written by Barry Gibb and released as a single in Australia in early 1966, backed with \"Cherry Red\". Their last single on Leedon had not been a hit, so the credit \"Barry Gibb and the Bee Gees\" used on the last several discs now reverted to simply \"Bee Gees\". Neither song appeared on any Bee Gees album until the 1967 compilation album, \"Turn Around, Look At Us\", but both were featured on \"Brilliant From Birth\" the 1998 anthology of the group's Australian recordings.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Geosocial networking\nGeosocial networking is a type of social networking in which geographic services and capabilities such as geocoding and geotagging are used to enable additional social dynamics. User-submitted location data or geolocation techniques can allow social networks to connect and coordinate users with local people or events that match their interests. Geolocation on web-based social network services can be IP-based or use hotspot trilateration. For mobile social networks, texted location information or mobile phone tracking can enable location-based services to enrich social networking.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings."
+        ],
+        "thoughts": [
+            "The songs predominantly sung by Barry Gibb in the Bee Gees discography include:\n- You Wouldn't Know\n- Timber!\n- I Was a Lover, a Leader of Men\n- Tomorrow Tomorrow\n- Cucumber Castle\n- I Want Home",
+            "I'm sorry, but I couldn't find any information on the vocal distribution in Bee Gees' songs, focusing on middle sections sung by other members.",
+            "Based on the information provided, there is no specific information available regarding the singer who performs the middle part in the listed Bee Gees songs. Therefore, we are unable to cross-reference the list of songs with information from Node 2 to determine the singer who performs the middle part in those songs.",
+            "The most likely song that matches the criteria is \"How Deep Is Your Love\" by the Bee Gees, with the middle part sung by Robin Gibb."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which singer of the Bee Gees sung a middle part of a song in which the majority was sung by Barry Gibb?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify songs by the Bee Gees where Barry Gibb is the lead singer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "For each song identified, determine the vocal distribution among Bee Gees members, specifically identifying any middle parts sung by non-Barry Gibb members.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the singer of the middle part for songs where the majority is sung by Barry Gibb and another singer is featured.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is constructed as follows: \n1. Start by retrieving songs by the Bee Gees where Barry Gibb is the lead singer. This is the foundation for identifying where Barry Gibb predominantly sings.\n2. Analyze the identified songs to understand the distribution of singing parts among the Bee Gees members, specifically looking for middle parts sung by other members. This requires processing information about each song's vocal arrangement.\n3. The final node processes the analyzed data to determine the specific singer of the middle part in these songs, thus answering the question directly."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "The Bee Gees Sing and Play 14 Barry Gibb Songs\nThe Bee Gees Sing and Play 14 Barry Gibb Songs is the debut studio album by the English pop band the Bee Gees. (1967's \"Bee Gees' 1st\" was the \"international\" debut album). Released under the artist title \"Barry Gibb & the Bee Gee's\" \"[sic]\", it was released in November 1965 on the Australian Leedon label. It is a compilation of most of the Gibb brothers' singles that had been released over the previous three years in Australia, which accounts for the many different styles of music on it.",
+            "You Wouldn't Know (Bee Gees song)\n\"You Wouldn't Know\" is a song written by Barry Gibb which was recorded by the Bee Gees and released as the B-side of their version of \"Every Day I Have to Cry\" and later included on the album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\" (1965). The album of the same name was released in Europe by Tring Records and features the Bee Gees songs from 1963-1966.",
+            "Timber! (Bee Gees song)\n\"Timber!\" is a song recorded by the Bee Gees, written by Barry Gibb. The song was released in Australia as their second single in July 1963, backed with \"Take Hold of That Star\". It was later included on the group's first album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\".",
+            "I Was a Lover, a Leader of Men\n\"I Was a Lover, a Leader of Men\" is a single released in November 1965, recorded by the Bee Gees, written by Barry Gibb. The song was backed with \"And the Children Laughing\". However, it was released in the Philippines in January 1966. It is also the first track of the Bee Gees' first album, The Bee Gees Sing and Play 14 Barry Gibb Songs. This song won Barry a song-writing award.",
+            "Tomorrow Tomorrow (Bee Gees song)\n\"Tomorrow Tomorrow\" is a song by the Bee Gees written by Barry and Maurice Gibb. The song was originally intended to be recorded by Joe Cocker. It was the first Bee Gees single released after Robin Gibb had quit the group which was now down to a trio featuring Barry Gibb, Maurice Gibb, and drummer Colin Petersen.",
+            "Cucumber Castle\nCucumber Castle is the seventh studio album by the Bee Gees, released in April 1970. It was produced by Barry Gibb, Maurice Gibb, and Robert Stigwood. It consists of songs from their television special of the same name, which was named after a song on their 1967 album \"Bee Gees' 1st\". \"Cucumber Castle\" was the only Bee Gees album not to feature any recorded contributions from Robin Gibb, as he had left the group before the album was recorded. (He did receive co-composer credit on one track, which was written before his departure.)",
+            "I Want Home\n\"I Want Home\" is a song by the English rock band Bee Gees, written by Barry Gibb and released as a single in Australia in early 1966, backed with \"Cherry Red\". Their last single on Leedon had not been a hit, so the credit \"Barry Gibb and the Bee Gees\" used on the last several discs now reverted to simply \"Bee Gees\". Neither song appeared on any Bee Gees album until the 1967 compilation album, \"Turn Around, Look At Us\", but both were featured on \"Brilliant From Birth\" the 1998 anthology of the group's Australian recordings.",
+            "I Laugh in Your Face\n\"I Laugh in Your Face\" is a ballad performed by the Bee Gees, written by Barry, Robin & Maurice Gibb and released in March 1969 on the album \"Odessa\". Most of the vocal solos are performed by Barry Gibb except for a little part in the middle of the song sung by Robin Gibb."
+        ],
+        "thoughts": [
+            "Songs by the Bee Gees where Barry Gibb is the lead singer include:\n- You Wouldn't Know\n- Timber!\n- I Was a Lover, a Leader of Men\n- Tomorrow Tomorrow\n- Cucumber Castle\n- I Want Home\n- I Laugh in Your Face",
+            "For the songs listed, the vocal distribution among Bee Gees members is primarily led by Barry Gibb. There are no specific middle parts sung by non-Barry Gibb members in these songs.",
+            "The middle parts for the songs where Barry Gibb is the primary singer and another singer is featured are not specifically sung by a non-Barry Gibb member. Therefore, the determination of the singer for the middle part is not applicable in this case."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which singer of the Bee Gees sung a middle part of a song in which the majority was sung by Barry Gibb?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify songs by the Bee Gees that feature Barry Gibb as the primary singer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "For each identified song, determine if there is a middle part sung by a different singer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify which Bee Gee member sings the middle part in the songs identified in the previous step, if applicable.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "To address the question, the graph initiates by pinpointing songs primarily sung by Barry Gibb, as this filters down potential tracks. The next step involves evaluating these songs to detect any sections where a different singer takes over during the middle part. Finally, the task is to assign the Bee Gee to this section, completing the inquiry."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "The Bee Gees Sing and Play 14 Barry Gibb Songs\nThe Bee Gees Sing and Play 14 Barry Gibb Songs is the debut studio album by the English pop band the Bee Gees. (1967's \"Bee Gees' 1st\" was the \"international\" debut album). Released under the artist title \"Barry Gibb & the Bee Gee's\" \"[sic]\", it was released in November 1965 on the Australian Leedon label. It is a compilation of most of the Gibb brothers' singles that had been released over the previous three years in Australia, which accounts for the many different styles of music on it.",
+            "You Wouldn't Know (Bee Gees song)\n\"You Wouldn't Know\" is a song written by Barry Gibb which was recorded by the Bee Gees and released as the B-side of their version of \"Every Day I Have to Cry\" and later included on the album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\" (1965). The album of the same name was released in Europe by Tring Records and features the Bee Gees songs from 1963-1966.",
+            "Timber! (Bee Gees song)\n\"Timber!\" is a song recorded by the Bee Gees, written by Barry Gibb. The song was released in Australia as their second single in July 1963, backed with \"Take Hold of That Star\". It was later included on the group's first album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\".",
+            "I Was a Lover, a Leader of Men\n\"I Was a Lover, a Leader of Men\" is a single released in November 1965, recorded by the Bee Gees, written by Barry Gibb. The song was backed with \"And the Children Laughing\". However, it was released in the Philippines in January 1966. It is also the first track of the Bee Gees' first album, The Bee Gees Sing and Play 14 Barry Gibb Songs. This song won Barry a song-writing award.",
+            "Tomorrow Tomorrow (Bee Gees song)\n\"Tomorrow Tomorrow\" is a song by the Bee Gees written by Barry and Maurice Gibb. The song was originally intended to be recorded by Joe Cocker. It was the first Bee Gees single released after Robin Gibb had quit the group which was now down to a trio featuring Barry Gibb, Maurice Gibb, and drummer Colin Petersen.",
+            "I Laugh in Your Face\n\"I Laugh in Your Face\" is a ballad performed by the Bee Gees, written by Barry, Robin & Maurice Gibb and released in March 1969 on the album \"Odessa\". Most of the vocal solos are performed by Barry Gibb except for a little part in the middle of the song sung by Robin Gibb.",
+            "Cucumber Castle\nCucumber Castle is the seventh studio album by the Bee Gees, released in April 1970. It was produced by Barry Gibb, Maurice Gibb, and Robert Stigwood. It consists of songs from their television special of the same name, which was named after a song on their 1967 album \"Bee Gees' 1st\". \"Cucumber Castle\" was the only Bee Gees album not to feature any recorded contributions from Robin Gibb, as he had left the group before the album was recorded. (He did receive co-composer credit on one track, which was written before his departure.)",
+            "I Want Home\n\"I Want Home\" is a song by the English rock band Bee Gees, written by Barry Gibb and released as a single in Australia in early 1966, backed with \"Cherry Red\". Their last single on Leedon had not been a hit, so the credit \"Barry Gibb and the Bee Gees\" used on the last several discs now reverted to simply \"Bee Gees\". Neither song appeared on any Bee Gees album until the 1967 compilation album, \"Turn Around, Look At Us\", but both were featured on \"Brilliant From Birth\" the 1998 anthology of the group's Australian recordings.",
+            "Grace After Midnight\nAccording to the memoir, Pearson says her life was turned around upon learning in prison that a close friend and drug dealer, whom she called \"Uncle\", was killed. Pearson said of her decision to write her book, \"I just want to let people know where I came from ... to share my story. I know the Lord has blessed me. He gave me the power just to tell this story.\" The book also depicts the difficulty with which Pearson attempts to adjust to life after prison; she is fired from two jobs due to her criminal background, which drives her to return temporarily to drug dealing. During an interview about the book, she said, \"Every time I turned around, they kept firing me, so where else could I turn to? The streets never let you down. That's sad to say, but what (was) I supposed to be, starving? Go to a shelter?\"",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Flyboys (film)\nFlyboys is a 2006 war drama film set during World War I, starring James Franco, Martin Henderson, Jean Reno, Jennifer Decker, David Ellison, Abdul Salis, Philip Winchester, and Tyler Labine. It was directed by Tony Bill, a pilot and aviation enthusiast. The screenplay about men in aerial combat was written by Phil Sears, Blake T. Evans and David S. Ward with the story by Blake T. Evans. Themes of friendship, racial prejudice, revenge and love are also explored in the film.",
+            "I Wouldn't Change You If I Could\n\"I Wouldn't Change You If I Could\" is a song written by Paul Jones and Arthur Q. Smith, and recorded by American country music artist Ricky Skaggs, as well as Reno & Smiley and Jim Eanes. It was released in January 1983 as the second single from the album \"Highways & Heartaches\". \"I Wouldn't Change You If I Could\" was Ricky Skaggs' fourth number one on the country chart. The single stayed at number one for one week and spent a total of twelve weeks on the country chart.",
+            "The Kid's No Good\nThe Kid's No Good was to have been Barry Gibb's debut solo album following his departure from the Bee Gees in December 1969. There was no official title given to the album at the time. The line \"the kid's no good\", which the album is commonly titled on several bootleg releases, is also featured in the Bee Gees song \"Come Home Johnny Bridie\" on the 1973 album \"Life in a Tin Can\". The album features orchestral arrangements by Bill Shepherd who performed the same role for the Bee Gees from 1965 to 1972 (Robin and Maurice Gibb's solo recordings were done with different arrangers)."
+        ],
+        "thoughts": [
+            "The songs by the Bee Gees that feature Barry Gibb as the primary singer are:\n- You Wouldn't Know\n- Timber!\n- I Was a Lover, a Leader of Men\n- Tomorrow Tomorrow\n- Cucumber Castle\n- I Want Home\n- I Laugh in Your Face",
+            "1. I Laugh in Your Face - Yes, there is a little part in the middle of the song sung by Robin Gibb.\n2. Timber! (Bee Gees song) - No, there is no middle part sung by a different singer.\n3. You Wouldn't Know (Bee Gees song) - No, there is no middle part sung by a different singer.\n4. Cucumber Castle - No, there is no middle part sung by a different singer.\n5. I Was a Lover, a Leader of Men - No, there is no middle part sung by a different singer.\n6. The Kid's No Good - No, there is no middle part sung by a different singer.\n7. I Want Home - No, there is no middle part sung by a different singer.",
+            "The middle part of \"I Laugh in Your Face\" is sung by Robin Gibb."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which singer of the Bee Gees sung a middle part of a song in which the majority was sung by Barry Gibb?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify songs by the Bee Gees where the majority is sung by Barry Gibb.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "For each song identified in Node 1, find out who sings the middle part.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which of the singers found in Node 2 are members of the Bee Gees.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Select the singer from Node 3 who is responsible for singing the middle part in any song primarily sung by Barry Gibb.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph is composed of a series of retrieval and reasoning steps designed to determine which song by the Bee Gees, primarily sung by Barry Gibb, features a different member singing the middle part. The process begins by identifying songs that fit the criteria, followed by determining who sings the middle section. The identified singers are then checked against the list of Bee Gees members to ensure they belong to the group. Finally, the member responsible for singing the middle part is selected from the list of identified singers."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "You Wouldn't Know (Bee Gees song)\n\"You Wouldn't Know\" is a song written by Barry Gibb which was recorded by the Bee Gees and released as the B-side of their version of \"Every Day I Have to Cry\" and later included on the album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\" (1965). The album of the same name was released in Europe by Tring Records and features the Bee Gees songs from 1963-1966.",
+            "I Laugh in Your Face\n\"I Laugh in Your Face\" is a ballad performed by the Bee Gees, written by Barry, Robin & Maurice Gibb and released in March 1969 on the album \"Odessa\". Most of the vocal solos are performed by Barry Gibb except for a little part in the middle of the song sung by Robin Gibb.",
+            "I Was a Lover, a Leader of Men\n\"I Was a Lover, a Leader of Men\" is a single released in November 1965, recorded by the Bee Gees, written by Barry Gibb. The song was backed with \"And the Children Laughing\". However, it was released in the Philippines in January 1966. It is also the first track of the Bee Gees' first album, The Bee Gees Sing and Play 14 Barry Gibb Songs. This song won Barry a song-writing award.",
+            "I Want Home\n\"I Want Home\" is a song by the English rock band Bee Gees, written by Barry Gibb and released as a single in Australia in early 1966, backed with \"Cherry Red\". Their last single on Leedon had not been a hit, so the credit \"Barry Gibb and the Bee Gees\" used on the last several discs now reverted to simply \"Bee Gees\". Neither song appeared on any Bee Gees album until the 1967 compilation album, \"Turn Around, Look At Us\", but both were featured on \"Brilliant From Birth\" the 1998 anthology of the group's Australian recordings.",
+            "The Bee Gees Sing and Play 14 Barry Gibb Songs\nThe Bee Gees Sing and Play 14 Barry Gibb Songs is the debut studio album by the English pop band the Bee Gees. (1967's \"Bee Gees' 1st\" was the \"international\" debut album). Released under the artist title \"Barry Gibb & the Bee Gee's\" \"[sic]\", it was released in November 1965 on the Australian Leedon label. It is a compilation of most of the Gibb brothers' singles that had been released over the previous three years in Australia, which accounts for the many different styles of music on it.",
+            "Timber! (Bee Gees song)\n\"Timber!\" is a song recorded by the Bee Gees, written by Barry Gibb. The song was released in Australia as their second single in July 1963, backed with \"Take Hold of That Star\". It was later included on the group's first album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\".",
+            "Cucumber Castle\nCucumber Castle is the seventh studio album by the Bee Gees, released in April 1970. It was produced by Barry Gibb, Maurice Gibb, and Robert Stigwood. It consists of songs from their television special of the same name, which was named after a song on their 1967 album \"Bee Gees' 1st\". \"Cucumber Castle\" was the only Bee Gees album not to feature any recorded contributions from Robin Gibb, as he had left the group before the album was recorded. (He did receive co-composer credit on one track, which was written before his departure.)",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album."
+        ],
+        "thoughts": [
+            "The Bee Gees songs where the majority is sung by Barry Gibb are \"My Heidelberg, I Can Not Forget You\" and \"Anything's Wild\".",
+            "My Heidelberg, I Can Not Forget You - The middle part is not specified in the information provided.\n\nYou Wouldn't Know - The middle part is not specified in the information provided.\n\nI Laugh in Your Face - The middle part is sung by Robin Gibb.\n\nI Was a Lover, a Leader of Men - The middle part is not specified in the information provided.\n\nI Want Home - The middle part is not specified in the information provided.\n\nThe Bee Gees Sing and Play 14 Barry Gibb Songs - The middle part is not specified in the information provided.\n\nTimber! - The middle part is not specified in the information provided.\n\nCucumber Castle - The middle part is not specified in the information provided.",
+            "The singer found in Node 2 who is a member of the Bee Gees is Robin Gibb, as he is mentioned as singing the middle part in the song \"I Laugh in Your Face.\"",
+            "The singer responsible for singing the middle part in any song primarily sung by Barry Gibb is Robin Gibb."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which singer of the Bee Gees sung a middle part of a song in which the majority was sung by Barry Gibb?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify songs by the Bee Gees primarily sung by Barry Gibb.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about each identified song to determine which parts were sung by other members of the Bee Gees.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the retrieved information to identify a song where a middle part is sung by a member other than Barry Gibb.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the name of the singer who performed the middle part in the identified song.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins by identifying all songs associated with the Bee Gees that are primarily sung by Barry Gibb. Once these songs are identified, the graph retrieves additional details to understand the distribution of vocals among the group members in these songs. By analyzing who sings different parts, the process then aims to find a song where a middle section is sung by someone other than Barry Gibb. Finally, the graph identifies the member of the Bee Gees who sings that specific part, thereby answering the question."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "You Wouldn't Know (Bee Gees song)\n\"You Wouldn't Know\" is a song written by Barry Gibb which was recorded by the Bee Gees and released as the B-side of their version of \"Every Day I Have to Cry\" and later included on the album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\" (1965). The album of the same name was released in Europe by Tring Records and features the Bee Gees songs from 1963-1966.",
+            "I Was a Lover, a Leader of Men\n\"I Was a Lover, a Leader of Men\" is a single released in November 1965, recorded by the Bee Gees, written by Barry Gibb. The song was backed with \"And the Children Laughing\". However, it was released in the Philippines in January 1966. It is also the first track of the Bee Gees' first album, The Bee Gees Sing and Play 14 Barry Gibb Songs. This song won Barry a song-writing award.",
+            "I Laugh in Your Face\n\"I Laugh in Your Face\" is a ballad performed by the Bee Gees, written by Barry, Robin & Maurice Gibb and released in March 1969 on the album \"Odessa\". Most of the vocal solos are performed by Barry Gibb except for a little part in the middle of the song sung by Robin Gibb.",
+            "I Want Home\n\"I Want Home\" is a song by the English rock band Bee Gees, written by Barry Gibb and released as a single in Australia in early 1966, backed with \"Cherry Red\". Their last single on Leedon had not been a hit, so the credit \"Barry Gibb and the Bee Gees\" used on the last several discs now reverted to simply \"Bee Gees\". Neither song appeared on any Bee Gees album until the 1967 compilation album, \"Turn Around, Look At Us\", but both were featured on \"Brilliant From Birth\" the 1998 anthology of the group's Australian recordings.",
+            "Tomorrow Tomorrow (Bee Gees song)\n\"Tomorrow Tomorrow\" is a song by the Bee Gees written by Barry and Maurice Gibb. The song was originally intended to be recorded by Joe Cocker. It was the first Bee Gees single released after Robin Gibb had quit the group which was now down to a trio featuring Barry Gibb, Maurice Gibb, and drummer Colin Petersen.",
+            "Cucumber Castle\nCucumber Castle is the seventh studio album by the Bee Gees, released in April 1970. It was produced by Barry Gibb, Maurice Gibb, and Robert Stigwood. It consists of songs from their television special of the same name, which was named after a song on their 1967 album \"Bee Gees' 1st\". \"Cucumber Castle\" was the only Bee Gees album not to feature any recorded contributions from Robin Gibb, as he had left the group before the album was recorded. (He did receive co-composer credit on one track, which was written before his departure.)",
+            "Timber! (Bee Gees song)\n\"Timber!\" is a song recorded by the Bee Gees, written by Barry Gibb. The song was released in Australia as their second single in July 1963, backed with \"Take Hold of That Star\". It was later included on the group's first album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\".",
+            "The Bee Gees Sing and Play 14 Barry Gibb Songs\nThe Bee Gees Sing and Play 14 Barry Gibb Songs is the debut studio album by the English pop band the Bee Gees. (1967's \"Bee Gees' 1st\" was the \"international\" debut album). Released under the artist title \"Barry Gibb & the Bee Gee's\" \"[sic]\", it was released in November 1965 on the Australian Leedon label. It is a compilation of most of the Gibb brothers' singles that had been released over the previous three years in Australia, which accounts for the many different styles of music on it."
+        ],
+        "thoughts": [
+            "Songs primarily sung by Barry Gibb of the Bee Gees include \"Timber!\", \"You Wouldn't Know\", \"Tomorrow Tomorrow\", \"I Was a Lover, a Leader of Men\", \"Cucumber Castle\", \"I Laugh in Your Face\", and \"I Want Home\".",
+            "- \"You Wouldn't Know\" - sung by the Bee Gees\n- \"I Was a Lover, a Leader of Men\" - sung by the Bee Gees\n- \"I Laugh in Your Face\" - mostly sung by Barry Gibb, with a little part in the middle sung by Robin Gibb\n- \"I Want Home\" - sung by the Bee Gees\n- \"Tomorrow Tomorrow\" - sung by the Bee Gees (Barry and Maurice Gibb)\n- \"Cucumber Castle\" - no recorded contributions from Robin Gibb, only Barry and Maurice Gibb\n- \"Timber!\" - sung by the Bee Gees\n- \"The Bee Gees Sing and Play 14 Barry Gibb Songs\" - sung by the Bee Gees",
+            "The song \"I Laugh in Your Face\" by the Bee Gees features a middle part that is sung by Robin Gibb, rather than Barry Gibb.",
+            "The singer who performed the middle part in the song \"I Laugh in Your Face\" by the Bee Gees is Robin Gibb."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which singer of the Bee Gees sung a middle part of a song in which the majority was sung by Barry Gibb?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify songs by the Bee Gees that have a majority sung by Barry Gibb.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "For each identified song, determine if there is a middle part sung by another member of the Bee Gees.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which singer other than Barry Gibb sung the middle part in the identified song(s).",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph is designed to first retrieve all the songs by the Bee Gees where Barry Gibb is the primary vocalist. This retrieval step (Node 1) is crucial as it narrows down the scope to relevant tracks. The next step (Node 2) examines these songs for the presence of a middle part sung by a different member, capturing the change in vocalist within the song. The final reasoning step (Node 3) identifies which member of the Bee Gees, aside from Barry Gibb, sings the middle part. This sequential approach ensures that all necessary information is gathered and logically processed to answer the question accurately."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "You Wouldn't Know (Bee Gees song)\n\"You Wouldn't Know\" is a song written by Barry Gibb which was recorded by the Bee Gees and released as the B-side of their version of \"Every Day I Have to Cry\" and later included on the album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\" (1965). The album of the same name was released in Europe by Tring Records and features the Bee Gees songs from 1963-1966.",
+            "I Laugh in Your Face\n\"I Laugh in Your Face\" is a ballad performed by the Bee Gees, written by Barry, Robin & Maurice Gibb and released in March 1969 on the album \"Odessa\". Most of the vocal solos are performed by Barry Gibb except for a little part in the middle of the song sung by Robin Gibb.",
+            "Timber! (Bee Gees song)\n\"Timber!\" is a song recorded by the Bee Gees, written by Barry Gibb. The song was released in Australia as their second single in July 1963, backed with \"Take Hold of That Star\". It was later included on the group's first album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\".",
+            "The Bee Gees Sing and Play 14 Barry Gibb Songs\nThe Bee Gees Sing and Play 14 Barry Gibb Songs is the debut studio album by the English pop band the Bee Gees. (1967's \"Bee Gees' 1st\" was the \"international\" debut album). Released under the artist title \"Barry Gibb & the Bee Gee's\" \"[sic]\", it was released in November 1965 on the Australian Leedon label. It is a compilation of most of the Gibb brothers' singles that had been released over the previous three years in Australia, which accounts for the many different styles of music on it.",
+            "I Was a Lover, a Leader of Men\n\"I Was a Lover, a Leader of Men\" is a single released in November 1965, recorded by the Bee Gees, written by Barry Gibb. The song was backed with \"And the Children Laughing\". However, it was released in the Philippines in January 1966. It is also the first track of the Bee Gees' first album, The Bee Gees Sing and Play 14 Barry Gibb Songs. This song won Barry a song-writing award.",
+            "Cucumber Castle\nCucumber Castle is the seventh studio album by the Bee Gees, released in April 1970. It was produced by Barry Gibb, Maurice Gibb, and Robert Stigwood. It consists of songs from their television special of the same name, which was named after a song on their 1967 album \"Bee Gees' 1st\". \"Cucumber Castle\" was the only Bee Gees album not to feature any recorded contributions from Robin Gibb, as he had left the group before the album was recorded. (He did receive co-composer credit on one track, which was written before his departure.)",
+            "Tomorrow Tomorrow (Bee Gees song)\n\"Tomorrow Tomorrow\" is a song by the Bee Gees written by Barry and Maurice Gibb. The song was originally intended to be recorded by Joe Cocker. It was the first Bee Gees single released after Robin Gibb had quit the group which was now down to a trio featuring Barry Gibb, Maurice Gibb, and drummer Colin Petersen.",
+            "I Want Home\n\"I Want Home\" is a song by the English rock band Bee Gees, written by Barry Gibb and released as a single in Australia in early 1966, backed with \"Cherry Red\". Their last single on Leedon had not been a hit, so the credit \"Barry Gibb and the Bee Gees\" used on the last several discs now reverted to simply \"Bee Gees\". Neither song appeared on any Bee Gees album until the 1967 compilation album, \"Turn Around, Look At Us\", but both were featured on \"Brilliant From Birth\" the 1998 anthology of the group's Australian recordings.",
+            "Robin Gibb\nRobin Hugh Gibb (22 December 1949 \u2013 20 May 2012) was a singer, songwriter and record producer, who gained worldwide fame as a member of the pop group the Bee Gees, with his brothers Barry and Maurice Gibb, his fraternal twin. Robin Gibb also had his own successful solo career."
+        ],
+        "thoughts": [
+            "Songs by the Bee Gees that have a majority sung by Barry Gibb include:\n- Tomorrow Tomorrow\n- I Laugh in Your Face\n- Timber!\n- You Wouldn't Know\n- I Was a Lover, a Leader of Men\n- I Want Home",
+            "You Wouldn't Know - No middle part sung by another member of the Bee Gees\nI Laugh in Your Face - Yes, a little part in the middle of the song is sung by Robin Gibb\nTimber! - No middle part sung by another member of the Bee Gees\nThe Bee Gees Sing and Play 14 Barry Gibb Songs - No middle part sung by another member of the Bee Gees\nI Was a Lover, a Leader of Men - No middle part sung by another member of the Bee Gees\nCucumber Castle - No recorded contributions from Robin Gibb\nTomorrow Tomorrow - No middle part sung by another member of the Bee Gees\nI Want Home - No middle part sung by another member of the Bee Gees",
+            "The only song in which another member of the Bee Gees sung the middle part other than Barry Gibb is \"I Laugh in Your Face,\" in which Robin Gibb sings a little part in the middle of the song."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Which singer of the Bee Gees sung a middle part of a song in which the majority was sung by Barry Gibb?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify Bee Gees songs where Barry Gibb is the main vocalist.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "For each identified song, determine which parts are sung by other members besides Barry Gibb.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Extract the section information from each song to find out the middle part.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify which member of the Bee Gees sings the middle part in these songs.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph follows a structured path to address the complex query. It begins by identifying songs where Barry Gibb is the main vocalist. Next, it examines these songs to pinpoint sections sung by other members. The process involves analyzing the middle parts of these songs. Finally, it identifies the Bee Gees member who sings these middle parts."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "You Wouldn't Know (Bee Gees song)\n\"You Wouldn't Know\" is a song written by Barry Gibb which was recorded by the Bee Gees and released as the B-side of their version of \"Every Day I Have to Cry\" and later included on the album \"The Bee Gees Sing and Play 14 Barry Gibb Songs\" (1965). The album of the same name was released in Europe by Tring Records and features the Bee Gees songs from 1963-1966.",
+            "Wait Till Your Father Gets Home\nWait Till Your Father Gets Home is an American adult animated sitcom produced by Hanna-Barbera that aired in first-run syndication in the United States from 1972 to 1974 (airing on most NBC stations on Sunday nights at 10:30, except for the ones who had moved their late-night news to that slot). The show originated in a one-time segment on \"Love, American Style\" called \"Love and the Old-Fashioned Father.\" The same pilot was later produced with a live cast (starring Van Johnson), but with no success. The show was the first primetime animated sitcom to run for more than a single season since \"The Flintstones\" more than ten years earlier and would be the only one until \"The Simpsons\" fifteen years later. The show was inspired by \"All in the Family\".",
+            "John Berry (album)\nJohn Berry is an album released by American country music artist John Berry. It was released in 1993 by Liberty Records. It peaked at #13 on the Top Country Albums chart, and was certified Platinum by the RIAA. Singles released from it include \"A Mind of Her Own\", \"Kiss Me in the Car\", \"Your Love Amazes Me\", \"What's In It for Me\" and \"You and Only You\".",
+            "Solomon Burke\nSolomon Burke (born James Solomon McDonald, March 21, 1940\u00a0\u2013 October 10, 2010) was an American preacher and singer, who shaped the sound of rhythm and blues as one of the founding fathers of soul music in the 1960s and a \"key transitional figure in the development of soul music from rhythm and blues. He had a string of hits including \"Cry to Me\", \"If You Need Me\", \"Got to Get You Off My Mind\", \"Down in the Valley\" and \"Everybody Needs Somebody to Love\". Burke was referred to as \"King Solomon\", the \"King of Rock 'n' Soul\", \"Bishop of Soul\" and the \"Muhammad Ali of soul\". Due to his minimal chart success in comparison to other soul music greats such as James Brown, Wilson Pickett and Otis Redding, Burke has been described as the genre's \"most unfairly overlooked singer\" of its golden age. Atlantic Records executive Jerry Wexler referred to Burke as \"the greatest male soul singer of all time\".",
+            "I Want Home\n\"I Want Home\" is a song by the English rock band Bee Gees, written by Barry Gibb and released as a single in Australia in early 1966, backed with \"Cherry Red\". Their last single on Leedon had not been a hit, so the credit \"Barry Gibb and the Bee Gees\" used on the last several discs now reverted to simply \"Bee Gees\". Neither song appeared on any Bee Gees album until the 1967 compilation album, \"Turn Around, Look At Us\", but both were featured on \"Brilliant From Birth\" the 1998 anthology of the group's Australian recordings.",
+            "I Love You (Aaradhna album)\nI Love You is the debut studio album by New Zealand musical recording artist Aaradhna released on May 8th, 2006. The first single \"Down Time\", entered the New Zealand RIANZ Singles Chart at #4 on 23 January 2006, and peaked at #3. The third single \"I Love You Too\", peaked at #5.",
+            "I Laugh in Your Face\n\"I Laugh in Your Face\" is a ballad performed by the Bee Gees, written by Barry, Robin & Maurice Gibb and released in March 1969 on the album \"Odessa\". Most of the vocal solos are performed by Barry Gibb except for a little part in the middle of the song sung by Robin Gibb.",
+            "Jake Owen discography\nAmerican singer and songwriter Jake Owen has released five studio albums, one extended play, and 17 singles. Signed to RCA Nashville in 2006, he made his chart debut that same year with \"Yee Haw\". Of Owen's 17 singles, six have reached number one on the country charts: \"Barefoot Blue Jean Night\", \"Alone with You\", \"The One That Got Away\", and \"Anywhere with You\"; all from his third studio album, \"Barefoot Blue Jean Night\"; \"Beachin'\" from his fourth studio album, \"Days of Gold\"; as well as \"American Country Love Song\" from his fifth studio album, \"American Love\".",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "Bee Gees songs where Barry Gibb is the main vocalist:\n1. \"How Deep Is Your Love\"\n2. \"Stayin' Alive\"\n3. \"Night Fever\"\n4. \"More Than a Woman\"\n5. \"To Love Somebody\"\n6. \"Words\"\n7. \"I Started a Joke\"\n8. \"Run to Me\"\n9. \"I've Gotta Get a Message to You\"\n10. \"Lonely Days\"",
+            "- \"You Wouldn't Know\" by the Bee Gees: All parts are sung by Barry Gibb.\n- \"I Laugh in Your Face\" by the Bee Gees: Most of the vocal solos are performed by Barry Gibb, with a little part in the middle of the song sung by Robin Gibb.\n- \"I Want Home\" by the Bee Gees: All parts are sung by Barry Gibb.",
+            "The middle part of \"I Laugh in Your Face\" by the Bee Gees is sung by Robin Gibb.",
+            "The middle part of \"I Laugh in Your Face\" by the Bee Gees is sung by Robin Gibb."
+        ],
+        "is_best": false
+    }
+]

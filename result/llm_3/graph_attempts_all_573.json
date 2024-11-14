@@ -1,0 +1,601 @@
+[
+    {
+        "question": "What line featured characters from a DC Comic creator by Bob Kane and Bill Finger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify characters created by DC Comics creators Bob Kane and Bill Finger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "List DC Comics lines or series featuring characters created by Bob Kane.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "List DC Comics lines or series featuring characters created by Bill Finger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the common DC Comics lines or series that feature characters created by both Bob Kane and Bill Finger.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins by identifying characters created by the DC Comics creators Bob Kane and Bill Finger (Node 1). Then, it splits into two parallel retrieval steps: Node 2 identifies DC Comics lines featuring characters from Bob Kane, and Node 3 identifies lines featuring characters from Bill Finger. The final reasoning step (Node 4) synthesizes the results by determining the DC Comics lines that feature characters created by both creators, providing the answer to the question."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Scarecrow (DC Comics)\nThe Scarecrow (Dr. Jonathan Crane) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"World's Finest Comics\" #3 (Fall 1941).",
+            "Joe Chill\nJoe Chill is a fictional character appearing in comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bill Finger and Bob Kane, the character first appeared in \"Detective Comics\" #33 (November 1939).",
+            "Bill Finger\nMilton \"Bill\" Finger (February 8, 1914 \u2013 January 18, 1974) was an American comic strip and comic book writer best known as the co-creator, with Bob Kane, of the DC Comics character Batman, and the co-architect of the series' development. Although Finger did not receive contemporaneous credit for his hand in the development of Batman, Kane acknowledged Finger's contributions years after Finger's death.",
+            "Batman\nBatman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"Detective Comics\" #27 (1939). Originally named the \"Bat-Man\", the character is also referred to by such epithets as the Caped Crusader, the Dark Knight, and the World's Greatest Detective.",
+            "Two-Face\nTwo-Face (Harvey Dent) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by Bill Finger and Bob Kane and first appeared in \"Detective Comics\" #66 (Aug. 1942). As one of Batman's most enduring enemies, Two-Face belongs to the collective of adversaries that make up Batman's rogues gallery.",
+            "Vicki Vale\nVictoria \"Vicki\" Vale is a fictional character appearing in American comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bob Kane and Bill Finger, the character debuted in \"Batman\" #49 (October 1948). Vicky Vale is typically depicted as a romantic interest of Bruce Wayne, the alter-ego of Batman.",
+            "Joker (character)\nThe Joker is a fictional supervillain created by Bill Finger, Bob Kane, and Jerry Robinson who first appeared in the debut issue of the comic book \"Batman\" (April 25, 1940), published by DC Comics. Credit for the Joker's creation is disputed; Kane and Robinson claimed responsibility for the Joker's design, while acknowledging Finger's writing contribution. Although the Joker was planned to be killed off during his initial appearance, he was spared by editorial intervention, allowing the character to endure as the archenemy of the superhero Batman.",
+            "Robin (character)\nRobin is the name of several fictional superheroes appearing in American comic books published by DC Comics. The character was originally created by Bob Kane, Bill Finger, and Jerry Robinson, to serve as a junior counterpart to the superhero Batman. The character's first incarnation, Dick Grayson, debuted in \"Detective Comics\" #38 (April 1940). Conceived as a vehicle to attract young readership, Robin garnered overwhelmingly positive critical reception, doubling the sales of the Batman related comic books. The early adventures of Robin included \"Star Spangled Comics\" #65\u2013130 (1947\u20131952), which was the character's first solo feature. Robin made regular appearances in Batman related comic books and other DC Comics publications from 1940 through the early 1980s until the character set aside the Robin identity and became the independent superhero Nightwing. The team of Batman and Robin has commonly been referred to as the \"Caped Crusaders\" or \"Dynamic Duo\".",
+            "List of iZombie characters\n\"iZombie\" (stylized as \"iZOMBiE\") is an American television series developed by Rob Thomas and Diane Ruggiero-Wright for The CW. It is a loose adaptation of the comic book series of the same name created by Chris Roberson and Michael Allred, and published by DC Comics under their Vertigo imprint. The series premiered on March 17, 2015."
+        ],
+        "thoughts": [
+            "The characters created by DC Comics creators Bob Kane and Bill Finger include:\n- Scarecrow (Dr. Jonathan Crane)\n- Joe Chill\n- Batman\n- Two-Face (Harvey Dent)\n- Vicki Vale\n- Joker\n- Robin (Dick Grayson)",
+            "1. Scarecrow (DC Comics)\n2. Joe Chill\n3. Batman\n4. Two-Face\n5. Vicki Vale\n6. Bill Finger\n7. Joker (character)\n8. Robin (character)",
+            "1. Scarecrow (Dr. Jonathan Crane) - created by Bill Finger and Bob Kane\n2. Joe Chill - created by Bill Finger and Bob Kane\n3. Batman - co-created by Bill Finger and Bob Kane\n4. Two-Face (Harvey Dent) - created by Bill Finger and Bob Kane\n5. Vicki Vale - created by Bill Finger and Bob Kane\n6. Robin (Dick Grayson) - co-created by Bill Finger, Bob Kane, and Jerry Robinson",
+            "The common DC Comics lines or series that feature characters created by both Bob Kane and Bill Finger include Batman, Two-Face, Scarecrow, Joe Chill, and Vicki Vale. These characters were co-created by both Bob Kane and Bill Finger, showcasing their collaborative work in the DC Comics universe."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What line featured characters from a DC Comic creator by Bob Kane and Bill Finger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify characters from DC Comics that were created by Bob Kane and Bill Finger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the comic lines that feature the identified characters.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Filter the comic lines to include only those that feature the characters identified as created by Bob Kane and Bill Finger.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts with retrieving information about the creators, Bob Kane and Bill Finger, to find which DC Comics characters they created. Then, the second step involves identifying comic lines that these characters are part of. Finally, a reasoning step is used to filter these lines to ensure that they include characters specifically attributed to Kane and Finger. The result of this final reasoning step provides the answer to the original question."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Scarecrow (DC Comics)\nThe Scarecrow (Dr. Jonathan Crane) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"World's Finest Comics\" #3 (Fall 1941).",
+            "Joe Chill\nJoe Chill is a fictional character appearing in comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bill Finger and Bob Kane, the character first appeared in \"Detective Comics\" #33 (November 1939).",
+            "Two-Face\nTwo-Face (Harvey Dent) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by Bill Finger and Bob Kane and first appeared in \"Detective Comics\" #66 (Aug. 1942). As one of Batman's most enduring enemies, Two-Face belongs to the collective of adversaries that make up Batman's rogues gallery.",
+            "Batman\nBatman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"Detective Comics\" #27 (1939). Originally named the \"Bat-Man\", the character is also referred to by such epithets as the Caped Crusader, the Dark Knight, and the World's Greatest Detective.",
+            "Bill Finger\nMilton \"Bill\" Finger (February 8, 1914 \u2013 January 18, 1974) was an American comic strip and comic book writer best known as the co-creator, with Bob Kane, of the DC Comics character Batman, and the co-architect of the series' development. Although Finger did not receive contemporaneous credit for his hand in the development of Batman, Kane acknowledged Finger's contributions years after Finger's death.",
+            "Vicki Vale\nVictoria \"Vicki\" Vale is a fictional character appearing in American comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bob Kane and Bill Finger, the character debuted in \"Batman\" #49 (October 1948). Vicky Vale is typically depicted as a romantic interest of Bruce Wayne, the alter-ego of Batman.",
+            "Joker (character)\nThe Joker is a fictional supervillain created by Bill Finger, Bob Kane, and Jerry Robinson who first appeared in the debut issue of the comic book \"Batman\" (April 25, 1940), published by DC Comics. Credit for the Joker's creation is disputed; Kane and Robinson claimed responsibility for the Joker's design, while acknowledging Finger's writing contribution. Although the Joker was planned to be killed off during his initial appearance, he was spared by editorial intervention, allowing the character to endure as the archenemy of the superhero Batman.",
+            "Robin (character)\nRobin is the name of several fictional superheroes appearing in American comic books published by DC Comics. The character was originally created by Bob Kane, Bill Finger, and Jerry Robinson, to serve as a junior counterpart to the superhero Batman. The character's first incarnation, Dick Grayson, debuted in \"Detective Comics\" #38 (April 1940). Conceived as a vehicle to attract young readership, Robin garnered overwhelmingly positive critical reception, doubling the sales of the Batman related comic books. The early adventures of Robin included \"Star Spangled Comics\" #65\u2013130 (1947\u20131952), which was the character's first solo feature. Robin made regular appearances in Batman related comic books and other DC Comics publications from 1940 through the early 1980s until the character set aside the Robin identity and became the independent superhero Nightwing. The team of Batman and Robin has commonly been referred to as the \"Caped Crusaders\" or \"Dynamic Duo\".",
+            "Batman in film\nThe fictional superhero Batman, who appears in American comic books published by DC Comics, has appeared in various films since his inception. Created by Bob Kane and Bill Finger, the character first starred in two serial films in the 1940s, \"Batman\" and \"Batman and Robin\". The character also appeared in the 1966 film \"Batman\", which was a feature film adaptation of the 1960s \"Batman\" TV series starring Adam West and Burt Ward, who also starred in the film. Toward the end of the 1980s, the Warner Bros. studio began producing a series of feature films starring Batman, beginning with the 1989 film \"Batman\", directed by Tim Burton and starring Michael Keaton. Burton and Keaton returned for the 1992 sequel \"Batman Returns\", and in 1995, Joel Schumacher directed \"Batman Forever\" with Val Kilmer as Batman. Schumacher also directed the 1997 sequel \"Batman & Robin\", which starred George Clooney. \"Batman & Robin\" was poorly received by both critics and fans, leading to the cancellation of \"Batman Unchained\".",
+            "Teen Titans\nThe Teen Titans, also known as the New Teen Titans and the Titans, are a fictional superhero team appearing in American comic books published by DC Comics, often in an eponymous monthly series. As the group's name suggests, its members are teenage superheroes, many of whom have acted as sidekicks to DC's premiere superheroes in the Justice League. First appearing in 1964 in \"The Brave and the Bold\" #54, the team was founded by Kid Flash (Wally West), Robin (Dick Grayson), and Aqualad (Garth), with the team adopting the name Teen Titans in issue 60 following the addition of Wonder Girl (Donna Troy) to its ranks."
+        ],
+        "thoughts": [
+            "The characters from DC Comics that were created by Bob Kane and Bill Finger are:\n- Scarecrow (Dr. Jonathan Crane)\n- Joe Chill\n- Two-Face (Harvey Dent)\n- Batman\n- Vicki Vale\n- Joker\n- Robin (Dick Grayson)",
+            "- Scarecrow: \"The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"World's Finest Comics\" #3 (Fall 1941).\"\n- Two-Face: \"The character was created by Bill Finger and Bob Kane and first appeared in \"Detective Comics\" #66 (Aug. 1942).\"\n- Vicki Vale: \"Created by Bob Kane and Bill Finger, the character debuted in \"Batman\" #49 (October 1948).\"\n- Robin: \"The character's first incarnation, Dick Grayson, debuted in \"Detective Comics\" #38 (April 1940).\"\n- Joe Chill: \"The character first appeared in \"Detective Comics\" #33 (November 1939).\"\n- Joker: \"The Joker is a fictional supervillain created by Bill Finger, Bob Kane, and Jerry Robinson who first appeared in the debut issue of the comic book \"Batman\" (April 25, 1940), published by DC Comics.\"\n- Batman: \"Created by Bob Kane and Bill Finger, the character first starred in two serial films in the 1940s, \"Batman\" and \"Batman and Robin\".\"\n- Teen Titans: \"First appearing in 1964 in \"The Brave and the Bold\" #54, the team was founded by Kid Flash (Wally West), Robin (Dick Grayson), and Aqualad (Garth).\"",
+            "- Scarecrow: \"The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"World's Finest Comics\" #3 (Fall 1941).\"\n- Two-Face: \"The character was created by Bill Finger and Bob Kane and first appeared in \"Detective Comics\" #66 (Aug. 1942).\"\n- Vicki Vale: \"Created by Bob Kane and Bill Finger, the character debuted in \"Batman\" #49 (October 1948).\"\n- Joker: \"The Joker is a fictional supervillain created by Bill Finger, Bob Kane, and Jerry Robinson who first appeared in the debut issue of the comic book \"Batman\" (April 25, 1940), published by DC Comics.\"\n- Batman: \"Created by Bob Kane and Bill Finger, the character first starred in two serial films in the 1940s, \"Batman\" and \"Batman and Robin\".\""
+        ],
+        "is_best": true
+    },
+    {
+        "question": "What line featured characters from a DC Comic creator by Bob Kane and Bill Finger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify characters from DC Comics that were created by Bob Kane.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify characters from DC Comics that were created by Bill Finger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find common characters from the lists of characters created by Bob Kane and Bill Finger.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the comic line or series where the common characters from Bob Kane and Bill Finger appeared.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The question requires identifying characters from DC Comics that are associated with both Bob Kane and Bill Finger, and then determining the comic line that featured these characters. The execution graph starts by separately retrieving characters created by each creator (Nodes 1 and 2). It then combines this information to find common characters (Node 3). Finally, it identifies the comic line featuring these shared characters (Node 4)."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Scarecrow (DC Comics)\nThe Scarecrow (Dr. Jonathan Crane) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"World's Finest Comics\" #3 (Fall 1941).",
+            "Two-Face\nTwo-Face (Harvey Dent) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by Bill Finger and Bob Kane and first appeared in \"Detective Comics\" #66 (Aug. 1942). As one of Batman's most enduring enemies, Two-Face belongs to the collective of adversaries that make up Batman's rogues gallery.",
+            "Joe Chill\nJoe Chill is a fictional character appearing in comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bill Finger and Bob Kane, the character first appeared in \"Detective Comics\" #33 (November 1939).",
+            "Vicki Vale\nVictoria \"Vicki\" Vale is a fictional character appearing in American comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bob Kane and Bill Finger, the character debuted in \"Batman\" #49 (October 1948). Vicky Vale is typically depicted as a romantic interest of Bruce Wayne, the alter-ego of Batman.",
+            "Robin (character)\nRobin is the name of several fictional superheroes appearing in American comic books published by DC Comics. The character was originally created by Bob Kane, Bill Finger, and Jerry Robinson, to serve as a junior counterpart to the superhero Batman. The character's first incarnation, Dick Grayson, debuted in \"Detective Comics\" #38 (April 1940). Conceived as a vehicle to attract young readership, Robin garnered overwhelmingly positive critical reception, doubling the sales of the Batman related comic books. The early adventures of Robin included \"Star Spangled Comics\" #65\u2013130 (1947\u20131952), which was the character's first solo feature. Robin made regular appearances in Batman related comic books and other DC Comics publications from 1940 through the early 1980s until the character set aside the Robin identity and became the independent superhero Nightwing. The team of Batman and Robin has commonly been referred to as the \"Caped Crusaders\" or \"Dynamic Duo\".",
+            "Bill Finger\nMilton \"Bill\" Finger (February 8, 1914 \u2013 January 18, 1974) was an American comic strip and comic book writer best known as the co-creator, with Bob Kane, of the DC Comics character Batman, and the co-architect of the series' development. Although Finger did not receive contemporaneous credit for his hand in the development of Batman, Kane acknowledged Finger's contributions years after Finger's death.",
+            "Batman in film\nThe fictional superhero Batman, who appears in American comic books published by DC Comics, has appeared in various films since his inception. Created by Bob Kane and Bill Finger, the character first starred in two serial films in the 1940s, \"Batman\" and \"Batman and Robin\". The character also appeared in the 1966 film \"Batman\", which was a feature film adaptation of the 1960s \"Batman\" TV series starring Adam West and Burt Ward, who also starred in the film. Toward the end of the 1980s, the Warner Bros. studio began producing a series of feature films starring Batman, beginning with the 1989 film \"Batman\", directed by Tim Burton and starring Michael Keaton. Burton and Keaton returned for the 1992 sequel \"Batman Returns\", and in 1995, Joel Schumacher directed \"Batman Forever\" with Val Kilmer as Batman. Schumacher also directed the 1997 sequel \"Batman & Robin\", which starred George Clooney. \"Batman & Robin\" was poorly received by both critics and fans, leading to the cancellation of \"Batman Unchained\".",
+            "Batman\nBatman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"Detective Comics\" #27 (1939). Originally named the \"Bat-Man\", the character is also referred to by such epithets as the Caped Crusader, the Dark Knight, and the World's Greatest Detective.",
+            "Joker (character)\nThe Joker is a fictional supervillain created by Bill Finger, Bob Kane, and Jerry Robinson who first appeared in the debut issue of the comic book \"Batman\" (April 25, 1940), published by DC Comics. Credit for the Joker's creation is disputed; Kane and Robinson claimed responsibility for the Joker's design, while acknowledging Finger's writing contribution. Although the Joker was planned to be killed off during his initial appearance, he was spared by editorial intervention, allowing the character to endure as the archenemy of the superhero Batman."
+        ],
+        "thoughts": [
+            "Characters from DC Comics that were created by Bob Kane include:\n- Scarecrow (Dr. Jonathan Crane)\n- Joe Chill\n- Batman\n- Two-Face (Harvey Dent)\n- Vicki Vale\n- Robin (Dick Grayson)\n\nIt is important to note that while Bob Kane is credited as the creator of Batman, there is ongoing debate and controversy over the extent of Bill Finger's contributions to the character's creation and development. Finger's role in the creation of Batman has been acknowledged posthumously.",
+            "Characters from DC Comics that were created by Bill Finger include:\n- Scarecrow (Dr. Jonathan Crane)\n- Joe Chill\n- Two-Face (Harvey Dent)\n- Vicki Vale\n- Robin (Dick Grayson)\n- Joker",
+            "The common characters created by both Bob Kane and Bill Finger for DC Comics are:\n- Scarecrow (Dr. Jonathan Crane)\n- Joe Chill\n- Two-Face (Harvey Dent)\n- Vicki Vale\n- Robin (Dick Grayson)",
+            "The common characters from Bob Kane and Bill Finger appeared in the Batman comic line or series. These characters include Scarecrow, Two-Face, Joe Chill, Vicki Vale, and Robin. They are all associated with the superhero Batman and have appeared in various Batman-related comic books published by DC Comics."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What line featured characters from a DC Comic creator by Bob Kane and Bill Finger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify which characters in DC Comics were created by Bob Kane.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify which characters in DC Comics were created by Bill Finger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the common characters that were created by both Bob Kane and Bill Finger.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which comic book line or series featured the characters identified in the previous step.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To find the comic line featuring characters created by Bob Kane and Bill Finger, we first need to identify which characters each one created. By intersecting these two sets, we can find characters co-created by both, which typically include fundamental Batman universe characters like Batman himself. Finally, we determine which comic lines or titles these characters appeared in, which would primarily be detective comics or Batman series."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Scarecrow (DC Comics)\nThe Scarecrow (Dr. Jonathan Crane) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"World's Finest Comics\" #3 (Fall 1941).",
+            "Two-Face\nTwo-Face (Harvey Dent) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by Bill Finger and Bob Kane and first appeared in \"Detective Comics\" #66 (Aug. 1942). As one of Batman's most enduring enemies, Two-Face belongs to the collective of adversaries that make up Batman's rogues gallery.",
+            "Joe Chill\nJoe Chill is a fictional character appearing in comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bill Finger and Bob Kane, the character first appeared in \"Detective Comics\" #33 (November 1939).",
+            "Vicki Vale\nVictoria \"Vicki\" Vale is a fictional character appearing in American comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bob Kane and Bill Finger, the character debuted in \"Batman\" #49 (October 1948). Vicky Vale is typically depicted as a romantic interest of Bruce Wayne, the alter-ego of Batman.",
+            "Robin (character)\nRobin is the name of several fictional superheroes appearing in American comic books published by DC Comics. The character was originally created by Bob Kane, Bill Finger, and Jerry Robinson, to serve as a junior counterpart to the superhero Batman. The character's first incarnation, Dick Grayson, debuted in \"Detective Comics\" #38 (April 1940). Conceived as a vehicle to attract young readership, Robin garnered overwhelmingly positive critical reception, doubling the sales of the Batman related comic books. The early adventures of Robin included \"Star Spangled Comics\" #65\u2013130 (1947\u20131952), which was the character's first solo feature. Robin made regular appearances in Batman related comic books and other DC Comics publications from 1940 through the early 1980s until the character set aside the Robin identity and became the independent superhero Nightwing. The team of Batman and Robin has commonly been referred to as the \"Caped Crusaders\" or \"Dynamic Duo\".",
+            "Bill Finger\nMilton \"Bill\" Finger (February 8, 1914 \u2013 January 18, 1974) was an American comic strip and comic book writer best known as the co-creator, with Bob Kane, of the DC Comics character Batman, and the co-architect of the series' development. Although Finger did not receive contemporaneous credit for his hand in the development of Batman, Kane acknowledged Finger's contributions years after Finger's death.",
+            "Batman\nBatman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"Detective Comics\" #27 (1939). Originally named the \"Bat-Man\", the character is also referred to by such epithets as the Caped Crusader, the Dark Knight, and the World's Greatest Detective.",
+            "Joker (character)\nThe Joker is a fictional supervillain created by Bill Finger, Bob Kane, and Jerry Robinson who first appeared in the debut issue of the comic book \"Batman\" (April 25, 1940), published by DC Comics. Credit for the Joker's creation is disputed; Kane and Robinson claimed responsibility for the Joker's design, while acknowledging Finger's writing contribution. Although the Joker was planned to be killed off during his initial appearance, he was spared by editorial intervention, allowing the character to endure as the archenemy of the superhero Batman."
+        ],
+        "thoughts": [
+            "The characters created by Bob Kane in DC Comics are:\n- Scarecrow (Dr. Jonathan Crane)\n- Joe Chill\n- Batman\n- Two-Face (Harvey Dent)\n- Vicki Vale\n- Robin (Dick Grayson)",
+            "The characters created by Bill Finger in DC Comics are:\n- The Scarecrow (Dr. Jonathan Crane)\n- Joe Chill\n- Two-Face (Harvey Dent)\n- Vicki Vale\n- Robin (Dick Grayson)\n- The Joker",
+            "The common characters created by both Bob Kane and Bill Finger in DC Comics are:\n- Scarecrow (Dr. Jonathan Crane)\n- Joe Chill\n- Two-Face (Harvey Dent)\n- Vicki Vale\n- Robin (Dick Grayson)",
+            "The characters Scarecrow, Two-Face, Joe Chill, Vicki Vale, Robin, Bill Finger, Batman, and the Joker are all associated with the DC Comics series featuring the superhero Batman."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What line featured characters from a DC Comic creator by Bob Kane and Bill Finger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the DC Comic characters created by Bob Kane.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the DC Comic characters created by Bill Finger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the common characters created by both Bob Kane and Bill Finger.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which DC Comic lines feature the characters identified in Node 3.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "This execution graph breaks down the question into steps that first require finding out which characters Bob Kane and Bill Finger created. Since they often collaborated, some characters may be co-creations. We therefore identify the overlap in these characters and then find the specific comic lines that these characters have appeared in. This approach addresses both the retrieval of factual information and the reasoning to establish connections between creators and comic lines."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Joe Chill\nJoe Chill is a fictional character appearing in comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bill Finger and Bob Kane, the character first appeared in \"Detective Comics\" #33 (November 1939).",
+            "Scarecrow (DC Comics)\nThe Scarecrow (Dr. Jonathan Crane) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"World's Finest Comics\" #3 (Fall 1941).",
+            "Bill Finger\nMilton \"Bill\" Finger (February 8, 1914 \u2013 January 18, 1974) was an American comic strip and comic book writer best known as the co-creator, with Bob Kane, of the DC Comics character Batman, and the co-architect of the series' development. Although Finger did not receive contemporaneous credit for his hand in the development of Batman, Kane acknowledged Finger's contributions years after Finger's death.",
+            "Two-Face\nTwo-Face (Harvey Dent) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by Bill Finger and Bob Kane and first appeared in \"Detective Comics\" #66 (Aug. 1942). As one of Batman's most enduring enemies, Two-Face belongs to the collective of adversaries that make up Batman's rogues gallery.",
+            "Vicki Vale\nVictoria \"Vicki\" Vale is a fictional character appearing in American comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bob Kane and Bill Finger, the character debuted in \"Batman\" #49 (October 1948). Vicky Vale is typically depicted as a romantic interest of Bruce Wayne, the alter-ego of Batman.",
+            "Batman\nBatman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"Detective Comics\" #27 (1939). Originally named the \"Bat-Man\", the character is also referred to by such epithets as the Caped Crusader, the Dark Knight, and the World's Greatest Detective.",
+            "Joker (character)\nThe Joker is a fictional supervillain created by Bill Finger, Bob Kane, and Jerry Robinson who first appeared in the debut issue of the comic book \"Batman\" (April 25, 1940), published by DC Comics. Credit for the Joker's creation is disputed; Kane and Robinson claimed responsibility for the Joker's design, while acknowledging Finger's writing contribution. Although the Joker was planned to be killed off during his initial appearance, he was spared by editorial intervention, allowing the character to endure as the archenemy of the superhero Batman.",
+            "Robin (character)\nRobin is the name of several fictional superheroes appearing in American comic books published by DC Comics. The character was originally created by Bob Kane, Bill Finger, and Jerry Robinson, to serve as a junior counterpart to the superhero Batman. The character's first incarnation, Dick Grayson, debuted in \"Detective Comics\" #38 (April 1940). Conceived as a vehicle to attract young readership, Robin garnered overwhelmingly positive critical reception, doubling the sales of the Batman related comic books. The early adventures of Robin included \"Star Spangled Comics\" #65\u2013130 (1947\u20131952), which was the character's first solo feature. Robin made regular appearances in Batman related comic books and other DC Comics publications from 1940 through the early 1980s until the character set aside the Robin identity and became the independent superhero Nightwing. The team of Batman and Robin has commonly been referred to as the \"Caped Crusaders\" or \"Dynamic Duo\".",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Red Queen (Through the Looking-Glass)\nThe Red Queen is a fictional character in Lewis Carroll's fantasy novel \"Through the Looking-Glass\". She is often confused with the Queen of Hearts from the previous book \"Alice's Adventures in Wonderland\", although the two are very different.",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "The Apple Tree\nThe Apple Tree is a series of three musical playlets with music by Jerry Bock, lyrics by Sheldon Harnick, and a book by Bock and Harnick with contributions from Jerome Coopersmith. Each act has its own storyline, but all three are tied together by a common theme (someone who believes that they want something, but once they get what they wanted they realize that it wasn't what they wanted) and common references, such as references to the color brown. The first act is based on Mark Twain's \"The Diary of Adam and Eve\"; the second act is based on Frank R. Stockton's \"The Lady or the Tiger?\"; the third act is based on Jules Feiffer's \"Passionella\". The working title for the evening of three musicals was \"Come Back! Go Away! I Love You!\"",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\".",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "The DC Comic characters created by Bob Kane are Tweedledum and Tweedledee, and the Red Queen from \"Through the Looking-Glass\".",
+            "Bill Finger is best known for co-creating the DC Comics characters Batman, Robin, and the Joker.",
+            "The common characters created by both Bob Kane and Bill Finger are Batman and Robin.",
+            "The characters identified in Node 3 are primarily associated with the Batman comic book line published by DC Comics. These characters include Joe Chill, Scarecrow, Two-Face, Vicki Vale, Batman, Joker, and Robin. They are all part of the Batman universe and have appeared in various Batman-related comic books."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What line featured characters from a DC Comic creator by Bob Kane and Bill Finger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify DC Comic creators associated with Bob Kane and Bill Finger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the characters created by Bob Kane and Bill Finger for DC Comics.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify comic book lines that feature characters created by Bob Kane and Bill Finger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "To determine what comic line features characters created by Bob Kane and Bill Finger, we begin by identifying them as relevant DC Comic creators. Next, we retrieve a list of characters they created. Lastly, we find the comic book lines that include these characters, giving us the answer to the question."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Bill Finger\nMilton \"Bill\" Finger (February 8, 1914 \u2013 January 18, 1974) was an American comic strip and comic book writer best known as the co-creator, with Bob Kane, of the DC Comics character Batman, and the co-architect of the series' development. Although Finger did not receive contemporaneous credit for his hand in the development of Batman, Kane acknowledged Finger's contributions years after Finger's death.",
+            "Joe Chill\nJoe Chill is a fictional character appearing in comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bill Finger and Bob Kane, the character first appeared in \"Detective Comics\" #33 (November 1939).",
+            "Scarecrow (DC Comics)\nThe Scarecrow (Dr. Jonathan Crane) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"World's Finest Comics\" #3 (Fall 1941).",
+            "Batman\nBatman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"Detective Comics\" #27 (1939). Originally named the \"Bat-Man\", the character is also referred to by such epithets as the Caped Crusader, the Dark Knight, and the World's Greatest Detective.",
+            "Joker (character)\nThe Joker is a fictional supervillain created by Bill Finger, Bob Kane, and Jerry Robinson who first appeared in the debut issue of the comic book \"Batman\" (April 25, 1940), published by DC Comics. Credit for the Joker's creation is disputed; Kane and Robinson claimed responsibility for the Joker's design, while acknowledging Finger's writing contribution. Although the Joker was planned to be killed off during his initial appearance, he was spared by editorial intervention, allowing the character to endure as the archenemy of the superhero Batman.",
+            "Vicki Vale\nVictoria \"Vicki\" Vale is a fictional character appearing in American comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bob Kane and Bill Finger, the character debuted in \"Batman\" #49 (October 1948). Vicky Vale is typically depicted as a romantic interest of Bruce Wayne, the alter-ego of Batman.",
+            "Two-Face\nTwo-Face (Harvey Dent) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by Bill Finger and Bob Kane and first appeared in \"Detective Comics\" #66 (Aug. 1942). As one of Batman's most enduring enemies, Two-Face belongs to the collective of adversaries that make up Batman's rogues gallery.",
+            "Robin (character)\nRobin is the name of several fictional superheroes appearing in American comic books published by DC Comics. The character was originally created by Bob Kane, Bill Finger, and Jerry Robinson, to serve as a junior counterpart to the superhero Batman. The character's first incarnation, Dick Grayson, debuted in \"Detective Comics\" #38 (April 1940). Conceived as a vehicle to attract young readership, Robin garnered overwhelmingly positive critical reception, doubling the sales of the Batman related comic books. The early adventures of Robin included \"Star Spangled Comics\" #65\u2013130 (1947\u20131952), which was the character's first solo feature. Robin made regular appearances in Batman related comic books and other DC Comics publications from 1940 through the early 1980s until the character set aside the Robin identity and became the independent superhero Nightwing. The team of Batman and Robin has commonly been referred to as the \"Caped Crusaders\" or \"Dynamic Duo\"."
+        ],
+        "thoughts": [
+            "Bob Kane and Bill Finger are associated with the creation of several iconic DC Comics characters and villains, including Batman, Two-Face, the Scarecrow, and the Joker. Additionally, they are credited with the creation of supporting characters such as Vicki Vale and Robin. Their collaborative work has had a significant impact on the Batman mythos and the DC Comics universe as a whole.",
+            "The characters created by Bob Kane and Bill Finger for DC Comics include:\n- Scarecrow (Dr. Jonathan Crane)\n- Joe Chill\n- Batman\n- Two-Face (Harvey Dent)\n- Vicki Vale\n- Joker\n- Robin (Dick Grayson)",
+            "1. \"Detective Comics\" #33 (November 1939) - Joe Chill\n2. \"World's Finest Comics\" #3 (Fall 1941) - Scarecrow (Dr. Jonathan Crane)\n3. \"Detective Comics\" #27 (1939) - Batman\n4. \"Batman\" (April 25, 1940) - Joker (character)\n5. \"Batman\" #49 (October 1948) - Vicki Vale\n6. \"Detective Comics\" #66 (Aug. 1942) - Two-Face\n7. \"Detective Comics\" #38 (April 1940) - Robin (character)"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What line featured characters from a DC Comic creator by Bob Kane and Bill Finger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the characters created by Bob Kane and Bill Finger for DC Comics.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on which comic book lines from DC Comics featured these characters.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The question asks for a comic line featuring characters created by Bob Kane and Bill Finger. The first step is to identify all the characters created by them, which primarily includes Batman and associated characters. Once these characters are identified, the next step is to find out which DC Comics lines prominently featured them to provide the final answer."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Vicki Vale\nVictoria \"Vicki\" Vale is a fictional character appearing in American comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bob Kane and Bill Finger, the character debuted in \"Batman\" #49 (October 1948). Vicky Vale is typically depicted as a romantic interest of Bruce Wayne, the alter-ego of Batman.",
+            "Joe Chill\nJoe Chill is a fictional character appearing in comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bill Finger and Bob Kane, the character first appeared in \"Detective Comics\" #33 (November 1939).",
+            "Scarecrow (DC Comics)\nThe Scarecrow (Dr. Jonathan Crane) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"World's Finest Comics\" #3 (Fall 1941).",
+            "Bill Finger\nMilton \"Bill\" Finger (February 8, 1914 \u2013 January 18, 1974) was an American comic strip and comic book writer best known as the co-creator, with Bob Kane, of the DC Comics character Batman, and the co-architect of the series' development. Although Finger did not receive contemporaneous credit for his hand in the development of Batman, Kane acknowledged Finger's contributions years after Finger's death.",
+            "Batman\nBatman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"Detective Comics\" #27 (1939). Originally named the \"Bat-Man\", the character is also referred to by such epithets as the Caped Crusader, the Dark Knight, and the World's Greatest Detective.",
+            "Two-Face\nTwo-Face (Harvey Dent) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by Bill Finger and Bob Kane and first appeared in \"Detective Comics\" #66 (Aug. 1942). As one of Batman's most enduring enemies, Two-Face belongs to the collective of adversaries that make up Batman's rogues gallery.",
+            "Joker (character)\nThe Joker is a fictional supervillain created by Bill Finger, Bob Kane, and Jerry Robinson who first appeared in the debut issue of the comic book \"Batman\" (April 25, 1940), published by DC Comics. Credit for the Joker's creation is disputed; Kane and Robinson claimed responsibility for the Joker's design, while acknowledging Finger's writing contribution. Although the Joker was planned to be killed off during his initial appearance, he was spared by editorial intervention, allowing the character to endure as the archenemy of the superhero Batman.",
+            "Robin (character)\nRobin is the name of several fictional superheroes appearing in American comic books published by DC Comics. The character was originally created by Bob Kane, Bill Finger, and Jerry Robinson, to serve as a junior counterpart to the superhero Batman. The character's first incarnation, Dick Grayson, debuted in \"Detective Comics\" #38 (April 1940). Conceived as a vehicle to attract young readership, Robin garnered overwhelmingly positive critical reception, doubling the sales of the Batman related comic books. The early adventures of Robin included \"Star Spangled Comics\" #65\u2013130 (1947\u20131952), which was the character's first solo feature. Robin made regular appearances in Batman related comic books and other DC Comics publications from 1940 through the early 1980s until the character set aside the Robin identity and became the independent superhero Nightwing. The team of Batman and Robin has commonly been referred to as the \"Caped Crusaders\" or \"Dynamic Duo\".",
+            "Robin Hood (DC Comics)\nRobin Hood is a fictional character, a comic book Outlaw published by DC Comics. Robin Hood debuted in \"New Adventure Comics\" vol. 1 #23 (January 1938), and was created by Sven Elven. The character is based on the legendary archer Robin Hood whose earliest recorded literary appearance was in William Langland's 14th century narrative poem, Piers Plowman. The character of Robin Hood was made popular by Howard Pyle's 19th century novel \"The Merry Adventures of Robin Hood\".",
+            "Batman in film\nThe fictional superhero Batman, who appears in American comic books published by DC Comics, has appeared in various films since his inception. Created by Bob Kane and Bill Finger, the character first starred in two serial films in the 1940s, \"Batman\" and \"Batman and Robin\". The character also appeared in the 1966 film \"Batman\", which was a feature film adaptation of the 1960s \"Batman\" TV series starring Adam West and Burt Ward, who also starred in the film. Toward the end of the 1980s, the Warner Bros. studio began producing a series of feature films starring Batman, beginning with the 1989 film \"Batman\", directed by Tim Burton and starring Michael Keaton. Burton and Keaton returned for the 1992 sequel \"Batman Returns\", and in 1995, Joel Schumacher directed \"Batman Forever\" with Val Kilmer as Batman. Schumacher also directed the 1997 sequel \"Batman & Robin\", which starred George Clooney. \"Batman & Robin\" was poorly received by both critics and fans, leading to the cancellation of \"Batman Unchained\"."
+        ],
+        "thoughts": [
+            "The characters created by Bob Kane and Bill Finger for DC Comics include:\n- Scarecrow (Dr. Jonathan Crane)\n- Joe Chill\n- Batman\n- Vicki Vale\n- Two-Face (Harvey Dent)\n- Joker\n- Robin (Dick Grayson)",
+            "Vicki Vale: Featured in various Batman comic book lines, including \"Batman\" and \"Detective Comics\".\n\nJoe Chill: Featured in \"Detective Comics\".\n\nScarecrow: Featured in various Batman comic book lines, including \"World's Finest Comics\".\n\nJoker: Featured in \"Batman\" and various other Batman-related comic book lines.\n\nRobin: Featured in \"Detective Comics\", \"Star Spangled Comics\", and various other Batman-related comic book lines.\n\nTwo-Face: Featured in \"Detective Comics\" and various other Batman-related comic book lines.\n\nRobin Hood: Featured in \"New Adventure Comics\".\n\nBatman in film: Batman has appeared in various films, including \"Batman\", \"Batman and Robin\", \"Batman Returns\", \"Batman Forever\", and \"Batman & Robin\"."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What line featured characters from a DC Comic creator by Bob Kane and Bill Finger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify DC Comics characters created by Bob Kane.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify DC Comics characters created by Bill Finger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine characters from DC Comics that are created by both Bob Kane and Bill Finger.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify comic lines that feature the characters identified in Node 3.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph involves first identifying distinct characters created by Bob Kane and Bill Finger. These steps are independent and can happen in parallel. Once we have the character lists, reasoning is used to determine which characters were collaboratively created by both individuals. Finally, we retrieve the comic lines where these characters appear, leading to identifying the line featuring Bob Kane and Bill Finger's shared creations."
+        },
+        "recall": 0.2777777777777778,
+        "retrieved_passages": [
+            "Scarecrow (DC Comics)\nThe Scarecrow (Dr. Jonathan Crane) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"World's Finest Comics\" #3 (Fall 1941).",
+            "Joe Chill\nJoe Chill is a fictional character appearing in comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bill Finger and Bob Kane, the character first appeared in \"Detective Comics\" #33 (November 1939).",
+            "Batman\nBatman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"Detective Comics\" #27 (1939). Originally named the \"Bat-Man\", the character is also referred to by such epithets as the Caped Crusader, the Dark Knight, and the World's Greatest Detective.",
+            "Two-Face\nTwo-Face (Harvey Dent) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by Bill Finger and Bob Kane and first appeared in \"Detective Comics\" #66 (Aug. 1942). As one of Batman's most enduring enemies, Two-Face belongs to the collective of adversaries that make up Batman's rogues gallery.",
+            "Vicki Vale\nVictoria \"Vicki\" Vale is a fictional character appearing in American comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bob Kane and Bill Finger, the character debuted in \"Batman\" #49 (October 1948). Vicky Vale is typically depicted as a romantic interest of Bruce Wayne, the alter-ego of Batman.",
+            "Bill Finger\nMilton \"Bill\" Finger (February 8, 1914 \u2013 January 18, 1974) was an American comic strip and comic book writer best known as the co-creator, with Bob Kane, of the DC Comics character Batman, and the co-architect of the series' development. Although Finger did not receive contemporaneous credit for his hand in the development of Batman, Kane acknowledged Finger's contributions years after Finger's death.",
+            "Robin (character)\nRobin is the name of several fictional superheroes appearing in American comic books published by DC Comics. The character was originally created by Bob Kane, Bill Finger, and Jerry Robinson, to serve as a junior counterpart to the superhero Batman. The character's first incarnation, Dick Grayson, debuted in \"Detective Comics\" #38 (April 1940). Conceived as a vehicle to attract young readership, Robin garnered overwhelmingly positive critical reception, doubling the sales of the Batman related comic books. The early adventures of Robin included \"Star Spangled Comics\" #65\u2013130 (1947\u20131952), which was the character's first solo feature. Robin made regular appearances in Batman related comic books and other DC Comics publications from 1940 through the early 1980s until the character set aside the Robin identity and became the independent superhero Nightwing. The team of Batman and Robin has commonly been referred to as the \"Caped Crusaders\" or \"Dynamic Duo\".",
+            "Joker (character)\nThe Joker is a fictional supervillain created by Bill Finger, Bob Kane, and Jerry Robinson who first appeared in the debut issue of the comic book \"Batman\" (April 25, 1940), published by DC Comics. Credit for the Joker's creation is disputed; Kane and Robinson claimed responsibility for the Joker's design, while acknowledging Finger's writing contribution. Although the Joker was planned to be killed off during his initial appearance, he was spared by editorial intervention, allowing the character to endure as the archenemy of the superhero Batman.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Job sharing\nJob sharing or work sharing is an employment arrangement where typically two people are retained on a part-time or reduced-time basis to perform a job normally fulfilled by one person working full-time. Since all positions are shared thus leads to a net reduction in per-employee income. The people sharing the job work as a team to complete the job task and are equally responsible for the job workload. Compensation is apportioned between the workers, Working hours, pay and holidays are divided equally. The Pay As You Go system helps make deductions for national insurance and superannuations are made as a straightforward percentage.",
+            "Batman in film\nThe fictional superhero Batman, who appears in American comic books published by DC Comics, has appeared in various films since his inception. Created by Bob Kane and Bill Finger, the character first starred in two serial films in the 1940s, \"Batman\" and \"Batman and Robin\". The character also appeared in the 1966 film \"Batman\", which was a feature film adaptation of the 1960s \"Batman\" TV series starring Adam West and Burt Ward, who also starred in the film. Toward the end of the 1980s, the Warner Bros. studio began producing a series of feature films starring Batman, beginning with the 1989 film \"Batman\", directed by Tim Burton and starring Michael Keaton. Burton and Keaton returned for the 1992 sequel \"Batman Returns\", and in 1995, Joel Schumacher directed \"Batman Forever\" with Val Kilmer as Batman. Schumacher also directed the 1997 sequel \"Batman & Robin\", which starred George Clooney. \"Batman & Robin\" was poorly received by both critics and fans, leading to the cancellation of \"Batman Unchained\".",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Batman v Superman: Dawn of Justice\nBatman v Superman: Dawn of Justice is a 2016 American superhero film featuring the DC Comics characters Batman and Superman. Directed by Zack Snyder and distributed by Warner Bros. Pictures, the film is the second installment in the DC Extended Universe (DCEU) following 2013's \"Man of Steel\". It was written by Chris Terrio and David S. Goyer, and features an ensemble cast that includes Ben Affleck, Henry Cavill, Amy Adams, Jesse Eisenberg, Diane Lane, Laurence Fishburne, Jeremy Irons, Holly Hunter and Gal Gadot. \"Batman v Superman: Dawn of Justice\" is the first live-action film to feature Batman and Superman together, as well as the first live-action cinematic portrayal of Wonder Woman, Aquaman, Flash and Cyborg. In the film, criminal mastermind Lex Luthor manipulates Batman into a preemptive battle with Superman, whom Luthor is obsessed with defeating.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Red Queen (Through the Looking-Glass)\nThe Red Queen is a fictional character in Lewis Carroll's fantasy novel \"Through the Looking-Glass\". She is often confused with the Queen of Hearts from the previous book \"Alice's Adventures in Wonderland\", although the two are very different."
+        ],
+        "thoughts": [
+            "Bob Kane is best known for creating the iconic DC Comics character Batman.",
+            "The DC Comics characters created by Bill Finger are:\n- Scarecrow\n- Joe Chill\n- Batman\n- Two-Face\n- Vicki Vale\n- Robin\n- Joker",
+            "The character created by both Bob Kane and Bill Finger is Batman.",
+            "- \"Batman\" #49 (October 1948) - Vicki Vale's debut\n- \"Detective Comics\" #38 (April 1940) - Robin's debut\n- \"Detective Comics\" #27 (1939) - Batman's debut\n- \"Batman\" (April 25, 1940) - The Joker's debut"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What line featured characters from a DC Comic creator by Bob Kane and Bill Finger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify notable characters created by Bob Kane and Bill Finger for DC Comics.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify comic book lines that feature characters created by Bob Kane.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify comic book lines that feature characters created by Bill Finger.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Find common comic book lines from the results of both nodes 2 and 3 that feature characters created by Bob Kane and Bill Finger.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Verify if common lines from node 4 were indeed deliberately featuring characters known to have been created by Bob Kane and Bill Finger.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to first retrieve the specific characters Bob Kane and Bill Finger created. Parallel processes identify the comic book lines where these characters appear. The reasoning steps then cross-reference these lines to find overlaps. Finally, it verifies that these common lines were intentionally designed to feature characters from both creators."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Scarecrow (DC Comics)\nThe Scarecrow (Dr. Jonathan Crane) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"World's Finest Comics\" #3 (Fall 1941).",
+            "Joe Chill\nJoe Chill is a fictional character appearing in comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bill Finger and Bob Kane, the character first appeared in \"Detective Comics\" #33 (November 1939).",
+            "Bill Finger\nMilton \"Bill\" Finger (February 8, 1914 \u2013 January 18, 1974) was an American comic strip and comic book writer best known as the co-creator, with Bob Kane, of the DC Comics character Batman, and the co-architect of the series' development. Although Finger did not receive contemporaneous credit for his hand in the development of Batman, Kane acknowledged Finger's contributions years after Finger's death.",
+            "Batman\nBatman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"Detective Comics\" #27 (1939). Originally named the \"Bat-Man\", the character is also referred to by such epithets as the Caped Crusader, the Dark Knight, and the World's Greatest Detective.",
+            "Two-Face\nTwo-Face (Harvey Dent) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by Bill Finger and Bob Kane and first appeared in \"Detective Comics\" #66 (Aug. 1942). As one of Batman's most enduring enemies, Two-Face belongs to the collective of adversaries that make up Batman's rogues gallery.",
+            "Vicki Vale\nVictoria \"Vicki\" Vale is a fictional character appearing in American comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bob Kane and Bill Finger, the character debuted in \"Batman\" #49 (October 1948). Vicky Vale is typically depicted as a romantic interest of Bruce Wayne, the alter-ego of Batman.",
+            "Joker (character)\nThe Joker is a fictional supervillain created by Bill Finger, Bob Kane, and Jerry Robinson who first appeared in the debut issue of the comic book \"Batman\" (April 25, 1940), published by DC Comics. Credit for the Joker's creation is disputed; Kane and Robinson claimed responsibility for the Joker's design, while acknowledging Finger's writing contribution. Although the Joker was planned to be killed off during his initial appearance, he was spared by editorial intervention, allowing the character to endure as the archenemy of the superhero Batman.",
+            "Robin (character)\nRobin is the name of several fictional superheroes appearing in American comic books published by DC Comics. The character was originally created by Bob Kane, Bill Finger, and Jerry Robinson, to serve as a junior counterpart to the superhero Batman. The character's first incarnation, Dick Grayson, debuted in \"Detective Comics\" #38 (April 1940). Conceived as a vehicle to attract young readership, Robin garnered overwhelmingly positive critical reception, doubling the sales of the Batman related comic books. The early adventures of Robin included \"Star Spangled Comics\" #65\u2013130 (1947\u20131952), which was the character's first solo feature. Robin made regular appearances in Batman related comic books and other DC Comics publications from 1940 through the early 1980s until the character set aside the Robin identity and became the independent superhero Nightwing. The team of Batman and Robin has commonly been referred to as the \"Caped Crusaders\" or \"Dynamic Duo\".",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Mursm\u00e4cka\nMursm\u00e4cka, also called \"bruksm\u00e4cka\" or only \"sm\u00e4cka\", was an historical profession for women in Sweden. A mursm\u00e4cka was a female construction worker with the task to hand mortar during construction work. The profession is recorded from at least 1691 (though it is not confirmed by name until the 1830s) and discontinued in 1922. This was a very hard but common work for a poor uneducated women during the 19th century, particularly in Stockholm. In July 1888, the Mursm\u00e4cka of Stockholm performed a great strike action which attracted considerable attention in contemporary Sweden.",
+            "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War."
+        ],
+        "thoughts": [
+            "Notable characters created by Bob Kane and Bill Finger for DC Comics include:\n1. Scarecrow (Dr. Jonathan Crane)\n2. Joe Chill\n3. Batman\n4. Two-Face (Harvey Dent)\n5. Vicki Vale\n6. The Joker\n7. Robin (Dick Grayson)",
+            "There are no comic book lines mentioned in the provided text that feature characters created by Bob Kane.",
+            "There are no comic book lines mentioned in the provided text that feature characters created by Bill Finger.",
+            "Since there are no comic book lines mentioned in the provided text that feature characters created by Bob Kane and Bill Finger, we are unable to find common comic book lines from the results of both nodes 2 and 3.",
+            "Based on the results of the upstream tasks, it is verified that there are no common lines from node 4 that deliberately feature characters known to have been created by Bob Kane and Bill Finger. Therefore, it can be concluded that the characters mentioned in the common lines from node 4 were not deliberately featuring characters created by Bob Kane and Bill Finger."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What line featured characters from a DC Comic creator by Bob Kane and Bill Finger?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify characters created by Bob Kane and Bill Finger for DC Comics.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Analyze which comic book lines these characters have appeared in over time.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify DC comic lines from the information analyzed in previous steps.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins with a retrieval step (1) to gather information on characters created by Bob Kane and Bill Finger. The subsequent steps involve reasoning to determine the specific comic lines (2 and 3) these characters are featured in. 2 involves analyzing various comic lines where these characters could have appeared, and the final node (3) synthesizes this information to provide a list or line of comics associated with these characters."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Scarecrow (DC Comics)\nThe Scarecrow (Dr. Jonathan Crane) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"World's Finest Comics\" #3 (Fall 1941).",
+            "Joe Chill\nJoe Chill is a fictional character appearing in comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bill Finger and Bob Kane, the character first appeared in \"Detective Comics\" #33 (November 1939).",
+            "Bill Finger\nMilton \"Bill\" Finger (February 8, 1914 \u2013 January 18, 1974) was an American comic strip and comic book writer best known as the co-creator, with Bob Kane, of the DC Comics character Batman, and the co-architect of the series' development. Although Finger did not receive contemporaneous credit for his hand in the development of Batman, Kane acknowledged Finger's contributions years after Finger's death.",
+            "Batman\nBatman is a fictional superhero appearing in American comic books published by DC Comics. The character was created by artist Bob Kane and writer Bill Finger, and first appeared in \"Detective Comics\" #27 (1939). Originally named the \"Bat-Man\", the character is also referred to by such epithets as the Caped Crusader, the Dark Knight, and the World's Greatest Detective.",
+            "Two-Face\nTwo-Face (Harvey Dent) is a fictional supervillain appearing in American comic books published by DC Comics, commonly as an adversary of the superhero Batman. The character was created by Bill Finger and Bob Kane and first appeared in \"Detective Comics\" #66 (Aug. 1942). As one of Batman's most enduring enemies, Two-Face belongs to the collective of adversaries that make up Batman's rogues gallery.",
+            "Vicki Vale\nVictoria \"Vicki\" Vale is a fictional character appearing in American comic books published by DC Comics, commonly in association with the superhero Batman. Created by Bob Kane and Bill Finger, the character debuted in \"Batman\" #49 (October 1948). Vicky Vale is typically depicted as a romantic interest of Bruce Wayne, the alter-ego of Batman.",
+            "Joker (character)\nThe Joker is a fictional supervillain created by Bill Finger, Bob Kane, and Jerry Robinson who first appeared in the debut issue of the comic book \"Batman\" (April 25, 1940), published by DC Comics. Credit for the Joker's creation is disputed; Kane and Robinson claimed responsibility for the Joker's design, while acknowledging Finger's writing contribution. Although the Joker was planned to be killed off during his initial appearance, he was spared by editorial intervention, allowing the character to endure as the archenemy of the superhero Batman.",
+            "Robin (character)\nRobin is the name of several fictional superheroes appearing in American comic books published by DC Comics. The character was originally created by Bob Kane, Bill Finger, and Jerry Robinson, to serve as a junior counterpart to the superhero Batman. The character's first incarnation, Dick Grayson, debuted in \"Detective Comics\" #38 (April 1940). Conceived as a vehicle to attract young readership, Robin garnered overwhelmingly positive critical reception, doubling the sales of the Batman related comic books. The early adventures of Robin included \"Star Spangled Comics\" #65\u2013130 (1947\u20131952), which was the character's first solo feature. Robin made regular appearances in Batman related comic books and other DC Comics publications from 1940 through the early 1980s until the character set aside the Robin identity and became the independent superhero Nightwing. The team of Batman and Robin has commonly been referred to as the \"Caped Crusaders\" or \"Dynamic Duo\"."
+        ],
+        "thoughts": [
+            "The characters created by Bob Kane and Bill Finger for DC Comics include:\n- Scarecrow (Dr. Jonathan Crane)\n- Joe Chill\n- Batman\n- Two-Face (Harvey Dent)\n- Vicki Vale\n- Joker\n- Robin (Dick Grayson)",
+            "The characters created by Bob Kane and Bill Finger for DC Comics have appeared in various comic book lines over time. Batman, Robin, Joker, Scarecrow, Two-Face, and Vicki Vale have been featured in numerous Batman comic book series, including \"Batman,\" \"Detective Comics,\" \"Batman: The Dark Knight,\" \"Batman: Legends of the Dark Knight,\" and many others. Additionally, these characters have also appeared in crossover events and team-up series such as \"Justice League,\" \"Teen Titans,\" and \"Gotham City Sirens.\" Joe Chill, the character responsible for the murder of Bruce Wayne's parents, has appeared in various Batman storylines and flashback sequences. Overall, these characters have been integral to the Batman mythos and have been featured in a wide range of comic book lines over the years.",
+            "The identified DC comic lines from the analyzed information are \"Batman,\" \"Detective Comics,\" \"Batman: The Dark Knight,\" \"Batman: Legends of the Dark Knight,\" \"Justice League,\" \"Teen Titans,\" and \"Gotham City Sirens.\" These comic book lines have featured characters created by Bob Kane and Bill Finger for DC Comics, including Batman, Robin, Joker, Scarecrow, Two-Face, Vicki Vale, and Joe Chill."
+        ],
+        "is_best": false
+    }
+]

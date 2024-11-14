@@ -1,0 +1,634 @@
+[
+    {
+        "question": "Are Chlidanthus and Maianthemum both flowering plants?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve scientific classification for Chlidanthus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve scientific classification for Maianthemum.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Check if Chlidanthus is classified as a flowering plant based on its scientific classification.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Check if Maianthemum is classified as a flowering plant based on its scientific classification.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Determine if both Chlidanthus and Maianthemum are flowering plants.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph begins with separate retrieval and reasoning nodes to obtain and verify the scientific classification of Chlidanthus and Maianthemum (nodes 1 and 2). These steps are independent and hence parallelized. Subsequent nodes (3 and 4) involve reasoning processes where each plant's classification is checked to see if it is a flowering plant. The final node (5) aggregates the results to determine if both plants belong to the category of flowering plants."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Maianthemum\nMaianthemum (Latin \"M\u0101ia \" \"May\" and Greek \"\u00e1nthemon \" \"flower\"; including former \"Smilacina\") is a genus of rhizomatous, herbaceous, perennial flowering plants, native to the understory of woodlands. It is widespread across much of North America, Europe and Asia.",
+            "Chlidanthus\nChlidanthus is a genus that consists of 10 species of tender bulbs from tropical South America, mostly natives to the Andes. The botanical name comes from the Greek, meaning \"delicate flower\". The plants have large spherical bulbs with gray-green, strap-shaped leaves 30cm long arising from the base. In late spring to early summer, clusters of 3-4 large, strong citrus-scented fragrant, funnel-shaped flowers 10-13cm long held terminally on stalks 25cm high, colored in yellow, pink or red.",
+            "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+            "Ardipithecus kadabba\nArdipithecus kadabba is the scientific classification given to fossil remains \"known only from teeth and bits and pieces of skeletal bones,\" originally estimated to be 5.8 to 5.2 million years old, and later revised to 5.77 to 5.54 million years. According to the first description, these fossils are close to the common ancestor of chimps and humans. Their development lines are estimated to have parted 6.5\u20135.5 million years ago. It has been described as a \"probable chronospecies\" (i.e. ancestor) of \"A. ramidus\". Although originally considered a subspecies of \"A. ramidus\", in 2004 anthropologists Yohannes Haile-Selassie, Gen Suwa, and Tim D. White published an article elevating \"A. kadabba\" to species level on the basis of newly discovered teeth from Ethiopia. These teeth show \"primitive morphology and wear pattern\" which demonstrate that \"A. kadabba\" is a distinct species from \"A. ramidus\".",
+            "Taxonomy of the Cactaceae\nIn 1984, the International Organization for Succulent Plant Study set up a working party, now called the International Cactaceae Systematics Group, to produce a consensus classification of the cactus family, down to the level of genus. Their classification has been used as the basis for systems published since the mid-1990s. Treatments in the 21st century have generally divided the family into around 125\u2013130 genera and 1,400\u20131,500 species, which are then arranged in a number of tribes and subfamilies. However, subsequent molecular phylogenetic studies have shown that a very high proportion of the higher taxa (genera, tribes and subfamilies) are not monophyletic, i.e. they do not contain all of the descendants of a common ancestor. , the internal classification of the family Cactaceae remained uncertain and subject to change. A classification incorporating many of the insights from the molecular studies was produced by Nyffeler and Eggli in 2010.",
+            "Dissolved organic carbon\nDissolved organic carbon (DOC), sometimes known as dissolved organic material (DOM), is a broad classification for organic molecules of varied origin and composition within aquatic systems. The \"dissolved\" fraction of organic carbon is an operational classification. Many researchers use the term \"dissolved\" for compounds below 0.45 micrometers, but 0.22 micrometers is also common, saving colloidal for higher concentrations. A practical definition of dissolved typically used in marine chemistry is all substances that pass through a GF/F filter. The recommended measure technique is the HTCO technique after filtration on precombusted glass fiber filters, typically GF/F filters.",
+            "Compact car\nA compact car (North America), or small family car in British acceptation, is a classification of cars that are larger than a subcompact car but smaller than a mid-size car, roughly equivalent to the C-segment in Europe.",
+            "Pimelea arenaria\nPimelea arenaria, also known as Pimelea villosa, is a species of shrub in the family Thymelaeaceae. It is endemic to New Zealand. Its conservation status puts it at risk and declining, as determined by the New Zealand Threat Classification System (NZTCS)."
+        ],
+        "thoughts": [
+            "Scientific classification for Chlidanthus:\n- Kingdom: Plantae\n- Clade: Tracheophytes\n- Clade: Angiosperms\n- Clade: Monocots\n- Order: Asparagales\n- Family: Amaryllidaceae\n- Subfamily: Amaryllidoideae\n- Genus: Chlidanthus",
+            "Based on the scientific classification, Chlidanthus is classified under the Kingdom Plantae, Clade Angiosperms, which are flowering plants. Therefore, Chlidanthus is classified as a flowering plant.",
+            "Scientific classification for Maianthemum:\n- Kingdom: Plantae\n- Clade: Tracheophytes\n- Clade: Angiosperms\n- Clade: Monocots\n- Order: Liliales\n- Family: Asparagaceae\n- Subfamily: Nolinoideae\n- Genus: Maianthemum",
+            "Yes, Maianthemum is classified as a flowering plant based on its scientific classification. It belongs to the clade of angiosperms, which are flowering plants.",
+            "Both Chlidanthus and Maianthemum are classified as flowering plants based on their scientific classification. Therefore, both Chlidanthus and Maianthemum are indeed flowering plants."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Chlidanthus and Maianthemum both flowering plants?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine the taxonomic classification of Chlidanthus, specifically if it belongs to the group of flowering plants.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the taxonomic classification of Maianthemum, specifically if it belongs to the group of flowering plants.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the classification results for Chlidanthus to conclude if it is a flowering plant.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the classification results for Maianthemum to conclude if it is a flowering plant.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Evaluate the conclusions regarding Chlidanthus and Maianthemum to determine if both are flowering plants.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to address the question by first retrieving and reasoning about the taxonomic classification of both Chlidanthus and Maianthemum separately. These steps determine whether each genus belongs to the category of flowering plants (angiosperms). Then, the graph synthesizes these conclusions to answer the original question by comparing the results of both analyses to see if both are indeed flowering plants."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Maianthemum\nMaianthemum (Latin \"M\u0101ia \" \"May\" and Greek \"\u00e1nthemon \" \"flower\"; including former \"Smilacina\") is a genus of rhizomatous, herbaceous, perennial flowering plants, native to the understory of woodlands. It is widespread across much of North America, Europe and Asia.",
+            "Austrobaileyales\nAustrobaileyales is an order of flowering plants, consisting of about 100 species of woody plants growing as trees, shrubs and lianas. Perhaps the most familiar species is \"Illicium verum\", from which comes the spice star anise. The order belongs to the group of basal angiosperms, the ANA grade, which diverged earlier from the remaining flowering plants, and, as such, it is the extant group after the Amborellales and Nymphaeales, that is sister to all remaining extant angiosperms outside of the ANA grade. The order includes just three families of flowering plants, the Austrobaileyaceae, a monotypic family containing the sole genus, \"Austrobaileya scandens\", a woody liana, the Schisandraceae, a family of trees, shrubs, or lianas containing essential oils, and the Trimeniaceae, essential oil-bearing trees and lianas.",
+            "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006).",
+            "Pterostylis barringtonensis\nPterostylis barringtonensis, commonly known as the Barrington leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to New South Wales. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves on a short stalk but the flowering plants lack a rosette and have up to seven dark green flowers on a flowering stem with stem leaves. It is only known from Barrington Tops National Park.",
+            "Rhodostemonodaphne\nRhodostemonodaphne is a genus of flowering plants in the family Lauraceae. It is a neotropical genus consisting of approximately 41 species occurring in Central America and northern South America. This genus has many species that are valued for timber. The classification of the genus is unclear since the species in the genus fall into a well-supported but unresolved clade that also includes species with unisexual flowers currently placed in the genera \"Endlicheria\" and part of \"Ocotea\".",
+            "Pterostylis crassa\nPterostylis crassa, commonly known as the coarse leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to Victoria. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves on a short stalk but the flowering plants have up to four relatively large, shiny dark green translucent flowers on a flowering stem with stem leaves.",
+            "Pterostylis diminuta\nPterostylis diminuta, commonly known as the small-flowered leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to Victoria. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves flat on the ground but the flowering plants have up to twelve small, partly green, partly translucent flowers and lack a rosette.",
+            "Pterostylis chocolatina\nPterostylis chocolatina, commonly known as the chocolate-lip leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to New South Wales. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves on a short stalk but the flowering plants lack a rosette and have up to thirteen green flowers on a flowering stem with stem leaves. The labellum is dark brown with a blackish lump near its base.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "Chlidanthus is a genus of flowering plants in the family Amaryllidaceae. Therefore, it belongs to the group of flowering plants.",
+            "Based on the classification results, Chlidanthus is indeed a flowering plant. This conclusion is supported by the fact that it belongs to the genus of flowering plants in the family Amaryllidaceae. Therefore, it can be confidently categorized as a flowering plant.",
+            "Maianthemum is a genus of rhizomatous, herbaceous, perennial flowering plants, indicating that it belongs to the group of flowering plants.",
+            "Based on the classification results, Maianthemum is indeed a flowering plant. The genus is described as rhizomatous, herbaceous, and perennial, all of which are characteristics commonly associated with flowering plants. Therefore, it can be concluded that Maianthemum is a flowering plant.",
+            "Based on the conclusions from the upstream tasks, both Chlidanthus and Maianthemum are indeed classified as flowering plants. Therefore, it can be determined that both Chlidanthus and Maianthemum are flowering plants."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Chlidanthus and Maianthemum both flowering plants?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine if Chlidanthus is a flowering plant.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine if Maianthemum is a flowering plant.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine the information on whether both Chlidanthus and Maianthemum are flowering plants and conclude if both are.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The question requires identifying whether two distinct genera, Chlidanthus and Maianthemum, are both classified as flowering plants. The graph starts with two parallel retrieval and reasoning steps where information about each genus and its classification within the plant kingdom is gathered. Each step independently verifies the classification status of Chlidanthus and Maianthemum as flowering plants. Finally, the information is synthesized in a reasoning step that concludes whether both genera are indeed flowering plants based on the results of the previous steps."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Maianthemum\nMaianthemum (Latin \"M\u0101ia \" \"May\" and Greek \"\u00e1nthemon \" \"flower\"; including former \"Smilacina\") is a genus of rhizomatous, herbaceous, perennial flowering plants, native to the understory of woodlands. It is widespread across much of North America, Europe and Asia.",
+            "Chlidanthus\nChlidanthus is a genus that consists of 10 species of tender bulbs from tropical South America, mostly natives to the Andes. The botanical name comes from the Greek, meaning \"delicate flower\". The plants have large spherical bulbs with gray-green, strap-shaped leaves 30cm long arising from the base. In late spring to early summer, clusters of 3-4 large, strong citrus-scented fragrant, funnel-shaped flowers 10-13cm long held terminally on stalks 25cm high, colored in yellow, pink or red.",
+            "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+            "Taxonomy of the Cactaceae\nIn 1984, the International Organization for Succulent Plant Study set up a working party, now called the International Cactaceae Systematics Group, to produce a consensus classification of the cactus family, down to the level of genus. Their classification has been used as the basis for systems published since the mid-1990s. Treatments in the 21st century have generally divided the family into around 125\u2013130 genera and 1,400\u20131,500 species, which are then arranged in a number of tribes and subfamilies. However, subsequent molecular phylogenetic studies have shown that a very high proportion of the higher taxa (genera, tribes and subfamilies) are not monophyletic, i.e. they do not contain all of the descendants of a common ancestor. , the internal classification of the family Cactaceae remained uncertain and subject to change. A classification incorporating many of the insights from the molecular studies was produced by Nyffeler and Eggli in 2010.",
+            "Dissolved organic carbon\nDissolved organic carbon (DOC), sometimes known as dissolved organic material (DOM), is a broad classification for organic molecules of varied origin and composition within aquatic systems. The \"dissolved\" fraction of organic carbon is an operational classification. Many researchers use the term \"dissolved\" for compounds below 0.45 micrometers, but 0.22 micrometers is also common, saving colloidal for higher concentrations. A practical definition of dissolved typically used in marine chemistry is all substances that pass through a GF/F filter. The recommended measure technique is the HTCO technique after filtration on precombusted glass fiber filters, typically GF/F filters.",
+            "Pimelea arenaria\nPimelea arenaria, also known as Pimelea villosa, is a species of shrub in the family Thymelaeaceae. It is endemic to New Zealand. Its conservation status puts it at risk and declining, as determined by the New Zealand Threat Classification System (NZTCS).",
+            "Compact car\nA compact car (North America), or small family car in British acceptation, is a classification of cars that are larger than a subcompact car but smaller than a mid-size car, roughly equivalent to the C-segment in Europe.",
+            "Prehypertension\nPrehypertension, also known as high normal blood pressure, is an American medical classification for cases where a person's blood pressure is elevated above normal, but not to the level considered hypertension (high blood pressure). Prehypertension is blood pressure readings with a systolic pressure from 120 to 139\u00a0mm Hg or a diastolic pressure from 80 to 89\u00a0mm Hg. Readings greater than or equal to 140/90\u00a0mm Hg are considered hypertension. Classification of blood pressure is based upon two or more readings at two or more separate occasions separated by at least one week. The seventh report of the Joint National Committee (JNC 7) proposed the new labeling for elevated blood pressure values below 140/90 to more accurately communicate the tendency of blood pressure to rise with age.",
+            "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006)."
+        ],
+        "thoughts": [
+            "Chlidanthus is a flowering plant, as it is described as having large, fragrant, funnel-shaped flowers in the relevant information provided.",
+            "Yes, Maianthemum is a flowering plant. It is a genus of rhizomatous, herbaceous, perennial flowering plants, native to the understory of woodlands.",
+            "Based on the information from the upstream tasks, both Chlidanthus and Maianthemum are indeed flowering plants."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Are Chlidanthus and Maianthemum both flowering plants?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information on whether Chlidanthus is a flowering plant.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on whether Maianthemum is a flowering plant.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the retrieved information on Chlidanthus and Maianthemum to determine if both are flowering plants.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts with two retrieval nodes, one for each plant genus\u2014Chlidanthus and Maianthemum. The goal is to gather information on whether each genus consists of flowering plants. These are parallel steps as they are independent from each other. After retrieving the necessary information, a reasoning step follows to analyze and compare the information to conclude if both are flowering plants. The final node synthesizes this analysis to address the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Maianthemum\nMaianthemum (Latin \"M\u0101ia \" \"May\" and Greek \"\u00e1nthemon \" \"flower\"; including former \"Smilacina\") is a genus of rhizomatous, herbaceous, perennial flowering plants, native to the understory of woodlands. It is widespread across much of North America, Europe and Asia.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Pterostylis crassa\nPterostylis crassa, commonly known as the coarse leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to Victoria. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves on a short stalk but the flowering plants have up to four relatively large, shiny dark green translucent flowers on a flowering stem with stem leaves.",
+            "Pterostylis diminuta\nPterostylis diminuta, commonly known as the small-flowered leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to Victoria. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves flat on the ground but the flowering plants have up to twelve small, partly green, partly translucent flowers and lack a rosette.",
+            "Pterostylis chocolatina\nPterostylis chocolatina, commonly known as the chocolate-lip leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to New South Wales. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves on a short stalk but the flowering plants lack a rosette and have up to thirteen green flowers on a flowering stem with stem leaves. The labellum is dark brown with a blackish lump near its base.",
+            "Pterostylis barringtonensis\nPterostylis barringtonensis, commonly known as the Barrington leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to New South Wales. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves on a short stalk but the flowering plants lack a rosette and have up to seven dark green flowers on a flowering stem with stem leaves. It is only known from Barrington Tops National Park.",
+            "Pterostylis lineata\nPterostylis lineata, commonly known as the Blue Mountains leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to New South Wales. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves on a short stalk but the flowering plants lack a rosette and have up to seven dark green flowers with translucent \"windows\" on a flowering stem with stem leaves. The labellum is light brown with a black strip along its mid-line.",
+            "Pinanga\nPinanga is a genus of flowering plant in the Arecaceae family, native to New Guinea and to eastern and southern Asia (India, China, Indonesia, Philippines, Indonesia, etc.).",
+            "Chlidanthus\nChlidanthus is a genus that consists of 10 species of tender bulbs from tropical South America, mostly natives to the Andes. The botanical name comes from the Greek, meaning \"delicate flower\". The plants have large spherical bulbs with gray-green, strap-shaped leaves 30cm long arising from the base. In late spring to early summer, clusters of 3-4 large, strong citrus-scented fragrant, funnel-shaped flowers 10-13cm long held terminally on stalks 25cm high, colored in yellow, pink or red.",
+            "Cassiope mertensiana\nCassiope mertensiana is a species of flowering plant known by the common names western moss heather and white mountain heather."
+        ],
+        "thoughts": [
+            "Chlidanthus is indeed a flowering plant, as it produces clusters of large, fragrant, funnel-shaped flowers in late spring to early summer.",
+            "Yes, Maianthemum is a flowering plant. It is a genus of rhizomatous, herbaceous, perennial flowering plants native to the understory of woodlands, and it produces flowers.",
+            "Based on the retrieved information, both Chlidanthus and Maianthemum are indeed flowering plants. Chlidanthus produces large, fragrant, funnel-shaped flowers, while Maianthemum is a genus of rhizomatous, herbaceous, perennial flowering plants that also produces flowers. Therefore, both plants fall under the category of flowering plants."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Chlidanthus and Maianthemum both flowering plants?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find out if Chlidanthus is a flowering plant.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find out if Maianthemum is a flowering plant.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if both Chlidanthus and Maianthemum are flowering plants from the previous findings.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph first involves parallel retrieval and reasoning steps to independently check if each of 'Chlidanthus' and 'Maianthemum' are flowering plants. Once the information is gathered, a reasoning step is used to combine these findings and determine if both are indeed flowering plants."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Chlidanthus\nChlidanthus is a genus that consists of 10 species of tender bulbs from tropical South America, mostly natives to the Andes. The botanical name comes from the Greek, meaning \"delicate flower\". The plants have large spherical bulbs with gray-green, strap-shaped leaves 30cm long arising from the base. In late spring to early summer, clusters of 3-4 large, strong citrus-scented fragrant, funnel-shaped flowers 10-13cm long held terminally on stalks 25cm high, colored in yellow, pink or red.",
+            "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Taxonomy of the Cactaceae\nIn 1984, the International Organization for Succulent Plant Study set up a working party, now called the International Cactaceae Systematics Group, to produce a consensus classification of the cactus family, down to the level of genus. Their classification has been used as the basis for systems published since the mid-1990s. Treatments in the 21st century have generally divided the family into around 125\u2013130 genera and 1,400\u20131,500 species, which are then arranged in a number of tribes and subfamilies. However, subsequent molecular phylogenetic studies have shown that a very high proportion of the higher taxa (genera, tribes and subfamilies) are not monophyletic, i.e. they do not contain all of the descendants of a common ancestor. , the internal classification of the family Cactaceae remained uncertain and subject to change. A classification incorporating many of the insights from the molecular studies was produced by Nyffeler and Eggli in 2010.",
+            "Dissolved organic carbon\nDissolved organic carbon (DOC), sometimes known as dissolved organic material (DOM), is a broad classification for organic molecules of varied origin and composition within aquatic systems. The \"dissolved\" fraction of organic carbon is an operational classification. Many researchers use the term \"dissolved\" for compounds below 0.45 micrometers, but 0.22 micrometers is also common, saving colloidal for higher concentrations. A practical definition of dissolved typically used in marine chemistry is all substances that pass through a GF/F filter. The recommended measure technique is the HTCO technique after filtration on precombusted glass fiber filters, typically GF/F filters.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Pimelea arenaria\nPimelea arenaria, also known as Pimelea villosa, is a species of shrub in the family Thymelaeaceae. It is endemic to New Zealand. Its conservation status puts it at risk and declining, as determined by the New Zealand Threat Classification System (NZTCS).",
+            "Compact car\nA compact car (North America), or small family car in British acceptation, is a classification of cars that are larger than a subcompact car but smaller than a mid-size car, roughly equivalent to the C-segment in Europe.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Prehypertension\nPrehypertension, also known as high normal blood pressure, is an American medical classification for cases where a person's blood pressure is elevated above normal, but not to the level considered hypertension (high blood pressure). Prehypertension is blood pressure readings with a systolic pressure from 120 to 139\u00a0mm Hg or a diastolic pressure from 80 to 89\u00a0mm Hg. Readings greater than or equal to 140/90\u00a0mm Hg are considered hypertension. Classification of blood pressure is based upon two or more readings at two or more separate occasions separated by at least one week. The seventh report of the Joint National Committee (JNC 7) proposed the new labeling for elevated blood pressure values below 140/90 to more accurately communicate the tendency of blood pressure to rise with age.",
+            "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006).",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "Chlidanthus is indeed a flowering plant, as it is described as having large, strong citrus-scented fragrant, funnel-shaped flowers in the relevant information provided.",
+            "Maianthemum is a flowering plant.",
+            "Both Chlidanthus and Maianthemum are indeed flowering plants based on the previous findings."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Chlidanthus and Maianthemum both flowering plants?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information on Chlidanthus to determine if it is a flowering plant.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on Maianthemum to determine if it is a flowering plant.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if both Chlidanthus and Maianthemum are flowering plants based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph breaks down the question into two parallel retrieval tasks to check if Chlidanthus and Maianthemum separately qualify as flowering plants. Once information is gathered for both, the final step reasons whether both are indeed flowering plants."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Maianthemum\nMaianthemum (Latin \"M\u0101ia \" \"May\" and Greek \"\u00e1nthemon \" \"flower\"; including former \"Smilacina\") is a genus of rhizomatous, herbaceous, perennial flowering plants, native to the understory of woodlands. It is widespread across much of North America, Europe and Asia.",
+            "Pterostylis crassa\nPterostylis crassa, commonly known as the coarse leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to Victoria. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves on a short stalk but the flowering plants have up to four relatively large, shiny dark green translucent flowers on a flowering stem with stem leaves.",
+            "Pterostylis diminuta\nPterostylis diminuta, commonly known as the small-flowered leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to Victoria. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves flat on the ground but the flowering plants have up to twelve small, partly green, partly translucent flowers and lack a rosette.",
+            "Cassiope mertensiana\nCassiope mertensiana is a species of flowering plant known by the common names western moss heather and white mountain heather.",
+            "Pterostylis chocolatina\nPterostylis chocolatina, commonly known as the chocolate-lip leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to New South Wales. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves on a short stalk but the flowering plants lack a rosette and have up to thirteen green flowers on a flowering stem with stem leaves. The labellum is dark brown with a blackish lump near its base.",
+            "Pterostylis barringtonensis\nPterostylis barringtonensis, commonly known as the Barrington leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to New South Wales. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves on a short stalk but the flowering plants lack a rosette and have up to seven dark green flowers on a flowering stem with stem leaves. It is only known from Barrington Tops National Park.",
+            "Pterostylis lineata\nPterostylis lineata, commonly known as the Blue Mountains leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to New South Wales. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves on a short stalk but the flowering plants lack a rosette and have up to seven dark green flowers with translucent \"windows\" on a flowering stem with stem leaves. The labellum is light brown with a black strip along its mid-line.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Pinanga\nPinanga is a genus of flowering plant in the Arecaceae family, native to New Guinea and to eastern and southern Asia (India, China, Indonesia, Philippines, Indonesia, etc.).",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "See Yourself\n\"See Yourself\" is a song by English musician George Harrison, released on his 1976 album \"Thirty Three & 1/3\". Harrison began writing the song in 1967, while he was a member of the Beatles, in response to the public outcry surrounding bandmate Paul McCartney's admission that he had taken the hallucinogenic drug LSD. McCartney's announcement created a reaction in the press similar to that caused in 1966 by John Lennon's statement that the Beatles were more popular than Christianity. In its finished form, the song's lyrics advocate self-awareness and consideration for the consequences of one's actions. Musically, the composition contains unusual shifts in time signature from standard 4/4 to 9/8, while the songwords reflect the era of its genesis by recalling themes first espoused in the Beatles tracks \"Within You Without You\" and \"All You Need Is Love\"."
+        ],
+        "thoughts": [
+            "Chlidanthus is not mentioned in the provided information.",
+            "Based on the information provided, Maianthemum is indeed a flowering plant. It is described as a genus of rhizomatous, herbaceous, perennial flowering plants, native to the understory of woodlands. This indicates that Maianthemum does produce flowers, making it a flowering plant.",
+            "Based on the information provided, Maianthemum is indeed a flowering plant. However, there is no information available about Chlidanthus, so we cannot determine if it is a flowering plant."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Chlidanthus and Maianthemum both flowering plants?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find out if Chlidanthus is a flowering plant.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find out if Maianthemum is a flowering plant.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if both Chlidanthus and Maianthemum are flowering plants based on the findings.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph breaks down the question into two main retrieval and reasoning tasks: checking whether Chlidanthus and Maianthemum are flowering plants. Each step involves gathering information on the plant species and reasoning about whether they are classified as flowering plants. The final step synthesizes the results from the retrieval nodes and provides a conclusive answer."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Chlidanthus\nChlidanthus is a genus that consists of 10 species of tender bulbs from tropical South America, mostly natives to the Andes. The botanical name comes from the Greek, meaning \"delicate flower\". The plants have large spherical bulbs with gray-green, strap-shaped leaves 30cm long arising from the base. In late spring to early summer, clusters of 3-4 large, strong citrus-scented fragrant, funnel-shaped flowers 10-13cm long held terminally on stalks 25cm high, colored in yellow, pink or red.",
+            "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Taxonomy of the Cactaceae\nIn 1984, the International Organization for Succulent Plant Study set up a working party, now called the International Cactaceae Systematics Group, to produce a consensus classification of the cactus family, down to the level of genus. Their classification has been used as the basis for systems published since the mid-1990s. Treatments in the 21st century have generally divided the family into around 125\u2013130 genera and 1,400\u20131,500 species, which are then arranged in a number of tribes and subfamilies. However, subsequent molecular phylogenetic studies have shown that a very high proportion of the higher taxa (genera, tribes and subfamilies) are not monophyletic, i.e. they do not contain all of the descendants of a common ancestor. , the internal classification of the family Cactaceae remained uncertain and subject to change. A classification incorporating many of the insights from the molecular studies was produced by Nyffeler and Eggli in 2010.",
+            "Dissolved organic carbon\nDissolved organic carbon (DOC), sometimes known as dissolved organic material (DOM), is a broad classification for organic molecules of varied origin and composition within aquatic systems. The \"dissolved\" fraction of organic carbon is an operational classification. Many researchers use the term \"dissolved\" for compounds below 0.45 micrometers, but 0.22 micrometers is also common, saving colloidal for higher concentrations. A practical definition of dissolved typically used in marine chemistry is all substances that pass through a GF/F filter. The recommended measure technique is the HTCO technique after filtration on precombusted glass fiber filters, typically GF/F filters.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Pimelea arenaria\nPimelea arenaria, also known as Pimelea villosa, is a species of shrub in the family Thymelaeaceae. It is endemic to New Zealand. Its conservation status puts it at risk and declining, as determined by the New Zealand Threat Classification System (NZTCS).",
+            "Compact car\nA compact car (North America), or small family car in British acceptation, is a classification of cars that are larger than a subcompact car but smaller than a mid-size car, roughly equivalent to the C-segment in Europe.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Prehypertension\nPrehypertension, also known as high normal blood pressure, is an American medical classification for cases where a person's blood pressure is elevated above normal, but not to the level considered hypertension (high blood pressure). Prehypertension is blood pressure readings with a systolic pressure from 120 to 139\u00a0mm Hg or a diastolic pressure from 80 to 89\u00a0mm Hg. Readings greater than or equal to 140/90\u00a0mm Hg are considered hypertension. Classification of blood pressure is based upon two or more readings at two or more separate occasions separated by at least one week. The seventh report of the Joint National Committee (JNC 7) proposed the new labeling for elevated blood pressure values below 140/90 to more accurately communicate the tendency of blood pressure to rise with age.",
+            "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006).",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "Chlidanthus is indeed a flowering plant, as it is described as having large, fragrant, funnel-shaped flowers in the relevant information provided.",
+            "Maianthemum is a flowering plant.",
+            "Based on the findings from upstream task 1 and upstream task 2, both Chlidanthus and Maianthemum are indeed flowering plants."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Chlidanthus and Maianthemum both flowering plants?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve classification information about the genus Chlidanthus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve classification information about the genus Maianthemum.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Chlidanthus is classified as a flowering plant.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Maianthemum is classified as a flowering plant.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Synthesize findings to determine if both Chlidanthus and Maianthemum are flowering plants.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the question into steps involving retrieval and reasoning tasks for each genus. First, it retrieves classification information for Chlidanthus and Maianthemum separately. Then, it analyses each to determine if they are flowering plants. Finally, it synthesizes the results to conclude if both genera are flowering plants."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Maianthemum\nMaianthemum (Latin \"M\u0101ia \" \"May\" and Greek \"\u00e1nthemon \" \"flower\"; including former \"Smilacina\") is a genus of rhizomatous, herbaceous, perennial flowering plants, native to the understory of woodlands. It is widespread across much of North America, Europe and Asia.",
+            "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006).",
+            "Rhodostemonodaphne\nRhodostemonodaphne is a genus of flowering plants in the family Lauraceae. It is a neotropical genus consisting of approximately 41 species occurring in Central America and northern South America. This genus has many species that are valued for timber. The classification of the genus is unclear since the species in the genus fall into a well-supported but unresolved clade that also includes species with unisexual flowers currently placed in the genera \"Endlicheria\" and part of \"Ocotea\".",
+            "Taxonomy of the Cactaceae\nIn 1984, the International Organization for Succulent Plant Study set up a working party, now called the International Cactaceae Systematics Group, to produce a consensus classification of the cactus family, down to the level of genus. Their classification has been used as the basis for systems published since the mid-1990s. Treatments in the 21st century have generally divided the family into around 125\u2013130 genera and 1,400\u20131,500 species, which are then arranged in a number of tribes and subfamilies. However, subsequent molecular phylogenetic studies have shown that a very high proportion of the higher taxa (genera, tribes and subfamilies) are not monophyletic, i.e. they do not contain all of the descendants of a common ancestor. , the internal classification of the family Cactaceae remained uncertain and subject to change. A classification incorporating many of the insights from the molecular studies was produced by Nyffeler and Eggli in 2010.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Asiatosuchus\nAsiatosuchus is an extinct genus of crocodyloid crocodilians that lived in Eurasia during the Paleogene. Many Paleogene crocodilians from Europe and Asia have been attributed to \"Asiatosuchus\" since the genus was named in 1940. These species have a generalized crocodilian morphology typified by flat, triangular skulls. The feature that traditionally united these species under the genus \"Asiatosuchus\" is a broad connection or symphysis between the two halves of the lower jaw. Recent studies of the evolutionary relationships of early crocodilians along with closer examinations of the morphology of fossil specimens suggest that only the first named species of \"Asiatosuchus\", \"A. grangeri\" from the Eocene of Mongolia, belongs in the genus. Most species are now regarded as \"nomina dubia\" or \"dubious names\", meaning that their type specimens lack the unique anatomical features necessary to justify their classification as distinct species. Other species such as \"\"A.\" germanicus\" and \"\"A.\" depressifrons\" are still considered valid species, but they do not form an evolutionary grouping with \"A. grangeri\" that would warrant them being placed together in the genus \"Asiatosuchus\".",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+            "Pottery fracture\nPottery fracture results from stress within a ceramic body due to thermal expansion and contraction, shrinkage, and other forces. Poor drying or uneven compression and alignment of particles can result in low strength. Cracking may appear in greenware as well as each stage of the firing including bisque ware and glazed ware.",
+            "Please Take Care of My Refrigerator\nPlease Take Care of My Refrigerator () is a 2014 South Korean cooking-variety program starring by many chefs and celebrity guests. It airs on JTBC on Mondays at 21:30 (KST) beginning November 17, 2014.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Aceria clianthi\nAceria clianthi is a species of mite belonging to the family Eriophyidae. It is found only in New Zealand. It is notable for being host specific to threatened plants of the genus \"Clianthus\". It is classified by Buckley \"et al.\" as \"nationally critical\" under the New Zealand Threat Classification System. They stated \"\"Aceria clianthi\" (Eriophyidae), has been recorded only from kakabeak (\"Clianthus\" spp.) in cultivation and once on \"Lotus cornalatus\" [\"Lotus corniculatus\"] (Fabaceae), an introduced plant growing near kakabeak (Martin 2009). It is given the same threat classification as kakabeak (de Lange et al. 2009).\" Heenan had earlier stated that \"the two species [of \"Clianthus\"] are considered to be threatened, with \"C.\u00a0maximus\" having a rank of vulnerable, whereas \"C.\u00a0puniceus\" is critically endangered\", but the conservation status of \"C.\u00a0maximus\" was subsequently found to be more serious. These threat classifications for \"Clianthus\" apply to plants in the wild, but the species are widely cultivated. \"Aceria clianthi\" occurs on both plants in the wild and in cultivation.",
+            "Nemegtomaia\nNemegtomaia is a genus of oviraptorid dinosaur from what is now Mongolia that lived in the Late Cretaceous Period, about 70million years ago. The first specimen was found in 1996, and became the basis of the new genus and species N. barsboldi in 2004. The original genus name was \"Nemegtia\", but this was changed to \"Nemegtomaia\" in 2005, as the former name was preoccupied. The first part of the generic name refers to the Nemegt Basin, where the animal was found, and the second part means \"good mother\", in reference to the fact that oviraptorids are known to have brooded their eggs. The specific name honours the palaeontologist Rinchen Barsbold. Two more specimens were found in 2007, one of which was found on top of a nest with eggs, but the dinosaur had received its genus name before it was found associated with eggs.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Never Let Me Go (Johnny Ace song)\n\"Never Let Me Go\" is a blues ballad song by American R&B/blues singer Johnny Ace, written by Joseph Scott and released in 1954 under Duke Records. The song is featured on the albums \"My Songs\" and \"Memorial\". \"Never Let Me Go\" was one of his eighth consecutive top ten R&B hits in a row, including \"My Song\", \"Cross My Heart,\" \"Please Forgive Me,\" \"The Clock,\" \"Pledging My Love,\" \"Saving My Love for You,\" and \"Anymore\". The song was R&B hit and peaked to No. 9 in October 1954 on \"Billboards\" Rhythm & Blues Records chart."
+        ],
+        "thoughts": [
+            "Chlidanthus is a genus of flowering plants in the Amaryllidaceae family. It is known for its beautiful and fragrant flowers, and is commonly cultivated for ornamental purposes.",
+            "Yes, Chlidanthus is classified as a flowering plant.",
+            "The genus Maianthemum is a genus of rhizomatous, herbaceous, perennial flowering plants, native to the understory of woodlands. It is widespread across much of North America, Europe, and Asia. The classification information for Maianthemum does not include specific details about subgenera or molecular genetic studies, but it is known for its widespread distribution and habitat in woodlands.",
+            "Yes, Maianthemum is classified as a flowering plant.",
+            "Based on the findings from upstream tasks 3 and 4, it can be determined that both Chlidanthus and Maianthemum are classified as flowering plants."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Chlidanthus and Maianthemum both flowering plants?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine if Chlidanthus is a flowering plant.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine if Maianthemum is a flowering plant.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine the information to conclude if both Chlidanthus and Maianthemum are flowering plants.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "3",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph for determining if Chlidanthus and Maianthemum are both flowering plants involves parallel retrieval and reasoning steps. First, we need to individually verify whether Chlidanthus and Maianthemum are classified as flowering plants (steps 1 and 2), which can be done in parallel as they are independent of each other. Once we have the results of both, we integrate this information in step 3 to provide a conclusive answer to the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Maianthemum\nMaianthemum (Latin \"M\u0101ia \" \"May\" and Greek \"\u00e1nthemon \" \"flower\"; including former \"Smilacina\") is a genus of rhizomatous, herbaceous, perennial flowering plants, native to the understory of woodlands. It is widespread across much of North America, Europe and Asia.",
+            "Pterostylis crassa\nPterostylis crassa, commonly known as the coarse leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to Victoria. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves on a short stalk but the flowering plants have up to four relatively large, shiny dark green translucent flowers on a flowering stem with stem leaves.",
+            "Pterostylis diminuta\nPterostylis diminuta, commonly known as the small-flowered leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to Victoria. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves flat on the ground but the flowering plants have up to twelve small, partly green, partly translucent flowers and lack a rosette.",
+            "Pterostylis chocolatina\nPterostylis chocolatina, commonly known as the chocolate-lip leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to New South Wales. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves on a short stalk but the flowering plants lack a rosette and have up to thirteen green flowers on a flowering stem with stem leaves. The labellum is dark brown with a blackish lump near its base.",
+            "Pterostylis barringtonensis\nPterostylis barringtonensis, commonly known as the Barrington leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to New South Wales. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves on a short stalk but the flowering plants lack a rosette and have up to seven dark green flowers on a flowering stem with stem leaves. It is only known from Barrington Tops National Park.",
+            "Pterostylis lineata\nPterostylis lineata, commonly known as the Blue Mountains leafy greenhood, is a plant in the orchid family Orchidaceae and is endemic to New South Wales. As with similar greenhoods, the flowering plants differ from those which are not flowering. The non-flowering plants have a rosette of leaves on a short stalk but the flowering plants lack a rosette and have up to seven dark green flowers with translucent \"windows\" on a flowering stem with stem leaves. The labellum is light brown with a black strip along its mid-line.",
+            "Cassiope mertensiana\nCassiope mertensiana is a species of flowering plant known by the common names western moss heather and white mountain heather.",
+            "Pinanga\nPinanga is a genus of flowering plant in the Arecaceae family, native to New Guinea and to eastern and southern Asia (India, China, Indonesia, Philippines, Indonesia, etc.).",
+            "Chlidanthus\nChlidanthus is a genus that consists of 10 species of tender bulbs from tropical South America, mostly natives to the Andes. The botanical name comes from the Greek, meaning \"delicate flower\". The plants have large spherical bulbs with gray-green, strap-shaped leaves 30cm long arising from the base. In late spring to early summer, clusters of 3-4 large, strong citrus-scented fragrant, funnel-shaped flowers 10-13cm long held terminally on stalks 25cm high, colored in yellow, pink or red.",
+            "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+            "Taxonomy of the Cactaceae\nIn 1984, the International Organization for Succulent Plant Study set up a working party, now called the International Cactaceae Systematics Group, to produce a consensus classification of the cactus family, down to the level of genus. Their classification has been used as the basis for systems published since the mid-1990s. Treatments in the 21st century have generally divided the family into around 125\u2013130 genera and 1,400\u20131,500 species, which are then arranged in a number of tribes and subfamilies. However, subsequent molecular phylogenetic studies have shown that a very high proportion of the higher taxa (genera, tribes and subfamilies) are not monophyletic, i.e. they do not contain all of the descendants of a common ancestor. , the internal classification of the family Cactaceae remained uncertain and subject to change. A classification incorporating many of the insights from the molecular studies was produced by Nyffeler and Eggli in 2010.",
+            "Dissolved organic carbon\nDissolved organic carbon (DOC), sometimes known as dissolved organic material (DOM), is a broad classification for organic molecules of varied origin and composition within aquatic systems. The \"dissolved\" fraction of organic carbon is an operational classification. Many researchers use the term \"dissolved\" for compounds below 0.45 micrometers, but 0.22 micrometers is also common, saving colloidal for higher concentrations. A practical definition of dissolved typically used in marine chemistry is all substances that pass through a GF/F filter. The recommended measure technique is the HTCO technique after filtration on precombusted glass fiber filters, typically GF/F filters.",
+            "Pimelea arenaria\nPimelea arenaria, also known as Pimelea villosa, is a species of shrub in the family Thymelaeaceae. It is endemic to New Zealand. Its conservation status puts it at risk and declining, as determined by the New Zealand Threat Classification System (NZTCS).",
+            "Compact car\nA compact car (North America), or small family car in British acceptation, is a classification of cars that are larger than a subcompact car but smaller than a mid-size car, roughly equivalent to the C-segment in Europe.",
+            "Prehypertension\nPrehypertension, also known as high normal blood pressure, is an American medical classification for cases where a person's blood pressure is elevated above normal, but not to the level considered hypertension (high blood pressure). Prehypertension is blood pressure readings with a systolic pressure from 120 to 139\u00a0mm Hg or a diastolic pressure from 80 to 89\u00a0mm Hg. Readings greater than or equal to 140/90\u00a0mm Hg are considered hypertension. Classification of blood pressure is based upon two or more readings at two or more separate occasions separated by at least one week. The seventh report of the Joint National Committee (JNC 7) proposed the new labeling for elevated blood pressure values below 140/90 to more accurately communicate the tendency of blood pressure to rise with age.",
+            "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006)."
+        ],
+        "thoughts": [
+            "Chlidanthus is a flowering plant, as it is described as having large, fragrant, funnel-shaped flowers in the relevant information provided.",
+            "Yes, Maianthemum is a flowering plant. It is a genus of rhizomatous, herbaceous, perennial flowering plants, native to the understory of woodlands.",
+            "Based on the information from the upstream tasks, both Chlidanthus and Maianthemum are indeed flowering plants. Chlidanthus is described as having large, fragrant, funnel-shaped flowers, and Maianthemum is a genus of rhizomatous, herbaceous, perennial flowering plants. Therefore, both Chlidanthus and Maianthemum are confirmed to be flowering plants."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Chlidanthus and Maianthemum both flowering plants?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the plant Chlidanthus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the plant Maianthemum.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Chlidanthus is a flowering plant based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Maianthemum is a flowering plant based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Analyze results to determine if both Chlidanthus and Maianthemum are flowering plants.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to first gather necessary botanical data about the genera Chlidanthus and Maianthemum through separate retrieval steps (nodes 1 and 2). It then analyzes this data in parallel (nodes 3 and 4) to determine if each plant is a flowering plant. Finally, node 5 synthesizes the results to provide a conclusive answer to the original question."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Against All Will\nAgainst All Will is a rock quartet from Los Angeles, California, whose debut album lineup was formed in Spring 2009 by Jimmy Allen (formerly of Puddle of Mudd), Jeff Current (formerly of Seven Story Drop), Steve \"Boomstick\" Wilson (formerly of Dead Kennedys and t.A.T.u.), and Cello Dias (formerly of Soulfly). Songs \"All About You\" and \"The Drug I Need\" from their debut album entitled A Rhyme & Reason ranked in the national rock radio top 50 in 2010.",
+            "Calochilus\nCalochilus, commonly known as beard orchids, is a genus of about 30 species of plants in the orchid family, Orchidaceae. Beard orchids are terrestrial, herbs with a single leaf at the base of the plant, or no leaves. Their most striking feature is a densely hairy labellum, giving rise to their common name. Beard orchids, unlike some other Australian orchids, do not reproduce using daughter tubers, but self-pollinate when cross-pollination has not occurred. Most species occur in Australia but some are found in New Zealand, New Guinea and New Caledonia.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "Chlidanthus\nChlidanthus is a genus that consists of 10 species of tender bulbs from tropical South America, mostly natives to the Andes. The botanical name comes from the Greek, meaning \"delicate flower\". The plants have large spherical bulbs with gray-green, strap-shaped leaves 30cm long arising from the base. In late spring to early summer, clusters of 3-4 large, strong citrus-scented fragrant, funnel-shaped flowers 10-13cm long held terminally on stalks 25cm high, colored in yellow, pink or red.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "Paper Gods\nPaper Gods is the fourteenth studio album from British new wave band Duran Duran on Warner Bros. Records. The record was announced on 15 June 2015 via an official press release posted on their website, confirming a scheduled worldwide release date of 11 September 2015. The record was produced by Mr Hudson and Joshua Blair, who has worked with the band on \"All You Need Is Now\" (2010) and \"A Diamond in the Mind\"; Nile Rodgers, who had previously first worked on the band's \"The Reflex\", his remixed version reaching number 1, \"The Wild Boys\" single and \"Notorious\" album, and Mark Ronson, who produced \"All You Need Is Now\". The first single, \"Pressure Off\", features vocals from American singer Janelle Mon\u00e1e. Duran Duran promoted the album through the Paper Gods on Tour.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Hydrogen highway (Japan)\nJapan's hydrogen highway is a network of hydrogen filling stations placed along roadsides that provide fuel for hydrogen fuel cell vehicles (HFCV). An HFCV is a vehicle that uses a fuel cell to convert hydrogen energy into electrical energy. The hydrogen that is used in fuel cell vehicles can be made using fossil or renewable resources. The hydrogen highway is necessary for HFCVs to be used. HFCV reduce tailpipe emissions of greenhouse gases. By May 2016, there were approximately 80 hydrogen fueling stations in Japan.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Investment control\nInvestment control or investment controlling is a monitoring function within the asset management, portfolio management or investment management. It is concerned with independently supervising and monitoring the quality of asset management accounts with the aim of ensuring performance and quality in order to provide the required benefit for the asset management client. Dependent on setup, investment controlling not only encompasses controlling activities but also can include areas from compliance to performance review. Investment controlling aspects can also be taken into consideration by asset management clients or investment advisers/consultants and consequently it is likely that these stakeholders also run certain investment controlling activities."
+        ],
+        "thoughts": [
+            "Chlidanthus is a genus of 10 species of tender bulbs from tropical South America, mostly native to the Andes. The plants have large spherical bulbs with gray-green, strap-shaped leaves 30cm long arising from the base. In late spring to early summer, clusters of 3-4 large, strong citrus-scented fragrant, funnel-shaped flowers 10-13cm long are held terminally on stalks 25cm high, colored in yellow, pink, or red.",
+            "Based on the information retrieved, Chlidanthus is indeed a flowering plant. It is a genus of tender bulbs that produce large, fragrant, funnel-shaped flowers in late spring to early summer.",
+            "Maianthemum is a genus of plants in the family Asparagaceae, native to North America and Asia. They are commonly known as false lilies of the valley or mayflowers. The plants are typically small, herbaceous perennials with white flowers and red or orange berries. They are often found in woodland areas and are known for their delicate and fragrant blooms.",
+            "Based on the information retrieved, Maianthemum is indeed a flowering plant. It is described as having white flowers and red or orange berries, which indicates that it is a flowering plant.",
+            "Based on the results of our analysis, both Chlidanthus and Maianthemum are indeed flowering plants. Chlidanthus is a genus of tender bulbs that produce large, fragrant, funnel-shaped flowers, while Maianthemum is described as having white flowers and red or orange berries, indicating that it is a flowering plant. Therefore, both Chlidanthus and Maianthemum meet the criteria of being flowering plants."
+        ],
+        "is_best": false
+    }
+]

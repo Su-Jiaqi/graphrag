@@ -1,0 +1,965 @@
+[
+    {
+        "attempt": 1,
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Identify the active years of Thinking Fellers Union Local 282.",
+                "output": "Thinking Fellers Union Local 282 was active from 1986 to at least 1996, based on the release dates of their albums and EPs.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Identify the active years of The Smiths.",
+                "output": "The Smiths were active from 1982 to 1987.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Verify if Morrissey was the lead singer of The Smiths.",
+                "output": "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Thinking Fellers Union Local 282 were active in 1986 based on their active years.",
+                "output": "Based on the information from the upstream task, it can be determined that Thinking Fellers Union Local 282 were indeed active in 1986.",
+                "upstream": [
+                    [
+                        "1",
+                        "Thinking Fellers Union Local 282 was active from 1986 to at least 1996, based on the release dates of their albums and EPs."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Determine if The Smiths, with Morrissey as lead singer, were active in 1986 based on their active years and Morrissey's role.",
+                "output": "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 as their active years were from 1982 to 1987.",
+                "upstream": [
+                    [
+                        "2",
+                        "The Smiths were active from 1982 to 1987."
+                    ],
+                    [
+                        "3",
+                        "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "6",
+                "instruction": "Combine the results to determine if both bands were active in 1986.",
+                "output": "Based on the results of the upstream tasks, it can be determined that both Thinking Fellers Union Local 282 and The Smiths were active in 1986.",
+                "upstream": [
+                    [
+                        "4",
+                        "Based on the information from the upstream task, it can be determined that Thinking Fellers Union Local 282 were indeed active in 1986."
+                    ],
+                    [
+                        "5",
+                        "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 as their active years were from 1982 to 1987."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Thinking Fellers Union Local 282\nThinking Fellers Union Local 282 is an experimental indie rock group formed in 1986 in San Francisco, California, though half of its members are from Iowa.",
+            "Where's Officer Tuba\nWhere's Officer Tuba is an EP by the band Thinking Fellers Union Local 282, released in 1993.",
+            "The Funeral Pudding\nThe Funeral Pudding is an EP by the band Thinking Fellers Union Local 282, released in February 1994 through Ajax Records.",
+            "I Hope It Lands\nI Hope It Lands is the sixth album by Thinking Fellers Union Local 282, released in April 1996 through Communion Records.",
+            "Strangers from the Universe\nStrangers from the Universe is the fifth album by Thinking Fellers Union Local 282, released on September 12, 1994 through Matador Records.",
+            "Mother of All Saints\nMother of All Saints is the fourth album by Thinking Fellers Union Local 282, released as a CD and double-LP on November 13, 1992 through Matador Records.",
+            "Admonishing the Bishops\nAdmonishing the Bishops is an EP by the band Thinking Fellers Union Local 282, released as a CD and 10\" vinyl record on October 26, 1993, through Matador Records. The EP's title refers to Alan and Rick Bishop of the Sun City Girls with whom the Thinking Fellers had toured with the previous year.",
+            "Lovelyville\nLovelyville is the third album by Thinking Fellers Union Local 282, released December 12, 1991 on LP and CD through Matador Records. The CD contains bonus tracks entitled \"The Crowded Diaper.\"",
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Jimmy Farrar\nJimmy Farrar (born 8 December 1950) is a singer, songwriter and musician born in La Grange, Georgia, originally lead singer for the Raw Energy band, Farrar is best known as the second lead singer for the American Southern Rock band Molly Hatchet from 1980 to 1982, and in more recent years, Gator Country.",
+            "Mike Patton\nMichael Allan \"Mike\" Patton (born January 27, 1968) is an American musician, singer, songwriter, actor, record producer, multi-instrumentalist and film composer, best known as the lead singer of the alternative metal band Faith No More. Patton was also the founder and lead singer of Mr. Bungle, and has played with Tomahawk, Fant\u00f4mas, Lovage, The Dillinger Escape Plan, and Peeping Tom.",
+            "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+            "Calum MacDonald (musician)\nCalum MacDonald (Scottish Gaelic: Calum MacDhomhnaill; born 12 November 1953) is the percussionist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his older brother, Rory MacDonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scots Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "Rory Macdonald (musician)\nRoderick (Rory) Macdonald (Scottish Gaelic: Ruaridh MacDhomhnaill; born 27 July 1949, Dornoch, Sutherland) is the bassist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his younger brother, Calum Macdonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scottish Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "James Dean Bradfield\nJames Dean Bradfield (born 21 February 1969) is a Welsh singer-songwriter, musician and record producer. He is known for being the lead guitarist and lead vocalist for the Welsh alternative rock band Manic Street Preachers.",
+            "Viacom Productions\nViacom Productions was a television production arm of Viacom International. The division was active from 1974 until 2004, when the company was folded into Paramount Network Television 10 years following Viacom's acquisition of Paramount Pictures.",
+            "Lenox Hewitt\nSir Lenox Hewitt {'1': \", '2': \", '3': \", '4': \"} (born 7 May 1917) is a retired senior Australian public servant. He served the Commonwealth in various capacities for over 40 years (1939\u201380), principally as Secretary of the Prime Minister's Department under John Gorton (Liberal) 1968-71, and Secretary of the Department of Minerals and Energy under Rex Connor (Labor) 1972-75. He later also served the governments of New South Wales and Western Australia. He remains active in public policy debate.",
+            "Still Kicking (film)\nStill Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active. The catalyst for Young's film was Amy Gorman and Frances Kandl's Project Arts & Longevity through which they were exploring the link between longevity and artistic vitality. Along with the film the joint project resulted in a book entitled Aging Artfully.",
+            "Montel Williams\nMontel Brian Anthony Williams (born July 3, 1956) is an American television personality, radio talk show host, and actor. He is best known as host of the long-running \"The Montel Williams Show\", and more recently as a spokesman for the Partnership for Prescription Assistance (PPA), Williams is also active with the nonprofit MS Foundation, which he founded after being diagnosed with multiple sclerosis in 1999. Williams is also noted for his service in both the Marine Corps and the Navy, from which he was honorably discharged after 15 years of service.",
+            "Andy Cohen (television personality)\nAndrew Joseph \"Andy\" Cohen (born June 2, 1968) is an American talk show and radio host, author and producer. Cohen hosts the Bravo nightly series \"Watch What Happens Live with Andy Cohen\". He is the first openly gay host of an American late-night talk show. After being head of development at Bravo for more than 10 years, Cohen resigned in November 2013. He continues to serve as an executive producer of \"The Real Housewives\" franchise.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 2,
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Identify the active years of Thinking Fellers Union Local 282.",
+                "output": "Thinking Fellers Union Local 282 was active from 1986 to 1996.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Identify the active years of The Smiths.",
+                "output": "The Smiths were active from 1982 to 1987.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Verify if Morrissey was the lead singer of The Smiths.",
+                "output": "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Thinking Fellers Union Local 282 were active in 1986 based on their active years.",
+                "output": "Based on the information provided, Thinking Fellers Union Local 282 were indeed active in 1986.",
+                "upstream": [
+                    [
+                        "1",
+                        "Thinking Fellers Union Local 282 was active from 1986 to 1996."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Determine if The Smiths, with Morrissey as lead singer, were active in 1986 based on their active years and Morrissey's role.",
+                "output": "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 based on their active years (1982-1987) and Morrissey's role as the lead singer during that time.",
+                "upstream": [
+                    [
+                        "2",
+                        "The Smiths were active from 1982 to 1987."
+                    ],
+                    [
+                        "3",
+                        "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "6",
+                "instruction": "Combine the results to determine if both bands were active in 1986.",
+                "output": "Based on the results of the upstream tasks, both Thinking Fellers Union Local 282 and The Smiths were active in 1986.",
+                "upstream": [
+                    [
+                        "4",
+                        "Based on the information provided, Thinking Fellers Union Local 282 were indeed active in 1986."
+                    ],
+                    [
+                        "5",
+                        "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 based on their active years (1982-1987) and Morrissey's role as the lead singer during that time."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Thinking Fellers Union Local 282\nThinking Fellers Union Local 282 is an experimental indie rock group formed in 1986 in San Francisco, California, though half of its members are from Iowa.",
+            "Where's Officer Tuba\nWhere's Officer Tuba is an EP by the band Thinking Fellers Union Local 282, released in 1993.",
+            "The Funeral Pudding\nThe Funeral Pudding is an EP by the band Thinking Fellers Union Local 282, released in February 1994 through Ajax Records.",
+            "I Hope It Lands\nI Hope It Lands is the sixth album by Thinking Fellers Union Local 282, released in April 1996 through Communion Records.",
+            "Strangers from the Universe\nStrangers from the Universe is the fifth album by Thinking Fellers Union Local 282, released on September 12, 1994 through Matador Records.",
+            "Mother of All Saints\nMother of All Saints is the fourth album by Thinking Fellers Union Local 282, released as a CD and double-LP on November 13, 1992 through Matador Records.",
+            "Admonishing the Bishops\nAdmonishing the Bishops is an EP by the band Thinking Fellers Union Local 282, released as a CD and 10\" vinyl record on October 26, 1993, through Matador Records. The EP's title refers to Alan and Rick Bishop of the Sun City Girls with whom the Thinking Fellers had toured with the previous year.",
+            "Lovelyville\nLovelyville is the third album by Thinking Fellers Union Local 282, released December 12, 1991 on LP and CD through Matador Records. The CD contains bonus tracks entitled \"The Crowded Diaper.\"",
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Jimmy Farrar\nJimmy Farrar (born 8 December 1950) is a singer, songwriter and musician born in La Grange, Georgia, originally lead singer for the Raw Energy band, Farrar is best known as the second lead singer for the American Southern Rock band Molly Hatchet from 1980 to 1982, and in more recent years, Gator Country.",
+            "Mike Patton\nMichael Allan \"Mike\" Patton (born January 27, 1968) is an American musician, singer, songwriter, actor, record producer, multi-instrumentalist and film composer, best known as the lead singer of the alternative metal band Faith No More. Patton was also the founder and lead singer of Mr. Bungle, and has played with Tomahawk, Fant\u00f4mas, Lovage, The Dillinger Escape Plan, and Peeping Tom.",
+            "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+            "Calum MacDonald (musician)\nCalum MacDonald (Scottish Gaelic: Calum MacDhomhnaill; born 12 November 1953) is the percussionist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his older brother, Rory MacDonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scots Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "Rory Macdonald (musician)\nRoderick (Rory) Macdonald (Scottish Gaelic: Ruaridh MacDhomhnaill; born 27 July 1949, Dornoch, Sutherland) is the bassist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his younger brother, Calum Macdonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scottish Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "James Dean Bradfield\nJames Dean Bradfield (born 21 February 1969) is a Welsh singer-songwriter, musician and record producer. He is known for being the lead guitarist and lead vocalist for the Welsh alternative rock band Manic Street Preachers.",
+            "Viacom Productions\nViacom Productions was a television production arm of Viacom International. The division was active from 1974 until 2004, when the company was folded into Paramount Network Television 10 years following Viacom's acquisition of Paramount Pictures.",
+            "Lenox Hewitt\nSir Lenox Hewitt {'1': \", '2': \", '3': \", '4': \"} (born 7 May 1917) is a retired senior Australian public servant. He served the Commonwealth in various capacities for over 40 years (1939\u201380), principally as Secretary of the Prime Minister's Department under John Gorton (Liberal) 1968-71, and Secretary of the Department of Minerals and Energy under Rex Connor (Labor) 1972-75. He later also served the governments of New South Wales and Western Australia. He remains active in public policy debate.",
+            "Still Kicking (film)\nStill Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active. The catalyst for Young's film was Amy Gorman and Frances Kandl's Project Arts & Longevity through which they were exploring the link between longevity and artistic vitality. Along with the film the joint project resulted in a book entitled Aging Artfully.",
+            "Montel Williams\nMontel Brian Anthony Williams (born July 3, 1956) is an American television personality, radio talk show host, and actor. He is best known as host of the long-running \"The Montel Williams Show\", and more recently as a spokesman for the Partnership for Prescription Assistance (PPA), Williams is also active with the nonprofit MS Foundation, which he founded after being diagnosed with multiple sclerosis in 1999. Williams is also noted for his service in both the Marine Corps and the Navy, from which he was honorably discharged after 15 years of service.",
+            "Andy Cohen (television personality)\nAndrew Joseph \"Andy\" Cohen (born June 2, 1968) is an American talk show and radio host, author and producer. Cohen hosts the Bravo nightly series \"Watch What Happens Live with Andy Cohen\". He is the first openly gay host of an American late-night talk show. After being head of development at Bravo for more than 10 years, Cohen resigned in November 2013. He continues to serve as an executive producer of \"The Real Housewives\" franchise.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 3,
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Identify the active years of Thinking Fellers Union Local 282.",
+                "output": "Thinking Fellers Union Local 282 was active from 1986 to 1996.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Identify the active years of The Smiths.",
+                "output": "The Smiths were active from 1982 to 1987.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Verify if Morrissey was the lead singer of The Smiths.",
+                "output": "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Thinking Fellers Union Local 282 were active in 1986 based on their active years.",
+                "output": "Based on the information provided, Thinking Fellers Union Local 282 were indeed active in 1986.",
+                "upstream": [
+                    [
+                        "1",
+                        "Thinking Fellers Union Local 282 was active from 1986 to 1996."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Determine if The Smiths, with Morrissey as lead singer, were active in 1986 based on their active years and Morrissey's role.",
+                "output": "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 as their active years were from 1982 to 1987.",
+                "upstream": [
+                    [
+                        "2",
+                        "The Smiths were active from 1982 to 1987."
+                    ],
+                    [
+                        "3",
+                        "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "6",
+                "instruction": "Combine the results to determine if both bands were active in 1986.",
+                "output": "Both bands, Thinking Fellers Union Local 282 and The Smiths, were active in 1986.",
+                "upstream": [
+                    [
+                        "4",
+                        "Based on the information provided, Thinking Fellers Union Local 282 were indeed active in 1986."
+                    ],
+                    [
+                        "5",
+                        "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 as their active years were from 1982 to 1987."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Thinking Fellers Union Local 282\nThinking Fellers Union Local 282 is an experimental indie rock group formed in 1986 in San Francisco, California, though half of its members are from Iowa.",
+            "Where's Officer Tuba\nWhere's Officer Tuba is an EP by the band Thinking Fellers Union Local 282, released in 1993.",
+            "The Funeral Pudding\nThe Funeral Pudding is an EP by the band Thinking Fellers Union Local 282, released in February 1994 through Ajax Records.",
+            "I Hope It Lands\nI Hope It Lands is the sixth album by Thinking Fellers Union Local 282, released in April 1996 through Communion Records.",
+            "Strangers from the Universe\nStrangers from the Universe is the fifth album by Thinking Fellers Union Local 282, released on September 12, 1994 through Matador Records.",
+            "Admonishing the Bishops\nAdmonishing the Bishops is an EP by the band Thinking Fellers Union Local 282, released as a CD and 10\" vinyl record on October 26, 1993, through Matador Records. The EP's title refers to Alan and Rick Bishop of the Sun City Girls with whom the Thinking Fellers had toured with the previous year.",
+            "Mother of All Saints\nMother of All Saints is the fourth album by Thinking Fellers Union Local 282, released as a CD and double-LP on November 13, 1992 through Matador Records.",
+            "Lovelyville\nLovelyville is the third album by Thinking Fellers Union Local 282, released December 12, 1991 on LP and CD through Matador Records. The CD contains bonus tracks entitled \"The Crowded Diaper.\"",
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Jimmy Farrar\nJimmy Farrar (born 8 December 1950) is a singer, songwriter and musician born in La Grange, Georgia, originally lead singer for the Raw Energy band, Farrar is best known as the second lead singer for the American Southern Rock band Molly Hatchet from 1980 to 1982, and in more recent years, Gator Country.",
+            "Mike Patton\nMichael Allan \"Mike\" Patton (born January 27, 1968) is an American musician, singer, songwriter, actor, record producer, multi-instrumentalist and film composer, best known as the lead singer of the alternative metal band Faith No More. Patton was also the founder and lead singer of Mr. Bungle, and has played with Tomahawk, Fant\u00f4mas, Lovage, The Dillinger Escape Plan, and Peeping Tom.",
+            "Calum MacDonald (musician)\nCalum MacDonald (Scottish Gaelic: Calum MacDhomhnaill; born 12 November 1953) is the percussionist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his older brother, Rory MacDonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scots Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "Rory Macdonald (musician)\nRoderick (Rory) Macdonald (Scottish Gaelic: Ruaridh MacDhomhnaill; born 27 July 1949, Dornoch, Sutherland) is the bassist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his younger brother, Calum Macdonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scottish Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "James Dean Bradfield\nJames Dean Bradfield (born 21 February 1969) is a Welsh singer-songwriter, musician and record producer. He is known for being the lead guitarist and lead vocalist for the Welsh alternative rock band Manic Street Preachers.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 4,
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Identify the active years of Thinking Fellers Union Local 282.",
+                "output": "Thinking Fellers Union Local 282 was active from 1986 to 1996.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Identify the active years of The Smiths.",
+                "output": "The Smiths were active from 1982 to 1987.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Verify if Morrissey was the lead singer of The Smiths.",
+                "output": "Morrissey was indeed the lead singer of The Smiths, an indie rock band that was active from 1982 to 1987.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Thinking Fellers Union Local 282 were active in 1986 based on their active years.",
+                "output": "Based on the information provided, Thinking Fellers Union Local 282 were indeed active in 1986.",
+                "upstream": [
+                    [
+                        "1",
+                        "Thinking Fellers Union Local 282 was active from 1986 to 1996."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Determine if The Smiths, with Morrissey as lead singer, were active in 1986 based on their active years and Morrissey's role.",
+                "output": "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 as their active years were from 1982 to 1987.",
+                "upstream": [
+                    [
+                        "2",
+                        "The Smiths were active from 1982 to 1987."
+                    ],
+                    [
+                        "3",
+                        "Morrissey was indeed the lead singer of The Smiths, an indie rock band that was active from 1982 to 1987."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "6",
+                "instruction": "Combine the results to determine if both bands were active in 1986.",
+                "output": "Both bands, Thinking Fellers Union Local 282 and The Smiths, were active in 1986.",
+                "upstream": [
+                    [
+                        "4",
+                        "Based on the information provided, Thinking Fellers Union Local 282 were indeed active in 1986."
+                    ],
+                    [
+                        "5",
+                        "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 as their active years were from 1982 to 1987."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Thinking Fellers Union Local 282\nThinking Fellers Union Local 282 is an experimental indie rock group formed in 1986 in San Francisco, California, though half of its members are from Iowa.",
+            "Where's Officer Tuba\nWhere's Officer Tuba is an EP by the band Thinking Fellers Union Local 282, released in 1993.",
+            "The Funeral Pudding\nThe Funeral Pudding is an EP by the band Thinking Fellers Union Local 282, released in February 1994 through Ajax Records.",
+            "I Hope It Lands\nI Hope It Lands is the sixth album by Thinking Fellers Union Local 282, released in April 1996 through Communion Records.",
+            "Strangers from the Universe\nStrangers from the Universe is the fifth album by Thinking Fellers Union Local 282, released on September 12, 1994 through Matador Records.",
+            "Mother of All Saints\nMother of All Saints is the fourth album by Thinking Fellers Union Local 282, released as a CD and double-LP on November 13, 1992 through Matador Records.",
+            "Admonishing the Bishops\nAdmonishing the Bishops is an EP by the band Thinking Fellers Union Local 282, released as a CD and 10\" vinyl record on October 26, 1993, through Matador Records. The EP's title refers to Alan and Rick Bishop of the Sun City Girls with whom the Thinking Fellers had toured with the previous year.",
+            "Lovelyville\nLovelyville is the third album by Thinking Fellers Union Local 282, released December 12, 1991 on LP and CD through Matador Records. The CD contains bonus tracks entitled \"The Crowded Diaper.\"",
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+            "Still Life (US band)\nStill Life was a 3-piece rock band originally from Moorpark, California and then the San Fernando Valley, California. They are credited for helping pioneer the first wave of what is often referred to as emo/emocore /screamo bands in this subgenre that is rooted in punk rock. They started in the late 80s with the name Monster Club. They changed their name in 1991 after the departure of the original lead singer Rick Rodney who joined the band Strife. They were active until 2003 when all of their instruments were stolen from Chris Pitzel's truck parked on the street in front of their house after a show. Former Members Paul Rauch and David Pitzel have started a new band named Old Ground and continue to use Still Life's label, Sunflower Tribe.",
+            "Foxes (soundtrack)\nFoxes is the soundtrack to the 1980 film of the same name, starring Jodie Foster, Scott Baio, Sally Kellerman, Randy Quaid as well as The Runaways' lead singer Cherie Currie. The double-album was released on the disco label Casablanca Records.",
+            "Di'Anno (album)\nDi'Anno is the 1984 self-titled album of the band of the same name. The lead singer Paul Di'Anno had been the frontman of the British heavy metal band Iron Maiden for three years, before being dismissed for his erratic behaviour. The band bearing his name and playing very commercial heavy rock was his first and short-lived solo project.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Mike Patton\nMichael Allan \"Mike\" Patton (born January 27, 1968) is an American musician, singer, songwriter, actor, record producer, multi-instrumentalist and film composer, best known as the lead singer of the alternative metal band Faith No More. Patton was also the founder and lead singer of Mr. Bungle, and has played with Tomahawk, Fant\u00f4mas, Lovage, The Dillinger Escape Plan, and Peeping Tom.",
+            "Lingdian\nZero Band () are a Chinese rock band from Inner Mongolia. The lead singer is Zhou Xiaoou (\u5468\u6653\u9e25). The English name \"Zero Band\" was used in Beijing concert advertisements, though the band did not originally use an English name; the name has also been translated as \"Point Zero\" in some older English publications. The band appeared on the Jingwen label in China, but were licensed outside China by JVC. One of the top Beijing bands at the end of the 1990s, Lingdian originally suffered the same resistance from government-owned venues as other indigenous PRC rock bands.",
+            "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+            "Viacom Productions\nViacom Productions was a television production arm of Viacom International. The division was active from 1974 until 2004, when the company was folded into Paramount Network Television 10 years following Viacom's acquisition of Paramount Pictures.",
+            "Lenox Hewitt\nSir Lenox Hewitt {'1': \", '2': \", '3': \", '4': \"} (born 7 May 1917) is a retired senior Australian public servant. He served the Commonwealth in various capacities for over 40 years (1939\u201380), principally as Secretary of the Prime Minister's Department under John Gorton (Liberal) 1968-71, and Secretary of the Department of Minerals and Energy under Rex Connor (Labor) 1972-75. He later also served the governments of New South Wales and Western Australia. He remains active in public policy debate.",
+            "Still Kicking (film)\nStill Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active. The catalyst for Young's film was Amy Gorman and Frances Kandl's Project Arts & Longevity through which they were exploring the link between longevity and artistic vitality. Along with the film the joint project resulted in a book entitled Aging Artfully.",
+            "Montel Williams\nMontel Brian Anthony Williams (born July 3, 1956) is an American television personality, radio talk show host, and actor. He is best known as host of the long-running \"The Montel Williams Show\", and more recently as a spokesman for the Partnership for Prescription Assistance (PPA), Williams is also active with the nonprofit MS Foundation, which he founded after being diagnosed with multiple sclerosis in 1999. Williams is also noted for his service in both the Marine Corps and the Navy, from which he was honorably discharged after 15 years of service.",
+            "Andy Cohen (television personality)\nAndrew Joseph \"Andy\" Cohen (born June 2, 1968) is an American talk show and radio host, author and producer. Cohen hosts the Bravo nightly series \"Watch What Happens Live with Andy Cohen\". He is the first openly gay host of an American late-night talk show. After being head of development at Bravo for more than 10 years, Cohen resigned in November 2013. He continues to serve as an executive producer of \"The Real Housewives\" franchise."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 5,
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Identify the active years of Thinking Fellers Union Local 282.",
+                "output": "The active years of Thinking Fellers Union Local 282 are not provided in the given information.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Identify the active years of The Smiths.",
+                "output": "The Smiths were active from 1982 to 1987.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Verify if Morrissey was the lead singer of The Smiths.",
+                "output": "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Thinking Fellers Union Local 282 were active in 1986 based on their active years.",
+                "output": "Based on the information provided, we cannot determine if Thinking Fellers Union Local 282 were active in 1986 as their active years are not provided.",
+                "upstream": [
+                    [
+                        "1",
+                        "The active years of Thinking Fellers Union Local 282 are not provided in the given information."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Determine if The Smiths, with Morrissey as lead singer, were active in 1986 based on their active years and Morrissey's role.",
+                "output": "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 as their active years were from 1982 to 1987.",
+                "upstream": [
+                    [
+                        "2",
+                        "The Smiths were active from 1982 to 1987."
+                    ],
+                    [
+                        "3",
+                        "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "6",
+                "instruction": "Combine the results to determine if both bands were active in 1986.",
+                "output": "Based on the information provided, we can determine that The Smiths were active in 1986, but we cannot determine if Thinking Fellers Union Local 282 were active in 1986.",
+                "upstream": [
+                    [
+                        "4",
+                        "Based on the information provided, we cannot determine if Thinking Fellers Union Local 282 were active in 1986 as their active years are not provided."
+                    ],
+                    [
+                        "5",
+                        "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 as their active years were from 1982 to 1987."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "Information (Berlin album)\nInformation is the first album by Berlin, released in 1980 by Vinyl Records. It was recorded during the period when Terri Nunn had temporarily left the band to pursue an acting career and Virginia Macolino performed the lead vocals. Several songs were written by previous lead singer Toni Childs who went solo prior to the album's release.",
+            "Mike Patton\nMichael Allan \"Mike\" Patton (born January 27, 1968) is an American musician, singer, songwriter, actor, record producer, multi-instrumentalist and film composer, best known as the lead singer of the alternative metal band Faith No More. Patton was also the founder and lead singer of Mr. Bungle, and has played with Tomahawk, Fant\u00f4mas, Lovage, The Dillinger Escape Plan, and Peeping Tom.",
+            "Jimmy Farrar\nJimmy Farrar (born 8 December 1950) is a singer, songwriter and musician born in La Grange, Georgia, originally lead singer for the Raw Energy band, Farrar is best known as the second lead singer for the American Southern Rock band Molly Hatchet from 1980 to 1982, and in more recent years, Gator Country.",
+            "Calum MacDonald (musician)\nCalum MacDonald (Scottish Gaelic: Calum MacDhomhnaill; born 12 November 1953) is the percussionist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his older brother, Rory MacDonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scots Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "Rory Macdonald (musician)\nRoderick (Rory) Macdonald (Scottish Gaelic: Ruaridh MacDhomhnaill; born 27 July 1949, Dornoch, Sutherland) is the bassist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his younger brother, Calum Macdonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scottish Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "Pyramid (song)\n\"Pyramid\" is the second single of Filipino pop and R&B singer Jake Zyrus and the lead single from his debut album,Charice. The song credited under his pre-gender transition name Charice, features vocals from British Virgin Islands singer Iyaz, was written by David Jassy, Niclas Molinder, Joacim Persson, Johan Alken\u00e4s and R&B singer-songwriter Lyrica Anderson, and produced by Twin and Alke. A remix was said to be released on iTunes on February 16, 2010 which was later changed to February 23, the same day as the release of the album version. But the album version was delayed and was released on March 2. It is Zyrus's first number one single. Pyramid is a midtempo pop ballad with lyrics that metaphorically describes the strength of a relationship. \"Pyramid\" peaked at the \"Billboard\" Hot 100 chart at number 56, making Zyrus the second Filipino singer to enter the chart since Jaya's debut single \"If You Leave Me Now\" peaked on the \"Billboard\" Hot 100 at number 44 in 1990.",
+            "On the West Side\nOn The West Side is the debut solo album by the Scottish folk rock artist Donnie Munro, former lead singer of the band, Runrig. It was released in 1999.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "See Yourself\n\"See Yourself\" is a song by English musician George Harrison, released on his 1976 album \"Thirty Three & 1/3\". Harrison began writing the song in 1967, while he was a member of the Beatles, in response to the public outcry surrounding bandmate Paul McCartney's admission that he had taken the hallucinogenic drug LSD. McCartney's announcement created a reaction in the press similar to that caused in 1966 by John Lennon's statement that the Beatles were more popular than Christianity. In its finished form, the song's lyrics advocate self-awareness and consideration for the consequences of one's actions. Musically, the composition contains unusual shifts in time signature from standard 4/4 to 9/8, while the songwords reflect the era of its genesis by recalling themes first espoused in the Beatles tracks \"Within You Without You\" and \"All You Need Is Love\".",
+            "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+            "Viacom Productions\nViacom Productions was a television production arm of Viacom International. The division was active from 1974 until 2004, when the company was folded into Paramount Network Television 10 years following Viacom's acquisition of Paramount Pictures.",
+            "Lenox Hewitt\nSir Lenox Hewitt {'1': \", '2': \", '3': \", '4': \"} (born 7 May 1917) is a retired senior Australian public servant. He served the Commonwealth in various capacities for over 40 years (1939\u201380), principally as Secretary of the Prime Minister's Department under John Gorton (Liberal) 1968-71, and Secretary of the Department of Minerals and Energy under Rex Connor (Labor) 1972-75. He later also served the governments of New South Wales and Western Australia. He remains active in public policy debate.",
+            "Still Kicking (film)\nStill Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active. The catalyst for Young's film was Amy Gorman and Frances Kandl's Project Arts & Longevity through which they were exploring the link between longevity and artistic vitality. Along with the film the joint project resulted in a book entitled Aging Artfully.",
+            "Montel Williams\nMontel Brian Anthony Williams (born July 3, 1956) is an American television personality, radio talk show host, and actor. He is best known as host of the long-running \"The Montel Williams Show\", and more recently as a spokesman for the Partnership for Prescription Assistance (PPA), Williams is also active with the nonprofit MS Foundation, which he founded after being diagnosed with multiple sclerosis in 1999. Williams is also noted for his service in both the Marine Corps and the Navy, from which he was honorably discharged after 15 years of service.",
+            "Andy Cohen (television personality)\nAndrew Joseph \"Andy\" Cohen (born June 2, 1968) is an American talk show and radio host, author and producer. Cohen hosts the Bravo nightly series \"Watch What Happens Live with Andy Cohen\". He is the first openly gay host of an American late-night talk show. After being head of development at Bravo for more than 10 years, Cohen resigned in November 2013. He continues to serve as an executive producer of \"The Real Housewives\" franchise.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko."
+        ],
+        "recall": 0.5
+    },
+    {
+        "attempt": 6,
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Identify the active years of Thinking Fellers Union Local 282.",
+                "output": "Thinking Fellers Union Local 282 was active from 1986 to at least 1996, based on the release dates of their albums and EPs.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Identify the active years of The Smiths.",
+                "output": "The Smiths were active from 1982 to 1987.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Verify if Morrissey was the lead singer of The Smiths.",
+                "output": "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Thinking Fellers Union Local 282 were active in 1986 based on their active years.",
+                "output": "Based on the information from the upstream task, Thinking Fellers Union Local 282 were indeed active in 1986.",
+                "upstream": [
+                    [
+                        "1",
+                        "Thinking Fellers Union Local 282 was active from 1986 to at least 1996, based on the release dates of their albums and EPs."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Determine if The Smiths, with Morrissey as lead singer, were active in 1986 based on their active years and Morrissey's role.",
+                "output": "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 as their active years were from 1982 to 1987.",
+                "upstream": [
+                    [
+                        "2",
+                        "The Smiths were active from 1982 to 1987."
+                    ],
+                    [
+                        "3",
+                        "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "6",
+                "instruction": "Combine the results to determine if both bands were active in 1986.",
+                "output": "Both bands, Thinking Fellers Union Local 282 and The Smiths, were active in 1986.",
+                "upstream": [
+                    [
+                        "4",
+                        "Based on the information from the upstream task, Thinking Fellers Union Local 282 were indeed active in 1986."
+                    ],
+                    [
+                        "5",
+                        "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 as their active years were from 1982 to 1987."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Thinking Fellers Union Local 282\nThinking Fellers Union Local 282 is an experimental indie rock group formed in 1986 in San Francisco, California, though half of its members are from Iowa.",
+            "Where's Officer Tuba\nWhere's Officer Tuba is an EP by the band Thinking Fellers Union Local 282, released in 1993.",
+            "The Funeral Pudding\nThe Funeral Pudding is an EP by the band Thinking Fellers Union Local 282, released in February 1994 through Ajax Records.",
+            "I Hope It Lands\nI Hope It Lands is the sixth album by Thinking Fellers Union Local 282, released in April 1996 through Communion Records.",
+            "Strangers from the Universe\nStrangers from the Universe is the fifth album by Thinking Fellers Union Local 282, released on September 12, 1994 through Matador Records.",
+            "Mother of All Saints\nMother of All Saints is the fourth album by Thinking Fellers Union Local 282, released as a CD and double-LP on November 13, 1992 through Matador Records.",
+            "Admonishing the Bishops\nAdmonishing the Bishops is an EP by the band Thinking Fellers Union Local 282, released as a CD and 10\" vinyl record on October 26, 1993, through Matador Records. The EP's title refers to Alan and Rick Bishop of the Sun City Girls with whom the Thinking Fellers had toured with the previous year.",
+            "Lovelyville\nLovelyville is the third album by Thinking Fellers Union Local 282, released December 12, 1991 on LP and CD through Matador Records. The CD contains bonus tracks entitled \"The Crowded Diaper.\"",
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Jimmy Farrar\nJimmy Farrar (born 8 December 1950) is a singer, songwriter and musician born in La Grange, Georgia, originally lead singer for the Raw Energy band, Farrar is best known as the second lead singer for the American Southern Rock band Molly Hatchet from 1980 to 1982, and in more recent years, Gator Country.",
+            "Mike Patton\nMichael Allan \"Mike\" Patton (born January 27, 1968) is an American musician, singer, songwriter, actor, record producer, multi-instrumentalist and film composer, best known as the lead singer of the alternative metal band Faith No More. Patton was also the founder and lead singer of Mr. Bungle, and has played with Tomahawk, Fant\u00f4mas, Lovage, The Dillinger Escape Plan, and Peeping Tom.",
+            "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+            "Calum MacDonald (musician)\nCalum MacDonald (Scottish Gaelic: Calum MacDhomhnaill; born 12 November 1953) is the percussionist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his older brother, Rory MacDonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scots Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "Rory Macdonald (musician)\nRoderick (Rory) Macdonald (Scottish Gaelic: Ruaridh MacDhomhnaill; born 27 July 1949, Dornoch, Sutherland) is the bassist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his younger brother, Calum Macdonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scottish Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "James Dean Bradfield\nJames Dean Bradfield (born 21 February 1969) is a Welsh singer-songwriter, musician and record producer. He is known for being the lead guitarist and lead vocalist for the Welsh alternative rock band Manic Street Preachers.",
+            "Viacom Productions\nViacom Productions was a television production arm of Viacom International. The division was active from 1974 until 2004, when the company was folded into Paramount Network Television 10 years following Viacom's acquisition of Paramount Pictures.",
+            "Lenox Hewitt\nSir Lenox Hewitt {'1': \", '2': \", '3': \", '4': \"} (born 7 May 1917) is a retired senior Australian public servant. He served the Commonwealth in various capacities for over 40 years (1939\u201380), principally as Secretary of the Prime Minister's Department under John Gorton (Liberal) 1968-71, and Secretary of the Department of Minerals and Energy under Rex Connor (Labor) 1972-75. He later also served the governments of New South Wales and Western Australia. He remains active in public policy debate.",
+            "Still Kicking (film)\nStill Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active. The catalyst for Young's film was Amy Gorman and Frances Kandl's Project Arts & Longevity through which they were exploring the link between longevity and artistic vitality. Along with the film the joint project resulted in a book entitled Aging Artfully.",
+            "Montel Williams\nMontel Brian Anthony Williams (born July 3, 1956) is an American television personality, radio talk show host, and actor. He is best known as host of the long-running \"The Montel Williams Show\", and more recently as a spokesman for the Partnership for Prescription Assistance (PPA), Williams is also active with the nonprofit MS Foundation, which he founded after being diagnosed with multiple sclerosis in 1999. Williams is also noted for his service in both the Marine Corps and the Navy, from which he was honorably discharged after 15 years of service.",
+            "Andy Cohen (television personality)\nAndrew Joseph \"Andy\" Cohen (born June 2, 1968) is an American talk show and radio host, author and producer. Cohen hosts the Bravo nightly series \"Watch What Happens Live with Andy Cohen\". He is the first openly gay host of an American late-night talk show. After being head of development at Bravo for more than 10 years, Cohen resigned in November 2013. He continues to serve as an executive producer of \"The Real Housewives\" franchise.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 7,
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Identify the active years of Thinking Fellers Union Local 282.",
+                "output": "The active years of Thinking Fellers Union Local 282 are from 1986 to 2001.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Identify the active years of The Smiths.",
+                "output": "The Smiths were active from 1982 to 1987.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Verify if Morrissey was the lead singer of The Smiths.",
+                "output": "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Thinking Fellers Union Local 282 were active in 1986 based on their active years.",
+                "output": "Yes, Thinking Fellers Union Local 282 were active in 1986 based on their active years.",
+                "upstream": [
+                    [
+                        "1",
+                        "The active years of Thinking Fellers Union Local 282 are from 1986 to 2001."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Determine if The Smiths, with Morrissey as lead singer, were active in 1986 based on their active years and Morrissey's role.",
+                "output": "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 based on their active years and Morrissey's role. Their active years were from 1982 to 1987, and Morrissey was the lead singer during this time.",
+                "upstream": [
+                    [
+                        "2",
+                        "The Smiths were active from 1982 to 1987."
+                    ],
+                    [
+                        "3",
+                        "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "6",
+                "instruction": "Combine the results to determine if both bands were active in 1986.",
+                "output": "Based on the results of the upstream tasks, both Thinking Fellers Union Local 282 and The Smiths were active in 1986.",
+                "upstream": [
+                    [
+                        "4",
+                        "Yes, Thinking Fellers Union Local 282 were active in 1986 based on their active years."
+                    ],
+                    [
+                        "5",
+                        "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 based on their active years and Morrissey's role. Their active years were from 1982 to 1987, and Morrissey was the lead singer during this time."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "See Yourself\n\"See Yourself\" is a song by English musician George Harrison, released on his 1976 album \"Thirty Three & 1/3\". Harrison began writing the song in 1967, while he was a member of the Beatles, in response to the public outcry surrounding bandmate Paul McCartney's admission that he had taken the hallucinogenic drug LSD. McCartney's announcement created a reaction in the press similar to that caused in 1966 by John Lennon's statement that the Beatles were more popular than Christianity. In its finished form, the song's lyrics advocate self-awareness and consideration for the consequences of one's actions. Musically, the composition contains unusual shifts in time signature from standard 4/4 to 9/8, while the songwords reflect the era of its genesis by recalling themes first espoused in the Beatles tracks \"Within You Without You\" and \"All You Need Is Love\".",
+            "Jimmy Farrar\nJimmy Farrar (born 8 December 1950) is a singer, songwriter and musician born in La Grange, Georgia, originally lead singer for the Raw Energy band, Farrar is best known as the second lead singer for the American Southern Rock band Molly Hatchet from 1980 to 1982, and in more recent years, Gator Country.",
+            "Mike Patton\nMichael Allan \"Mike\" Patton (born January 27, 1968) is an American musician, singer, songwriter, actor, record producer, multi-instrumentalist and film composer, best known as the lead singer of the alternative metal band Faith No More. Patton was also the founder and lead singer of Mr. Bungle, and has played with Tomahawk, Fant\u00f4mas, Lovage, The Dillinger Escape Plan, and Peeping Tom.",
+            "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+            "Calum MacDonald (musician)\nCalum MacDonald (Scottish Gaelic: Calum MacDhomhnaill; born 12 November 1953) is the percussionist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his older brother, Rory MacDonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scots Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "Rory Macdonald (musician)\nRoderick (Rory) Macdonald (Scottish Gaelic: Ruaridh MacDhomhnaill; born 27 July 1949, Dornoch, Sutherland) is the bassist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his younger brother, Calum Macdonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scottish Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "James Dean Bradfield\nJames Dean Bradfield (born 21 February 1969) is a Welsh singer-songwriter, musician and record producer. He is known for being the lead guitarist and lead vocalist for the Welsh alternative rock band Manic Street Preachers.",
+            "Viacom Productions\nViacom Productions was a television production arm of Viacom International. The division was active from 1974 until 2004, when the company was folded into Paramount Network Television 10 years following Viacom's acquisition of Paramount Pictures.",
+            "Lenox Hewitt\nSir Lenox Hewitt {'1': \", '2': \", '3': \", '4': \"} (born 7 May 1917) is a retired senior Australian public servant. He served the Commonwealth in various capacities for over 40 years (1939\u201380), principally as Secretary of the Prime Minister's Department under John Gorton (Liberal) 1968-71, and Secretary of the Department of Minerals and Energy under Rex Connor (Labor) 1972-75. He later also served the governments of New South Wales and Western Australia. He remains active in public policy debate.",
+            "Still Kicking (film)\nStill Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active. The catalyst for Young's film was Amy Gorman and Frances Kandl's Project Arts & Longevity through which they were exploring the link between longevity and artistic vitality. Along with the film the joint project resulted in a book entitled Aging Artfully.",
+            "Montel Williams\nMontel Brian Anthony Williams (born July 3, 1956) is an American television personality, radio talk show host, and actor. He is best known as host of the long-running \"The Montel Williams Show\", and more recently as a spokesman for the Partnership for Prescription Assistance (PPA), Williams is also active with the nonprofit MS Foundation, which he founded after being diagnosed with multiple sclerosis in 1999. Williams is also noted for his service in both the Marine Corps and the Navy, from which he was honorably discharged after 15 years of service.",
+            "Andy Cohen (television personality)\nAndrew Joseph \"Andy\" Cohen (born June 2, 1968) is an American talk show and radio host, author and producer. Cohen hosts the Bravo nightly series \"Watch What Happens Live with Andy Cohen\". He is the first openly gay host of an American late-night talk show. After being head of development at Bravo for more than 10 years, Cohen resigned in November 2013. He continues to serve as an executive producer of \"The Real Housewives\" franchise.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko."
+        ],
+        "recall": 0.5
+    },
+    {
+        "attempt": 8,
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Identify the active years of Thinking Fellers Union Local 282.",
+                "output": "Thinking Fellers Union Local 282 was active from 1986 to at least 1996, based on the release dates of their albums and EPs.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Identify the active years of The Smiths.",
+                "output": "The Smiths were active from 1982 to 1987.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Verify if Morrissey was the lead singer of The Smiths.",
+                "output": "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Thinking Fellers Union Local 282 were active in 1986 based on their active years.",
+                "output": "Yes, Thinking Fellers Union Local 282 were active in 1986.",
+                "upstream": [
+                    [
+                        "1",
+                        "Thinking Fellers Union Local 282 was active from 1986 to at least 1996, based on the release dates of their albums and EPs."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Determine if The Smiths, with Morrissey as lead singer, were active in 1986 based on their active years and Morrissey's role.",
+                "output": "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 as their active years were from 1982 to 1987.",
+                "upstream": [
+                    [
+                        "2",
+                        "The Smiths were active from 1982 to 1987."
+                    ],
+                    [
+                        "3",
+                        "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "6",
+                "instruction": "Combine the results to determine if both bands were active in 1986.",
+                "output": "Both bands, Thinking Fellers Union Local 282 and The Smiths, were active in 1986.",
+                "upstream": [
+                    [
+                        "4",
+                        "Yes, Thinking Fellers Union Local 282 were active in 1986."
+                    ],
+                    [
+                        "5",
+                        "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 as their active years were from 1982 to 1987."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Thinking Fellers Union Local 282\nThinking Fellers Union Local 282 is an experimental indie rock group formed in 1986 in San Francisco, California, though half of its members are from Iowa.",
+            "Where's Officer Tuba\nWhere's Officer Tuba is an EP by the band Thinking Fellers Union Local 282, released in 1993.",
+            "The Funeral Pudding\nThe Funeral Pudding is an EP by the band Thinking Fellers Union Local 282, released in February 1994 through Ajax Records.",
+            "I Hope It Lands\nI Hope It Lands is the sixth album by Thinking Fellers Union Local 282, released in April 1996 through Communion Records.",
+            "Strangers from the Universe\nStrangers from the Universe is the fifth album by Thinking Fellers Union Local 282, released on September 12, 1994 through Matador Records.",
+            "Mother of All Saints\nMother of All Saints is the fourth album by Thinking Fellers Union Local 282, released as a CD and double-LP on November 13, 1992 through Matador Records.",
+            "Admonishing the Bishops\nAdmonishing the Bishops is an EP by the band Thinking Fellers Union Local 282, released as a CD and 10\" vinyl record on October 26, 1993, through Matador Records. The EP's title refers to Alan and Rick Bishop of the Sun City Girls with whom the Thinking Fellers had toured with the previous year.",
+            "Lovelyville\nLovelyville is the third album by Thinking Fellers Union Local 282, released December 12, 1991 on LP and CD through Matador Records. The CD contains bonus tracks entitled \"The Crowded Diaper.\"",
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Jimmy Farrar\nJimmy Farrar (born 8 December 1950) is a singer, songwriter and musician born in La Grange, Georgia, originally lead singer for the Raw Energy band, Farrar is best known as the second lead singer for the American Southern Rock band Molly Hatchet from 1980 to 1982, and in more recent years, Gator Country.",
+            "Mike Patton\nMichael Allan \"Mike\" Patton (born January 27, 1968) is an American musician, singer, songwriter, actor, record producer, multi-instrumentalist and film composer, best known as the lead singer of the alternative metal band Faith No More. Patton was also the founder and lead singer of Mr. Bungle, and has played with Tomahawk, Fant\u00f4mas, Lovage, The Dillinger Escape Plan, and Peeping Tom.",
+            "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+            "Calum MacDonald (musician)\nCalum MacDonald (Scottish Gaelic: Calum MacDhomhnaill; born 12 November 1953) is the percussionist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his older brother, Rory MacDonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scots Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "Rory Macdonald (musician)\nRoderick (Rory) Macdonald (Scottish Gaelic: Ruaridh MacDhomhnaill; born 27 July 1949, Dornoch, Sutherland) is the bassist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his younger brother, Calum Macdonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scottish Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "James Dean Bradfield\nJames Dean Bradfield (born 21 February 1969) is a Welsh singer-songwriter, musician and record producer. He is known for being the lead guitarist and lead vocalist for the Welsh alternative rock band Manic Street Preachers.",
+            "Viacom Productions\nViacom Productions was a television production arm of Viacom International. The division was active from 1974 until 2004, when the company was folded into Paramount Network Television 10 years following Viacom's acquisition of Paramount Pictures.",
+            "Lenox Hewitt\nSir Lenox Hewitt {'1': \", '2': \", '3': \", '4': \"} (born 7 May 1917) is a retired senior Australian public servant. He served the Commonwealth in various capacities for over 40 years (1939\u201380), principally as Secretary of the Prime Minister's Department under John Gorton (Liberal) 1968-71, and Secretary of the Department of Minerals and Energy under Rex Connor (Labor) 1972-75. He later also served the governments of New South Wales and Western Australia. He remains active in public policy debate.",
+            "Still Kicking (film)\nStill Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active. The catalyst for Young's film was Amy Gorman and Frances Kandl's Project Arts & Longevity through which they were exploring the link between longevity and artistic vitality. Along with the film the joint project resulted in a book entitled Aging Artfully.",
+            "Montel Williams\nMontel Brian Anthony Williams (born July 3, 1956) is an American television personality, radio talk show host, and actor. He is best known as host of the long-running \"The Montel Williams Show\", and more recently as a spokesman for the Partnership for Prescription Assistance (PPA), Williams is also active with the nonprofit MS Foundation, which he founded after being diagnosed with multiple sclerosis in 1999. Williams is also noted for his service in both the Marine Corps and the Navy, from which he was honorably discharged after 15 years of service.",
+            "Andy Cohen (television personality)\nAndrew Joseph \"Andy\" Cohen (born June 2, 1968) is an American talk show and radio host, author and producer. Cohen hosts the Bravo nightly series \"Watch What Happens Live with Andy Cohen\". He is the first openly gay host of an American late-night talk show. After being head of development at Bravo for more than 10 years, Cohen resigned in November 2013. He continues to serve as an executive producer of \"The Real Housewives\" franchise.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 9,
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Identify the active years of Thinking Fellers Union Local 282.",
+                "output": "Thinking Fellers Union Local 282 was active from 1986 to at least 1996, based on the release dates of their albums and EPs.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Identify the active years of The Smiths.",
+                "output": "The Smiths were active from 1982 to 1987.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Verify if Morrissey was the lead singer of The Smiths.",
+                "output": "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Thinking Fellers Union Local 282 were active in 1986 based on their active years.",
+                "output": "Based on the information from the upstream task, Thinking Fellers Union Local 282 were indeed active in 1986.",
+                "upstream": [
+                    [
+                        "1",
+                        "Thinking Fellers Union Local 282 was active from 1986 to at least 1996, based on the release dates of their albums and EPs."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Determine if The Smiths, with Morrissey as lead singer, were active in 1986 based on their active years and Morrissey's role.",
+                "output": "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 as their active years were from 1982 to 1987.",
+                "upstream": [
+                    [
+                        "2",
+                        "The Smiths were active from 1982 to 1987."
+                    ],
+                    [
+                        "3",
+                        "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "6",
+                "instruction": "Combine the results to determine if both bands were active in 1986.",
+                "output": "Both bands, Thinking Fellers Union Local 282 and The Smiths, were active in 1986.",
+                "upstream": [
+                    [
+                        "4",
+                        "Based on the information from the upstream task, Thinking Fellers Union Local 282 were indeed active in 1986."
+                    ],
+                    [
+                        "5",
+                        "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 as their active years were from 1982 to 1987."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Thinking Fellers Union Local 282\nThinking Fellers Union Local 282 is an experimental indie rock group formed in 1986 in San Francisco, California, though half of its members are from Iowa.",
+            "Where's Officer Tuba\nWhere's Officer Tuba is an EP by the band Thinking Fellers Union Local 282, released in 1993.",
+            "The Funeral Pudding\nThe Funeral Pudding is an EP by the band Thinking Fellers Union Local 282, released in February 1994 through Ajax Records.",
+            "I Hope It Lands\nI Hope It Lands is the sixth album by Thinking Fellers Union Local 282, released in April 1996 through Communion Records.",
+            "Strangers from the Universe\nStrangers from the Universe is the fifth album by Thinking Fellers Union Local 282, released on September 12, 1994 through Matador Records.",
+            "Mother of All Saints\nMother of All Saints is the fourth album by Thinking Fellers Union Local 282, released as a CD and double-LP on November 13, 1992 through Matador Records.",
+            "Admonishing the Bishops\nAdmonishing the Bishops is an EP by the band Thinking Fellers Union Local 282, released as a CD and 10\" vinyl record on October 26, 1993, through Matador Records. The EP's title refers to Alan and Rick Bishop of the Sun City Girls with whom the Thinking Fellers had toured with the previous year.",
+            "Lovelyville\nLovelyville is the third album by Thinking Fellers Union Local 282, released December 12, 1991 on LP and CD through Matador Records. The CD contains bonus tracks entitled \"The Crowded Diaper.\"",
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Jimmy Farrar\nJimmy Farrar (born 8 December 1950) is a singer, songwriter and musician born in La Grange, Georgia, originally lead singer for the Raw Energy band, Farrar is best known as the second lead singer for the American Southern Rock band Molly Hatchet from 1980 to 1982, and in more recent years, Gator Country.",
+            "Mike Patton\nMichael Allan \"Mike\" Patton (born January 27, 1968) is an American musician, singer, songwriter, actor, record producer, multi-instrumentalist and film composer, best known as the lead singer of the alternative metal band Faith No More. Patton was also the founder and lead singer of Mr. Bungle, and has played with Tomahawk, Fant\u00f4mas, Lovage, The Dillinger Escape Plan, and Peeping Tom.",
+            "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+            "Calum MacDonald (musician)\nCalum MacDonald (Scottish Gaelic: Calum MacDhomhnaill; born 12 November 1953) is the percussionist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his older brother, Rory MacDonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scots Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "Rory Macdonald (musician)\nRoderick (Rory) Macdonald (Scottish Gaelic: Ruaridh MacDhomhnaill; born 27 July 1949, Dornoch, Sutherland) is the bassist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his younger brother, Calum Macdonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scottish Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "James Dean Bradfield\nJames Dean Bradfield (born 21 February 1969) is a Welsh singer-songwriter, musician and record producer. He is known for being the lead guitarist and lead vocalist for the Welsh alternative rock band Manic Street Preachers.",
+            "Viacom Productions\nViacom Productions was a television production arm of Viacom International. The division was active from 1974 until 2004, when the company was folded into Paramount Network Television 10 years following Viacom's acquisition of Paramount Pictures.",
+            "Lenox Hewitt\nSir Lenox Hewitt {'1': \", '2': \", '3': \", '4': \"} (born 7 May 1917) is a retired senior Australian public servant. He served the Commonwealth in various capacities for over 40 years (1939\u201380), principally as Secretary of the Prime Minister's Department under John Gorton (Liberal) 1968-71, and Secretary of the Department of Minerals and Energy under Rex Connor (Labor) 1972-75. He later also served the governments of New South Wales and Western Australia. He remains active in public policy debate.",
+            "Still Kicking (film)\nStill Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active. The catalyst for Young's film was Amy Gorman and Frances Kandl's Project Arts & Longevity through which they were exploring the link between longevity and artistic vitality. Along with the film the joint project resulted in a book entitled Aging Artfully.",
+            "Montel Williams\nMontel Brian Anthony Williams (born July 3, 1956) is an American television personality, radio talk show host, and actor. He is best known as host of the long-running \"The Montel Williams Show\", and more recently as a spokesman for the Partnership for Prescription Assistance (PPA), Williams is also active with the nonprofit MS Foundation, which he founded after being diagnosed with multiple sclerosis in 1999. Williams is also noted for his service in both the Marine Corps and the Navy, from which he was honorably discharged after 15 years of service.",
+            "Andy Cohen (television personality)\nAndrew Joseph \"Andy\" Cohen (born June 2, 1968) is an American talk show and radio host, author and producer. Cohen hosts the Bravo nightly series \"Watch What Happens Live with Andy Cohen\". He is the first openly gay host of an American late-night talk show. After being head of development at Bravo for more than 10 years, Cohen resigned in November 2013. He continues to serve as an executive producer of \"The Real Housewives\" franchise.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 10,
+        "question": "Were Thinking Fellers Union Local 282 and the Smiths, who had a lead singer of Morrissey, both active in 1986?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Identify the active years of Thinking Fellers Union Local 282.",
+                "output": "Thinking Fellers Union Local 282 was active from 1986 to 1996.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Identify the active years of The Smiths.",
+                "output": "The Smiths were active from 1982 to 1987.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Verify if Morrissey was the lead singer of The Smiths.",
+                "output": "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Thinking Fellers Union Local 282 were active in 1986 based on their active years.",
+                "output": "Based on the information provided, Thinking Fellers Union Local 282 were indeed active in 1986.",
+                "upstream": [
+                    [
+                        "1",
+                        "Thinking Fellers Union Local 282 was active from 1986 to 1996."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Determine if The Smiths, with Morrissey as lead singer, were active in 1986 based on their active years and Morrissey's role.",
+                "output": "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 based on their active years from 1982 to 1987.",
+                "upstream": [
+                    [
+                        "2",
+                        "The Smiths were active from 1982 to 1987."
+                    ],
+                    [
+                        "3",
+                        "Morrissey was indeed the lead singer of The Smiths, as stated in the relevant information provided."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "6",
+                "instruction": "Combine the results to determine if both bands were active in 1986.",
+                "output": "Both bands, Thinking Fellers Union Local 282 and The Smiths, were active in 1986.",
+                "upstream": [
+                    [
+                        "4",
+                        "Based on the information provided, Thinking Fellers Union Local 282 were indeed active in 1986."
+                    ],
+                    [
+                        "5",
+                        "Yes, The Smiths, with Morrissey as lead singer, were active in 1986 based on their active years from 1982 to 1987."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Thinking Fellers Union Local 282\nThinking Fellers Union Local 282 is an experimental indie rock group formed in 1986 in San Francisco, California, though half of its members are from Iowa.",
+            "Where's Officer Tuba\nWhere's Officer Tuba is an EP by the band Thinking Fellers Union Local 282, released in 1993.",
+            "The Funeral Pudding\nThe Funeral Pudding is an EP by the band Thinking Fellers Union Local 282, released in February 1994 through Ajax Records.",
+            "I Hope It Lands\nI Hope It Lands is the sixth album by Thinking Fellers Union Local 282, released in April 1996 through Communion Records.",
+            "Strangers from the Universe\nStrangers from the Universe is the fifth album by Thinking Fellers Union Local 282, released on September 12, 1994 through Matador Records.",
+            "Mother of All Saints\nMother of All Saints is the fourth album by Thinking Fellers Union Local 282, released as a CD and double-LP on November 13, 1992 through Matador Records.",
+            "Admonishing the Bishops\nAdmonishing the Bishops is an EP by the band Thinking Fellers Union Local 282, released as a CD and 10\" vinyl record on October 26, 1993, through Matador Records. The EP's title refers to Alan and Rick Bishop of the Sun City Girls with whom the Thinking Fellers had toured with the previous year.",
+            "Lovelyville\nLovelyville is the third album by Thinking Fellers Union Local 282, released December 12, 1991 on LP and CD through Matador Records. The CD contains bonus tracks entitled \"The Crowded Diaper.\"",
+            "Morrissey\nSteven Patrick Morrissey (born 22 May 1959), professionally known as Morrissey, is an English singer, songwriter and author. He rose to prominence as the lead singer of the indie rock band the Smiths, which was active from 1982 to 1987. Since then, Morrissey has had a solo career, making the top ten of the UK Singles Chart on ten occasions.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Jimmy Farrar\nJimmy Farrar (born 8 December 1950) is a singer, songwriter and musician born in La Grange, Georgia, originally lead singer for the Raw Energy band, Farrar is best known as the second lead singer for the American Southern Rock band Molly Hatchet from 1980 to 1982, and in more recent years, Gator Country.",
+            "Mike Patton\nMichael Allan \"Mike\" Patton (born January 27, 1968) is an American musician, singer, songwriter, actor, record producer, multi-instrumentalist and film composer, best known as the lead singer of the alternative metal band Faith No More. Patton was also the founder and lead singer of Mr. Bungle, and has played with Tomahawk, Fant\u00f4mas, Lovage, The Dillinger Escape Plan, and Peeping Tom.",
+            "Jarrod Kimber\nJarrod Kimber (born 7 January 1980) is a cricket writer who came to prominence as the founder of the cricketwithballs blog. Kimber was the editor of SPIN cricket Magazine in 2011, is currently working for ESPNCricinfo where started as a blogger on \"The Cricket Sadist Hour\" blog and starring in \"The Chuck Fleetwood-Smiths\" video series and also works for TalkSPORT 2.",
+            "Calum MacDonald (musician)\nCalum MacDonald (Scottish Gaelic: Calum MacDhomhnaill; born 12 November 1953) is the percussionist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his older brother, Rory MacDonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scots Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "Rory Macdonald (musician)\nRoderick (Rory) Macdonald (Scottish Gaelic: Ruaridh MacDhomhnaill; born 27 July 1949, Dornoch, Sutherland) is the bassist of the Scottish Celtic rock band Runrig, as well as their primary songwriter with his younger brother, Calum Macdonald. Rory tends to write the melody, and Calum the lyrics. Since former lead singer Donnie Munro left the band in 1997, Rory has taken lead vocal duties on songs in the band's catalogue written in the Scottish Gaelic language, as the band's new lead singer, Bruce Guthro, is not a Gaelic speaker.",
+            "James Dean Bradfield\nJames Dean Bradfield (born 21 February 1969) is a Welsh singer-songwriter, musician and record producer. He is known for being the lead guitarist and lead vocalist for the Welsh alternative rock band Manic Street Preachers.",
+            "Viacom Productions\nViacom Productions was a television production arm of Viacom International. The division was active from 1974 until 2004, when the company was folded into Paramount Network Television 10 years following Viacom's acquisition of Paramount Pictures.",
+            "Lenox Hewitt\nSir Lenox Hewitt {'1': \", '2': \", '3': \", '4': \"} (born 7 May 1917) is a retired senior Australian public servant. He served the Commonwealth in various capacities for over 40 years (1939\u201380), principally as Secretary of the Prime Minister's Department under John Gorton (Liberal) 1968-71, and Secretary of the Department of Minerals and Energy under Rex Connor (Labor) 1972-75. He later also served the governments of New South Wales and Western Australia. He remains active in public policy debate.",
+            "Still Kicking (film)\nStill Kicking: Six Artistic Women of Project Arts & Longevity is a 2006 32-minute documentary film by Pacific Grove filmmaker Greg Young, featuring six Bay Area women role models over 85 years old who remained artistically active. The catalyst for Young's film was Amy Gorman and Frances Kandl's Project Arts & Longevity through which they were exploring the link between longevity and artistic vitality. Along with the film the joint project resulted in a book entitled Aging Artfully.",
+            "Montel Williams\nMontel Brian Anthony Williams (born July 3, 1956) is an American television personality, radio talk show host, and actor. He is best known as host of the long-running \"The Montel Williams Show\", and more recently as a spokesman for the Partnership for Prescription Assistance (PPA), Williams is also active with the nonprofit MS Foundation, which he founded after being diagnosed with multiple sclerosis in 1999. Williams is also noted for his service in both the Marine Corps and the Navy, from which he was honorably discharged after 15 years of service.",
+            "Andy Cohen (television personality)\nAndrew Joseph \"Andy\" Cohen (born June 2, 1968) is an American talk show and radio host, author and producer. Cohen hosts the Bravo nightly series \"Watch What Happens Live with Andy Cohen\". He is the first openly gay host of an American late-night talk show. After being head of development at Bravo for more than 10 years, Cohen resigned in November 2013. He continues to serve as an executive producer of \"The Real Housewives\" franchise.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko."
+        ],
+        "recall": 0.8333333333333334
+    }
+]

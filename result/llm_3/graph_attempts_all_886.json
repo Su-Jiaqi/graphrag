@@ -1,0 +1,752 @@
+[
+    {
+        "question": "Who lived longer, American author Owen Wister or Canadian author Lucy Maud Montgomery? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the birth and death dates of Owen Wister.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the birth and death dates of Lucy Maud Montgomery.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Calculate the lifespan of Owen Wister using his birth and death dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the lifespan of Lucy Maud Montgomery using her birth and death dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the lifespans of Owen Wister and Lucy Maud Montgomery to determine who lived longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph first retrieves the birth and death dates of both authors separately. It then calculates their respective lifespans, before finally comparing these lifespans to determine which author lived longer. The graph allows parallel processing of the separate information retrieval and lifespan calculation tasks for each author."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Lucy Maud Montgomery\nLucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 \u2013 April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\". The book was an immediate success. The central character, Anne Shirley, an orphaned girl, made Montgomery famous in her lifetime and gave her an international following.",
+            "The Selected Journals of L. M. Montgomery\nThe Selected Journals of L. M. Montgomery, Vol. I\u2013V, are the personal journals of famed Canadian author, Lucy Maud Montgomery (1874\u20131942).",
+            "Emily's Quest\nEmily's Quest is a novel and the last of the \"Emily\" trilogy by Lucy Maud Montgomery. After finishing \"Emily Climbs\", Montgomery suspended writing \"Emily's Quest\" and published \"The Blue Castle\"; she resumed writing and published in 1927.",
+            "The Blue Castle\nThe Blue Castle is a 1926 novel by Canadian author Lucy Maud Montgomery, best known for her novel \"Anne of Green Gables\" (1908).",
+            "Anne's House of Dreams\nAnne's House of Dreams is a novel by Canadian author Lucy Maud Montgomery. It was first published in 1917 by McClelland, Goodchild and Stewart.",
+            "Mollie Gillen\nMollie Gillen (n\u00e9e Woolnough; 1908\u20132009) was an Australian historian, researcher, writer and novelist. Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them. Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery.",
+            "Anne Shirley\nAnne Shirley is a fictional character introduced in the 1908 novel \"Anne of Green Gables\" by Lucy Maud Montgomery. Montgomery wrote in her journal that the idea for Anne's story came from relatives who, planning to adopt an orphaned boy, received a girl instead. Anne Shirley's appearance was inspired by a photograph which Montgomery clipped from the Metropolitan Magazine and kept, unaware of the model's identity as the 1900s Gibson Girl Evelyn Nesbit.",
+            "Owen Wister\nOwen Wister (July 14, 1860 \u2013 July 21, 1938) was an American writer, historian and \"father\" of western fiction. He is best remembered for writing \"The Virginian\" and a biography of American Civil War Lt. Gen. and 18th President Ulysses S. Grant.",
+            "Anne of Green Gables (1985 film)\nAnne of Green Gables is a 1985 Canadian television mini-series drama film based on the novel of the same name by Canadian author Lucy Maud Montgomery, and is the first in a series of four films. The film starred Megan Follows and was produced and directed by Kevin Sullivan for the Canadian Broadcasting Corporation. It was released theatrically in Iran, Israel, Europe, and Japan.",
+            "Done in the Open\nDone in the Open was a verse collection published by in 1903 American author Owen Wister. The book was a collaboration with the artist Frederic Remington, the verses being written to accompany Remington's drawings.",
+            "The Virginian (novel)\nThe Virginian (otherwise titled \"The Virginian: A Horseman of the Plains)\" is a 1902 novel set in the Wild West by the American author Owen Wister, (1860-1938). It describes the life of a cowboy on a cattle ranch in Wyoming and was the first true fictional western ever written, aside from short stories and pulp dime novels. \"The Virginian\" paved the way for many more westerns by such authors as Zane Grey, Louis L'Amour, and several others.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Ala Khallidi\n\"\u2019Al\u0101 Khallid\u012b\" (Arabic: \u0623\u0644\u0627 \u062e\u0644\u0651\u062f\u064a\u200e \u200e ) is the former national anthem of Tunisia. It was sung during the Presidency of Habib Bourguiba until his downfall in 1987. \"Humat al-Hima\" was temporarily used as a national anthem between the end of the monarchy on 25 July 1957 and the adoption of \"Ala Khallidi\" as the official national anthem. In 1958, the Ministry of Education organized a competition, in which 53 poets and 23 musicians took part. The results were examined first by a commission of the Board of Education, which selected the submissions of the hymn poet Jalaleddine Naccache (1910\u20131989) and the composer and director of the Conservatoire of Tunis Salah El Mahdi (1925-2014). The works were presented to the president without announcing the selection that already been made. He selected the same version as the commission had. In order to be completely sure, another larger popular assembly was held in Monastir, the birth city of the president, and all 23 melodies were played. But then, the song by Naccache and El Mahdi won and was formally adopted during Independence Day, 20 March that same year.",
+            "Sid Owen\nSid Owen (born David Sutton; 12 January 1972) is an English actor, television presenter and former singer, who played Ricky Butcher in the BBC One soap opera \"EastEnders\" from 1988 until 2012. He also appeared in the tenth series of \"Strictly Come Dancing\".",
+            "List of Switched at Birth episodes\n\"Switched at Birth\" is an American television drama series which premiered on ABC Family on June 6, 2011. Created by Lizzy Weiss, the series follows two teenage girls who learn that they were switched at birth. On August 17, 2012, ABC Family renewed \"Switched at Birth\" for a second season, which premiered on January 7, 2013. All of the episode titles take their names from pieces of artwork. On July 30, 2013, ABC Family renewed the series for a full 22-episode third season, which premiered in January 2014. The second half of season 3 premiered on June 16, 2014. On August 13, 2014, the series was renewed for a fourth season, which premiered on January 6, 2015. ABC Family, which changed its name to Freeform in January 2016, announced on Wednesday October 21, 2015, that it had renewed the series for a fifth and final season. The fifth season began airing on January 31, 2017, and concluded on April 11, 2017. During the course of the series, episodes of \"Switched at Birth \" aired\u00a0over seasons.",
+            "Chris Owen (actor)\nChris Owen (born September 25, 1980) is an American actor and photographer. He is best known for his role as The Sherminator in the \"American Pie film franchise\", appearing in \"American Pie\", \"American Pie 2\", \"\" and \"American Reunion\". Aside from Eugene Levy, he is the only actor from the theatrical features to appear in the \"\"American Pie Presents:\"\" direct-to-video spin-off movies."
+        ],
+        "thoughts": [
+            "Owen Wister was born on July 14, 1860, and passed away on July 21, 1938.",
+            "To calculate the lifespan of Owen Wister, we subtract his birth date from his death date:\n\n1938 (death date) - 1860 (birth date) = 78 years\n\nSo, Owen Wister lived for 78 years.",
+            "Lucy Maud Montgomery was born on November 30, 1874, and passed away on April 24, 1942.",
+            "To calculate the lifespan of Lucy Maud Montgomery, we subtract her birth date from her death date:\n\n1942 (year of death) - 1874 (year of birth) = 68\n\nSo, Lucy Maud Montgomery lived for 68 years.",
+            "Owen Wister lived longer than Lucy Maud Montgomery, with a lifespan of 78 years compared to her 68 years."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who lived longer, American author Owen Wister or Canadian author Lucy Maud Montgomery? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve birth and death dates of Owen Wister.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve birth and death dates of Lucy Maud Montgomery.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Calculate the lifespan of Owen Wister using his birth and death dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the lifespan of Lucy Maud Montgomery using her birth and death dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the lifespans of Owen Wister and Lucy Maud Montgomery to determine who lived longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "To determine who lived longer, we first need to retrieve the birth and death dates for both Owen Wister and Lucy Maud Montgomery. With this information, we can calculate their lifespans. Finally, we compare these lifespans to answer the original question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Owen Wister\nOwen Wister (July 14, 1860 \u2013 July 21, 1938) was an American writer, historian and \"father\" of western fiction. He is best remembered for writing \"The Virginian\" and a biography of American Civil War Lt. Gen. and 18th President Ulysses S. Grant.",
+            "Done in the Open\nDone in the Open was a verse collection published by in 1903 American author Owen Wister. The book was a collaboration with the artist Frederic Remington, the verses being written to accompany Remington's drawings.",
+            "Mokujin\nMokujin (Japanese: \u6728\u4eba?, lit. \"Wood(en) person\") is a fictional character in Namco Bandai Games' \"Tekken\" video game series. Mokujin first appeared in the 1997 video game \"Tekken 3\". Mokujin does not have his own fighting style. Instead, he mimics fighting styles from other characters, which varies from match to match.",
+            "The Virginian (novel)\nThe Virginian (otherwise titled \"The Virginian: A Horseman of the Plains)\" is a 1902 novel set in the Wild West by the American author Owen Wister, (1860-1938). It describes the life of a cowboy on a cattle ranch in Wyoming and was the first true fictional western ever written, aside from short stories and pulp dime novels. \"The Virginian\" paved the way for many more westerns by such authors as Zane Grey, Louis L'Amour, and several others.",
+            "Lucy Maud Montgomery\nLucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 \u2013 April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\". The book was an immediate success. The central character, Anne Shirley, an orphaned girl, made Montgomery famous in her lifetime and gave her an international following.",
+            "Sid Owen\nSid Owen (born David Sutton; 12 January 1972) is an English actor, television presenter and former singer, who played Ricky Butcher in the BBC One soap opera \"EastEnders\" from 1988 until 2012. He also appeared in the tenth series of \"Strictly Come Dancing\".",
+            "Development of Grand Theft Auto V\nAn approximately 1,000-person team developed \"Grand Theft Auto V\", an action-adventure video game, over several years. Rockstar Games released \"Grand Theft Auto V\" on 17 September 2013 for PlayStation 3 and Xbox 360, on 18 November 2014 for PlayStation 4 and Xbox One, and on 14 April 2015 for Microsoft Windows, as the fifteenth entry in the \"Grand Theft Auto\" series. Development began soon after \"Grand Theft Auto IV\"' s release and was led by Rockstar North's core 360-person team, who collaborated with several other international Rockstar Games studios. The team considered the game a spiritual successor to many of their previous projects like \"Red Dead Redemption\" and \"Max Payne 3\". After its unexpected announcement in 2011, the game was fervently promoted with press showings, cinematic trailers, viral marketing strategies and special editions. Its release date, though subject to several delays, was widely anticipated.",
+            "The Selected Journals of L. M. Montgomery\nThe Selected Journals of L. M. Montgomery, Vol. I\u2013V, are the personal journals of famed Canadian author, Lucy Maud Montgomery (1874\u20131942).",
+            "James W. Hutchins\nJames William Hutchins (March 26, 1929 \u2013 March 16, 1984) was convicted of the murders of three NC law enforcement officers. The incident was the largest one-day homicide of law enforcement officers in North Carolina history. The incident inspired a motion picture and also promoted changes in law enforcement protocols statewide for interagency reporting of officer murders, radio cross-communication between local agencies and the NC State Highway Patrol, which dispatches for most NC state law enforcement agencies and training protocols for response to domestic disturbance incidents. The murdered officers were: Rutherford County NC sheriff\u2019s deputies Captain Roy Huskey and Deputy Owen Messersmith and NC State Highway Patrol Trooper Robert L. \"Pete\" Peterson. Hutchins was executed at the age of 54 by the State North Carolina at Central Prison in Raleigh, North Carolina by lethal injection. He became the first person to be executed in North Carolina since 1977 when the death penalty was reinstated.",
+            "Timeline of the presidency of Gerald Ford\nThe presidency of Gerald Ford began on August 9, 1974, when Gerald Ford became President of the United States, and ended on January 20, 1977, a span of days. Ford, the 38th United States president, succeeded Richard Nixon, who had resigned from office. Prior to this he was the 40th Vice President of the United States, serving from 1973 until President Richard Nixon's resignation in 1974. He was the first person appointed to the vice presidency under the terms of the Twenty-fifth Amendment to the United States Constitution, following the resignation of Vice President Spiro Agnew on October 10, 1973. Ford has the distinction of being the first, and to date the only person to have served as both vice president and president without being elected to either office.",
+            "Emily's Quest\nEmily's Quest is a novel and the last of the \"Emily\" trilogy by Lucy Maud Montgomery. After finishing \"Emily Climbs\", Montgomery suspended writing \"Emily's Quest\" and published \"The Blue Castle\"; she resumed writing and published in 1927.",
+            "The Blue Castle\nThe Blue Castle is a 1926 novel by Canadian author Lucy Maud Montgomery, best known for her novel \"Anne of Green Gables\" (1908).",
+            "Anne's House of Dreams\nAnne's House of Dreams is a novel by Canadian author Lucy Maud Montgomery. It was first published in 1917 by McClelland, Goodchild and Stewart.",
+            "Running mate\nA running mate is a person running together with another person on a joint ticket during an election. The term is most often used in reference to the person in the subordinate position (such as the vice presidential candidate running with a presidential candidate) but can also properly be used when referring to both candidates, such as by saying Joko Widodo and Jusuf Kalla, and Uhuru Kenyatta and William Ruto, were running mates in relation to the most recent presidential elections held in Indonesia and Kenya respectively.",
+            "Mollie Gillen\nMollie Gillen (n\u00e9e Woolnough; 1908\u20132009) was an Australian historian, researcher, writer and novelist. Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them. Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery."
+        ],
+        "thoughts": [
+            "Owen Wister was born on July 14, 1860, and passed away on July 21, 1938. He was an American writer, historian, and the \"father\" of western fiction, best known for his novel \"The Virginian\" and a biography of Ulysses S. Grant.",
+            "Owen Wister lived for 78 years. He was born on July 14, 1860, and passed away on July 21, 1938.",
+            "Lucy Maud Montgomery was born on November 30, 1874, and passed away on April 24, 1942.",
+            "To calculate the lifespan of Lucy Maud Montgomery, we subtract her birth date from her death date:\n\n1942 (year of death) - 1874 (year of birth) = 68\n\nSo, Lucy Maud Montgomery lived for 68 years.",
+            "Owen Wister lived longer than Lucy Maud Montgomery, with a lifespan of 78 years compared to Montgomery's 68 years."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Who lived longer, American author Owen Wister or Canadian author Lucy Maud Montgomery? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the birth and death years of Owen Wister.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the birth and death years of Lucy Maud Montgomery.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Calculate the lifespan of Owen Wister using his birth and death years.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the lifespan of Lucy Maud Montgomery using her birth and death years.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the lifespans of Owen Wister and Lucy Maud Montgomery to determine who lived longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph begins with retrieving the necessary data about the birth and death years of both authors. Once this information is acquired, individual reasoning nodes calculate their respective lifespans. The final node compares the two calculated lifespans to determine which author lived longer."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Lucy Maud Montgomery\nLucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 \u2013 April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\". The book was an immediate success. The central character, Anne Shirley, an orphaned girl, made Montgomery famous in her lifetime and gave her an international following.",
+            "The Selected Journals of L. M. Montgomery\nThe Selected Journals of L. M. Montgomery, Vol. I\u2013V, are the personal journals of famed Canadian author, Lucy Maud Montgomery (1874\u20131942).",
+            "The Blue Castle\nThe Blue Castle is a 1926 novel by Canadian author Lucy Maud Montgomery, best known for her novel \"Anne of Green Gables\" (1908).",
+            "Emily's Quest\nEmily's Quest is a novel and the last of the \"Emily\" trilogy by Lucy Maud Montgomery. After finishing \"Emily Climbs\", Montgomery suspended writing \"Emily's Quest\" and published \"The Blue Castle\"; she resumed writing and published in 1927.",
+            "Anne's House of Dreams\nAnne's House of Dreams is a novel by Canadian author Lucy Maud Montgomery. It was first published in 1917 by McClelland, Goodchild and Stewart.",
+            "Anne Shirley\nAnne Shirley is a fictional character introduced in the 1908 novel \"Anne of Green Gables\" by Lucy Maud Montgomery. Montgomery wrote in her journal that the idea for Anne's story came from relatives who, planning to adopt an orphaned boy, received a girl instead. Anne Shirley's appearance was inspired by a photograph which Montgomery clipped from the Metropolitan Magazine and kept, unaware of the model's identity as the 1900s Gibson Girl Evelyn Nesbit.",
+            "Mollie Gillen\nMollie Gillen (n\u00e9e Woolnough; 1908\u20132009) was an Australian historian, researcher, writer and novelist. Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them. Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery.",
+            "Anne of Green Gables\nAnne of Green Gables is a 1908 novel by Canadian author Lucy Maud Montgomery (published as L. M. Montgomery). Written for all ages, it has been considered a children's novel since the mid-twentieth century. It recounts the adventures of Anne Shirley, an 11-year-old orphan girl who is mistakenly sent to Matthew and Marilla Cuthbert, a middle-aged brother and sister who had intended to adopt a boy to help them on their farm in the fictional town of Avonlea on Prince Edward Island. The novel recounts how Anne makes her way with the Cuthberts, in school, and within the town.",
+            "Owen Wister\nOwen Wister (July 14, 1860 \u2013 July 21, 1938) was an American writer, historian and \"father\" of western fiction. He is best remembered for writing \"The Virginian\" and a biography of American Civil War Lt. Gen. and 18th President Ulysses S. Grant.",
+            "Mokujin\nMokujin (Japanese: \u6728\u4eba?, lit. \"Wood(en) person\") is a fictional character in Namco Bandai Games' \"Tekken\" video game series. Mokujin first appeared in the 1997 video game \"Tekken 3\". Mokujin does not have his own fighting style. Instead, he mimics fighting styles from other characters, which varies from match to match.",
+            "Done in the Open\nDone in the Open was a verse collection published by in 1903 American author Owen Wister. The book was a collaboration with the artist Frederic Remington, the verses being written to accompany Remington's drawings.",
+            "The Human Stain\nThe Human Stain (2000) is a novel by Philip Roth set in late 1990s rural New England. Its first person narrator is 65-year-old author Nathan Zuckerman, who appeared in several earlier Roth novels, and who also figures in both \"American Pastoral\" (1997) and \"I Married a Communist\" (1998), two books that form a loose trilogy with \"The Human Stain\". Zuckerman acts largely as an observer as the complex story of the protagonist, Coleman Silk, a retired professor of classics, is slowly revealed.",
+            "Running mate\nA running mate is a person running together with another person on a joint ticket during an election. The term is most often used in reference to the person in the subordinate position (such as the vice presidential candidate running with a presidential candidate) but can also properly be used when referring to both candidates, such as by saying Joko Widodo and Jusuf Kalla, and Uhuru Kenyatta and William Ruto, were running mates in relation to the most recent presidential elections held in Indonesia and Kenya respectively.",
+            "The Virginian (novel)\nThe Virginian (otherwise titled \"The Virginian: A Horseman of the Plains)\" is a 1902 novel set in the Wild West by the American author Owen Wister, (1860-1938). It describes the life of a cowboy on a cattle ranch in Wyoming and was the first true fictional western ever written, aside from short stories and pulp dime novels. \"The Virginian\" paved the way for many more westerns by such authors as Zane Grey, Louis L'Amour, and several others.",
+            "Quincy Mumford\nQuincy Mumford (born Allenhurst, New Jersey) is an American guitarist and singer-songwriter. He has released several solo albums since his debut in 2008, and is also rhythm guitarist and frontman of the band Quincy Mumford & The Reason Why, a five-person group based in Asbury Park, New Jersey. Mumford's style has been described as \"funk, soul and surf music, with a dash of reggae thrown in.\" After the release of his second album \"South Edgemere,\" he won three Asbury Music Awards in 2009, including Best Male Acoustic Act. That year MSNBC also named Mumford one of their \"1 of 10 up and coming young artists.\"",
+            "Cationic liposome\nCationic liposomes are structures that are made of positively charged lipids and are increasingly being researched for use in gene therapy due to their favourable interactions with negatively charged DNA and cell membranes. Upon interacting with negatively charged DNA, cationic liposomes form clusters of aggregated vesicles. At a critical density the DNA is condensed and becomes encapsulated within a lipid bilayer, although it is possible that the liposomes bind along the surface of the DNA, retaining its shape. They are also able to interact with negatively charged cell membranes more readily than classical liposomes. Fusion between cationic vesicles and cell surfaces can deliver the DNA directly across the plasma membrane. This process bypasses the endosomal-lysosomal route which leads to degradation of anionic liposome formulations."
+        ],
+        "thoughts": [
+            "Owen Wister was born on July 14, 1860, and passed away on July 21, 1938.",
+            "Owen Wister lived for 78 years, from 1860 to 1938.",
+            "Lucy Maud Montgomery was born on November 30, 1874, and passed away on April 24, 1942.",
+            "To calculate the lifespan of Lucy Maud Montgomery, we subtract her birth year from her death year:\n\n1942 (death year) - 1874 (birth year) = 68\n\nSo, Lucy Maud Montgomery lived for 68 years.",
+            "Owen Wister lived longer than Lucy Maud Montgomery, with a lifespan of 78 years compared to Montgomery's 68 years."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who lived longer, American author Owen Wister or Canadian author Lucy Maud Montgomery? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the birth and death dates of Owen Wister.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the birth and death dates of Lucy Maud Montgomery.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Calculate the lifespan of Owen Wister using his birth and death dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the lifespan of Lucy Maud Montgomery using her birth and death dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the lifespans of Owen Wister and Lucy Maud Montgomery to determine who lived longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "To answer the question about who lived longer, it's necessary to first retrieve the birth and death dates of both Owen Wister and Lucy Maud Montgomery. Using this information, we calculate their respective lifespans. Finally, comparing these lifespans will provide the answer."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Mokujin\nMokujin (Japanese: \u6728\u4eba?, lit. \"Wood(en) person\") is a fictional character in Namco Bandai Games' \"Tekken\" video game series. Mokujin first appeared in the 1997 video game \"Tekken 3\". Mokujin does not have his own fighting style. Instead, he mimics fighting styles from other characters, which varies from match to match.",
+            "Running mate\nA running mate is a person running together with another person on a joint ticket during an election. The term is most often used in reference to the person in the subordinate position (such as the vice presidential candidate running with a presidential candidate) but can also properly be used when referring to both candidates, such as by saying Joko Widodo and Jusuf Kalla, and Uhuru Kenyatta and William Ruto, were running mates in relation to the most recent presidential elections held in Indonesia and Kenya respectively.",
+            "Henry Segrave\nSir Henry O'Neil de Hane Segrave (22 September 1896 \u2013 13 June 1930) was an early British pioneer in land speed and water speed records. Seagrave, who set three land and one water record, was the first person to hold both titles simultaneously and the first person to travel at over 200 mph in a land vehicle. He died in an accident in 1930 shortly after setting a new world water speed record on Windermere in the Lake District, England. The Segrave Trophy was established to commemorate his life.",
+            "Joel Tabora\nJoel E. Tabora (born September 26, 1947, Manila, Philippines) is a Jesuit priest and the president of Ateneo de Davao University. He demonstrated a commitment to \"whole person formation\", social justice and spirituality.",
+            "Adrian &quot;Wildman&quot; Cenni\nAdrian \"Wildman\" Cenni is a professional off-road truck racer, professional stunt man, and President/Founder of Atrium Staffing. Cenni is the first person to successfully land a true 360 degree barrel roll in a vehicle.",
+            "Primary residence\nA person's primary residence, or main residence is the dwelling where they usually live, typically a house or an apartment. A person can only have one \"primary\" residence at any given time, though they may share the residence with other people. A primary residence is considered to be a legal residence for the purpose of income tax and/or acquiring a mortgage.",
+            "Red Dead Revolver\nRed Dead Revolver is a 2004 western action-adventure third-person shooter video game developed by Rockstar San Diego, published by Rockstar Games and distributed by Take-Two Interactive for the PlayStation 2 and Xbox. It is the first game in the \"Red Dead\" series.",
+            "Gerald Ford\nGerald Rudolph Ford Jr. (born Leslie Lynch King Jr.; July 14, 1913\u00a0\u2013 December 26, 2006) was an American politician who served as the 38th President of the United States from August 1974 to January 1977, following the resignation of Richard Nixon. Prior to this he served eight months as the 40th Vice President of the United States, following the resignation of Spiro Agnew. He was the first person appointed to the vice presidency under the terms of the 25th Amendment, and consequently the only person to have served as both Vice President and President of the United States without being elected to executive office. Before his appointment to the vice presidency, Ford served 25 years as U.S. Representative from Michigan's 5th congressional district, the final nine of them as the House Minority Leader.",
+            "Timeline of the presidency of Gerald Ford\nThe presidency of Gerald Ford began on August 9, 1974, when Gerald Ford became President of the United States, and ended on January 20, 1977, a span of days. Ford, the 38th United States president, succeeded Richard Nixon, who had resigned from office. Prior to this he was the 40th Vice President of the United States, serving from 1973 until President Richard Nixon's resignation in 1974. He was the first person appointed to the vice presidency under the terms of the Twenty-fifth Amendment to the United States Constitution, following the resignation of Vice President Spiro Agnew on October 10, 1973. Ford has the distinction of being the first, and to date the only person to have served as both vice president and president without being elected to either office.",
+            "Development of Grand Theft Auto V\nAn approximately 1,000-person team developed \"Grand Theft Auto V\", an action-adventure video game, over several years. Rockstar Games released \"Grand Theft Auto V\" on 17 September 2013 for PlayStation 3 and Xbox 360, on 18 November 2014 for PlayStation 4 and Xbox One, and on 14 April 2015 for Microsoft Windows, as the fifteenth entry in the \"Grand Theft Auto\" series. Development began soon after \"Grand Theft Auto IV\"' s release and was led by Rockstar North's core 360-person team, who collaborated with several other international Rockstar Games studios. The team considered the game a spiritual successor to many of their previous projects like \"Red Dead Redemption\" and \"Max Payne 3\". After its unexpected announcement in 2011, the game was fervently promoted with press showings, cinematic trailers, viral marketing strategies and special editions. Its release date, though subject to several delays, was widely anticipated.",
+            "The Human Stain\nThe Human Stain (2000) is a novel by Philip Roth set in late 1990s rural New England. Its first person narrator is 65-year-old author Nathan Zuckerman, who appeared in several earlier Roth novels, and who also figures in both \"American Pastoral\" (1997) and \"I Married a Communist\" (1998), two books that form a loose trilogy with \"The Human Stain\". Zuckerman acts largely as an observer as the complex story of the protagonist, Coleman Silk, a retired professor of classics, is slowly revealed.",
+            "Swedish governmental line of succession\nThe Swedish constitution of 1974 allows the Prime Minister of Sweden to appoint one of the Ministers in the cabinet as Deputy Prime Minister (\"bitr\u00e4dande statsminister\", also unofficially known as \"vice statsminister\", \"Vice Prime Minister\"), in case the Prime Minister for some reason is prevented from performing his or her duties. However, if a Deputy Prime Minister has not been appointed, the Minister in the cabinet who has served the longest time (and if there are several with equal experience the one who is oldest) takes over as head of government. Note that the person acting as Prime Minister does not do so on a permanent basis: if a Prime Minister dies, resigns or loses a vote of confidence in the Riksdag, the Speaker of the Riksdag will then confer with the parties of the Riksdag and propose a new Prime Minister, who must be tolerated by a majority of the Riksdag. If the Prime Minister has resigned or lost a vote of confidence, he or she will remain the head of a government \"ad interim\" until the new Prime Minister assumes his or her office. The only case where the governmental line of succession becomes relevant is when the Prime Minister dies (upon which the person next in the line of succession serves as the head of a government \"ad interim\") or when the Prime Minister is on leave or for any other reason incapable of serving, but still remains in office. This might be compared to the Presidential line of succession in the United States, where the person next in line assumes the Presidency throughout the remainder of the term if the President dies, resigns or is impeached.",
+            "Loveless (film)\nLoveless (Russian: \u041d\u0435\u043b\u044e\u0431\u043e\u0432\u044c ) is a 2017 Russian drama film directed by Andrey Zvyagintsev. The story concerns two separated parents living apart whose affections are long forgotten and whose relationship has become loveless. They are temporarily brought together after their only young child becomes a missing person and they attempt to find him. It was shot in Moscow, with international support after the Russian government disapproved of Zvyagintsev's 2014 film \"Leviathan\". \"Loveless\" opened to critical acclaim and it won the Jury Prize at the 2017 Cannes Film Festival. It was selected as the Russian entry for the Best Foreign Language Film at the 90th Academy Awards."
+        ],
+        "thoughts": [
+            "Owen Wister, the American writer and \"father\" of Western fiction, was born on July 14, 1860, and passed away on July 21, 1938.",
+            "Owen Wister lived for 78 years, from July 14, 1860, to July 21, 1938.",
+            "Lucy Maud Montgomery was born on November 30, 1874, and passed away on April 24, 1942.",
+            "To calculate the lifespan of Lucy Maud Montgomery, we subtract her birth date from her death date:\n\n1942 (year of death) - 1874 (year of birth) = 68\n\nSo, Lucy Maud Montgomery lived for 68 years.",
+            "Owen Wister lived longer than Lucy Maud Montgomery, with a lifespan of 78 years compared to Montgomery's 68 years."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who lived longer, American author Owen Wister or Canadian author Lucy Maud Montgomery? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the birth and death years of American author Owen Wister.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the birth and death years of Canadian author Lucy Maud Montgomery.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Calculate the lifespan of Owen Wister using his birth and death years.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the lifespan of Lucy Maud Montgomery using her birth and death years.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the lifespans of Owen Wister and Lucy Maud Montgomery to determine who lived longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the original question into a series of retrieval and reasoning steps. The first two nodes retrieve the birth and death years of the two authors. The third and fourth nodes calculate their respective lifespans based on the retrieved birth and death years. Finally, the fifth node compares the calculated lifespans to determine which author lived longer."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Lucy Maud Montgomery\nLucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 \u2013 April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\". The book was an immediate success. The central character, Anne Shirley, an orphaned girl, made Montgomery famous in her lifetime and gave her an international following.",
+            "The Selected Journals of L. M. Montgomery\nThe Selected Journals of L. M. Montgomery, Vol. I\u2013V, are the personal journals of famed Canadian author, Lucy Maud Montgomery (1874\u20131942).",
+            "Emily's Quest\nEmily's Quest is a novel and the last of the \"Emily\" trilogy by Lucy Maud Montgomery. After finishing \"Emily Climbs\", Montgomery suspended writing \"Emily's Quest\" and published \"The Blue Castle\"; she resumed writing and published in 1927.",
+            "The Blue Castle\nThe Blue Castle is a 1926 novel by Canadian author Lucy Maud Montgomery, best known for her novel \"Anne of Green Gables\" (1908).",
+            "Anne's House of Dreams\nAnne's House of Dreams is a novel by Canadian author Lucy Maud Montgomery. It was first published in 1917 by McClelland, Goodchild and Stewart.",
+            "Mollie Gillen\nMollie Gillen (n\u00e9e Woolnough; 1908\u20132009) was an Australian historian, researcher, writer and novelist. Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them. Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery.",
+            "Anne Shirley\nAnne Shirley is a fictional character introduced in the 1908 novel \"Anne of Green Gables\" by Lucy Maud Montgomery. Montgomery wrote in her journal that the idea for Anne's story came from relatives who, planning to adopt an orphaned boy, received a girl instead. Anne Shirley's appearance was inspired by a photograph which Montgomery clipped from the Metropolitan Magazine and kept, unaware of the model's identity as the 1900s Gibson Girl Evelyn Nesbit.",
+            "Owen Wister\nOwen Wister (July 14, 1860 \u2013 July 21, 1938) was an American writer, historian and \"father\" of western fiction. He is best remembered for writing \"The Virginian\" and a biography of American Civil War Lt. Gen. and 18th President Ulysses S. Grant.",
+            "Anne of Ingleside\nAnne of Ingleside is a children's novel by Canadian author Lucy Maud Montgomery. It was first published in July 1939 by McClelland and Stewart (Toronto) and the Frederick A. Stokes Company (New York). It is the tenth of eleven books that feature the character of Anne Shirley, and Montgomery's final published novel. (Two novels that occur later in the \"Anne\" chronology were actually published years earlier. As well, the short story collection \"The Blythes Are Quoted\", written in 1941/42, but not published until 2009, concludes the Anne chronology.)",
+            "Done in the Open\nDone in the Open was a verse collection published by in 1903 American author Owen Wister. The book was a collaboration with the artist Frederic Remington, the verses being written to accompany Remington's drawings.",
+            "The Virginian (novel)\nThe Virginian (otherwise titled \"The Virginian: A Horseman of the Plains)\" is a 1902 novel set in the Wild West by the American author Owen Wister, (1860-1938). It describes the life of a cowboy on a cattle ranch in Wyoming and was the first true fictional western ever written, aside from short stories and pulp dime novels. \"The Virginian\" paved the way for many more westerns by such authors as Zane Grey, Louis L'Amour, and several others.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Star Maker\nStar Maker is a science fiction novel by British writer Olaf Stapledon, published in 1937. The book describes a history of life in the universe, dwarfing in scale Stapledon's previous book, \"Last and First Men\" (1930), a history of the human species over two billion years. \"Star Maker\" tackles philosophical themes such as the essence of life, of birth, decay and death, and the relationship between creation and creator. A pervading theme is that of progressive unity within and between different civilizations. Some of the elements and themes briefly discussed prefigure later fiction concerning genetic engineering and alien life forms. Arthur C. Clarke considered \"Star Maker\" to be one of the finest works of science fiction ever written.",
+            "Ala Khallidi\n\"\u2019Al\u0101 Khallid\u012b\" (Arabic: \u0623\u0644\u0627 \u062e\u0644\u0651\u062f\u064a\u200e \u200e ) is the former national anthem of Tunisia. It was sung during the Presidency of Habib Bourguiba until his downfall in 1987. \"Humat al-Hima\" was temporarily used as a national anthem between the end of the monarchy on 25 July 1957 and the adoption of \"Ala Khallidi\" as the official national anthem. In 1958, the Ministry of Education organized a competition, in which 53 poets and 23 musicians took part. The results were examined first by a commission of the Board of Education, which selected the submissions of the hymn poet Jalaleddine Naccache (1910\u20131989) and the composer and director of the Conservatoire of Tunis Salah El Mahdi (1925-2014). The works were presented to the president without announcing the selection that already been made. He selected the same version as the commission had. In order to be completely sure, another larger popular assembly was held in Monastir, the birth city of the president, and all 23 melodies were played. But then, the song by Naccache and El Mahdi won and was formally adopted during Independence Day, 20 March that same year.",
+            "Sid Owen\nSid Owen (born David Sutton; 12 January 1972) is an English actor, television presenter and former singer, who played Ricky Butcher in the BBC One soap opera \"EastEnders\" from 1988 until 2012. He also appeared in the tenth series of \"Strictly Come Dancing\".",
+            "Akim Tamiroff\nAkim Mikhailovich Tamiroff (Armenian: \u0531\u056f\u056b\u0574 \u0539\u0561\u0574\u056b\u0580\u0578\u057e , Russian: \u0410\u043a\u0438\u043c \u041c\u0438\u0445\u0430\u0439\u043b\u043e\u0432\u0438\u0447 \u0422\u0430\u043c\u0438\u0440\u043e\u0432 ; birth name` Hovakim, Armenian: \u0540\u0578\u057e\u0561\u056f\u056b\u0574 ; 29 October 1899 \u2013 17 September 1972) was an ethnic Armenian actor. He won the first Golden Globe Award for Best Supporting Actor, was nominated twice for the Academy Award for Best Supporting Actor, and appeared in at least 80 American motion pictures in a career spanning thirty-seven years."
+        ],
+        "thoughts": [
+            "Owen Wister, the American author, was born on July 14, 1860, and passed away on July 21, 1938.",
+            "Owen Wister lived for 78 years, from 1860 to 1938.",
+            "Lucy Maud Montgomery was born on November 30, 1874, and passed away on April 24, 1942.",
+            "To calculate the lifespan of Lucy Maud Montgomery, we subtract her birth year from her death year:\n\n1942 (death year) - 1874 (birth year) = 68\n\nSo, Lucy Maud Montgomery lived for 68 years.",
+            "Owen Wister lived longer than Lucy Maud Montgomery, with a lifespan of 78 years compared to Montgomery's 68 years."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who lived longer, American author Owen Wister or Canadian author Lucy Maud Montgomery? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the birth and death years of American author Owen Wister.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the birth and death years of Canadian author Lucy Maud Montgomery.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Calculate the lifespan of Owen Wister by subtracting his birth year from his death year.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the lifespan of Lucy Maud Montgomery by subtracting her birth year from her death year.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the lifespans of Owen Wister and Lucy Maud Montgomery to determine who lived longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The task involves first retrieving the birth and death years for both authors independently. Once these years are retrieved, we calculate each author's lifespan by subtracting the birth year from the death year. Finally, a comparison of these calculated lifespans is made to determine which author lived longer. The graph allows for parallel retrieval of life data, while the reasoning steps sequentially calculate and compare lifespans."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Lucy Maud Montgomery\nLucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 \u2013 April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\". The book was an immediate success. The central character, Anne Shirley, an orphaned girl, made Montgomery famous in her lifetime and gave her an international following.",
+            "The Selected Journals of L. M. Montgomery\nThe Selected Journals of L. M. Montgomery, Vol. I\u2013V, are the personal journals of famed Canadian author, Lucy Maud Montgomery (1874\u20131942).",
+            "Emily's Quest\nEmily's Quest is a novel and the last of the \"Emily\" trilogy by Lucy Maud Montgomery. After finishing \"Emily Climbs\", Montgomery suspended writing \"Emily's Quest\" and published \"The Blue Castle\"; she resumed writing and published in 1927.",
+            "The Blue Castle\nThe Blue Castle is a 1926 novel by Canadian author Lucy Maud Montgomery, best known for her novel \"Anne of Green Gables\" (1908).",
+            "Anne's House of Dreams\nAnne's House of Dreams is a novel by Canadian author Lucy Maud Montgomery. It was first published in 1917 by McClelland, Goodchild and Stewart.",
+            "Mollie Gillen\nMollie Gillen (n\u00e9e Woolnough; 1908\u20132009) was an Australian historian, researcher, writer and novelist. Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them. Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery.",
+            "Anne Shirley\nAnne Shirley is a fictional character introduced in the 1908 novel \"Anne of Green Gables\" by Lucy Maud Montgomery. Montgomery wrote in her journal that the idea for Anne's story came from relatives who, planning to adopt an orphaned boy, received a girl instead. Anne Shirley's appearance was inspired by a photograph which Montgomery clipped from the Metropolitan Magazine and kept, unaware of the model's identity as the 1900s Gibson Girl Evelyn Nesbit.",
+            "Owen Wister\nOwen Wister (July 14, 1860 \u2013 July 21, 1938) was an American writer, historian and \"father\" of western fiction. He is best remembered for writing \"The Virginian\" and a biography of American Civil War Lt. Gen. and 18th President Ulysses S. Grant.",
+            "Anne of Ingleside\nAnne of Ingleside is a children's novel by Canadian author Lucy Maud Montgomery. It was first published in July 1939 by McClelland and Stewart (Toronto) and the Frederick A. Stokes Company (New York). It is the tenth of eleven books that feature the character of Anne Shirley, and Montgomery's final published novel. (Two novels that occur later in the \"Anne\" chronology were actually published years earlier. As well, the short story collection \"The Blythes Are Quoted\", written in 1941/42, but not published until 2009, concludes the Anne chronology.)",
+            "Done in the Open\nDone in the Open was a verse collection published by in 1903 American author Owen Wister. The book was a collaboration with the artist Frederic Remington, the verses being written to accompany Remington's drawings.",
+            "The Virginian (novel)\nThe Virginian (otherwise titled \"The Virginian: A Horseman of the Plains)\" is a 1902 novel set in the Wild West by the American author Owen Wister, (1860-1938). It describes the life of a cowboy on a cattle ranch in Wyoming and was the first true fictional western ever written, aside from short stories and pulp dime novels. \"The Virginian\" paved the way for many more westerns by such authors as Zane Grey, Louis L'Amour, and several others.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Star Maker\nStar Maker is a science fiction novel by British writer Olaf Stapledon, published in 1937. The book describes a history of life in the universe, dwarfing in scale Stapledon's previous book, \"Last and First Men\" (1930), a history of the human species over two billion years. \"Star Maker\" tackles philosophical themes such as the essence of life, of birth, decay and death, and the relationship between creation and creator. A pervading theme is that of progressive unity within and between different civilizations. Some of the elements and themes briefly discussed prefigure later fiction concerning genetic engineering and alien life forms. Arthur C. Clarke considered \"Star Maker\" to be one of the finest works of science fiction ever written.",
+            "Ala Khallidi\n\"\u2019Al\u0101 Khallid\u012b\" (Arabic: \u0623\u0644\u0627 \u062e\u0644\u0651\u062f\u064a\u200e \u200e ) is the former national anthem of Tunisia. It was sung during the Presidency of Habib Bourguiba until his downfall in 1987. \"Humat al-Hima\" was temporarily used as a national anthem between the end of the monarchy on 25 July 1957 and the adoption of \"Ala Khallidi\" as the official national anthem. In 1958, the Ministry of Education organized a competition, in which 53 poets and 23 musicians took part. The results were examined first by a commission of the Board of Education, which selected the submissions of the hymn poet Jalaleddine Naccache (1910\u20131989) and the composer and director of the Conservatoire of Tunis Salah El Mahdi (1925-2014). The works were presented to the president without announcing the selection that already been made. He selected the same version as the commission had. In order to be completely sure, another larger popular assembly was held in Monastir, the birth city of the president, and all 23 melodies were played. But then, the song by Naccache and El Mahdi won and was formally adopted during Independence Day, 20 March that same year.",
+            "Sid Owen\nSid Owen (born David Sutton; 12 January 1972) is an English actor, television presenter and former singer, who played Ricky Butcher in the BBC One soap opera \"EastEnders\" from 1988 until 2012. He also appeared in the tenth series of \"Strictly Come Dancing\".",
+            "Akim Tamiroff\nAkim Mikhailovich Tamiroff (Armenian: \u0531\u056f\u056b\u0574 \u0539\u0561\u0574\u056b\u0580\u0578\u057e , Russian: \u0410\u043a\u0438\u043c \u041c\u0438\u0445\u0430\u0439\u043b\u043e\u0432\u0438\u0447 \u0422\u0430\u043c\u0438\u0440\u043e\u0432 ; birth name` Hovakim, Armenian: \u0540\u0578\u057e\u0561\u056f\u056b\u0574 ; 29 October 1899 \u2013 17 September 1972) was an ethnic Armenian actor. He won the first Golden Globe Award for Best Supporting Actor, was nominated twice for the Academy Award for Best Supporting Actor, and appeared in at least 80 American motion pictures in a career spanning thirty-seven years."
+        ],
+        "thoughts": [
+            "Owen Wister, the American author, was born on July 14, 1860, and passed away on July 21, 1938.",
+            "To calculate the lifespan of Owen Wister, we subtract his birth year from his death year:\n1938 (death year) - 1860 (birth year) = 78 years\nOwen Wister lived for 78 years.",
+            "Lucy Maud Montgomery was born on November 30, 1874, and passed away on April 24, 1942.",
+            "To calculate the lifespan of Lucy Maud Montgomery, we subtract her birth year from her death year:\n1942 - 1874 = 68\nSo, Lucy Maud Montgomery lived for 68 years.",
+            "Owen Wister lived longer than Lucy Maud Montgomery, with a lifespan of 78 years compared to her 68 years."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who lived longer, American author Owen Wister or Canadian author Lucy Maud Montgomery? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the birth and death dates of Owen Wister.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the birth and death dates of Lucy Maud Montgomery.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Calculate the lifespan of Owen Wister using the retrieved birth and death dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the lifespan of Lucy Maud Montgomery using the retrieved birth and death dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the lifespans of Owen Wister and Lucy Maud Montgomery and determine who lived longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph consists of steps to retrieve necessary birth and death information for both authors (Owen Wister and Lucy Maud Montgomery), calculate their respective lifespans, and then compare the two to determine who lived longer. This approach ensures that each piece of information is retrieved and processed systematically before making the final comparison."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Mokujin\nMokujin (Japanese: \u6728\u4eba?, lit. \"Wood(en) person\") is a fictional character in Namco Bandai Games' \"Tekken\" video game series. Mokujin first appeared in the 1997 video game \"Tekken 3\". Mokujin does not have his own fighting style. Instead, he mimics fighting styles from other characters, which varies from match to match.",
+            "Running mate\nA running mate is a person running together with another person on a joint ticket during an election. The term is most often used in reference to the person in the subordinate position (such as the vice presidential candidate running with a presidential candidate) but can also properly be used when referring to both candidates, such as by saying Joko Widodo and Jusuf Kalla, and Uhuru Kenyatta and William Ruto, were running mates in relation to the most recent presidential elections held in Indonesia and Kenya respectively.",
+            "Henry Segrave\nSir Henry O'Neil de Hane Segrave (22 September 1896 \u2013 13 June 1930) was an early British pioneer in land speed and water speed records. Seagrave, who set three land and one water record, was the first person to hold both titles simultaneously and the first person to travel at over 200 mph in a land vehicle. He died in an accident in 1930 shortly after setting a new world water speed record on Windermere in the Lake District, England. The Segrave Trophy was established to commemorate his life.",
+            "Joel Tabora\nJoel E. Tabora (born September 26, 1947, Manila, Philippines) is a Jesuit priest and the president of Ateneo de Davao University. He demonstrated a commitment to \"whole person formation\", social justice and spirituality.",
+            "Adrian &quot;Wildman&quot; Cenni\nAdrian \"Wildman\" Cenni is a professional off-road truck racer, professional stunt man, and President/Founder of Atrium Staffing. Cenni is the first person to successfully land a true 360 degree barrel roll in a vehicle.",
+            "Primary residence\nA person's primary residence, or main residence is the dwelling where they usually live, typically a house or an apartment. A person can only have one \"primary\" residence at any given time, though they may share the residence with other people. A primary residence is considered to be a legal residence for the purpose of income tax and/or acquiring a mortgage.",
+            "Red Dead Revolver\nRed Dead Revolver is a 2004 western action-adventure third-person shooter video game developed by Rockstar San Diego, published by Rockstar Games and distributed by Take-Two Interactive for the PlayStation 2 and Xbox. It is the first game in the \"Red Dead\" series.",
+            "Gerald Ford\nGerald Rudolph Ford Jr. (born Leslie Lynch King Jr.; July 14, 1913\u00a0\u2013 December 26, 2006) was an American politician who served as the 38th President of the United States from August 1974 to January 1977, following the resignation of Richard Nixon. Prior to this he served eight months as the 40th Vice President of the United States, following the resignation of Spiro Agnew. He was the first person appointed to the vice presidency under the terms of the 25th Amendment, and consequently the only person to have served as both Vice President and President of the United States without being elected to executive office. Before his appointment to the vice presidency, Ford served 25 years as U.S. Representative from Michigan's 5th congressional district, the final nine of them as the House Minority Leader.",
+            "Timeline of the presidency of Gerald Ford\nThe presidency of Gerald Ford began on August 9, 1974, when Gerald Ford became President of the United States, and ended on January 20, 1977, a span of days. Ford, the 38th United States president, succeeded Richard Nixon, who had resigned from office. Prior to this he was the 40th Vice President of the United States, serving from 1973 until President Richard Nixon's resignation in 1974. He was the first person appointed to the vice presidency under the terms of the Twenty-fifth Amendment to the United States Constitution, following the resignation of Vice President Spiro Agnew on October 10, 1973. Ford has the distinction of being the first, and to date the only person to have served as both vice president and president without being elected to either office.",
+            "Development of Grand Theft Auto V\nAn approximately 1,000-person team developed \"Grand Theft Auto V\", an action-adventure video game, over several years. Rockstar Games released \"Grand Theft Auto V\" on 17 September 2013 for PlayStation 3 and Xbox 360, on 18 November 2014 for PlayStation 4 and Xbox One, and on 14 April 2015 for Microsoft Windows, as the fifteenth entry in the \"Grand Theft Auto\" series. Development began soon after \"Grand Theft Auto IV\"' s release and was led by Rockstar North's core 360-person team, who collaborated with several other international Rockstar Games studios. The team considered the game a spiritual successor to many of their previous projects like \"Red Dead Redemption\" and \"Max Payne 3\". After its unexpected announcement in 2011, the game was fervently promoted with press showings, cinematic trailers, viral marketing strategies and special editions. Its release date, though subject to several delays, was widely anticipated.",
+            "The Human Stain\nThe Human Stain (2000) is a novel by Philip Roth set in late 1990s rural New England. Its first person narrator is 65-year-old author Nathan Zuckerman, who appeared in several earlier Roth novels, and who also figures in both \"American Pastoral\" (1997) and \"I Married a Communist\" (1998), two books that form a loose trilogy with \"The Human Stain\". Zuckerman acts largely as an observer as the complex story of the protagonist, Coleman Silk, a retired professor of classics, is slowly revealed.",
+            "Swedish governmental line of succession\nThe Swedish constitution of 1974 allows the Prime Minister of Sweden to appoint one of the Ministers in the cabinet as Deputy Prime Minister (\"bitr\u00e4dande statsminister\", also unofficially known as \"vice statsminister\", \"Vice Prime Minister\"), in case the Prime Minister for some reason is prevented from performing his or her duties. However, if a Deputy Prime Minister has not been appointed, the Minister in the cabinet who has served the longest time (and if there are several with equal experience the one who is oldest) takes over as head of government. Note that the person acting as Prime Minister does not do so on a permanent basis: if a Prime Minister dies, resigns or loses a vote of confidence in the Riksdag, the Speaker of the Riksdag will then confer with the parties of the Riksdag and propose a new Prime Minister, who must be tolerated by a majority of the Riksdag. If the Prime Minister has resigned or lost a vote of confidence, he or she will remain the head of a government \"ad interim\" until the new Prime Minister assumes his or her office. The only case where the governmental line of succession becomes relevant is when the Prime Minister dies (upon which the person next in the line of succession serves as the head of a government \"ad interim\") or when the Prime Minister is on leave or for any other reason incapable of serving, but still remains in office. This might be compared to the Presidential line of succession in the United States, where the person next in line assumes the Presidency throughout the remainder of the term if the President dies, resigns or is impeached.",
+            "Loveless (film)\nLoveless (Russian: \u041d\u0435\u043b\u044e\u0431\u043e\u0432\u044c ) is a 2017 Russian drama film directed by Andrey Zvyagintsev. The story concerns two separated parents living apart whose affections are long forgotten and whose relationship has become loveless. They are temporarily brought together after their only young child becomes a missing person and they attempt to find him. It was shot in Moscow, with international support after the Russian government disapproved of Zvyagintsev's 2014 film \"Leviathan\". \"Loveless\" opened to critical acclaim and it won the Jury Prize at the 2017 Cannes Film Festival. It was selected as the Russian entry for the Best Foreign Language Film at the 90th Academy Awards."
+        ],
+        "thoughts": [
+            "Owen Wister, the American writer and \"father\" of Western fiction, was born on July 14, 1860, and passed away on July 21, 1938.",
+            "Owen Wister lived for 78 years, from July 14, 1860, to July 21, 1938.",
+            "Lucy Maud Montgomery was born on November 30, 1874, and passed away on April 24, 1942.",
+            "To calculate the lifespan of Lucy Maud Montgomery, we subtract her birth date from her death date:\n\n1942 (death date) - 1874 (birth date) = 68\n\nSo, Lucy Maud Montgomery lived for 68 years.",
+            "Owen Wister lived longer than Lucy Maud Montgomery, with a lifespan of 78 years compared to Montgomery's 68 years."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who lived longer, American author Owen Wister or Canadian author Lucy Maud Montgomery? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the birth and death dates of American author Owen Wister.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the birth and death dates of Canadian author Lucy Maud Montgomery.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Calculate the lifespan of Owen Wister using his birth and death dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the lifespan of Lucy Maud Montgomery using her birth and death dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the lifespans of Owen Wister and Lucy Maud Montgomery to determine who lived longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to systematically retrieve and compare the lifespans of two authors, Owen Wister and Lucy Maud Montgomery. Initially, the birth and death dates for each author are retrieved (Nodes 1 and 2). These dates are then used to calculate their respective lifespans (Nodes 3 and 4). Finally, the calculated lifespans are compared to determine who lived longer (Node 5). The graph allows for parallel retrieval of birth and death dates for both authors to optimize efficiency."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Lucy Maud Montgomery\nLucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 \u2013 April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\". The book was an immediate success. The central character, Anne Shirley, an orphaned girl, made Montgomery famous in her lifetime and gave her an international following.",
+            "The Selected Journals of L. M. Montgomery\nThe Selected Journals of L. M. Montgomery, Vol. I\u2013V, are the personal journals of famed Canadian author, Lucy Maud Montgomery (1874\u20131942).",
+            "Emily's Quest\nEmily's Quest is a novel and the last of the \"Emily\" trilogy by Lucy Maud Montgomery. After finishing \"Emily Climbs\", Montgomery suspended writing \"Emily's Quest\" and published \"The Blue Castle\"; she resumed writing and published in 1927.",
+            "The Blue Castle\nThe Blue Castle is a 1926 novel by Canadian author Lucy Maud Montgomery, best known for her novel \"Anne of Green Gables\" (1908).",
+            "Anne's House of Dreams\nAnne's House of Dreams is a novel by Canadian author Lucy Maud Montgomery. It was first published in 1917 by McClelland, Goodchild and Stewart.",
+            "Mollie Gillen\nMollie Gillen (n\u00e9e Woolnough; 1908\u20132009) was an Australian historian, researcher, writer and novelist. Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them. Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery.",
+            "Anne Shirley\nAnne Shirley is a fictional character introduced in the 1908 novel \"Anne of Green Gables\" by Lucy Maud Montgomery. Montgomery wrote in her journal that the idea for Anne's story came from relatives who, planning to adopt an orphaned boy, received a girl instead. Anne Shirley's appearance was inspired by a photograph which Montgomery clipped from the Metropolitan Magazine and kept, unaware of the model's identity as the 1900s Gibson Girl Evelyn Nesbit.",
+            "Owen Wister\nOwen Wister (July 14, 1860 \u2013 July 21, 1938) was an American writer, historian and \"father\" of western fiction. He is best remembered for writing \"The Virginian\" and a biography of American Civil War Lt. Gen. and 18th President Ulysses S. Grant.",
+            "Anne of Green Gables (1985 film)\nAnne of Green Gables is a 1985 Canadian television mini-series drama film based on the novel of the same name by Canadian author Lucy Maud Montgomery, and is the first in a series of four films. The film starred Megan Follows and was produced and directed by Kevin Sullivan for the Canadian Broadcasting Corporation. It was released theatrically in Iran, Israel, Europe, and Japan.",
+            "Done in the Open\nDone in the Open was a verse collection published by in 1903 American author Owen Wister. The book was a collaboration with the artist Frederic Remington, the verses being written to accompany Remington's drawings.",
+            "The Virginian (novel)\nThe Virginian (otherwise titled \"The Virginian: A Horseman of the Plains)\" is a 1902 novel set in the Wild West by the American author Owen Wister, (1860-1938). It describes the life of a cowboy on a cattle ranch in Wyoming and was the first true fictional western ever written, aside from short stories and pulp dime novels. \"The Virginian\" paved the way for many more westerns by such authors as Zane Grey, Louis L'Amour, and several others.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Ala Khallidi\n\"\u2019Al\u0101 Khallid\u012b\" (Arabic: \u0623\u0644\u0627 \u062e\u0644\u0651\u062f\u064a\u200e \u200e ) is the former national anthem of Tunisia. It was sung during the Presidency of Habib Bourguiba until his downfall in 1987. \"Humat al-Hima\" was temporarily used as a national anthem between the end of the monarchy on 25 July 1957 and the adoption of \"Ala Khallidi\" as the official national anthem. In 1958, the Ministry of Education organized a competition, in which 53 poets and 23 musicians took part. The results were examined first by a commission of the Board of Education, which selected the submissions of the hymn poet Jalaleddine Naccache (1910\u20131989) and the composer and director of the Conservatoire of Tunis Salah El Mahdi (1925-2014). The works were presented to the president without announcing the selection that already been made. He selected the same version as the commission had. In order to be completely sure, another larger popular assembly was held in Monastir, the birth city of the president, and all 23 melodies were played. But then, the song by Naccache and El Mahdi won and was formally adopted during Independence Day, 20 March that same year.",
+            "Sid Owen\nSid Owen (born David Sutton; 12 January 1972) is an English actor, television presenter and former singer, who played Ricky Butcher in the BBC One soap opera \"EastEnders\" from 1988 until 2012. He also appeared in the tenth series of \"Strictly Come Dancing\".",
+            "List of Switched at Birth episodes\n\"Switched at Birth\" is an American television drama series which premiered on ABC Family on June 6, 2011. Created by Lizzy Weiss, the series follows two teenage girls who learn that they were switched at birth. On August 17, 2012, ABC Family renewed \"Switched at Birth\" for a second season, which premiered on January 7, 2013. All of the episode titles take their names from pieces of artwork. On July 30, 2013, ABC Family renewed the series for a full 22-episode third season, which premiered in January 2014. The second half of season 3 premiered on June 16, 2014. On August 13, 2014, the series was renewed for a fourth season, which premiered on January 6, 2015. ABC Family, which changed its name to Freeform in January 2016, announced on Wednesday October 21, 2015, that it had renewed the series for a fifth and final season. The fifth season began airing on January 31, 2017, and concluded on April 11, 2017. During the course of the series, episodes of \"Switched at Birth \" aired\u00a0over seasons.",
+            "Chris Owen (actor)\nChris Owen (born September 25, 1980) is an American actor and photographer. He is best known for his role as The Sherminator in the \"American Pie film franchise\", appearing in \"American Pie\", \"American Pie 2\", \"\" and \"American Reunion\". Aside from Eugene Levy, he is the only actor from the theatrical features to appear in the \"\"American Pie Presents:\"\" direct-to-video spin-off movies."
+        ],
+        "thoughts": [
+            "Owen Wister, the American author, was born on July 14, 1860, and passed away on July 21, 1938.",
+            "Owen Wister lived for 78 years, from July 14, 1860, to July 21, 1938.",
+            "Lucy Maud Montgomery was born on November 30, 1874, and passed away on April 24, 1942.",
+            "To calculate the lifespan of Lucy Maud Montgomery, we subtract her birth date from her death date:\n\n1942 (year of death) - 1874 (year of birth) = 68\n\nSo, Lucy Maud Montgomery lived for 68 years.",
+            "Owen Wister lived longer than Lucy Maud Montgomery, with a lifespan of 78 years compared to Montgomery's 68 years."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who lived longer, American author Owen Wister or Canadian author Lucy Maud Montgomery? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the birth and death years of American author Owen Wister.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the birth and death years of Canadian author Lucy Maud Montgomery.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Calculate the lifespan of Owen Wister using his birth and death years.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the lifespan of Lucy Maud Montgomery using her birth and death years.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the lifespans of Owen Wister and Lucy Maud Montgomery to determine who lived longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to first retrieve the birth and death years of both Owen Wister and Lucy Maud Montgomery. Once these dates are obtained, separate reasoning nodes calculate the lifespan of each author. The final node compares these lifespans to determine who lived longer. This approach ensures that each piece of information is obtained and processed systematically, leading to a clear and justified answer."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Lucy Maud Montgomery\nLucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 \u2013 April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\". The book was an immediate success. The central character, Anne Shirley, an orphaned girl, made Montgomery famous in her lifetime and gave her an international following.",
+            "The Selected Journals of L. M. Montgomery\nThe Selected Journals of L. M. Montgomery, Vol. I\u2013V, are the personal journals of famed Canadian author, Lucy Maud Montgomery (1874\u20131942).",
+            "Emily's Quest\nEmily's Quest is a novel and the last of the \"Emily\" trilogy by Lucy Maud Montgomery. After finishing \"Emily Climbs\", Montgomery suspended writing \"Emily's Quest\" and published \"The Blue Castle\"; she resumed writing and published in 1927.",
+            "The Blue Castle\nThe Blue Castle is a 1926 novel by Canadian author Lucy Maud Montgomery, best known for her novel \"Anne of Green Gables\" (1908).",
+            "Anne's House of Dreams\nAnne's House of Dreams is a novel by Canadian author Lucy Maud Montgomery. It was first published in 1917 by McClelland, Goodchild and Stewart.",
+            "Mollie Gillen\nMollie Gillen (n\u00e9e Woolnough; 1908\u20132009) was an Australian historian, researcher, writer and novelist. Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them. Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery.",
+            "Anne Shirley\nAnne Shirley is a fictional character introduced in the 1908 novel \"Anne of Green Gables\" by Lucy Maud Montgomery. Montgomery wrote in her journal that the idea for Anne's story came from relatives who, planning to adopt an orphaned boy, received a girl instead. Anne Shirley's appearance was inspired by a photograph which Montgomery clipped from the Metropolitan Magazine and kept, unaware of the model's identity as the 1900s Gibson Girl Evelyn Nesbit.",
+            "Owen Wister\nOwen Wister (July 14, 1860 \u2013 July 21, 1938) was an American writer, historian and \"father\" of western fiction. He is best remembered for writing \"The Virginian\" and a biography of American Civil War Lt. Gen. and 18th President Ulysses S. Grant.",
+            "Anne of Ingleside\nAnne of Ingleside is a children's novel by Canadian author Lucy Maud Montgomery. It was first published in July 1939 by McClelland and Stewart (Toronto) and the Frederick A. Stokes Company (New York). It is the tenth of eleven books that feature the character of Anne Shirley, and Montgomery's final published novel. (Two novels that occur later in the \"Anne\" chronology were actually published years earlier. As well, the short story collection \"The Blythes Are Quoted\", written in 1941/42, but not published until 2009, concludes the Anne chronology.)",
+            "Done in the Open\nDone in the Open was a verse collection published by in 1903 American author Owen Wister. The book was a collaboration with the artist Frederic Remington, the verses being written to accompany Remington's drawings.",
+            "The Virginian (novel)\nThe Virginian (otherwise titled \"The Virginian: A Horseman of the Plains)\" is a 1902 novel set in the Wild West by the American author Owen Wister, (1860-1938). It describes the life of a cowboy on a cattle ranch in Wyoming and was the first true fictional western ever written, aside from short stories and pulp dime novels. \"The Virginian\" paved the way for many more westerns by such authors as Zane Grey, Louis L'Amour, and several others.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Star Maker\nStar Maker is a science fiction novel by British writer Olaf Stapledon, published in 1937. The book describes a history of life in the universe, dwarfing in scale Stapledon's previous book, \"Last and First Men\" (1930), a history of the human species over two billion years. \"Star Maker\" tackles philosophical themes such as the essence of life, of birth, decay and death, and the relationship between creation and creator. A pervading theme is that of progressive unity within and between different civilizations. Some of the elements and themes briefly discussed prefigure later fiction concerning genetic engineering and alien life forms. Arthur C. Clarke considered \"Star Maker\" to be one of the finest works of science fiction ever written.",
+            "Ala Khallidi\n\"\u2019Al\u0101 Khallid\u012b\" (Arabic: \u0623\u0644\u0627 \u062e\u0644\u0651\u062f\u064a\u200e \u200e ) is the former national anthem of Tunisia. It was sung during the Presidency of Habib Bourguiba until his downfall in 1987. \"Humat al-Hima\" was temporarily used as a national anthem between the end of the monarchy on 25 July 1957 and the adoption of \"Ala Khallidi\" as the official national anthem. In 1958, the Ministry of Education organized a competition, in which 53 poets and 23 musicians took part. The results were examined first by a commission of the Board of Education, which selected the submissions of the hymn poet Jalaleddine Naccache (1910\u20131989) and the composer and director of the Conservatoire of Tunis Salah El Mahdi (1925-2014). The works were presented to the president without announcing the selection that already been made. He selected the same version as the commission had. In order to be completely sure, another larger popular assembly was held in Monastir, the birth city of the president, and all 23 melodies were played. But then, the song by Naccache and El Mahdi won and was formally adopted during Independence Day, 20 March that same year.",
+            "Sid Owen\nSid Owen (born David Sutton; 12 January 1972) is an English actor, television presenter and former singer, who played Ricky Butcher in the BBC One soap opera \"EastEnders\" from 1988 until 2012. He also appeared in the tenth series of \"Strictly Come Dancing\".",
+            "Akim Tamiroff\nAkim Mikhailovich Tamiroff (Armenian: \u0531\u056f\u056b\u0574 \u0539\u0561\u0574\u056b\u0580\u0578\u057e , Russian: \u0410\u043a\u0438\u043c \u041c\u0438\u0445\u0430\u0439\u043b\u043e\u0432\u0438\u0447 \u0422\u0430\u043c\u0438\u0440\u043e\u0432 ; birth name` Hovakim, Armenian: \u0540\u0578\u057e\u0561\u056f\u056b\u0574 ; 29 October 1899 \u2013 17 September 1972) was an ethnic Armenian actor. He won the first Golden Globe Award for Best Supporting Actor, was nominated twice for the Academy Award for Best Supporting Actor, and appeared in at least 80 American motion pictures in a career spanning thirty-seven years."
+        ],
+        "thoughts": [
+            "Owen Wister, the American author, was born on July 14, 1860, and passed away on July 21, 1938.",
+            "Owen Wister lived for 78 years, from 1860 to 1938.",
+            "Lucy Maud Montgomery was born on November 30, 1874, and passed away on April 24, 1942.",
+            "To calculate the lifespan of Lucy Maud Montgomery, we subtract her birth year from her death year:\n\n1942 (death year) - 1874 (birth year) = 68\n\nSo, Lucy Maud Montgomery lived for 68 years.",
+            "Owen Wister lived longer than Lucy Maud Montgomery, with a lifespan of 78 years compared to Montgomery's 68 years."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who lived longer, American author Owen Wister or Canadian author Lucy Maud Montgomery? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the birth and death years of Owen Wister.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the birth and death years of Lucy Maud Montgomery.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Calculate the lifespan of Owen Wister using his birth and death years.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the lifespan of Lucy Maud Montgomery using her birth and death years.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the lifespans of Owen Wister and Lucy Maud Montgomery to determine who lived longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph decomposes the question into a series of retrieval and reasoning steps. First, we independently retrieve the birth and death years for each author. Then, we calculate their respective lifespans. Finally, we compare these lifespans to determine which author lived longer."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "Running mate\nA running mate is a person running together with another person on a joint ticket during an election. The term is most often used in reference to the person in the subordinate position (such as the vice presidential candidate running with a presidential candidate) but can also properly be used when referring to both candidates, such as by saying Joko Widodo and Jusuf Kalla, and Uhuru Kenyatta and William Ruto, were running mates in relation to the most recent presidential elections held in Indonesia and Kenya respectively.",
+            "Mokujin\nMokujin (Japanese: \u6728\u4eba?, lit. \"Wood(en) person\") is a fictional character in Namco Bandai Games' \"Tekken\" video game series. Mokujin first appeared in the 1997 video game \"Tekken 3\". Mokujin does not have his own fighting style. Instead, he mimics fighting styles from other characters, which varies from match to match.",
+            "Lucy Maud Montgomery\nLucy Maud Montgomery {'1': \", '2': \", '3': \", '4': \"} (November 30, 1874 \u2013 April 24, 1942) published as L.M. Montgomery, was a Canadian author best known for a series of novels beginning in 1908 with \"Anne of Green Gables\". The book was an immediate success. The central character, Anne Shirley, an orphaned girl, made Montgomery famous in her lifetime and gave her an international following.",
+            "The Human Stain\nThe Human Stain (2000) is a novel by Philip Roth set in late 1990s rural New England. Its first person narrator is 65-year-old author Nathan Zuckerman, who appeared in several earlier Roth novels, and who also figures in both \"American Pastoral\" (1997) and \"I Married a Communist\" (1998), two books that form a loose trilogy with \"The Human Stain\". Zuckerman acts largely as an observer as the complex story of the protagonist, Coleman Silk, a retired professor of classics, is slowly revealed.",
+            "Henry Segrave\nSir Henry O'Neil de Hane Segrave (22 September 1896 \u2013 13 June 1930) was an early British pioneer in land speed and water speed records. Seagrave, who set three land and one water record, was the first person to hold both titles simultaneously and the first person to travel at over 200 mph in a land vehicle. He died in an accident in 1930 shortly after setting a new world water speed record on Windermere in the Lake District, England. The Segrave Trophy was established to commemorate his life.",
+            "The Selected Journals of L. M. Montgomery\nThe Selected Journals of L. M. Montgomery, Vol. I\u2013V, are the personal journals of famed Canadian author, Lucy Maud Montgomery (1874\u20131942).",
+            "Gerald Ford\nGerald Rudolph Ford Jr. (born Leslie Lynch King Jr.; July 14, 1913\u00a0\u2013 December 26, 2006) was an American politician who served as the 38th President of the United States from August 1974 to January 1977, following the resignation of Richard Nixon. Prior to this he served eight months as the 40th Vice President of the United States, following the resignation of Spiro Agnew. He was the first person appointed to the vice presidency under the terms of the 25th Amendment, and consequently the only person to have served as both Vice President and President of the United States without being elected to executive office. Before his appointment to the vice presidency, Ford served 25 years as U.S. Representative from Michigan's 5th congressional district, the final nine of them as the House Minority Leader.",
+            "Joel Tabora\nJoel E. Tabora (born September 26, 1947, Manila, Philippines) is a Jesuit priest and the president of Ateneo de Davao University. He demonstrated a commitment to \"whole person formation\", social justice and spirituality.",
+            "Owen Wister\nOwen Wister (July 14, 1860 \u2013 July 21, 1938) was an American writer, historian and \"father\" of western fiction. He is best remembered for writing \"The Virginian\" and a biography of American Civil War Lt. Gen. and 18th President Ulysses S. Grant.",
+            "Done in the Open\nDone in the Open was a verse collection published by in 1903 American author Owen Wister. The book was a collaboration with the artist Frederic Remington, the verses being written to accompany Remington's drawings.",
+            "The Virginian (novel)\nThe Virginian (otherwise titled \"The Virginian: A Horseman of the Plains)\" is a 1902 novel set in the Wild West by the American author Owen Wister, (1860-1938). It describes the life of a cowboy on a cattle ranch in Wyoming and was the first true fictional western ever written, aside from short stories and pulp dime novels. \"The Virginian\" paved the way for many more westerns by such authors as Zane Grey, Louis L'Amour, and several others.",
+            "Quincy Mumford\nQuincy Mumford (born Allenhurst, New Jersey) is an American guitarist and singer-songwriter. He has released several solo albums since his debut in 2008, and is also rhythm guitarist and frontman of the band Quincy Mumford & The Reason Why, a five-person group based in Asbury Park, New Jersey. Mumford's style has been described as \"funk, soul and surf music, with a dash of reggae thrown in.\" After the release of his second album \"South Edgemere,\" he won three Asbury Music Awards in 2009, including Best Male Acoustic Act. That year MSNBC also named Mumford one of their \"1 of 10 up and coming young artists.\"",
+            "Cationic liposome\nCationic liposomes are structures that are made of positively charged lipids and are increasingly being researched for use in gene therapy due to their favourable interactions with negatively charged DNA and cell membranes. Upon interacting with negatively charged DNA, cationic liposomes form clusters of aggregated vesicles. At a critical density the DNA is condensed and becomes encapsulated within a lipid bilayer, although it is possible that the liposomes bind along the surface of the DNA, retaining its shape. They are also able to interact with negatively charged cell membranes more readily than classical liposomes. Fusion between cationic vesicles and cell surfaces can deliver the DNA directly across the plasma membrane. This process bypasses the endosomal-lysosomal route which leads to degradation of anionic liposome formulations."
+        ],
+        "thoughts": [
+            "Owen Wister was born on July 14, 1860, and passed away on July 21, 1938.",
+            "Owen Wister lived for 78 years, from 1860 to 1938.",
+            "Lucy Maud Montgomery was born on November 30, 1874, and passed away on April 24, 1942.",
+            "To calculate the lifespan of Lucy Maud Montgomery, we subtract her birth year from her death year:\n\n1942 (death year) - 1874 (birth year) = 68\n\nSo, Lucy Maud Montgomery lived for 68 years.",
+            "Owen Wister lived longer than Lucy Maud Montgomery, with a lifespan of 78 years compared to Montgomery's 68 years."
+        ],
+        "is_best": false
+    }
+]

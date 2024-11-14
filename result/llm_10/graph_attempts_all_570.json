@@ -1,0 +1,618 @@
+[
+    {
+        "question": "Are Yoo-hoo and Faygo both carbonated drinks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information on whether Yoo-hoo is a carbonated drink.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on whether Faygo is a carbonated drink.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine the information on Yoo-hoo and Faygo to determine if both are carbonated drinks.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is designed to address the question by starting with two retrieval and reasoning nodes where each node focuses on determining whether Yoo-hoo and Faygo are carbonated drinks, respectively. Once both pieces of information are gathered, a final reasoning node synthesizes this information to determine if both beverages are carbonated. This approach allows parallel processing of independent retrieval tasks, which are then integrated in the reasoning node to answer the question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Yoo-hoo\nYoo-hoo is an American brand of chocolate beverage that originated in New Jersey in 1926 and that is currently manufactured by Dr. Pepper Snapple Group.",
+            "Faygo\nFaygo Beverages, Inc., is a soft drink company headquartered in Detroit, Michigan. The beverages produced by the company, branded as Faygo or Faygo Pop, are distributed in the Midwest, Mid-Atlantic, and Central Southern regions of the United States, as well as southern Canada. Faygo is imported in Europe by American Fizz, an official distributor of Faygo. Faygo Beverages, Inc., is a wholly owned subsidiary of the National Beverage Corporation, started in Detroit, Michigan, in 1907 as Feigenson Brothers Bottling Works.",
+            "Carbonated drink\nCarbonated drinks are beverages that contain dissolved carbon dioxide. The dissolution of CO in a liquid, gives rise to \"fizz\" or \"effervescence\". The process usually involves carbon dioxide under high pressure. When the pressure is removed, the carbon dioxide is released from the solution as small bubbles, which causes the solution to become effervescent, or fizzy. A common example is the dissolving of carbon dioxide in water, resulting in carbonated water. Carbon dioxide is only weakly soluble in water, therefore it separates into a gas when the pressure is released.",
+            "Banta\nBanta also known as Fotash Jawl in Bengali, Goli Soda (\"Goli\" = spherical object in Hindi) or Goti Soda (\"Goti\" = marble in Hindi) is a colloquial term for a carbonated lemon or orange-flavoured soft drink popular in India. Though the origin of its name is from Punjabi word for marble (banta), Banta has been sold since the late 19th century, long before popular carbonated drinks arrived. The drink is often sold mixed with lemon juice, crushed ice, chaat masala and kala namak (black salt) as a carbonated variant of popular lemonades \"shikanjvi\" or \"jal-jeera\". It is available at street-sellers known as \"bantawallahs\" at prices ranging from - .",
+            "SodaStream\nSodaStream International Ltd. (NASDAQ:\u00a0SODA ) is an Israeli drinks company best known as the maker of the consumer home carbonation product of the same name. The device, like a soda syphon, carbonates water by adding carbon dioxide from a pressurized cylinder to create soda water (or carbonated water) to drink. The company also sells more than 100 types of concentrated syrups and flavourings to make carbonated drinks.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Grape soda\nGrape soft drinks (also known as grape drink, grape soda or grape pop in certain regions of the US) are typically sweetened carbonated drinks with a grape flavor.",
+            "Cola\nCola is a sweetened, carbonated soft drink, made from ingredients that contain caffeine from the kola nut and non-cocaine derivatives from coca leaves, flavored with vanilla and other ingredients. Most colas now use other flavoring (and caffeinating) ingredients with a similar taste. Colas became popular worldwide after pharmacist John Pemberton invented Coca-Cola in 1886. His non-alcoholic recipe was inspired by the coca wine of pharmacist Angelo Mariani, created in 1863.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "United States v. Olano\nUnited States v. Olano, 507 U.S. 725 (1993) , was a United States Supreme Court case that distinguished between forfeiture and waiver. Quoting from \"Johnson v. Zerbst\", 304 U.S. 458 (1938) , the Court noted, \"Whereas forfeiture is the failure to make the timely assertion of a right, waiver is the \"intentional relinquishment or abandonment of a known right... Whether a particular right is waivable; whether the defendant must participate personally in the waiver; whether certain procedures are required for waiver; and whether the defendant's choice must be particularly informed or voluntary, all depend on the right at stake.\"",
+            "NOS (drink)\nNOS Energy Drink is an energy drink sold in 16 and 24oz cans. The drink was also once distributed in a bottle designed to look like a NOS (Nitrous Oxide Systems) cartridge. This was discontinued in 2015. Formerly a property of The Coca-Cola Company, it is currently produced by Monster Beverage and licensed by Holley Performance, which owns the trademark. NOS contains high levels of taurine and caffeine, and it also contains guarana. L-Theanine was removed as a \"CMPLX6\" ingredient in 2016, with inositol becoming listed as one of the six featured ingredients on the can. NOS Energy is currently available in Original, Sugar Free, Charged Citrus, Cherried Out, GT Grape, and Rowdy."
+        ],
+        "thoughts": [
+            "Yoo-hoo is not a carbonated drink. It is a chocolate beverage and does not contain dissolved carbon dioxide, which is necessary for a drink to be considered carbonated.",
+            "Faygo is a carbonated drink. It is a soft drink company that produces beverages distributed in the Midwest, Mid-Atlantic, and Central Southern regions of the United States, as well as southern Canada. The beverages produced by Faygo are branded as Faygo or Faygo Pop, indicating that they are carbonated drinks.",
+            "Based on the information from the upstream tasks, Yoo-hoo is not a carbonated drink as it is a chocolate beverage and does not contain dissolved carbon dioxide. On the other hand, Faygo is a carbonated drink as it is a soft drink company that produces carbonated beverages. Therefore, Yoo-hoo is not a carbonated drink, while Faygo is a carbonated drink."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Are Yoo-hoo and Faygo both carbonated drinks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Yoo-hoo and determine if it is a carbonated drink.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Faygo and determine if it is a carbonated drink.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine the findings about Yoo-hoo and Faygo to determine if both are carbonated drinks.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of two parallel retrieval and reasoning steps for each drink, Yoo-hoo and Faygo. The first node checks whether Yoo-hoo is carbonated, and the second node checks the same for Faygo. The results from these nodes are then synthesized in a final reasoning step to provide a combined answer about both drinks being carbonated or not."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Faygo\nFaygo Beverages, Inc., is a soft drink company headquartered in Detroit, Michigan. The beverages produced by the company, branded as Faygo or Faygo Pop, are distributed in the Midwest, Mid-Atlantic, and Central Southern regions of the United States, as well as southern Canada. Faygo is imported in Europe by American Fizz, an official distributor of Faygo. Faygo Beverages, Inc., is a wholly owned subsidiary of the National Beverage Corporation, started in Detroit, Michigan, in 1907 as Feigenson Brothers Bottling Works.",
+            "Tampico Beverages\nTampico Beverages is a manufacturer of juice concentrates, carbonated drinks, iced tea and gelatin. Selling under the TAMPICO brand name, it is available in the United States and more than 55 countries around the globe. Tampico Beverages is wholly owned by Houchens Industries, Inc, since 2008.",
+            "Yoo-hoo\nYoo-hoo is an American brand of chocolate beverage that originated in New Jersey in 1926 and that is currently manufactured by Dr. Pepper Snapple Group.",
+            "Carbonated drink\nCarbonated drinks are beverages that contain dissolved carbon dioxide. The dissolution of CO in a liquid, gives rise to \"fizz\" or \"effervescence\". The process usually involves carbon dioxide under high pressure. When the pressure is removed, the carbon dioxide is released from the solution as small bubbles, which causes the solution to become effervescent, or fizzy. A common example is the dissolving of carbon dioxide in water, resulting in carbonated water. Carbon dioxide is only weakly soluble in water, therefore it separates into a gas when the pressure is released.",
+            "Banta\nBanta also known as Fotash Jawl in Bengali, Goli Soda (\"Goli\" = spherical object in Hindi) or Goti Soda (\"Goti\" = marble in Hindi) is a colloquial term for a carbonated lemon or orange-flavoured soft drink popular in India. Though the origin of its name is from Punjabi word for marble (banta), Banta has been sold since the late 19th century, long before popular carbonated drinks arrived. The drink is often sold mixed with lemon juice, crushed ice, chaat masala and kala namak (black salt) as a carbonated variant of popular lemonades \"shikanjvi\" or \"jal-jeera\". It is available at street-sellers known as \"bantawallahs\" at prices ranging from - .",
+            "Grape soda\nGrape soft drinks (also known as grape drink, grape soda or grape pop in certain regions of the US) are typically sweetened carbonated drinks with a grape flavor.",
+            "SodaStream\nSodaStream International Ltd. (NASDAQ:\u00a0SODA ) is an Israeli drinks company best known as the maker of the consumer home carbonation product of the same name. The device, like a soda syphon, carbonates water by adding carbon dioxide from a pressurized cylinder to create soda water (or carbonated water) to drink. The company also sells more than 100 types of concentrated syrups and flavourings to make carbonated drinks.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Cola\nCola is a sweetened, carbonated soft drink, made from ingredients that contain caffeine from the kola nut and non-cocaine derivatives from coca leaves, flavored with vanilla and other ingredients. Most colas now use other flavoring (and caffeinating) ingredients with a similar taste. Colas became popular worldwide after pharmacist John Pemberton invented Coca-Cola in 1886. His non-alcoholic recipe was inspired by the coca wine of pharmacist Angelo Mariani, created in 1863.",
+            "Schorle\nSchorle is a German beverage made by diluting juice or wine with carbonated water or lemonade (lemon-lime soda). The most common variety is Apfelschorle (made from apple juice and sparkling mineral water). Large bottles of Schorle can be found at most grocers, stores, supermarkets and anywhere else where carbonated drinks are sold, next to the soda. Due to its dilution it is less sweet or alcoholic than the original beverage, making it better suited as a refreshment on hot summer days or as an alternative to beer at the biergarten or .",
+            "Yes, Madam (1942 film)\nYes, Madam (Italian:Sissignora) is a 1942 Italian romance film directed by  Ferdinando Maria Poggioli and starring Mar\u00eda Denis, Leonardo Cortese and Emma Gramatica.",
+            "NOS (drink)\nNOS Energy Drink is an energy drink sold in 16 and 24oz cans. The drink was also once distributed in a bottle designed to look like a NOS (Nitrous Oxide Systems) cartridge. This was discontinued in 2015. Formerly a property of The Coca-Cola Company, it is currently produced by Monster Beverage and licensed by Holley Performance, which owns the trademark. NOS contains high levels of taurine and caffeine, and it also contains guarana. L-Theanine was removed as a \"CMPLX6\" ingredient in 2016, with inositol becoming listed as one of the six featured ingredients on the can. NOS Energy is currently available in Original, Sugar Free, Charged Citrus, Cherried Out, GT Grape, and Rowdy."
+        ],
+        "thoughts": [
+            "Yoo-hoo is not a carbonated drink. It is a chocolate beverage and does not contain dissolved carbon dioxide, which is a characteristic of carbonated drinks.",
+            "Faygo is a carbonated drink. It is a soft drink company that produces beverages distributed in various regions of the United States and Canada. The process of carbonation involves the dissolution of carbon dioxide in a liquid, which gives rise to \"fizz\" or \"effervescence,\" and Faygo's beverages fit this description. Therefore, Faygo is a carbonated drink.",
+            "Based on the findings, Yoo-hoo is not a carbonated drink as it does not contain dissolved carbon dioxide. On the other hand, Faygo is a carbonated drink as it undergoes the process of carbonation, resulting in the presence of dissolved carbon dioxide. Therefore, Yoo-hoo is not a carbonated drink, while Faygo is a carbonated drink."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Yoo-hoo and Faygo both carbonated drinks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Yoo-hoo to determine if it is a carbonated drink.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Faygo to determine if it is a carbonated drink.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine the information about Yoo-hoo and Faygo and evaluate if both are carbonated drinks.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of three nodes. The first node retrieves and assesses information about whether Yoo-hoo is carbonated. The second node does the same for Faygo. The third node combines the results from the first two nodes to make a final evaluation of whether both Yoo-hoo and Faygo are carbonated drinks."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Yoo-hoo\nYoo-hoo is an American brand of chocolate beverage that originated in New Jersey in 1926 and that is currently manufactured by Dr. Pepper Snapple Group.",
+            "Faygo\nFaygo Beverages, Inc., is a soft drink company headquartered in Detroit, Michigan. The beverages produced by the company, branded as Faygo or Faygo Pop, are distributed in the Midwest, Mid-Atlantic, and Central Southern regions of the United States, as well as southern Canada. Faygo is imported in Europe by American Fizz, an official distributor of Faygo. Faygo Beverages, Inc., is a wholly owned subsidiary of the National Beverage Corporation, started in Detroit, Michigan, in 1907 as Feigenson Brothers Bottling Works.",
+            "Sutton Hoo helmet\nThe Sutton Hoo helmet is a decorated Anglo-Saxon helmet discovered during the 1939 excavation of the Sutton Hoo ship burial. It was buried around 625 and is widely believed to have been the helmet of King R\u00e6dwald of East Anglia, and its elaborate decoration may have given it a secondary function akin to a crown. The helmet is \"the most iconic object\" from \"one of the most spectacular archaeological discoveries ever made,\" and one of the most important Anglo-Saxon artefacts ever found. Its visage features eyebrows, nose, and moustache, creating the image of a man joined by a dragon's head to become a soaring dragon with outstretched wings. It has become a symbol of the Dark Ages and also \"of Archaeology in general.\" It was excavated as hundreds of rusted fragments, and was first displayed following an initial reconstruction in 1945\u201346, and then in its present form after a second reconstruction in 1970\u201371.",
+            "Lantern Waste\nLantern Waste is a fictional place in \"The Chronicles of Narnia\" series by C. S. Lewis. It is a wood and is notable as the place where Lucy Pevensie and Mr. Tumnus meet, which is the first scene of Narnia described in the books. The lamppost in the wood is an iconic image of Narnia, and the question of its origin is what convinced Lewis to write more than one book on Narnia. One of King Edmund's titles is \"Duke of Lantern Waste\".",
+            "SodaStream\nSodaStream International Ltd. (NASDAQ:\u00a0SODA ) is an Israeli drinks company best known as the maker of the consumer home carbonation product of the same name. The device, like a soda syphon, carbonates water by adding carbon dioxide from a pressurized cylinder to create soda water (or carbonated water) to drink. The company also sells more than 100 types of concentrated syrups and flavourings to make carbonated drinks.",
+            "Shorwell helmet\nThe Shorwell helmet is an Anglo-Saxon spangenhelm type helmet found near Shorwell on the Isle of Wight in 2006. Together with those from Benty Grange, Sutton Hoo, Coppergate, Wollaston, and Staffordshire, it is one of only six known Anglo-Saxon helmets.",
+            "Blue Origin\nBlue Origin is an American privately funded aerospace manufacturer and spaceflight services company set up by Amazon.com founder Jeff Bezos with its headquarters in Kent, Washington. The company is developing technologies to enable private human access to space with the goal to dramatically lower costs and increase reliability. Blue Origin is employing an incremental approach from suborbital to orbital flight, with each developmental step building on its prior work. The company motto is \"\"Gradatim Ferociter\"\", Latin for \"Step by Step, Ferociously\". Blue Origin is developing a variety of technologies, with a focus on rocket-powered Vertical Takeoff and Vertical Landing (VTVL) vehicles for access to suborbital and orbital space. The company's name refers to the blue planet, Earth, as the point of origin.",
+            "Coppergate Helmet\nThe Coppergate Helmet (also known as the York Helmet) is an eighth-century Anglo-Saxon helmet found in York. It is remarkably well preserved and, together with the Benty Grange, Pioneer, Shorwell, Sutton Hoo, and Staffordshire helmets, is one of only six Anglo-Saxon helmets discovered to date.",
+            "Staffordshire helmet\nThe Staffordshire helmet is an Anglo-Saxon helmet discovered in 2009 as part of the Staffordshire Hoard. It is part of the largest discovery of contemporary gold and silver metalwork in Britain, comprising nearly 4,000 pieces. Following those found at Benty Grange, Sutton Hoo, Coppergate, Wollaston, and Shorwell, it is only the sixth known Anglo-Saxon helmet.",
+            "Keep Your Head Down (song)\n\"Keep Your Head Down\" (Korean title: \uc65c \"Wae\"; \"Why\"), released in Japan as \"Why? (Keep Your Head Down)\", is a song recorded by South Korean pop group TVXQ (or Tohoshinki in Japan). Written by Yoo Young-jin and Yoo Han-jin, the Korean-language version of \"Keep Your Head Down\" was released by S.M. Entertainment on January 3, 2011 as the lead single for the group's fifth Korean studio album \"Keep Your Head Down\" (2011), TVXQ's first album since becoming a two-piece band with U-Know Yunho and Max Changmin. The Japanese-language version of \"Keep Your Head Down\", which was released on January 26, 2011 by Avex Trax, served as TVXQ's 31st Japanese single in Japan. It was the first single taken from their fifth Japanese studio album, \"Tone\" (2011).",
+            "A Man Called God\nA Man Called God (; also known as The Man Almighty) is a 2010 South Korean television series starring Song Il-gook, Han Chae-young, Kim Min-jong, Han Go-eun and Yoo In-young. It aired on MBC from March 6 to May 23, 2010 on Saturdays and Sundays at 21:45 for 24 episodes.",
+            "Delhi Sultanate\nThe Delhi Sultanate was a Muslim sultanate based mostly in Delhi that stretched over large parts of the Indian subcontinent for 320 years (1206\u20131526). Five dynasties ruled over the Delhi Sultanate sequentially: the Mamluk dynasty (1206\u201390), the Khalji dynasty (1290\u20131320), the Tughlaq dynasty (1320\u20131414), the Sayyid dynasty (1414\u201351), and the Lodi dynasty (1451\u20131526). Three dynasties (Mamluk, Khalji and Sayyid) were of Turkic origin, one dynasty (Tughlaq) was of Turko-Indian origin, and the last dynasty (Lodi) was of Pashtun origin. The sultanate is noted for being one of the few states to repel an attack by the Mongol Empire, and enthroned one of the few female rulers in Islamic history, Razia Sultana, who reigned from 1236 to 1240.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "First Life (TV series)\nFirst Life is a 2010 British nature documentary series written and presented by David Attenborough, also known by the expanded titles David Attenborough's First Life (UK) and First Life with David Attenborough (USA). It was first broadcast in the USA as a two-hour special on the Discovery Channel on 24 October 2010. In the United Kingdom it was broadcast as a two-part series on BBC Two on 5 November 2010. \"First Life\" sees Attenborough tackle the subject of the origin of life on Earth. He investigates the evidence from the earliest fossils, which suggest that complex animals first appeared in the oceans around 540 million years ago, an event known as the Cambrian Explosion. Trace fossils of multicellular organisms from an even earlier period, the Ediacaran biota, are also examined. Attenborough travels to Canada, Morocco and Australia, using some of the latest fossil discoveries and their nearest equivalents amongst living species to reveal what life may have been like at that time. Visual effects and computer animation are used to reconstruct and animate the extinct life forms.",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "Watch What Happens Live with Andy Cohen\nWatch What Happens Live with Andy Cohen (previously named Watch What Happens Live until December 19, 2016) is an American pop culture-based late-night talk show hosted by Andy Cohen that premiered on July 16, 2009. It features Bravo's own reality programming in the manner of an aftershow, and celebrities' recent news. The show is produced live from New York City, making possible interaction with viewers by phone and social media. In November 2013, Bravo renewed \"Watch What Happens: Live\" for two additional seasons. On March 2, 2016, the show aired its 1000th episode."
+        ],
+        "thoughts": [
+            "Yoo-hoo is not a carbonated drink. It is a chocolate beverage manufactured by Dr. Pepper Snapple Group.",
+            "Based on the information provided, there is no specific mention of Faygo being a carbonated drink. However, given that Faygo is a soft drink company, it is likely that their beverages are carbonated. Additional research or direct confirmation from the company would be needed to confirm this.",
+            "Based on the information provided, Yoo-hoo is not a carbonated drink, as it is a chocolate beverage. As for Faygo, while there is no specific mention of it being carbonated, it is a soft drink company, which suggests that their beverages are likely carbonated. Therefore, it is reasonable to conclude that Faygo's drinks are carbonated."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Yoo-hoo and Faygo both carbonated drinks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the details and ingredients of Yoo-hoo.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the details and ingredients of Faygo.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Yoo-hoo is a carbonated drink based on its ingredients and product description.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Faygo is a carbonated drink based on its ingredients and product description.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Analyze the results for Yoo-hoo and Faygo to conclude if both are carbonated drinks.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph starts by retrieving the necessary details for each beverage: Yoo-hoo and Faygo. The separate retrieval nodes allow us to gather information on each drink individually in parallel. Based on the retrieved details, the reasoning nodes determine whether each drink is carbonated. Finally, the reasoning node combines these insights to answer the original question on both drinks being carbonated."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Yoo-hoo\nYoo-hoo is an American brand of chocolate beverage that originated in New Jersey in 1926 and that is currently manufactured by Dr. Pepper Snapple Group.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Faygo\nFaygo Beverages, Inc., is a soft drink company headquartered in Detroit, Michigan. The beverages produced by the company, branded as Faygo or Faygo Pop, are distributed in the Midwest, Mid-Atlantic, and Central Southern regions of the United States, as well as southern Canada. Faygo is imported in Europe by American Fizz, an official distributor of Faygo. Faygo Beverages, Inc., is a wholly owned subsidiary of the National Beverage Corporation, started in Detroit, Michigan, in 1907 as Feigenson Brothers Bottling Works.",
+            "Emergency shelter\nAn emergency shelter is a place for people to live temporarily when they cannot live in their previous residence, similar to homeless shelters. The main difference is that an emergency shelter typically specializes in people fleeing a specific type of situation, such as natural or man-made disasters, domestic violence, or victims of sexual abuse. A more minor difference is that people staying in emergency shelters are more likely to stay all day, except for work, school, or errands, while homeless shelters usually expect people to stay elsewhere during the day, returning only to sleep or eat. Emergency shelters sometimes facilitate support groups, and/or provide meals.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Music festival\nA music festival is a festival oriented towards music that is sometimes presented with a theme such as musical genre, nationality, or locality of musicians, or holiday. They are commonly held outdoors, and are often inclusive of other attractions such as food and merchandise vending, performance art, and social activities. Many festivals are annual, or repeat at some other interval. Some, including many rock festivals, are held only once. Some festivals are organized as for-profit concerts and others are benefits for a specific cause. Another type of music festival is the educative type, organized annually in local communities, regionally, or nationally, for the benefit of amateur musicians of all ages and grades of achievement.",
+            "Texas hold 'em\nTexas hold 'em (also known as Texas holdem, hold 'em, and holdem) is a variation of the card game of poker. Two cards, known as the hole cards, are dealt face down to each player, and then five community cards are dealt face up in three stages. The stages consist of a series of three cards (\"the flop\"), later an additional single card (\"the turn\" or \"fourth street\"), and a final card (\"the river\" or \"fifth street\"). Each player seeks the best five card poker hand from any combination of the seven cards of the five community cards and their own two hole cards. (If a player's best five-card poker hand consists only of the five community cards and none of the player's hole cards, it is called \"playing the board\". If you play the board on the river, then you can do no better than tie the other player(s) in the game if no player can make a better hand than the board represents, using either or both hole cards.) Players have betting options to check, call, raise, or fold. Rounds of betting take place before the flop is dealt and after each subsequent deal.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Cola\nCola is a sweetened, carbonated soft drink, made from ingredients that contain caffeine from the kola nut and non-cocaine derivatives from coca leaves, flavored with vanilla and other ingredients. Most colas now use other flavoring (and caffeinating) ingredients with a similar taste. Colas became popular worldwide after pharmacist John Pemberton invented Coca-Cola in 1886. His non-alcoholic recipe was inspired by the coca wine of pharmacist Angelo Mariani, created in 1863.",
+            "Sutton Hoo helmet\nThe Sutton Hoo helmet is a decorated Anglo-Saxon helmet discovered during the 1939 excavation of the Sutton Hoo ship burial. It was buried around 625 and is widely believed to have been the helmet of King R\u00e6dwald of East Anglia, and its elaborate decoration may have given it a secondary function akin to a crown. The helmet is \"the most iconic object\" from \"one of the most spectacular archaeological discoveries ever made,\" and one of the most important Anglo-Saxon artefacts ever found. Its visage features eyebrows, nose, and moustache, creating the image of a man joined by a dragon's head to become a soaring dragon with outstretched wings. It has become a symbol of the Dark Ages and also \"of Archaeology in general.\" It was excavated as hundreds of rusted fragments, and was first displayed following an initial reconstruction in 1945\u201346, and then in its present form after a second reconstruction in 1970\u201371.",
+            "Qnet\nQNet Ltd, formerly known as QuestNet, GoldQuest, and QI Limited, is a Hong Kong-based multi-level marketing (MLM) company owned by the QI Group. The company sells a variety of products including energy, weight management, nutrition, personal care, home care, and fashion accessories etc. on an e-commerce platform. QNet was founded in Hong Kong by Vijay Eswaran in 1998 along with QN Europe and other companies. Since it was first introduced in 1998, Qnet (doing business at the time as Questnet) promoted gold and silver coins with an MLM system. But the coin collection business was touted as a money game and declared illegal in some countries. A few years later Questnet came up with a new name, Qnet and offered various other products via the MLM system. It promotes its products on its website using claims \"that would not pass official muster in much of the world.\" Despite claiming to be an e-commerce based business, an ordinary retail customer can make a purchase of a product from the website only if they have a referrer ID of an independent representative of QNet. Unlike other e-commerce websites; purchases without this ID are not allowed. Qnet used websites/servers viz., www.qnetindia.in, www.qnetindia.net, www.qnet.net, www.questnet.net, to conduct its business which were blocked by Indian Computer emergency response team (CERT) following a court order. Other websites like portal.qnetindia.net, are being investigated by the government and further action on the websites have been promised after details are gathered.",
+            "Shorwell helmet\nThe Shorwell helmet is an Anglo-Saxon spangenhelm type helmet found near Shorwell on the Isle of Wight in 2006. Together with those from Benty Grange, Sutton Hoo, Coppergate, Wollaston, and Staffordshire, it is one of only six known Anglo-Saxon helmets.",
+            "List of Leeds United F.C. seasons\nThis is a list of seasons played by Leeds United Association Football Club in English and European football. It covers the period from the club's inaugural season in 1919, following the demise of Leeds City earlier that year, to the end of the last completed season. It details the club's achievements in all major competitions, together with the top scorers and the average attendances for each season. Details of the abandoned 1939\u201340 season and unofficial Second World War leagues are not included.",
+            "A Man Called God\nA Man Called God (; also known as The Man Almighty) is a 2010 South Korean television series starring Song Il-gook, Han Chae-young, Kim Min-jong, Han Go-eun and Yoo In-young. It aired on MBC from March 6 to May 23, 2010 on Saturdays and Sundays at 21:45 for 24 episodes."
+        ],
+        "thoughts": [
+            "Yoo-hoo is an American brand of chocolate beverage that originated in New Jersey in 1926 and is currently manufactured by Dr. Pepper Snapple Group. The ingredients of Yoo-hoo include water, high fructose corn syrup, whey (from milk), sugar, corn syrup solids, cocoa (alkali process), partially hydrogenated soybean oil, sodium caseinate (from milk), non-fat dry milk, salt, tricalcium phosphate, dipotassium phosphate, xanthan gum, guar gum, natural and artificial flavors, soy lecithin, mono and diglycerides, vitamin A palmitate, and vitamin D3.",
+            "Yoo-hoo is not a carbonated drink based on its ingredients and product description. The absence of carbonation in the ingredients and the description of the product as a \"chocolate beverage\" indicate that it is not a carbonated drink.",
+            "Faygo is a soft drink company headquartered in Detroit, Michigan, and is a wholly owned subsidiary of the National Beverage Corporation. The beverages produced by Faygo, branded as Faygo or Faygo Pop, are distributed in the Midwest, Mid-Atlantic, and Central Southern regions of the United States, as well as southern Canada. The company was started in Detroit, Michigan, in 1907 as Feigenson Brothers Bottling Works. Faygo is also imported in Europe by American Fizz, an official distributor of Faygo. Unfortunately, the specific ingredients of Faygo beverages were not provided in the given information.",
+            "Based on the given information, we cannot definitively determine if Faygo is a carbonated drink without the specific ingredients of their beverages. However, given that Faygo is a soft drink company and their products are branded as \"Faygo Pop,\" it is likely that their beverages are carbonated. Additionally, the fact that they are distributed in the Midwest, Mid-Atlantic, and Central Southern regions of the United States suggests that their products are likely carbonated, as these regions are known for their consumption of carbonated soft drinks.",
+            "Based on the analysis of the results, it can be concluded that Yoo-hoo is not a carbonated drink, while Faygo is likely a carbonated drink. This conclusion is based on the absence of carbonation in the ingredients and product description of Yoo-hoo, and the likelihood of carbonation in Faygo's beverages due to their branding as \"Faygo Pop\" and distribution in regions known for their consumption of carbonated soft drinks."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Yoo-hoo and Faygo both carbonated drinks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about if Yoo-hoo is a carbonated drink.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about if Faygo is a carbonated drink.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine the information about Yoo-hoo and Faygo to determine if they are both carbonated drinks.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of two parallel retrieval and reasoning nodes for determining the carbonation status of Yoo-hoo and Faygo, respectively. The final reasoning node combines these results to answer whether both are carbonated drinks."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Faygo\nFaygo Beverages, Inc., is a soft drink company headquartered in Detroit, Michigan. The beverages produced by the company, branded as Faygo or Faygo Pop, are distributed in the Midwest, Mid-Atlantic, and Central Southern regions of the United States, as well as southern Canada. Faygo is imported in Europe by American Fizz, an official distributor of Faygo. Faygo Beverages, Inc., is a wholly owned subsidiary of the National Beverage Corporation, started in Detroit, Michigan, in 1907 as Feigenson Brothers Bottling Works.",
+            "Banta\nBanta also known as Fotash Jawl in Bengali, Goli Soda (\"Goli\" = spherical object in Hindi) or Goti Soda (\"Goti\" = marble in Hindi) is a colloquial term for a carbonated lemon or orange-flavoured soft drink popular in India. Though the origin of its name is from Punjabi word for marble (banta), Banta has been sold since the late 19th century, long before popular carbonated drinks arrived. The drink is often sold mixed with lemon juice, crushed ice, chaat masala and kala namak (black salt) as a carbonated variant of popular lemonades \"shikanjvi\" or \"jal-jeera\". It is available at street-sellers known as \"bantawallahs\" at prices ranging from - .",
+            "Grape soda\nGrape soft drinks (also known as grape drink, grape soda or grape pop in certain regions of the US) are typically sweetened carbonated drinks with a grape flavor.",
+            "Carbonated drink\nCarbonated drinks are beverages that contain dissolved carbon dioxide. The dissolution of CO in a liquid, gives rise to \"fizz\" or \"effervescence\". The process usually involves carbon dioxide under high pressure. When the pressure is removed, the carbon dioxide is released from the solution as small bubbles, which causes the solution to become effervescent, or fizzy. A common example is the dissolving of carbon dioxide in water, resulting in carbonated water. Carbon dioxide is only weakly soluble in water, therefore it separates into a gas when the pressure is released.",
+            "SodaStream\nSodaStream International Ltd. (NASDAQ:\u00a0SODA ) is an Israeli drinks company best known as the maker of the consumer home carbonation product of the same name. The device, like a soda syphon, carbonates water by adding carbon dioxide from a pressurized cylinder to create soda water (or carbonated water) to drink. The company also sells more than 100 types of concentrated syrups and flavourings to make carbonated drinks.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Cola\nCola is a sweetened, carbonated soft drink, made from ingredients that contain caffeine from the kola nut and non-cocaine derivatives from coca leaves, flavored with vanilla and other ingredients. Most colas now use other flavoring (and caffeinating) ingredients with a similar taste. Colas became popular worldwide after pharmacist John Pemberton invented Coca-Cola in 1886. His non-alcoholic recipe was inspired by the coca wine of pharmacist Angelo Mariani, created in 1863.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "NOS (drink)\nNOS Energy Drink is an energy drink sold in 16 and 24oz cans. The drink was also once distributed in a bottle designed to look like a NOS (Nitrous Oxide Systems) cartridge. This was discontinued in 2015. Formerly a property of The Coca-Cola Company, it is currently produced by Monster Beverage and licensed by Holley Performance, which owns the trademark. NOS contains high levels of taurine and caffeine, and it also contains guarana. L-Theanine was removed as a \"CMPLX6\" ingredient in 2016, with inositol becoming listed as one of the six featured ingredients on the can. NOS Energy is currently available in Original, Sugar Free, Charged Citrus, Cherried Out, GT Grape, and Rowdy."
+        ],
+        "thoughts": [
+            "Yoo-hoo is a chocolate-flavored drink that is not carbonated.",
+            "Based on the information provided, Faygo is a carbonated drink. It is a soft drink company that produces beverages distributed in various regions of the United States and Canada. The process of carbonation involves the dissolution of carbon dioxide in a liquid, which gives rise to \"fizz\" or \"effervescence,\" and Faygo's beverages fall under this category. Therefore, Faygo is indeed a carbonated drink.",
+            "Based on the information provided, Yoo-hoo is not a carbonated drink, while Faygo is a carbonated drink. Therefore, Yoo-hoo and Faygo are not both carbonated drinks."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Yoo-hoo and Faygo both carbonated drinks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine whether Yoo-hoo is a carbonated drink.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine whether Faygo is a carbonated drink.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine the information to determine if both Yoo-hoo and Faygo are carbonated drinks.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is designed to address the question by first independently verifying whether Yoo-hoo and Faygo are carbonated drinks. Each beverage's status as carbonated or not is determined in separate retrieval and reasoning steps. These independent steps can be executed in parallel. Once the carbonation status of both beverages is known, a final reasoning step combines this information to answer the original question, concluding the process."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Banta\nBanta also known as Fotash Jawl in Bengali, Goli Soda (\"Goli\" = spherical object in Hindi) or Goti Soda (\"Goti\" = marble in Hindi) is a colloquial term for a carbonated lemon or orange-flavoured soft drink popular in India. Though the origin of its name is from Punjabi word for marble (banta), Banta has been sold since the late 19th century, long before popular carbonated drinks arrived. The drink is often sold mixed with lemon juice, crushed ice, chaat masala and kala namak (black salt) as a carbonated variant of popular lemonades \"shikanjvi\" or \"jal-jeera\". It is available at street-sellers known as \"bantawallahs\" at prices ranging from - .",
+            "Grape soda\nGrape soft drinks (also known as grape drink, grape soda or grape pop in certain regions of the US) are typically sweetened carbonated drinks with a grape flavor.",
+            "Carbonated drink\nCarbonated drinks are beverages that contain dissolved carbon dioxide. The dissolution of CO in a liquid, gives rise to \"fizz\" or \"effervescence\". The process usually involves carbon dioxide under high pressure. When the pressure is removed, the carbon dioxide is released from the solution as small bubbles, which causes the solution to become effervescent, or fizzy. A common example is the dissolving of carbon dioxide in water, resulting in carbonated water. Carbon dioxide is only weakly soluble in water, therefore it separates into a gas when the pressure is released.",
+            "SodaStream\nSodaStream International Ltd. (NASDAQ:\u00a0SODA ) is an Israeli drinks company best known as the maker of the consumer home carbonation product of the same name. The device, like a soda syphon, carbonates water by adding carbon dioxide from a pressurized cylinder to create soda water (or carbonated water) to drink. The company also sells more than 100 types of concentrated syrups and flavourings to make carbonated drinks.",
+            "Faygo\nFaygo Beverages, Inc., is a soft drink company headquartered in Detroit, Michigan. The beverages produced by the company, branded as Faygo or Faygo Pop, are distributed in the Midwest, Mid-Atlantic, and Central Southern regions of the United States, as well as southern Canada. Faygo is imported in Europe by American Fizz, an official distributor of Faygo. Faygo Beverages, Inc., is a wholly owned subsidiary of the National Beverage Corporation, started in Detroit, Michigan, in 1907 as Feigenson Brothers Bottling Works.",
+            "Cola\nCola is a sweetened, carbonated soft drink, made from ingredients that contain caffeine from the kola nut and non-cocaine derivatives from coca leaves, flavored with vanilla and other ingredients. Most colas now use other flavoring (and caffeinating) ingredients with a similar taste. Colas became popular worldwide after pharmacist John Pemberton invented Coca-Cola in 1886. His non-alcoholic recipe was inspired by the coca wine of pharmacist Angelo Mariani, created in 1863.",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "NOS (drink)\nNOS Energy Drink is an energy drink sold in 16 and 24oz cans. The drink was also once distributed in a bottle designed to look like a NOS (Nitrous Oxide Systems) cartridge. This was discontinued in 2015. Formerly a property of The Coca-Cola Company, it is currently produced by Monster Beverage and licensed by Holley Performance, which owns the trademark. NOS contains high levels of taurine and caffeine, and it also contains guarana. L-Theanine was removed as a \"CMPLX6\" ingredient in 2016, with inositol becoming listed as one of the six featured ingredients on the can. NOS Energy is currently available in Original, Sugar Free, Charged Citrus, Cherried Out, GT Grape, and Rowdy.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Schorle\nSchorle is a German beverage made by diluting juice or wine with carbonated water or lemonade (lemon-lime soda). The most common variety is Apfelschorle (made from apple juice and sparkling mineral water). Large bottles of Schorle can be found at most grocers, stores, supermarkets and anywhere else where carbonated drinks are sold, next to the soda. Due to its dilution it is less sweet or alcoholic than the original beverage, making it better suited as a refreshment on hot summer days or as an alternative to beer at the biergarten or .",
+            "List of liberal arts colleges\nLiberal arts colleges are primarily colleges or universities with an emphasis upon undergraduate study in the liberal arts. The \"Encyclop\u00e6dia Britannica Concise\" offers the following definition of the liberal arts as a, \"college or university curriculum aimed at imparting general knowledge and developing general intellectual capacities, in contrast to a professional, vocational, or technical curriculum.\" Although the genesis for what is known today as the liberal arts college began in Europe, the term is commonly associated with the United States. Liberal arts colleges are found in countries all over the world as well. See the list (link) of international members of the Association of American Colleges and Universities for other institutions offering liberal arts education programs.",
+            "Council of Orange (529)\nThe Second Council of Orange (or Second Synod of Orange) was held in 529 at Orange, which was then part of the Ostrogothic Kingdom. It affirmed much of the theology of Augustine of Hippo, and made numerous proclamations against what later would come to be known as semi-Pelagian doctrine.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Retraction\nA retraction is a public statement made about an earlier statement that withdraws, cancels, refutes, or reverses the original statement or ceases and desists from publishing the original statement. The retraction may be initiated by the editors of a journal, or by the author(s) of the papers (or their institution). Retractions may or may not be accompanied by the author's further explanation as to how the original statement came to be made and/or what subsequent events, discoveries, or experiences led to the subsequent retraction. They are also in some cases accompanied by apologies for previous error and/or expressions of gratitude to persons who disclosed the error to the author.",
+            "Only What I Feel\nOnly What I Feel is the sixth album, and the first since signing with Epic Records in 1992, recorded by country music artist Patty Loveless. It was released in 1993. Four tracks from the album made in into the Billboard top 20 country singles charts, including the #1 \"Blame It on Your Heart\" and the #3 \"How Can I Help You Say Goodbye,\" later covered by Laura Branigan. The #6 hit \"You Will\" was originally recorded by Anne Murray as the title track of her 1990 album. The only single to not make the top ten was the #20 hit \"Nothin' But The Wheel\", considered by many Patty fans to be one of her finest works. The album peaked at #9, and was certified platinum for shipments of over 1,000,000 copies in the U.S. This album was Loveless' first album since she had surgery to repair burst nodes on her vocal cords in 1992."
+        ],
+        "thoughts": [
+            "Yoo-hoo is not a carbonated drink. It is a chocolate-flavored beverage and does not contain dissolved carbon dioxide, which is a defining characteristic of carbonated drinks.",
+            "Yes, Faygo is a carbonated drink.",
+            "Based on the information from the upstream tasks, it can be determined that Yoo-hoo is not a carbonated drink, while Faygo is a carbonated drink. Therefore, both Yoo-hoo and Faygo are not carbonated drinks."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Yoo-hoo and Faygo both carbonated drinks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information on Yoo-hoo and determine if it is a carbonated drink.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on Faygo and determine if it is a carbonated drink.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine findings on Yoo-hoo and Faygo to determine if they are both carbonated drinks.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the task of determining if Yoo-hoo and Faygo are both carbonated drinks into three major steps. The first step involves retrieving information on Yoo-hoo to assess its carbonation status. The second step involves retrieving information on Faygo for the same purpose. These two steps operate independently and in parallel as they gather distinct information about each drink. The final step combines the results from the first two steps to conclude if both drinks are carbonated, answering the original question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Yoo-hoo\nYoo-hoo is an American brand of chocolate beverage that originated in New Jersey in 1926 and that is currently manufactured by Dr. Pepper Snapple Group.",
+            "Faygo\nFaygo Beverages, Inc., is a soft drink company headquartered in Detroit, Michigan. The beverages produced by the company, branded as Faygo or Faygo Pop, are distributed in the Midwest, Mid-Atlantic, and Central Southern regions of the United States, as well as southern Canada. Faygo is imported in Europe by American Fizz, an official distributor of Faygo. Faygo Beverages, Inc., is a wholly owned subsidiary of the National Beverage Corporation, started in Detroit, Michigan, in 1907 as Feigenson Brothers Bottling Works.",
+            "Banta\nBanta also known as Fotash Jawl in Bengali, Goli Soda (\"Goli\" = spherical object in Hindi) or Goti Soda (\"Goti\" = marble in Hindi) is a colloquial term for a carbonated lemon or orange-flavoured soft drink popular in India. Though the origin of its name is from Punjabi word for marble (banta), Banta has been sold since the late 19th century, long before popular carbonated drinks arrived. The drink is often sold mixed with lemon juice, crushed ice, chaat masala and kala namak (black salt) as a carbonated variant of popular lemonades \"shikanjvi\" or \"jal-jeera\". It is available at street-sellers known as \"bantawallahs\" at prices ranging from - .",
+            "Grape soda\nGrape soft drinks (also known as grape drink, grape soda or grape pop in certain regions of the US) are typically sweetened carbonated drinks with a grape flavor.",
+            "Carbonated drink\nCarbonated drinks are beverages that contain dissolved carbon dioxide. The dissolution of CO in a liquid, gives rise to \"fizz\" or \"effervescence\". The process usually involves carbon dioxide under high pressure. When the pressure is removed, the carbon dioxide is released from the solution as small bubbles, which causes the solution to become effervescent, or fizzy. A common example is the dissolving of carbon dioxide in water, resulting in carbonated water. Carbon dioxide is only weakly soluble in water, therefore it separates into a gas when the pressure is released.",
+            "SodaStream\nSodaStream International Ltd. (NASDAQ:\u00a0SODA ) is an Israeli drinks company best known as the maker of the consumer home carbonation product of the same name. The device, like a soda syphon, carbonates water by adding carbon dioxide from a pressurized cylinder to create soda water (or carbonated water) to drink. The company also sells more than 100 types of concentrated syrups and flavourings to make carbonated drinks.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Cola\nCola is a sweetened, carbonated soft drink, made from ingredients that contain caffeine from the kola nut and non-cocaine derivatives from coca leaves, flavored with vanilla and other ingredients. Most colas now use other flavoring (and caffeinating) ingredients with a similar taste. Colas became popular worldwide after pharmacist John Pemberton invented Coca-Cola in 1886. His non-alcoholic recipe was inspired by the coca wine of pharmacist Angelo Mariani, created in 1863.",
+            "NOS (drink)\nNOS Energy Drink is an energy drink sold in 16 and 24oz cans. The drink was also once distributed in a bottle designed to look like a NOS (Nitrous Oxide Systems) cartridge. This was discontinued in 2015. Formerly a property of The Coca-Cola Company, it is currently produced by Monster Beverage and licensed by Holley Performance, which owns the trademark. NOS contains high levels of taurine and caffeine, and it also contains guarana. L-Theanine was removed as a \"CMPLX6\" ingredient in 2016, with inositol becoming listed as one of the six featured ingredients on the can. NOS Energy is currently available in Original, Sugar Free, Charged Citrus, Cherried Out, GT Grape, and Rowdy.",
+            "Sutton Hoo helmet\nThe Sutton Hoo helmet is a decorated Anglo-Saxon helmet discovered during the 1939 excavation of the Sutton Hoo ship burial. It was buried around 625 and is widely believed to have been the helmet of King R\u00e6dwald of East Anglia, and its elaborate decoration may have given it a secondary function akin to a crown. The helmet is \"the most iconic object\" from \"one of the most spectacular archaeological discoveries ever made,\" and one of the most important Anglo-Saxon artefacts ever found. Its visage features eyebrows, nose, and moustache, creating the image of a man joined by a dragon's head to become a soaring dragon with outstretched wings. It has become a symbol of the Dark Ages and also \"of Archaeology in general.\" It was excavated as hundreds of rusted fragments, and was first displayed following an initial reconstruction in 1945\u201346, and then in its present form after a second reconstruction in 1970\u201371.",
+            "Shorwell helmet\nThe Shorwell helmet is an Anglo-Saxon spangenhelm type helmet found near Shorwell on the Isle of Wight in 2006. Together with those from Benty Grange, Sutton Hoo, Coppergate, Wollaston, and Staffordshire, it is one of only six known Anglo-Saxon helmets.",
+            "Keep Your Head Down (song)\n\"Keep Your Head Down\" (Korean title: \uc65c \"Wae\"; \"Why\"), released in Japan as \"Why? (Keep Your Head Down)\", is a song recorded by South Korean pop group TVXQ (or Tohoshinki in Japan). Written by Yoo Young-jin and Yoo Han-jin, the Korean-language version of \"Keep Your Head Down\" was released by S.M. Entertainment on January 3, 2011 as the lead single for the group's fifth Korean studio album \"Keep Your Head Down\" (2011), TVXQ's first album since becoming a two-piece band with U-Know Yunho and Max Changmin. The Japanese-language version of \"Keep Your Head Down\", which was released on January 26, 2011 by Avex Trax, served as TVXQ's 31st Japanese single in Japan. It was the first single taken from their fifth Japanese studio album, \"Tone\" (2011).",
+            "Karine Nahon\nKarine Nahon (Hebrew: \u05e7\u05e8\u05d9\u05df \u05e0\u05d4\u05d5\u05df\u200e \u200e ), is an Israeli information scientist and public intellectual active in the area of information, technology and society. She holds a dual position as an associate professor in the The Information School at University of Washington and the Interdisciplinary Center Herzliya. In July 2017, Nahon was named #24 on Forbes' list of 50 Most Influential Women in Israel .Her co-authored book \u201cGoing Viral\u201d was awarded Best Information Science Book Award by the Association for Information Science and Technology and the 2014 Outstanding Academic Title Award by the American Library Association.",
+            "A Man Called God\nA Man Called God (; also known as The Man Almighty) is a 2010 South Korean television series starring Song Il-gook, Han Chae-young, Kim Min-jong, Han Go-eun and Yoo In-young. It aired on MBC from March 6 to May 23, 2010 on Saturdays and Sundays at 21:45 for 24 episodes."
+        ],
+        "thoughts": [
+            "Yoo-hoo is a chocolate beverage and is not a carbonated drink. It is not related to the carbonated drink company SodaStream.",
+            "Based on the information provided, Faygo is a carbonated drink. It is a soft drink company that produces beverages distributed in various regions of the United States and Canada. The process of carbonation involves the dissolution of carbon dioxide in a liquid, which gives rise to \"fizz\" or \"effervescence,\" and Faygo's beverages are branded as Faygo or Faygo Pop, indicating that they are carbonated drinks.",
+            "Based on the findings, Yoo-hoo is not a carbonated drink, as it is a chocolate beverage. On the other hand, Faygo is a carbonated drink, as it is a soft drink company that produces carbonated beverages. Therefore, Yoo-hoo and Faygo are not both carbonated drinks."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Yoo-hoo and Faygo both carbonated drinks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Yoo-hoo, particularly whether it is carbonated.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Faygo, particularly whether it is carbonated.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Yoo-hoo is a carbonated drink based on retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Faygo is a carbonated drink based on retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to determine if both Yoo-hoo and Faygo are carbonated drinks.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph starts by retrieving information about the carbonation aspect of Yoo-hoo and Faygo independently. These are parallel steps as they do not depend on each other. Once the information is retrieved, we use reasoning nodes to determine if each drink is carbonated. The final node combines these results to answer the original question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Yoo-hoo\nYoo-hoo is an American brand of chocolate beverage that originated in New Jersey in 1926 and that is currently manufactured by Dr. Pepper Snapple Group.",
+            "Faygo\nFaygo Beverages, Inc., is a soft drink company headquartered in Detroit, Michigan. The beverages produced by the company, branded as Faygo or Faygo Pop, are distributed in the Midwest, Mid-Atlantic, and Central Southern regions of the United States, as well as southern Canada. Faygo is imported in Europe by American Fizz, an official distributor of Faygo. Faygo Beverages, Inc., is a wholly owned subsidiary of the National Beverage Corporation, started in Detroit, Michigan, in 1907 as Feigenson Brothers Bottling Works.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Sutton Hoo helmet\nThe Sutton Hoo helmet is a decorated Anglo-Saxon helmet discovered during the 1939 excavation of the Sutton Hoo ship burial. It was buried around 625 and is widely believed to have been the helmet of King R\u00e6dwald of East Anglia, and its elaborate decoration may have given it a secondary function akin to a crown. The helmet is \"the most iconic object\" from \"one of the most spectacular archaeological discoveries ever made,\" and one of the most important Anglo-Saxon artefacts ever found. Its visage features eyebrows, nose, and moustache, creating the image of a man joined by a dragon's head to become a soaring dragon with outstretched wings. It has become a symbol of the Dark Ages and also \"of Archaeology in general.\" It was excavated as hundreds of rusted fragments, and was first displayed following an initial reconstruction in 1945\u201346, and then in its present form after a second reconstruction in 1970\u201371.",
+            "SodaStream\nSodaStream International Ltd. (NASDAQ:\u00a0SODA ) is an Israeli drinks company best known as the maker of the consumer home carbonation product of the same name. The device, like a soda syphon, carbonates water by adding carbon dioxide from a pressurized cylinder to create soda water (or carbonated water) to drink. The company also sells more than 100 types of concentrated syrups and flavourings to make carbonated drinks.",
+            "Shorwell helmet\nThe Shorwell helmet is an Anglo-Saxon spangenhelm type helmet found near Shorwell on the Isle of Wight in 2006. Together with those from Benty Grange, Sutton Hoo, Coppergate, Wollaston, and Staffordshire, it is one of only six known Anglo-Saxon helmets.",
+            "Keep Your Head Down (song)\n\"Keep Your Head Down\" (Korean title: \uc65c \"Wae\"; \"Why\"), released in Japan as \"Why? (Keep Your Head Down)\", is a song recorded by South Korean pop group TVXQ (or Tohoshinki in Japan). Written by Yoo Young-jin and Yoo Han-jin, the Korean-language version of \"Keep Your Head Down\" was released by S.M. Entertainment on January 3, 2011 as the lead single for the group's fifth Korean studio album \"Keep Your Head Down\" (2011), TVXQ's first album since becoming a two-piece band with U-Know Yunho and Max Changmin. The Japanese-language version of \"Keep Your Head Down\", which was released on January 26, 2011 by Avex Trax, served as TVXQ's 31st Japanese single in Japan. It was the first single taken from their fifth Japanese studio album, \"Tone\" (2011).",
+            "Karine Nahon\nKarine Nahon (Hebrew: \u05e7\u05e8\u05d9\u05df \u05e0\u05d4\u05d5\u05df\u200e \u200e ), is an Israeli information scientist and public intellectual active in the area of information, technology and society. She holds a dual position as an associate professor in the The Information School at University of Washington and the Interdisciplinary Center Herzliya. In July 2017, Nahon was named #24 on Forbes' list of 50 Most Influential Women in Israel .Her co-authored book \u201cGoing Viral\u201d was awarded Best Information Science Book Award by the Association for Information Science and Technology and the 2014 Outstanding Academic Title Award by the American Library Association.",
+            "A Man Called God\nA Man Called God (; also known as The Man Almighty) is a 2010 South Korean television series starring Song Il-gook, Han Chae-young, Kim Min-jong, Han Go-eun and Yoo In-young. It aired on MBC from March 6 to May 23, 2010 on Saturdays and Sundays at 21:45 for 24 episodes.",
+            "Batman (score)\nBatman: Original Motion Picture Score is the score album for the 1989 film \"Batman\" by Danny Elfman. According to the \"Batman\" DVD Special Edition, Elfman said that producer Jon Peters was not sure about him as a composer until Tim Burton made him play the main titles. Elfman admitted he was stunned when Peters announced that the score would be released on its own album, as releasing a separate score album for a film was something that was rarely done in the 1980s. Elfman's \"The Batman Theme\" went on to become an iconic piece. It served as the basis for the theme music of \"\", which premiered in 1992, although this was later changed. Some parts of the Elfman score are also heard in \"\", \"\" and \"\". Parts are also played in the queue, and on the station platform of Batman the Ride at various Six Flags theme parks.",
+            "Confessions of an Economic Hit Man\nConfessions of an Economic Hit Man is a partly autobiographical book written by John Perkins published in 2004. It provides Perkins' account of his career with engineering consulting firm Chas. T. Main in Boston. According to Perkins, his role at Main was to convince leaders of underdeveloped countries to accept substantial development loans for large construction and engineering projects that would primarily help the richest families and local elites, rather than the poor, while making sure that these projects were contracted to U.S. companies. Later these loans would give the U.S. political influence and access to natural resources for U.S. companies. He refers to this as an \"economic hit man.\" Although he states that throughout his career he has always worked for private companies, and suggests a system of corporatocracy and greed, rather than a single conspiracy, he claims the involvement of the National Security Agency (NSA), with whom he had interviewed for a job before joining Main. According to the author, this interview effectively constituted an independent screening which led to his subsequent hiring as an economic hit man by Einar Greve, a vice president of the firm (and alleged NSA liaison).",
+            "Ala Khallidi\n\"\u2019Al\u0101 Khallid\u012b\" (Arabic: \u0623\u0644\u0627 \u062e\u0644\u0651\u062f\u064a\u200e \u200e ) is the former national anthem of Tunisia. It was sung during the Presidency of Habib Bourguiba until his downfall in 1987. \"Humat al-Hima\" was temporarily used as a national anthem between the end of the monarchy on 25 July 1957 and the adoption of \"Ala Khallidi\" as the official national anthem. In 1958, the Ministry of Education organized a competition, in which 53 poets and 23 musicians took part. The results were examined first by a commission of the Board of Education, which selected the submissions of the hymn poet Jalaleddine Naccache (1910\u20131989) and the composer and director of the Conservatoire of Tunis Salah El Mahdi (1925-2014). The works were presented to the president without announcing the selection that already been made. He selected the same version as the commission had. In order to be completely sure, another larger popular assembly was held in Monastir, the birth city of the president, and all 23 melodies were played. But then, the song by Naccache and El Mahdi won and was formally adopted during Independence Day, 20 March that same year.",
+            "Father\nA father is the male parent of a child. Besides the paternal bonds of a father to his children, the father may have a parental, legal, and social relationship with the child that carries with it certain rights and obligations. An adoptive father is a male who has become the child's parent through the legal process of adoption. A biological father is the male genetic contributor to the creation of the infant, through sexual intercourse or sperm donation. A biological father may have legal obligations to a child not raised by him, such as an obligation of monetary support. A putative father is a man whose biological relationship to a child is alleged but has not been established. A mother's boyfriend is a man whose girlfriend has a son or daughter from a previous marriage or relationship. A stepfather is a male who is the husband of a child's mother and they may form a family unit, but who generally does not have the legal rights and responsibilities of a parent in relation to the child.",
+            "Codd-neck bottle\nA Codd bottle is a type of bottle used for carbonated drinks. It has a unique closing design based on a glass marble which is held against a rubber seal, which sits within a recess in the lip."
+        ],
+        "thoughts": [
+            "Yoo-hoo is a chocolate beverage and is not carbonated.",
+            "Yoo-hoo is not a carbonated drink. It is a chocolate beverage.",
+            "Faygo is a soft drink company that produces carbonated beverages.",
+            "Yes, Faygo is a carbonated drink based on the information retrieved. Faygo is a soft drink company that produces carbonated beverages.",
+            "Based on the results from the upstream tasks, it can be determined that Faygo is a carbonated drink, while Yoo-hoo is not. Therefore, both Yoo-hoo and Faygo are not carbonated drinks."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Yoo-hoo and Faygo both carbonated drinks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find out what Yoo-hoo is and if it is a carbonated drink.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find out what Faygo is and if it is a carbonated drink.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine the results from the investigation of Yoo-hoo and Faygo to determine if both are carbonated drinks.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is structured to first gather information about each drink separately, identifying their nature and whether they are carbonated. The initial retrieval and reasoning nodes (1 and 2) independently verify the status of Yoo-hoo and Faygo. The final reasoning node (3) synthesizes this information to directly answer the original question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Yoo-hoo\nYoo-hoo is an American brand of chocolate beverage that originated in New Jersey in 1926 and that is currently manufactured by Dr. Pepper Snapple Group.",
+            "Faygo\nFaygo Beverages, Inc., is a soft drink company headquartered in Detroit, Michigan. The beverages produced by the company, branded as Faygo or Faygo Pop, are distributed in the Midwest, Mid-Atlantic, and Central Southern regions of the United States, as well as southern Canada. Faygo is imported in Europe by American Fizz, an official distributor of Faygo. Faygo Beverages, Inc., is a wholly owned subsidiary of the National Beverage Corporation, started in Detroit, Michigan, in 1907 as Feigenson Brothers Bottling Works.",
+            "Banta\nBanta also known as Fotash Jawl in Bengali, Goli Soda (\"Goli\" = spherical object in Hindi) or Goti Soda (\"Goti\" = marble in Hindi) is a colloquial term for a carbonated lemon or orange-flavoured soft drink popular in India. Though the origin of its name is from Punjabi word for marble (banta), Banta has been sold since the late 19th century, long before popular carbonated drinks arrived. The drink is often sold mixed with lemon juice, crushed ice, chaat masala and kala namak (black salt) as a carbonated variant of popular lemonades \"shikanjvi\" or \"jal-jeera\". It is available at street-sellers known as \"bantawallahs\" at prices ranging from - .",
+            "Carbonated drink\nCarbonated drinks are beverages that contain dissolved carbon dioxide. The dissolution of CO in a liquid, gives rise to \"fizz\" or \"effervescence\". The process usually involves carbon dioxide under high pressure. When the pressure is removed, the carbon dioxide is released from the solution as small bubbles, which causes the solution to become effervescent, or fizzy. A common example is the dissolving of carbon dioxide in water, resulting in carbonated water. Carbon dioxide is only weakly soluble in water, therefore it separates into a gas when the pressure is released.",
+            "Grape soda\nGrape soft drinks (also known as grape drink, grape soda or grape pop in certain regions of the US) are typically sweetened carbonated drinks with a grape flavor.",
+            "SodaStream\nSodaStream International Ltd. (NASDAQ:\u00a0SODA ) is an Israeli drinks company best known as the maker of the consumer home carbonation product of the same name. The device, like a soda syphon, carbonates water by adding carbon dioxide from a pressurized cylinder to create soda water (or carbonated water) to drink. The company also sells more than 100 types of concentrated syrups and flavourings to make carbonated drinks.",
+            "Cola\nCola is a sweetened, carbonated soft drink, made from ingredients that contain caffeine from the kola nut and non-cocaine derivatives from coca leaves, flavored with vanilla and other ingredients. Most colas now use other flavoring (and caffeinating) ingredients with a similar taste. Colas became popular worldwide after pharmacist John Pemberton invented Coca-Cola in 1886. His non-alcoholic recipe was inspired by the coca wine of pharmacist Angelo Mariani, created in 1863.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "A Good Man Is Hard to Find and Other Stories\nA Good Man Is Hard to Find and Other Stories (published in England as The Artificial Nigger and Other Tales) is a collection of short stories by American author Flannery O'Connor. The collection was first published in 1955. The subjects of the short stories range from baptism (\"The River\") to serial killers (\"A Good Man Is Hard to Find\") to human greed and exploitation (\"The Life You Save May Be Your Own\"). The majority of the stories include jarring violent scenes that make the characters undergo a spiritual change. The short stories commonly have tones of Catholicism related to life and death scenarios. For instance, in the story \"A Good Man Is Hard To Find\" the villain states, \"She would have been a good woman if it had been somebody there to shoot her every minute of her life.\"",
+            "NOS (drink)\nNOS Energy Drink is an energy drink sold in 16 and 24oz cans. The drink was also once distributed in a bottle designed to look like a NOS (Nitrous Oxide Systems) cartridge. This was discontinued in 2015. Formerly a property of The Coca-Cola Company, it is currently produced by Monster Beverage and licensed by Holley Performance, which owns the trademark. NOS contains high levels of taurine and caffeine, and it also contains guarana. L-Theanine was removed as a \"CMPLX6\" ingredient in 2016, with inositol becoming listed as one of the six featured ingredients on the can. NOS Energy is currently available in Original, Sugar Free, Charged Citrus, Cherried Out, GT Grape, and Rowdy.",
+            "Kid Marine\nKid Marine is 3rd album by Robert Pollard, released in 1999. It is the first release of Robert Pollard's Fading Captain Series. Pollard has stated that the album is about Jeff \"Kid Marine\" Davis, the person pictured on the cover . Robert told Mojo magazine, \"My personal favorite, a weird record, almost a concept album, about the typical Ohio male and what he does - drink, watch television, eat pizza. It got mixed reviews, there are people who hate it and others who think it's our best record and I'm on their side. I just love the songs. It feels like one piece, like it all fits together. I like the cover and I like the"
+        ],
+        "thoughts": [
+            "Yoo-hoo is an American brand of chocolate beverage that is not a carbonated drink. It is not a carbonated drink because it does not contain dissolved carbon dioxide, which is the defining characteristic of carbonated beverages. Instead, Yoo-hoo is a chocolate-flavored drink manufactured by Dr. Pepper Snapple Group.",
+            "Faygo is a soft drink company based in Detroit, Michigan, and their beverages are distributed in various regions of the United States and Canada. It is a carbonated drink, as it is referred to as \"Faygo Pop\" and is categorized as a soft drink. Therefore, Faygo is a carbonated drink.",
+            "Based on the investigation results, Yoo-hoo is not a carbonated drink, as it does not contain dissolved carbon dioxide. On the other hand, Faygo is a carbonated drink, as it is categorized as a soft drink and referred to as \"Faygo Pop.\" Therefore, Yoo-hoo is not a carbonated drink, while Faygo is a carbonated drink."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Yoo-hoo and Faygo both carbonated drinks?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Yoo-hoo to determine if it is a carbonated drink.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Faygo to determine if it is a carbonated drink.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the information gathered to determine if Yoo-hoo is a carbonated drink.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the information gathered to determine if Faygo is a carbonated drink.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results from the analyses of Yoo-hoo and Faygo to determine if both are carbonated drinks.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph begins with retrieving information about each drink separately (Yoo-hoo and Faygo) to determine their characteristics, specifically if they are carbonated. These are two independent retrieval steps, allowing for parallel execution. The retrieved information is then analyzed to conclude individually whether each drink is carbonated. Finally, the results from the analyses are combined to answer the original question about both drinks."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Yoo-hoo\nYoo-hoo is an American brand of chocolate beverage that originated in New Jersey in 1926 and that is currently manufactured by Dr. Pepper Snapple Group.",
+            "Faygo\nFaygo Beverages, Inc., is a soft drink company headquartered in Detroit, Michigan. The beverages produced by the company, branded as Faygo or Faygo Pop, are distributed in the Midwest, Mid-Atlantic, and Central Southern regions of the United States, as well as southern Canada. Faygo is imported in Europe by American Fizz, an official distributor of Faygo. Faygo Beverages, Inc., is a wholly owned subsidiary of the National Beverage Corporation, started in Detroit, Michigan, in 1907 as Feigenson Brothers Bottling Works.",
+            "Sutton Hoo helmet\nThe Sutton Hoo helmet is a decorated Anglo-Saxon helmet discovered during the 1939 excavation of the Sutton Hoo ship burial. It was buried around 625 and is widely believed to have been the helmet of King R\u00e6dwald of East Anglia, and its elaborate decoration may have given it a secondary function akin to a crown. The helmet is \"the most iconic object\" from \"one of the most spectacular archaeological discoveries ever made,\" and one of the most important Anglo-Saxon artefacts ever found. Its visage features eyebrows, nose, and moustache, creating the image of a man joined by a dragon's head to become a soaring dragon with outstretched wings. It has become a symbol of the Dark Ages and also \"of Archaeology in general.\" It was excavated as hundreds of rusted fragments, and was first displayed following an initial reconstruction in 1945\u201346, and then in its present form after a second reconstruction in 1970\u201371.",
+            "Lantern Waste\nLantern Waste is a fictional place in \"The Chronicles of Narnia\" series by C. S. Lewis. It is a wood and is notable as the place where Lucy Pevensie and Mr. Tumnus meet, which is the first scene of Narnia described in the books. The lamppost in the wood is an iconic image of Narnia, and the question of its origin is what convinced Lewis to write more than one book on Narnia. One of King Edmund's titles is \"Duke of Lantern Waste\".",
+            "SodaStream\nSodaStream International Ltd. (NASDAQ:\u00a0SODA ) is an Israeli drinks company best known as the maker of the consumer home carbonation product of the same name. The device, like a soda syphon, carbonates water by adding carbon dioxide from a pressurized cylinder to create soda water (or carbonated water) to drink. The company also sells more than 100 types of concentrated syrups and flavourings to make carbonated drinks.",
+            "Shorwell helmet\nThe Shorwell helmet is an Anglo-Saxon spangenhelm type helmet found near Shorwell on the Isle of Wight in 2006. Together with those from Benty Grange, Sutton Hoo, Coppergate, Wollaston, and Staffordshire, it is one of only six known Anglo-Saxon helmets.",
+            "Blue Origin\nBlue Origin is an American privately funded aerospace manufacturer and spaceflight services company set up by Amazon.com founder Jeff Bezos with its headquarters in Kent, Washington. The company is developing technologies to enable private human access to space with the goal to dramatically lower costs and increase reliability. Blue Origin is employing an incremental approach from suborbital to orbital flight, with each developmental step building on its prior work. The company motto is \"\"Gradatim Ferociter\"\", Latin for \"Step by Step, Ferociously\". Blue Origin is developing a variety of technologies, with a focus on rocket-powered Vertical Takeoff and Vertical Landing (VTVL) vehicles for access to suborbital and orbital space. The company's name refers to the blue planet, Earth, as the point of origin.",
+            "Coppergate Helmet\nThe Coppergate Helmet (also known as the York Helmet) is an eighth-century Anglo-Saxon helmet found in York. It is remarkably well preserved and, together with the Benty Grange, Pioneer, Shorwell, Sutton Hoo, and Staffordshire helmets, is one of only six Anglo-Saxon helmets discovered to date.",
+            "Staffordshire helmet\nThe Staffordshire helmet is an Anglo-Saxon helmet discovered in 2009 as part of the Staffordshire Hoard. It is part of the largest discovery of contemporary gold and silver metalwork in Britain, comprising nearly 4,000 pieces. Following those found at Benty Grange, Sutton Hoo, Coppergate, Wollaston, and Shorwell, it is only the sixth known Anglo-Saxon helmet.",
+            "Keep Your Head Down (song)\n\"Keep Your Head Down\" (Korean title: \uc65c \"Wae\"; \"Why\"), released in Japan as \"Why? (Keep Your Head Down)\", is a song recorded by South Korean pop group TVXQ (or Tohoshinki in Japan). Written by Yoo Young-jin and Yoo Han-jin, the Korean-language version of \"Keep Your Head Down\" was released by S.M. Entertainment on January 3, 2011 as the lead single for the group's fifth Korean studio album \"Keep Your Head Down\" (2011), TVXQ's first album since becoming a two-piece band with U-Know Yunho and Max Changmin. The Japanese-language version of \"Keep Your Head Down\", which was released on January 26, 2011 by Avex Trax, served as TVXQ's 31st Japanese single in Japan. It was the first single taken from their fifth Japanese studio album, \"Tone\" (2011).",
+            "A Man Called God\nA Man Called God (; also known as The Man Almighty) is a 2010 South Korean television series starring Song Il-gook, Han Chae-young, Kim Min-jong, Han Go-eun and Yoo In-young. It aired on MBC from March 6 to May 23, 2010 on Saturdays and Sundays at 21:45 for 24 episodes.",
+            "Delhi Sultanate\nThe Delhi Sultanate was a Muslim sultanate based mostly in Delhi that stretched over large parts of the Indian subcontinent for 320 years (1206\u20131526). Five dynasties ruled over the Delhi Sultanate sequentially: the Mamluk dynasty (1206\u201390), the Khalji dynasty (1290\u20131320), the Tughlaq dynasty (1320\u20131414), the Sayyid dynasty (1414\u201351), and the Lodi dynasty (1451\u20131526). Three dynasties (Mamluk, Khalji and Sayyid) were of Turkic origin, one dynasty (Tughlaq) was of Turko-Indian origin, and the last dynasty (Lodi) was of Pashtun origin. The sultanate is noted for being one of the few states to repel an attack by the Mongol Empire, and enthroned one of the few female rulers in Islamic history, Razia Sultana, who reigned from 1236 to 1240.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "First Life (TV series)\nFirst Life is a 2010 British nature documentary series written and presented by David Attenborough, also known by the expanded titles David Attenborough's First Life (UK) and First Life with David Attenborough (USA). It was first broadcast in the USA as a two-hour special on the Discovery Channel on 24 October 2010. In the United Kingdom it was broadcast as a two-part series on BBC Two on 5 November 2010. \"First Life\" sees Attenborough tackle the subject of the origin of life on Earth. He investigates the evidence from the earliest fossils, which suggest that complex animals first appeared in the oceans around 540 million years ago, an event known as the Cambrian Explosion. Trace fossils of multicellular organisms from an even earlier period, the Ediacaran biota, are also examined. Attenborough travels to Canada, Morocco and Australia, using some of the latest fossil discoveries and their nearest equivalents amongst living species to reveal what life may have been like at that time. Visual effects and computer animation are used to reconstruct and animate the extinct life forms.",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "Watch What Happens Live with Andy Cohen\nWatch What Happens Live with Andy Cohen (previously named Watch What Happens Live until December 19, 2016) is an American pop culture-based late-night talk show hosted by Andy Cohen that premiered on July 16, 2009. It features Bravo's own reality programming in the manner of an aftershow, and celebrities' recent news. The show is produced live from New York City, making possible interaction with viewers by phone and social media. In November 2013, Bravo renewed \"Watch What Happens: Live\" for two additional seasons. On March 2, 2016, the show aired its 1000th episode."
+        ],
+        "thoughts": [
+            "Yoo-hoo is not a carbonated drink. It is a chocolate beverage manufactured by Dr. Pepper Snapple Group.",
+            "Based on the information gathered, Yoo-hoo is not a carbonated drink. It is a chocolate beverage manufactured by Dr. Pepper Snapple Group. Therefore, it can be concluded that Yoo-hoo is not a carbonated drink.",
+            "Based on the information provided, there is no specific mention of Faygo being a carbonated drink. However, given that Faygo is a soft drink company, it is likely that their beverages, branded as Faygo or Faygo Pop, are carbonated. Additional research or direct confirmation from the company would be needed to confirm this.",
+            "Based on the information gathered, it is likely that Faygo is a carbonated drink, as it is a soft drink company and their beverages are often referred to as \"Faygo Pop.\" However, without direct confirmation from the company or further research, it cannot be definitively stated that Faygo is a carbonated drink.",
+            "Based on the analyses of Yoo-hoo and Faygo, it can be concluded that Yoo-hoo is not a carbonated drink, while Faygo is likely a carbonated drink."
+        ],
+        "is_best": false
+    }
+]

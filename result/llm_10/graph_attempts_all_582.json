@@ -1,0 +1,582 @@
+[
+    {
+        "question": "Monroe Regional Airport and Deadhorse Airport are both in this country?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the country for Monroe Regional Airport by locating its geographic information.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the country for Deadhorse Airport by locating its geographic information.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the retrieved countries from Monroe Regional Airport and Deadhorse Airport to determine if they are in the same country.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the process into three nodes. The first two nodes involve retrieving geographic information to determine the countries where Monroe Regional Airport and Deadhorse Airport are located, respectively. The third node involves reasoning by comparing the results of the first two nodes to determine if both airports are in the same country."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Monroe Regional Airport (Louisiana)\nMonroe Regional Airport (IATA: MLU, ICAO: KMLU, FAA LID: MLU) is a public use airport in Ouachita Parish, Louisiana, United States. The airport is owned by the City of Monroe and is located three nautical miles (6 km) east of its central business district.",
+            "Monroe City Regional Airport\nMonroe City Regional Airport (FAA LID: K52) is a public use airport located one nautical mile (1.85\u00a0km) south of the central business district of Monroe City, in Monroe County, Missouri, United States. It is owned by the City of Monroe and is also known as Capt. Ben Smith Airfield.",
+            "Charlotte\u2013Monroe Executive Airport\nCharlotte\u2013Monroe Executive Airport (ICAO: KEQY,\u00a0FAA LID: EQY) is a public use airport located five nautical miles (9\u00a0km) northwest of the central business district of Monroe, a city in Union County, North Carolina, United States. It is owned by the City of Monroe and was formerly known as Monroe Regional Airport.",
+            "Deadhorse Airport\nDeadhorse Airport (IATA: SCC, ICAO: PASC, FAA LID: SCC) is a public airport located in Deadhorse on the North Slope of Alaska. It can be accessed from Fairbanks via the Elliott and Dalton highways. It is near Prudhoe Bay and is sometimes also called Prudhoe Airport.",
+            "Ta'if Regional Airport\nTa'if Regional Airport (IATA: TIF,\u00a0ICAO: OETF) is an airport in Ta'if, Saudi Arabia. Despite its name, it also offers many international flights as well. The airport is located 30\u00a0km to the east of Taif and 70\u00a0km from Mecca. The airport is considered important in Saudi aviation history as it witnessed the first landing of Ibn Saud's plane, founder of the Kingdom. It was converted to a regional airport in 2009 when GACA allowed international airlines to operate at the airport as the city's population was increasing and to reduce pressure on the three main airports at the time. Despite being named as a \"Regional\" airport, the airport actually has international flights destinations in half a dozen countries outside of Saudi Arabia.",
+            "Susquehanna Area Regional Airport Authority\nThe Susquehanna Area Regional Airport Authority (SARAA) is the governing authority of Harrisburg International Airport, Capital City Airport, Franklin County Regional Airport and Gettysburg Regional Airport in south-central Pennsylvania. SARAA was incorporated on September 9, 1997, and officially took over control of HIA and CXY airports from the Commonwealth of Pennsylvania on January 1, 1998.",
+            "Pensacola International Airport\nPensacola International Airport (IATA: PNS,\u00a0ICAO: KPNS,\u00a0FAA LID: PNS) , formerly Pensacola Gulf Coast Regional Airport and Pensacola Regional Airport (Hagler Field), is a public use airport three\u00a0nautical miles (6\u00a0km) northeast of the central business district of Pensacola, in Escambia County, Florida, United States. It is owned by the City of Pensacola. Despite the name, this airport does not offer direct international flights. This airport is one of the five major airports in North Florida, others being: Northwest Florida Beaches International Airport, Destin-Fort Walton Beach Airport Tallahassee International Airport, and Jacksonville International Airport.",
+            "Manassas Regional Airport\nManassas Regional Airport (IATA: KHEF,\u00a0ICAO: HEF) , also known as Harry P. Davis Field, is a city-owned public-use airport located four nautical miles (7\u00a0km) southwest of the central business district of Manassas, in a section of Manassas that was carved out of Prince William County specifically for the purpose of containing the airport. The largest regional airport in the state of Virginia, Manassas Regional Airport is located 30 miles from Washington, D.C.",
+            "Deadhorse, Alaska\nDeadhorse is an unincorporated community in North Slope Borough, Alaska, United States, along the North Slope near the Arctic Ocean. The town consists mainly of facilities for the workers and companies that operate at the nearby Prudhoe Bay oil fields. Deadhorse is accessible via the Dalton Highway from Fairbanks, 495 miles south, or Deadhorse Airport. Limited accommodations are also available for tourists.",
+            "Elizabeth City Regional Airport\nElizabeth City Regional Airport (IATA: ECG,\u00a0ICAO: KECG,\u00a0FAA LID: ECG) is a joint civil-military public and military use airport located three\u00a0nautical miles (6\u00a0km) southeast of the central business district of Elizabeth City, in Pasquotank County, North Carolina, United States. The airport, on the shore of the Pasquotank River, is also known as Elizabeth City-Pasquotank County Regional Airport or ECG Regional Airport. It is included in the National Plan of Integrated Airport Systems for 2011\u20132015, which categorized it as a \"general aviation\" facility.",
+            "Colomac Airport\nColomac Airport (TC LID: CFY8) , was located near Colomac Mine in the Northwest Territories, Canada where caribou may be found on the runway. Prior permission was required to land except in the case of an emergency.",
+            "Maputo International Airport\nMaputo International Airport (IATA: MPM,\u00a0ICAO: FQMA) , also known as Louren\u00e7o Marques Airport or Mavalane International Airport, is an airport located 3 km northwest of the center of Maputo, the largest city and capital of Mozambique. It is the largest airport in Mozambique, and hub for LAM Mozambique Airlines and Kaya Airlines. Most destinations served from the airport are in Africa but TAP Portugal operates a service to Lisbon, Portugal, Turkish Airlines operates flights to Istanbul, and Qatar Airways operates flights to Doha."
+        ],
+        "thoughts": [
+            "The country for Monroe Regional Airport is the United States. It is located in Ouachita Parish, Louisiana.",
+            "The country for Deadhorse Airport is the United States, as it is located in Deadhorse, Alaska, which is an unincorporated community in North Slope Borough, Alaska, United States.",
+            "Based on the retrieved information, both Monroe Regional Airport and Deadhorse Airport are located in the United States. Therefore, they are in the same country."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Monroe Regional Airport and Deadhorse Airport are both in this country?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the location (country) of Monroe Regional Airport.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the location (country) of Deadhorse Airport.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify if the countries retrieved for Monroe Regional Airport and Deadhorse Airport are the same and identify the country.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "To determine the country where both Monroe Regional Airport and Deadhorse Airport are located, the execution graph starts by retrieving the country for each airport separately. Step 1 retrieves the country for Monroe Regional Airport, and Step 2 does the same for Deadhorse Airport. These steps can be executed in parallel as they are independent. Finally, Step 3 involves reasoning, where we compare the results from Step 1 and Step 2 to ascertain if both airports are in the same country and to identify the country they are located in, which answers the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Monroe City Regional Airport\nMonroe City Regional Airport (FAA LID: K52) is a public use airport located one nautical mile (1.85\u00a0km) south of the central business district of Monroe City, in Monroe County, Missouri, United States. It is owned by the City of Monroe and is also known as Capt. Ben Smith Airfield.",
+            "Monroe Regional Airport (Louisiana)\nMonroe Regional Airport (IATA: MLU, ICAO: KMLU, FAA LID: MLU) is a public use airport in Ouachita Parish, Louisiana, United States. The airport is owned by the City of Monroe and is located three nautical miles (6 km) east of its central business district.",
+            "Charlotte\u2013Monroe Executive Airport\nCharlotte\u2013Monroe Executive Airport (ICAO: KEQY,\u00a0FAA LID: EQY) is a public use airport located five nautical miles (9\u00a0km) northwest of the central business district of Monroe, a city in Union County, North Carolina, United States. It is owned by the City of Monroe and was formerly known as Monroe Regional Airport.",
+            "Deadhorse Airport\nDeadhorse Airport (IATA: SCC, ICAO: PASC, FAA LID: SCC) is a public airport located in Deadhorse on the North Slope of Alaska. It can be accessed from Fairbanks via the Elliott and Dalton highways. It is near Prudhoe Bay and is sometimes also called Prudhoe Airport.",
+            "Deadhorse, Alaska\nDeadhorse is an unincorporated community in North Slope Borough, Alaska, United States, along the North Slope near the Arctic Ocean. The town consists mainly of facilities for the workers and companies that operate at the nearby Prudhoe Bay oil fields. Deadhorse is accessible via the Dalton Highway from Fairbanks, 495 miles south, or Deadhorse Airport. Limited accommodations are also available for tourists.",
+            "Susquehanna Area Regional Airport Authority\nThe Susquehanna Area Regional Airport Authority (SARAA) is the governing authority of Harrisburg International Airport, Capital City Airport, Franklin County Regional Airport and Gettysburg Regional Airport in south-central Pennsylvania. SARAA was incorporated on September 9, 1997, and officially took over control of HIA and CXY airports from the Commonwealth of Pennsylvania on January 1, 1998.",
+            "Manassas Regional Airport\nManassas Regional Airport (IATA: KHEF,\u00a0ICAO: HEF) , also known as Harry P. Davis Field, is a city-owned public-use airport located four nautical miles (7\u00a0km) southwest of the central business district of Manassas, in a section of Manassas that was carved out of Prince William County specifically for the purpose of containing the airport. The largest regional airport in the state of Virginia, Manassas Regional Airport is located 30 miles from Washington, D.C.",
+            "Elizabeth City Regional Airport\nElizabeth City Regional Airport (IATA: ECG,\u00a0ICAO: KECG,\u00a0FAA LID: ECG) is a joint civil-military public and military use airport located three\u00a0nautical miles (6\u00a0km) southeast of the central business district of Elizabeth City, in Pasquotank County, North Carolina, United States. The airport, on the shore of the Pasquotank River, is also known as Elizabeth City-Pasquotank County Regional Airport or ECG Regional Airport. It is included in the National Plan of Integrated Airport Systems for 2011\u20132015, which categorized it as a \"general aviation\" facility.",
+            "Ta'if Regional Airport\nTa'if Regional Airport (IATA: TIF,\u00a0ICAO: OETF) is an airport in Ta'if, Saudi Arabia. Despite its name, it also offers many international flights as well. The airport is located 30\u00a0km to the east of Taif and 70\u00a0km from Mecca. The airport is considered important in Saudi aviation history as it witnessed the first landing of Ibn Saud's plane, founder of the Kingdom. It was converted to a regional airport in 2009 when GACA allowed international airlines to operate at the airport as the city's population was increasing and to reduce pressure on the three main airports at the time. Despite being named as a \"Regional\" airport, the airport actually has international flights destinations in half a dozen countries outside of Saudi Arabia.",
+            "Manchester\u2013Boston Regional Airport\nManchester\u2013Boston Regional Airport (IATA: MHT, ICAO: KMHT, FAA LID: MHT) , commonly referred to as Manchester Airport, is a public airport 3 mi south of the central business district of Manchester, New Hampshire, on the border of Hillsborough and Rockingham counties. The airport lies in two communities, Manchester and Londonderry.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Sun Country Airlines\nSun Country Airlines is an United States based airline headquartered in the Minneapolis\u2013Saint Paul suburb of Eagan, Minnesota and based at nearby Minneapolis\u2013Saint Paul International Airport. The airline's main focus is flying Minnesotans to warmer destinations during the winter months, such as Florida and Mexico. In the summer months, the airline flies passengers between the Twin Cities and the east and west coast in the U.S. Sun Country also operates flights from Dallas/Fort Worth which serves as a focus city for the airline. It operates scheduled and charter flights to destinations in the United States, Mexico, Costa Rica and the Caribbean (including Cuba from 2015) as well as ad-hoc charters.",
+            "Amka\nAmka (Hebrew: \u05e2\u05b7\u05de\u05b0\u05e7\u05b8\u05d4\u200e ), also known in Arabic as Amqa (Arabic: \u0639\u0645\u0642\u0627\u200e \u200e ), is a moshav in the Matte Asher Regional Council of Israel's Northern District, near Acre. The location of the moshav roughly corresponds the former Arab village, depopulated during the 1948 Arab\u2013Israeli War. Yemenite Jews, who arrived from the southern Arab country of Yemen, founded the village's successor Amka in 1949. In 2016 its population was 706 .",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Pensacola International Airport\nPensacola International Airport (IATA: PNS,\u00a0ICAO: KPNS,\u00a0FAA LID: PNS) , formerly Pensacola Gulf Coast Regional Airport and Pensacola Regional Airport (Hagler Field), is a public use airport three\u00a0nautical miles (6\u00a0km) northeast of the central business district of Pensacola, in Escambia County, Florida, United States. It is owned by the City of Pensacola. Despite the name, this airport does not offer direct international flights. This airport is one of the five major airports in North Florida, others being: Northwest Florida Beaches International Airport, Destin-Fort Walton Beach Airport Tallahassee International Airport, and Jacksonville International Airport.",
+            "DeKalb\u2013Peachtree Airport\nDeKalb\u2013Peachtree Airport (IATA: PDK,\u00a0ICAO: KPDK,\u00a0FAA LID: PDK) is a county owned, public use airport in DeKalb County, Georgia, United States. The airport is located in Chamblee, Georgia, just northeast of Atlanta. It is also known commonly as Peachtree\u2013DeKalb Airport, or simply PDK. Other names (rarely used) include Peachtree Airport, DeKalb Airport, or DeKalb County Airport. ASOS weather reports are produced 24 hours per day as \"Chamblee\". It has airline service with Ultimate Air Shuttle to Cincinnati and Southern Airways Express to Memphis and Destin."
+        ],
+        "thoughts": [
+            "Monroe Regional Airport is located in Ouachita Parish, Louisiana, United States.",
+            "Deadhorse Airport is located in Deadhorse, Alaska, United States.",
+            "The countries retrieved for Monroe Regional Airport and Deadhorse Airport are the same, which is the United States."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Monroe Regional Airport and Deadhorse Airport are both in this country?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the location (country) of Monroe Regional Airport.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the location (country) of Deadhorse Airport.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Monroe Regional Airport and Deadhorse Airport are in the same country and identify that country.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The process starts by identifying the countries of both airports independently. Once the countries are known, the reasoning node checks if they are the same and identifies that country as the answer."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Monroe City Regional Airport\nMonroe City Regional Airport (FAA LID: K52) is a public use airport located one nautical mile (1.85\u00a0km) south of the central business district of Monroe City, in Monroe County, Missouri, United States. It is owned by the City of Monroe and is also known as Capt. Ben Smith Airfield.",
+            "Monroe Regional Airport (Louisiana)\nMonroe Regional Airport (IATA: MLU, ICAO: KMLU, FAA LID: MLU) is a public use airport in Ouachita Parish, Louisiana, United States. The airport is owned by the City of Monroe and is located three nautical miles (6 km) east of its central business district.",
+            "Charlotte\u2013Monroe Executive Airport\nCharlotte\u2013Monroe Executive Airport (ICAO: KEQY,\u00a0FAA LID: EQY) is a public use airport located five nautical miles (9\u00a0km) northwest of the central business district of Monroe, a city in Union County, North Carolina, United States. It is owned by the City of Monroe and was formerly known as Monroe Regional Airport.",
+            "Deadhorse Airport\nDeadhorse Airport (IATA: SCC, ICAO: PASC, FAA LID: SCC) is a public airport located in Deadhorse on the North Slope of Alaska. It can be accessed from Fairbanks via the Elliott and Dalton highways. It is near Prudhoe Bay and is sometimes also called Prudhoe Airport.",
+            "Deadhorse, Alaska\nDeadhorse is an unincorporated community in North Slope Borough, Alaska, United States, along the North Slope near the Arctic Ocean. The town consists mainly of facilities for the workers and companies that operate at the nearby Prudhoe Bay oil fields. Deadhorse is accessible via the Dalton Highway from Fairbanks, 495 miles south, or Deadhorse Airport. Limited accommodations are also available for tourists.",
+            "Susquehanna Area Regional Airport Authority\nThe Susquehanna Area Regional Airport Authority (SARAA) is the governing authority of Harrisburg International Airport, Capital City Airport, Franklin County Regional Airport and Gettysburg Regional Airport in south-central Pennsylvania. SARAA was incorporated on September 9, 1997, and officially took over control of HIA and CXY airports from the Commonwealth of Pennsylvania on January 1, 1998.",
+            "Manassas Regional Airport\nManassas Regional Airport (IATA: KHEF,\u00a0ICAO: HEF) , also known as Harry P. Davis Field, is a city-owned public-use airport located four nautical miles (7\u00a0km) southwest of the central business district of Manassas, in a section of Manassas that was carved out of Prince William County specifically for the purpose of containing the airport. The largest regional airport in the state of Virginia, Manassas Regional Airport is located 30 miles from Washington, D.C.",
+            "Elizabeth City Regional Airport\nElizabeth City Regional Airport (IATA: ECG,\u00a0ICAO: KECG,\u00a0FAA LID: ECG) is a joint civil-military public and military use airport located three\u00a0nautical miles (6\u00a0km) southeast of the central business district of Elizabeth City, in Pasquotank County, North Carolina, United States. The airport, on the shore of the Pasquotank River, is also known as Elizabeth City-Pasquotank County Regional Airport or ECG Regional Airport. It is included in the National Plan of Integrated Airport Systems for 2011\u20132015, which categorized it as a \"general aviation\" facility.",
+            "Ta'if Regional Airport\nTa'if Regional Airport (IATA: TIF,\u00a0ICAO: OETF) is an airport in Ta'if, Saudi Arabia. Despite its name, it also offers many international flights as well. The airport is located 30\u00a0km to the east of Taif and 70\u00a0km from Mecca. The airport is considered important in Saudi aviation history as it witnessed the first landing of Ibn Saud's plane, founder of the Kingdom. It was converted to a regional airport in 2009 when GACA allowed international airlines to operate at the airport as the city's population was increasing and to reduce pressure on the three main airports at the time. Despite being named as a \"Regional\" airport, the airport actually has international flights destinations in half a dozen countries outside of Saudi Arabia.",
+            "Manchester\u2013Boston Regional Airport\nManchester\u2013Boston Regional Airport (IATA: MHT, ICAO: KMHT, FAA LID: MHT) , commonly referred to as Manchester Airport, is a public airport 3 mi south of the central business district of Manchester, New Hampshire, on the border of Hillsborough and Rockingham counties. The airport lies in two communities, Manchester and Londonderry.",
+            "Pensacola International Airport\nPensacola International Airport (IATA: PNS,\u00a0ICAO: KPNS,\u00a0FAA LID: PNS) , formerly Pensacola Gulf Coast Regional Airport and Pensacola Regional Airport (Hagler Field), is a public use airport three\u00a0nautical miles (6\u00a0km) northeast of the central business district of Pensacola, in Escambia County, Florida, United States. It is owned by the City of Pensacola. Despite the name, this airport does not offer direct international flights. This airport is one of the five major airports in North Florida, others being: Northwest Florida Beaches International Airport, Destin-Fort Walton Beach Airport Tallahassee International Airport, and Jacksonville International Airport.",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Wild Horse Lake (Oklahoma)\nWild Horse Lake is a playa lake located in Texas County, Oklahoma. The lake was the location of the infamous Hay Meadow Massacre (July 1888) in which one faction in the county seat fight in Stevens County, Kansas, killed four members of the opposing faction. Since the killings took place in what was then No Man's Land, no court had jurisdiction over the crime. The lake was also the subject of Oklahoma case law in reference to water appropriations\u2014Depuy V. Hoeme (1980 OK 26, 611 P.2d 228).",
+            "DeKalb\u2013Peachtree Airport\nDeKalb\u2013Peachtree Airport (IATA: PDK,\u00a0ICAO: KPDK,\u00a0FAA LID: PDK) is a county owned, public use airport in DeKalb County, Georgia, United States. The airport is located in Chamblee, Georgia, just northeast of Atlanta. It is also known commonly as Peachtree\u2013DeKalb Airport, or simply PDK. Other names (rarely used) include Peachtree Airport, DeKalb Airport, or DeKalb County Airport. ASOS weather reports are produced 24 hours per day as \"Chamblee\". It has airline service with Ultimate Air Shuttle to Cincinnati and Southern Airways Express to Memphis and Destin."
+        ],
+        "thoughts": [
+            "Monroe Regional Airport is located in Ouachita Parish, Louisiana, United States.",
+            "Deadhorse Airport is located in Deadhorse, Alaska, United States.",
+            "Monroe Regional Airport and Deadhorse Airport are both located in the United States."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Monroe Regional Airport and Deadhorse Airport are both in this country?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the country where Monroe Regional Airport is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the country where Deadhorse Airport is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify if both Monroe Regional Airport and Deadhorse Airport are located in the same country and determine the name of that country.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "To determine if both Monroe Regional Airport and Deadhorse Airport are in the same country and to identify that country, the task is broken down into steps that first retrieve the location details of each airport. Each airport is investigated separately to find out which country they are located in. The final step involves reasoning over these results to check if both airports are in the same country and identify that country, thereby answering the question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Monroe City Regional Airport\nMonroe City Regional Airport (FAA LID: K52) is a public use airport located one nautical mile (1.85\u00a0km) south of the central business district of Monroe City, in Monroe County, Missouri, United States. It is owned by the City of Monroe and is also known as Capt. Ben Smith Airfield.",
+            "Monroe Regional Airport (Louisiana)\nMonroe Regional Airport (IATA: MLU, ICAO: KMLU, FAA LID: MLU) is a public use airport in Ouachita Parish, Louisiana, United States. The airport is owned by the City of Monroe and is located three nautical miles (6 km) east of its central business district.",
+            "Charlotte\u2013Monroe Executive Airport\nCharlotte\u2013Monroe Executive Airport (ICAO: KEQY,\u00a0FAA LID: EQY) is a public use airport located five nautical miles (9\u00a0km) northwest of the central business district of Monroe, a city in Union County, North Carolina, United States. It is owned by the City of Monroe and was formerly known as Monroe Regional Airport.",
+            "Deadhorse Airport\nDeadhorse Airport (IATA: SCC, ICAO: PASC, FAA LID: SCC) is a public airport located in Deadhorse on the North Slope of Alaska. It can be accessed from Fairbanks via the Elliott and Dalton highways. It is near Prudhoe Bay and is sometimes also called Prudhoe Airport.",
+            "Manassas Regional Airport\nManassas Regional Airport (IATA: KHEF,\u00a0ICAO: HEF) , also known as Harry P. Davis Field, is a city-owned public-use airport located four nautical miles (7\u00a0km) southwest of the central business district of Manassas, in a section of Manassas that was carved out of Prince William County specifically for the purpose of containing the airport. The largest regional airport in the state of Virginia, Manassas Regional Airport is located 30 miles from Washington, D.C.",
+            "Elizabeth City Regional Airport\nElizabeth City Regional Airport (IATA: ECG,\u00a0ICAO: KECG,\u00a0FAA LID: ECG) is a joint civil-military public and military use airport located three\u00a0nautical miles (6\u00a0km) southeast of the central business district of Elizabeth City, in Pasquotank County, North Carolina, United States. The airport, on the shore of the Pasquotank River, is also known as Elizabeth City-Pasquotank County Regional Airport or ECG Regional Airport. It is included in the National Plan of Integrated Airport Systems for 2011\u20132015, which categorized it as a \"general aviation\" facility.",
+            "Deadhorse, Alaska\nDeadhorse is an unincorporated community in North Slope Borough, Alaska, United States, along the North Slope near the Arctic Ocean. The town consists mainly of facilities for the workers and companies that operate at the nearby Prudhoe Bay oil fields. Deadhorse is accessible via the Dalton Highway from Fairbanks, 495 miles south, or Deadhorse Airport. Limited accommodations are also available for tourists.",
+            "Ta'if Regional Airport\nTa'if Regional Airport (IATA: TIF,\u00a0ICAO: OETF) is an airport in Ta'if, Saudi Arabia. Despite its name, it also offers many international flights as well. The airport is located 30\u00a0km to the east of Taif and 70\u00a0km from Mecca. The airport is considered important in Saudi aviation history as it witnessed the first landing of Ibn Saud's plane, founder of the Kingdom. It was converted to a regional airport in 2009 when GACA allowed international airlines to operate at the airport as the city's population was increasing and to reduce pressure on the three main airports at the time. Despite being named as a \"Regional\" airport, the airport actually has international flights destinations in half a dozen countries outside of Saudi Arabia.",
+            "Brainerd Lakes Regional Airport\nBrainerd Lakes Regional Airport (IATA: BRD, ICAO: KBRD, FAA LID: BRD) is a public use airport located three nautical miles (6 km) northeast of the central business district of Brainerd, a city in Crow Wing County, Minnesota, United States. The airport is owned by the city and county. It is mostly used for general aviation but is also served by one commercial airline.",
+            "Lincolnton\u2013Lincoln County Regional Airport\nLincolnton\u2013Lincoln County Regional Airport (ICAO: KIPJ,\u00a0FAA LID: IPJ) is a public use airport located five nautical miles (9\u00a0km) east of the central business district of Lincolnton, a city in Lincoln County, North Carolina, United States. It is owned by the City of Lincolnton & Lincoln County. According to the FAA's National Plan of Integrated Airport Systems for 2009\u20132013, it is a \"general aviation\" airport (it had previously been a \"reliever airport\").",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Sun Country Airlines\nSun Country Airlines is an United States based airline headquartered in the Minneapolis\u2013Saint Paul suburb of Eagan, Minnesota and based at nearby Minneapolis\u2013Saint Paul International Airport. The airline's main focus is flying Minnesotans to warmer destinations during the winter months, such as Florida and Mexico. In the summer months, the airline flies passengers between the Twin Cities and the east and west coast in the U.S. Sun Country also operates flights from Dallas/Fort Worth which serves as a focus city for the airline. It operates scheduled and charter flights to destinations in the United States, Mexico, Costa Rica and the Caribbean (including Cuba from 2015) as well as ad-hoc charters.",
+            "Amka\nAmka (Hebrew: \u05e2\u05b7\u05de\u05b0\u05e7\u05b8\u05d4\u200e ), also known in Arabic as Amqa (Arabic: \u0639\u0645\u0642\u0627\u200e \u200e ), is a moshav in the Matte Asher Regional Council of Israel's Northern District, near Acre. The location of the moshav roughly corresponds the former Arab village, depopulated during the 1948 Arab\u2013Israeli War. Yemenite Jews, who arrived from the southern Arab country of Yemen, founded the village's successor Amka in 1949. In 2016 its population was 706 .",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Pensacola International Airport\nPensacola International Airport (IATA: PNS,\u00a0ICAO: KPNS,\u00a0FAA LID: PNS) , formerly Pensacola Gulf Coast Regional Airport and Pensacola Regional Airport (Hagler Field), is a public use airport three\u00a0nautical miles (6\u00a0km) northeast of the central business district of Pensacola, in Escambia County, Florida, United States. It is owned by the City of Pensacola. Despite the name, this airport does not offer direct international flights. This airport is one of the five major airports in North Florida, others being: Northwest Florida Beaches International Airport, Destin-Fort Walton Beach Airport Tallahassee International Airport, and Jacksonville International Airport.",
+            "DeKalb\u2013Peachtree Airport\nDeKalb\u2013Peachtree Airport (IATA: PDK,\u00a0ICAO: KPDK,\u00a0FAA LID: PDK) is a county owned, public use airport in DeKalb County, Georgia, United States. The airport is located in Chamblee, Georgia, just northeast of Atlanta. It is also known commonly as Peachtree\u2013DeKalb Airport, or simply PDK. Other names (rarely used) include Peachtree Airport, DeKalb Airport, or DeKalb County Airport. ASOS weather reports are produced 24 hours per day as \"Chamblee\". It has airline service with Ultimate Air Shuttle to Cincinnati and Southern Airways Express to Memphis and Destin."
+        ],
+        "thoughts": [
+            "Monroe Regional Airport is located in Ouachita Parish, Louisiana, United States.",
+            "Deadhorse Airport is located in Deadhorse, Alaska, United States.",
+            "Both Monroe Regional Airport and Deadhorse Airport are located in the United States."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Monroe Regional Airport and Deadhorse Airport are both in this country?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the country where Monroe Regional Airport is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the country where Deadhorse Airport is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify if Monroe Regional Airport and Deadhorse Airport are in the same country.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "To determine whether Monroe Regional Airport and Deadhorse Airport are in the same country, we first need to retrieve the country each airport is located in. Node 1 retrieves and reasons about the location of Monroe Regional Airport, while Node 2 does the same for Deadhorse Airport. Node 3 then performs reasoning to check if both airports are located in the same country, synthesizing the output needed to answer the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Monroe City Regional Airport\nMonroe City Regional Airport (FAA LID: K52) is a public use airport located one nautical mile (1.85\u00a0km) south of the central business district of Monroe City, in Monroe County, Missouri, United States. It is owned by the City of Monroe and is also known as Capt. Ben Smith Airfield.",
+            "Monroe Regional Airport (Louisiana)\nMonroe Regional Airport (IATA: MLU, ICAO: KMLU, FAA LID: MLU) is a public use airport in Ouachita Parish, Louisiana, United States. The airport is owned by the City of Monroe and is located three nautical miles (6 km) east of its central business district.",
+            "Charlotte\u2013Monroe Executive Airport\nCharlotte\u2013Monroe Executive Airport (ICAO: KEQY,\u00a0FAA LID: EQY) is a public use airport located five nautical miles (9\u00a0km) northwest of the central business district of Monroe, a city in Union County, North Carolina, United States. It is owned by the City of Monroe and was formerly known as Monroe Regional Airport.",
+            "Deadhorse Airport\nDeadhorse Airport (IATA: SCC, ICAO: PASC, FAA LID: SCC) is a public airport located in Deadhorse on the North Slope of Alaska. It can be accessed from Fairbanks via the Elliott and Dalton highways. It is near Prudhoe Bay and is sometimes also called Prudhoe Airport.",
+            "Manassas Regional Airport\nManassas Regional Airport (IATA: KHEF,\u00a0ICAO: HEF) , also known as Harry P. Davis Field, is a city-owned public-use airport located four nautical miles (7\u00a0km) southwest of the central business district of Manassas, in a section of Manassas that was carved out of Prince William County specifically for the purpose of containing the airport. The largest regional airport in the state of Virginia, Manassas Regional Airport is located 30 miles from Washington, D.C.",
+            "Elizabeth City Regional Airport\nElizabeth City Regional Airport (IATA: ECG,\u00a0ICAO: KECG,\u00a0FAA LID: ECG) is a joint civil-military public and military use airport located three\u00a0nautical miles (6\u00a0km) southeast of the central business district of Elizabeth City, in Pasquotank County, North Carolina, United States. The airport, on the shore of the Pasquotank River, is also known as Elizabeth City-Pasquotank County Regional Airport or ECG Regional Airport. It is included in the National Plan of Integrated Airport Systems for 2011\u20132015, which categorized it as a \"general aviation\" facility.",
+            "Deadhorse, Alaska\nDeadhorse is an unincorporated community in North Slope Borough, Alaska, United States, along the North Slope near the Arctic Ocean. The town consists mainly of facilities for the workers and companies that operate at the nearby Prudhoe Bay oil fields. Deadhorse is accessible via the Dalton Highway from Fairbanks, 495 miles south, or Deadhorse Airport. Limited accommodations are also available for tourists.",
+            "Ta'if Regional Airport\nTa'if Regional Airport (IATA: TIF,\u00a0ICAO: OETF) is an airport in Ta'if, Saudi Arabia. Despite its name, it also offers many international flights as well. The airport is located 30\u00a0km to the east of Taif and 70\u00a0km from Mecca. The airport is considered important in Saudi aviation history as it witnessed the first landing of Ibn Saud's plane, founder of the Kingdom. It was converted to a regional airport in 2009 when GACA allowed international airlines to operate at the airport as the city's population was increasing and to reduce pressure on the three main airports at the time. Despite being named as a \"Regional\" airport, the airport actually has international flights destinations in half a dozen countries outside of Saudi Arabia.",
+            "Brainerd Lakes Regional Airport\nBrainerd Lakes Regional Airport (IATA: BRD, ICAO: KBRD, FAA LID: BRD) is a public use airport located three nautical miles (6 km) northeast of the central business district of Brainerd, a city in Crow Wing County, Minnesota, United States. The airport is owned by the city and county. It is mostly used for general aviation but is also served by one commercial airline.",
+            "Lincolnton\u2013Lincoln County Regional Airport\nLincolnton\u2013Lincoln County Regional Airport (ICAO: KIPJ,\u00a0FAA LID: IPJ) is a public use airport located five nautical miles (9\u00a0km) east of the central business district of Lincolnton, a city in Lincoln County, North Carolina, United States. It is owned by the City of Lincolnton & Lincoln County. According to the FAA's National Plan of Integrated Airport Systems for 2009\u20132013, it is a \"general aviation\" airport (it had previously been a \"reliever airport\").",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Sun Country Airlines\nSun Country Airlines is an United States based airline headquartered in the Minneapolis\u2013Saint Paul suburb of Eagan, Minnesota and based at nearby Minneapolis\u2013Saint Paul International Airport. The airline's main focus is flying Minnesotans to warmer destinations during the winter months, such as Florida and Mexico. In the summer months, the airline flies passengers between the Twin Cities and the east and west coast in the U.S. Sun Country also operates flights from Dallas/Fort Worth which serves as a focus city for the airline. It operates scheduled and charter flights to destinations in the United States, Mexico, Costa Rica and the Caribbean (including Cuba from 2015) as well as ad-hoc charters.",
+            "Amka\nAmka (Hebrew: \u05e2\u05b7\u05de\u05b0\u05e7\u05b8\u05d4\u200e ), also known in Arabic as Amqa (Arabic: \u0639\u0645\u0642\u0627\u200e \u200e ), is a moshav in the Matte Asher Regional Council of Israel's Northern District, near Acre. The location of the moshav roughly corresponds the former Arab village, depopulated during the 1948 Arab\u2013Israeli War. Yemenite Jews, who arrived from the southern Arab country of Yemen, founded the village's successor Amka in 1949. In 2016 its population was 706 .",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Pensacola International Airport\nPensacola International Airport (IATA: PNS,\u00a0ICAO: KPNS,\u00a0FAA LID: PNS) , formerly Pensacola Gulf Coast Regional Airport and Pensacola Regional Airport (Hagler Field), is a public use airport three\u00a0nautical miles (6\u00a0km) northeast of the central business district of Pensacola, in Escambia County, Florida, United States. It is owned by the City of Pensacola. Despite the name, this airport does not offer direct international flights. This airport is one of the five major airports in North Florida, others being: Northwest Florida Beaches International Airport, Destin-Fort Walton Beach Airport Tallahassee International Airport, and Jacksonville International Airport.",
+            "DeKalb\u2013Peachtree Airport\nDeKalb\u2013Peachtree Airport (IATA: PDK,\u00a0ICAO: KPDK,\u00a0FAA LID: PDK) is a county owned, public use airport in DeKalb County, Georgia, United States. The airport is located in Chamblee, Georgia, just northeast of Atlanta. It is also known commonly as Peachtree\u2013DeKalb Airport, or simply PDK. Other names (rarely used) include Peachtree Airport, DeKalb Airport, or DeKalb County Airport. ASOS weather reports are produced 24 hours per day as \"Chamblee\". It has airline service with Ultimate Air Shuttle to Cincinnati and Southern Airways Express to Memphis and Destin."
+        ],
+        "thoughts": [
+            "Monroe Regional Airport is located in Ouachita Parish, Louisiana, United States.",
+            "Deadhorse Airport is located in Deadhorse, Alaska, United States.",
+            "Monroe Regional Airport and Deadhorse Airport are both located in the United States, therefore they are in the same country."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Monroe Regional Airport and Deadhorse Airport are both in this country?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine which country Monroe Regional Airport is located in.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which country Deadhorse Airport is located in.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify if both Monroe Regional Airport and Deadhorse Airport are in the same country based on the information retrieved.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts with retrieving the country for each airport individually as two separate retrieval tasks (nodes 1 and 2). These nodes can be executed in parallel since finding the country for each airport is independent. The third node then takes the results of these two retrievals (i.e., the countries identified for Monroe Regional Airport and Deadhorse Airport) and performs reasoning to determine if the airports are in the same country. The final node synthesizes this information to confirm the answer to the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Monroe City Regional Airport\nMonroe City Regional Airport (FAA LID: K52) is a public use airport located one nautical mile (1.85\u00a0km) south of the central business district of Monroe City, in Monroe County, Missouri, United States. It is owned by the City of Monroe and is also known as Capt. Ben Smith Airfield.",
+            "Monroe Regional Airport (Louisiana)\nMonroe Regional Airport (IATA: MLU, ICAO: KMLU, FAA LID: MLU) is a public use airport in Ouachita Parish, Louisiana, United States. The airport is owned by the City of Monroe and is located three nautical miles (6 km) east of its central business district.",
+            "Charlotte\u2013Monroe Executive Airport\nCharlotte\u2013Monroe Executive Airport (ICAO: KEQY,\u00a0FAA LID: EQY) is a public use airport located five nautical miles (9\u00a0km) northwest of the central business district of Monroe, a city in Union County, North Carolina, United States. It is owned by the City of Monroe and was formerly known as Monroe Regional Airport.",
+            "Deadhorse Airport\nDeadhorse Airport (IATA: SCC, ICAO: PASC, FAA LID: SCC) is a public airport located in Deadhorse on the North Slope of Alaska. It can be accessed from Fairbanks via the Elliott and Dalton highways. It is near Prudhoe Bay and is sometimes also called Prudhoe Airport.",
+            "Deadhorse, Alaska\nDeadhorse is an unincorporated community in North Slope Borough, Alaska, United States, along the North Slope near the Arctic Ocean. The town consists mainly of facilities for the workers and companies that operate at the nearby Prudhoe Bay oil fields. Deadhorse is accessible via the Dalton Highway from Fairbanks, 495 miles south, or Deadhorse Airport. Limited accommodations are also available for tourists.",
+            "Susquehanna Area Regional Airport Authority\nThe Susquehanna Area Regional Airport Authority (SARAA) is the governing authority of Harrisburg International Airport, Capital City Airport, Franklin County Regional Airport and Gettysburg Regional Airport in south-central Pennsylvania. SARAA was incorporated on September 9, 1997, and officially took over control of HIA and CXY airports from the Commonwealth of Pennsylvania on January 1, 1998.",
+            "Manassas Regional Airport\nManassas Regional Airport (IATA: KHEF,\u00a0ICAO: HEF) , also known as Harry P. Davis Field, is a city-owned public-use airport located four nautical miles (7\u00a0km) southwest of the central business district of Manassas, in a section of Manassas that was carved out of Prince William County specifically for the purpose of containing the airport. The largest regional airport in the state of Virginia, Manassas Regional Airport is located 30 miles from Washington, D.C.",
+            "Elizabeth City Regional Airport\nElizabeth City Regional Airport (IATA: ECG,\u00a0ICAO: KECG,\u00a0FAA LID: ECG) is a joint civil-military public and military use airport located three\u00a0nautical miles (6\u00a0km) southeast of the central business district of Elizabeth City, in Pasquotank County, North Carolina, United States. The airport, on the shore of the Pasquotank River, is also known as Elizabeth City-Pasquotank County Regional Airport or ECG Regional Airport. It is included in the National Plan of Integrated Airport Systems for 2011\u20132015, which categorized it as a \"general aviation\" facility.",
+            "Ta'if Regional Airport\nTa'if Regional Airport (IATA: TIF,\u00a0ICAO: OETF) is an airport in Ta'if, Saudi Arabia. Despite its name, it also offers many international flights as well. The airport is located 30\u00a0km to the east of Taif and 70\u00a0km from Mecca. The airport is considered important in Saudi aviation history as it witnessed the first landing of Ibn Saud's plane, founder of the Kingdom. It was converted to a regional airport in 2009 when GACA allowed international airlines to operate at the airport as the city's population was increasing and to reduce pressure on the three main airports at the time. Despite being named as a \"Regional\" airport, the airport actually has international flights destinations in half a dozen countries outside of Saudi Arabia.",
+            "Manchester\u2013Boston Regional Airport\nManchester\u2013Boston Regional Airport (IATA: MHT, ICAO: KMHT, FAA LID: MHT) , commonly referred to as Manchester Airport, is a public airport 3 mi south of the central business district of Manchester, New Hampshire, on the border of Hillsborough and Rockingham counties. The airport lies in two communities, Manchester and Londonderry.",
+            "Pensacola International Airport\nPensacola International Airport (IATA: PNS,\u00a0ICAO: KPNS,\u00a0FAA LID: PNS) , formerly Pensacola Gulf Coast Regional Airport and Pensacola Regional Airport (Hagler Field), is a public use airport three\u00a0nautical miles (6\u00a0km) northeast of the central business district of Pensacola, in Escambia County, Florida, United States. It is owned by the City of Pensacola. Despite the name, this airport does not offer direct international flights. This airport is one of the five major airports in North Florida, others being: Northwest Florida Beaches International Airport, Destin-Fort Walton Beach Airport Tallahassee International Airport, and Jacksonville International Airport.",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Wild Horse Lake (Oklahoma)\nWild Horse Lake is a playa lake located in Texas County, Oklahoma. The lake was the location of the infamous Hay Meadow Massacre (July 1888) in which one faction in the county seat fight in Stevens County, Kansas, killed four members of the opposing faction. Since the killings took place in what was then No Man's Land, no court had jurisdiction over the crime. The lake was also the subject of Oklahoma case law in reference to water appropriations\u2014Depuy V. Hoeme (1980 OK 26, 611 P.2d 228).",
+            "DeKalb\u2013Peachtree Airport\nDeKalb\u2013Peachtree Airport (IATA: PDK,\u00a0ICAO: KPDK,\u00a0FAA LID: PDK) is a county owned, public use airport in DeKalb County, Georgia, United States. The airport is located in Chamblee, Georgia, just northeast of Atlanta. It is also known commonly as Peachtree\u2013DeKalb Airport, or simply PDK. Other names (rarely used) include Peachtree Airport, DeKalb Airport, or DeKalb County Airport. ASOS weather reports are produced 24 hours per day as \"Chamblee\". It has airline service with Ultimate Air Shuttle to Cincinnati and Southern Airways Express to Memphis and Destin."
+        ],
+        "thoughts": [
+            "Monroe Regional Airport is located in Ouachita Parish, Louisiana, United States.",
+            "Deadhorse Airport is located in Deadhorse, Alaska, United States.",
+            "Based on the information retrieved, both Monroe Regional Airport and Deadhorse Airport are located in the United States. Therefore, they are in the same country."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Monroe Regional Airport and Deadhorse Airport are both in this country?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the country where Monroe Regional Airport is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the country where Deadhorse Airport is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify if the countries identified for Monroe Regional Airport and Deadhorse Airport are the same.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the country in which both Monroe Regional Airport and Deadhorse Airport are located.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "This execution graph breaks down the task of identifying the common country for both Monroe Regional Airport and Deadhorse Airport. First, it retrieves the country for each airport individually. Then, it verifies if both airports are in the same country, leading to a final reasoning step that determines the specific country."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Monroe City Regional Airport\nMonroe City Regional Airport (FAA LID: K52) is a public use airport located one nautical mile (1.85\u00a0km) south of the central business district of Monroe City, in Monroe County, Missouri, United States. It is owned by the City of Monroe and is also known as Capt. Ben Smith Airfield.",
+            "Monroe Regional Airport (Louisiana)\nMonroe Regional Airport (IATA: MLU, ICAO: KMLU, FAA LID: MLU) is a public use airport in Ouachita Parish, Louisiana, United States. The airport is owned by the City of Monroe and is located three nautical miles (6 km) east of its central business district.",
+            "Charlotte\u2013Monroe Executive Airport\nCharlotte\u2013Monroe Executive Airport (ICAO: KEQY,\u00a0FAA LID: EQY) is a public use airport located five nautical miles (9\u00a0km) northwest of the central business district of Monroe, a city in Union County, North Carolina, United States. It is owned by the City of Monroe and was formerly known as Monroe Regional Airport.",
+            "Deadhorse Airport\nDeadhorse Airport (IATA: SCC, ICAO: PASC, FAA LID: SCC) is a public airport located in Deadhorse on the North Slope of Alaska. It can be accessed from Fairbanks via the Elliott and Dalton highways. It is near Prudhoe Bay and is sometimes also called Prudhoe Airport.",
+            "Manassas Regional Airport\nManassas Regional Airport (IATA: KHEF,\u00a0ICAO: HEF) , also known as Harry P. Davis Field, is a city-owned public-use airport located four nautical miles (7\u00a0km) southwest of the central business district of Manassas, in a section of Manassas that was carved out of Prince William County specifically for the purpose of containing the airport. The largest regional airport in the state of Virginia, Manassas Regional Airport is located 30 miles from Washington, D.C.",
+            "Elizabeth City Regional Airport\nElizabeth City Regional Airport (IATA: ECG,\u00a0ICAO: KECG,\u00a0FAA LID: ECG) is a joint civil-military public and military use airport located three\u00a0nautical miles (6\u00a0km) southeast of the central business district of Elizabeth City, in Pasquotank County, North Carolina, United States. The airport, on the shore of the Pasquotank River, is also known as Elizabeth City-Pasquotank County Regional Airport or ECG Regional Airport. It is included in the National Plan of Integrated Airport Systems for 2011\u20132015, which categorized it as a \"general aviation\" facility.",
+            "Deadhorse, Alaska\nDeadhorse is an unincorporated community in North Slope Borough, Alaska, United States, along the North Slope near the Arctic Ocean. The town consists mainly of facilities for the workers and companies that operate at the nearby Prudhoe Bay oil fields. Deadhorse is accessible via the Dalton Highway from Fairbanks, 495 miles south, or Deadhorse Airport. Limited accommodations are also available for tourists.",
+            "Ta'if Regional Airport\nTa'if Regional Airport (IATA: TIF,\u00a0ICAO: OETF) is an airport in Ta'if, Saudi Arabia. Despite its name, it also offers many international flights as well. The airport is located 30\u00a0km to the east of Taif and 70\u00a0km from Mecca. The airport is considered important in Saudi aviation history as it witnessed the first landing of Ibn Saud's plane, founder of the Kingdom. It was converted to a regional airport in 2009 when GACA allowed international airlines to operate at the airport as the city's population was increasing and to reduce pressure on the three main airports at the time. Despite being named as a \"Regional\" airport, the airport actually has international flights destinations in half a dozen countries outside of Saudi Arabia.",
+            "Brainerd Lakes Regional Airport\nBrainerd Lakes Regional Airport (IATA: BRD, ICAO: KBRD, FAA LID: BRD) is a public use airport located three nautical miles (6 km) northeast of the central business district of Brainerd, a city in Crow Wing County, Minnesota, United States. The airport is owned by the city and county. It is mostly used for general aviation but is also served by one commercial airline.",
+            "Lincolnton\u2013Lincoln County Regional Airport\nLincolnton\u2013Lincoln County Regional Airport (ICAO: KIPJ,\u00a0FAA LID: IPJ) is a public use airport located five nautical miles (9\u00a0km) east of the central business district of Lincolnton, a city in Lincoln County, North Carolina, United States. It is owned by the City of Lincolnton & Lincoln County. According to the FAA's National Plan of Integrated Airport Systems for 2009\u20132013, it is a \"general aviation\" airport (it had previously been a \"reliever airport\").",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Sun Country Airlines\nSun Country Airlines is an United States based airline headquartered in the Minneapolis\u2013Saint Paul suburb of Eagan, Minnesota and based at nearby Minneapolis\u2013Saint Paul International Airport. The airline's main focus is flying Minnesotans to warmer destinations during the winter months, such as Florida and Mexico. In the summer months, the airline flies passengers between the Twin Cities and the east and west coast in the U.S. Sun Country also operates flights from Dallas/Fort Worth which serves as a focus city for the airline. It operates scheduled and charter flights to destinations in the United States, Mexico, Costa Rica and the Caribbean (including Cuba from 2015) as well as ad-hoc charters.",
+            "Amka\nAmka (Hebrew: \u05e2\u05b7\u05de\u05b0\u05e7\u05b8\u05d4\u200e ), also known in Arabic as Amqa (Arabic: \u0639\u0645\u0642\u0627\u200e \u200e ), is a moshav in the Matte Asher Regional Council of Israel's Northern District, near Acre. The location of the moshav roughly corresponds the former Arab village, depopulated during the 1948 Arab\u2013Israeli War. Yemenite Jews, who arrived from the southern Arab country of Yemen, founded the village's successor Amka in 1949. In 2016 its population was 706 .",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Pensacola International Airport\nPensacola International Airport (IATA: PNS,\u00a0ICAO: KPNS,\u00a0FAA LID: PNS) , formerly Pensacola Gulf Coast Regional Airport and Pensacola Regional Airport (Hagler Field), is a public use airport three\u00a0nautical miles (6\u00a0km) northeast of the central business district of Pensacola, in Escambia County, Florida, United States. It is owned by the City of Pensacola. Despite the name, this airport does not offer direct international flights. This airport is one of the five major airports in North Florida, others being: Northwest Florida Beaches International Airport, Destin-Fort Walton Beach Airport Tallahassee International Airport, and Jacksonville International Airport.",
+            "DeKalb\u2013Peachtree Airport\nDeKalb\u2013Peachtree Airport (IATA: PDK,\u00a0ICAO: KPDK,\u00a0FAA LID: PDK) is a county owned, public use airport in DeKalb County, Georgia, United States. The airport is located in Chamblee, Georgia, just northeast of Atlanta. It is also known commonly as Peachtree\u2013DeKalb Airport, or simply PDK. Other names (rarely used) include Peachtree Airport, DeKalb Airport, or DeKalb County Airport. ASOS weather reports are produced 24 hours per day as \"Chamblee\". It has airline service with Ultimate Air Shuttle to Cincinnati and Southern Airways Express to Memphis and Destin."
+        ],
+        "thoughts": [
+            "Monroe Regional Airport is located in Ouachita Parish, Louisiana, United States.",
+            "Deadhorse Airport is located in Deadhorse, Alaska, United States.",
+            "Based on the upstream tasks, the countries identified for Monroe Regional Airport and Deadhorse Airport are not the same. Monroe Regional Airport is located in the United States, specifically in Ouachita Parish, Louisiana, while Deadhorse Airport is also located in the United States, specifically in Deadhorse, Alaska.",
+            "Both Monroe Regional Airport and Deadhorse Airport are located in the United States."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Monroe Regional Airport and Deadhorse Airport are both in this country?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine the country where Monroe Regional Airport is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the country where Deadhorse Airport is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify if Monroe Regional Airport and Deadhorse Airport are in the same country based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins with two independent retrieval and reasoning nodes to find the countries of Monroe Regional Airport and Deadhorse Airport separately. The reasoning node then compares these locations to check if both airports are in the same country, providing the final answer."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Monroe City Regional Airport\nMonroe City Regional Airport (FAA LID: K52) is a public use airport located one nautical mile (1.85\u00a0km) south of the central business district of Monroe City, in Monroe County, Missouri, United States. It is owned by the City of Monroe and is also known as Capt. Ben Smith Airfield.",
+            "Monroe Regional Airport (Louisiana)\nMonroe Regional Airport (IATA: MLU, ICAO: KMLU, FAA LID: MLU) is a public use airport in Ouachita Parish, Louisiana, United States. The airport is owned by the City of Monroe and is located three nautical miles (6 km) east of its central business district.",
+            "Charlotte\u2013Monroe Executive Airport\nCharlotte\u2013Monroe Executive Airport (ICAO: KEQY,\u00a0FAA LID: EQY) is a public use airport located five nautical miles (9\u00a0km) northwest of the central business district of Monroe, a city in Union County, North Carolina, United States. It is owned by the City of Monroe and was formerly known as Monroe Regional Airport.",
+            "Deadhorse Airport\nDeadhorse Airport (IATA: SCC, ICAO: PASC, FAA LID: SCC) is a public airport located in Deadhorse on the North Slope of Alaska. It can be accessed from Fairbanks via the Elliott and Dalton highways. It is near Prudhoe Bay and is sometimes also called Prudhoe Airport.",
+            "Manassas Regional Airport\nManassas Regional Airport (IATA: KHEF,\u00a0ICAO: HEF) , also known as Harry P. Davis Field, is a city-owned public-use airport located four nautical miles (7\u00a0km) southwest of the central business district of Manassas, in a section of Manassas that was carved out of Prince William County specifically for the purpose of containing the airport. The largest regional airport in the state of Virginia, Manassas Regional Airport is located 30 miles from Washington, D.C.",
+            "Elizabeth City Regional Airport\nElizabeth City Regional Airport (IATA: ECG,\u00a0ICAO: KECG,\u00a0FAA LID: ECG) is a joint civil-military public and military use airport located three\u00a0nautical miles (6\u00a0km) southeast of the central business district of Elizabeth City, in Pasquotank County, North Carolina, United States. The airport, on the shore of the Pasquotank River, is also known as Elizabeth City-Pasquotank County Regional Airport or ECG Regional Airport. It is included in the National Plan of Integrated Airport Systems for 2011\u20132015, which categorized it as a \"general aviation\" facility.",
+            "Deadhorse, Alaska\nDeadhorse is an unincorporated community in North Slope Borough, Alaska, United States, along the North Slope near the Arctic Ocean. The town consists mainly of facilities for the workers and companies that operate at the nearby Prudhoe Bay oil fields. Deadhorse is accessible via the Dalton Highway from Fairbanks, 495 miles south, or Deadhorse Airport. Limited accommodations are also available for tourists.",
+            "Ta'if Regional Airport\nTa'if Regional Airport (IATA: TIF,\u00a0ICAO: OETF) is an airport in Ta'if, Saudi Arabia. Despite its name, it also offers many international flights as well. The airport is located 30\u00a0km to the east of Taif and 70\u00a0km from Mecca. The airport is considered important in Saudi aviation history as it witnessed the first landing of Ibn Saud's plane, founder of the Kingdom. It was converted to a regional airport in 2009 when GACA allowed international airlines to operate at the airport as the city's population was increasing and to reduce pressure on the three main airports at the time. Despite being named as a \"Regional\" airport, the airport actually has international flights destinations in half a dozen countries outside of Saudi Arabia.",
+            "Brainerd Lakes Regional Airport\nBrainerd Lakes Regional Airport (IATA: BRD, ICAO: KBRD, FAA LID: BRD) is a public use airport located three nautical miles (6 km) northeast of the central business district of Brainerd, a city in Crow Wing County, Minnesota, United States. The airport is owned by the city and county. It is mostly used for general aviation but is also served by one commercial airline.",
+            "Lincolnton\u2013Lincoln County Regional Airport\nLincolnton\u2013Lincoln County Regional Airport (ICAO: KIPJ,\u00a0FAA LID: IPJ) is a public use airport located five nautical miles (9\u00a0km) east of the central business district of Lincolnton, a city in Lincoln County, North Carolina, United States. It is owned by the City of Lincolnton & Lincoln County. According to the FAA's National Plan of Integrated Airport Systems for 2009\u20132013, it is a \"general aviation\" airport (it had previously been a \"reliever airport\").",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Sun Country Airlines\nSun Country Airlines is an United States based airline headquartered in the Minneapolis\u2013Saint Paul suburb of Eagan, Minnesota and based at nearby Minneapolis\u2013Saint Paul International Airport. The airline's main focus is flying Minnesotans to warmer destinations during the winter months, such as Florida and Mexico. In the summer months, the airline flies passengers between the Twin Cities and the east and west coast in the U.S. Sun Country also operates flights from Dallas/Fort Worth which serves as a focus city for the airline. It operates scheduled and charter flights to destinations in the United States, Mexico, Costa Rica and the Caribbean (including Cuba from 2015) as well as ad-hoc charters.",
+            "Amka\nAmka (Hebrew: \u05e2\u05b7\u05de\u05b0\u05e7\u05b8\u05d4\u200e ), also known in Arabic as Amqa (Arabic: \u0639\u0645\u0642\u0627\u200e \u200e ), is a moshav in the Matte Asher Regional Council of Israel's Northern District, near Acre. The location of the moshav roughly corresponds the former Arab village, depopulated during the 1948 Arab\u2013Israeli War. Yemenite Jews, who arrived from the southern Arab country of Yemen, founded the village's successor Amka in 1949. In 2016 its population was 706 .",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Pensacola International Airport\nPensacola International Airport (IATA: PNS,\u00a0ICAO: KPNS,\u00a0FAA LID: PNS) , formerly Pensacola Gulf Coast Regional Airport and Pensacola Regional Airport (Hagler Field), is a public use airport three\u00a0nautical miles (6\u00a0km) northeast of the central business district of Pensacola, in Escambia County, Florida, United States. It is owned by the City of Pensacola. Despite the name, this airport does not offer direct international flights. This airport is one of the five major airports in North Florida, others being: Northwest Florida Beaches International Airport, Destin-Fort Walton Beach Airport Tallahassee International Airport, and Jacksonville International Airport.",
+            "DeKalb\u2013Peachtree Airport\nDeKalb\u2013Peachtree Airport (IATA: PDK,\u00a0ICAO: KPDK,\u00a0FAA LID: PDK) is a county owned, public use airport in DeKalb County, Georgia, United States. The airport is located in Chamblee, Georgia, just northeast of Atlanta. It is also known commonly as Peachtree\u2013DeKalb Airport, or simply PDK. Other names (rarely used) include Peachtree Airport, DeKalb Airport, or DeKalb County Airport. ASOS weather reports are produced 24 hours per day as \"Chamblee\". It has airline service with Ultimate Air Shuttle to Cincinnati and Southern Airways Express to Memphis and Destin."
+        ],
+        "thoughts": [
+            "Monroe Regional Airport is located in Ouachita Parish, Louisiana, United States.",
+            "Deadhorse Airport is located in Deadhorse, Alaska, United States.",
+            "Based on the retrieved information, both Monroe Regional Airport and Deadhorse Airport are located in the United States. Therefore, they are in the same country."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Monroe Regional Airport and Deadhorse Airport are both in this country?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the country in which the Monroe Regional Airport is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the country in which the Deadhorse Airport is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify if the countries found for Monroe Regional Airport and Deadhorse Airport are the same, and determine the common country.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "To determine the country where both Monroe Regional Airport and Deadhorse Airport are located, the graph starts by retrieving the country location for each airport separately (Nodes 1 and 2). Once the locations are determined, a reasoning node (Node 3) checks if both airports are in the same country, and if so, identifies the common country."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Monroe City Regional Airport\nMonroe City Regional Airport (FAA LID: K52) is a public use airport located one nautical mile (1.85\u00a0km) south of the central business district of Monroe City, in Monroe County, Missouri, United States. It is owned by the City of Monroe and is also known as Capt. Ben Smith Airfield.",
+            "Monroe Regional Airport (Louisiana)\nMonroe Regional Airport (IATA: MLU, ICAO: KMLU, FAA LID: MLU) is a public use airport in Ouachita Parish, Louisiana, United States. The airport is owned by the City of Monroe and is located three nautical miles (6 km) east of its central business district.",
+            "Deadhorse Airport\nDeadhorse Airport (IATA: SCC, ICAO: PASC, FAA LID: SCC) is a public airport located in Deadhorse on the North Slope of Alaska. It can be accessed from Fairbanks via the Elliott and Dalton highways. It is near Prudhoe Bay and is sometimes also called Prudhoe Airport.",
+            "Charlotte\u2013Monroe Executive Airport\nCharlotte\u2013Monroe Executive Airport (ICAO: KEQY,\u00a0FAA LID: EQY) is a public use airport located five nautical miles (9\u00a0km) northwest of the central business district of Monroe, a city in Union County, North Carolina, United States. It is owned by the City of Monroe and was formerly known as Monroe Regional Airport.",
+            "Deadhorse, Alaska\nDeadhorse is an unincorporated community in North Slope Borough, Alaska, United States, along the North Slope near the Arctic Ocean. The town consists mainly of facilities for the workers and companies that operate at the nearby Prudhoe Bay oil fields. Deadhorse is accessible via the Dalton Highway from Fairbanks, 495 miles south, or Deadhorse Airport. Limited accommodations are also available for tourists.",
+            "Susquehanna Area Regional Airport Authority\nThe Susquehanna Area Regional Airport Authority (SARAA) is the governing authority of Harrisburg International Airport, Capital City Airport, Franklin County Regional Airport and Gettysburg Regional Airport in south-central Pennsylvania. SARAA was incorporated on September 9, 1997, and officially took over control of HIA and CXY airports from the Commonwealth of Pennsylvania on January 1, 1998.",
+            "Manassas Regional Airport\nManassas Regional Airport (IATA: KHEF,\u00a0ICAO: HEF) , also known as Harry P. Davis Field, is a city-owned public-use airport located four nautical miles (7\u00a0km) southwest of the central business district of Manassas, in a section of Manassas that was carved out of Prince William County specifically for the purpose of containing the airport. The largest regional airport in the state of Virginia, Manassas Regional Airport is located 30 miles from Washington, D.C.",
+            "Elizabeth City Regional Airport\nElizabeth City Regional Airport (IATA: ECG,\u00a0ICAO: KECG,\u00a0FAA LID: ECG) is a joint civil-military public and military use airport located three\u00a0nautical miles (6\u00a0km) southeast of the central business district of Elizabeth City, in Pasquotank County, North Carolina, United States. The airport, on the shore of the Pasquotank River, is also known as Elizabeth City-Pasquotank County Regional Airport or ECG Regional Airport. It is included in the National Plan of Integrated Airport Systems for 2011\u20132015, which categorized it as a \"general aviation\" facility.",
+            "Ta'if Regional Airport\nTa'if Regional Airport (IATA: TIF,\u00a0ICAO: OETF) is an airport in Ta'if, Saudi Arabia. Despite its name, it also offers many international flights as well. The airport is located 30\u00a0km to the east of Taif and 70\u00a0km from Mecca. The airport is considered important in Saudi aviation history as it witnessed the first landing of Ibn Saud's plane, founder of the Kingdom. It was converted to a regional airport in 2009 when GACA allowed international airlines to operate at the airport as the city's population was increasing and to reduce pressure on the three main airports at the time. Despite being named as a \"Regional\" airport, the airport actually has international flights destinations in half a dozen countries outside of Saudi Arabia.",
+            "Country Showdown\nThe Country Showdown is an annual talent contest to find undiscovered country music singers across the United States. As many as 100,000 acts compete in the Country Showdown annually, which is considered to be the largest country music talent competition in the United States.",
+            "Manchester\u2013Boston Regional Airport\nManchester\u2013Boston Regional Airport (IATA: MHT, ICAO: KMHT, FAA LID: MHT) , commonly referred to as Manchester Airport, is a public airport 3 mi south of the central business district of Manchester, New Hampshire, on the border of Hillsborough and Rockingham counties. The airport lies in two communities, Manchester and Londonderry.",
+            "Ada Municipal Airport\nAda Municipal Airport (IATA: ADT,\u00a0ICAO: KADH,\u00a0FAA LID: ADH) is a public airport located two miles (3 km) north of the central business district of Ada, a city in Pontotoc County, Oklahoma, United States. It is owned by the City of Ada, which is located in southeast Oklahoma, 88 mi southeast of Oklahoma City.",
+            "Clark International Airport\nClark International Airport (Kapampangan: \"Pangyatung Sulapawan ning Clark\" , Filipino: \"Paliparang Pandaigdig ng Clark\" ), formerly known as the Diosdado Macapagal International Airport (IATA: CRK,\u00a0ICAO: RPLC) , is an airport that is an international gateway to the Philippines within Clark Freeport Zone, located 43.2 NM northwest of Manila. The airport is located in the cities of Angeles and Mabalacat in the province of Pampanga and is accessible through the Subic-Clark-Tarlac Expressway, which is connected to the North Luzon Expressway.",
+            "Air One\nAir One S.p.A., was an Italian airline which operated as Air One \"Smart Carrier\". It operated as Alitalia's low cost carrier subsidiary with operating bases located in Catania-Fontanarossa Airport, Palermo Falcone\u2013Borsellino Airport, Pisa Airport, Venice Marco Polo Airport and Verona Villafranca Airport; while Tirana was a focus city. \"Air One\" is a portmanteau of the English meaning Air One and the Italian word 'airone', meaning heron (the bird depicted in the airline's logo), which was also the airline's callsign.",
+            "Marv Skie\u2013Lincoln County Airport\nMarv Skie\u2013Lincoln County Airport (FAA LID: Y14) is a public use airport in Lincoln County, South Dakota, United States. It is owned by Lincoln County and located two\u00a0nautical miles (4\u00a0km) northeast of the central business district of Tea, South Dakota. This airport is included in the National Plan of Integrated Airport Systems for 2011\u20132015, which categorized it as a \"general aviation\" facility."
+        ],
+        "thoughts": [
+            "The Monroe Regional Airport is located in Ouachita Parish, Louisiana, United States.",
+            "The Deadhorse Airport is located in Deadhorse, Alaska, United States.",
+            "The countries found for Monroe Regional Airport and Deadhorse Airport are both the United States. Therefore, the common country for both airports is the United States."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Monroe Regional Airport and Deadhorse Airport are both in this country?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the country where Monroe Regional Airport is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the country where Deadhorse Airport is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Monroe Regional Airport and Deadhorse Airport are in the same country and identify that country.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph begins with two independent retrieval nodes: one to find the country of Monroe Regional Airport and another for Deadhorse Airport. These are parallel retrieval tasks as they do not depend on each other. The final reasoning node takes the output of both retrieval nodes to check if the airports are in the same country, and if so, identify that country. This step synthesizes the information to answer the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Monroe City Regional Airport\nMonroe City Regional Airport (FAA LID: K52) is a public use airport located one nautical mile (1.85\u00a0km) south of the central business district of Monroe City, in Monroe County, Missouri, United States. It is owned by the City of Monroe and is also known as Capt. Ben Smith Airfield.",
+            "Monroe Regional Airport (Louisiana)\nMonroe Regional Airport (IATA: MLU, ICAO: KMLU, FAA LID: MLU) is a public use airport in Ouachita Parish, Louisiana, United States. The airport is owned by the City of Monroe and is located three nautical miles (6 km) east of its central business district.",
+            "Charlotte\u2013Monroe Executive Airport\nCharlotte\u2013Monroe Executive Airport (ICAO: KEQY,\u00a0FAA LID: EQY) is a public use airport located five nautical miles (9\u00a0km) northwest of the central business district of Monroe, a city in Union County, North Carolina, United States. It is owned by the City of Monroe and was formerly known as Monroe Regional Airport.",
+            "Deadhorse Airport\nDeadhorse Airport (IATA: SCC, ICAO: PASC, FAA LID: SCC) is a public airport located in Deadhorse on the North Slope of Alaska. It can be accessed from Fairbanks via the Elliott and Dalton highways. It is near Prudhoe Bay and is sometimes also called Prudhoe Airport.",
+            "Deadhorse, Alaska\nDeadhorse is an unincorporated community in North Slope Borough, Alaska, United States, along the North Slope near the Arctic Ocean. The town consists mainly of facilities for the workers and companies that operate at the nearby Prudhoe Bay oil fields. Deadhorse is accessible via the Dalton Highway from Fairbanks, 495 miles south, or Deadhorse Airport. Limited accommodations are also available for tourists.",
+            "Susquehanna Area Regional Airport Authority\nThe Susquehanna Area Regional Airport Authority (SARAA) is the governing authority of Harrisburg International Airport, Capital City Airport, Franklin County Regional Airport and Gettysburg Regional Airport in south-central Pennsylvania. SARAA was incorporated on September 9, 1997, and officially took over control of HIA and CXY airports from the Commonwealth of Pennsylvania on January 1, 1998.",
+            "Manassas Regional Airport\nManassas Regional Airport (IATA: KHEF,\u00a0ICAO: HEF) , also known as Harry P. Davis Field, is a city-owned public-use airport located four nautical miles (7\u00a0km) southwest of the central business district of Manassas, in a section of Manassas that was carved out of Prince William County specifically for the purpose of containing the airport. The largest regional airport in the state of Virginia, Manassas Regional Airport is located 30 miles from Washington, D.C.",
+            "Elizabeth City Regional Airport\nElizabeth City Regional Airport (IATA: ECG,\u00a0ICAO: KECG,\u00a0FAA LID: ECG) is a joint civil-military public and military use airport located three\u00a0nautical miles (6\u00a0km) southeast of the central business district of Elizabeth City, in Pasquotank County, North Carolina, United States. The airport, on the shore of the Pasquotank River, is also known as Elizabeth City-Pasquotank County Regional Airport or ECG Regional Airport. It is included in the National Plan of Integrated Airport Systems for 2011\u20132015, which categorized it as a \"general aviation\" facility.",
+            "Ta'if Regional Airport\nTa'if Regional Airport (IATA: TIF,\u00a0ICAO: OETF) is an airport in Ta'if, Saudi Arabia. Despite its name, it also offers many international flights as well. The airport is located 30\u00a0km to the east of Taif and 70\u00a0km from Mecca. The airport is considered important in Saudi aviation history as it witnessed the first landing of Ibn Saud's plane, founder of the Kingdom. It was converted to a regional airport in 2009 when GACA allowed international airlines to operate at the airport as the city's population was increasing and to reduce pressure on the three main airports at the time. Despite being named as a \"Regional\" airport, the airport actually has international flights destinations in half a dozen countries outside of Saudi Arabia.",
+            "Manchester\u2013Boston Regional Airport\nManchester\u2013Boston Regional Airport (IATA: MHT, ICAO: KMHT, FAA LID: MHT) , commonly referred to as Manchester Airport, is a public airport 3 mi south of the central business district of Manchester, New Hampshire, on the border of Hillsborough and Rockingham counties. The airport lies in two communities, Manchester and Londonderry.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Sun Country Airlines\nSun Country Airlines is an United States based airline headquartered in the Minneapolis\u2013Saint Paul suburb of Eagan, Minnesota and based at nearby Minneapolis\u2013Saint Paul International Airport. The airline's main focus is flying Minnesotans to warmer destinations during the winter months, such as Florida and Mexico. In the summer months, the airline flies passengers between the Twin Cities and the east and west coast in the U.S. Sun Country also operates flights from Dallas/Fort Worth which serves as a focus city for the airline. It operates scheduled and charter flights to destinations in the United States, Mexico, Costa Rica and the Caribbean (including Cuba from 2015) as well as ad-hoc charters.",
+            "Amka\nAmka (Hebrew: \u05e2\u05b7\u05de\u05b0\u05e7\u05b8\u05d4\u200e ), also known in Arabic as Amqa (Arabic: \u0639\u0645\u0642\u0627\u200e \u200e ), is a moshav in the Matte Asher Regional Council of Israel's Northern District, near Acre. The location of the moshav roughly corresponds the former Arab village, depopulated during the 1948 Arab\u2013Israeli War. Yemenite Jews, who arrived from the southern Arab country of Yemen, founded the village's successor Amka in 1949. In 2016 its population was 706 .",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Pensacola International Airport\nPensacola International Airport (IATA: PNS,\u00a0ICAO: KPNS,\u00a0FAA LID: PNS) , formerly Pensacola Gulf Coast Regional Airport and Pensacola Regional Airport (Hagler Field), is a public use airport three\u00a0nautical miles (6\u00a0km) northeast of the central business district of Pensacola, in Escambia County, Florida, United States. It is owned by the City of Pensacola. Despite the name, this airport does not offer direct international flights. This airport is one of the five major airports in North Florida, others being: Northwest Florida Beaches International Airport, Destin-Fort Walton Beach Airport Tallahassee International Airport, and Jacksonville International Airport.",
+            "DeKalb\u2013Peachtree Airport\nDeKalb\u2013Peachtree Airport (IATA: PDK,\u00a0ICAO: KPDK,\u00a0FAA LID: PDK) is a county owned, public use airport in DeKalb County, Georgia, United States. The airport is located in Chamblee, Georgia, just northeast of Atlanta. It is also known commonly as Peachtree\u2013DeKalb Airport, or simply PDK. Other names (rarely used) include Peachtree Airport, DeKalb Airport, or DeKalb County Airport. ASOS weather reports are produced 24 hours per day as \"Chamblee\". It has airline service with Ultimate Air Shuttle to Cincinnati and Southern Airways Express to Memphis and Destin."
+        ],
+        "thoughts": [
+            "Monroe Regional Airport is located in Ouachita Parish, Louisiana, United States.",
+            "Deadhorse Airport is located in Deadhorse, Alaska, United States.",
+            "Monroe Regional Airport and Deadhorse Airport are both located in the United States."
+        ],
+        "is_best": false
+    }
+]

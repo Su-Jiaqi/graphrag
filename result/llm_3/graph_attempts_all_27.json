@@ -1,0 +1,741 @@
+[
+    {
+        "question": "Do Singapore Sling and Fish House Punch both contain alcohol?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the recipe for Singapore Sling including its ingredients.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the recipe for Fish House Punch including its ingredients.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the ingredients of Singapore Sling to determine if it contains alcohol.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the ingredients of Fish House Punch to determine if it contains alcohol.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Synthesize the results to determine if both Singapore Sling and Fish House Punch contain alcohol.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the question into steps that first involve retrieving the necessary recipes for both cocktails, then individually analyzing each cocktail's ingredients to check for alcohol content. The final step is to synthesize this information to answer the question about both beverages containing alcohol."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Singapore Sling\nThe Singapore Sling is a gin-based cocktail from Singapore. This long drink was developed sometime before 1915 by Ngiam Tong Boon, a Hainanese bartender working at the Long Bar in Raffles Hotel, Singapore. It was initially called the gin sling \u2013 a \"sling\" was originally an North American drink composed of spirit and water, sweetened and flavored.",
+            "Singapore Sling (band)\nSingapore Sling is an Icelandic rock 'n' roll band from Reykjav\u00edk, formed in 2000. The band have released eight studio albums to date.",
+            "The Recipe Project\nThe Recipe Project is a CD-book combo that is the result of collaboration by both chefs and musicians to examine the previously unexplored correlation between music and food. Presented by Black Balloon Publishing, The Recipe Project includes a CD of the recipes of famous chefs put to music, as well as a book in which those recipes are written down (not unlike lyrics) plus interviews with the chefs themselves, and the thoughts of top culinary writers.",
+            "Singapore Sling (1993 film)\nSingapore Sling is a 1993 Australian television movie about a private eye in Singapore. It led to a series of TV movies.",
+            "The Curse of Singapore Sling\nThe Curse of Singapore Sling (also known simply as The Curse Of) is the first studio album by the Icelandic neo-psychedelia band Singapore Sling. It was released in August 2002 by record label Hitt.",
+            "Cola\nCola is a sweetened, carbonated soft drink, made from ingredients that contain caffeine from the kola nut and non-cocaine derivatives from coca leaves, flavored with vanilla and other ingredients. Most colas now use other flavoring (and caffeinating) ingredients with a similar taste. Colas became popular worldwide after pharmacist John Pemberton invented Coca-Cola in 1886. His non-alcoholic recipe was inspired by the coca wine of pharmacist Angelo Mariani, created in 1863.",
+            "Singapore Sling (tax avoidance)\nA Singapore Sling is a tax avoidance scheme in which a large multinational company sells products to a subsidiary owned by them in a jurisdiction with lower tax rates, which acts as a 'marketing hub'. The subsidiary then sells the product to end users, marking up its value and attributing the mark-up to various marketing activities undertaken by the subsidiary. The parent company retains a higher profit margin due to the lower tax rate. Singapore is a popular location of such subsidiaries, given its low tax rates and its willingness to grant large multinationals 'sweetheart deals' \u2013 an extremely low tax rate in exchange for locating the multinational's marketing activities in Singapore.",
+            "Singapore Sling (1990 film)\nSingapore Sling: The Man Who Loved a Corpse (Greek: \"Singapore Sling: \u039f \u0386\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u03c0\u03bf\u03c5 \u0391\u03b3\u03ac\u03c0\u03b7\u03c3\u03b5 \u03ad\u03bd\u03b1 \u03a0\u03c4\u03ce\u03bc\u03b1\" , tr. \"Singapore Sling: O Anthropos pou Agapise ena Ptoma\") is a 1990 Greek black and white dramatic experimental independent underground art film directed by Nikos Nikolaidis and regarded as his magnum opus. Considered a difficult film to label while still managing to develop something of a cult following throughout the years nonetheless, it was shot in a bizarre manner somewhat resembling film noir or neo-noir and black comedy as well as the exploitation, thriller, and crime genres mixed with some elements of eroticism and horror with sex being used as a power game and received a theatrical release in Greece on 6 December 1990. Despite Nikolaidis' career as a film director in his home country which stretches to the early 1960s he was almost entirely unknown outside Greece before the early 1990s and is still less known outside it and it was only with this film, which has immediately achieved cult status, that international fame came to him and it probably still remans the film for which he is best known today, as exemplified by the fact that it was released on DVD by Synapse Films, the only one of Nikolaidis' films to so far receive a home video release in North America. The film was officially selected for screening at the Rimini Film Festival.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Hydrogen highway (Japan)\nJapan's hydrogen highway is a network of hydrogen filling stations placed along roadsides that provide fuel for hydrogen fuel cell vehicles (HFCV). An HFCV is a vehicle that uses a fuel cell to convert hydrogen energy into electrical energy. The hydrogen that is used in fuel cell vehicles can be made using fossil or renewable resources. The hydrogen highway is necessary for HFCVs to be used. HFCV reduce tailpipe emissions of greenhouse gases. By May 2016, there were approximately 80 hydrogen fueling stations in Japan.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Investment control\nInvestment control or investment controlling is a monitoring function within the asset management, portfolio management or investment management. It is concerned with independently supervising and monitoring the quality of asset management accounts with the aim of ensuring performance and quality in order to provide the required benefit for the asset management client. Dependent on setup, investment controlling not only encompasses controlling activities but also can include areas from compliance to performance review. Investment controlling aspects can also be taken into consideration by asset management clients or investment advisers/consultants and consequently it is likely that these stakeholders also run certain investment controlling activities."
+        ],
+        "thoughts": [
+            "Ingredients for Singapore Sling:\n- 30 ml gin\n- 15 ml cherry liqueur\n- 7.5 ml Cointreau\n- 7.5 ml DOM B\u00e9n\u00e9dictine\n- 120 ml pineapple juice\n- 15 ml lime juice\n- 10 ml grenadine\n- A dash of Angostura bitters\n- Garnish with a slice of pineapple and a cherry\n\nInstructions:\n1. Fill a shaker with ice and add the gin, cherry liqueur, Cointreau, B\u00e9n\u00e9dictine, pineapple juice, lime juice, grenadine, and bitters.\n2. Shake well and strain into a glass filled with ice.\n3. Garnish with a slice of pineapple and a cherry.\n\nEnjoy your Singapore Sling!",
+            "Yes, the Singapore Sling contains alcohol. The ingredients list includes 30 ml of gin, 15 ml of cherry liqueur, 7.5 ml of Cointreau, and 7.5 ml of DOM B\u00e9n\u00e9dictine, all of which are alcoholic beverages. Therefore, the Singapore Sling does contain alcohol.",
+            "I'm sorry, I could not find the recipe for Fish House Punch in the provided information.",
+            "Without the specific recipe for Fish House Punch, it is not possible to analyze the ingredients to determine if it contains alcohol. Fish House Punch traditionally contains alcohol, typically rum, brandy, and peach brandy, but without the exact recipe, it cannot be confirmed.",
+            "Based on the analysis of the ingredients, it can be confirmed that the Singapore Sling contains alcohol. However, without the specific recipe for Fish House Punch, it is not possible to determine if it contains alcohol. Traditionally, Fish House Punch does contain alcohol, but without the exact recipe, it cannot be confirmed."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Do Singapore Sling and Fish House Punch both contain alcohol?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the ingredients for Singapore Sling.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the ingredients for Fish House Punch.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Singapore Sling contains any alcoholic ingredients.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Fish House Punch contains any alcoholic ingredients.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Synthesize results to determine if both Singapore Sling and Fish House Punch contain alcohol.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the question into two main retrieval tasks\u2014one for each drink. By first retrieving the ingredients for Singapore Sling and Fish House Punch, we can then determine whether each drink contains alcoholic ingredients through reasoning. Finally, by synthesizing these results, we can conclusively determine if both drinks contain alcohol."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "Jeongol\nJeongol is a Korean-style hot pot made by putting meat, mushroom, seafood, seasoning, etc., in a stew pot, adding broth, and boiling it. It is similar to the category of Korean stews called \"jjigae\", with the main difference being that \"jjigae\" are generally made with only a single main ingredient, and named after that ingredient (such as \"kimchi jjigae\" or \"sundubu jjigae\"), while \"jeongol\" usually contain a variety of main ingredients. An additional difference is that \"jeongol\" (like \"gujeolpan\") was originally a dish for upper-class Koreans and members of the royal court, while \"jjigae\" was a simpler dish for commoners.",
+            "Fish House Punch\nFish House Punch is a strong, rum-based punch containing rum, cognac, and peach brandy. The drink is typically served over an ice block in a punch bowl and garnished with lemon slices.",
+            "Testosterone phenylpropionate\nTestosterone phenylpropionate (BAN) (brand name Testolent), or testosterone phenpropionate, also known as testosterone hydrocinnamate, is a synthetic anabolic-androgenic steroid (AAS) and an androgen ester \u2013 specifically, the C17\u03b2 phenylpropionate ester of testosterone \u2013 which was formerly marketed in Romania. It was first reported in the scientific literature in 1955 and was an ingredient of several isolated AAS commercial products, but was never widely used. Testosterone phenylpropionate was also notably a component of Sustanon and Omnadren.",
+            "MMB-2201\nMMB-2201 (also known as 5F-MMB-PICA, 5F-AMB-PICA, and I-AMB) is a potent indole-3-carboxamide based synthetic cannabinoid, which has been sold as a designer drug and as an active ingredient in synthetic cannabis blends. It was first reported in Russia and Belarus in January 2014, but has since been sold in a number of other countries. It is the indole core analogue of 5F-AMB. Synthetic cannabinoid compounds with an indole-3-carboxamide or indazole-3-carboxamide core bearing a N-1-methoxycarbonyl group with attached isopropyl or t-butyl substituent, have proved to be much more dangerous than older synthetic cannabinoid compounds previously reported, and have been linked to a large number of deaths in Russia, Japan, Europe and the United States.",
+            "NOS (drink)\nNOS Energy Drink is an energy drink sold in 16 and 24oz cans. The drink was also once distributed in a bottle designed to look like a NOS (Nitrous Oxide Systems) cartridge. This was discontinued in 2015. Formerly a property of The Coca-Cola Company, it is currently produced by Monster Beverage and licensed by Holley Performance, which owns the trademark. NOS contains high levels of taurine and caffeine, and it also contains guarana. L-Theanine was removed as a \"CMPLX6\" ingredient in 2016, with inositol becoming listed as one of the six featured ingredients on the can. NOS Energy is currently available in Original, Sugar Free, Charged Citrus, Cherried Out, GT Grape, and Rowdy.",
+            "Hamilton Fish House\nThe Hamilton Fish House, also known as the Stuyvesant Fish House and Nicholas and Elizabeth Stuyvesant Fish House, is where Hamilton Fish (1808-93), future Governor and Senator of New York, was born and resided from 1808 to 1838. It is located at 21 Stuyvesant Street, a diagonal street within the Manhattan street grid, between East 9th Street and East 10th Street in the East Village neighborhood of New York City. It is owned by Cooper Union and used as a residence for the college's president.",
+            "EAM-2201\nEAM-2201 (4'-ethyl-AM-2201, 5\"-fluoro-JWH-210) is a drug that presumably acts as a potent agonist for the cannabinoid receptors. It had never previously been reported in the scientific or patent literature, and was first identified by laboratories in Japan in July 2012 as an ingredient in synthetic cannabis smoking blends Like the closely related MAM-2201 which had been first reported around a year earlier, EAM-2201 thus appears to be another novel compound invented by designer drug suppliers specifically for recreational use. Structurally, EAM-2201 is a hybrid of two known cannabinoid compounds JWH-210 and AM-2201, both of which had previously been used as active ingredients in synthetic cannabis blends before being banned in many countries.",
+            "Swampscott Fish House\nSwampscott Fish House is a historic fishing supply storage house off Humphrey Street on Fisherman's Beach in Swampscott, Massachusetts. It is the oldest active fish house in the country.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Cola\nCola is a sweetened, carbonated soft drink, made from ingredients that contain caffeine from the kola nut and non-cocaine derivatives from coca leaves, flavored with vanilla and other ingredients. Most colas now use other flavoring (and caffeinating) ingredients with a similar taste. Colas became popular worldwide after pharmacist John Pemberton invented Coca-Cola in 1886. His non-alcoholic recipe was inspired by the coca wine of pharmacist Angelo Mariani, created in 1863.",
+            "Fame Gurukul\nFame Gurukul was an Indian prime-time reality show on Sony Entertainment Television (India) which premiered on 27 June 2005. The program was produced by the same production house of \"Indian Idol\". The concept of the show was to select a pair of India's best singers/performers.",
+            "Planter's Punch\nPlanter's Punch is an IBA Official Cocktail made of dark rum, several juices, grenadine syrup, sugar syrup, and Angostura bitters.",
+            "The Recipe Project\nThe Recipe Project is a CD-book combo that is the result of collaboration by both chefs and musicians to examine the previously unexplored correlation between music and food. Presented by Black Balloon Publishing, The Recipe Project includes a CD of the recipes of famous chefs put to music, as well as a book in which those recipes are written down (not unlike lyrics) plus interviews with the chefs themselves, and the thoughts of top culinary writers.",
+            "Biocultural anthropology\nBiocultural anthropology can be defined in numerous ways. It is the scientific exploration of the relationships between human biology and culture. \"Instead of looking for the biology underlying biological roots of human behavior, biocultural anthropology attempts to understand how culture affects our biological capacities and limitations. Biocultural anthropology attempts to understand challenges to human biology in an ever increasing and diversified cultural environment.\"",
+            "Euclid (spacecraft)\nEuclid (named after the ancient Greek mathematician Euclid of Alexandria, the \"Father of Geometry\"), is a space mission currently under development by the European Space Agency (ESA). The objective of Euclid is to better understand dark energy and dark matter by accurately measuring the acceleration of the universe. To achieve this, the spacecraft will measure the redshift of galaxies at varying distances from Earth and investigate the relationship between distance and redshift. Dark energy is generally accepted as contributing to the increased acceleration of the expanding universe, so understanding this relationship will help to refine how physicists and astrophysicists understand it. Euclid's mission advances and complements ESA's Planck mission, and other contemporary space missions."
+        ],
+        "thoughts": [
+            "I'm sorry, but I couldn't find the ingredients for Singapore Sling in the provided information.",
+            "Based on the provided information, it is not possible to determine if Singapore Sling contains any alcoholic ingredients. Additional information about the specific recipe or ingredients used would be needed to make a definitive determination.",
+            "Ingredients for Fish House Punch:\n- Rum\n- Cognac\n- Peach brandy\n- Lemon slices",
+            "Yes, Fish House Punch contains alcoholic ingredients such as rum, cognac, and peach brandy.",
+            "Based on the results of our analysis, it is inconclusive whether Singapore Sling contains alcohol, as additional information about the specific recipe or ingredients used is needed. However, it is confirmed that Fish House Punch does contain alcoholic ingredients such as rum, cognac, and peach brandy."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Do Singapore Sling and Fish House Punch both contain alcohol?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Search for the typical ingredients of a Singapore Sling cocktail.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Search for the typical ingredients of a Fish House Punch cocktail.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if the ingredients of a Singapore Sling include any alcoholic components.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if the ingredients of a Fish House Punch include any alcoholic components.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to determine if both cocktails contain alcohol.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "This execution graph breaks down the task into two main retrieval steps to gather information on the ingredients of each cocktail. Subsequently, it includes reasoning steps to analyze these ingredients to check for the presence of alcohol. Finally, the last reasoning step synthesizes these analyses to answer if both cocktails contain alcohol."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Singapore Sling\nThe Singapore Sling is a gin-based cocktail from Singapore. This long drink was developed sometime before 1915 by Ngiam Tong Boon, a Hainanese bartender working at the Long Bar in Raffles Hotel, Singapore. It was initially called the gin sling \u2013 a \"sling\" was originally an North American drink composed of spirit and water, sweetened and flavored.",
+            "Singapore Sling (1993 film)\nSingapore Sling is a 1993 Australian television movie about a private eye in Singapore. It led to a series of TV movies.",
+            "The Curse of Singapore Sling\nThe Curse of Singapore Sling (also known simply as The Curse Of) is the first studio album by the Icelandic neo-psychedelia band Singapore Sling. It was released in August 2002 by record label Hitt.",
+            "Singapore Sling (band)\nSingapore Sling is an Icelandic rock 'n' roll band from Reykjav\u00edk, formed in 2000. The band have released eight studio albums to date.",
+            "Sidecar (cocktail)\nThe sidecar is a cocktail traditionally made with cognac, orange liqueur (Cointreau, Grand Marnier, Grand Gala or another triple sec), and lemon juice. In its ingredients, the drink is perhaps most closely related to the older brandy crusta, which differs both in presentation and in proportions of its components.",
+            "Singapore Sling (tax avoidance)\nA Singapore Sling is a tax avoidance scheme in which a large multinational company sells products to a subsidiary owned by them in a jurisdiction with lower tax rates, which acts as a 'marketing hub'. The subsidiary then sells the product to end users, marking up its value and attributing the mark-up to various marketing activities undertaken by the subsidiary. The parent company retains a higher profit margin due to the lower tax rate. Singapore is a popular location of such subsidiaries, given its low tax rates and its willingness to grant large multinationals 'sweetheart deals' \u2013 an extremely low tax rate in exchange for locating the multinational's marketing activities in Singapore.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Singapore Sling (1990 film)\nSingapore Sling: The Man Who Loved a Corpse (Greek: \"Singapore Sling: \u039f \u0386\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u03c0\u03bf\u03c5 \u0391\u03b3\u03ac\u03c0\u03b7\u03c3\u03b5 \u03ad\u03bd\u03b1 \u03a0\u03c4\u03ce\u03bc\u03b1\" , tr. \"Singapore Sling: O Anthropos pou Agapise ena Ptoma\") is a 1990 Greek black and white dramatic experimental independent underground art film directed by Nikos Nikolaidis and regarded as his magnum opus. Considered a difficult film to label while still managing to develop something of a cult following throughout the years nonetheless, it was shot in a bizarre manner somewhat resembling film noir or neo-noir and black comedy as well as the exploitation, thriller, and crime genres mixed with some elements of eroticism and horror with sex being used as a power game and received a theatrical release in Greece on 6 December 1990. Despite Nikolaidis' career as a film director in his home country which stretches to the early 1960s he was almost entirely unknown outside Greece before the early 1990s and is still less known outside it and it was only with this film, which has immediately achieved cult status, that international fame came to him and it probably still remans the film for which he is best known today, as exemplified by the fact that it was released on DVD by Synapse Films, the only one of Nikolaidis' films to so far receive a home video release in North America. The film was officially selected for screening at the Rimini Film Festival.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "The typical ingredients of a Singapore Sling cocktail are gin, cherry liqueur, Cointreau, DOM B\u00e9n\u00e9dictine, grenadine, pineapple juice, lime juice, and Angostura bitters.",
+            "Yes, the ingredients of a Singapore Sling include alcoholic components such as gin and cherry liqueur.",
+            "The typical ingredients of a Fish House Punch cocktail are rum, cognac, peach brandy, lemon juice, and sugar.",
+            "Yes, the ingredients of a Fish House Punch include alcoholic components such as rum, cognac, and peach brandy.",
+            "Based on the results of the upstream tasks, both cocktails contain alcohol. The Singapore Sling includes gin and cherry liqueur, while the Fish House Punch includes rum, cognac, and peach brandy. Therefore, both cocktails contain alcoholic components."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Do Singapore Sling and Fish House Punch both contain alcohol?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the ingredients list for Singapore Sling.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the ingredients list for Fish House Punch.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if the ingredients for Singapore Sling contain any alcohol.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if the ingredients for Fish House Punch contain any alcohol.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to determine if both Singapore Sling and Fish House Punch contain alcohol.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph for determining whether both the Singapore Sling and Fish House Punch contain alcohol involves retrieving the ingredients list for each cocktail and analyzing those lists to check for the presence of alcoholic ingredients. The final step combines these results to answer the original question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Singapore Sling\nThe Singapore Sling is a gin-based cocktail from Singapore. This long drink was developed sometime before 1915 by Ngiam Tong Boon, a Hainanese bartender working at the Long Bar in Raffles Hotel, Singapore. It was initially called the gin sling \u2013 a \"sling\" was originally an North American drink composed of spirit and water, sweetened and flavored.",
+            "Jeongol\nJeongol is a Korean-style hot pot made by putting meat, mushroom, seafood, seasoning, etc., in a stew pot, adding broth, and boiling it. It is similar to the category of Korean stews called \"jjigae\", with the main difference being that \"jjigae\" are generally made with only a single main ingredient, and named after that ingredient (such as \"kimchi jjigae\" or \"sundubu jjigae\"), while \"jeongol\" usually contain a variety of main ingredients. An additional difference is that \"jeongol\" (like \"gujeolpan\") was originally a dish for upper-class Koreans and members of the royal court, while \"jjigae\" was a simpler dish for commoners.",
+            "Testosterone phenylpropionate\nTestosterone phenylpropionate (BAN) (brand name Testolent), or testosterone phenpropionate, also known as testosterone hydrocinnamate, is a synthetic anabolic-androgenic steroid (AAS) and an androgen ester \u2013 specifically, the C17\u03b2 phenylpropionate ester of testosterone \u2013 which was formerly marketed in Romania. It was first reported in the scientific literature in 1955 and was an ingredient of several isolated AAS commercial products, but was never widely used. Testosterone phenylpropionate was also notably a component of Sustanon and Omnadren.",
+            "Black Velvet (beer cocktail)\nThe Black Velvet is a beer cocktail made from stout (often Guinness) and white, sparkling wine, traditionally Champagne.",
+            "Singapore Sling (1993 film)\nSingapore Sling is a 1993 Australian television movie about a private eye in Singapore. It led to a series of TV movies.",
+            "The Curse of Singapore Sling\nThe Curse of Singapore Sling (also known simply as The Curse Of) is the first studio album by the Icelandic neo-psychedelia band Singapore Sling. It was released in August 2002 by record label Hitt.",
+            "Bee's Knees (cocktail)\nA Bees Knees (or Bee's Knees) is a Prohibition Era cocktail made with Gin, fresh lemon juice, and honey. It is served shaken and chilled, often with a lemon twist.",
+            "Singapore Sling (band)\nSingapore Sling is an Icelandic rock 'n' roll band from Reykjav\u00edk, formed in 2000. The band have released eight studio albums to date.",
+            "International business\nInternational business comprises all international trades services or investments (bonds, stocks) conducted by both the private and public sectors that take place between two or more countries beyond their political boundaries. The term \"international business\" refers to all those business activities which involve cross-border transactions of goods, services, and resources between two or more nations. Transactions of economic resources include capital, skills, people for the purpose of the international production of physical goods and services such as finance, banking, insurance, and construction. International business can also be referred to as globalization. Globalization is the shift toward a more integrated and interdependent economy. In order to conduct business overseas, multinational companies need to separate national markets into one huge global marketplace. Two macro factors underline the trend of greater globalization. The first is falling of barriers to make cross-border trade easier such as the free flow of goods and services, and capital, and the second factor is technological change, particularly the developments in communication, information processing, and transportation technologies.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Against All Will\nAgainst All Will is a rock quartet from Los Angeles, California, whose debut album lineup was formed in Spring 2009 by Jimmy Allen (formerly of Puddle of Mudd), Jeff Current (formerly of Seven Story Drop), Steve \"Boomstick\" Wilson (formerly of Dead Kennedys and t.A.T.u.), and Cello Dias (formerly of Soulfly). Songs \"All About You\" and \"The Drug I Need\" from their debut album entitled A Rhyme & Reason ranked in the national rock radio top 50 in 2010.",
+            "R. Kelly (album)\nR. Kelly is the second studio album by R&B singer R. Kelly. It was released on November 14, 1995. The album was somewhat of a departure from his previous album's sexual innuendos, featuring slightly more introspective lyrics. \"R. Kelly\" was the artist's second number 1 R&B album and the first one to top the \"Billboard\" 200; it spawned three number 1 R&B singles in chronological order: \"You Remind Me of Something\", \"Down Low (Nobody Has to Know)\" and \"I Can't Sleep Baby (If I)\".",
+            "Construct (album)\nConstruct is the tenth full-length studio album by Swedish melodic death metal band Dark Tranquillity. It was released on 27 May 2013 through Century Media Records. A music video for \"Uniformity\", directed by Patric Ullaeus, was released on 10 May 2013. The album was written during what the band described as their \"darkest period\" and drew critical praise for its melodrama and darkness. Construct would be the band's last studio album with founding member guitarist Martin Henriksson as he left the band in early 2016 due to loss of passion for playing music.",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "BBC Sky at Night\nBBC Sky at Night magazine is a British monthly magazine about astronomy aimed at amateur astronomers and published by Immediate Media Company. The title of the periodical derives for the likenamed Television program produced by the BBC, \"The Sky at Night\". The magazine, in comparison with the TV series, includes more technical and scientific information. It also includes a bonus CD-ROM with software programs, latest astronomical photographs, written materials and in some issues, a 'classic' episode of \"The Sky at Night\" from the BBC archives."
+        ],
+        "thoughts": [
+            "Ingredients for Singapore Sling:\n- 30 ml gin\n- 15 ml cherry liqueur\n- 7.5 ml Cointreau\n- 7.5 ml DOM B\u00e9n\u00e9dictine\n- 10 ml grenadine\n- 120 ml pineapple juice\n- 15 ml lime juice\n- 1 dash Angostura bitters\n- Garnish: pineapple slice and cocktail cherry",
+            "Yes, the ingredients for Singapore Sling contain alcohol, specifically gin, cherry liqueur, Cointreau, and DOM B\u00e9n\u00e9dictine.",
+            "I'm sorry, I couldn't find the specific ingredients list for Fish House Punch.",
+            "Without the specific ingredients list for Fish House Punch, it is not possible to determine if the drink contains any alcohol.",
+            "Based on the results of the upstream tasks, it can be determined that Singapore Sling contains alcohol, while the alcohol content of Fish House Punch cannot be determined without the specific ingredients list."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Do Singapore Sling and Fish House Punch both contain alcohol?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the ingredients of Singapore Sling.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the ingredients of Fish House Punch.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Singapore Sling contains any alcoholic ingredients from its list.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Fish House Punch contains any alcoholic ingredients from its list.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Conclude if both Singapore Sling and Fish House Punch contain alcohol based on the analysis of their ingredients.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to first gather information about the ingredients of the two cocktails, Singapore Sling and Fish House Punch, through retrieval steps. Once the ingredients are collected, the graph moves on to reasoning steps to analyze whether each of these drinks contains alcohol. Finally, the graph synthesizes the results of these analyses to answer the original question about whether both cocktails contain alcohol."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "Singapore Sling (1993 film)\nSingapore Sling is a 1993 Australian television movie about a private eye in Singapore. It led to a series of TV movies.",
+            "Singapore Sling\nThe Singapore Sling is a gin-based cocktail from Singapore. This long drink was developed sometime before 1915 by Ngiam Tong Boon, a Hainanese bartender working at the Long Bar in Raffles Hotel, Singapore. It was initially called the gin sling \u2013 a \"sling\" was originally an North American drink composed of spirit and water, sweetened and flavored.",
+            "The Curse of Singapore Sling\nThe Curse of Singapore Sling (also known simply as The Curse Of) is the first studio album by the Icelandic neo-psychedelia band Singapore Sling. It was released in August 2002 by record label Hitt.",
+            "Singapore Sling (band)\nSingapore Sling is an Icelandic rock 'n' roll band from Reykjav\u00edk, formed in 2000. The band have released eight studio albums to date.",
+            "Jeongol\nJeongol is a Korean-style hot pot made by putting meat, mushroom, seafood, seasoning, etc., in a stew pot, adding broth, and boiling it. It is similar to the category of Korean stews called \"jjigae\", with the main difference being that \"jjigae\" are generally made with only a single main ingredient, and named after that ingredient (such as \"kimchi jjigae\" or \"sundubu jjigae\"), while \"jeongol\" usually contain a variety of main ingredients. An additional difference is that \"jeongol\" (like \"gujeolpan\") was originally a dish for upper-class Koreans and members of the royal court, while \"jjigae\" was a simpler dish for commoners.",
+            "Singapore Sling (tax avoidance)\nA Singapore Sling is a tax avoidance scheme in which a large multinational company sells products to a subsidiary owned by them in a jurisdiction with lower tax rates, which acts as a 'marketing hub'. The subsidiary then sells the product to end users, marking up its value and attributing the mark-up to various marketing activities undertaken by the subsidiary. The parent company retains a higher profit margin due to the lower tax rate. Singapore is a popular location of such subsidiaries, given its low tax rates and its willingness to grant large multinationals 'sweetheart deals' \u2013 an extremely low tax rate in exchange for locating the multinational's marketing activities in Singapore.",
+            "Singapore Sling (1990 film)\nSingapore Sling: The Man Who Loved a Corpse (Greek: \"Singapore Sling: \u039f \u0386\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u03c0\u03bf\u03c5 \u0391\u03b3\u03ac\u03c0\u03b7\u03c3\u03b5 \u03ad\u03bd\u03b1 \u03a0\u03c4\u03ce\u03bc\u03b1\" , tr. \"Singapore Sling: O Anthropos pou Agapise ena Ptoma\") is a 1990 Greek black and white dramatic experimental independent underground art film directed by Nikos Nikolaidis and regarded as his magnum opus. Considered a difficult film to label while still managing to develop something of a cult following throughout the years nonetheless, it was shot in a bizarre manner somewhat resembling film noir or neo-noir and black comedy as well as the exploitation, thriller, and crime genres mixed with some elements of eroticism and horror with sex being used as a power game and received a theatrical release in Greece on 6 December 1990. Despite Nikolaidis' career as a film director in his home country which stretches to the early 1960s he was almost entirely unknown outside Greece before the early 1990s and is still less known outside it and it was only with this film, which has immediately achieved cult status, that international fame came to him and it probably still remans the film for which he is best known today, as exemplified by the fact that it was released on DVD by Synapse Films, the only one of Nikolaidis' films to so far receive a home video release in North America. The film was officially selected for screening at the Rimini Film Festival.",
+            "Hurricane glass\nA Hurricane glass is a form of drinking glass which typically will contain 20 fluid ounces (600 ml). It is used to serve mixed drinks, particularly the Hurricane from which it is named originating at Pat O'Brien's Bar in New Orleans. Other drinks served in this glass include the Singapore Sling, June bug, Pi\u00f1a colada and Blue Hawaii. It is shaped similarly to a vase or a hurricane lamp and is typically taller and wider than a highball glass.",
+            "Testosterone phenylpropionate\nTestosterone phenylpropionate (BAN) (brand name Testolent), or testosterone phenpropionate, also known as testosterone hydrocinnamate, is a synthetic anabolic-androgenic steroid (AAS) and an androgen ester \u2013 specifically, the C17\u03b2 phenylpropionate ester of testosterone \u2013 which was formerly marketed in Romania. It was first reported in the scientific literature in 1955 and was an ingredient of several isolated AAS commercial products, but was never widely used. Testosterone phenylpropionate was also notably a component of Sustanon and Omnadren.",
+            "Emergency shelter\nAn emergency shelter is a place for people to live temporarily when they cannot live in their previous residence, similar to homeless shelters. The main difference is that an emergency shelter typically specializes in people fleeing a specific type of situation, such as natural or man-made disasters, domestic violence, or victims of sexual abuse. A more minor difference is that people staying in emergency shelters are more likely to stay all day, except for work, school, or errands, while homeless shelters usually expect people to stay elsewhere during the day, returning only to sleep or eat. Emergency shelters sometimes facilitate support groups, and/or provide meals.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "NOS (drink)\nNOS Energy Drink is an energy drink sold in 16 and 24oz cans. The drink was also once distributed in a bottle designed to look like a NOS (Nitrous Oxide Systems) cartridge. This was discontinued in 2015. Formerly a property of The Coca-Cola Company, it is currently produced by Monster Beverage and licensed by Holley Performance, which owns the trademark. NOS contains high levels of taurine and caffeine, and it also contains guarana. L-Theanine was removed as a \"CMPLX6\" ingredient in 2016, with inositol becoming listed as one of the six featured ingredients on the can. NOS Energy is currently available in Original, Sugar Free, Charged Citrus, Cherried Out, GT Grape, and Rowdy.",
+            "EAM-2201\nEAM-2201 (4'-ethyl-AM-2201, 5\"-fluoro-JWH-210) is a drug that presumably acts as a potent agonist for the cannabinoid receptors. It had never previously been reported in the scientific or patent literature, and was first identified by laboratories in Japan in July 2012 as an ingredient in synthetic cannabis smoking blends Like the closely related MAM-2201 which had been first reported around a year earlier, EAM-2201 thus appears to be another novel compound invented by designer drug suppliers specifically for recreational use. Structurally, EAM-2201 is a hybrid of two known cannabinoid compounds JWH-210 and AM-2201, both of which had previously been used as active ingredients in synthetic cannabis blends before being banned in many countries.",
+            "MMB-2201\nMMB-2201 (also known as 5F-MMB-PICA, 5F-AMB-PICA, and I-AMB) is a potent indole-3-carboxamide based synthetic cannabinoid, which has been sold as a designer drug and as an active ingredient in synthetic cannabis blends. It was first reported in Russia and Belarus in January 2014, but has since been sold in a number of other countries. It is the indole core analogue of 5F-AMB. Synthetic cannabinoid compounds with an indole-3-carboxamide or indazole-3-carboxamide core bearing a N-1-methoxycarbonyl group with attached isopropyl or t-butyl substituent, have proved to be much more dangerous than older synthetic cannabinoid compounds previously reported, and have been linked to a large number of deaths in Russia, Japan, Europe and the United States.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "Fame Gurukul\nFame Gurukul was an Indian prime-time reality show on Sony Entertainment Television (India) which premiered on 27 June 2005. The program was produced by the same production house of \"Indian Idol\". The concept of the show was to select a pair of India's best singers/performers."
+        ],
+        "thoughts": [
+            "The ingredients of a Singapore Sling cocktail are typically:\n\n- Gin\n- Cherry liqueur\n- Cointreau\n- DOM B\u00e9n\u00e9dictine\n- Grenadine\n- Pineapple juice\n- Lime juice\n- Angostura bitters\n\nThese ingredients are mixed together and served in a Hurricane glass, which is a form of drinking glass typically used for mixed drinks like the Singapore Sling.",
+            "Yes, the Singapore Sling contains alcoholic ingredients such as gin, cherry liqueur, Cointreau, and DOM B\u00e9n\u00e9dictine.",
+            "I'm sorry, but I couldn't find the specific ingredients for Fish House Punch in the provided information.",
+            "Without specific information about the ingredients of Fish House Punch, it is not possible to determine if it contains any alcoholic ingredients.",
+            "Based on the analysis of their ingredients, it can be concluded that Singapore Sling contains alcohol due to the presence of gin, cherry liqueur, Cointreau, and DOM B\u00e9n\u00e9dictine. However, it is not possible to determine if Fish House Punch contains alcohol without specific information about its ingredients."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Do Singapore Sling and Fish House Punch both contain alcohol?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the ingredients of Singapore Sling.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the ingredients of Fish House Punch.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the ingredients of Singapore Sling to determine if it contains alcohol.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the ingredients of Fish House Punch to determine if it contains alcohol.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to determine if both Singapore Sling and Fish House Punch contain alcohol.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph starts by retrieving the ingredients for each cocktail separately (nodes 1 and 2). Next, it analyzes each cocktail to see if alcohol is present in their ingredients (nodes 3 and 4). Finally, it combines the results from the analyses to answer the question of whether both cocktails contain alcohol (node 5). Each cocktail's analysis can proceed independently after their respective retrievals, allowing for parallel execution."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Jeongol\nJeongol is a Korean-style hot pot made by putting meat, mushroom, seafood, seasoning, etc., in a stew pot, adding broth, and boiling it. It is similar to the category of Korean stews called \"jjigae\", with the main difference being that \"jjigae\" are generally made with only a single main ingredient, and named after that ingredient (such as \"kimchi jjigae\" or \"sundubu jjigae\"), while \"jeongol\" usually contain a variety of main ingredients. An additional difference is that \"jeongol\" (like \"gujeolpan\") was originally a dish for upper-class Koreans and members of the royal court, while \"jjigae\" was a simpler dish for commoners.",
+            "Testosterone phenylpropionate\nTestosterone phenylpropionate (BAN) (brand name Testolent), or testosterone phenpropionate, also known as testosterone hydrocinnamate, is a synthetic anabolic-androgenic steroid (AAS) and an androgen ester \u2013 specifically, the C17\u03b2 phenylpropionate ester of testosterone \u2013 which was formerly marketed in Romania. It was first reported in the scientific literature in 1955 and was an ingredient of several isolated AAS commercial products, but was never widely used. Testosterone phenylpropionate was also notably a component of Sustanon and Omnadren.",
+            "Singapore Sling\nThe Singapore Sling is a gin-based cocktail from Singapore. This long drink was developed sometime before 1915 by Ngiam Tong Boon, a Hainanese bartender working at the Long Bar in Raffles Hotel, Singapore. It was initially called the gin sling \u2013 a \"sling\" was originally an North American drink composed of spirit and water, sweetened and flavored.",
+            "The Curse of Singapore Sling\nThe Curse of Singapore Sling (also known simply as The Curse Of) is the first studio album by the Icelandic neo-psychedelia band Singapore Sling. It was released in August 2002 by record label Hitt.",
+            "Singapore Sling (1993 film)\nSingapore Sling is a 1993 Australian television movie about a private eye in Singapore. It led to a series of TV movies.",
+            "Singapore Sling (band)\nSingapore Sling is an Icelandic rock 'n' roll band from Reykjav\u00edk, formed in 2000. The band have released eight studio albums to date.",
+            "NOS (drink)\nNOS Energy Drink is an energy drink sold in 16 and 24oz cans. The drink was also once distributed in a bottle designed to look like a NOS (Nitrous Oxide Systems) cartridge. This was discontinued in 2015. Formerly a property of The Coca-Cola Company, it is currently produced by Monster Beverage and licensed by Holley Performance, which owns the trademark. NOS contains high levels of taurine and caffeine, and it also contains guarana. L-Theanine was removed as a \"CMPLX6\" ingredient in 2016, with inositol becoming listed as one of the six featured ingredients on the can. NOS Energy is currently available in Original, Sugar Free, Charged Citrus, Cherried Out, GT Grape, and Rowdy.",
+            "EAM-2201\nEAM-2201 (4'-ethyl-AM-2201, 5\"-fluoro-JWH-210) is a drug that presumably acts as a potent agonist for the cannabinoid receptors. It had never previously been reported in the scientific or patent literature, and was first identified by laboratories in Japan in July 2012 as an ingredient in synthetic cannabis smoking blends Like the closely related MAM-2201 which had been first reported around a year earlier, EAM-2201 thus appears to be another novel compound invented by designer drug suppliers specifically for recreational use. Structurally, EAM-2201 is a hybrid of two known cannabinoid compounds JWH-210 and AM-2201, both of which had previously been used as active ingredients in synthetic cannabis blends before being banned in many countries.",
+            "MMB-2201\nMMB-2201 (also known as 5F-MMB-PICA, 5F-AMB-PICA, and I-AMB) is a potent indole-3-carboxamide based synthetic cannabinoid, which has been sold as a designer drug and as an active ingredient in synthetic cannabis blends. It was first reported in Russia and Belarus in January 2014, but has since been sold in a number of other countries. It is the indole core analogue of 5F-AMB. Synthetic cannabinoid compounds with an indole-3-carboxamide or indazole-3-carboxamide core bearing a N-1-methoxycarbonyl group with attached isopropyl or t-butyl substituent, have proved to be much more dangerous than older synthetic cannabinoid compounds previously reported, and have been linked to a large number of deaths in Russia, Japan, Europe and the United States.",
+            "Singapore Sling (tax avoidance)\nA Singapore Sling is a tax avoidance scheme in which a large multinational company sells products to a subsidiary owned by them in a jurisdiction with lower tax rates, which acts as a 'marketing hub'. The subsidiary then sells the product to end users, marking up its value and attributing the mark-up to various marketing activities undertaken by the subsidiary. The parent company retains a higher profit margin due to the lower tax rate. Singapore is a popular location of such subsidiaries, given its low tax rates and its willingness to grant large multinationals 'sweetheart deals' \u2013 an extremely low tax rate in exchange for locating the multinational's marketing activities in Singapore.",
+            "Singapore Sling (1990 film)\nSingapore Sling: The Man Who Loved a Corpse (Greek: \"Singapore Sling: \u039f \u0386\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u03c0\u03bf\u03c5 \u0391\u03b3\u03ac\u03c0\u03b7\u03c3\u03b5 \u03ad\u03bd\u03b1 \u03a0\u03c4\u03ce\u03bc\u03b1\" , tr. \"Singapore Sling: O Anthropos pou Agapise ena Ptoma\") is a 1990 Greek black and white dramatic experimental independent underground art film directed by Nikos Nikolaidis and regarded as his magnum opus. Considered a difficult film to label while still managing to develop something of a cult following throughout the years nonetheless, it was shot in a bizarre manner somewhat resembling film noir or neo-noir and black comedy as well as the exploitation, thriller, and crime genres mixed with some elements of eroticism and horror with sex being used as a power game and received a theatrical release in Greece on 6 December 1990. Despite Nikolaidis' career as a film director in his home country which stretches to the early 1960s he was almost entirely unknown outside Greece before the early 1990s and is still less known outside it and it was only with this film, which has immediately achieved cult status, that international fame came to him and it probably still remans the film for which he is best known today, as exemplified by the fact that it was released on DVD by Synapse Films, the only one of Nikolaidis' films to so far receive a home video release in North America. The film was officially selected for screening at the Rimini Film Festival.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Hurricane glass\nA Hurricane glass is a form of drinking glass which typically will contain 20 fluid ounces (600 ml). It is used to serve mixed drinks, particularly the Hurricane from which it is named originating at Pat O'Brien's Bar in New Orleans. Other drinks served in this glass include the Singapore Sling, June bug, Pi\u00f1a colada and Blue Hawaii. It is shaped similarly to a vase or a hurricane lamp and is typically taller and wider than a highball glass.",
+            "St Luke's Hospital, Singapore\nSt Luke's Hospital is a community hospital in Singapore that provides professional healthcare services. It was named after the patron saint of the medical profession, St Luke. St Luke's Hospital for the Elderly Sick was registered as a voluntary welfare organisation in the Registry of Societies in October 1991. It was renamed as St Luke's hospital in September 2004 to signify the hospital's role as a community hospital while retaining its focus on geriatric care. The idea of setting up community hospital was first mooted by a group of Christian doctors and nurses after a report from the Advisory Council on the Aged in 1988 raised important issues concerning the lack of adequate elderly care facilities in Singapore. A projection of the number of facilities and resources needed to provide adequate healthcare services to Singapore's ageing population in 2030 revealed serious shortfalls. In response to the problem of inadequate healthcare facilities for the elderly, a group of 8 churches and Christian organisations including the Graduate Christian Fellowship and the Singapore Nurses' Christian Fellowship came together to set up St Luke's Hospital for the Elderly Sick. St Luke's Hospital is headed by a board of directors and various committees that oversee the daily operations of the hospital.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "Fame Gurukul\nFame Gurukul was an Indian prime-time reality show on Sony Entertainment Television (India) which premiered on 27 June 2005. The program was produced by the same production house of \"Indian Idol\". The concept of the show was to select a pair of India's best singers/performers."
+        ],
+        "thoughts": [
+            "The ingredients of a Singapore Sling cocktail are typically:\n- Gin\n- Cherry liqueur\n- Cointreau\n- DOM B\u00e9n\u00e9dictine\n- Grenadine\n- Pineapple juice\n- Lime juice\n- Angostura bitters\n\nThese ingredients are mixed together to create the classic gin-based cocktail.",
+            "Based on the ingredients listed, it is clear that Singapore Sling contains alcohol. The presence of gin, cherry liqueur, Cointreau, and DOM B\u00e9n\u00e9dictine all indicate that this cocktail is alcoholic. Therefore, it is safe to say that Singapore Sling does contain alcohol.",
+            "I'm sorry, but I couldn't find the specific ingredients for Fish House Punch in the provided information.",
+            "Without specific information on the ingredients of Fish House Punch, it is not possible to determine if it contains alcohol. However, traditional Fish House Punch recipes typically include a combination of rum, brandy, and peach liqueur, all of which are alcoholic beverages. Therefore, it is likely that Fish House Punch does contain alcohol.",
+            "Based on the results of the upstream tasks, it can be determined that both Singapore Sling and Fish House Punch contain alcohol. The ingredients listed for Singapore Sling clearly indicate the presence of alcohol, while the traditional ingredients for Fish House Punch also suggest that it contains alcohol. Therefore, both cocktails are alcoholic beverages."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Do Singapore Sling and Fish House Punch both contain alcohol?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the ingredients of Singapore Sling.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the ingredients of Fish House Punch.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Check if the ingredients of Singapore Sling include any alcoholic beverages.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Check if the ingredients of Fish House Punch include any alcoholic beverages.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Determine if both Singapore Sling and Fish House Punch contain alcohol based on the previous analyses.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph starts by retrieving the ingredients for both Singapore Sling and Fish House Punch. These retrieval steps are executed independently and in parallel since they do not depend on each other. Once the ingredients are obtained, we then check each set of ingredients for the presence of alcohol. Finally, the results of these checks are combined to determine if both drinks contain alcohol."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Jeongol\nJeongol is a Korean-style hot pot made by putting meat, mushroom, seafood, seasoning, etc., in a stew pot, adding broth, and boiling it. It is similar to the category of Korean stews called \"jjigae\", with the main difference being that \"jjigae\" are generally made with only a single main ingredient, and named after that ingredient (such as \"kimchi jjigae\" or \"sundubu jjigae\"), while \"jeongol\" usually contain a variety of main ingredients. An additional difference is that \"jeongol\" (like \"gujeolpan\") was originally a dish for upper-class Koreans and members of the royal court, while \"jjigae\" was a simpler dish for commoners.",
+            "Testosterone phenylpropionate\nTestosterone phenylpropionate (BAN) (brand name Testolent), or testosterone phenpropionate, also known as testosterone hydrocinnamate, is a synthetic anabolic-androgenic steroid (AAS) and an androgen ester \u2013 specifically, the C17\u03b2 phenylpropionate ester of testosterone \u2013 which was formerly marketed in Romania. It was first reported in the scientific literature in 1955 and was an ingredient of several isolated AAS commercial products, but was never widely used. Testosterone phenylpropionate was also notably a component of Sustanon and Omnadren.",
+            "Singapore Sling\nThe Singapore Sling is a gin-based cocktail from Singapore. This long drink was developed sometime before 1915 by Ngiam Tong Boon, a Hainanese bartender working at the Long Bar in Raffles Hotel, Singapore. It was initially called the gin sling \u2013 a \"sling\" was originally an North American drink composed of spirit and water, sweetened and flavored.",
+            "The Curse of Singapore Sling\nThe Curse of Singapore Sling (also known simply as The Curse Of) is the first studio album by the Icelandic neo-psychedelia band Singapore Sling. It was released in August 2002 by record label Hitt.",
+            "Singapore Sling (1993 film)\nSingapore Sling is a 1993 Australian television movie about a private eye in Singapore. It led to a series of TV movies.",
+            "Singapore Sling (band)\nSingapore Sling is an Icelandic rock 'n' roll band from Reykjav\u00edk, formed in 2000. The band have released eight studio albums to date.",
+            "NOS (drink)\nNOS Energy Drink is an energy drink sold in 16 and 24oz cans. The drink was also once distributed in a bottle designed to look like a NOS (Nitrous Oxide Systems) cartridge. This was discontinued in 2015. Formerly a property of The Coca-Cola Company, it is currently produced by Monster Beverage and licensed by Holley Performance, which owns the trademark. NOS contains high levels of taurine and caffeine, and it also contains guarana. L-Theanine was removed as a \"CMPLX6\" ingredient in 2016, with inositol becoming listed as one of the six featured ingredients on the can. NOS Energy is currently available in Original, Sugar Free, Charged Citrus, Cherried Out, GT Grape, and Rowdy.",
+            "EAM-2201\nEAM-2201 (4'-ethyl-AM-2201, 5\"-fluoro-JWH-210) is a drug that presumably acts as a potent agonist for the cannabinoid receptors. It had never previously been reported in the scientific or patent literature, and was first identified by laboratories in Japan in July 2012 as an ingredient in synthetic cannabis smoking blends Like the closely related MAM-2201 which had been first reported around a year earlier, EAM-2201 thus appears to be another novel compound invented by designer drug suppliers specifically for recreational use. Structurally, EAM-2201 is a hybrid of two known cannabinoid compounds JWH-210 and AM-2201, both of which had previously been used as active ingredients in synthetic cannabis blends before being banned in many countries.",
+            "MMB-2201\nMMB-2201 (also known as 5F-MMB-PICA, 5F-AMB-PICA, and I-AMB) is a potent indole-3-carboxamide based synthetic cannabinoid, which has been sold as a designer drug and as an active ingredient in synthetic cannabis blends. It was first reported in Russia and Belarus in January 2014, but has since been sold in a number of other countries. It is the indole core analogue of 5F-AMB. Synthetic cannabinoid compounds with an indole-3-carboxamide or indazole-3-carboxamide core bearing a N-1-methoxycarbonyl group with attached isopropyl or t-butyl substituent, have proved to be much more dangerous than older synthetic cannabinoid compounds previously reported, and have been linked to a large number of deaths in Russia, Japan, Europe and the United States.",
+            "Singapore Sling (tax avoidance)\nA Singapore Sling is a tax avoidance scheme in which a large multinational company sells products to a subsidiary owned by them in a jurisdiction with lower tax rates, which acts as a 'marketing hub'. The subsidiary then sells the product to end users, marking up its value and attributing the mark-up to various marketing activities undertaken by the subsidiary. The parent company retains a higher profit margin due to the lower tax rate. Singapore is a popular location of such subsidiaries, given its low tax rates and its willingness to grant large multinationals 'sweetheart deals' \u2013 an extremely low tax rate in exchange for locating the multinational's marketing activities in Singapore.",
+            "Singapore Sling (1990 film)\nSingapore Sling: The Man Who Loved a Corpse (Greek: \"Singapore Sling: \u039f \u0386\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u03c0\u03bf\u03c5 \u0391\u03b3\u03ac\u03c0\u03b7\u03c3\u03b5 \u03ad\u03bd\u03b1 \u03a0\u03c4\u03ce\u03bc\u03b1\" , tr. \"Singapore Sling: O Anthropos pou Agapise ena Ptoma\") is a 1990 Greek black and white dramatic experimental independent underground art film directed by Nikos Nikolaidis and regarded as his magnum opus. Considered a difficult film to label while still managing to develop something of a cult following throughout the years nonetheless, it was shot in a bizarre manner somewhat resembling film noir or neo-noir and black comedy as well as the exploitation, thriller, and crime genres mixed with some elements of eroticism and horror with sex being used as a power game and received a theatrical release in Greece on 6 December 1990. Despite Nikolaidis' career as a film director in his home country which stretches to the early 1960s he was almost entirely unknown outside Greece before the early 1990s and is still less known outside it and it was only with this film, which has immediately achieved cult status, that international fame came to him and it probably still remans the film for which he is best known today, as exemplified by the fact that it was released on DVD by Synapse Films, the only one of Nikolaidis' films to so far receive a home video release in North America. The film was officially selected for screening at the Rimini Film Festival.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Hurricane glass\nA Hurricane glass is a form of drinking glass which typically will contain 20 fluid ounces (600 ml). It is used to serve mixed drinks, particularly the Hurricane from which it is named originating at Pat O'Brien's Bar in New Orleans. Other drinks served in this glass include the Singapore Sling, June bug, Pi\u00f1a colada and Blue Hawaii. It is shaped similarly to a vase or a hurricane lamp and is typically taller and wider than a highball glass.",
+            "St Luke's Hospital, Singapore\nSt Luke's Hospital is a community hospital in Singapore that provides professional healthcare services. It was named after the patron saint of the medical profession, St Luke. St Luke's Hospital for the Elderly Sick was registered as a voluntary welfare organisation in the Registry of Societies in October 1991. It was renamed as St Luke's hospital in September 2004 to signify the hospital's role as a community hospital while retaining its focus on geriatric care. The idea of setting up community hospital was first mooted by a group of Christian doctors and nurses after a report from the Advisory Council on the Aged in 1988 raised important issues concerning the lack of adequate elderly care facilities in Singapore. A projection of the number of facilities and resources needed to provide adequate healthcare services to Singapore's ageing population in 2030 revealed serious shortfalls. In response to the problem of inadequate healthcare facilities for the elderly, a group of 8 churches and Christian organisations including the Graduate Christian Fellowship and the Singapore Nurses' Christian Fellowship came together to set up St Luke's Hospital for the Elderly Sick. St Luke's Hospital is headed by a board of directors and various committees that oversee the daily operations of the hospital.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "Fame Gurukul\nFame Gurukul was an Indian prime-time reality show on Sony Entertainment Television (India) which premiered on 27 June 2005. The program was produced by the same production house of \"Indian Idol\". The concept of the show was to select a pair of India's best singers/performers."
+        ],
+        "thoughts": [
+            "The ingredients of a Singapore Sling cocktail are typically:\n- Gin\n- Cherry liqueur\n- Cointreau\n- DOM B\u00e9n\u00e9dictine\n- Grenadine\n- Pineapple juice\n- Lime juice\n- Angostura bitters\n\nThese ingredients are mixed together to create the classic gin-based cocktail.",
+            "Yes, the ingredients of a Singapore Sling include alcoholic beverages such as gin, cherry liqueur, Cointreau, and DOM B\u00e9n\u00e9dictine.",
+            "I'm sorry, but I couldn't find the specific ingredients for Fish House Punch in the provided information.",
+            "Since we were unable to find the specific ingredients for Fish House Punch, we cannot confirm whether it includes any alcoholic beverages. It is recommended to refer to a reliable recipe or source for the accurate information on the ingredients of Fish House Punch.",
+            "Based on the previous analyses, it can be determined that Singapore Sling contains alcohol, as it includes ingredients such as gin, cherry liqueur, Cointreau, and DOM B\u00e9n\u00e9dictine. However, the presence of alcohol in Fish House Punch cannot be confirmed as the specific ingredients for this drink were not found. It is recommended to refer to a reliable recipe or source for accurate information on the ingredients of Fish House Punch."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Do Singapore Sling and Fish House Punch both contain alcohol?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Search for the ingredients of a Singapore Sling cocktail.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Search for the ingredients of a Fish House Punch cocktail.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if any of the ingredients in the Singapore Sling are alcoholic.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if any of the ingredients in the Fish House Punch are alcoholic.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Check the results from nodes 3 and 4 to conclude if both cocktails contain alcohol.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the task into several steps, starting with retrieving the ingredients of the two cocktails separately. Then, it analyzes the ingredients to determine if any are alcoholic. Finally, it combines the results of these analyses to answer the original question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Singapore Sling\nThe Singapore Sling is a gin-based cocktail from Singapore. This long drink was developed sometime before 1915 by Ngiam Tong Boon, a Hainanese bartender working at the Long Bar in Raffles Hotel, Singapore. It was initially called the gin sling \u2013 a \"sling\" was originally an North American drink composed of spirit and water, sweetened and flavored.",
+            "Fish House Punch\nFish House Punch is a strong, rum-based punch containing rum, cognac, and peach brandy. The drink is typically served over an ice block in a punch bowl and garnished with lemon slices.",
+            "Singapore Sling (1993 film)\nSingapore Sling is a 1993 Australian television movie about a private eye in Singapore. It led to a series of TV movies.",
+            "The Curse of Singapore Sling\nThe Curse of Singapore Sling (also known simply as The Curse Of) is the first studio album by the Icelandic neo-psychedelia band Singapore Sling. It was released in August 2002 by record label Hitt.",
+            "Planter's Punch\nPlanter's Punch is an IBA Official Cocktail made of dark rum, several juices, grenadine syrup, sugar syrup, and Angostura bitters.",
+            "Singapore Sling (band)\nSingapore Sling is an Icelandic rock 'n' roll band from Reykjav\u00edk, formed in 2000. The band have released eight studio albums to date.",
+            "Sidecar (cocktail)\nThe sidecar is a cocktail traditionally made with cognac, orange liqueur (Cointreau, Grand Marnier, Grand Gala or another triple sec), and lemon juice. In its ingredients, the drink is perhaps most closely related to the older brandy crusta, which differs both in presentation and in proportions of its components.",
+            "Singapore Sling (tax avoidance)\nA Singapore Sling is a tax avoidance scheme in which a large multinational company sells products to a subsidiary owned by them in a jurisdiction with lower tax rates, which acts as a 'marketing hub'. The subsidiary then sells the product to end users, marking up its value and attributing the mark-up to various marketing activities undertaken by the subsidiary. The parent company retains a higher profit margin due to the lower tax rate. Singapore is a popular location of such subsidiaries, given its low tax rates and its willingness to grant large multinationals 'sweetheart deals' \u2013 an extremely low tax rate in exchange for locating the multinational's marketing activities in Singapore.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Swampscott Fish House\nSwampscott Fish House is a historic fishing supply storage house off Humphrey Street on Fisherman's Beach in Swampscott, Massachusetts. It is the oldest active fish house in the country.",
+            "Singapore Sling (1990 film)\nSingapore Sling: The Man Who Loved a Corpse (Greek: \"Singapore Sling: \u039f \u0386\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u03c0\u03bf\u03c5 \u0391\u03b3\u03ac\u03c0\u03b7\u03c3\u03b5 \u03ad\u03bd\u03b1 \u03a0\u03c4\u03ce\u03bc\u03b1\" , tr. \"Singapore Sling: O Anthropos pou Agapise ena Ptoma\") is a 1990 Greek black and white dramatic experimental independent underground art film directed by Nikos Nikolaidis and regarded as his magnum opus. Considered a difficult film to label while still managing to develop something of a cult following throughout the years nonetheless, it was shot in a bizarre manner somewhat resembling film noir or neo-noir and black comedy as well as the exploitation, thriller, and crime genres mixed with some elements of eroticism and horror with sex being used as a power game and received a theatrical release in Greece on 6 December 1990. Despite Nikolaidis' career as a film director in his home country which stretches to the early 1960s he was almost entirely unknown outside Greece before the early 1990s and is still less known outside it and it was only with this film, which has immediately achieved cult status, that international fame came to him and it probably still remans the film for which he is best known today, as exemplified by the fact that it was released on DVD by Synapse Films, the only one of Nikolaidis' films to so far receive a home video release in North America. The film was officially selected for screening at the Rimini Film Festival.",
+            "Hamilton Fish House\nThe Hamilton Fish House, also known as the Stuyvesant Fish House and Nicholas and Elizabeth Stuyvesant Fish House, is where Hamilton Fish (1808-93), future Governor and Senator of New York, was born and resided from 1808 to 1838. It is located at 21 Stuyvesant Street, a diagonal street within the Manhattan street grid, between East 9th Street and East 10th Street in the East Village neighborhood of New York City. It is owned by Cooper Union and used as a residence for the college's president.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Black Velvet (beer cocktail)\nThe Black Velvet is a beer cocktail made from stout (often Guinness) and white, sparkling wine, traditionally Champagne."
+        ],
+        "thoughts": [
+            "The ingredients for a Singapore Sling cocktail are typically gin, cherry liqueur, Cointreau, DOM B\u00e9n\u00e9dictine, grenadine, pineapple juice, lime juice, and Angostura bitters. These ingredients are mixed together to create the classic Singapore Sling cocktail.",
+            "Yes, some of the ingredients in the Singapore Sling are alcoholic. The gin, cherry liqueur, and Cointreau are all alcoholic ingredients.",
+            "The ingredients for a Fish House Punch cocktail are rum, cognac, and peach brandy, typically served over an ice block in a punch bowl and garnished with lemon slices.",
+            "Yes, the ingredients in Fish House Punch are alcoholic. The rum, cognac, and peach brandy are all alcoholic spirits.",
+            "Based on the results from nodes 3 and 4, it can be concluded that both cocktails, Singapore Sling and Fish House Punch, contain alcohol. The ingredients in both cocktails include alcoholic spirits such as gin, cherry liqueur, Cointreau, rum, cognac, and peach brandy. Therefore, it can be confirmed that both cocktails contain alcohol."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Do Singapore Sling and Fish House Punch both contain alcohol?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Gather the list of ingredients for the cocktail 'Singapore Sling.'",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Gather the list of ingredients for the cocktail 'Fish House Punch.'",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if any of the ingredients in the 'Singapore Sling' list contain alcohol.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if any of the ingredients in the 'Fish House Punch' list contain alcohol.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Synthesize whether both 'Singapore Sling' and 'Fish House Punch' contain alcohol based on the analysis of their ingredients.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the task of determining if both 'Singapore Sling' and 'Fish House Punch' contain alcohol into several steps. First, it retrieves the ingredients' lists for both cocktails. Then, it analyzes each list to check for alcohol presence. Finally, it synthesizes the information to conclusively answer the question by confirming if both cocktails have alcohol."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Singapore Sling\nThe Singapore Sling is a gin-based cocktail from Singapore. This long drink was developed sometime before 1915 by Ngiam Tong Boon, a Hainanese bartender working at the Long Bar in Raffles Hotel, Singapore. It was initially called the gin sling \u2013 a \"sling\" was originally an North American drink composed of spirit and water, sweetened and flavored.",
+            "Fish House Punch\nFish House Punch is a strong, rum-based punch containing rum, cognac, and peach brandy. The drink is typically served over an ice block in a punch bowl and garnished with lemon slices.",
+            "Singapore Sling (1993 film)\nSingapore Sling is a 1993 Australian television movie about a private eye in Singapore. It led to a series of TV movies.",
+            "The Curse of Singapore Sling\nThe Curse of Singapore Sling (also known simply as The Curse Of) is the first studio album by the Icelandic neo-psychedelia band Singapore Sling. It was released in August 2002 by record label Hitt.",
+            "Singapore Sling (band)\nSingapore Sling is an Icelandic rock 'n' roll band from Reykjav\u00edk, formed in 2000. The band have released eight studio albums to date.",
+            "Hamilton Fish House\nThe Hamilton Fish House, also known as the Stuyvesant Fish House and Nicholas and Elizabeth Stuyvesant Fish House, is where Hamilton Fish (1808-93), future Governor and Senator of New York, was born and resided from 1808 to 1838. It is located at 21 Stuyvesant Street, a diagonal street within the Manhattan street grid, between East 9th Street and East 10th Street in the East Village neighborhood of New York City. It is owned by Cooper Union and used as a residence for the college's president.",
+            "Sidecar (cocktail)\nThe sidecar is a cocktail traditionally made with cognac, orange liqueur (Cointreau, Grand Marnier, Grand Gala or another triple sec), and lemon juice. In its ingredients, the drink is perhaps most closely related to the older brandy crusta, which differs both in presentation and in proportions of its components.",
+            "Singapore Sling (tax avoidance)\nA Singapore Sling is a tax avoidance scheme in which a large multinational company sells products to a subsidiary owned by them in a jurisdiction with lower tax rates, which acts as a 'marketing hub'. The subsidiary then sells the product to end users, marking up its value and attributing the mark-up to various marketing activities undertaken by the subsidiary. The parent company retains a higher profit margin due to the lower tax rate. Singapore is a popular location of such subsidiaries, given its low tax rates and its willingness to grant large multinationals 'sweetheart deals' \u2013 an extremely low tax rate in exchange for locating the multinational's marketing activities in Singapore.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Swampscott Fish House\nSwampscott Fish House is a historic fishing supply storage house off Humphrey Street on Fisherman's Beach in Swampscott, Massachusetts. It is the oldest active fish house in the country.",
+            "Singapore Sling (1990 film)\nSingapore Sling: The Man Who Loved a Corpse (Greek: \"Singapore Sling: \u039f \u0386\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u03c0\u03bf\u03c5 \u0391\u03b3\u03ac\u03c0\u03b7\u03c3\u03b5 \u03ad\u03bd\u03b1 \u03a0\u03c4\u03ce\u03bc\u03b1\" , tr. \"Singapore Sling: O Anthropos pou Agapise ena Ptoma\") is a 1990 Greek black and white dramatic experimental independent underground art film directed by Nikos Nikolaidis and regarded as his magnum opus. Considered a difficult film to label while still managing to develop something of a cult following throughout the years nonetheless, it was shot in a bizarre manner somewhat resembling film noir or neo-noir and black comedy as well as the exploitation, thriller, and crime genres mixed with some elements of eroticism and horror with sex being used as a power game and received a theatrical release in Greece on 6 December 1990. Despite Nikolaidis' career as a film director in his home country which stretches to the early 1960s he was almost entirely unknown outside Greece before the early 1990s and is still less known outside it and it was only with this film, which has immediately achieved cult status, that international fame came to him and it probably still remans the film for which he is best known today, as exemplified by the fact that it was released on DVD by Synapse Films, the only one of Nikolaidis' films to so far receive a home video release in North America. The film was officially selected for screening at the Rimini Film Festival.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Cola\nCola is a sweetened, carbonated soft drink, made from ingredients that contain caffeine from the kola nut and non-cocaine derivatives from coca leaves, flavored with vanilla and other ingredients. Most colas now use other flavoring (and caffeinating) ingredients with a similar taste. Colas became popular worldwide after pharmacist John Pemberton invented Coca-Cola in 1886. His non-alcoholic recipe was inspired by the coca wine of pharmacist Angelo Mariani, created in 1863.",
+            "Fame Gurukul\nFame Gurukul was an Indian prime-time reality show on Sony Entertainment Television (India) which premiered on 27 June 2005. The program was produced by the same production house of \"Indian Idol\". The concept of the show was to select a pair of India's best singers/performers.",
+            "Planter's Punch\nPlanter's Punch is an IBA Official Cocktail made of dark rum, several juices, grenadine syrup, sugar syrup, and Angostura bitters.",
+            "Jena Malone\nJena Malone ( ; born November 21, 1984) is an American actress, musician and photographer. She made her acting debut in the television film \"Bastard Out of Carolina\" (1996); subsequently, Malone has starred in a number of mainstream and independent films including \"Ellen Foster\" (1997), \"Contact\" (1997), \"Stepmom\" (1998), \"Donnie Darko\" (2001), \"Life as a House\" (2001), \"\" (2003), \"Saved!\" (2004), \"Pride & Prejudice\" (2005), \"Into the Wild\" (2007), \"The Ruins\" (2008), \"Sucker Punch\" (2011) and \"The Neon Demon\" (2016). Furthermore, Malone has portrayed the role of Johanna Mason in \"The Hunger Games\" film series. She is also an indie pop musician who has released music both under her own name (as \"Jena Malone and Her Bloodstains\") and as one-half of the duo The Shoe."
+        ],
+        "thoughts": [
+            "The list of ingredients for the cocktail 'Singapore Sling' typically includes gin, cherry liqueur, herbal liqueur, Cointreau, DOM B\u00e9n\u00e9dictine, grenadine, pineapple juice, lime juice, and Angostura bitters.",
+            "Yes, the ingredients cherry liqueur, herbal liqueur, and Cointreau all contain alcohol.",
+            "Ingredients for Fish House Punch:\n- Rum\n- Cognac\n- Peach brandy\n- Lemon slices\n- Ice block",
+            "Yes, the ingredients rum, cognac, and peach brandy all contain alcohol.",
+            "Both 'Singapore Sling' and 'Fish House Punch' contain alcohol based on the analysis of their ingredients. The presence of cherry liqueur, herbal liqueur, and Cointreau in 'Singapore Sling' and rum, cognac, and peach brandy in 'Fish House Punch' all indicate the presence of alcohol in both cocktails."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Do Singapore Sling and Fish House Punch both contain alcohol?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine if Singapore Sling contains alcohol.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine if Fish House Punch contains alcohol.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine and analyze the results to determine if both cocktails contain alcohol.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of three nodes. The first node retrieves information about whether the Singapore Sling cocktail contains alcohol. The second node retrieves similar information for the Fish House Punch cocktail. These two steps are independent and hence can be executed in parallel. The third node then takes the results from the first two nodes and analyzes them to determine if both cocktails contain alcohol, providing the final answer to the question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Singapore Sling\nThe Singapore Sling is a gin-based cocktail from Singapore. This long drink was developed sometime before 1915 by Ngiam Tong Boon, a Hainanese bartender working at the Long Bar in Raffles Hotel, Singapore. It was initially called the gin sling \u2013 a \"sling\" was originally an North American drink composed of spirit and water, sweetened and flavored.",
+            "Fish House Punch\nFish House Punch is a strong, rum-based punch containing rum, cognac, and peach brandy. The drink is typically served over an ice block in a punch bowl and garnished with lemon slices.",
+            "Singapore Sling (1993 film)\nSingapore Sling is a 1993 Australian television movie about a private eye in Singapore. It led to a series of TV movies.",
+            "The Curse of Singapore Sling\nThe Curse of Singapore Sling (also known simply as The Curse Of) is the first studio album by the Icelandic neo-psychedelia band Singapore Sling. It was released in August 2002 by record label Hitt.",
+            "Singapore Sling (band)\nSingapore Sling is an Icelandic rock 'n' roll band from Reykjav\u00edk, formed in 2000. The band have released eight studio albums to date.",
+            "Singapore Sling (tax avoidance)\nA Singapore Sling is a tax avoidance scheme in which a large multinational company sells products to a subsidiary owned by them in a jurisdiction with lower tax rates, which acts as a 'marketing hub'. The subsidiary then sells the product to end users, marking up its value and attributing the mark-up to various marketing activities undertaken by the subsidiary. The parent company retains a higher profit margin due to the lower tax rate. Singapore is a popular location of such subsidiaries, given its low tax rates and its willingness to grant large multinationals 'sweetheart deals' \u2013 an extremely low tax rate in exchange for locating the multinational's marketing activities in Singapore.",
+            "Singapore Sling (1990 film)\nSingapore Sling: The Man Who Loved a Corpse (Greek: \"Singapore Sling: \u039f \u0386\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u03c0\u03bf\u03c5 \u0391\u03b3\u03ac\u03c0\u03b7\u03c3\u03b5 \u03ad\u03bd\u03b1 \u03a0\u03c4\u03ce\u03bc\u03b1\" , tr. \"Singapore Sling: O Anthropos pou Agapise ena Ptoma\") is a 1990 Greek black and white dramatic experimental independent underground art film directed by Nikos Nikolaidis and regarded as his magnum opus. Considered a difficult film to label while still managing to develop something of a cult following throughout the years nonetheless, it was shot in a bizarre manner somewhat resembling film noir or neo-noir and black comedy as well as the exploitation, thriller, and crime genres mixed with some elements of eroticism and horror with sex being used as a power game and received a theatrical release in Greece on 6 December 1990. Despite Nikolaidis' career as a film director in his home country which stretches to the early 1960s he was almost entirely unknown outside Greece before the early 1990s and is still less known outside it and it was only with this film, which has immediately achieved cult status, that international fame came to him and it probably still remans the film for which he is best known today, as exemplified by the fact that it was released on DVD by Synapse Films, the only one of Nikolaidis' films to so far receive a home video release in North America. The film was officially selected for screening at the Rimini Film Festival.",
+            "Swampscott Fish House\nSwampscott Fish House is a historic fishing supply storage house off Humphrey Street on Fisherman's Beach in Swampscott, Massachusetts. It is the oldest active fish house in the country.",
+            "Planter's Punch\nPlanter's Punch is an IBA Official Cocktail made of dark rum, several juices, grenadine syrup, sugar syrup, and Angostura bitters.",
+            "Hamilton Fish House\nThe Hamilton Fish House, also known as the Stuyvesant Fish House and Nicholas and Elizabeth Stuyvesant Fish House, is where Hamilton Fish (1808-93), future Governor and Senator of New York, was born and resided from 1808 to 1838. It is located at 21 Stuyvesant Street, a diagonal street within the Manhattan street grid, between East 9th Street and East 10th Street in the East Village neighborhood of New York City. It is owned by Cooper Union and used as a residence for the college's president.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Hurricane glass\nA Hurricane glass is a form of drinking glass which typically will contain 20 fluid ounces (600 ml). It is used to serve mixed drinks, particularly the Hurricane from which it is named originating at Pat O'Brien's Bar in New Orleans. Other drinks served in this glass include the Singapore Sling, June bug, Pi\u00f1a colada and Blue Hawaii. It is shaped similarly to a vase or a hurricane lamp and is typically taller and wider than a highball glass.",
+            "Jena Malone\nJena Malone ( ; born November 21, 1984) is an American actress, musician and photographer. She made her acting debut in the television film \"Bastard Out of Carolina\" (1996); subsequently, Malone has starred in a number of mainstream and independent films including \"Ellen Foster\" (1997), \"Contact\" (1997), \"Stepmom\" (1998), \"Donnie Darko\" (2001), \"Life as a House\" (2001), \"\" (2003), \"Saved!\" (2004), \"Pride & Prejudice\" (2005), \"Into the Wild\" (2007), \"The Ruins\" (2008), \"Sucker Punch\" (2011) and \"The Neon Demon\" (2016). Furthermore, Malone has portrayed the role of Johanna Mason in \"The Hunger Games\" film series. She is also an indie pop musician who has released music both under her own name (as \"Jena Malone and Her Bloodstains\") and as one-half of the duo The Shoe.",
+            "Jack Dempsey cichlids in Australia\nJack Dempsey cichlids (\"Rocio octofasciata\") are aggressive aquarium fish named after the heavyweight boxer Jack Dempsey. They are native to Central America but were discovered in a flooded quarry in New South Wales (NSW) Australia in 2004. Although efforts were made to eradicate them in 2004 and 2005, the fish remain. Jack Dempsey cichlids are one of about 30 aquarium fish species that have become established in Australian waterways, and have been shown to have a significant impact on Australian aquatic ecosystems. They highlight the importance of preventing the importation of invasive fish species because they are extremely difficult or impossible to eradicate once they become established in the wild.",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "The Singapore Sling is a gin-based cocktail, which means it does contain alcohol.",
+            "Fish House Punch contains alcohol, as it is described as a strong, rum-based punch containing rum, cognac, and peach brandy.",
+            "Based on the results of the upstream tasks, it can be determined that both cocktails, the Singapore Sling and Fish House Punch, contain alcohol. The Singapore Sling is gin-based, and gin is a type of alcohol. Additionally, Fish House Punch contains rum, cognac, and peach brandy, all of which are alcoholic ingredients. Therefore, both cocktails do contain alcohol."
+        ],
+        "is_best": false
+    }
+]

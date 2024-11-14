@@ -1,0 +1,752 @@
+[
+    {
+        "question": "This film is an adaption of a Jacques Offenbach's opera that was written by a Hungarian British screenwriter?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify operas composed by Jacques Offenbach.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find films that are adaptations of Jacques Offenbach's operas.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify Hungarian British screenwriters.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Check which films (from Node 2) were written by Hungarian British screenwriters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The graph begins with identifying operas by Jacques Offenbach (Node 1) since the film is an adaptation of one of his works. It then finds films that are adaptations of Offenbach's operas (Node 2). Simultaneously, it retrieves Hungarian British screenwriters (Node 3). Finally, the graph checks which films from the identified adaptations were written by these screenwriters (Node 4), allowing it to answer the question about the specific film."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Orthodox Jewish feminism\nOrthodox Jewish feminism (also known as Orthodox feminism amongst Jews) is a movement in Orthodox Judaism which seeks to further the cause of a more egalitarian approach to Jewish practice within the bounds of Jewish Law. The major organizations of this movement is the Jewish Orthodox Feminist Alliance (JOFA) in North America, and Women of the Wall (WOW) and its affiliates in Israel and internationally, known as ICWOW - The International Committee for Women of the Wall. In Israel, the leading Orthodox feminist organization is Kolech (http://www.kolech.org.il), started by Dr. Hannah Kehat. Australia has one Orthodox partnership minyan, Shira Hadasha (http://www.shira.org.au), in Melbourne.",
+            "The Dybbuk: An opera in Yiddish\nThe Dybbuk: An Opera in Yiddish is an opera in three acts by American composer Solomon Epstein. The libretto was adapted by the composer from S. Ansky's 1914 play \"The Dybbuk\" and is apparently the world's first original Yiddish language opera. It was premiered and recorded at the Suzanne Dellal Center for Dance and Theater, Tel Aviv, and at Ben-Gurion University, Beersheba, in May 1999. The opera was staged in a 70 minute abridged version using the composer's piano-vocal score. It has not yet been produced with a full orchestra.",
+            "Rothschild's Violin (opera)\nRothschild's Violin (Russian: \u0421\u043a\u0440\u0438\u043f\u043a\u0430 \u0420\u043e\u0442\u0448\u0438\u043b\u044c\u0434\u0430 ) is a one-act opera by Russian composer Veniamin Fleishman (1913\u20131941) set to the Russian libretto by the composer after the short story \"Rothschild's Fiddle\" by Anton Chekhov.",
+            "Carmen\nCarmen (] ; ] ) is an opera in four acts by French composer Georges Bizet. The libretto was written by Henri Meilhac and Ludovic Hal\u00e9vy, based on a novella of the same title by Prosper M\u00e9rim\u00e9e. The opera was first performed at the Op\u00e9ra-Comique in Paris on 3 March 1875, where its breaking of conventions shocked and scandalized its first audiences.",
+            "H\u00f4tel de P\u00e9kin\nH\u00f4tel de P\u00e9kin \u2013 Dreams for a Dragon Queen is a 2008 English language opera by the Dutch composer Willem Jeths to a libretto by Friso Haverkamp. The opera was commissioned for opening of the opera theatre in the , part of the new in Enschede on 22 November 2008.",
+            "Scott Joiner\nScott Joiner is an American operatic tenor and composer. He created the role of Dickon in the world premiere of Nolan Gasser's \"The Secret Garden\" with the San Francisco Opera and Cal Performances in 2013. He composed the score and starred in the short opera film, \"Connection Lost (The Tinder Opera)\" or \"L'opera di Tinder\", which won Best Score at Ireland's Kerry Film Festival. The miniature one-act opera received its live stage premiere by Opera Carolina in November 2016 as part of National Opera Week. Joiner and Tinder Opera Co-creator, Adam Taylor (writer/director) were featured on NPR\u2019s \"All Things Considered\" in 2017.",
+            "Louise (opera)\nLouise is an opera (\"roman musical\" ) in four acts by Gustave Charpentier to an original French libretto by the composer, with some contributions by Saint-Pol-Roux, a symbolist poet and inspiration of the surrealists.",
+            "The Hero (opera)\nThe Hero is a two-act opera by Italian-American composer Gian Carlo Menotti. Commissioned by the Opera Company of Philadelphia, the work premiered at the Philadelphia Academy of Music on June 1, 1976. At this point of his career, Menotti's style of composition, which rejected the avant-garde, was out of favor with the classical music world. \"Time\" stated in its review of the opera, \"Most of Menotti's music is passable Puccini: melodic, easy to take\u2014and totally beside the point in 1976.\"",
+            "The Tales of Hoffmann (film)\nThe Tales of Hoffmann is a 1951 British Technicolor film adaptation of Jacques Offenbach's opera \"The Tales of Hoffmann\", written, produced and directed by the team of Michael Powell and Emeric Pressburger working under the umbrella of their production company, The Archers.",
+            "The Tales of Hoffmann\nThe Tales of Hoffmann (French: Les contes d'Hoffmann ) is an \"op\u00e9ra fantastique \" by Jacques Offenbach. The French libretto was written by Jules Barbier, based on three short stories by E. T. A. Hoffmann, who is the protagonist of the story. It was Offenbach's final work, as he died a year before the premiere.",
+            "Mesdames de la Halle\nMesdames de la Halle is an op\u00e9rette bouffe in one act by Jacques Offenbach, with a libretto by Armand Lapointe. It was first performed at the Th\u00e9\u00e2tre des Bouffes Parisiens, Paris on 3 March 1858. and was the first work of Offenbach's at the Bouffes with a chorus and a large cast. G\u00e4nzl describes the piece as \u201ca delicious piece of Parisian bouffonerie\u201d",
+            "Fantasio (Offenbach)\nFantasio is an 1872 op\u00e9ra comique in 3 acts, 4 tableaux with music by Jacques Offenbach. The French libretto by Paul de Musset was closely based on the 1834 play of the same name by his brother Alfred de Musset. The opera found little success in Offenbach's lifetime, was revived in the 1930s and performed in a critical edition in the 2000s.",
+            "La P\u00e9richole\nLa P\u00e9richole (] ) is an op\u00e9ra bouffe in three acts by Jacques Offenbach. Henri Meilhac and Ludovic Hal\u00e9vy wrote the French-language libretto based on the 1829 one act play \"Le carrosse du Saint-Sacrement\" by Prosper M\u00e9rim\u00e9e, which was revived on 13 March 1850 at the Th\u00e9\u00e2tre-Fran\u00e7ais. Offenbach was probably aware of this production, as he conducted the orchestra of the Com\u00e9die-Fran\u00e7aise from around this time. Another theatrical creation that pre-dates Offenbach's op\u00e9ra bouffe and may have influenced the piece is a farce by Desforges and Th\u00e9aulon given on 21 October 1835 at the Th\u00e9\u00e2tre du Palais-Royal.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Stanley Kubrick\nStanley Kubrick ( ; July 26, 1928 \u2013 March 7, 1999) was an American film director, screenwriter, producer, cinematographer, editor, and photographer. He is frequently cited as one of the greatest and most influential directors in cinematic history. His films, which are mostly adaptations of novels or short stories, cover a wide range of genres, and are noted for their realism, dark humor, unique cinematography, extensive set designs, and evocative use of music.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Red Queen (Through the Looking-Glass)\nThe Red Queen is a fictional character in Lewis Carroll's fantasy novel \"Through the Looking-Glass\". She is often confused with the Queen of Hearts from the previous book \"Alice's Adventures in Wonderland\", although the two are very different.",
+            "Jean-Jacques Beineix\nJean-Jacques Beineix (] ; born 8 October 1946) is a French film director and generally seen as the best example of what came to be called the \"cin\u00e9ma du look\". Critic Ginette Vincendeau defined the films made by Beineix and others as \"youth-oriented films with high production values...The \"look\" of the \"cin\u00e9ma du look\" refers to the films' high investment in non-naturalistic, self-conscious aesthetics, notably intense colours and lighting effects. Their spectacular (studio based) and technically brilliant \"mise-en-sc\u00e8ne\" is usually put to the service of romantic plots.\" The \"cin\u00e9ma du look\" included the films of Luc Besson and L\u00e9os Carax. Luc Besson, like Beineix, was much maligned by the critical establishment during the 1980s, while Carax was much admired. In late 2006, Beineix published a first volume of his autobiography, \"Les Chantiers de la gloire\" (in French only). The title alluded to the French title of Stanley Kubrick's film, \"Les Sentiers de la gloire\" (\"Paths of Glory\").",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "The Apple Tree\nThe Apple Tree is a series of three musical playlets with music by Jerry Bock, lyrics by Sheldon Harnick, and a book by Bock and Harnick with contributions from Jerome Coopersmith. Each act has its own storyline, but all three are tied together by a common theme (someone who believes that they want something, but once they get what they wanted they realize that it wasn't what they wanted) and common references, such as references to the color brown. The first act is based on Mark Twain's \"The Diary of Adam and Eve\"; the second act is based on Frank R. Stockton's \"The Lady or the Tiger?\"; the third act is based on Jules Feiffer's \"Passionella\". The working title for the evening of three musicals was \"Come Back! Go Away! I Love You!\"",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\".",
+            "Caladenia\nCaladenia, commonly known as spider orchids, is a genus of 350 species of plants in the orchid family, Orchidaceae. Spider orchids are terrestrial herbs with a single hairy leaf and a hairy stem. The labellum is fringed or toothed in most species and there are small projections called calli on the labellum. The flowers have adaptations to attract particular species of insects for pollination. The genus is divided into three groups on the basis of flower shape, broadly, spider orchids, zebra orchids and cowslip orchids, although other common names are often used. Although they occur in other countries, most are Australian and 136 species occur in Western Australia, making it the most species-rich orchid genus in that state."
+        ],
+        "thoughts": [
+            "Operas composed by Jacques Offenbach:\n- None of the operas listed in the provided information were composed by Jacques Offenbach.",
+            "The films that are adaptations of Jacques Offenbach's operas include \"The Tales of Hoffmann\" and \"Mesdames de la Halle\". These films are based on Offenbach's operas and have been adapted for the screen.",
+            "There are no Hungarian British screenwriters mentioned in the provided information.",
+            "Based on the provided information, there are no films written by Hungarian British screenwriters mentioned in Node 2. Therefore, there are no films to check for this criteria."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This film is an adaption of a Jacques Offenbach's opera that was written by a Hungarian British screenwriter?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the operas composed by Jacques Offenbach.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify adaptions of each opera identified in Node 1 into films.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find adaptations where the screenwriter was Hungarian British.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the question into steps starting from identifying works associated with Jacques Offenbach, followed by filtering those works for film adaptations, and finally checking which adaptations were written by Hungarian British screenwriters. This approach ensures all possible adaptations are reviewed before applying the screenwriter criteria."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "List of compositions by Jacques Offenbach\nThis is a list of musical compositions by Jacques Offenbach (1819\u20131880). Offenbach is principally known for his operettas, of which he composed 98 between 1847 and 1880. He also wrote two op\u00e9ras, \"Die Rheinnixen\" and his unfinished masterpiece \"Les contes d'Hoffmann\".",
+            "Le ch\u00e2teau \u00e0 Toto\nLe ch\u00e2teau \u00e0 Toto (\"Toto\u2019s castle\") is an op\u00e9ra bouffe in three acts of 1868 with music by Jacques Offenbach. The French libretto was by Henri Meilhac and Ludovic Hal\u00e9vy. It is situated in an important sequence of fifteen opera works and revivals by Offenbach between 1867 and 1869.",
+            "Le financier et le savetier\nLe financier et le savetier (The financier and the cobbler) is a one-act op\u00e9rette bouffe of 1856 with words by Hector Cr\u00e9mieux and Edmond About, and music by Jacques Offenbach, based on the poem by La Fontaine. In 1842 Offenbach had set \"The Cobbler and the Financier\" (\"Le Savetier et le Financier\") among a set of six fables of La Fontaine.",
+            "Fantasio (Offenbach)\nFantasio is an 1872 op\u00e9ra comique in 3 acts, 4 tableaux with music by Jacques Offenbach. The French libretto by Paul de Musset was closely based on the 1834 play of the same name by his brother Alfred de Musset. The opera found little success in Offenbach's lifetime, was revived in the 1930s and performed in a critical edition in the 2000s.",
+            "Whittington (opera)\nWhittington is an opera (described in the premiere programme as 'A New Grand Opera Bouffe Feerie, in Four Acts and Nine Tableaux) with music by Jacques Offenbach, based on the legend of \"Dick Whittington and His Cat\". It was premiered in a spectacular production at the Alhambra Theatre, London, on 26 December 1874. \"Whittington\" is the only major work of Offenbach to have received its premiere in London, and came between the incidental music for \"La Haine\" and his third version of \"Genevi\u00e8ve de Brabant\".",
+            "The Tales of Hoffmann\nThe Tales of Hoffmann (French: Les contes d'Hoffmann ) is an \"op\u00e9ra fantastique \" by Jacques Offenbach. The French libretto was written by Jules Barbier, based on three short stories by E. T. A. Hoffmann, who is the protagonist of the story. It was Offenbach's final work, as he died a year before the premiere.",
+            "La P\u00e9richole\nLa P\u00e9richole (] ) is an op\u00e9ra bouffe in three acts by Jacques Offenbach. Henri Meilhac and Ludovic Hal\u00e9vy wrote the French-language libretto based on the 1829 one act play \"Le carrosse du Saint-Sacrement\" by Prosper M\u00e9rim\u00e9e, which was revived on 13 March 1850 at the Th\u00e9\u00e2tre-Fran\u00e7ais. Offenbach was probably aware of this production, as he conducted the orchestra of the Com\u00e9die-Fran\u00e7aise from around this time. Another theatrical creation that pre-dates Offenbach's op\u00e9ra bouffe and may have influenced the piece is a farce by Desforges and Th\u00e9aulon given on 21 October 1835 at the Th\u00e9\u00e2tre du Palais-Royal.",
+            "Emeric Pressburger\nEmeric Pressburger (5 December 19025 February 1988) was a Hungarian British screenwriter, film director, and producer. He is best known for his series of film collaborations with Michael Powell, in an award-winning collaboration partnership known as the Archers and produced a series of films, notably \"49th Parallel\" (1941), \"The Life and Death of Colonel Blimp\" (1943), \"A Matter of Life and Death\" (1946, also called \"Stairway to Heaven\"), \"Black Narcissus\" (1947), \"The Red Shoes\" (1948), and \"The Tales of Hoffmann\" (1951).",
+            "Mesdames de la Halle\nMesdames de la Halle is an op\u00e9rette bouffe in one act by Jacques Offenbach, with a libretto by Armand Lapointe. It was first performed at the Th\u00e9\u00e2tre des Bouffes Parisiens, Paris on 3 March 1858. and was the first work of Offenbach's at the Bouffes with a chorus and a large cast. G\u00e4nzl describes the piece as \u201ca delicious piece of Parisian bouffonerie\u201d",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Stanley Kubrick\nStanley Kubrick ( ; July 26, 1928 \u2013 March 7, 1999) was an American film director, screenwriter, producer, cinematographer, editor, and photographer. He is frequently cited as one of the greatest and most influential directors in cinematic history. His films, which are mostly adaptations of novels or short stories, cover a wide range of genres, and are noted for their realism, dark humor, unique cinematography, extensive set designs, and evocative use of music.",
+            "Miklos Porkolab\nMiklos Porkolab (born March 24, 1939) is a Hungarian-American physicist specializing in plasma physics. He emigrated in 1957 from Hungary to Canada, where he studied at the University of British Columbia (Bachelor, 1963) and then at Stanford University, where he obtained his Master degree in 1964 and his PhD in 1968. He then moved to the Princeton Plasma Physics Laboratory, where he worked as a Senior Research Physicist until 1975. During the following year, Porkolab worked at the Max Planck Institute for Plasma Physics in Garching, Germany, under the auspices of the Humboldt Foundation as a winner of the \"US Senior Scientist Award\". In 1977 he became Professor of Physics at the Massachusetts Institute of Technology, where he later led the Plasma Science and Fusion Center (PSFC) for many years.",
+            "Siege of Buda (1849)\nThe Siege of Buda (Hungarian: \"Buda ostroma\" ) was the siege of the Buda castle, part of the twin capital cities of the Kingdom of Hungary by the Hungarian revolutionary army led by General Art\u00far G\u00f6rgei, during the Hungarian War of Independence. It was part of the Spring Campaign, fought between 4 and 21 May 1849 and ended with the Hungarian capture of the castle by assault on 21 May. Actually it was the only fortress in the 1848-1849 Hungarian Freedom War, which was taken by the assault of the besieging troops of any of the fighting parts, the others being taken only after agreements between the besiegers and the besieged, with the capitulation of the latters, the capture of Buda on 21 May 1849 by assault being the only exception from this. The siege of Buda was also the shortest siege in the Hungarian Freedom War of 1848-1849 (18 days). The senseless bombardment of Pest by Major General Heinrich Hentzi, the Austrian commander of the city of Pest destroyed the classicist buildings from the shores of the Danube, but the other parts of the capitals also suffered heavy damages because of the artillery duels of the two parts. With the capture of the Buda Castle ended the complete liberation of the Hungarian capital cities (Buda and Pest), and thanks to this the second Hungarian revolutionary Government led by Bertalan Szemere together with Lajos Kossuth, the Governor-President of Hungary returned from Debrecen the interim capital of the Hungarian revolution, in the real capital of Hungary. At 21 May 1849, the same day with the capture of Buda, the two emperors: Franz Joseph I of Austria and tsar Nicholas I of Russia signed the final treaty which decided the involvement of 200 000 Russian soldiers (and a 80 000 strong reserve force, in the case that they were needed) in Hungary, in order to help the Habsburg Empire to crush the Hungarian revolution.",
+            "Eugene Wigner\nEugene Paul \"E. P.\" Wigner (Hungarian: \"Wigner Jen\u0151 P\u00e1l\" ; November 17, 1902 \u2013 January 1, 1995), was a Hungarian-American theoretical physicist, engineer and mathematician. He received half of the Nobel Prize in Physics in 1963 \"for his contributions to the theory of the atomic nucleus and the elementary particles, particularly through the discovery and application of fundamental symmetry principles\".",
+            "Danny Boyle\nDanny Boyle (born 20 October 1956) is an English director, producer, screenwriter and theatre director, known for his work on films including \"Shallow Grave\", \"Trainspotting\", \"The Beach\", \"28 Days Later\", \"Sunshine\", \"Slumdog Millionaire\", \"127 Hours\", and \"Steve Jobs\". His debut film \"Shallow Grave\" won the BAFTA Award for Best British Film. Boyle's 2008 film \"Slumdog Millionaire\" was nominated for ten Academy Awards and won eight, including the Academy Award for Best Director. He also won the Golden Globe and BAFTA Award for Best Director. Boyle was presented with the Extraordinary Contribution to Filmmaking Award at the 2008 Austin Film Festival, where he also introduced that year's AFF Audience Award Winner \"Slumdog Millionaire\".",
+            "Alison Joseph\nAlison Joseph (born 1958) is an English crime writer based in London where she was born and raised. She studied French and Philosophy at Leeds University, and started her career as a documentary director, making programmes for Channel 4. The first in her crime series, featuring detective nun Sister Agnes, was published in 1993. She has also written for radio, including adaptations of Georges Simenon\u2019s \"Maigret\". She was Chair of the Crime Writers Association from 2013 to 2015.",
+            "Lili Zoe Ermezei\nLili Zoe Ermezei (born as \u00c9rmezei Lili Zo\u00e9 in Hungary, 1988) is a portrait and conceptual photographer. Her father is the Hungarian conceptual artist, painter and sculptor \u00c9rmezei Zolt\u00e1n (1955\u20131991). She lives and works in Helsinki and Budapest, and is a member of the Hungarian Studio of Young Photographers and the Union of Artist Photographers in Finland."
+        ],
+        "thoughts": [
+            "The operas composed by Jacques Offenbach are:\n\n1. Le ch\u00e2teau \u00e0 Toto\n2. Le financier et le savetier\n3. Fantasio\n4. Whittington\n5. The Tales of Hoffmann\n6. La P\u00e9richole",
+            "1. Le ch\u00e2teau \u00e0 Toto - There are no known film adaptations of this opera.\n2. Le financier et le savetier - There are no known film adaptations of this opera.\n3. Fantasio - There are no known film adaptations of this opera.\n4. Whittington - There are no known film adaptations of this opera.\n5. The Tales of Hoffmann - The opera has been adapted into several films, including a 1951 film directed by Michael Powell and Emeric Pressburger, and a 1981 film directed by Walter Felsenstein.\n6. La P\u00e9richole - There are no known film adaptations of this opera.\n7. Mesdames de la Halle - There are no known film adaptations of this opera.",
+            "Emeric Pressburger, a Hungarian British screenwriter, collaborated with Michael Powell on several award-winning films, including \"49th Parallel\" (1941), \"The Life and Death of Colonel Blimp\" (1943), \"A Matter of Life and Death\" (1946), \"Black Narcissus\" (1947), \"The Red Shoes\" (1948), and \"The Tales of Hoffmann\" (1951). These adaptations showcase Pressburger's talent as a screenwriter and his contributions to British cinema."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This film is an adaption of a Jacques Offenbach's opera that was written by a Hungarian British screenwriter?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify operas composed by Jacques Offenbach.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify Hungarian British screenwriters who have adapted operas into films.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify films that are adaptations of Jacques Offenbach's operas.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Check if any Hungarian British screenwriter wrote a film adaptation for any of Offenbach's operas.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Synthesize information to identify the film adapted by a Hungarian British screenwriter from a Jacques Offenbach opera.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to first gather a list of Jacques Offenbach's operas and identify Hungarian British screenwriters involved in film adaptations. It then checks which films are adaptations of Offenbach's operas and cross-references them with the identified screenwriters to isolate the specific film that fits the given criteria."
+        },
+        "recall": 0.5555555555555556,
+        "retrieved_passages": [
+            "Orthodox Jewish feminism\nOrthodox Jewish feminism (also known as Orthodox feminism amongst Jews) is a movement in Orthodox Judaism which seeks to further the cause of a more egalitarian approach to Jewish practice within the bounds of Jewish Law. The major organizations of this movement is the Jewish Orthodox Feminist Alliance (JOFA) in North America, and Women of the Wall (WOW) and its affiliates in Israel and internationally, known as ICWOW - The International Committee for Women of the Wall. In Israel, the leading Orthodox feminist organization is Kolech (http://www.kolech.org.il), started by Dr. Hannah Kehat. Australia has one Orthodox partnership minyan, Shira Hadasha (http://www.shira.org.au), in Melbourne.",
+            "The Dybbuk: An opera in Yiddish\nThe Dybbuk: An Opera in Yiddish is an opera in three acts by American composer Solomon Epstein. The libretto was adapted by the composer from S. Ansky's 1914 play \"The Dybbuk\" and is apparently the world's first original Yiddish language opera. It was premiered and recorded at the Suzanne Dellal Center for Dance and Theater, Tel Aviv, and at Ben-Gurion University, Beersheba, in May 1999. The opera was staged in a 70 minute abridged version using the composer's piano-vocal score. It has not yet been produced with a full orchestra.",
+            "Rothschild's Violin (opera)\nRothschild's Violin (Russian: \u0421\u043a\u0440\u0438\u043f\u043a\u0430 \u0420\u043e\u0442\u0448\u0438\u043b\u044c\u0434\u0430 ) is a one-act opera by Russian composer Veniamin Fleishman (1913\u20131941) set to the Russian libretto by the composer after the short story \"Rothschild's Fiddle\" by Anton Chekhov.",
+            "Carmen\nCarmen (] ; ] ) is an opera in four acts by French composer Georges Bizet. The libretto was written by Henri Meilhac and Ludovic Hal\u00e9vy, based on a novella of the same title by Prosper M\u00e9rim\u00e9e. The opera was first performed at the Op\u00e9ra-Comique in Paris on 3 March 1875, where its breaking of conventions shocked and scandalized its first audiences.",
+            "H\u00f4tel de P\u00e9kin\nH\u00f4tel de P\u00e9kin \u2013 Dreams for a Dragon Queen is a 2008 English language opera by the Dutch composer Willem Jeths to a libretto by Friso Haverkamp. The opera was commissioned for opening of the opera theatre in the , part of the new in Enschede on 22 November 2008.",
+            "Scott Joiner\nScott Joiner is an American operatic tenor and composer. He created the role of Dickon in the world premiere of Nolan Gasser's \"The Secret Garden\" with the San Francisco Opera and Cal Performances in 2013. He composed the score and starred in the short opera film, \"Connection Lost (The Tinder Opera)\" or \"L'opera di Tinder\", which won Best Score at Ireland's Kerry Film Festival. The miniature one-act opera received its live stage premiere by Opera Carolina in November 2016 as part of National Opera Week. Joiner and Tinder Opera Co-creator, Adam Taylor (writer/director) were featured on NPR\u2019s \"All Things Considered\" in 2017.",
+            "Louise (opera)\nLouise is an opera (\"roman musical\" ) in four acts by Gustave Charpentier to an original French libretto by the composer, with some contributions by Saint-Pol-Roux, a symbolist poet and inspiration of the surrealists.",
+            "The Hero (opera)\nThe Hero is a two-act opera by Italian-American composer Gian Carlo Menotti. Commissioned by the Opera Company of Philadelphia, the work premiered at the Philadelphia Academy of Music on June 1, 1976. At this point of his career, Menotti's style of composition, which rejected the avant-garde, was out of favor with the classical music world. \"Time\" stated in its review of the opera, \"Most of Menotti's music is passable Puccini: melodic, easy to take\u2014and totally beside the point in 1976.\"",
+            "The Tales of Hoffmann (film)\nThe Tales of Hoffmann is a 1951 British Technicolor film adaptation of Jacques Offenbach's opera \"The Tales of Hoffmann\", written, produced and directed by the team of Michael Powell and Emeric Pressburger working under the umbrella of their production company, The Archers.",
+            "The Last King of Scotland (film)\nThe Last King of Scotland is a 2006 historical drama film based on Giles Foden's novel \"The Last King of Scotland\" (1998), adapted by screenwriters Peter Morgan and Jeremy Brock, and directed by Kevin Macdonald. The film was a co-production between companies from the United Kingdom and Germany.",
+            "The Tales of Hoffmann\nThe Tales of Hoffmann (French: Les contes d'Hoffmann ) is an \"op\u00e9ra fantastique \" by Jacques Offenbach. The French libretto was written by Jules Barbier, based on three short stories by E. T. A. Hoffmann, who is the protagonist of the story. It was Offenbach's final work, as he died a year before the premiere.",
+            "Mesdames de la Halle\nMesdames de la Halle is an op\u00e9rette bouffe in one act by Jacques Offenbach, with a libretto by Armand Lapointe. It was first performed at the Th\u00e9\u00e2tre des Bouffes Parisiens, Paris on 3 March 1858. and was the first work of Offenbach's at the Bouffes with a chorus and a large cast. G\u00e4nzl describes the piece as \u201ca delicious piece of Parisian bouffonerie\u201d",
+            "Fantasio (Offenbach)\nFantasio is an 1872 op\u00e9ra comique in 3 acts, 4 tableaux with music by Jacques Offenbach. The French libretto by Paul de Musset was closely based on the 1834 play of the same name by his brother Alfred de Musset. The opera found little success in Offenbach's lifetime, was revived in the 1930s and performed in a critical edition in the 2000s.",
+            "Stephen King\nStephen Edwin King (born September 21, 1947) is an American author of horror, supernatural fiction, suspense, science fiction, and fantasy. His books have sold more than 350 million copies, many of which have been adapted into feature films, miniseries, television series, and comic books. King has published 54 novels, including seven under the pen name Richard Bachman, and six non-fiction books. He has written nearly 200 short stories, most of which have been collected in book collections. Many of his stories are set in his home state of Maine. His novella \"Rita Hayworth and Shawshank Redemption\" was the basis for the film \"The Shawshank Redemption\" which is widely regarded as one of the greatest films of all time.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "La P\u00e9richole\nLa P\u00e9richole (] ) is an op\u00e9ra bouffe in three acts by Jacques Offenbach. Henri Meilhac and Ludovic Hal\u00e9vy wrote the French-language libretto based on the 1829 one act play \"Le carrosse du Saint-Sacrement\" by Prosper M\u00e9rim\u00e9e, which was revived on 13 March 1850 at the Th\u00e9\u00e2tre-Fran\u00e7ais. Offenbach was probably aware of this production, as he conducted the orchestra of the Com\u00e9die-Fran\u00e7aise from around this time. Another theatrical creation that pre-dates Offenbach's op\u00e9ra bouffe and may have influenced the piece is a farce by Desforges and Th\u00e9aulon given on 21 October 1835 at the Th\u00e9\u00e2tre du Palais-Royal.",
+            "Stanley Kubrick\nStanley Kubrick ( ; July 26, 1928 \u2013 March 7, 1999) was an American film director, screenwriter, producer, cinematographer, editor, and photographer. He is frequently cited as one of the greatest and most influential directors in cinematic history. His films, which are mostly adaptations of novels or short stories, cover a wide range of genres, and are noted for their realism, dark humor, unique cinematography, extensive set designs, and evocative use of music.",
+            "Emeric Pressburger\nEmeric Pressburger (5 December 19025 February 1988) was a Hungarian British screenwriter, film director, and producer. He is best known for his series of film collaborations with Michael Powell, in an award-winning collaboration partnership known as the Archers and produced a series of films, notably \"49th Parallel\" (1941), \"The Life and Death of Colonel Blimp\" (1943), \"A Matter of Life and Death\" (1946, also called \"Stairway to Heaven\"), \"Black Narcissus\" (1947), \"The Red Shoes\" (1948), and \"The Tales of Hoffmann\" (1951).",
+            "Jean-Jacques Beineix\nJean-Jacques Beineix (] ; born 8 October 1946) is a French film director and generally seen as the best example of what came to be called the \"cin\u00e9ma du look\". Critic Ginette Vincendeau defined the films made by Beineix and others as \"youth-oriented films with high production values...The \"look\" of the \"cin\u00e9ma du look\" refers to the films' high investment in non-naturalistic, self-conscious aesthetics, notably intense colours and lighting effects. Their spectacular (studio based) and technically brilliant \"mise-en-sc\u00e8ne\" is usually put to the service of romantic plots.\" The \"cin\u00e9ma du look\" included the films of Luc Besson and L\u00e9os Carax. Luc Besson, like Beineix, was much maligned by the critical establishment during the 1980s, while Carax was much admired. In late 2006, Beineix published a first volume of his autobiography, \"Les Chantiers de la gloire\" (in French only). The title alluded to the French title of Stanley Kubrick's film, \"Les Sentiers de la gloire\" (\"Paths of Glory\").",
+            "Alan Sillitoe\nAlan Sillitoe (4 March 192825 April 2010) was an English writer and one of the so-called \"angry young men\" of the 1950s. He disliked the label, as did most of the other writers to whom it was applied. He is best known for his debut novel \"Saturday Night and Sunday Morning\" and early short story \"The Loneliness of the Long Distance Runner\", both of which were adapted into films.",
+            "A Taste of Honey\nA Taste of Honey is the first play by the British dramatist Shelagh Delaney, written when she was 18. It was initially intended as a novel, but she turned it into a play because she hoped to revitalise British theatre and to address social issues that she felt were not being presented. The play was first produced by Joan Littlewood's Theatre Workshop and was premiered at the Theatre Royal Stratford East, a small fringe theatre in London, on 27 May 1958. The production then transferred to the larger Wyndham's Theatre in the West End on 10 February 1959. The play was adapted into an award-winning film of the same title in 1961.",
+            "The Witches (1966 film)\nThe Witches (US: \"The Devil's Own\") is a 1966 British horror film made by Hammer Films. It was adapted by Nigel Kneale from the novel \"The Devil's Own\" by Norah Lofts, published under the pseudonym Peter Curtis. It was directed by Cyril Frankel and starred Joan Fontaine (in her final feature-film performance), Alec McCowen, Kay Walsh, Ann Bell, Ingrid Boulting (billed as Ingrid Brett) and Gwen Ffrangcon Davies. This was the final big-screen film role for Fontaine.",
+            "Christopher Guest\nChristopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer, musician, director, actor, and comedian who holds dual British and American citizenship. Guest is most widely known in Hollywood for having written, directed and starred in his series of comedy films shot in mock-documentary (mockumentary) style. Many scenes and character backgrounds in Guest's films are written and directed, although actors have no rehearsal time and the ensemble improvise scenes while filming them. The series of films began with \"This Is Spinal Tap\" (directed by Rob Reiner), and continued with \"Waiting for Guffman\", \"Best In Show\", \"A Mighty Wind\", \"For Your Consideration\", and \"Mascots\".",
+            "Caladenia\nCaladenia, commonly known as spider orchids, is a genus of 350 species of plants in the orchid family, Orchidaceae. Spider orchids are terrestrial herbs with a single hairy leaf and a hairy stem. The labellum is fringed or toothed in most species and there are small projections called calli on the labellum. The flowers have adaptations to attract particular species of insects for pollination. The genus is divided into three groups on the basis of flower shape, broadly, spider orchids, zebra orchids and cowslip orchids, although other common names are often used. Although they occur in other countries, most are Australian and 136 species occur in Western Australia, making it the most species-rich orchid genus in that state."
+        ],
+        "thoughts": [
+            "Emeric Pressburger is the Hungarian British screenwriter who has adapted operas into films, particularly in his collaborations with Michael Powell, including the film \"The Tales of Hoffmann\" (1951).",
+            "Operas composed by Jacques Offenbach:\n- None of the operas listed in the provided information were composed by Jacques Offenbach.",
+            "The films that are adaptations of Jacques Offenbach's operas are \"The Tales of Hoffmann\" and \"Mesdames de la Halle\".",
+            "Yes, a Hungarian British screenwriter, Emeric Pressburger, has written a film adaptation for one of Offenbach's operas. He adapted \"The Tales of Hoffmann\" into a film in 1951.",
+            "The film adapted by Hungarian British screenwriter Emeric Pressburger from a Jacques Offenbach opera is \"The Tales of Hoffmann.\" This film adaptation was released in 1951."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This film is an adaption of a Jacques Offenbach's opera that was written by a Hungarian British screenwriter?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the opera written by Jacques Offenbach that has been adapted into films.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "List films that are adaptations of Jacques Offenbach operas identified in the previous step.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the names of screenwriters for each film adaptation identified.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Check if any of the screenwriters identified are Hungarian British.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Select the film that has a screenwriter who is Hungarian British.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "To determine which film adaptation of a Jacques Offenbach opera was written by a Hungarian British screenwriter, we first need to identify all operas by Offenbach that have been adapted into films. Then, for each film adaptation, we retrieve the screenwriter details. After identifying the screenwriters, we check if any of them are Hungarian British. Based on this information, the film with a Hungarian British screenwriter is identified as the answer. This approach ensures that all potential films are considered and the screenwriter's nationality is verified before concluding."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "The Tales of Hoffmann\nThe Tales of Hoffmann (French: Les contes d'Hoffmann ) is an \"op\u00e9ra fantastique \" by Jacques Offenbach. The French libretto was written by Jules Barbier, based on three short stories by E. T. A. Hoffmann, who is the protagonist of the story. It was Offenbach's final work, as he died a year before the premiere.",
+            "The Tales of Hoffmann (film)\nThe Tales of Hoffmann is a 1951 British Technicolor film adaptation of Jacques Offenbach's opera \"The Tales of Hoffmann\", written, produced and directed by the team of Michael Powell and Emeric Pressburger working under the umbrella of their production company, The Archers.",
+            "List of compositions by Jacques Offenbach\nThis is a list of musical compositions by Jacques Offenbach (1819\u20131880). Offenbach is principally known for his operettas, of which he composed 98 between 1847 and 1880. He also wrote two op\u00e9ras, \"Die Rheinnixen\" and his unfinished masterpiece \"Les contes d'Hoffmann\".",
+            "The SpongeBob Movie: Sponge Out of Water\nThe SpongeBob Movie: Sponge Out of Water is a 2015 American 3D live-action/animated comedy film based on the animated television series \"SpongeBob SquarePants\". A stand-alone sequel to \"The SpongeBob SquarePants Movie\" (2004), it was directed by former series showrunner Paul Tibbitt in his directorial debut, with live-action sequences directed by Mike Mitchell. It was the first film to be produced by Paramount Animation and second film in the \"SpongeBob SquarePants\" film series. The film stars Antonio Banderas and features the show's regular voice cast, who returned to reprise their respective roles from the series and the previous film. The plot follows a pirate called Burger-Beard, who steals the Krabby Patty secret formula using a magical book that makes any text written upon it come true. SpongeBob and his friends must travel to the surface to confront Burger-Beard and get the formula back.",
+            "The Last King of Scotland (film)\nThe Last King of Scotland is a 2006 historical drama film based on Giles Foden's novel \"The Last King of Scotland\" (1998), adapted by screenwriters Peter Morgan and Jeremy Brock, and directed by Kevin Macdonald. The film was a co-production between companies from the United Kingdom and Germany.",
+            "Carmen (novella)\nCarmen is a novella by Prosper M\u00e9rim\u00e9e, written and first published in 1845. It has been adapted into a number of dramatic works, including the famous opera of the same name by Georges Bizet.",
+            "Campfire Tales (1997 film)\nCampfire Tales is a 1997 American anthology horror film directed by Matt Cooper, Martin Kunert, and David Semel. The film is made up of three individual short segments that are presented in an overarching narrative, told by a group of friends around a fire after they crash their car in the woods. It stars James Marsden, Christine Taylor, Amy Smart, and Ron Livingston. The film was released direct to video in 1998 through New Line Cinema.",
+            "South Pacific (1958 film)\nSouth Pacific is a 1958 American romantic musical film based on the Rodgers and Hammerstein musical \"South Pacific\", which in turn based on James A. Michener's short-story collection \"Tales of the South Pacific\". The film, directed by Joshua Logan, starred Rossano Brazzi, Mitzi Gaynor, John Kerr and Ray Walston in the leading roles with Juanita Hall as Bloody Mary, the part that she had played in the original stage production. The film was nominated for three Academy Awards, winning the Academy Award for Best Sound for Fred Hynes.",
+            "Fantasio (Offenbach)\nFantasio is an 1872 op\u00e9ra comique in 3 acts, 4 tableaux with music by Jacques Offenbach. The French libretto by Paul de Musset was closely based on the 1834 play of the same name by his brother Alfred de Musset. The opera found little success in Offenbach's lifetime, was revived in the 1930s and performed in a critical edition in the 2000s.",
+            "Emeric Pressburger\nEmeric Pressburger (5 December 19025 February 1988) was a Hungarian British screenwriter, film director, and producer. He is best known for his series of film collaborations with Michael Powell, in an award-winning collaboration partnership known as the Archers and produced a series of films, notably \"49th Parallel\" (1941), \"The Life and Death of Colonel Blimp\" (1943), \"A Matter of Life and Death\" (1946, also called \"Stairway to Heaven\"), \"Black Narcissus\" (1947), \"The Red Shoes\" (1948), and \"The Tales of Hoffmann\" (1951).",
+            "The Well of the World's End\nThe Well of the World's End is an Anglo-Scottish Border fairy tale, recorded in the Scottish Lowlands, collected by Joseph Jacobs in \"English Fairy Tales\". His source was \"The Complaynt of Scotland\",and he notes the tale's similarity to the German \"Frog Prince\". Like that tale, it is Aarne-Thompson type 440, \"The Frog King\" or \"Iron Henry\".",
+            "Le ch\u00e2teau \u00e0 Toto\nLe ch\u00e2teau \u00e0 Toto (\"Toto\u2019s castle\") is an op\u00e9ra bouffe in three acts of 1868 with music by Jacques Offenbach. The French libretto was by Henri Meilhac and Ludovic Hal\u00e9vy. It is situated in an important sequence of fifteen opera works and revivals by Offenbach between 1867 and 1869.",
+            "Whittington (opera)\nWhittington is an opera (described in the premiere programme as 'A New Grand Opera Bouffe Feerie, in Four Acts and Nine Tableaux) with music by Jacques Offenbach, based on the legend of \"Dick Whittington and His Cat\". It was premiered in a spectacular production at the Alhambra Theatre, London, on 26 December 1874. \"Whittington\" is the only major work of Offenbach to have received its premiere in London, and came between the incidental music for \"La Haine\" and his third version of \"Genevi\u00e8ve de Brabant\".",
+            "Jean-Jacques Beineix\nJean-Jacques Beineix (] ; born 8 October 1946) is a French film director and generally seen as the best example of what came to be called the \"cin\u00e9ma du look\". Critic Ginette Vincendeau defined the films made by Beineix and others as \"youth-oriented films with high production values...The \"look\" of the \"cin\u00e9ma du look\" refers to the films' high investment in non-naturalistic, self-conscious aesthetics, notably intense colours and lighting effects. Their spectacular (studio based) and technically brilliant \"mise-en-sc\u00e8ne\" is usually put to the service of romantic plots.\" The \"cin\u00e9ma du look\" included the films of Luc Besson and L\u00e9os Carax. Luc Besson, like Beineix, was much maligned by the critical establishment during the 1980s, while Carax was much admired. In late 2006, Beineix published a first volume of his autobiography, \"Les Chantiers de la gloire\" (in French only). The title alluded to the French title of Stanley Kubrick's film, \"Les Sentiers de la gloire\" (\"Paths of Glory\").",
+            "Stephen King\nStephen Edwin King (born September 21, 1947) is an American author of horror, supernatural fiction, suspense, science fiction, and fantasy. His books have sold more than 350 million copies, many of which have been adapted into feature films, miniseries, television series, and comic books. King has published 54 novels, including seven under the pen name Richard Bachman, and six non-fiction books. He has written nearly 200 short stories, most of which have been collected in book collections. Many of his stories are set in his home state of Maine. His novella \"Rita Hayworth and Shawshank Redemption\" was the basis for the film \"The Shawshank Redemption\" which is widely regarded as one of the greatest films of all time.",
+            "Nineteen Eighty-Four in other media\nGeorge Orwell's dystopian political novel \"Nineteen Eighty-Four\" has been adapted for the cinema, radio, television, theatre, opera and ballet.",
+            "La P\u00e9richole\nLa P\u00e9richole (] ) is an op\u00e9ra bouffe in three acts by Jacques Offenbach. Henri Meilhac and Ludovic Hal\u00e9vy wrote the French-language libretto based on the 1829 one act play \"Le carrosse du Saint-Sacrement\" by Prosper M\u00e9rim\u00e9e, which was revived on 13 March 1850 at the Th\u00e9\u00e2tre-Fran\u00e7ais. Offenbach was probably aware of this production, as he conducted the orchestra of the Com\u00e9die-Fran\u00e7aise from around this time. Another theatrical creation that pre-dates Offenbach's op\u00e9ra bouffe and may have influenced the piece is a farce by Desforges and Th\u00e9aulon given on 21 October 1835 at the Th\u00e9\u00e2tre du Palais-Royal.",
+            "I See the Light\n\"I See the Light\" is a song written by composer Alan Menken and lyricist Glenn Slater for Walt Disney Animation Studios' 50th animated feature film \"Tangled\" (2010). A duet originally recorded by American recording artist and actress Mandy Moore and American actor Zachary Levi in their respective film roles as main characters Rapunzel and Flynn Rider, the folk-inspired pop ballad serves as both the film's love and theme song. Lyrically, \"I See the Light\" describes the developing romantic relationship between Rapunzel and Flynn, and is featured as the seventh track on the film's soundtrack album."
+        ],
+        "thoughts": [
+            "The opera written by Jacques Offenbach that has been adapted into films is \"The Tales of Hoffmann\" (French: Les contes d'Hoffmann). This \"op\u00e9ra fantastique\" has been adapted into various films and is based on three short stories by E. T. A. Hoffmann.",
+            "1. The Tales of Hoffmann (1951) - A British Technicolor film adaptation of Jacques Offenbach's opera \"The Tales of Hoffmann\", written, produced and directed by Michael Powell and Emeric Pressburger.\n2. Fantasio - Although not a film adaptation, it is an op\u00e9ra comique in 3 acts, 4 tableaux with music by Jacques Offenbach.\n3. La P\u00e9richole - Another op\u00e9ra bouffe in three acts by Jacques Offenbach, which has not been adapted into a film.\n4. Le ch\u00e2teau \u00e0 Toto - An op\u00e9ra bouffe in three acts of 1868 with music by Jacques Offenbach, which has not been adapted into a film.",
+            "The screenwriters for each film adaptation are as follows:\n\n- The Tales of Hoffmann (film): Michael Powell and Emeric Pressburger\n- I See the Light (from Tangled): Alan Menken and Glenn Slater\n- South Pacific (1958 film): James A. Michener (original short-story collection)\n- The Last King of Scotland (film): Peter Morgan and Jeremy Brock\n- Campfire Tales (1997 film): Matt Cooper, Martin Kunert, and David Semel\n- The SpongeBob Movie: Sponge Out of Water: Paul Tibbitt (animated sequences) and Mike Mitchell (live-action sequences)",
+            "Emeric Pressburger is the only screenwriter identified in the provided information who is Hungarian British.",
+            "The film \"The Tales of Hoffmann (1951)\" has a screenwriter who is Hungarian British, Emeric Pressburger."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This film is an adaption of a Jacques Offenbach's opera that was written by a Hungarian British screenwriter?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify which operas were composed by Jacques Offenbach.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify notable film adaptations of Jacques Offenbach's operas.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find a list of Hungarian British screenwriters.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "For each film adaptation identified, check if it was written by a Hungarian British screenwriter.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Provide the name of the film adaptation that meets the criteria: based on an Offenbach opera and written by a Hungarian British screenwriter.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph first identifies Jacques Offenbach's operas since the film must be an adaptation of one of these works. In parallel, a list of Hungarian British screenwriters is obtained. Then, the graph identifies film adaptations of Offenbach's operas. The films are cross-referenced with the list of screenwriters to identify any written by a Hungarian British screenwriter. Finally, the specific film that fits the entire description is provided."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "List of compositions by Jacques Offenbach\nThis is a list of musical compositions by Jacques Offenbach (1819\u20131880). Offenbach is principally known for his operettas, of which he composed 98 between 1847 and 1880. He also wrote two op\u00e9ras, \"Die Rheinnixen\" and his unfinished masterpiece \"Les contes d'Hoffmann\".",
+            "The Tales of Hoffmann (film)\nThe Tales of Hoffmann is a 1951 British Technicolor film adaptation of Jacques Offenbach's opera \"The Tales of Hoffmann\", written, produced and directed by the team of Michael Powell and Emeric Pressburger working under the umbrella of their production company, The Archers.",
+            "Music festival\nA music festival is a festival oriented towards music that is sometimes presented with a theme such as musical genre, nationality, or locality of musicians, or holiday. They are commonly held outdoors, and are often inclusive of other attractions such as food and merchandise vending, performance art, and social activities. Many festivals are annual, or repeat at some other interval. Some, including many rock festivals, are held only once. Some festivals are organized as for-profit concerts and others are benefits for a specific cause. Another type of music festival is the educative type, organized annually in local communities, regionally, or nationally, for the benefit of amateur musicians of all ages and grades of achievement.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "White Knights of the Ku Klux Klan\nThe White Knights of the Ku Klux Klan are considered the most militant as well as the most violent chapter of the Ku Klux Klan in history. They originated in Mississippi in the early 1960s under the leadership of Samuel Bowers, its first Grand Wizard. The White Knights of Mississippi were formed in 1964, and they included roughly 200 members of the Original Knights of Louisiana. The White Knights were not interested in holding public demonstrations or in letting any information about themselves get out to the masses. Similar to the United Klans of America (UKA), the White Knights of Mississippi were very secretive about their group. Within a year, their membership was up to around six thousand, and they had Klaverns in over half of the counties in Mississippi. But by 1967, the number of active members had shrunk to around four hundred.",
+            "Horatio (Hamlet)\nHoratio is a character in William Shakespeare's tragedy \"Hamlet\". Horatio's origins are unknown, although he was present on the battlefield when Hamlet's father defeated 'the ambitious Norway', Fortinbras (the king), and attended Wittenberg University with Prince Hamlet. Horatio is evidently not directly involved in the intrigue at the Danish court; thus, he makes a good foil or sounding board for Prince Hamlet. He is often not identified as any specific court position, but simply as \"friend to Hamlet.\"",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Kermode bear\nThe Kermode bear (\"Ursus americanus kermodei\"), also known as the \"spirit bear\" (particularly in British Columbia), is a rare subspecies of the American black bear living in the Central and North Coast regions of British Columbia, Canada. It is the official provincial mammal of British Columbia. It is noted for about one-tenth of its population having white or cream-coloured coats like polar bears. This colour is due to a double recessive gene unique in the subspecies. They are not albinos and not any more related to polar bears or the \"blonde\" brown bears of Alaska's \"ABC Islands\" than other members of their species. Sometimes, a mother black bear can have a white cub.",
+            "All That You Are (Goo Goo Dolls song)\n\"All That You Are\" is a song recorded by American alternative rock band the Goo Goo Dolls included in the \"\" , which was released on June 14, 2011. \"All That You Are\" was released to the Apple iTunes Store on June 14, 2011, the same day the soundtrack was released. Also Linkin Park and Paramore released their singles for the film, \"Iridescent\" and \"Monster\" respectively. This is the second song the Goo Goo Dolls have made for a \"Transformers\" movie with the first being \"Before It's Too Late (Sam and Mikaela's Theme), which was made for \"Transformers\".",
+            "The Tales of Hoffmann\nThe Tales of Hoffmann (French: Les contes d'Hoffmann ) is an \"op\u00e9ra fantastique \" by Jacques Offenbach. The French libretto was written by Jules Barbier, based on three short stories by E. T. A. Hoffmann, who is the protagonist of the story. It was Offenbach's final work, as he died a year before the premiere.",
+            "Le ch\u00e2teau \u00e0 Toto\nLe ch\u00e2teau \u00e0 Toto (\"Toto\u2019s castle\") is an op\u00e9ra bouffe in three acts of 1868 with music by Jacques Offenbach. The French libretto was by Henri Meilhac and Ludovic Hal\u00e9vy. It is situated in an important sequence of fifteen opera works and revivals by Offenbach between 1867 and 1869.",
+            "Emeric Pressburger\nEmeric Pressburger (5 December 19025 February 1988) was a Hungarian British screenwriter, film director, and producer. He is best known for his series of film collaborations with Michael Powell, in an award-winning collaboration partnership known as the Archers and produced a series of films, notably \"49th Parallel\" (1941), \"The Life and Death of Colonel Blimp\" (1943), \"A Matter of Life and Death\" (1946, also called \"Stairway to Heaven\"), \"Black Narcissus\" (1947), \"The Red Shoes\" (1948), and \"The Tales of Hoffmann\" (1951).",
+            "Le financier et le savetier\nLe financier et le savetier (The financier and the cobbler) is a one-act op\u00e9rette bouffe of 1856 with words by Hector Cr\u00e9mieux and Edmond About, and music by Jacques Offenbach, based on the poem by La Fontaine. In 1842 Offenbach had set \"The Cobbler and the Financier\" (\"Le Savetier et le Financier\") among a set of six fables of La Fontaine.",
+            "Fantasio (Offenbach)\nFantasio is an 1872 op\u00e9ra comique in 3 acts, 4 tableaux with music by Jacques Offenbach. The French libretto by Paul de Musset was closely based on the 1834 play of the same name by his brother Alfred de Musset. The opera found little success in Offenbach's lifetime, was revived in the 1930s and performed in a critical edition in the 2000s.",
+            "Simon Bent\nSimon Bent is a British screenwriter and playwright, notable for work including BBC TV drama \"\" (2006), the screenplay for the feature film \"Christie Malry's Own Double-Entry\" (2000), and the Joe Orton biographical play \"Prick Up Your Ears\" based on John Lahr's book.",
+            "Whittington (opera)\nWhittington is an opera (described in the premiere programme as 'A New Grand Opera Bouffe Feerie, in Four Acts and Nine Tableaux) with music by Jacques Offenbach, based on the legend of \"Dick Whittington and His Cat\". It was premiered in a spectacular production at the Alhambra Theatre, London, on 26 December 1874. \"Whittington\" is the only major work of Offenbach to have received its premiere in London, and came between the incidental music for \"La Haine\" and his third version of \"Genevi\u00e8ve de Brabant\".",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "Mesdames de la Halle\nMesdames de la Halle is an op\u00e9rette bouffe in one act by Jacques Offenbach, with a libretto by Armand Lapointe. It was first performed at the Th\u00e9\u00e2tre des Bouffes Parisiens, Paris on 3 March 1858. and was the first work of Offenbach's at the Bouffes with a chorus and a large cast. G\u00e4nzl describes the piece as \u201ca delicious piece of Parisian bouffonerie\u201d",
+            "La P\u00e9richole\nLa P\u00e9richole (] ) is an op\u00e9ra bouffe in three acts by Jacques Offenbach. Henri Meilhac and Ludovic Hal\u00e9vy wrote the French-language libretto based on the 1829 one act play \"Le carrosse du Saint-Sacrement\" by Prosper M\u00e9rim\u00e9e, which was revived on 13 March 1850 at the Th\u00e9\u00e2tre-Fran\u00e7ais. Offenbach was probably aware of this production, as he conducted the orchestra of the Com\u00e9die-Fran\u00e7aise from around this time. Another theatrical creation that pre-dates Offenbach's op\u00e9ra bouffe and may have influenced the piece is a farce by Desforges and Th\u00e9aulon given on 21 October 1835 at the Th\u00e9\u00e2tre du Palais-Royal.",
+            "Stanley Kubrick\nStanley Kubrick ( ; July 26, 1928 \u2013 March 7, 1999) was an American film director, screenwriter, producer, cinematographer, editor, and photographer. He is frequently cited as one of the greatest and most influential directors in cinematic history. His films, which are mostly adaptations of novels or short stories, cover a wide range of genres, and are noted for their realism, dark humor, unique cinematography, extensive set designs, and evocative use of music.",
+            "Cruella de Vil\nCruella de Vil (spelled de Vil in the novel, spelled De Vil by Disney) is a character who appeared in Dodie Smith's 1956 novel \"The Hundred and One Dalmatians\", Disney's animated film adaptations \"101 Dalmatians\" and \"\", and Disney's live-action film adaptations \"101 Dalmatians\" and \"102 Dalmatians\" as the main antagonist.",
+            "James Brolin\nJames Brolin ( ; born Craig Kenneth Bruderlin, July 18, 1940) is an American actor, producer, and director, best known for his roles in film and television, including sitcoms and soap operas. He is the father of actor Josh Brolin and husband of singer/actress Barbra Streisand."
+        ],
+        "thoughts": [
+            "Operas composed by Jacques Offenbach:\n1. Die Rheinnixen\n2. Les contes d'Hoffmann",
+            "Notable film adaptations of Jacques Offenbach's operas include \"The Tales of Hoffmann\" (1951), a British Technicolor film directed by Michael Powell and Emeric Pressburger, and \"Fantasio\" (1872), an op\u00e9ra comique adapted into a film. These adaptations bring Offenbach's operatic works to a wider audience through the medium of film.",
+            "I'm sorry, but I couldn't find a list of Hungarian British screenwriters.",
+            "The film adaptation of \"The Tales of Hoffmann\" was written, produced, and directed by the team of Michael Powell and Emeric Pressburger, a Hungarian British screenwriter. Therefore, the film adaptation was written by a Hungarian British screenwriter.",
+            "The film adaptation that meets the criteria is \"The Tales of Hoffmann\" written by Hungarian British screenwriter Emeric Pressburger."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This film is an adaption of a Jacques Offenbach's opera that was written by a Hungarian British screenwriter?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the operas composed by Jacques Offenbach.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which of Jacques Offenbach's operas have been adapted into films.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify Hungarian British screenwriters who have written film adaptations.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Cross-reference films adapted from Offenbach's operas with works written by Hungarian British screenwriters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Select the film that matches the criteria of being an adaptation of Offenbach's opera and written by a Hungarian British screenwriter.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to identify which film meets the criteria provided in the query. It begins by listing all operas by Jacques Offenbach, then narrows down to those which were adapted into films. Simultaneously, it identifies Hungarian British screenwriters involved in adaptations. By cross-referencing the results, the graph pinpoints the specific film that fulfills both conditions: being based on an Offenbach opera and having been adapted by a Hungarian British screenwriter."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "List of compositions by Jacques Offenbach\nThis is a list of musical compositions by Jacques Offenbach (1819\u20131880). Offenbach is principally known for his operettas, of which he composed 98 between 1847 and 1880. He also wrote two op\u00e9ras, \"Die Rheinnixen\" and his unfinished masterpiece \"Les contes d'Hoffmann\".",
+            "Le ch\u00e2teau \u00e0 Toto\nLe ch\u00e2teau \u00e0 Toto (\"Toto\u2019s castle\") is an op\u00e9ra bouffe in three acts of 1868 with music by Jacques Offenbach. The French libretto was by Henri Meilhac and Ludovic Hal\u00e9vy. It is situated in an important sequence of fifteen opera works and revivals by Offenbach between 1867 and 1869.",
+            "Le financier et le savetier\nLe financier et le savetier (The financier and the cobbler) is a one-act op\u00e9rette bouffe of 1856 with words by Hector Cr\u00e9mieux and Edmond About, and music by Jacques Offenbach, based on the poem by La Fontaine. In 1842 Offenbach had set \"The Cobbler and the Financier\" (\"Le Savetier et le Financier\") among a set of six fables of La Fontaine.",
+            "Fantasio (Offenbach)\nFantasio is an 1872 op\u00e9ra comique in 3 acts, 4 tableaux with music by Jacques Offenbach. The French libretto by Paul de Musset was closely based on the 1834 play of the same name by his brother Alfred de Musset. The opera found little success in Offenbach's lifetime, was revived in the 1930s and performed in a critical edition in the 2000s.",
+            "The Tales of Hoffmann (film)\nThe Tales of Hoffmann is a 1951 British Technicolor film adaptation of Jacques Offenbach's opera \"The Tales of Hoffmann\", written, produced and directed by the team of Michael Powell and Emeric Pressburger working under the umbrella of their production company, The Archers.",
+            "Whittington (opera)\nWhittington is an opera (described in the premiere programme as 'A New Grand Opera Bouffe Feerie, in Four Acts and Nine Tableaux) with music by Jacques Offenbach, based on the legend of \"Dick Whittington and His Cat\". It was premiered in a spectacular production at the Alhambra Theatre, London, on 26 December 1874. \"Whittington\" is the only major work of Offenbach to have received its premiere in London, and came between the incidental music for \"La Haine\" and his third version of \"Genevi\u00e8ve de Brabant\".",
+            "Caladenia\nCaladenia, commonly known as spider orchids, is a genus of 350 species of plants in the orchid family, Orchidaceae. Spider orchids are terrestrial herbs with a single hairy leaf and a hairy stem. The labellum is fringed or toothed in most species and there are small projections called calli on the labellum. The flowers have adaptations to attract particular species of insects for pollination. The genus is divided into three groups on the basis of flower shape, broadly, spider orchids, zebra orchids and cowslip orchids, although other common names are often used. Although they occur in other countries, most are Australian and 136 species occur in Western Australia, making it the most species-rich orchid genus in that state.",
+            "The Tales of Hoffmann\nThe Tales of Hoffmann (French: Les contes d'Hoffmann ) is an \"op\u00e9ra fantastique \" by Jacques Offenbach. The French libretto was written by Jules Barbier, based on three short stories by E. T. A. Hoffmann, who is the protagonist of the story. It was Offenbach's final work, as he died a year before the premiere.",
+            "La P\u00e9richole\nLa P\u00e9richole (] ) is an op\u00e9ra bouffe in three acts by Jacques Offenbach. Henri Meilhac and Ludovic Hal\u00e9vy wrote the French-language libretto based on the 1829 one act play \"Le carrosse du Saint-Sacrement\" by Prosper M\u00e9rim\u00e9e, which was revived on 13 March 1850 at the Th\u00e9\u00e2tre-Fran\u00e7ais. Offenbach was probably aware of this production, as he conducted the orchestra of the Com\u00e9die-Fran\u00e7aise from around this time. Another theatrical creation that pre-dates Offenbach's op\u00e9ra bouffe and may have influenced the piece is a farce by Desforges and Th\u00e9aulon given on 21 October 1835 at the Th\u00e9\u00e2tre du Palais-Royal.",
+            "Cruella de Vil\nCruella de Vil (spelled de Vil in the novel, spelled De Vil by Disney) is a character who appeared in Dodie Smith's 1956 novel \"The Hundred and One Dalmatians\", Disney's animated film adaptations \"101 Dalmatians\" and \"\", and Disney's live-action film adaptations \"101 Dalmatians\" and \"102 Dalmatians\" as the main antagonist.",
+            "Mesdames de la Halle\nMesdames de la Halle is an op\u00e9rette bouffe in one act by Jacques Offenbach, with a libretto by Armand Lapointe. It was first performed at the Th\u00e9\u00e2tre des Bouffes Parisiens, Paris on 3 March 1858. and was the first work of Offenbach's at the Bouffes with a chorus and a large cast. G\u00e4nzl describes the piece as \u201ca delicious piece of Parisian bouffonerie\u201d",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bond Girls Are Forever\nBond Girls Are Forever is a 2002 James Bond documentary film hosted by actress Maryam d'Abo, who had played the role of Kara Milovy in the 15th James Bond film \"The Living Daylights\". It was accompanied by a 2003 book written by John Cork and d'Abo. The book is subtitled The Women of James Bond. Both the film and the book is a tribute to the elite club of women who have played the role of a Bond girl.",
+            "Kisna: The Warrior Poet\nKisna: The Warrior Poet is an Indian Hindi film written, edited, produced and directed by Subhash Ghai and starring Vivek Oberoi (who plays the title role), Antonia Bernath, and Isha Sharvani. The musical film is set in the British India of the tumultuous 1940s when Indian nationalists fighting for the country's independence rose up as one, urging the British Raj to leave. It is a love story about two people who are torn between Karma (the noble deed) and Dharma (the duty). The film has two veteran composers, A. R. Rahman and Ismail Darbar; the lyrics were written by Javed Akhtar. This film also marks Amrish Puri's final performance. The film, however, did not perform well at the box office. The film was premiered in the March\u00e9 du Film section of the 2005 Cannes Film Festival.",
+            "The Last King of Scotland (film)\nThe Last King of Scotland is a 2006 historical drama film based on Giles Foden's novel \"The Last King of Scotland\" (1998), adapted by screenwriters Peter Morgan and Jeremy Brock, and directed by Kevin Macdonald. The film was a co-production between companies from the United Kingdom and Germany.",
+            "Flipper (1996 film)\nFlipper is a 1996 adventure film remake of the 1963 film of the same name (which in turn begat a TV series that ran from 1964 to 1967), starring Paul Hogan and Elijah Wood. The movie is about a boy who has to spend the summer with his uncle, who lives on the Florida Gold Coast. Although he expects to have another boring summer, he encounters a dolphin whom he names Flipper and with whom he forms a friendship.",
+            "The Dilemma\nThe Dilemma is a 2011 American comedy-drama film directed by Ron Howard, written by Allan Loeb and starring Vince Vaughn and Kevin James. The film follows savvy businessman Ronny (Vaughn) and genius engineer Nick (James) who are best friends and partners in an auto design firm. They are pursuing a project to make their firm famous. Ronny sees Nick's wife Geneva (Winona Ryder) kissing another man (Channing Tatum). Ronny seeks out answers and has to figure out how to tell Nick about what he saw while working with him to complete their critical presentation.",
+            "Jean-Jacques Beineix\nJean-Jacques Beineix (] ; born 8 October 1946) is a French film director and generally seen as the best example of what came to be called the \"cin\u00e9ma du look\". Critic Ginette Vincendeau defined the films made by Beineix and others as \"youth-oriented films with high production values...The \"look\" of the \"cin\u00e9ma du look\" refers to the films' high investment in non-naturalistic, self-conscious aesthetics, notably intense colours and lighting effects. Their spectacular (studio based) and technically brilliant \"mise-en-sc\u00e8ne\" is usually put to the service of romantic plots.\" The \"cin\u00e9ma du look\" included the films of Luc Besson and L\u00e9os Carax. Luc Besson, like Beineix, was much maligned by the critical establishment during the 1980s, while Carax was much admired. In late 2006, Beineix published a first volume of his autobiography, \"Les Chantiers de la gloire\" (in French only). The title alluded to the French title of Stanley Kubrick's film, \"Les Sentiers de la gloire\" (\"Paths of Glory\").",
+            "Jacques Androuet II du Cerceau\nJacques Androuet du Cerceau, the younger (1550 \u2013 16 September 1614), was a French architect.",
+            "The Witches (1966 film)\nThe Witches (US: \"The Devil's Own\") is a 1966 British horror film made by Hammer Films. It was adapted by Nigel Kneale from the novel \"The Devil's Own\" by Norah Lofts, published under the pseudonym Peter Curtis. It was directed by Cyril Frankel and starred Joan Fontaine (in her final feature-film performance), Alec McCowen, Kay Walsh, Ann Bell, Ingrid Boulting (billed as Ingrid Brett) and Gwen Ffrangcon Davies. This was the final big-screen film role for Fontaine."
+        ],
+        "thoughts": [
+            "The operas composed by Jacques Offenbach are:\n1. Die Rheinnixen\n2. Les contes d'Hoffmann\n3. Le ch\u00e2teau \u00e0 Toto\n4. Le financier et le savetier\n5. Fantasio\n6. Whittington\n7. The Tales of Hoffmann\n8. La P\u00e9richole",
+            "The only opera by Jacques Offenbach that has been adapted into a film is \"The Tales of Hoffmann\".",
+            "Peter Morgan and Jeremy Brock are Hungarian British screenwriters who have written film adaptations, including \"The Last King of Scotland\" based on Giles Foden's novel.",
+            "The film \"The Tales of Hoffmann\" adapted from Offenbach's opera does not have a direct cross-reference with works written by Hungarian British screenwriters such as Peter Morgan and Jeremy Brock.",
+            "The film that matches the criteria of being an adaptation of Offenbach's opera and written by a Hungarian British screenwriter is not found based on the given criteria."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This film is an adaption of a Jacques Offenbach's opera that was written by a Hungarian British screenwriter?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify films that are adaptions of Jacques Offenbach's operas.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify operas composed by Jacques Offenbach.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify Hungarian British screenwriters.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Match the list of films from Node 1 with the list of operas from Node 2 to identify potential film operas.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Find if any of the screenwriters from Node 3 wrote any of the film operas identified in Node 4.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph breaks down the task by first identifying all operas by Jacques Offenbach and any film adaptations of his work. Parallel to this, it identifies Hungarian British screenwriters. Then it matches the identified films with the operas to filter only genuine adaptations. The final step is to determine if any of the filtered film adaptations were written by a Hungarian British screenwriter, thus providing the final answer."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "The Tales of Hoffmann (film)\nThe Tales of Hoffmann is a 1951 British Technicolor film adaptation of Jacques Offenbach's opera \"The Tales of Hoffmann\", written, produced and directed by the team of Michael Powell and Emeric Pressburger working under the umbrella of their production company, The Archers.",
+            "Fantasio (Offenbach)\nFantasio is an 1872 op\u00e9ra comique in 3 acts, 4 tableaux with music by Jacques Offenbach. The French libretto by Paul de Musset was closely based on the 1834 play of the same name by his brother Alfred de Musset. The opera found little success in Offenbach's lifetime, was revived in the 1930s and performed in a critical edition in the 2000s.",
+            "List of compositions by Jacques Offenbach\nThis is a list of musical compositions by Jacques Offenbach (1819\u20131880). Offenbach is principally known for his operettas, of which he composed 98 between 1847 and 1880. He also wrote two op\u00e9ras, \"Die Rheinnixen\" and his unfinished masterpiece \"Les contes d'Hoffmann\".",
+            "The Tales of Hoffmann\nThe Tales of Hoffmann (French: Les contes d'Hoffmann ) is an \"op\u00e9ra fantastique \" by Jacques Offenbach. The French libretto was written by Jules Barbier, based on three short stories by E. T. A. Hoffmann, who is the protagonist of the story. It was Offenbach's final work, as he died a year before the premiere.",
+            "Le ch\u00e2teau \u00e0 Toto\nLe ch\u00e2teau \u00e0 Toto (\"Toto\u2019s castle\") is an op\u00e9ra bouffe in three acts of 1868 with music by Jacques Offenbach. The French libretto was by Henri Meilhac and Ludovic Hal\u00e9vy. It is situated in an important sequence of fifteen opera works and revivals by Offenbach between 1867 and 1869.",
+            "Mesdames de la Halle\nMesdames de la Halle is an op\u00e9rette bouffe in one act by Jacques Offenbach, with a libretto by Armand Lapointe. It was first performed at the Th\u00e9\u00e2tre des Bouffes Parisiens, Paris on 3 March 1858. and was the first work of Offenbach's at the Bouffes with a chorus and a large cast. G\u00e4nzl describes the piece as \u201ca delicious piece of Parisian bouffonerie\u201d",
+            "Le financier et le savetier\nLe financier et le savetier (The financier and the cobbler) is a one-act op\u00e9rette bouffe of 1856 with words by Hector Cr\u00e9mieux and Edmond About, and music by Jacques Offenbach, based on the poem by La Fontaine. In 1842 Offenbach had set \"The Cobbler and the Financier\" (\"Le Savetier et le Financier\") among a set of six fables of La Fontaine.",
+            "La P\u00e9richole\nLa P\u00e9richole (] ) is an op\u00e9ra bouffe in three acts by Jacques Offenbach. Henri Meilhac and Ludovic Hal\u00e9vy wrote the French-language libretto based on the 1829 one act play \"Le carrosse du Saint-Sacrement\" by Prosper M\u00e9rim\u00e9e, which was revived on 13 March 1850 at the Th\u00e9\u00e2tre-Fran\u00e7ais. Offenbach was probably aware of this production, as he conducted the orchestra of the Com\u00e9die-Fran\u00e7aise from around this time. Another theatrical creation that pre-dates Offenbach's op\u00e9ra bouffe and may have influenced the piece is a farce by Desforges and Th\u00e9aulon given on 21 October 1835 at the Th\u00e9\u00e2tre du Palais-Royal.",
+            "Whittington (opera)\nWhittington is an opera (described in the premiere programme as 'A New Grand Opera Bouffe Feerie, in Four Acts and Nine Tableaux) with music by Jacques Offenbach, based on the legend of \"Dick Whittington and His Cat\". It was premiered in a spectacular production at the Alhambra Theatre, London, on 26 December 1874. \"Whittington\" is the only major work of Offenbach to have received its premiere in London, and came between the incidental music for \"La Haine\" and his third version of \"Genevi\u00e8ve de Brabant\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Paper Towns (film)\nPaper Towns is a 2015 American mystery, comedy-drama film, directed by Jake Schreier, based on the 2008 novel of the same name by John Green. The film was adapted for the screen by Scott Neustadter and Michael H. Weber, the same team that wrote the first film adaption of one of Green's novels, \"The Fault in Our Stars\". The film stars Nat Wolff and Cara Delevingne and was released on July 24, 2015, in the United States by 20th Century Fox. The film follows the coming of age and search by the protagonist, Quentin \"Q\" Jacobsen (Wolff), for Margo Roth Spiegelman (Delevingne), his childhood friend and object of affection. In the process, Quentin explores the relationship with his friends including his compatibility with Margo.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Red Queen (Through the Looking-Glass)\nThe Red Queen is a fictional character in Lewis Carroll's fantasy novel \"Through the Looking-Glass\". She is often confused with the Queen of Hearts from the previous book \"Alice's Adventures in Wonderland\", although the two are very different.",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "The Apple Tree\nThe Apple Tree is a series of three musical playlets with music by Jerry Bock, lyrics by Sheldon Harnick, and a book by Bock and Harnick with contributions from Jerome Coopersmith. Each act has its own storyline, but all three are tied together by a common theme (someone who believes that they want something, but once they get what they wanted they realize that it wasn't what they wanted) and common references, such as references to the color brown. The first act is based on Mark Twain's \"The Diary of Adam and Eve\"; the second act is based on Frank R. Stockton's \"The Lady or the Tiger?\"; the third act is based on Jules Feiffer's \"Passionella\". The working title for the evening of three musicals was \"Come Back! Go Away! I Love You!\"",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\"."
+        ],
+        "thoughts": [
+            "There are no Hungarian British screenwriters mentioned in the provided information.",
+            "The films that are adaptations of Jacques Offenbach's operas are \"The Tales of Hoffmann\" and \"Whittington\".",
+            "Operas composed by Jacques Offenbach include:\n- Die Rheinnixen\n- Les contes d'Hoffmann",
+            "The potential film operas are \"The Tales of Hoffmann\" and \"Whittington\" as they are adaptations of Jacques Offenbach's operas \"Les contes d'Hoffmann\".",
+            "None of the screenwriters from Node 3 wrote any of the film operas identified in Node 4."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This film is an adaption of a Jacques Offenbach's opera that was written by a Hungarian British screenwriter?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify Jacques Offenbach's operas.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify films that are adaptations of Jacques Offenbach's operas.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify Hungarian British screenwriters.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which of the adaptations identified in node 2 was written by a Hungarian British screenwriter identified in node 3.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Choose the film identified in node 4 as the final answer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph starts by identifying Jacques Offenbach's operas and finding films adapted from them. Separately, it identifies Hungarian British screenwriters. Finally, it determines which film adaptation was written by one of these screenwriters, leading to the final answer."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "The Tales of Hoffmann (film)\nThe Tales of Hoffmann is a 1951 British Technicolor film adaptation of Jacques Offenbach's opera \"The Tales of Hoffmann\", written, produced and directed by the team of Michael Powell and Emeric Pressburger working under the umbrella of their production company, The Archers.",
+            "The Tales of Hoffmann\nThe Tales of Hoffmann (French: Les contes d'Hoffmann ) is an \"op\u00e9ra fantastique \" by Jacques Offenbach. The French libretto was written by Jules Barbier, based on three short stories by E. T. A. Hoffmann, who is the protagonist of the story. It was Offenbach's final work, as he died a year before the premiere.",
+            "Mesdames de la Halle\nMesdames de la Halle is an op\u00e9rette bouffe in one act by Jacques Offenbach, with a libretto by Armand Lapointe. It was first performed at the Th\u00e9\u00e2tre des Bouffes Parisiens, Paris on 3 March 1858. and was the first work of Offenbach's at the Bouffes with a chorus and a large cast. G\u00e4nzl describes the piece as \u201ca delicious piece of Parisian bouffonerie\u201d",
+            "Fantasio (Offenbach)\nFantasio is an 1872 op\u00e9ra comique in 3 acts, 4 tableaux with music by Jacques Offenbach. The French libretto by Paul de Musset was closely based on the 1834 play of the same name by his brother Alfred de Musset. The opera found little success in Offenbach's lifetime, was revived in the 1930s and performed in a critical edition in the 2000s.",
+            "La P\u00e9richole\nLa P\u00e9richole (] ) is an op\u00e9ra bouffe in three acts by Jacques Offenbach. Henri Meilhac and Ludovic Hal\u00e9vy wrote the French-language libretto based on the 1829 one act play \"Le carrosse du Saint-Sacrement\" by Prosper M\u00e9rim\u00e9e, which was revived on 13 March 1850 at the Th\u00e9\u00e2tre-Fran\u00e7ais. Offenbach was probably aware of this production, as he conducted the orchestra of the Com\u00e9die-Fran\u00e7aise from around this time. Another theatrical creation that pre-dates Offenbach's op\u00e9ra bouffe and may have influenced the piece is a farce by Desforges and Th\u00e9aulon given on 21 October 1835 at the Th\u00e9\u00e2tre du Palais-Royal.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Stanley Kubrick\nStanley Kubrick ( ; July 26, 1928 \u2013 March 7, 1999) was an American film director, screenwriter, producer, cinematographer, editor, and photographer. He is frequently cited as one of the greatest and most influential directors in cinematic history. His films, which are mostly adaptations of novels or short stories, cover a wide range of genres, and are noted for their realism, dark humor, unique cinematography, extensive set designs, and evocative use of music.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Red Queen (Through the Looking-Glass)\nThe Red Queen is a fictional character in Lewis Carroll's fantasy novel \"Through the Looking-Glass\". She is often confused with the Queen of Hearts from the previous book \"Alice's Adventures in Wonderland\", although the two are very different.",
+            "Jean-Jacques Beineix\nJean-Jacques Beineix (] ; born 8 October 1946) is a French film director and generally seen as the best example of what came to be called the \"cin\u00e9ma du look\". Critic Ginette Vincendeau defined the films made by Beineix and others as \"youth-oriented films with high production values...The \"look\" of the \"cin\u00e9ma du look\" refers to the films' high investment in non-naturalistic, self-conscious aesthetics, notably intense colours and lighting effects. Their spectacular (studio based) and technically brilliant \"mise-en-sc\u00e8ne\" is usually put to the service of romantic plots.\" The \"cin\u00e9ma du look\" included the films of Luc Besson and L\u00e9os Carax. Luc Besson, like Beineix, was much maligned by the critical establishment during the 1980s, while Carax was much admired. In late 2006, Beineix published a first volume of his autobiography, \"Les Chantiers de la gloire\" (in French only). The title alluded to the French title of Stanley Kubrick's film, \"Les Sentiers de la gloire\" (\"Paths of Glory\").",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "The Apple Tree\nThe Apple Tree is a series of three musical playlets with music by Jerry Bock, lyrics by Sheldon Harnick, and a book by Bock and Harnick with contributions from Jerome Coopersmith. Each act has its own storyline, but all three are tied together by a common theme (someone who believes that they want something, but once they get what they wanted they realize that it wasn't what they wanted) and common references, such as references to the color brown. The first act is based on Mark Twain's \"The Diary of Adam and Eve\"; the second act is based on Frank R. Stockton's \"The Lady or the Tiger?\"; the third act is based on Jules Feiffer's \"Passionella\". The working title for the evening of three musicals was \"Come Back! Go Away! I Love You!\"",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\".",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "Caladenia\nCaladenia, commonly known as spider orchids, is a genus of 350 species of plants in the orchid family, Orchidaceae. Spider orchids are terrestrial herbs with a single hairy leaf and a hairy stem. The labellum is fringed or toothed in most species and there are small projections called calli on the labellum. The flowers have adaptations to attract particular species of insects for pollination. The genus is divided into three groups on the basis of flower shape, broadly, spider orchids, zebra orchids and cowslip orchids, although other common names are often used. Although they occur in other countries, most are Australian and 136 species occur in Western Australia, making it the most species-rich orchid genus in that state.",
+            "Jacques Androuet II du Cerceau\nJacques Androuet du Cerceau, the younger (1550 \u2013 16 September 1614), was a French architect."
+        ],
+        "thoughts": [
+            "Jacques Offenbach's operas include:\n1. The Tales of Hoffmann\n2. Mesdames de la Halle\n3. Fantasio\n4. La P\u00e9richole",
+            "The films that are adaptations of Jacques Offenbach's operas are \"The Tales of Hoffmann\" and \"Mesdames de la Halle\".",
+            "There are no Hungarian British screenwriters mentioned in the provided information.",
+            "Based on the provided information, there are no Hungarian British screenwriters mentioned in the adaptations identified in node 2. Therefore, it cannot be determined which adaptation was written by a Hungarian British screenwriter identified in node 3.",
+            "The final answer is that it cannot be determined which adaptation was written by a Hungarian British screenwriter identified in node 3."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This film is an adaption of a Jacques Offenbach's opera that was written by a Hungarian British screenwriter?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify film adaptations of Jacques Offenbach's operas.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the Hungarian British screenwriters who have worked on any film.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify which of the adaptations found were written by the screenwriters identified.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins with two parallel retrieval tasks. First, identify all films adapted from Jacques Offenbach's operas. In parallel, identify Hungarian British screenwriters who have worked in the film industry. Finally, the reasoning step analyzes the overlaps between these two datasets, identifying which of the Offenbach film adaptations were specifically written by a Hungarian British screenwriter. This will answer the question by narrowing down the list to the specific film that fits both criteria."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Fantasio (Offenbach)\nFantasio is an 1872 op\u00e9ra comique in 3 acts, 4 tableaux with music by Jacques Offenbach. The French libretto by Paul de Musset was closely based on the 1834 play of the same name by his brother Alfred de Musset. The opera found little success in Offenbach's lifetime, was revived in the 1930s and performed in a critical edition in the 2000s.",
+            "List of compositions by Jacques Offenbach\nThis is a list of musical compositions by Jacques Offenbach (1819\u20131880). Offenbach is principally known for his operettas, of which he composed 98 between 1847 and 1880. He also wrote two op\u00e9ras, \"Die Rheinnixen\" and his unfinished masterpiece \"Les contes d'Hoffmann\".",
+            "Whittington (opera)\nWhittington is an opera (described in the premiere programme as 'A New Grand Opera Bouffe Feerie, in Four Acts and Nine Tableaux) with music by Jacques Offenbach, based on the legend of \"Dick Whittington and His Cat\". It was premiered in a spectacular production at the Alhambra Theatre, London, on 26 December 1874. \"Whittington\" is the only major work of Offenbach to have received its premiere in London, and came between the incidental music for \"La Haine\" and his third version of \"Genevi\u00e8ve de Brabant\".",
+            "Le ch\u00e2teau \u00e0 Toto\nLe ch\u00e2teau \u00e0 Toto (\"Toto\u2019s castle\") is an op\u00e9ra bouffe in three acts of 1868 with music by Jacques Offenbach. The French libretto was by Henri Meilhac and Ludovic Hal\u00e9vy. It is situated in an important sequence of fifteen opera works and revivals by Offenbach between 1867 and 1869.",
+            "Method Man\nClifford Smith (born April 1, 1971), better known by his stage name Method Man, is an American rapper, record producer, and actor. He is known as a member of the East Coast hip hop collective Wu-Tang Clan. He is also one half of the hip hop duo Method Man & Redman. He took his stage name from the 1979 film \"Method Man\". In 1996, he won a Grammy Award for Best Rap Performance by a Duo or Group, for \"I'll Be There for You/You're All I Need to Get By\", with American R&B singer-songwriter Mary J. Blige.",
+            "Le financier et le savetier\nLe financier et le savetier (The financier and the cobbler) is a one-act op\u00e9rette bouffe of 1856 with words by Hector Cr\u00e9mieux and Edmond About, and music by Jacques Offenbach, based on the poem by La Fontaine. In 1842 Offenbach had set \"The Cobbler and the Financier\" (\"Le Savetier et le Financier\") among a set of six fables of La Fontaine.",
+            "La P\u00e9richole\nLa P\u00e9richole (] ) is an op\u00e9ra bouffe in three acts by Jacques Offenbach. Henri Meilhac and Ludovic Hal\u00e9vy wrote the French-language libretto based on the 1829 one act play \"Le carrosse du Saint-Sacrement\" by Prosper M\u00e9rim\u00e9e, which was revived on 13 March 1850 at the Th\u00e9\u00e2tre-Fran\u00e7ais. Offenbach was probably aware of this production, as he conducted the orchestra of the Com\u00e9die-Fran\u00e7aise from around this time. Another theatrical creation that pre-dates Offenbach's op\u00e9ra bouffe and may have influenced the piece is a farce by Desforges and Th\u00e9aulon given on 21 October 1835 at the Th\u00e9\u00e2tre du Palais-Royal.",
+            "The Tales of Hoffmann (film)\nThe Tales of Hoffmann is a 1951 British Technicolor film adaptation of Jacques Offenbach's opera \"The Tales of Hoffmann\", written, produced and directed by the team of Michael Powell and Emeric Pressburger working under the umbrella of their production company, The Archers.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Paper Gods\nPaper Gods is the fourteenth studio album from British new wave band Duran Duran on Warner Bros. Records. The record was announced on 15 June 2015 via an official press release posted on their website, confirming a scheduled worldwide release date of 11 September 2015. The record was produced by Mr Hudson and Joshua Blair, who has worked with the band on \"All You Need Is Now\" (2010) and \"A Diamond in the Mind\"; Nile Rodgers, who had previously first worked on the band's \"The Reflex\", his remixed version reaching number 1, \"The Wild Boys\" single and \"Notorious\" album, and Mark Ronson, who produced \"All You Need Is Now\". The first single, \"Pressure Off\", features vocals from American singer Janelle Mon\u00e1e. Duran Duran promoted the album through the Paper Gods on Tour.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition."
+        ],
+        "thoughts": [
+            "Film adaptations of Jacques Offenbach's operas include \"The Tales of Hoffmann\" (1951), based on Offenbach's opera of the same name, and \"Whittington\" (1874), based on the legend of \"Dick Whittington and His Cat\".",
+            "There are no Hungarian British screenwriters who have worked on any film mentioned in the provided information.",
+            "The adaptation \"Whittington\" (1874) was written by a British screenwriter, as there are no Hungarian British screenwriters mentioned in the provided information."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This film is an adaption of a Jacques Offenbach's opera that was written by a Hungarian British screenwriter?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve films that are adaptations of Jacques Offenbach's operas.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find screenwriters for each film adaptation identified in Node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify which of the screenwriters from Node 2 is both Hungarian and British.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the film that corresponds to the Hungarian British screenwriter identified in Node 3.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph starts by identifying films that are adaptations of operas by Jacques Offenbach since that restricts the scope of potential answers. The second node gathers information about the screenwriters of these adaptations. Next, the graph filters these screenwriters to find which ones are of Hungarian and British origin. Finally, by merging information from the initial film adaptations and the screenwriter's nationality, the specific film that fits all the required criteria is determined in the final step."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Number opera\nA number opera (Italian: \"opera a numeri\" ; German: \"Nummeroper\" ) is an opera consisting of individual pieces of music ('numbers') which can be easily extracted from the larger work. They may be numbered consecutively in the score, and may be interspersed with recitative or spoken dialogue. Opera numbers may be arias, but also ensemble pieces, such as duets, trios, quartets, quintets, sextets or choruses. They may also be ballets and instrumental pieces, such as marches, sinfonias, or intermezzi. The number opera format was standard until the mid-19th century and most opera genres, including \"opera seria\", \"opera buffa\", \"op\u00e9ra comique\", ballad opera, Singspiel, and grand opera, were constructed in this fashion.",
+            "The Tales of Hoffmann (film)\nThe Tales of Hoffmann is a 1951 British Technicolor film adaptation of Jacques Offenbach's opera \"The Tales of Hoffmann\", written, produced and directed by the team of Michael Powell and Emeric Pressburger working under the umbrella of their production company, The Archers.",
+            "Emeric Pressburger\nEmeric Pressburger (5 December 19025 February 1988) was a Hungarian British screenwriter, film director, and producer. He is best known for his series of film collaborations with Michael Powell, in an award-winning collaboration partnership known as the Archers and produced a series of films, notably \"49th Parallel\" (1941), \"The Life and Death of Colonel Blimp\" (1943), \"A Matter of Life and Death\" (1946, also called \"Stairway to Heaven\"), \"Black Narcissus\" (1947), \"The Red Shoes\" (1948), and \"The Tales of Hoffmann\" (1951).",
+            "The Tales of Hoffmann\nThe Tales of Hoffmann (French: Les contes d'Hoffmann ) is an \"op\u00e9ra fantastique \" by Jacques Offenbach. The French libretto was written by Jules Barbier, based on three short stories by E. T. A. Hoffmann, who is the protagonist of the story. It was Offenbach's final work, as he died a year before the premiere.",
+            "Marie Bonfanti\nMarie Bonfanti (1845-1921) was a 19th-century ballet dancer whose New York City premi\u00e8re came at Niblo's Garden on Monday, September 10, 1866. She then was the prima ballerina in \"The Black Crook\" at the same theatre, which premi\u00e8red two days later. She appeared in \"Sylvia\" by L\u00e9o Delibes at the Metropolitan Alcazar concert hall on July 15, 1882. In August 1901, Bonfanti performed with Rita Sangalli at the Metropolitan Opera House, during the inaugural season of ballet at the New York City venue. Her talent for expressionist dancing and her private life were covered widely from the mid-1860s until the early 20th century.",
+            "Scott Joiner\nScott Joiner is an American operatic tenor and composer. He created the role of Dickon in the world premiere of Nolan Gasser's \"The Secret Garden\" with the San Francisco Opera and Cal Performances in 2013. He composed the score and starred in the short opera film, \"Connection Lost (The Tinder Opera)\" or \"L'opera di Tinder\", which won Best Score at Ireland's Kerry Film Festival. The miniature one-act opera received its live stage premiere by Opera Carolina in November 2016 as part of National Opera Week. Joiner and Tinder Opera Co-creator, Adam Taylor (writer/director) were featured on NPR\u2019s \"All Things Considered\" in 2017.",
+            "List of classical music festivals\nThe following is an incomplete list of classical music festivals, which encapsulates music festivals focused on classical music. Classical music is art music produced or rooted in the traditions of Western music (both liturgical and secular), and has long been played at festival-like settings. It encompasses a broad span of time from roughly the 11th century to the present day. The major time divisions of classical music are as follows: the early music period, which includes the Medieval (500\u20131400) and the Renaissance (1400\u20131600) era, played at early music festivals; the common practice period, which includes the Baroque (1600\u20131750), Classical (1750\u20131830), and Romantic eras (1804\u20131910), which included opera festivals and choral festivals; and the 20th century (1901\u20132000) which includes the modern (1890\u20131930) that overlaps from the late 19th-century, the high modern (mid 20th-century), and contemporary classical music festivals or postmodern (1975\u20132000) eras, the last of which overlaps into the 21st-century. The term \"classical music\" did not appear until the early 19th century, in an attempt to distinctly canonize the period from Johann Sebastian Bach to Beethoven as a golden age.",
+            "Repo! The Genetic Opera\nRepo! The Genetic Opera is a 2008 American musical horror film directed by Darren Lynn Bousman. Based on the 2002 musical of the same name, which was written and composed by Darren Smith and Terrance Zdunich, the film stars Alexa Vega, Paul Sorvino, Anthony Stewart Head, Sarah Brightman, Paris Hilton, Bill Moseley, Nivek Ogre, and Terrance Zdunich.",
+            "A Night at the Opera (film)\nA Night at the Opera is a 1935 American comedy film starring the Marx Brothers, and featuring Kitty Carlisle, Allan Jones, Margaret Dumont, Sig Ruman, and Walter Woolf King. It was the first film the Marx Brothers made for Metro-Goldwyn-Mayer after their departure from Paramount Pictures, and the first after Zeppo left the act. The film was adapted by George S. Kaufman, Morrie Ryskind, and Al Boasberg (uncredited) from a story by James Kevin McGuinness. It was directed by Sam Wood.",
+            "Don O. Newland\nDon Oliver Newland (1896\u20131951) was an American film director and producer whose career consisted largely of itinerant work. From the 1920s until his death, he traveled to cities throughout the United States making films that employed local citizens as stars and extras. Using a standard script, Newland personalized each film according to its location \u2013 \"Belvidere's Hero\", \"Staunton's Hero\", \"Janesville's Hero\", \"Huntingdon's Hero\", \"Tyrone's Hero\", \"Wilmington's Hero\", and so on.",
+            "Carmen\nCarmen (] ; ] ) is an opera in four acts by French composer Georges Bizet. The libretto was written by Henri Meilhac and Ludovic Hal\u00e9vy, based on a novella of the same title by Prosper M\u00e9rim\u00e9e. The opera was first performed at the Op\u00e9ra-Comique in Paris on 3 March 1875, where its breaking of conventions shocked and scandalized its first audiences.",
+            "Brian Blain\nBrian Blain (1937 \u2013 July,1994) was an Australian film and television actor. He is best remembered for his role as wealthy businessman Gordon Hamilton in the Seven Network soap opera \"Sons and Daughters\" from 1981 to 1987 when the series was cancelled, and his role as Captain Jacob Hilliard in the film sequel \"Return to the Blue Lagoon\" (1991). In that same year, he also starred opposite Anne Haddy playing Michael Daniels, a love interest of her character Helen Daniels in the Network Ten soap opera \"Neighbours\". Only a few years previously Haddy had played his housekeeper Rosie in \"Sons and Daughters\". He died of a heart attack in 1994, at the age of 56.",
+            "James Sisnett\nJames Emmanuel \"Doc\" Sisnett (22 February 1900 \u2013 23 May 2013) was a Barbadian supercentenarian. Born and raised in Saint George, he spent his life as a blacksmith, sugar factory worker, and farmer, not retiring from the latter until he turned 100. In excellent health throughout his life, he died at the age of 113 years, 90 days and held a number of distinctions. Among them, he was the verified oldest man in the Western Hemisphere, the second-oldest man in the world, and the last surviving black man born in the 19th century. He was also the only verified supercentenarian from Barbados and, along with Jiroemon Kimura (who died 20 days after Sisnett), one of the last men born in the 19th century.",
+            "Under the Red Robe (1923 film)\nUnder the Red Robe is a 1923 silent historical drama directed by Alan Crosland based upon the Stanley Weyman novel \"Under the Red Robe\". The film marks the last motion picture appearance by stage actor Robert B. Mantell who plays Cardinal Richelieu and the only silent screen performance of opera singer John Charles Thomas.",
+            "Rumbold of Mechelen\nSaint Rumbold (or \"Rumold\", \"Romuold\", Latin: \"Rumoldus\" , Dutch: \"Rombout\" , French: \"Rombaut\" ) was an Irish or Scottish Christian missionary, although his true nationality is not known for certain.",
+            "A Good Man Is Hard to Find and Other Stories\nA Good Man Is Hard to Find and Other Stories (published in England as The Artificial Nigger and Other Tales) is a collection of short stories by American author Flannery O'Connor. The collection was first published in 1955. The subjects of the short stories range from baptism (\"The River\") to serial killers (\"A Good Man Is Hard to Find\") to human greed and exploitation (\"The Life You Save May Be Your Own\"). The majority of the stories include jarring violent scenes that make the characters undergo a spiritual change. The short stories commonly have tones of Catholicism related to life and death scenarios. For instance, in the story \"A Good Man Is Hard To Find\" the villain states, \"She would have been a good woman if it had been somebody there to shoot her every minute of her life.\"",
+            "Cynthia Mort\nCynthia Mort (born June 18, 1956) is an American director, screenwriter, and producer. Mort has worked primarily in television since beginning her career in 1994, writing for the sitcom \"Roseanne\". Her notable works include the HBO series \"Tell Me You Love Me\" as a creator and executive producer, the revenge film \"The Brave One\" (2007) as a screenwriter, and the biopic \"Nina\" (2016) as a director.",
+            "Stefan Ruzowitzky\nStefan Ruzowitzky (born 25 December 1961) is an Austrian film director and screenwriter.",
+            "James Wan\nJames Wan (born 27 February 1977) is a Malaysian-Australian film director, screenwriter, and producer.",
+            "Floyd Mutrux\nFloyd Mutrux (born June 21, 1941) is an American stage and film director, writer, producer, and screenwriter."
+        ],
+        "thoughts": [
+            "The films that are adaptations of Jacques Offenbach's operas are \"The Tales of Hoffmann\" (1951) and \"Number opera\" (format standard until the mid-19th century). These are the only films directly related to Jacques Offenbach's operas.",
+            "The screenwriters for the film adaptation of \"The Tales of Hoffmann\" are Michael Powell and Emeric Pressburger.",
+            "Emeric Pressburger is the screenwriter who is both Hungarian and British.",
+            "The film that corresponds to the Hungarian British screenwriter Emeric Pressburger is \"The Tales of Hoffmann\" (1951)."
+        ],
+        "is_best": true
+    }
+]

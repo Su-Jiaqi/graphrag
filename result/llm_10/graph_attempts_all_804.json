@@ -1,0 +1,676 @@
+[
+    {
+        "question": "Which game is a board game, Mensch \u00e4rgere dich nicht or Roulette?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify if 'Mensch \u00e4rgere dich nicht' is a board game.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify if 'Roulette' is a board game.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the information from nodes 1 and 2 to determine which game is a board game.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of three nodes. The first two nodes involve retrieval and reasoning to determine the type of each game ('Mensch \u00e4rgere dich nicht' and 'Roulette'). The third node combines the outputs of the first two nodes to conclude which of the given games is a board game. This structure ensures that both games are evaluated independently, allowing us to verify their classification before making a conclusion."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Mensch \u00e4rgere dich nicht\nMensch \u00e4rgere Dich nicht is a German board game (but not a German-style board game), developed by Josef Friedrich Schmidt in 1907/1908.",
+            "Headache (game)\nHeadache is a board game similar to the traditional game \"Mensch \u00e4rgere dich nicht\", in which the object is to land a playing piece on top of all opponents' pieces (known as \"cones\"). The game is distinct from \"Mensch \u00e4rgere dich nicht\" in that there is no finish the player must reach. Play moves in circles, until only one player has cones remaining on the board, being declared the winner. All players are welcome to occupy any space throughout the game, provided the die rolls allow, and there are eight spaces that serve as \"safe\" spots, where a cone resting on this space cannot be captured. Captured pieces are not sent back to start, but are permanently lost.",
+            "Trouble (board game)\nTrouble (known as Frustration in the UK and Kimble in Finland) is a board game in which players compete to be the first to send four pieces all the way around a board. Pieces are moved according to the roll of a die. \"Trouble\" was developed by the Kohner Brothers and initially manufactured by Irwin Toy Ltd., later by Milton Bradley (now part of Hasbro). The game was launched in the United States in 1965. It is very similar to the much older game, \"Mensch \u00e4rgere dich nicht\", as well as another Hasbro game, \"Sorry!\" (originally marketed by Parker Brothers). The classic version is now marketed by Winning Moves. All these games are versions of the classic Indian game Pachisi, which was first introduced to the western world in England under the name of \"Ludo\".",
+            "Ich lasse dich nicht, du segnest mich denn, BWV 157\nIch lasse dich nicht, du segnest mich denn, BWV 157",
+            "Ich lasse dich nicht, BWV Anh. 159\nIch lasse dich nicht , also \"Ich lasse dich nicht, du segnest mich denn \" (I will not let you go unless you bless me), BWV Anh. 159 , is a motet set for double choir. Recent scholarship assumes Johann Sebastian Bach as the composer who possibly wrote it during his Weimar period around 1712.",
+            "F\u00fcrchte dich nicht, BWV 228\nF\u00fcrchte dich nicht (Do not fear), BWV 228 , is a motet for a funeral by Johann Sebastian Bach, set for double chorus. The work in two movements draws its text from the Book of Isaiah and a hymn by Paul Gerhardt. Scholars disagree about the composition time and place which was traditionally believed to be 1726 in Leipzig, while more recent scholarship suggests for stylistic reasons that it was already composed during Bach's Weimar period.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Francis Tresham (game designer)\nFrancis Tresham is a United Kingdom-based board game designer who has been producing board games since the early 1970s. Tresham founded and ran games company Hartland Trefoil (founded 1971), a company well known for its \"Civilization\" board game, until its sale to MicroProse in 1997. His \"1829\" game was the first of the \"18xx\" board game series and some of his board games have inspired Sid Meier computer games such as \"Railroad Tycoon\".",
+            "List of word board games\nWord board games are those games played on a board as players of the game attempt to construct words that use a scoring system. The player with the highest score wins the game. Many if not most board games are also available as software programs and online. Online word board games can be organized so that the player is playing against other people or the game can be played against an automated program acting as an artificial intelligence. Players of some word board games organize themselves into associations, clubs, and tournaments.",
+            "Pandemic (board game)\nPandemic is a cooperative board game designed by Matt Leacock and published by Z-Man Games in 2007. \"Pandemic\" is based on the premise that four diseases have broken out in the world, each threatening to wipe out a region. The game accommodates 2 to 4 players, each playing one of five possible specialists: dispatcher, medic, scientist, researcher, or operations expert. The game is unlike most board games in that the gameplay is cooperative, rather than competitive. Through the combined effort of all the players, the goal is to discover all four cures before any of several game-losing conditions are reached.",
+            "Monopoly Star Wars\nMonopoly Star Wars is a 1997 video game based on the board game of the same name. It is one of many video game adaptions of the board game Monopoly. The game was developed by Artech Digital Entertainment and published by Hasbro Interactive. It was released exclusively for Microsoft Windows. The game employs the same basic ruleset of traditional Monopoly gameplay, but adds a \"Star Wars\" theme which includes famous characters and locales in place of the original game pieces and properties.",
+            "BoardGameGeek\nBoardGameGeek is an online forum for board gaming hobbyists and a game database that holds reviews, images and videos for over 84,000 different tabletop games, including European-style board games, wargames, and card games. In addition to the game database, the site allows users to rate games on a 1\u201310 scale and publishes a ranked list of board games.",
+            "Yut\nYut Nori, also known as Yunnori, Nyout, and Yoot, is a traditional board game played in Korea, especially during Korean New Year. The game is also called \"cheok-sa\" or \"sa-hee\". The combining-form \"-nori\" means 'game'."
+        ],
+        "thoughts": [
+            "Yes, 'Mensch \u00e4rgere dich nicht' is a board game. It is a German board game developed by Josef Friedrich Schmidt in 1907/1908.",
+            "Roulette is not a board game. It is a casino game that involves a spinning wheel and a ball, where players bet on which number or color the ball will land on. It does not fit the definition of a board game, which typically involves a game played on a board with pieces and a set of rules for gameplay.",
+            "Based on the information from nodes 1 and 2, \"Mensch \u00e4rgere dich nicht\" is a board game, as it is specifically mentioned as a German board game developed by Josef Friedrich Schmidt. On the other hand, Roulette is not a board game, as it is described as a casino game involving a spinning wheel and a ball, and does not fit the definition of a board game. Therefore, \"Mensch \u00e4rgere dich nicht\" is the board game in this context."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which game is a board game, Mensch \u00e4rgere dich nicht or Roulette?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the game 'Mensch \u00e4rgere dich nicht', including its type (e.g., board game, card game, etc.).",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the game 'Roulette', including its type (e.g., board game, casino game, etc.).",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine whether 'Mensch \u00e4rgere dich nicht' is a board game based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine whether 'Roulette' is a board game based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the results of the reasoning steps to identify which of the two games is a board game.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "This execution graph first retrieves information about each of the two games ('Mensch \u00e4rgere dich nicht' and 'Roulette'). It then separately determines whether each game is a board game. Finally, it compares the findings to answer the question of which game is a board game."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Mensch \u00e4rgere dich nicht\nMensch \u00e4rgere Dich nicht is a German board game (but not a German-style board game), developed by Josef Friedrich Schmidt in 1907/1908.",
+            "Headache (game)\nHeadache is a board game similar to the traditional game \"Mensch \u00e4rgere dich nicht\", in which the object is to land a playing piece on top of all opponents' pieces (known as \"cones\"). The game is distinct from \"Mensch \u00e4rgere dich nicht\" in that there is no finish the player must reach. Play moves in circles, until only one player has cones remaining on the board, being declared the winner. All players are welcome to occupy any space throughout the game, provided the die rolls allow, and there are eight spaces that serve as \"safe\" spots, where a cone resting on this space cannot be captured. Captured pieces are not sent back to start, but are permanently lost.",
+            "Trouble (board game)\nTrouble (known as Frustration in the UK and Kimble in Finland) is a board game in which players compete to be the first to send four pieces all the way around a board. Pieces are moved according to the roll of a die. \"Trouble\" was developed by the Kohner Brothers and initially manufactured by Irwin Toy Ltd., later by Milton Bradley (now part of Hasbro). The game was launched in the United States in 1965. It is very similar to the much older game, \"Mensch \u00e4rgere dich nicht\", as well as another Hasbro game, \"Sorry!\" (originally marketed by Parker Brothers). The classic version is now marketed by Winning Moves. All these games are versions of the classic Indian game Pachisi, which was first introduced to the western world in England under the name of \"Ludo\".",
+            "Ich lasse dich nicht, du segnest mich denn, BWV 157\nIch lasse dich nicht, du segnest mich denn, BWV 157",
+            "Ich lasse dich nicht, BWV Anh. 159\nIch lasse dich nicht , also \"Ich lasse dich nicht, du segnest mich denn \" (I will not let you go unless you bless me), BWV Anh. 159 , is a motet set for double choir. Recent scholarship assumes Johann Sebastian Bach as the composer who possibly wrote it during his Weimar period around 1712.",
+            "F\u00fcrchte dich nicht, BWV 228\nF\u00fcrchte dich nicht (Do not fear), BWV 228 , is a motet for a funeral by Johann Sebastian Bach, set for double chorus. The work in two movements draws its text from the Book of Isaiah and a hymn by Paul Gerhardt. Scholars disagree about the composition time and place which was traditionally believed to be 1726 in Leipzig, while more recent scholarship suggests for stylistic reasons that it was already composed during Bach's Weimar period.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Roulette\nRoulette is a casino game named after the French word meaning \"little wheel\". In the game, players may choose to place bets on either a single number or a range of numbers, the colors red or black, or whether the number is odd or even, or if the numbers are high (19\u201336) or low (1\u201318).",
+            "Suburban Roulette\nSuburban Roulette is a 1968 American drama film directed by Herschell Gordon Lewis starring, among others, William Kerwin and Allison Louise Downe who are involved in wife swapping to overcome the boredom of living in the suburbs. It was produced as an independent film by Lewis and was shown in Chicago area movie theaters during the summer of 1968. It contains implied sex, boozing, adult themes, fighting, but is without nudity (which would have prohibited mainstream movie theater distribution).",
+            "2016 Nitro World Games\nThe 2016 Nitro World Games was a minor international action-sports event celebrated in Salt Lake City, United States, on 16 July 2016. All first time entrants, more than 40 athletes from 11 countries took part. With 21 sets of medals and trophies, the games featured 5 sports. These sporting events took place at the Rice-Eccles Stadium in the host city. The host city Salt Lake City was announced to be where the inaugural event would take place in honor of where Nitro Circus was first created. The United States topped the first-ever medal table, winning the most golds (5) and most medals overall (11).",
+            "David Perry (game developer)\nDavid Perry (born April 4, 1967) is a Northern Irish video game developer and programmer. He became prominent for programming platform games for 16-bit home consoles in the early to mid 1990s, including \"Disney's Aladdin\", \"Cool Spot\", and \"Earthworm Jim\". He founded Shiny Entertainment, where he worked from 1993 to 2006. Perry created games for companies such as Disney, 7 Up, McDonald's, Orion Pictures, and Warner Bros. In 2008 he was presented with an honorary doctorate from Queen's University Belfast for his services to computer gaming. He is co-founder of cloud-based games service Gaikai, which was acquired by Sony Computer Entertainment.",
+            "Powerlifting at the 2015 Pacific Games\nPowerlifting at the 2015 Pacific Games was held from 9\u201310 July 2015 in the Sir John Guise Indoor Power Dome at Port Moresby, Papua New Guinea. The host nation Papua New Guinea was the dominant team, particularly in the women's divisions where it claimed six of the seven possible gold medals. Nauru was the strongest team in the men's divisions, winning four of the eight weight categories. Telupe Iosefa received the first ever gold medal won by Tuvalu at the Pacific Games in the 120\u00a0kg male division.",
+            "1983\u201384 Philadelphia 76ers season\nThe 1983\u201384 NBA season was the 76ers' 35th season in the NBA and 21st season in Philadelphia. The 76ers entered the season as the defending NBA Champions, having won the NBA Championship the year prior, sweeping the Los Angeles Lakers in four games. The team would start fast posting 21 wins in their first 26 games but finished with a 52-30 record. The major difference was that they were just around .500 on the road for the year, unlike the previous season, where they won 30 regular season games away from Philadelphia. The 76ers would lose in the first round of the newly expanded playoff format to the New Jersey Nets, who had never won a playoff series in their NBA history to that point. The 76ers lost all three post season games at The Spectrum.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003."
+        ],
+        "thoughts": [
+            "The game 'Mensch \u00e4rgere dich nicht' is a German board game developed by Josef Friedrich Schmidt in 1907/1908. It is a traditional board game similar to other games like Headache, Trouble, and Ludo. It involves moving playing pieces around the board based on the roll of a die, with the objective of reaching the finish line before opponents.",
+            "Yes, 'Mensch \u00e4rgere dich nicht' is a board game based on the retrieved information.",
+            "Roulette is a casino game.",
+            "Based on the retrieved information, 'Roulette' is not a board game, but rather a casino game. Therefore, it is not classified as a board game.",
+            "Based on the reasoning steps, 'Mensch \u00e4rgere dich nicht' is identified as a board game, while 'Roulette' is not classified as a board game. Therefore, 'Mensch \u00e4rgere dich nicht' is the board game in comparison to 'Roulette'."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which game is a board game, Mensch \u00e4rgere dich nicht or Roulette?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the game 'Mensch \u00e4rgere dich nicht'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the game 'Roulette'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if 'Mensch \u00e4rgere dich nicht' is a board game based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if 'Roulette' is a board game based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the results to identify which of the two games is a board game.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is structured to first retrieve and reason about the nature of each game separately. Nodes 1 and 2 are parallel retrieval steps to gather details about 'Mensch \u00e4rgere dich nicht' and 'Roulette'. Nodes 3 and 4 then determine whether each game matches the criteria of a board game, based on the information retrieved. Finally, Node 5 synthesizes this information to answer the original question by comparing the outcomes of Nodes 3 and 4, identifying which game is a board game."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Mensch \u00e4rgere dich nicht\nMensch \u00e4rgere Dich nicht is a German board game (but not a German-style board game), developed by Josef Friedrich Schmidt in 1907/1908.",
+            "Headache (game)\nHeadache is a board game similar to the traditional game \"Mensch \u00e4rgere dich nicht\", in which the object is to land a playing piece on top of all opponents' pieces (known as \"cones\"). The game is distinct from \"Mensch \u00e4rgere dich nicht\" in that there is no finish the player must reach. Play moves in circles, until only one player has cones remaining on the board, being declared the winner. All players are welcome to occupy any space throughout the game, provided the die rolls allow, and there are eight spaces that serve as \"safe\" spots, where a cone resting on this space cannot be captured. Captured pieces are not sent back to start, but are permanently lost.",
+            "Trouble (board game)\nTrouble (known as Frustration in the UK and Kimble in Finland) is a board game in which players compete to be the first to send four pieces all the way around a board. Pieces are moved according to the roll of a die. \"Trouble\" was developed by the Kohner Brothers and initially manufactured by Irwin Toy Ltd., later by Milton Bradley (now part of Hasbro). The game was launched in the United States in 1965. It is very similar to the much older game, \"Mensch \u00e4rgere dich nicht\", as well as another Hasbro game, \"Sorry!\" (originally marketed by Parker Brothers). The classic version is now marketed by Winning Moves. All these games are versions of the classic Indian game Pachisi, which was first introduced to the western world in England under the name of \"Ludo\".",
+            "Ich lasse dich nicht, du segnest mich denn, BWV 157\nIch lasse dich nicht, du segnest mich denn, BWV 157",
+            "Ich lasse dich nicht, BWV Anh. 159\nIch lasse dich nicht , also \"Ich lasse dich nicht, du segnest mich denn \" (I will not let you go unless you bless me), BWV Anh. 159 , is a motet set for double choir. Recent scholarship assumes Johann Sebastian Bach as the composer who possibly wrote it during his Weimar period around 1712.",
+            "F\u00fcrchte dich nicht, BWV 228\nF\u00fcrchte dich nicht (Do not fear), BWV 228 , is a motet for a funeral by Johann Sebastian Bach, set for double chorus. The work in two movements draws its text from the Book of Isaiah and a hymn by Paul Gerhardt. Scholars disagree about the composition time and place which was traditionally believed to be 1726 in Leipzig, while more recent scholarship suggests for stylistic reasons that it was already composed during Bach's Weimar period.",
+            "Roulette\nRoulette is a casino game named after the French word meaning \"little wheel\". In the game, players may choose to place bets on either a single number or a range of numbers, the colors red or black, or whether the number is odd or even, or if the numbers are high (19\u201336) or low (1\u201318).",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "International business\nInternational business comprises all international trades services or investments (bonds, stocks) conducted by both the private and public sectors that take place between two or more countries beyond their political boundaries. The term \"international business\" refers to all those business activities which involve cross-border transactions of goods, services, and resources between two or more nations. Transactions of economic resources include capital, skills, people for the purpose of the international production of physical goods and services such as finance, banking, insurance, and construction. International business can also be referred to as globalization. Globalization is the shift toward a more integrated and interdependent economy. In order to conduct business overseas, multinational companies need to separate national markets into one huge global marketplace. Two macro factors underline the trend of greater globalization. The first is falling of barriers to make cross-border trade easier such as the free flow of goods and services, and capital, and the second factor is technological change, particularly the developments in communication, information processing, and transportation technologies.",
+            "Mob Rule\nMob Rule (also known as Constructor: Street Wars and Street Wars: Constructor Underworld) is a real-time strategy video game for PC released in 1999 by Simon & Schuster and Studio 3. It is the successor to the 1997 video game \"Constructor\". The goal of the game is to construct buildings and fight enemy teams in a Mafia-themed background.",
+            "Frederick Boardman\nFrederick Stanley Boardman (February 18, 1851 \u2013 April 12, 1941) was an American baseball player. Boardman was born in 1851 in St. Joseph, Missouri. According to baseball historian David Nemec, he was an \"auxiliary player\" in Chicago for many years. He appeared in one game in Major League Baseball as a right fielder for the Baltimore Canaries in the National Association during the 1874 baseball season. His lone appearance with the Canaries came about when the team visited Chicago and was in need of an outfielder. The Chicago White Stockings won the game by a 4-0 score. During the 1875 season, he worked as an umpire in the National Association. He died in 1941 in Indianapolis, at age 90.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "List of word board games\nWord board games are those games played on a board as players of the game attempt to construct words that use a scoring system. The player with the highest score wins the game. Many if not most board games are also available as software programs and online. Online word board games can be organized so that the player is playing against other people or the game can be played against an automated program acting as an artificial intelligence. Players of some word board games organize themselves into associations, clubs, and tournaments.",
+            "Suburban Roulette\nSuburban Roulette is a 1968 American drama film directed by Herschell Gordon Lewis starring, among others, William Kerwin and Allison Louise Downe who are involved in wife swapping to overcome the boredom of living in the suburbs. It was produced as an independent film by Lewis and was shown in Chicago area movie theaters during the summer of 1968. It contains implied sex, boozing, adult themes, fighting, but is without nudity (which would have prohibited mainstream movie theater distribution).",
+            "Construct (album)\nConstruct is the tenth full-length studio album by Swedish melodic death metal band Dark Tranquillity. It was released on 27 May 2013 through Century Media Records. A music video for \"Uniformity\", directed by Patric Ullaeus, was released on 10 May 2013. The album was written during what the band described as their \"darkest period\" and drew critical praise for its melodrama and darkness. Construct would be the band's last studio album with founding member guitarist Martin Henriksson as he left the band in early 2016 due to loss of passion for playing music.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative."
+        ],
+        "thoughts": [
+            "- \"Mensch \u00e4rgere dich nicht\" is a German board game developed by Josef Friedrich Schmidt in 1907/1908. It is similar to the games \"Headache\" and \"Trouble\" (also known as Frustration in the UK and Kimble in Finland).\n- \"Headache\" is a board game where the objective is to land a playing piece on top of all opponents' pieces, with no specific finish line. It is distinct from \"Mensch \u00e4rgere dich nicht\" in that there is no specific finish line, and captured pieces are permanently lost.\n- \"Trouble\" is a board game where players compete to be the first to send four pieces all the way around a board. It is similar to \"Mensch \u00e4rgere dich nicht\" and another game called \"Sorry!\".\n- \"Ich lasse dich nicht, du segnest mich denn, BWV 157\" and \"Ich lasse dich nicht, BWV Anh. 159\" are motets composed by Johann Sebastian Bach.\n- \"F\u00fcrchte dich nicht, BWV 228\" is a motet for a funeral by Johann Sebastian Bach, set for double chorus.\n- \"My Heidelberg, I Can Not Forget You\" is a 1927 German silent film directed by James Bauer.\n- \"Here's the Thing\" is a public radio show and podcast interview series hosted by actor Alec Baldwin.",
+            "Based on the retrieved information, \"Mensch \u00e4rgere dich nicht\" is indeed a board game. It is a German board game developed by Josef Friedrich Schmidt in 1907/1908, and it is similar to other board games such as \"Headache\" and \"Trouble\". Therefore, \"Mensch \u00e4rgere dich nicht\" is a board game.",
+            "Roulette is a popular casino game where players can place bets on numbers, colors, and whether the number is odd or even. It is named after the French word for \"little wheel\". The game has been a staple in casinos for many years and continues to be a favorite among gamblers.\n\nInternational business refers to all business activities that involve cross-border transactions of goods, services, and resources between two or more nations. It encompasses trade, services, and investments conducted by both the private and public sectors. The trend of globalization has led to a more integrated and interdependent global economy, with multinational companies playing a significant role in conducting business overseas.\n\nMob Rule is a real-time strategy video game released in 1999, set in a Mafia-themed background. Players construct buildings and engage in battles with enemy teams, making it a popular choice for strategy game enthusiasts.\n\nFrederick Stanley Boardman was an American baseball player who appeared in one game for the Baltimore Canaries in the National Association during the 1874 baseball season. He also worked as an umpire in the National Association during the 1875 season.\n\nWord board games are played on a board where players construct words using a scoring system. These games are available as software programs and online, and players can compete against others or an automated program. Associations, clubs, and tournaments are often organized for players of word board games.\n\nSuburban Roulette is a 1968 American drama film directed by Herschell Gordon Lewis, depicting the lives of suburban residents involved in wife swapping to overcome boredom. The film contains adult themes and was produced as an independent film.\n\nConstruct is the tenth studio album by Swedish melodic death metal band Dark Tranquillity, released in 2013. The album received critical praise for its melodrama and darkness and was the last studio album with founding member guitarist Martin Henriksson.\n\nMemory of Mankind (MOM) is a project aimed at preserving an image of our era by collecting information from participants worldwide. It also serves as a time capsule and backup of core knowledge and culture in case of a collapse of civilization. MOM collaborates with organizations such as the NEA and SKB and aims to remind authorities of the potential consequences of global issues such as global warming and nuclear danger. The project also serves as a critique of our digital civilization, aiming to save a representative fragment of the information produced until today.",
+            "Based on the retrieved information, 'Roulette' is not a board game, but rather a popular casino game where players can place bets on numbers, colors, and whether the number is odd or even. It is not played on a traditional board and does not involve constructing words or engaging in battles, as seen in other board games mentioned in the information. Therefore, 'Roulette' is not a board game.",
+            "Based on the comparison of the results, \"Mensch \u00e4rgere dich nicht\" is identified as a board game, while \"Roulette\" is not a board game."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which game is a board game, Mensch \u00e4rgere dich nicht or Roulette?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the characteristics of Mensch \u00e4rgere dich nicht.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the characteristics of Roulette.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine whether Mensch \u00e4rgere dich nicht is categorized as a board game based on its characteristics.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine whether Roulette is categorized as a board game based on its characteristics.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the categorizations for Mensch \u00e4rgere dich nicht and Roulette to identify which, if any, is a board game.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph begins with retrieving information about both games, Mensch \u00e4rgere dich nicht and Roulette. This allows us to gather data on their characteristics. Each game is then analyzed to determine its categorization as a board game. Finally, these results are compared to answer the question of which game is classified as a board game."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Mensch \u00e4rgere dich nicht\nMensch \u00e4rgere Dich nicht is a German board game (but not a German-style board game), developed by Josef Friedrich Schmidt in 1907/1908.",
+            "Headache (game)\nHeadache is a board game similar to the traditional game \"Mensch \u00e4rgere dich nicht\", in which the object is to land a playing piece on top of all opponents' pieces (known as \"cones\"). The game is distinct from \"Mensch \u00e4rgere dich nicht\" in that there is no finish the player must reach. Play moves in circles, until only one player has cones remaining on the board, being declared the winner. All players are welcome to occupy any space throughout the game, provided the die rolls allow, and there are eight spaces that serve as \"safe\" spots, where a cone resting on this space cannot be captured. Captured pieces are not sent back to start, but are permanently lost.",
+            "Ich lasse dich nicht, BWV Anh. 159\nIch lasse dich nicht , also \"Ich lasse dich nicht, du segnest mich denn \" (I will not let you go unless you bless me), BWV Anh. 159 , is a motet set for double choir. Recent scholarship assumes Johann Sebastian Bach as the composer who possibly wrote it during his Weimar period around 1712.",
+            "Roulette\nRoulette is a casino game named after the French word meaning \"little wheel\". In the game, players may choose to place bets on either a single number or a range of numbers, the colors red or black, or whether the number is odd or even, or if the numbers are high (19\u201336) or low (1\u201318).",
+            "Suburban Roulette\nSuburban Roulette is a 1968 American drama film directed by Herschell Gordon Lewis starring, among others, William Kerwin and Allison Louise Downe who are involved in wife swapping to overcome the boredom of living in the suburbs. It was produced as an independent film by Lewis and was shown in Chicago area movie theaters during the summer of 1968. It contains implied sex, boozing, adult themes, fighting, but is without nudity (which would have prohibited mainstream movie theater distribution).",
+            "Trouble (board game)\nTrouble (known as Frustration in the UK and Kimble in Finland) is a board game in which players compete to be the first to send four pieces all the way around a board. Pieces are moved according to the roll of a die. \"Trouble\" was developed by the Kohner Brothers and initially manufactured by Irwin Toy Ltd., later by Milton Bradley (now part of Hasbro). The game was launched in the United States in 1965. It is very similar to the much older game, \"Mensch \u00e4rgere dich nicht\", as well as another Hasbro game, \"Sorry!\" (originally marketed by Parker Brothers). The classic version is now marketed by Winning Moves. All these games are versions of the classic Indian game Pachisi, which was first introduced to the western world in England under the name of \"Ludo\".",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "F\u00fcrchte dich nicht, BWV 228\nF\u00fcrchte dich nicht (Do not fear), BWV 228 , is a motet for a funeral by Johann Sebastian Bach, set for double chorus. The work in two movements draws its text from the Book of Isaiah and a hymn by Paul Gerhardt. Scholars disagree about the composition time and place which was traditionally believed to be 1726 in Leipzig, while more recent scholarship suggests for stylistic reasons that it was already composed during Bach's Weimar period.",
+            "Ich lasse dich nicht, du segnest mich denn, BWV 157\nIch lasse dich nicht, du segnest mich denn, BWV 157",
+            "Separately managed account\nA separately managed account (SMA) is a term within the investment management industry encompassing several different types of investment accounts. For example, an SMA often is used to refer to an individual managed investment account often offered by a brokerage firm through one of their brokers or financial consultants and managed by independent investment management firms (often called money managers for short) and have varying fee structures. These particular types of SMAs may be called \"wrap fee\" or \"dual contract\" accounts, depending on their structure. There is no official designation for the SMA, but there are common characteristics that are represented in many types of SMA programs. These characteristics include an open structure or flexible investment security choices; multiple money managers; and a customized investment portfolio formulated for a client's specific investment objectives or desired restrictions.",
+            "Opportunistic mobile social network\nOpportunistic mobile social networks are a form of mobile ad hoc networks that exploit the human social characteristics, such as similarities, daily routines, mobility patterns, and interests to perform the message routing and data sharing. In such networks, the users with mobile devices are able to form on-the-fly social networks to communicate with each other and share data objects.",
+            "Bullmastiff\nThe Bullmastiff is a large-sized breed of domestic dog, with a solid build and a short muzzle. The Bullmastiff shares the characteristics of molosser dogs, and was originally developed by 19th-century gamekeepers to guard estates. The breed's bloodlines are drawn from the English Mastiff and the extinct Old English Bulldog. It was recognized as a purebred dog by the English Kennel Club in 1924. They are quiet dogs and very rarely bark.",
+            "Plug-in hybrid\nA plug-in hybrid electric vehicle (PHEV) is a hybrid electric vehicle that uses rechargeable batteries, or another energy storage device, that can be recharged by plugging it in to an external source of electric power. A PHEV shares the characteristics both of a conventional hybrid electric vehicle, having an electric motor and an internal combustion engine (ICE), and of an all-electric vehicle, having a plug to connect to the electrical grid. Most PHEVs are passenger cars but there are also PHEV versions of commercial vehicles and vans, utility trucks, buses, trains, motorcycles, scooters, and military vehicles.",
+            "Lake Ercina\nLake Ercina is a small highland lake in Asturias, Spain. It is located in the Picos de Europa, in the Cantabrian Mountains. Situated next to Lake Enol, together, they forms the group known as Lakes of Covadonga within the Picos de Europa National Park. Lake Ercina is smaller than Lake Enol. It is situated at an altitude of 1108 m and its maximum depth is just over 2 m . The eutrophic lake, covers approximately eight hectares. Its characteristics are tied to its glacier origin and geographic location.",
+            "Forensic tire tread evidence\nForensic tire tread evidence records and analyzes impressions of vehicle tire treads for use in legal proceedings to help prove the identities of persons at a crime scene. Every tire will show different amounts of tread wear, and different amounts of damage in the form of tiny cuts and nicks. These unique characteristics will also show on the impression left by the tire.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus."
+        ],
+        "thoughts": [
+            "Mensch \u00e4rgere dich nicht is a German board game developed by Josef Friedrich Schmidt in 1907/1908. It is similar to the game \"Headache\" in which the object is to land a playing piece on top of all opponents' pieces, but distinct in that there is no finish the player must reach. The game is also similar to \"Trouble\" and \"Sorry!\", both of which are versions of the classic Indian game Pachisi. \"Mensch \u00e4rgere dich nicht\" is a traditional game with a rich history and has inspired similar games in different parts of the world.",
+            "Based on its characteristics, Mensch \u00e4rgere dich nicht is categorized as a board game. It involves playing pieces, a game board, and the objective of the game is to move the pieces around the board. Additionally, it shares similarities with other board games such as \"Headache\", \"Trouble\", and \"Sorry!\", further supporting its classification as a board game.",
+            "Roulette is a casino game where players can place bets on single numbers, ranges of numbers, colors, and whether the number is odd or even. It is named after the French word for \"little wheel.\" The game is characterized by its various betting options and the element of chance.\n\nIt is important to note that the other topics mentioned, such as Suburban Roulette, separately managed accounts, opportunistic mobile social networks, Bullmastiffs, plug-in hybrids, Lake Ercina, and forensic tire tread evidence, are not related to the characteristics of the casino game Roulette.",
+            "Based on its characteristics, Roulette is not categorized as a board game. It is a casino game that involves betting on various outcomes and relies heavily on chance, rather than the strategic and tactical gameplay typically associated with board games.",
+            "Mensch \u00e4rgere dich nicht is categorized as a board game, as it involves a game board, playing pieces, and strategic gameplay. On the other hand, Roulette is not categorized as a board game, as it is a casino game that relies heavily on chance rather than strategic gameplay. Therefore, Mensch \u00e4rgere dich nicht is a board game, while Roulette is not."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Which game is a board game, Mensch \u00e4rgere dich nicht or Roulette?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the game 'Mensch \u00e4rgere dich nicht' and determine if it is a board game.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the game 'Roulette' and determine if it is a board game.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the results to determine which game is a board game between 'Mensch \u00e4rgere dich nicht' and 'Roulette'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the question into three main nodes: two retrieval and reasoning nodes and one reasoning node. The first two nodes each determine whether 'Mensch \u00e4rgere dich nicht' and 'Roulette' are board games by identifying the type of each game. The final reasoning node compares these results to directly answer the question, identifying which of the two games is a board game."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "See Yourself\n\"See Yourself\" is a song by English musician George Harrison, released on his 1976 album \"Thirty Three & 1/3\". Harrison began writing the song in 1967, while he was a member of the Beatles, in response to the public outcry surrounding bandmate Paul McCartney's admission that he had taken the hallucinogenic drug LSD. McCartney's announcement created a reaction in the press similar to that caused in 1966 by John Lennon's statement that the Beatles were more popular than Christianity. In its finished form, the song's lyrics advocate self-awareness and consideration for the consequences of one's actions. Musically, the composition contains unusual shifts in time signature from standard 4/4 to 9/8, while the songwords reflect the era of its genesis by recalling themes first espoused in the Beatles tracks \"Within You Without You\" and \"All You Need Is Love\"."
+        ],
+        "thoughts": [
+            "The game 'Mensch \u00e4rgere dich nicht' is a classic German board game that translates to \"Don't Get Angry, Man\". It is a popular board game in Germany and is similar to the game Ludo. Players move their pieces around the board based on the roll of a dice, with the goal of getting all their pieces into the home space before their opponents. Therefore, 'Mensch \u00e4rgere dich nicht' is indeed a board game.",
+            "The game 'Roulette' is a casino game that involves a spinning wheel with numbered compartments and a small ball. Players bet on which compartment the ball will come to rest in. It is not a board game, but rather a game of chance typically found in casinos.",
+            "Based on the results of the comparison, it is clear that 'Mensch \u00e4rgere dich nicht' is a board game, while 'Roulette' is not. 'Mensch \u00e4rgere dich nicht' involves moving pieces around a board based on dice rolls, while 'Roulette' is a game of chance played with a spinning wheel and a ball. Therefore, 'Mensch \u00e4rgere dich nicht' is the board game in this comparison."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which game is a board game, Mensch \u00e4rgere dich nicht or Roulette?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the type of game for 'Mensch \u00e4rgere dich nicht'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the type of game for 'Roulette'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if 'Mensch \u00e4rgere dich nicht' is a board game based on its type.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if 'Roulette' is a board game based on its type.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the results from nodes 3 and 4 to conclude which game is a board game.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The question asks to determine which game, 'Mensch \u00e4rgere dich nicht' or 'Roulette', is a board game. The graph begins by retrieving information about each game's type through nodes 1 and 2. Once the types are retrieved, nodes 3 and 4 analyze whether each game can be classified as a board game. Finally, node 5 compares the results from nodes 3 and 4 to determine which game is indeed a board game, synthesizing the final answer."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Roulette\nRoulette is a casino game named after the French word meaning \"little wheel\". In the game, players may choose to place bets on either a single number or a range of numbers, the colors red or black, or whether the number is odd or even, or if the numbers are high (19\u201336) or low (1\u201318).",
+            "Suburban Roulette\nSuburban Roulette is a 1968 American drama film directed by Herschell Gordon Lewis starring, among others, William Kerwin and Allison Louise Downe who are involved in wife swapping to overcome the boredom of living in the suburbs. It was produced as an independent film by Lewis and was shown in Chicago area movie theaters during the summer of 1968. It contains implied sex, boozing, adult themes, fighting, but is without nudity (which would have prohibited mainstream movie theater distribution).",
+            "Braque Francais\nThe Braques fran\u00e7ais are hunting dogs, from a very old type of gun dog used for pointing the location of game birds for a hunter. There are two breeds of Braque fran\u00e7ais, both from the south of France, the Braque fran\u00e7ais, type Gascogne (French Pointing Dog - Gascogne type, larger size) and the Braque fran\u00e7ais, type Pyr\u00e9n\u00e9es (French Pointing Dog - Pyrenean type, smaller size) They are popular hunting dogs in France, but are seldom seen elsewhere.",
+            "Petit Bleu de Gascogne\nThe Petit Bleu de Gascogne (FCI No.31) Is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog. The Petit Bleu de Gascogne is not a small (petite) dog, the name comes from its use on small game.",
+            "Griffon Bleu de Gascogne\nThe Griffon Bleu de Gascogne (FCI No.32) Is a breed of dog of the scenthound type, originating in France, and is a versatile hunting dog, used on small and large game, in packs or individually. The Griffon Bleu de Gascogne has a speckled, rough coat.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Characters of Final Fantasy XV\n\"Final Fantasy XV\", an action role-playing video game released in November 2016, is the fifteenth main installment in the \"Final Fantasy\" series, and is thematically connected to \"Fabula Nova Crystallis Final Fantasy\", a subseries of games linked by a common mythos which includes \"Final Fantasy XIII\" and \"Final Fantasy Type-0\". The world and main characters were created by Tetsuya Nomura, the game's original director. Nomura also designed the main characters, with later revisions and additional characters being designed by Yusuke Naora: other character designers involved with the game included Roberto Ferrari and Yusaku Nakaaki.",
+            "Type 346 Radar\nType 346 radar is a highly digitized, multi-function, dual-band (S and C bands) naval active phased array radar (APAR) installed on Type 052C destroyers, Type 052D destroyers and Type 055 destroyers of the PLAN. The radar is named as the Star of the Sea (Hai-Zhi-Xing, \u6d77\u4e4b\u661f) by its developer and it is one of the two competitors for PLAN\u2019s SAPARS (Shipborne Active Phased Array Radar System) project/program. Due to its secrecy and lack of information, Type 346 radar has been frequently but erroneously confused with a Chinese fire control radar Type 348, and mistakenly identified as Type 348 by many sources. Furthermore, it is also frequently confused with and misidentified as Sea Lion series C-band phased array radars developed by another design house.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "The game \"Mensch \u00e4rgere dich nicht\" is a German board game that falls under the category of \"strategy\" games.",
+            "Based on its type, \"Mensch \u00e4rgere dich nicht\" is a board game.",
+            "The type of game for 'Roulette' is a casino game.",
+            "Roulette is not a board game, it is a casino game.",
+            "Based on the results from nodes 3 and 4, it can be concluded that \"Mensch \u00e4rgere dich nicht\" is a board game, while Roulette is not a board game, but rather a casino game."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which game is a board game, Mensch \u00e4rgere dich nicht or Roulette?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the classification of 'Mensch \u00e4rgere dich nicht'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the classification of 'Roulette'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if 'Mensch \u00e4rgere dich nicht' is a board game based on its classification.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if 'Roulette' is a board game based on its classification.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the results from nodes 3 and 4 to determine which game is a board game.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the question into two initial retrieval and reasoning steps to classify each game ('Mensch \u00e4rgere dich nicht' and 'Roulette') separately. The next steps are reasoning nodes that take the classification results to decide if each respective game is a board game. The final node synthesizes the outcomes of the reasoning steps to answer which game is the board game."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Mensch \u00e4rgere dich nicht\nMensch \u00e4rgere Dich nicht is a German board game (but not a German-style board game), developed by Josef Friedrich Schmidt in 1907/1908.",
+            "Headache (game)\nHeadache is a board game similar to the traditional game \"Mensch \u00e4rgere dich nicht\", in which the object is to land a playing piece on top of all opponents' pieces (known as \"cones\"). The game is distinct from \"Mensch \u00e4rgere dich nicht\" in that there is no finish the player must reach. Play moves in circles, until only one player has cones remaining on the board, being declared the winner. All players are welcome to occupy any space throughout the game, provided the die rolls allow, and there are eight spaces that serve as \"safe\" spots, where a cone resting on this space cannot be captured. Captured pieces are not sent back to start, but are permanently lost.",
+            "Trouble (board game)\nTrouble (known as Frustration in the UK and Kimble in Finland) is a board game in which players compete to be the first to send four pieces all the way around a board. Pieces are moved according to the roll of a die. \"Trouble\" was developed by the Kohner Brothers and initially manufactured by Irwin Toy Ltd., later by Milton Bradley (now part of Hasbro). The game was launched in the United States in 1965. It is very similar to the much older game, \"Mensch \u00e4rgere dich nicht\", as well as another Hasbro game, \"Sorry!\" (originally marketed by Parker Brothers). The classic version is now marketed by Winning Moves. All these games are versions of the classic Indian game Pachisi, which was first introduced to the western world in England under the name of \"Ludo\".",
+            "Ich lasse dich nicht, du segnest mich denn, BWV 157\nIch lasse dich nicht, du segnest mich denn, BWV 157",
+            "Ich lasse dich nicht, BWV Anh. 159\nIch lasse dich nicht , also \"Ich lasse dich nicht, du segnest mich denn \" (I will not let you go unless you bless me), BWV Anh. 159 , is a motet set for double choir. Recent scholarship assumes Johann Sebastian Bach as the composer who possibly wrote it during his Weimar period around 1712.",
+            "F\u00fcrchte dich nicht, BWV 228\nF\u00fcrchte dich nicht (Do not fear), BWV 228 , is a motet for a funeral by Johann Sebastian Bach, set for double chorus. The work in two movements draws its text from the Book of Isaiah and a hymn by Paul Gerhardt. Scholars disagree about the composition time and place which was traditionally believed to be 1726 in Leipzig, while more recent scholarship suggests for stylistic reasons that it was already composed during Bach's Weimar period.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Francis Tresham (game designer)\nFrancis Tresham is a United Kingdom-based board game designer who has been producing board games since the early 1970s. Tresham founded and ran games company Hartland Trefoil (founded 1971), a company well known for its \"Civilization\" board game, until its sale to MicroProse in 1997. His \"1829\" game was the first of the \"18xx\" board game series and some of his board games have inspired Sid Meier computer games such as \"Railroad Tycoon\".",
+            "Roulette\nRoulette is a casino game named after the French word meaning \"little wheel\". In the game, players may choose to place bets on either a single number or a range of numbers, the colors red or black, or whether the number is odd or even, or if the numbers are high (19\u201336) or low (1\u201318).",
+            "Suburban Roulette\nSuburban Roulette is a 1968 American drama film directed by Herschell Gordon Lewis starring, among others, William Kerwin and Allison Louise Downe who are involved in wife swapping to overcome the boredom of living in the suburbs. It was produced as an independent film by Lewis and was shown in Chicago area movie theaters during the summer of 1968. It contains implied sex, boozing, adult themes, fighting, but is without nudity (which would have prohibited mainstream movie theater distribution).",
+            "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+            "Taxonomy of the Cactaceae\nIn 1984, the International Organization for Succulent Plant Study set up a working party, now called the International Cactaceae Systematics Group, to produce a consensus classification of the cactus family, down to the level of genus. Their classification has been used as the basis for systems published since the mid-1990s. Treatments in the 21st century have generally divided the family into around 125\u2013130 genera and 1,400\u20131,500 species, which are then arranged in a number of tribes and subfamilies. However, subsequent molecular phylogenetic studies have shown that a very high proportion of the higher taxa (genera, tribes and subfamilies) are not monophyletic, i.e. they do not contain all of the descendants of a common ancestor. , the internal classification of the family Cactaceae remained uncertain and subject to change. A classification incorporating many of the insights from the molecular studies was produced by Nyffeler and Eggli in 2010.",
+            "Dissolved organic carbon\nDissolved organic carbon (DOC), sometimes known as dissolved organic material (DOM), is a broad classification for organic molecules of varied origin and composition within aquatic systems. The \"dissolved\" fraction of organic carbon is an operational classification. Many researchers use the term \"dissolved\" for compounds below 0.45 micrometers, but 0.22 micrometers is also common, saving colloidal for higher concentrations. A practical definition of dissolved typically used in marine chemistry is all substances that pass through a GF/F filter. The recommended measure technique is the HTCO technique after filtration on precombusted glass fiber filters, typically GF/F filters.",
+            "Pimelea arenaria\nPimelea arenaria, also known as Pimelea villosa, is a species of shrub in the family Thymelaeaceae. It is endemic to New Zealand. Its conservation status puts it at risk and declining, as determined by the New Zealand Threat Classification System (NZTCS).",
+            "Compact car\nA compact car (North America), or small family car in British acceptation, is a classification of cars that are larger than a subcompact car but smaller than a mid-size car, roughly equivalent to the C-segment in Europe.",
+            "Prehypertension\nPrehypertension, also known as high normal blood pressure, is an American medical classification for cases where a person's blood pressure is elevated above normal, but not to the level considered hypertension (high blood pressure). Prehypertension is blood pressure readings with a systolic pressure from 120 to 139\u00a0mm Hg or a diastolic pressure from 80 to 89\u00a0mm Hg. Readings greater than or equal to 140/90\u00a0mm Hg are considered hypertension. Classification of blood pressure is based upon two or more readings at two or more separate occasions separated by at least one week. The seventh report of the Joint National Committee (JNC 7) proposed the new labeling for elevated blood pressure values below 140/90 to more accurately communicate the tendency of blood pressure to rise with age."
+        ],
+        "thoughts": [
+            "The classification of \"Mensch \u00e4rgere dich nicht\" is a traditional German board game.",
+            "Based on its classification as a traditional German board game, \"Mensch \u00e4rgere dich nicht\" is indeed a board game.",
+            "Roulette is a casino game, so its classification would fall under the category of gambling or casino games.",
+            "Roulette is not a board game, it is a casino game.",
+            "Based on the results from nodes 3 and 4, it is clear that \"Mensch \u00e4rgere dich nicht\" is a board game, while Roulette is not a board game but a casino game. Therefore, \"Mensch \u00e4rgere dich nicht\" is the board game."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which game is a board game, Mensch \u00e4rgere dich nicht or Roulette?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine if Mensch \u00e4rgere dich nicht is a board game.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine if Roulette is a board game.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the results from nodes 1 and 2 to determine which game, Mensch \u00e4rgere dich nicht or Roulette, is a board game.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the question into three main parts. The first two nodes (1 and 2) are retrieval-oriented, each tasked with determining whether one of the mentioned games (Mensch \u00e4rgere dich nicht and Roulette) is classified as a board game. These nodes operate independently and in parallel since confirming the type for each game doesn't rely on the outcome of the other. The third node (3) is a reasoning step that synthesizes the results from the first two nodes to ultimately answer which game is a board game."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Mensch \u00e4rgere dich nicht\nMensch \u00e4rgere Dich nicht is a German board game (but not a German-style board game), developed by Josef Friedrich Schmidt in 1907/1908.",
+            "Headache (game)\nHeadache is a board game similar to the traditional game \"Mensch \u00e4rgere dich nicht\", in which the object is to land a playing piece on top of all opponents' pieces (known as \"cones\"). The game is distinct from \"Mensch \u00e4rgere dich nicht\" in that there is no finish the player must reach. Play moves in circles, until only one player has cones remaining on the board, being declared the winner. All players are welcome to occupy any space throughout the game, provided the die rolls allow, and there are eight spaces that serve as \"safe\" spots, where a cone resting on this space cannot be captured. Captured pieces are not sent back to start, but are permanently lost.",
+            "Trouble (board game)\nTrouble (known as Frustration in the UK and Kimble in Finland) is a board game in which players compete to be the first to send four pieces all the way around a board. Pieces are moved according to the roll of a die. \"Trouble\" was developed by the Kohner Brothers and initially manufactured by Irwin Toy Ltd., later by Milton Bradley (now part of Hasbro). The game was launched in the United States in 1965. It is very similar to the much older game, \"Mensch \u00e4rgere dich nicht\", as well as another Hasbro game, \"Sorry!\" (originally marketed by Parker Brothers). The classic version is now marketed by Winning Moves. All these games are versions of the classic Indian game Pachisi, which was first introduced to the western world in England under the name of \"Ludo\".",
+            "Ich lasse dich nicht, du segnest mich denn, BWV 157\nIch lasse dich nicht, du segnest mich denn, BWV 157",
+            "Ich lasse dich nicht, BWV Anh. 159\nIch lasse dich nicht , also \"Ich lasse dich nicht, du segnest mich denn \" (I will not let you go unless you bless me), BWV Anh. 159 , is a motet set for double choir. Recent scholarship assumes Johann Sebastian Bach as the composer who possibly wrote it during his Weimar period around 1712.",
+            "F\u00fcrchte dich nicht, BWV 228\nF\u00fcrchte dich nicht (Do not fear), BWV 228 , is a motet for a funeral by Johann Sebastian Bach, set for double chorus. The work in two movements draws its text from the Book of Isaiah and a hymn by Paul Gerhardt. Scholars disagree about the composition time and place which was traditionally believed to be 1726 in Leipzig, while more recent scholarship suggests for stylistic reasons that it was already composed during Bach's Weimar period.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Francis Tresham (game designer)\nFrancis Tresham is a United Kingdom-based board game designer who has been producing board games since the early 1970s. Tresham founded and ran games company Hartland Trefoil (founded 1971), a company well known for its \"Civilization\" board game, until its sale to MicroProse in 1997. His \"1829\" game was the first of the \"18xx\" board game series and some of his board games have inspired Sid Meier computer games such as \"Railroad Tycoon\".",
+            "List of motets by Johann Sebastian Bach\nIt is uncertain how many motets Johann Sebastian Bach composed, because some have been lost, and there are some doubtful attributions among the surviving ones associated with him. There are six authenticated motets catalogued BWV 225\u2013230. BWV 228 appears to have been written at Weimar, between 1708 and 1717, and the other five in Leipzig, between 1723 and 1727. A seventh motet, \"Ich lasse dich nicht\", BWV Anh. 159, which was formerly attributed to Bach's older cousin Johann Christoph Bach, appears to be one of Bach's earlier works, possibly composed during the Weimar period.",
+            "List of word board games\nWord board games are those games played on a board as players of the game attempt to construct words that use a scoring system. The player with the highest score wins the game. Many if not most board games are also available as software programs and online. Online word board games can be organized so that the player is playing against other people or the game can be played against an automated program acting as an artificial intelligence. Players of some word board games organize themselves into associations, clubs, and tournaments.",
+            "Pandemic (board game)\nPandemic is a cooperative board game designed by Matt Leacock and published by Z-Man Games in 2007. \"Pandemic\" is based on the premise that four diseases have broken out in the world, each threatening to wipe out a region. The game accommodates 2 to 4 players, each playing one of five possible specialists: dispatcher, medic, scientist, researcher, or operations expert. The game is unlike most board games in that the gameplay is cooperative, rather than competitive. Through the combined effort of all the players, the goal is to discover all four cures before any of several game-losing conditions are reached.",
+            "Monopoly Star Wars\nMonopoly Star Wars is a 1997 video game based on the board game of the same name. It is one of many video game adaptions of the board game Monopoly. The game was developed by Artech Digital Entertainment and published by Hasbro Interactive. It was released exclusively for Microsoft Windows. The game employs the same basic ruleset of traditional Monopoly gameplay, but adds a \"Star Wars\" theme which includes famous characters and locales in place of the original game pieces and properties.",
+            "BoardGameGeek\nBoardGameGeek is an online forum for board gaming hobbyists and a game database that holds reviews, images and videos for over 84,000 different tabletop games, including European-style board games, wargames, and card games. In addition to the game database, the site allows users to rate games on a 1\u201310 scale and publishes a ranked list of board games.",
+            "Yut\nYut Nori, also known as Yunnori, Nyout, and Yoot, is a traditional board game played in Korea, especially during Korean New Year. The game is also called \"cheok-sa\" or \"sa-hee\". The combining-form \"-nori\" means 'game'."
+        ],
+        "thoughts": [
+            "Yes, Mensch \u00e4rgere dich nicht is a board game. It is a German board game developed by Josef Friedrich Schmidt in 1907/1908.",
+            "Roulette is not a board game. It is a casino game that involves a spinning wheel and a ball, and players bet on which number or color the ball will land on. It does not involve a board or pieces and does not fit the definition of a board game as described in the relevant information provided.",
+            "Based on the results from nodes 1 and 2, it is clear that Mensch \u00e4rgere dich nicht is a board game, as it was developed as a traditional German board game. On the other hand, Roulette is not a board game, as it is a casino game that does not involve a board or pieces. Therefore, Mensch \u00e4rgere dich nicht is the board game, while Roulette is not."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which game is a board game, Mensch \u00e4rgere dich nicht or Roulette?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the game 'Mensch \u00e4rgere dich nicht'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the game 'Roulette'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if 'Mensch \u00e4rgere dich nicht' is a board game based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if 'Roulette' is a board game based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the results to find out which game is a board game.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the task into retrieving information about both 'Mensch \u00e4rgere dich nicht' and 'Roulette'. Each game's information is used to reason whether it qualifies as a board game. Finally, a comparison is made to determine which game is a board game, providing the answer to the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Mensch \u00e4rgere dich nicht\nMensch \u00e4rgere Dich nicht is a German board game (but not a German-style board game), developed by Josef Friedrich Schmidt in 1907/1908.",
+            "Headache (game)\nHeadache is a board game similar to the traditional game \"Mensch \u00e4rgere dich nicht\", in which the object is to land a playing piece on top of all opponents' pieces (known as \"cones\"). The game is distinct from \"Mensch \u00e4rgere dich nicht\" in that there is no finish the player must reach. Play moves in circles, until only one player has cones remaining on the board, being declared the winner. All players are welcome to occupy any space throughout the game, provided the die rolls allow, and there are eight spaces that serve as \"safe\" spots, where a cone resting on this space cannot be captured. Captured pieces are not sent back to start, but are permanently lost.",
+            "Trouble (board game)\nTrouble (known as Frustration in the UK and Kimble in Finland) is a board game in which players compete to be the first to send four pieces all the way around a board. Pieces are moved according to the roll of a die. \"Trouble\" was developed by the Kohner Brothers and initially manufactured by Irwin Toy Ltd., later by Milton Bradley (now part of Hasbro). The game was launched in the United States in 1965. It is very similar to the much older game, \"Mensch \u00e4rgere dich nicht\", as well as another Hasbro game, \"Sorry!\" (originally marketed by Parker Brothers). The classic version is now marketed by Winning Moves. All these games are versions of the classic Indian game Pachisi, which was first introduced to the western world in England under the name of \"Ludo\".",
+            "Ich lasse dich nicht, du segnest mich denn, BWV 157\nIch lasse dich nicht, du segnest mich denn, BWV 157",
+            "Ich lasse dich nicht, BWV Anh. 159\nIch lasse dich nicht , also \"Ich lasse dich nicht, du segnest mich denn \" (I will not let you go unless you bless me), BWV Anh. 159 , is a motet set for double choir. Recent scholarship assumes Johann Sebastian Bach as the composer who possibly wrote it during his Weimar period around 1712.",
+            "F\u00fcrchte dich nicht, BWV 228\nF\u00fcrchte dich nicht (Do not fear), BWV 228 , is a motet for a funeral by Johann Sebastian Bach, set for double chorus. The work in two movements draws its text from the Book of Isaiah and a hymn by Paul Gerhardt. Scholars disagree about the composition time and place which was traditionally believed to be 1726 in Leipzig, while more recent scholarship suggests for stylistic reasons that it was already composed during Bach's Weimar period.",
+            "Roulette\nRoulette is a casino game named after the French word meaning \"little wheel\". In the game, players may choose to place bets on either a single number or a range of numbers, the colors red or black, or whether the number is odd or even, or if the numbers are high (19\u201336) or low (1\u201318).",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "International business\nInternational business comprises all international trades services or investments (bonds, stocks) conducted by both the private and public sectors that take place between two or more countries beyond their political boundaries. The term \"international business\" refers to all those business activities which involve cross-border transactions of goods, services, and resources between two or more nations. Transactions of economic resources include capital, skills, people for the purpose of the international production of physical goods and services such as finance, banking, insurance, and construction. International business can also be referred to as globalization. Globalization is the shift toward a more integrated and interdependent economy. In order to conduct business overseas, multinational companies need to separate national markets into one huge global marketplace. Two macro factors underline the trend of greater globalization. The first is falling of barriers to make cross-border trade easier such as the free flow of goods and services, and capital, and the second factor is technological change, particularly the developments in communication, information processing, and transportation technologies.",
+            "Mob Rule\nMob Rule (also known as Constructor: Street Wars and Street Wars: Constructor Underworld) is a real-time strategy video game for PC released in 1999 by Simon & Schuster and Studio 3. It is the successor to the 1997 video game \"Constructor\". The goal of the game is to construct buildings and fight enemy teams in a Mafia-themed background.",
+            "Frederick Boardman\nFrederick Stanley Boardman (February 18, 1851 \u2013 April 12, 1941) was an American baseball player. Boardman was born in 1851 in St. Joseph, Missouri. According to baseball historian David Nemec, he was an \"auxiliary player\" in Chicago for many years. He appeared in one game in Major League Baseball as a right fielder for the Baltimore Canaries in the National Association during the 1874 baseball season. His lone appearance with the Canaries came about when the team visited Chicago and was in need of an outfielder. The Chicago White Stockings won the game by a 4-0 score. During the 1875 season, he worked as an umpire in the National Association. He died in 1941 in Indianapolis, at age 90.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "List of word board games\nWord board games are those games played on a board as players of the game attempt to construct words that use a scoring system. The player with the highest score wins the game. Many if not most board games are also available as software programs and online. Online word board games can be organized so that the player is playing against other people or the game can be played against an automated program acting as an artificial intelligence. Players of some word board games organize themselves into associations, clubs, and tournaments.",
+            "Suburban Roulette\nSuburban Roulette is a 1968 American drama film directed by Herschell Gordon Lewis starring, among others, William Kerwin and Allison Louise Downe who are involved in wife swapping to overcome the boredom of living in the suburbs. It was produced as an independent film by Lewis and was shown in Chicago area movie theaters during the summer of 1968. It contains implied sex, boozing, adult themes, fighting, but is without nudity (which would have prohibited mainstream movie theater distribution).",
+            "Construct (album)\nConstruct is the tenth full-length studio album by Swedish melodic death metal band Dark Tranquillity. It was released on 27 May 2013 through Century Media Records. A music video for \"Uniformity\", directed by Patric Ullaeus, was released on 10 May 2013. The album was written during what the band described as their \"darkest period\" and drew critical praise for its melodrama and darkness. Construct would be the band's last studio album with founding member guitarist Martin Henriksson as he left the band in early 2016 due to loss of passion for playing music.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative."
+        ],
+        "thoughts": [
+            "- Mensch \u00e4rgere dich nicht is a German board game developed by Josef Friedrich Schmidt in 1907/1908.\n- Headache is a board game similar to Mensch \u00e4rgere dich nicht, but with different gameplay mechanics.\n- Trouble is another board game similar to Mensch \u00e4rgere dich nicht, and is a version of the classic Indian game Pachisi.\n- There are also musical compositions and a film with titles similar to \"Mensch \u00e4rgere dich nicht\", but they are not directly related to the board game.\n- \"Here's the Thing\" is a public radio show and podcast hosted by Alec Baldwin, and is not related to the board game \"Mensch \u00e4rgere dich nicht\".",
+            "Based on the retrieved information, \"Mensch \u00e4rgere dich nicht\" is indeed a board game developed by Josef Friedrich Schmidt in 1907/1908. Therefore, it can be confirmed that \"Mensch \u00e4rgere dich nicht\" is a board game.",
+            "Roulette is a popular casino game where players can place bets on numbers, colors, and whether the number is odd or even. It is named after the French word for \"little wheel\". The game has been a staple in casinos for many years and continues to be a favorite among gamblers.\n\nInternational business refers to all business activities that involve cross-border transactions of goods, services, and resources between two or more nations. It encompasses trade, services, and investments conducted by both the private and public sectors. The trend of globalization has led to a more integrated and interdependent global economy, with multinational companies playing a significant role in conducting business overseas.\n\nMob Rule is a real-time strategy video game released in 1999, set in a Mafia-themed background. Players construct buildings and engage in battles with enemy teams, making it a popular choice for strategy game enthusiasts.\n\nFrederick Stanley Boardman was an American baseball player who appeared in one game for the Baltimore Canaries in the National Association during the 1874 baseball season. He also worked as an umpire in the National Association during the 1875 season.\n\nWord board games are played on a board where players construct words using a scoring system. These games are available as software programs and online, and players can compete against others or an automated program. Tournaments and clubs are organized for enthusiasts of word board games.\n\nSuburban Roulette is a 1968 American drama film directed by Herschell Gordon Lewis, depicting the lives of suburban residents involved in wife swapping to overcome boredom. The film contains adult themes and was produced as an independent film.\n\nConstruct is the tenth studio album by Swedish melodic death metal band Dark Tranquillity, released in 2013. The album received critical praise for its melodrama and darkness and was the last studio album with founding member guitarist Martin Henriksson.\n\nMemory of Mankind (MOM) is a project aimed at preserving an image of our era by collecting information from participants worldwide. It also serves as a time capsule, containing information that our society is obligated to pass on to the future. The project is motivated by concerns about preserving knowledge, serving as a backup in case of a collapse of civilization, and as a reminder of the potential consequences of global issues such as global warming and nuclear danger.",
+            "Based on the retrieved information, 'Roulette' is not a board game, but rather a popular casino game. It involves placing bets on numbers, colors, and whether the number is odd or even, and is a staple in casinos for many years. Therefore, it is not classified as a board game.",
+            "Based on the results of the comparison, \"Mensch \u00e4rgere dich nicht\" is confirmed to be a board game, while \"Roulette\" is not classified as a board game."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which game is a board game, Mensch \u00e4rgere dich nicht or Roulette?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the genre of the game 'Mensch \u00e4rgere dich nicht'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the genre of the game 'Roulette'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which of the identified genres is a 'board game'. Mensch \u00e4rgere dich nicht, Roulette, or both.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph for the question about the genre of Mensch \u00e4rgere dich nicht and Roulette involves first retrieving the genres for each game separately (nodes 1 and 2). Once both genres are identified, node 3 synthesizes this information to determine which of them is classified as a board game."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Roulette\nRoulette is a casino game named after the French word meaning \"little wheel\". In the game, players may choose to place bets on either a single number or a range of numbers, the colors red or black, or whether the number is odd or even, or if the numbers are high (19\u201336) or low (1\u201318).",
+            "Suburban Roulette\nSuburban Roulette is a 1968 American drama film directed by Herschell Gordon Lewis starring, among others, William Kerwin and Allison Louise Downe who are involved in wife swapping to overcome the boredom of living in the suburbs. It was produced as an independent film by Lewis and was shown in Chicago area movie theaters during the summer of 1968. It contains implied sex, boozing, adult themes, fighting, but is without nudity (which would have prohibited mainstream movie theater distribution).",
+            "Limbo of the Lost\nLimbo of the Lost is a traditional point-and-click adventure game that follows the adventures of Benjamin Briggs, captain of the \"Mary Celeste\", as he explores the depths of Limbo in the Keep of Lost Souls. It was the only game developed by Majestic Studios, a studio founded in 1993 and consisting of Steve Bovis, Tim Croucher and Laurence Francis. The studio initially aimed to bring back the graphical text adventure genre on the Atari ST, and later the Amiga 500, culminating in a demo shown at the ECTS in 1995. Due to sinking demand of these platforms, the game was instead redeveloped for the PC and released in March 2008. In June 2008, discovery of plagiarism in the game led to its withdrawal from sale.",
+            "Biblical genre\nA Biblical genre is a classification of Bible literature according to literary genre. The genre of a particular Bible passage is ordinarily identified by analysis of its general writing style, tone, form, structure, literary technique, content, design, and related linguistic factors; texts that exhibit a common set of literary features (very often in keeping with the writing styles of the times in which they were written) are together considered to be belonging to a genre. In Biblical studies, genres are usually associated with whole books of the Bible, because each of its books comprises a complete textual unit; however, a book may be internally composed of a variety of styles, forms, and so forth, and thus bear the characteristics of more than one genre (for example, chapter 1 of the Book of Revelation is prophetic/visionary; chapters 2 and 3 are similar to the epistle genre; etc.).",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "ARIA Music Awards\nThe Australian Recording Industry Association Music Awards (commonly known informally as ARIA Music Awards or ARIA Awards) is an annual series of awards nights celebrating the Australian music industry, put on by the Australian Recording Industry Association (ARIA). The event has been held annually since 1987 and encompasses the general genre-specific and popular awards (these are what is usually being referred to as \"the ARIA awards\") as well as Fine Arts Awards and Artisan Awards (held separately from 2004), Lifetime Achievement Awards and ARIA Hall of Fame \u2013 held separately from 2005 to 2010 but returned to the general ceremony in 2011. For 2010, ARIA introduced public voted awards for the first time.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Wipeout (2008 U.S. game show)\nWipeout is a game show series in which contestants competed in what was billed as the \"World's Largest\" obstacle course. \"Wipeout\" was hosted and commentated by John Henson and John Anderson, while Jill Wagner acted as the \"on-location\" presenter. The show aired on ABC from June 24, 2008 until the show aired its final episode on September 7, 2014. The interim presenter for one season was Vanessa Lachey. The creators and executive producers are Matt Kunitz and Scott Larsen. Distribution of the show was handled by Endemol USA. The show was taped at Sable Ranch in Canyon Country, Santa Clarita, California, about 40 miles north of Los Angeles.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Chick lit\nChick lit or chick literature is genre fiction, which \"consists of heroine-centered narratives that focus on the trials and tribulations of their individual protagonists\". The genre often addresses issues of modern womanhood \u2013 from romantic relationships to female friendships to matters in the workplace \u2013 in humorous and lighthearted ways. At its onset, chick lit's protagonists tended to be \"single, white, heterosexual, British and American women in their late twenties and early thirties, living in metropolitan areas\". The genre became popular in the late 1990s, with chick lit titles topping bestseller lists and the creation of imprints devoted entirely to chick lit. Chick lit critics generally agree that British author Helen Fielding's \"Bridget Jones's Diary\" (1996) is the \"ur-text\" of chick lit.",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "The game \"Mensch \u00e4rgere dich nicht\" is a classic German board game that falls under the genre of strategy and luck-based games.",
+            "The game 'Roulette' falls under the genre of casino games.",
+            "The game \"Mensch \u00e4rgere dich nicht\" is a board game, while \"Roulette\" is not. Therefore, the identified board game is \"Mensch \u00e4rgere dich nicht\"."
+        ],
+        "is_best": false
+    }
+]

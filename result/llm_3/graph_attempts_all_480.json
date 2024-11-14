@@ -1,0 +1,607 @@
+[
+    {
+        "question": "In 1967, there were how many active members in the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the information about the first Grand Wizard of the identified organization.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the number of active members in the identified organization in 1967.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Verify if the retrieved Grand Wizard was indeed convicted for the 1966 murder of Vernon Dahmer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Synthesize the information to answer how many active members were there in 1967 in the organization whose first Grand Wizard was convicted for Vernon Dahmer's murder.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph starts by identifying the organization linked to the specified murder, focusing on its leadership. It then simultaneously gathers information about the number of members in 1967 and verifies the conviction of the relevant individual, before synthesizing these details to provide an accurate answer."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Leaders of the Ku Klux Klan\nThe national leader of the Ku Klux Klan is called either a Grand Wizard or an Imperial Wizard, depending on which KKK organization is being described.",
+            "White Knights of the Ku Klux Klan\nThe White Knights of the Ku Klux Klan are considered the most militant as well as the most violent chapter of the Ku Klux Klan in history. They originated in Mississippi in the early 1960s under the leadership of Samuel Bowers, its first Grand Wizard. The White Knights of Mississippi were formed in 1964, and they included roughly 200 members of the Original Knights of Louisiana. The White Knights were not interested in holding public demonstrations or in letting any information about themselves get out to the masses. Similar to the United Klans of America (UKA), the White Knights of Mississippi were very secretive about their group. Within a year, their membership was up to around six thousand, and they had Klaverns in over half of the counties in Mississippi. But by 1967, the number of active members had shrunk to around four hundred.",
+            "European-American Unity and Rights Organization\nThe European-American Unity and Rights Organization (EURO) is an American organization led by former Grand Wizard of the Knights of the Ku Klux Klan, David Duke. Founded in 2000, the group has been described as white nationalist and white supremacist.",
+            "Samuel Bowers\nSamuel Holloway Bowers (August 25, 1924 \u2013 November 5, 2006), Former Ku Klux Klan Imperial Wizard, was a convicted murderer and leading white supremacist activist in Mississippi during the Civil Rights Movement. In response to this movement, he co-founded a reactionary organization, the White Knights of the Ku Klux Klan. Bowers committed two notorious murders of civil rights activists in southern Mississippi: The 1964 murders of Chaney, Goodman, and Schwerner near Philadelphia, for which he served six years in federal prison; and the 1966 murder of Vernon Dahmer in Hattiesburg, for which he was sentenced to life in prison 32 years after the crime. He also was accused of bombings of Jewish targets in the cities of Jackson and Meridian in 1967 and 1968 (according to the man who was convicted of some of the bombings, Thomas A. Tarrants III). He died in prison at the age of 82.",
+            "Forrest School (Chapel Hill, Tennessee)\nForrest School is a public school in Chapel Hill, Tennessee. It serves grades 7-12 and is part of the Marshall County School District. The school is also known as Forrest Middle School for grades 7-8 and Forrest High School for grades 9-12. It is named for Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan, who was born in Chapel Hill.",
+            "Westside High School (Jacksonville)\nWestside High School is a public high school in Jacksonville, Florida. It is part of the Duval County School District and serves Jacksonville's Westside. The school was established in 1959 and was originally named Nathan B. Forrest High School, after Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan. The fact that the school was named for Forrest was a point of significant controversy until the Duval County School Board changed the name in 2014.",
+            "Madatharuvi case\nMadatharuvi case refers to a murder in Kerala, India. The case involved the 1966 murder of a widow named Mariyakutty. A priest, Fr. Benedict Onamkulam, was convicted of the crime.",
+            "Randy Roth\nRandy Roth is a convicted murderer and thief from Washington. He was convicted of the 1991 murder of his fourth wife, Cynthia Baumgartner Roth. He was suspected but never tried for murdering his second wife, Janis Roth, in 1981. In both deaths he was the only witness, he claimed the activity that led to the death was the idea of his deceased wife, and the bodies were cremated as quickly as could be arranged. He was also convicted of stealing in the form of defrauding insurers and the Social Security Administration and was sentenced to one year for theft and 50 years for first degree murder in 1992. At least two true crime books are based on Roth's crimes, \"A Rose for Her Grave\" by Ann Rule and \"Fatal Charm\" by Carlton Smith.",
+            "Richard Hauptmann\nBruno Richard Hauptmann (November 26, 1899 \u2013 April 3, 1936) was a German-born carpenter who was convicted of the abduction and murder of the 20-month-old son of aviator Charles Lindbergh and his wife Anne Morrow Lindbergh. The Lindbergh kidnapping became known as \"The Crime of the Century\". Hauptmann proclaimed his innocence to the end, but he was convicted of first degree murder and executed in 1936 in the electric chair at the New Jersey State Prison.",
+            "Friends of Abe\nThe Friends of Abe, Inc. (FOA) was a support and networking group for politically conservative members of the Hollywood elite. The organization was formed in 2004 by actor Gary Sinise. Screenwriter Lionel Chetwynd helped organize the group. \"Friends of Abe\" is a reference to \"Friends of Bill\", which is how members of Alcoholics Anonymous sometimes identify themselves, and \"Friends of Dorothy\", while \"Abe\" refers to Abraham Lincoln. As of January 2012, the organization had more than 1800 members. In addition to Sinise, Pat Boone, Jon Voight, Kelsey Grammer, Kevin Sorbo, and Scott Baio have stated that they are members of the organization. The organization fiercely protects its list of members for whom it maintains a secure private website, abespal.com. Sinise later withdrew from the leadership and Hollywood producer Jeremy Boreing became executive director.",
+            "Communist Labour Party (Syria)\nThe Communist Labour Party (Arabic: \u062d\u0632\u0628 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u0634\u064a\u0648\u0639\u064a\u200e \u200e \"Hizb Al-'Amal Al-Shuyu'iy\"; also translated as the \"Party for Communist Action\") is a Syrian communist party active in the 1980s and early 1990s. The party, a Marxist\u2013Leninist splinter group from the Syrian Communist Party, was first formed in August 1976 as the \"League for Communist Action,\" and was renamed to \"Communist Labor Party\" on 6 August 1981. The party, banned by the government of Syria since its establishment, was victim to a number of crackdowns, where 200 of its members were arrested in 1986 alone. 21 members were sentenced by the Supreme State Security Court for \"membership in a secret organization created to change the economic or social structure of the state\". Amnesty International protested on behalf of the prisoners. The party continued to secretly distribute its publications\u2013\"ar-Raya al-Hamra'a\" (\"\"The Red Banner\"\"), \"ash-Shyu'i\" (\"\"The Communist\"\"), \"al-Brulitari\" (\"\"The Proletarian\"\")\u2013until 1991. On 6 August 2003, the party announced its return to the political scene in a statement, followed by a new publication called \"al-An\" (\"\"Now\"\").",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "Spark (Marit Larsen album)\nSpark is the third album from Norwegian singer-songwriter Marit Larsen, and was released on November 18, 2011. The information was made available via Marit Larsen's Tumblr page. On 31 July 2011 Marit Larsen began to post information about her third album on her Tumblr. On 7 October 2011 she announced the name of the album and track list. The first single, \"Coming Home\" had premiered on NRK P3 and on her Facebook page on 15 October. The album produced two singles; \"Coming Home\" and \"Don't Move\". The album spawned 2 number one songs in the Philippine Top 100 Songs Chart where in \"Coming Home\" stayed atop for 4 consecutive weeks, which gave Marit her first number one song in the Philippines as a solo artist and her non-single song \"Last Night\" stayed for 2 consecutive weeks in the early 2012, serving as her second number one song."
+        ],
+        "thoughts": [
+            "The organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer is the Ku Klux Klan. Samuel Bowers, the former Imperial Wizard of the Ku Klux Klan, was convicted for the murder of Vernon Dahmer.",
+            "The number of active members in the White Knights of the Ku Klux Klan in 1967 was around four hundred.",
+            "The first Grand Wizard of the Ku Klux Klan was Nathan Bedford Forrest, a Confederate general. He was the leader of the original Ku Klux Klan during the Reconstruction era after the Civil War.",
+            "Based on the upstream task, it is clear that the first Grand Wizard of the Ku Klux Klan was Nathan Bedford Forrest, and there is no mention of any involvement in the murder of Vernon Dahmer in 1966. Therefore, it is unlikely that the retrieved Grand Wizard was convicted for the 1966 murder of Vernon Dahmer. Further research and verification from reliable sources would be necessary to confirm this information.",
+            "In 1967, the White Knights of the Ku Klux Klan had around four hundred active members. It is unlikely that the first Grand Wizard of the Ku Klux Klan was convicted for the murder of Vernon Dahmer in 1966, as there is no mention of any involvement in the murder. Further research and verification from reliable sources would be necessary to confirm this information."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "In 1967, there were how many active members in the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on the number of active members in the identified organization in 1967.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Synthesize the retrieved information to determine how many active members were in the organization in 1967.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts by identifying the organization involved in the murder of Vernon Dahmer (Node 1). Once the organization is identified, the next step (Node 2) retrieves data on its membership numbers in 1967. The final step (Node 3) synthesizes this information to answer the question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "White Knights of the Ku Klux Klan\nThe White Knights of the Ku Klux Klan are considered the most militant as well as the most violent chapter of the Ku Klux Klan in history. They originated in Mississippi in the early 1960s under the leadership of Samuel Bowers, its first Grand Wizard. The White Knights of Mississippi were formed in 1964, and they included roughly 200 members of the Original Knights of Louisiana. The White Knights were not interested in holding public demonstrations or in letting any information about themselves get out to the masses. Similar to the United Klans of America (UKA), the White Knights of Mississippi were very secretive about their group. Within a year, their membership was up to around six thousand, and they had Klaverns in over half of the counties in Mississippi. But by 1967, the number of active members had shrunk to around four hundred.",
+            "Leaders of the Ku Klux Klan\nThe national leader of the Ku Klux Klan is called either a Grand Wizard or an Imperial Wizard, depending on which KKK organization is being described.",
+            "Samuel Bowers\nSamuel Holloway Bowers (August 25, 1924 \u2013 November 5, 2006), Former Ku Klux Klan Imperial Wizard, was a convicted murderer and leading white supremacist activist in Mississippi during the Civil Rights Movement. In response to this movement, he co-founded a reactionary organization, the White Knights of the Ku Klux Klan. Bowers committed two notorious murders of civil rights activists in southern Mississippi: The 1964 murders of Chaney, Goodman, and Schwerner near Philadelphia, for which he served six years in federal prison; and the 1966 murder of Vernon Dahmer in Hattiesburg, for which he was sentenced to life in prison 32 years after the crime. He also was accused of bombings of Jewish targets in the cities of Jackson and Meridian in 1967 and 1968 (according to the man who was convicted of some of the bombings, Thomas A. Tarrants III). He died in prison at the age of 82.",
+            "European-American Unity and Rights Organization\nThe European-American Unity and Rights Organization (EURO) is an American organization led by former Grand Wizard of the Knights of the Ku Klux Klan, David Duke. Founded in 2000, the group has been described as white nationalist and white supremacist.",
+            "Forrest School (Chapel Hill, Tennessee)\nForrest School is a public school in Chapel Hill, Tennessee. It serves grades 7-12 and is part of the Marshall County School District. The school is also known as Forrest Middle School for grades 7-8 and Forrest High School for grades 9-12. It is named for Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan, who was born in Chapel Hill.",
+            "Madatharuvi case\nMadatharuvi case refers to a murder in Kerala, India. The case involved the 1966 murder of a widow named Mariyakutty. A priest, Fr. Benedict Onamkulam, was convicted of the crime.",
+            "Westside High School (Jacksonville)\nWestside High School is a public high school in Jacksonville, Florida. It is part of the Duval County School District and serves Jacksonville's Westside. The school was established in 1959 and was originally named Nathan B. Forrest High School, after Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan. The fact that the school was named for Forrest was a point of significant controversy until the Duval County School Board changed the name in 2014.",
+            "Randy Roth\nRandy Roth is a convicted murderer and thief from Washington. He was convicted of the 1991 murder of his fourth wife, Cynthia Baumgartner Roth. He was suspected but never tried for murdering his second wife, Janis Roth, in 1981. In both deaths he was the only witness, he claimed the activity that led to the death was the idea of his deceased wife, and the bodies were cremated as quickly as could be arranged. He was also convicted of stealing in the form of defrauding insurers and the Social Security Administration and was sentenced to one year for theft and 50 years for first degree murder in 1992. At least two true crime books are based on Roth's crimes, \"A Rose for Her Grave\" by Ann Rule and \"Fatal Charm\" by Carlton Smith.",
+            "Richard Hauptmann\nBruno Richard Hauptmann (November 26, 1899 \u2013 April 3, 1936) was a German-born carpenter who was convicted of the abduction and murder of the 20-month-old son of aviator Charles Lindbergh and his wife Anne Morrow Lindbergh. The Lindbergh kidnapping became known as \"The Crime of the Century\". Hauptmann proclaimed his innocence to the end, but he was convicted of first degree murder and executed in 1936 in the electric chair at the New Jersey State Prison.",
+            "Friends of Abe\nThe Friends of Abe, Inc. (FOA) was a support and networking group for politically conservative members of the Hollywood elite. The organization was formed in 2004 by actor Gary Sinise. Screenwriter Lionel Chetwynd helped organize the group. \"Friends of Abe\" is a reference to \"Friends of Bill\", which is how members of Alcoholics Anonymous sometimes identify themselves, and \"Friends of Dorothy\", while \"Abe\" refers to Abraham Lincoln. As of January 2012, the organization had more than 1800 members. In addition to Sinise, Pat Boone, Jon Voight, Kelsey Grammer, Kevin Sorbo, and Scott Baio have stated that they are members of the organization. The organization fiercely protects its list of members for whom it maintains a secure private website, abespal.com. Sinise later withdrew from the leadership and Hollywood producer Jeremy Boreing became executive director.",
+            "Communist Labour Party (Syria)\nThe Communist Labour Party (Arabic: \u062d\u0632\u0628 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u0634\u064a\u0648\u0639\u064a\u200e \u200e \"Hizb Al-'Amal Al-Shuyu'iy\"; also translated as the \"Party for Communist Action\") is a Syrian communist party active in the 1980s and early 1990s. The party, a Marxist\u2013Leninist splinter group from the Syrian Communist Party, was first formed in August 1976 as the \"League for Communist Action,\" and was renamed to \"Communist Labor Party\" on 6 August 1981. The party, banned by the government of Syria since its establishment, was victim to a number of crackdowns, where 200 of its members were arrested in 1986 alone. 21 members were sentenced by the Supreme State Security Court for \"membership in a secret organization created to change the economic or social structure of the state\". Amnesty International protested on behalf of the prisoners. The party continued to secretly distribute its publications\u2013\"ar-Raya al-Hamra'a\" (\"\"The Red Banner\"\"), \"ash-Shyu'i\" (\"\"The Communist\"\"), \"al-Brulitari\" (\"\"The Proletarian\"\")\u2013until 1991. On 6 August 2003, the party announced its return to the political scene in a statement, followed by a new publication called \"al-An\" (\"\"Now\"\")."
+        ],
+        "thoughts": [
+            "The organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer is the Ku Klux Klan. Samuel Bowers, the former Imperial Wizard of the Ku Klux Klan, was convicted for the murder of Vernon Dahmer.",
+            "In 1967, the White Knights of the Ku Klux Klan had around four hundred active members.",
+            "In 1967, the White Knights of the Ku Klux Klan had approximately 400 active members."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "In 1967, there were how many active members in the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the organization whose first Grand Wizard was involved in the 1966 murder of Vernon Dahmer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the first Grand Wizard of the organization identified in Node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the number of active members in the organization identified in Node 1 in the year 1967.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The question requires identifying a specific organization first, based on the historical event (the murder of Vernon Dahmer) and the role of its first Grand Wizard. Once the organization is identified, we need to find information about its membership in 1967. This task is broken down into steps:\n1. Identify the organization related to Vernon Dahmer's murder.\n2. Confirm the identity of its first Grand Wizard to ensure the correct organization is being considered.\n3. Retrieve the historical data on the organization's membership for the specified year, 1967."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "White Knights of the Ku Klux Klan\nThe White Knights of the Ku Klux Klan are considered the most militant as well as the most violent chapter of the Ku Klux Klan in history. They originated in Mississippi in the early 1960s under the leadership of Samuel Bowers, its first Grand Wizard. The White Knights of Mississippi were formed in 1964, and they included roughly 200 members of the Original Knights of Louisiana. The White Knights were not interested in holding public demonstrations or in letting any information about themselves get out to the masses. Similar to the United Klans of America (UKA), the White Knights of Mississippi were very secretive about their group. Within a year, their membership was up to around six thousand, and they had Klaverns in over half of the counties in Mississippi. But by 1967, the number of active members had shrunk to around four hundred.",
+            "Leaders of the Ku Klux Klan\nThe national leader of the Ku Klux Klan is called either a Grand Wizard or an Imperial Wizard, depending on which KKK organization is being described.",
+            "European-American Unity and Rights Organization\nThe European-American Unity and Rights Organization (EURO) is an American organization led by former Grand Wizard of the Knights of the Ku Klux Klan, David Duke. Founded in 2000, the group has been described as white nationalist and white supremacist.",
+            "Samuel Bowers\nSamuel Holloway Bowers (August 25, 1924 \u2013 November 5, 2006), Former Ku Klux Klan Imperial Wizard, was a convicted murderer and leading white supremacist activist in Mississippi during the Civil Rights Movement. In response to this movement, he co-founded a reactionary organization, the White Knights of the Ku Klux Klan. Bowers committed two notorious murders of civil rights activists in southern Mississippi: The 1964 murders of Chaney, Goodman, and Schwerner near Philadelphia, for which he served six years in federal prison; and the 1966 murder of Vernon Dahmer in Hattiesburg, for which he was sentenced to life in prison 32 years after the crime. He also was accused of bombings of Jewish targets in the cities of Jackson and Meridian in 1967 and 1968 (according to the man who was convicted of some of the bombings, Thomas A. Tarrants III). He died in prison at the age of 82.",
+            "Forrest School (Chapel Hill, Tennessee)\nForrest School is a public school in Chapel Hill, Tennessee. It serves grades 7-12 and is part of the Marshall County School District. The school is also known as Forrest Middle School for grades 7-8 and Forrest High School for grades 9-12. It is named for Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan, who was born in Chapel Hill.",
+            "Westside High School (Jacksonville)\nWestside High School is a public high school in Jacksonville, Florida. It is part of the Duval County School District and serves Jacksonville's Westside. The school was established in 1959 and was originally named Nathan B. Forrest High School, after Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan. The fact that the school was named for Forrest was a point of significant controversy until the Duval County School Board changed the name in 2014.",
+            "Madatharuvi case\nMadatharuvi case refers to a murder in Kerala, India. The case involved the 1966 murder of a widow named Mariyakutty. A priest, Fr. Benedict Onamkulam, was convicted of the crime.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "Jeff Tremaine\nJeffery James Tremaine (born September 4, 1966) is an American film director, film producer, television director, and television producer. He is most closely associated with the \"Jackass\" franchise, having been involved since the inception of the first TV show.",
+            "Friends of Abe\nThe Friends of Abe, Inc. (FOA) was a support and networking group for politically conservative members of the Hollywood elite. The organization was formed in 2004 by actor Gary Sinise. Screenwriter Lionel Chetwynd helped organize the group. \"Friends of Abe\" is a reference to \"Friends of Bill\", which is how members of Alcoholics Anonymous sometimes identify themselves, and \"Friends of Dorothy\", while \"Abe\" refers to Abraham Lincoln. As of January 2012, the organization had more than 1800 members. In addition to Sinise, Pat Boone, Jon Voight, Kelsey Grammer, Kevin Sorbo, and Scott Baio have stated that they are members of the organization. The organization fiercely protects its list of members for whom it maintains a secure private website, abespal.com. Sinise later withdrew from the leadership and Hollywood producer Jeremy Boreing became executive director.",
+            "Communist Labour Party (Syria)\nThe Communist Labour Party (Arabic: \u062d\u0632\u0628 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u0634\u064a\u0648\u0639\u064a\u200e \u200e \"Hizb Al-'Amal Al-Shuyu'iy\"; also translated as the \"Party for Communist Action\") is a Syrian communist party active in the 1980s and early 1990s. The party, a Marxist\u2013Leninist splinter group from the Syrian Communist Party, was first formed in August 1976 as the \"League for Communist Action,\" and was renamed to \"Communist Labor Party\" on 6 August 1981. The party, banned by the government of Syria since its establishment, was victim to a number of crackdowns, where 200 of its members were arrested in 1986 alone. 21 members were sentenced by the Supreme State Security Court for \"membership in a secret organization created to change the economic or social structure of the state\". Amnesty International protested on behalf of the prisoners. The party continued to secretly distribute its publications\u2013\"ar-Raya al-Hamra'a\" (\"\"The Red Banner\"\"), \"ash-Shyu'i\" (\"\"The Communist\"\"), \"al-Brulitari\" (\"\"The Proletarian\"\")\u2013until 1991. On 6 August 2003, the party announced its return to the political scene in a statement, followed by a new publication called \"al-An\" (\"\"Now\"\")."
+        ],
+        "thoughts": [
+            "The organization whose first Grand Wizard, Samuel Bowers, was involved in the 1966 murder of Vernon Dahmer is the Ku Klux Klan. Samuel Bowers was a former Imperial Wizard of the Ku Klux Klan and was convicted for his involvement in the murder of civil rights activist Vernon Dahmer.",
+            "The number of active members in the White Knights of the Ku Klux Klan in the year 1967 was around four hundred."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "In 1967, there were how many active members in the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the name of the first Grand Wizard of the organization identified in Node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the number of active members in the organization identified in Node 1 for the year 1967.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Combine the results from Node 1 and Node 3 to answer how many active members were in the organization in 1967.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins by identifying the organization linked to the Grand Wizard convicted for the 1966 murder. Once the organization is identified, we determine how many active members were part of this organization in 1967. Steps are broken down to ensure correct identification and counting of active members at the relevant time."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "White Knights of the Ku Klux Klan\nThe White Knights of the Ku Klux Klan are considered the most militant as well as the most violent chapter of the Ku Klux Klan in history. They originated in Mississippi in the early 1960s under the leadership of Samuel Bowers, its first Grand Wizard. The White Knights of Mississippi were formed in 1964, and they included roughly 200 members of the Original Knights of Louisiana. The White Knights were not interested in holding public demonstrations or in letting any information about themselves get out to the masses. Similar to the United Klans of America (UKA), the White Knights of Mississippi were very secretive about their group. Within a year, their membership was up to around six thousand, and they had Klaverns in over half of the counties in Mississippi. But by 1967, the number of active members had shrunk to around four hundred.",
+            "Leaders of the Ku Klux Klan\nThe national leader of the Ku Klux Klan is called either a Grand Wizard or an Imperial Wizard, depending on which KKK organization is being described.",
+            "Samuel Bowers\nSamuel Holloway Bowers (August 25, 1924 \u2013 November 5, 2006), Former Ku Klux Klan Imperial Wizard, was a convicted murderer and leading white supremacist activist in Mississippi during the Civil Rights Movement. In response to this movement, he co-founded a reactionary organization, the White Knights of the Ku Klux Klan. Bowers committed two notorious murders of civil rights activists in southern Mississippi: The 1964 murders of Chaney, Goodman, and Schwerner near Philadelphia, for which he served six years in federal prison; and the 1966 murder of Vernon Dahmer in Hattiesburg, for which he was sentenced to life in prison 32 years after the crime. He also was accused of bombings of Jewish targets in the cities of Jackson and Meridian in 1967 and 1968 (according to the man who was convicted of some of the bombings, Thomas A. Tarrants III). He died in prison at the age of 82.",
+            "European-American Unity and Rights Organization\nThe European-American Unity and Rights Organization (EURO) is an American organization led by former Grand Wizard of the Knights of the Ku Klux Klan, David Duke. Founded in 2000, the group has been described as white nationalist and white supremacist.",
+            "Forrest School (Chapel Hill, Tennessee)\nForrest School is a public school in Chapel Hill, Tennessee. It serves grades 7-12 and is part of the Marshall County School District. The school is also known as Forrest Middle School for grades 7-8 and Forrest High School for grades 9-12. It is named for Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan, who was born in Chapel Hill.",
+            "Madatharuvi case\nMadatharuvi case refers to a murder in Kerala, India. The case involved the 1966 murder of a widow named Mariyakutty. A priest, Fr. Benedict Onamkulam, was convicted of the crime.",
+            "Westside High School (Jacksonville)\nWestside High School is a public high school in Jacksonville, Florida. It is part of the Duval County School District and serves Jacksonville's Westside. The school was established in 1959 and was originally named Nathan B. Forrest High School, after Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan. The fact that the school was named for Forrest was a point of significant controversy until the Duval County School Board changed the name in 2014.",
+            "Randy Roth\nRandy Roth is a convicted murderer and thief from Washington. He was convicted of the 1991 murder of his fourth wife, Cynthia Baumgartner Roth. He was suspected but never tried for murdering his second wife, Janis Roth, in 1981. In both deaths he was the only witness, he claimed the activity that led to the death was the idea of his deceased wife, and the bodies were cremated as quickly as could be arranged. He was also convicted of stealing in the form of defrauding insurers and the Social Security Administration and was sentenced to one year for theft and 50 years for first degree murder in 1992. At least two true crime books are based on Roth's crimes, \"A Rose for Her Grave\" by Ann Rule and \"Fatal Charm\" by Carlton Smith.",
+            "Richard Hauptmann\nBruno Richard Hauptmann (November 26, 1899 \u2013 April 3, 1936) was a German-born carpenter who was convicted of the abduction and murder of the 20-month-old son of aviator Charles Lindbergh and his wife Anne Morrow Lindbergh. The Lindbergh kidnapping became known as \"The Crime of the Century\". Hauptmann proclaimed his innocence to the end, but he was convicted of first degree murder and executed in 1936 in the electric chair at the New Jersey State Prison.",
+            "Friends of Abe\nThe Friends of Abe, Inc. (FOA) was a support and networking group for politically conservative members of the Hollywood elite. The organization was formed in 2004 by actor Gary Sinise. Screenwriter Lionel Chetwynd helped organize the group. \"Friends of Abe\" is a reference to \"Friends of Bill\", which is how members of Alcoholics Anonymous sometimes identify themselves, and \"Friends of Dorothy\", while \"Abe\" refers to Abraham Lincoln. As of January 2012, the organization had more than 1800 members. In addition to Sinise, Pat Boone, Jon Voight, Kelsey Grammer, Kevin Sorbo, and Scott Baio have stated that they are members of the organization. The organization fiercely protects its list of members for whom it maintains a secure private website, abespal.com. Sinise later withdrew from the leadership and Hollywood producer Jeremy Boreing became executive director.",
+            "Communist Labour Party (Syria)\nThe Communist Labour Party (Arabic: \u062d\u0632\u0628 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u0634\u064a\u0648\u0639\u064a\u200e \u200e \"Hizb Al-'Amal Al-Shuyu'iy\"; also translated as the \"Party for Communist Action\") is a Syrian communist party active in the 1980s and early 1990s. The party, a Marxist\u2013Leninist splinter group from the Syrian Communist Party, was first formed in August 1976 as the \"League for Communist Action,\" and was renamed to \"Communist Labor Party\" on 6 August 1981. The party, banned by the government of Syria since its establishment, was victim to a number of crackdowns, where 200 of its members were arrested in 1986 alone. 21 members were sentenced by the Supreme State Security Court for \"membership in a secret organization created to change the economic or social structure of the state\". Amnesty International protested on behalf of the prisoners. The party continued to secretly distribute its publications\u2013\"ar-Raya al-Hamra'a\" (\"\"The Red Banner\"\"), \"ash-Shyu'i\" (\"\"The Communist\"\"), \"al-Brulitari\" (\"\"The Proletarian\"\")\u2013until 1991. On 6 August 2003, the party announced its return to the political scene in a statement, followed by a new publication called \"al-An\" (\"\"Now\"\")."
+        ],
+        "thoughts": [
+            "The organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer is the Ku Klux Klan. Samuel Bowers, the former Imperial Wizard of the White Knights of the Ku Klux Klan, was convicted for the murder of Vernon Dahmer.",
+            "The number of active members in the White Knights of the Ku Klux Klan in 1967 was around four hundred.",
+            "The organization with the first Grand Wizard convicted for the 1966 murder of Vernon Dahmer was the Ku Klux Klan, specifically the White Knights of the Ku Klux Klan. In 1967, the White Knights of the Ku Klux Klan had around four hundred active members."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "In 1967, there were how many active members in the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve details about the murder of Vernon Dahmer in 1966, including any arrests and convictions.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Confirm the identity of the first Grand Wizard of the identified organization.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Verify if the first Grand Wizard was indeed convicted for Vernon Dahmer's murder.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Retrieve information about the number of active members in the identified organization in 1967.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Synthesize the retrieved information to provide the number of active members in the organization in 1967.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "The task is to find the number of active members in a specific organization in 1967. To approach this, we first identify the organization linked to the murder of Vernon Dahmer. We do this by retrieving and confirming the details of the murder and any associated convictions, ensuring that the convicted person matches the historical information about the organization's first Grand Wizard. Once the organization is confirmed, we then retrieve data on its membership in 1967. The final step synthesizes this information to directly answer the question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "White Knights of the Ku Klux Klan\nThe White Knights of the Ku Klux Klan are considered the most militant as well as the most violent chapter of the Ku Klux Klan in history. They originated in Mississippi in the early 1960s under the leadership of Samuel Bowers, its first Grand Wizard. The White Knights of Mississippi were formed in 1964, and they included roughly 200 members of the Original Knights of Louisiana. The White Knights were not interested in holding public demonstrations or in letting any information about themselves get out to the masses. Similar to the United Klans of America (UKA), the White Knights of Mississippi were very secretive about their group. Within a year, their membership was up to around six thousand, and they had Klaverns in over half of the counties in Mississippi. But by 1967, the number of active members had shrunk to around four hundred.",
+            "Leaders of the Ku Klux Klan\nThe national leader of the Ku Klux Klan is called either a Grand Wizard or an Imperial Wizard, depending on which KKK organization is being described.",
+            "European-American Unity and Rights Organization\nThe European-American Unity and Rights Organization (EURO) is an American organization led by former Grand Wizard of the Knights of the Ku Klux Klan, David Duke. Founded in 2000, the group has been described as white nationalist and white supremacist.",
+            "Samuel Bowers\nSamuel Holloway Bowers (August 25, 1924 \u2013 November 5, 2006), Former Ku Klux Klan Imperial Wizard, was a convicted murderer and leading white supremacist activist in Mississippi during the Civil Rights Movement. In response to this movement, he co-founded a reactionary organization, the White Knights of the Ku Klux Klan. Bowers committed two notorious murders of civil rights activists in southern Mississippi: The 1964 murders of Chaney, Goodman, and Schwerner near Philadelphia, for which he served six years in federal prison; and the 1966 murder of Vernon Dahmer in Hattiesburg, for which he was sentenced to life in prison 32 years after the crime. He also was accused of bombings of Jewish targets in the cities of Jackson and Meridian in 1967 and 1968 (according to the man who was convicted of some of the bombings, Thomas A. Tarrants III). He died in prison at the age of 82.",
+            "Forrest School (Chapel Hill, Tennessee)\nForrest School is a public school in Chapel Hill, Tennessee. It serves grades 7-12 and is part of the Marshall County School District. The school is also known as Forrest Middle School for grades 7-8 and Forrest High School for grades 9-12. It is named for Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan, who was born in Chapel Hill.",
+            "Westside High School (Jacksonville)\nWestside High School is a public high school in Jacksonville, Florida. It is part of the Duval County School District and serves Jacksonville's Westside. The school was established in 1959 and was originally named Nathan B. Forrest High School, after Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan. The fact that the school was named for Forrest was a point of significant controversy until the Duval County School Board changed the name in 2014.",
+            "Madatharuvi case\nMadatharuvi case refers to a murder in Kerala, India. The case involved the 1966 murder of a widow named Mariyakutty. A priest, Fr. Benedict Onamkulam, was convicted of the crime.",
+            "Randy Roth\nRandy Roth is a convicted murderer and thief from Washington. He was convicted of the 1991 murder of his fourth wife, Cynthia Baumgartner Roth. He was suspected but never tried for murdering his second wife, Janis Roth, in 1981. In both deaths he was the only witness, he claimed the activity that led to the death was the idea of his deceased wife, and the bodies were cremated as quickly as could be arranged. He was also convicted of stealing in the form of defrauding insurers and the Social Security Administration and was sentenced to one year for theft and 50 years for first degree murder in 1992. At least two true crime books are based on Roth's crimes, \"A Rose for Her Grave\" by Ann Rule and \"Fatal Charm\" by Carlton Smith.",
+            "Richard Hauptmann\nBruno Richard Hauptmann (November 26, 1899 \u2013 April 3, 1936) was a German-born carpenter who was convicted of the abduction and murder of the 20-month-old son of aviator Charles Lindbergh and his wife Anne Morrow Lindbergh. The Lindbergh kidnapping became known as \"The Crime of the Century\". Hauptmann proclaimed his innocence to the end, but he was convicted of first degree murder and executed in 1936 in the electric chair at the New Jersey State Prison.",
+            "Rabid Neurosis\nRabid Neurosis (RNS) was an MP3 warez release organization which was founded in 1996, following in the footsteps of Compress 'Da Audio (CDA), the first MP3 piracy group. In 1999, the group claimed to have released over 6,000 titles a year. RNS occasionally used the tagline \"Rabid Neurosis - Spread The Epidemic.\" RNS were best known for releasing highly anticipated albums by hip hop, pop, rock and dance artists weeks and sometimes months before their official release date. RNS is known to have greatly contributed to the mp3 scene. After their group was mentioned in an MTV News article about the early leak of the Eminem album \"Encore\", RNS stopped including their initials in filenames and ID3 tags.",
+            "Internet Infidels\nInternet Infidels, Inc. is a Colorado Springs, Colorado-based nonprofit educational organization founded in 1995 by Jeffery Jay Lowder and Brett Lemoine. Its mission is to use the Internet to promote a view that supernatural forces or entities do not exist (metaphysical naturalism). Internet Infidels maintains a website of educational resources about agnosticism, atheism, freethought, humanism, secularism, and other nontheistic viewpoints particularly relevant to nonbelievers and skeptics of the paranormal. Relevant resources include rebuttals to arguments made by religious apologists and theistic philosophers, transcripts of debates between believers and nonbelievers, and responses from opponents of a naturalistic worldview. The site has been referred to by one of its critics, Christian apologist Gary Habermas, as \"one of the Internet's main Web sites for skeptics\" and by skeptical physicist Taner Edis as \"a major Web site serving nonbelievers\". Its tagline is \"a drop of reason in a pool of confusion\".",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Johnson Mountain Boys\nThe Johnson Mountain Boys were a popular bluegrass band throughout the 1980s from the Washington, D.C. area. Their style favored a more traditional approach to bluegrass than some of their contemporaries. They released ten albums and toured widely, playing venues such as Madison Square Garden, The White House, the Lincoln Center and the Grand Ole Opry in the United States. Other tours took them around the world to England, Japan, and Africa. The group was frequently recognized with nominations for Grammy Awards, International Bluegrass Music Awards, and awards from the Society for the Preservation of Bluegrass Music in America. Many of the band's members are still active in other musical groups and settings.",
+            "Hydrogen highway (Japan)\nJapan's hydrogen highway is a network of hydrogen filling stations placed along roadsides that provide fuel for hydrogen fuel cell vehicles (HFCV). An HFCV is a vehicle that uses a fuel cell to convert hydrogen energy into electrical energy. The hydrogen that is used in fuel cell vehicles can be made using fossil or renewable resources. The hydrogen highway is necessary for HFCVs to be used. HFCV reduce tailpipe emissions of greenhouse gases. By May 2016, there were approximately 80 hydrogen fueling stations in Japan.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Investment control\nInvestment control or investment controlling is a monitoring function within the asset management, portfolio management or investment management. It is concerned with independently supervising and monitoring the quality of asset management accounts with the aim of ensuring performance and quality in order to provide the required benefit for the asset management client. Dependent on setup, investment controlling not only encompasses controlling activities but also can include areas from compliance to performance review. Investment controlling aspects can also be taken into consideration by asset management clients or investment advisers/consultants and consequently it is likely that these stakeholders also run certain investment controlling activities.",
+            "The Winter Knights\nThe Winter Knights is a children's fantasy novel by Paul Stewart and Chris Riddell, first published in 2005. It is the eighth volume of \"The Edge Chronicles\" and the second of the \"Quint Saga\" trilogy; within the stories' own chronology it is the second novel, preceding the \"Twig Saga\" and \"Rook Saga\" trilogies that were published earlier."
+        ],
+        "thoughts": [
+            "Vernon Dahmer was a civil rights leader in Mississippi who was murdered in 1966 by the Ku Klux Klan. The Klan firebombed his home, resulting in his death. Four Klansmen were arrested and charged with his murder, but only one, Samuel Bowers, was convicted and sentenced to life in prison. The other three were acquitted.",
+            "The organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer is the Ku Klux Klan. Samuel Bowers, the former Imperial Wizard of the White Knights of the Ku Klux Klan, was convicted for the murder of Vernon Dahmer.",
+            "The first Grand Wizard of the White Knights of the Ku Klux Klan was Samuel Bowers.",
+            "Based on the upstream tasks, it can be verified that the first Grand Wizard of the White Knights of the Ku Klux Klan, Samuel Bowers, was indeed convicted for Vernon Dahmer's murder.",
+            "In 1967, the White Knights of the Ku Klux Klan had around four hundred active members.",
+            "In 1967, the White Knights of the Ku Klux Klan had approximately 400 active members."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "In 1967, there were how many active members in the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the name of the first Grand Wizard of the identified organization.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Using the identified organization from step 1, find the number of active members it had in 1967.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins with identifying the organization linked to the 1966 murder of Vernon Dahmer. The organization is known to have had a first Grand Wizard involved in this incident. This identification is necessary for the next step where we focus on finding out the number of active members for the year 1967. Two parallel retrievals occur after the organization is identified: confirming the identity of the first Grand Wizard and determining the membership count in 1967. However, since the question's final requirement is centered around the membership data for 1967, the graph concludes at the node where this information is retrieved."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "White Knights of the Ku Klux Klan\nThe White Knights of the Ku Klux Klan are considered the most militant as well as the most violent chapter of the Ku Klux Klan in history. They originated in Mississippi in the early 1960s under the leadership of Samuel Bowers, its first Grand Wizard. The White Knights of Mississippi were formed in 1964, and they included roughly 200 members of the Original Knights of Louisiana. The White Knights were not interested in holding public demonstrations or in letting any information about themselves get out to the masses. Similar to the United Klans of America (UKA), the White Knights of Mississippi were very secretive about their group. Within a year, their membership was up to around six thousand, and they had Klaverns in over half of the counties in Mississippi. But by 1967, the number of active members had shrunk to around four hundred.",
+            "Samuel Bowers\nSamuel Holloway Bowers (August 25, 1924 \u2013 November 5, 2006), Former Ku Klux Klan Imperial Wizard, was a convicted murderer and leading white supremacist activist in Mississippi during the Civil Rights Movement. In response to this movement, he co-founded a reactionary organization, the White Knights of the Ku Klux Klan. Bowers committed two notorious murders of civil rights activists in southern Mississippi: The 1964 murders of Chaney, Goodman, and Schwerner near Philadelphia, for which he served six years in federal prison; and the 1966 murder of Vernon Dahmer in Hattiesburg, for which he was sentenced to life in prison 32 years after the crime. He also was accused of bombings of Jewish targets in the cities of Jackson and Meridian in 1967 and 1968 (according to the man who was convicted of some of the bombings, Thomas A. Tarrants III). He died in prison at the age of 82.",
+            "Leaders of the Ku Klux Klan\nThe national leader of the Ku Klux Klan is called either a Grand Wizard or an Imperial Wizard, depending on which KKK organization is being described.",
+            "European-American Unity and Rights Organization\nThe European-American Unity and Rights Organization (EURO) is an American organization led by former Grand Wizard of the Knights of the Ku Klux Klan, David Duke. Founded in 2000, the group has been described as white nationalist and white supremacist.",
+            "Forrest School (Chapel Hill, Tennessee)\nForrest School is a public school in Chapel Hill, Tennessee. It serves grades 7-12 and is part of the Marshall County School District. The school is also known as Forrest Middle School for grades 7-8 and Forrest High School for grades 9-12. It is named for Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan, who was born in Chapel Hill.",
+            "Madatharuvi case\nMadatharuvi case refers to a murder in Kerala, India. The case involved the 1966 murder of a widow named Mariyakutty. A priest, Fr. Benedict Onamkulam, was convicted of the crime.",
+            "Westside High School (Jacksonville)\nWestside High School is a public high school in Jacksonville, Florida. It is part of the Duval County School District and serves Jacksonville's Westside. The school was established in 1959 and was originally named Nathan B. Forrest High School, after Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan. The fact that the school was named for Forrest was a point of significant controversy until the Duval County School Board changed the name in 2014.",
+            "Randy Roth\nRandy Roth is a convicted murderer and thief from Washington. He was convicted of the 1991 murder of his fourth wife, Cynthia Baumgartner Roth. He was suspected but never tried for murdering his second wife, Janis Roth, in 1981. In both deaths he was the only witness, he claimed the activity that led to the death was the idea of his deceased wife, and the bodies were cremated as quickly as could be arranged. He was also convicted of stealing in the form of defrauding insurers and the Social Security Administration and was sentenced to one year for theft and 50 years for first degree murder in 1992. At least two true crime books are based on Roth's crimes, \"A Rose for Her Grave\" by Ann Rule and \"Fatal Charm\" by Carlton Smith.",
+            "Richard Hauptmann\nBruno Richard Hauptmann (November 26, 1899 \u2013 April 3, 1936) was a German-born carpenter who was convicted of the abduction and murder of the 20-month-old son of aviator Charles Lindbergh and his wife Anne Morrow Lindbergh. The Lindbergh kidnapping became known as \"The Crime of the Century\". Hauptmann proclaimed his innocence to the end, but he was convicted of first degree murder and executed in 1936 in the electric chair at the New Jersey State Prison.",
+            "Raya (app)\nRaya is a private, membership based community for people all over the world to connect and collaborate. It launched in March 2015 as an IOS application. Early on, many members used the application to meet other members romantically. The app describes itself as \"A private network for people in creative industries\u201d and in January 2017 the app launched a feature entitled \"Work\" that allowed members to collaborate on work related projects. The app asks members to apply and log in with their Instagram account causing many members to conjecture if admittance is determined by the applicant's Instagram influence and how many active Raya members follow them. However, many community members with small Instagram followings seem to contradict this theory and the admittance algorithm remains a mystery. It costs $8/month (in US dollars) to be a member of Raya.",
+            "List of Top Pops number-one singles\n\"Top Pops\" is a former British weekly pop music newspaper. It was founded as a monthly publication by Woodrow Wyatt in May 1967, becoming fortnightly in November 1967. On 25 May 1968, editor Colin Bostock-Smith began compiling a singles sales chart using a telephone sample of approximately twelve W H Smith & Son stores \u2013 the first single to reach number one on the \"Top Pops\" chart was \"Young Girl\" by Gary Puckett & The Union Gap. The charts and paper were published weekly with effect from 22 June 1968. On 20 September 1969 the paper was rebranded \"Top Pops & Music Now\", and subsequently became \"Music Now\" from 21 March 1970 \u2013 at this point the chart was sampling between 30 and 40 stores. From 27 February 1971 the chart was no longer published and in May 1971 the newspaper ceased publication. During the publication of the chart, 55 different singles reached number one. The only one to be knocked off number one and then regain the top spot was \"Mony Mony\" by Tommy James and the Shondells. The final chart-topper was \"My Sweet Lord\" by George Harrison."
+        ],
+        "thoughts": [
+            "The organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer is the Ku Klux Klan. Samuel Bowers, the former Imperial Wizard of the White Knights of the Ku Klux Klan, was convicted for the murder of Vernon Dahmer.",
+            "In 1967, the White Knights of the Ku Klux Klan had approximately 400 active members."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "In 1967, there were how many active members in the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine in which year the organization's first Grand Wizard was convicted for the murder of Vernon Dahmer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Confirm that the conviction in 1966 was related to the murder of Vernon Dahmer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Find out how many active members were in the identified organization in 1967.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph for this task begins with identifying the organization linked to the crime by its Grand Wizard, which is central to the question. This provides clarity on the entity we are dealing with. Parallelly, we ensure that the conviction timeline aligns with the crime mentioned. Once confirmed, we look up the active membership details for that organization for the year 1967."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Samuel Bowers\nSamuel Holloway Bowers (August 25, 1924 \u2013 November 5, 2006), Former Ku Klux Klan Imperial Wizard, was a convicted murderer and leading white supremacist activist in Mississippi during the Civil Rights Movement. In response to this movement, he co-founded a reactionary organization, the White Knights of the Ku Klux Klan. Bowers committed two notorious murders of civil rights activists in southern Mississippi: The 1964 murders of Chaney, Goodman, and Schwerner near Philadelphia, for which he served six years in federal prison; and the 1966 murder of Vernon Dahmer in Hattiesburg, for which he was sentenced to life in prison 32 years after the crime. He also was accused of bombings of Jewish targets in the cities of Jackson and Meridian in 1967 and 1968 (according to the man who was convicted of some of the bombings, Thomas A. Tarrants III). He died in prison at the age of 82.",
+            "White Knights of the Ku Klux Klan\nThe White Knights of the Ku Klux Klan are considered the most militant as well as the most violent chapter of the Ku Klux Klan in history. They originated in Mississippi in the early 1960s under the leadership of Samuel Bowers, its first Grand Wizard. The White Knights of Mississippi were formed in 1964, and they included roughly 200 members of the Original Knights of Louisiana. The White Knights were not interested in holding public demonstrations or in letting any information about themselves get out to the masses. Similar to the United Klans of America (UKA), the White Knights of Mississippi were very secretive about their group. Within a year, their membership was up to around six thousand, and they had Klaverns in over half of the counties in Mississippi. But by 1967, the number of active members had shrunk to around four hundred.",
+            "Leaders of the Ku Klux Klan\nThe national leader of the Ku Klux Klan is called either a Grand Wizard or an Imperial Wizard, depending on which KKK organization is being described.",
+            "European-American Unity and Rights Organization\nThe European-American Unity and Rights Organization (EURO) is an American organization led by former Grand Wizard of the Knights of the Ku Klux Klan, David Duke. Founded in 2000, the group has been described as white nationalist and white supremacist.",
+            "Forrest School (Chapel Hill, Tennessee)\nForrest School is a public school in Chapel Hill, Tennessee. It serves grades 7-12 and is part of the Marshall County School District. The school is also known as Forrest Middle School for grades 7-8 and Forrest High School for grades 9-12. It is named for Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan, who was born in Chapel Hill.",
+            "Dena Thompson\nDena Thompson (born 1960) is a former confidence trickster and bigamist. She habitually met men through lonely hearts columns and stole their money. She is currently in prison for murdering former BT Manager Julian Webb. She was acquitted of the attempted murder of a second man, Robert Thompson, and is also suspected of murdering an ex-boyfriend. She was sentenced to 16 years in prison at the age of 43. She was also convicted of stealing from and defrauding her former lovers. Following her conviction Detective Chief Inspector Martyn Underhill, stated: \"This woman is every man's nightmare, the most dangerous woman I have ever met. For a decade, she has targeted men sexually, financially and physically. The men of Britain can sleep safe tonight knowing she has been taken off the streets.\" A judge described her as:",
+            "Westside High School (Jacksonville)\nWestside High School is a public high school in Jacksonville, Florida. It is part of the Duval County School District and serves Jacksonville's Westside. The school was established in 1959 and was originally named Nathan B. Forrest High School, after Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan. The fact that the school was named for Forrest was a point of significant controversy until the Duval County School Board changed the name in 2014.",
+            "Mount Vernon, New York\nMount Vernon is a city in Westchester County, New York, United States. It is an inner suburb of New York City, immediately to the north of the borough of the Bronx. As of the 2010 census, Mount Vernon had a population of 67,292.",
+            "Madatharuvi case\nMadatharuvi case refers to a murder in Kerala, India. The case involved the 1966 murder of a widow named Mariyakutty. A priest, Fr. Benedict Onamkulam, was convicted of the crime.",
+            "Randy Roth\nRandy Roth is a convicted murderer and thief from Washington. He was convicted of the 1991 murder of his fourth wife, Cynthia Baumgartner Roth. He was suspected but never tried for murdering his second wife, Janis Roth, in 1981. In both deaths he was the only witness, he claimed the activity that led to the death was the idea of his deceased wife, and the bodies were cremated as quickly as could be arranged. He was also convicted of stealing in the form of defrauding insurers and the Social Security Administration and was sentenced to one year for theft and 50 years for first degree murder in 1992. At least two true crime books are based on Roth's crimes, \"A Rose for Her Grave\" by Ann Rule and \"Fatal Charm\" by Carlton Smith.",
+            "Richard Hauptmann\nBruno Richard Hauptmann (November 26, 1899 \u2013 April 3, 1936) was a German-born carpenter who was convicted of the abduction and murder of the 20-month-old son of aviator Charles Lindbergh and his wife Anne Morrow Lindbergh. The Lindbergh kidnapping became known as \"The Crime of the Century\". Hauptmann proclaimed his innocence to the end, but he was convicted of first degree murder and executed in 1936 in the electric chair at the New Jersey State Prison.",
+            "Friends of Abe\nThe Friends of Abe, Inc. (FOA) was a support and networking group for politically conservative members of the Hollywood elite. The organization was formed in 2004 by actor Gary Sinise. Screenwriter Lionel Chetwynd helped organize the group. \"Friends of Abe\" is a reference to \"Friends of Bill\", which is how members of Alcoholics Anonymous sometimes identify themselves, and \"Friends of Dorothy\", while \"Abe\" refers to Abraham Lincoln. As of January 2012, the organization had more than 1800 members. In addition to Sinise, Pat Boone, Jon Voight, Kelsey Grammer, Kevin Sorbo, and Scott Baio have stated that they are members of the organization. The organization fiercely protects its list of members for whom it maintains a secure private website, abespal.com. Sinise later withdrew from the leadership and Hollywood producer Jeremy Boreing became executive director.",
+            "Communist Labour Party (Syria)\nThe Communist Labour Party (Arabic: \u062d\u0632\u0628 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u0634\u064a\u0648\u0639\u064a\u200e \u200e \"Hizb Al-'Amal Al-Shuyu'iy\"; also translated as the \"Party for Communist Action\") is a Syrian communist party active in the 1980s and early 1990s. The party, a Marxist\u2013Leninist splinter group from the Syrian Communist Party, was first formed in August 1976 as the \"League for Communist Action,\" and was renamed to \"Communist Labor Party\" on 6 August 1981. The party, banned by the government of Syria since its establishment, was victim to a number of crackdowns, where 200 of its members were arrested in 1986 alone. 21 members were sentenced by the Supreme State Security Court for \"membership in a secret organization created to change the economic or social structure of the state\". Amnesty International protested on behalf of the prisoners. The party continued to secretly distribute its publications\u2013\"ar-Raya al-Hamra'a\" (\"\"The Red Banner\"\"), \"ash-Shyu'i\" (\"\"The Communist\"\"), \"al-Brulitari\" (\"\"The Proletarian\"\")\u2013until 1991. On 6 August 2003, the party announced its return to the political scene in a statement, followed by a new publication called \"al-An\" (\"\"Now\"\")."
+        ],
+        "thoughts": [
+            "The organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer is the Ku Klux Klan. Samuel Bowers, the former Imperial Wizard of the White Knights of the Ku Klux Klan, was convicted for the murder of Vernon Dahmer.",
+            "The first Grand Wizard of the Ku Klux Klan, Nathan Bedford Forrest, was not convicted for the murder of Vernon Dahmer. Samuel Bowers, the former Imperial Wizard of the White Knights of the Ku Klux Klan, was convicted for the murder of Vernon Dahmer in 1998, 32 years after the crime.",
+            "The conviction in 1966 was not related to the murder of Vernon Dahmer. Samuel Bowers, the former Imperial Wizard of the White Knights of the Ku Klux Klan, was convicted for the murder of Vernon Dahmer in 1998, 32 years after the crime.",
+            "In 1967, the White Knights of the Ku Klux Klan had approximately 400 active members."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "In 1967, there were how many active members in the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the active membership count of the organization identified in node 1 for the year 1967.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Synthesize the information to determine how many active members were in the organization in 1967.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the question into a series of steps to accurately locate the information. First, we identify the organization related to the murder of Vernon Dahmer, then find the active membership numbers for 1967, and finally synthesize this data to answer the question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "White Knights of the Ku Klux Klan\nThe White Knights of the Ku Klux Klan are considered the most militant as well as the most violent chapter of the Ku Klux Klan in history. They originated in Mississippi in the early 1960s under the leadership of Samuel Bowers, its first Grand Wizard. The White Knights of Mississippi were formed in 1964, and they included roughly 200 members of the Original Knights of Louisiana. The White Knights were not interested in holding public demonstrations or in letting any information about themselves get out to the masses. Similar to the United Klans of America (UKA), the White Knights of Mississippi were very secretive about their group. Within a year, their membership was up to around six thousand, and they had Klaverns in over half of the counties in Mississippi. But by 1967, the number of active members had shrunk to around four hundred.",
+            "Samuel Bowers\nSamuel Holloway Bowers (August 25, 1924 \u2013 November 5, 2006), Former Ku Klux Klan Imperial Wizard, was a convicted murderer and leading white supremacist activist in Mississippi during the Civil Rights Movement. In response to this movement, he co-founded a reactionary organization, the White Knights of the Ku Klux Klan. Bowers committed two notorious murders of civil rights activists in southern Mississippi: The 1964 murders of Chaney, Goodman, and Schwerner near Philadelphia, for which he served six years in federal prison; and the 1966 murder of Vernon Dahmer in Hattiesburg, for which he was sentenced to life in prison 32 years after the crime. He also was accused of bombings of Jewish targets in the cities of Jackson and Meridian in 1967 and 1968 (according to the man who was convicted of some of the bombings, Thomas A. Tarrants III). He died in prison at the age of 82.",
+            "Leaders of the Ku Klux Klan\nThe national leader of the Ku Klux Klan is called either a Grand Wizard or an Imperial Wizard, depending on which KKK organization is being described.",
+            "European-American Unity and Rights Organization\nThe European-American Unity and Rights Organization (EURO) is an American organization led by former Grand Wizard of the Knights of the Ku Klux Klan, David Duke. Founded in 2000, the group has been described as white nationalist and white supremacist.",
+            "Forrest School (Chapel Hill, Tennessee)\nForrest School is a public school in Chapel Hill, Tennessee. It serves grades 7-12 and is part of the Marshall County School District. The school is also known as Forrest Middle School for grades 7-8 and Forrest High School for grades 9-12. It is named for Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan, who was born in Chapel Hill.",
+            "Madatharuvi case\nMadatharuvi case refers to a murder in Kerala, India. The case involved the 1966 murder of a widow named Mariyakutty. A priest, Fr. Benedict Onamkulam, was convicted of the crime.",
+            "Westside High School (Jacksonville)\nWestside High School is a public high school in Jacksonville, Florida. It is part of the Duval County School District and serves Jacksonville's Westside. The school was established in 1959 and was originally named Nathan B. Forrest High School, after Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan. The fact that the school was named for Forrest was a point of significant controversy until the Duval County School Board changed the name in 2014.",
+            "Randy Roth\nRandy Roth is a convicted murderer and thief from Washington. He was convicted of the 1991 murder of his fourth wife, Cynthia Baumgartner Roth. He was suspected but never tried for murdering his second wife, Janis Roth, in 1981. In both deaths he was the only witness, he claimed the activity that led to the death was the idea of his deceased wife, and the bodies were cremated as quickly as could be arranged. He was also convicted of stealing in the form of defrauding insurers and the Social Security Administration and was sentenced to one year for theft and 50 years for first degree murder in 1992. At least two true crime books are based on Roth's crimes, \"A Rose for Her Grave\" by Ann Rule and \"Fatal Charm\" by Carlton Smith.",
+            "Richard Hauptmann\nBruno Richard Hauptmann (November 26, 1899 \u2013 April 3, 1936) was a German-born carpenter who was convicted of the abduction and murder of the 20-month-old son of aviator Charles Lindbergh and his wife Anne Morrow Lindbergh. The Lindbergh kidnapping became known as \"The Crime of the Century\". Hauptmann proclaimed his innocence to the end, but he was convicted of first degree murder and executed in 1936 in the electric chair at the New Jersey State Prison.",
+            "Count von Count\nCount von Count, often known simply as \"the Count\" or \"Count Count\", is one of the Muppet characters on \"Sesame Street\". The Count is a vampire modeled after Bela Lugosi's interpretation of Count Dracula.",
+            "Henry II, Count of Holstein-Rendsburg\nCount Henry II of Holstein-Rendsburg (nickname \"Iron Henry\"; \u20091317 \u2013 \u20091384 ) was count of Holstein-Rendsburg and pledge lord of Southern Schleswig. He ruled jointly with his younger brother, Count Nicholas (d. 1397)."
+        ],
+        "thoughts": [
+            "The organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer is the Ku Klux Klan. Samuel Bowers, the former Imperial Wizard of the White Knights of the Ku Klux Klan, was convicted for the murder of Vernon Dahmer.",
+            "The active membership count of the White Knights of the Ku Klux Klan in 1967 was around four hundred members.",
+            "In 1967, the White Knights of the Ku Klux Klan had approximately four hundred active members."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "In 1967, there were how many active members in the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the number of active members in the organization identified in Node 1 in the year 1967.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The task involves two primary steps. First, we need to identify the organization based on historical events related to the murder of Vernon Dahmer in 1966 (Node 1). Once the organization is identified, the next step is to find historical records or estimates of its active membership in 1967 (Node 2). Node 2 relies on the information retrieved and reasoned from Node 1 to specify the organization whose membership count is needed."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "White Knights of the Ku Klux Klan\nThe White Knights of the Ku Klux Klan are considered the most militant as well as the most violent chapter of the Ku Klux Klan in history. They originated in Mississippi in the early 1960s under the leadership of Samuel Bowers, its first Grand Wizard. The White Knights of Mississippi were formed in 1964, and they included roughly 200 members of the Original Knights of Louisiana. The White Knights were not interested in holding public demonstrations or in letting any information about themselves get out to the masses. Similar to the United Klans of America (UKA), the White Knights of Mississippi were very secretive about their group. Within a year, their membership was up to around six thousand, and they had Klaverns in over half of the counties in Mississippi. But by 1967, the number of active members had shrunk to around four hundred.",
+            "Leaders of the Ku Klux Klan\nThe national leader of the Ku Klux Klan is called either a Grand Wizard or an Imperial Wizard, depending on which KKK organization is being described.",
+            "Samuel Bowers\nSamuel Holloway Bowers (August 25, 1924 \u2013 November 5, 2006), Former Ku Klux Klan Imperial Wizard, was a convicted murderer and leading white supremacist activist in Mississippi during the Civil Rights Movement. In response to this movement, he co-founded a reactionary organization, the White Knights of the Ku Klux Klan. Bowers committed two notorious murders of civil rights activists in southern Mississippi: The 1964 murders of Chaney, Goodman, and Schwerner near Philadelphia, for which he served six years in federal prison; and the 1966 murder of Vernon Dahmer in Hattiesburg, for which he was sentenced to life in prison 32 years after the crime. He also was accused of bombings of Jewish targets in the cities of Jackson and Meridian in 1967 and 1968 (according to the man who was convicted of some of the bombings, Thomas A. Tarrants III). He died in prison at the age of 82.",
+            "European-American Unity and Rights Organization\nThe European-American Unity and Rights Organization (EURO) is an American organization led by former Grand Wizard of the Knights of the Ku Klux Klan, David Duke. Founded in 2000, the group has been described as white nationalist and white supremacist.",
+            "Forrest School (Chapel Hill, Tennessee)\nForrest School is a public school in Chapel Hill, Tennessee. It serves grades 7-12 and is part of the Marshall County School District. The school is also known as Forrest Middle School for grades 7-8 and Forrest High School for grades 9-12. It is named for Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan, who was born in Chapel Hill.",
+            "Madatharuvi case\nMadatharuvi case refers to a murder in Kerala, India. The case involved the 1966 murder of a widow named Mariyakutty. A priest, Fr. Benedict Onamkulam, was convicted of the crime.",
+            "Westside High School (Jacksonville)\nWestside High School is a public high school in Jacksonville, Florida. It is part of the Duval County School District and serves Jacksonville's Westside. The school was established in 1959 and was originally named Nathan B. Forrest High School, after Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan. The fact that the school was named for Forrest was a point of significant controversy until the Duval County School Board changed the name in 2014.",
+            "Randy Roth\nRandy Roth is a convicted murderer and thief from Washington. He was convicted of the 1991 murder of his fourth wife, Cynthia Baumgartner Roth. He was suspected but never tried for murdering his second wife, Janis Roth, in 1981. In both deaths he was the only witness, he claimed the activity that led to the death was the idea of his deceased wife, and the bodies were cremated as quickly as could be arranged. He was also convicted of stealing in the form of defrauding insurers and the Social Security Administration and was sentenced to one year for theft and 50 years for first degree murder in 1992. At least two true crime books are based on Roth's crimes, \"A Rose for Her Grave\" by Ann Rule and \"Fatal Charm\" by Carlton Smith.",
+            "Richard Hauptmann\nBruno Richard Hauptmann (November 26, 1899 \u2013 April 3, 1936) was a German-born carpenter who was convicted of the abduction and murder of the 20-month-old son of aviator Charles Lindbergh and his wife Anne Morrow Lindbergh. The Lindbergh kidnapping became known as \"The Crime of the Century\". Hauptmann proclaimed his innocence to the end, but he was convicted of first degree murder and executed in 1936 in the electric chair at the New Jersey State Prison.",
+            "Friends of Abe\nThe Friends of Abe, Inc. (FOA) was a support and networking group for politically conservative members of the Hollywood elite. The organization was formed in 2004 by actor Gary Sinise. Screenwriter Lionel Chetwynd helped organize the group. \"Friends of Abe\" is a reference to \"Friends of Bill\", which is how members of Alcoholics Anonymous sometimes identify themselves, and \"Friends of Dorothy\", while \"Abe\" refers to Abraham Lincoln. As of January 2012, the organization had more than 1800 members. In addition to Sinise, Pat Boone, Jon Voight, Kelsey Grammer, Kevin Sorbo, and Scott Baio have stated that they are members of the organization. The organization fiercely protects its list of members for whom it maintains a secure private website, abespal.com. Sinise later withdrew from the leadership and Hollywood producer Jeremy Boreing became executive director.",
+            "Communist Labour Party (Syria)\nThe Communist Labour Party (Arabic: \u062d\u0632\u0628 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u0634\u064a\u0648\u0639\u064a\u200e \u200e \"Hizb Al-'Amal Al-Shuyu'iy\"; also translated as the \"Party for Communist Action\") is a Syrian communist party active in the 1980s and early 1990s. The party, a Marxist\u2013Leninist splinter group from the Syrian Communist Party, was first formed in August 1976 as the \"League for Communist Action,\" and was renamed to \"Communist Labor Party\" on 6 August 1981. The party, banned by the government of Syria since its establishment, was victim to a number of crackdowns, where 200 of its members were arrested in 1986 alone. 21 members were sentenced by the Supreme State Security Court for \"membership in a secret organization created to change the economic or social structure of the state\". Amnesty International protested on behalf of the prisoners. The party continued to secretly distribute its publications\u2013\"ar-Raya al-Hamra'a\" (\"\"The Red Banner\"\"), \"ash-Shyu'i\" (\"\"The Communist\"\"), \"al-Brulitari\" (\"\"The Proletarian\"\")\u2013until 1991. On 6 August 2003, the party announced its return to the political scene in a statement, followed by a new publication called \"al-An\" (\"\"Now\"\")."
+        ],
+        "thoughts": [
+            "The organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer is the Ku Klux Klan. Samuel Bowers, the former Imperial Wizard of the White Knights of the Ku Klux Klan, was convicted for the murder of Vernon Dahmer.",
+            "The number of active members in the White Knights of the Ku Klux Klan in the year 1967 was around four hundred."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "In 1967, there were how many active members in the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on the number of active members in the identified organization in 1967.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine information about the organization and its active members in 1967 to provide the final answer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The task requires identifying the organization related to an event and then finding specific information about its membership. The execution graph starts by identifying the organization linked to the 1966 murder of Vernon Dahmer. Then, it retrieves the required data about its members in 1967, and finally, combines this information to answer the initial question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "White Knights of the Ku Klux Klan\nThe White Knights of the Ku Klux Klan are considered the most militant as well as the most violent chapter of the Ku Klux Klan in history. They originated in Mississippi in the early 1960s under the leadership of Samuel Bowers, its first Grand Wizard. The White Knights of Mississippi were formed in 1964, and they included roughly 200 members of the Original Knights of Louisiana. The White Knights were not interested in holding public demonstrations or in letting any information about themselves get out to the masses. Similar to the United Klans of America (UKA), the White Knights of Mississippi were very secretive about their group. Within a year, their membership was up to around six thousand, and they had Klaverns in over half of the counties in Mississippi. But by 1967, the number of active members had shrunk to around four hundred.",
+            "Leaders of the Ku Klux Klan\nThe national leader of the Ku Klux Klan is called either a Grand Wizard or an Imperial Wizard, depending on which KKK organization is being described.",
+            "Samuel Bowers\nSamuel Holloway Bowers (August 25, 1924 \u2013 November 5, 2006), Former Ku Klux Klan Imperial Wizard, was a convicted murderer and leading white supremacist activist in Mississippi during the Civil Rights Movement. In response to this movement, he co-founded a reactionary organization, the White Knights of the Ku Klux Klan. Bowers committed two notorious murders of civil rights activists in southern Mississippi: The 1964 murders of Chaney, Goodman, and Schwerner near Philadelphia, for which he served six years in federal prison; and the 1966 murder of Vernon Dahmer in Hattiesburg, for which he was sentenced to life in prison 32 years after the crime. He also was accused of bombings of Jewish targets in the cities of Jackson and Meridian in 1967 and 1968 (according to the man who was convicted of some of the bombings, Thomas A. Tarrants III). He died in prison at the age of 82.",
+            "European-American Unity and Rights Organization\nThe European-American Unity and Rights Organization (EURO) is an American organization led by former Grand Wizard of the Knights of the Ku Klux Klan, David Duke. Founded in 2000, the group has been described as white nationalist and white supremacist.",
+            "Forrest School (Chapel Hill, Tennessee)\nForrest School is a public school in Chapel Hill, Tennessee. It serves grades 7-12 and is part of the Marshall County School District. The school is also known as Forrest Middle School for grades 7-8 and Forrest High School for grades 9-12. It is named for Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan, who was born in Chapel Hill.",
+            "Madatharuvi case\nMadatharuvi case refers to a murder in Kerala, India. The case involved the 1966 murder of a widow named Mariyakutty. A priest, Fr. Benedict Onamkulam, was convicted of the crime.",
+            "Westside High School (Jacksonville)\nWestside High School is a public high school in Jacksonville, Florida. It is part of the Duval County School District and serves Jacksonville's Westside. The school was established in 1959 and was originally named Nathan B. Forrest High School, after Nathan Bedford Forrest, a Confederate general and first Grand Wizard of the Ku Klux Klan. The fact that the school was named for Forrest was a point of significant controversy until the Duval County School Board changed the name in 2014.",
+            "Randy Roth\nRandy Roth is a convicted murderer and thief from Washington. He was convicted of the 1991 murder of his fourth wife, Cynthia Baumgartner Roth. He was suspected but never tried for murdering his second wife, Janis Roth, in 1981. In both deaths he was the only witness, he claimed the activity that led to the death was the idea of his deceased wife, and the bodies were cremated as quickly as could be arranged. He was also convicted of stealing in the form of defrauding insurers and the Social Security Administration and was sentenced to one year for theft and 50 years for first degree murder in 1992. At least two true crime books are based on Roth's crimes, \"A Rose for Her Grave\" by Ann Rule and \"Fatal Charm\" by Carlton Smith.",
+            "Richard Hauptmann\nBruno Richard Hauptmann (November 26, 1899 \u2013 April 3, 1936) was a German-born carpenter who was convicted of the abduction and murder of the 20-month-old son of aviator Charles Lindbergh and his wife Anne Morrow Lindbergh. The Lindbergh kidnapping became known as \"The Crime of the Century\". Hauptmann proclaimed his innocence to the end, but he was convicted of first degree murder and executed in 1936 in the electric chair at the New Jersey State Prison.",
+            "Friends of Abe\nThe Friends of Abe, Inc. (FOA) was a support and networking group for politically conservative members of the Hollywood elite. The organization was formed in 2004 by actor Gary Sinise. Screenwriter Lionel Chetwynd helped organize the group. \"Friends of Abe\" is a reference to \"Friends of Bill\", which is how members of Alcoholics Anonymous sometimes identify themselves, and \"Friends of Dorothy\", while \"Abe\" refers to Abraham Lincoln. As of January 2012, the organization had more than 1800 members. In addition to Sinise, Pat Boone, Jon Voight, Kelsey Grammer, Kevin Sorbo, and Scott Baio have stated that they are members of the organization. The organization fiercely protects its list of members for whom it maintains a secure private website, abespal.com. Sinise later withdrew from the leadership and Hollywood producer Jeremy Boreing became executive director.",
+            "Communist Labour Party (Syria)\nThe Communist Labour Party (Arabic: \u062d\u0632\u0628 \u0627\u0644\u0639\u0645\u0644 \u0627\u0644\u0634\u064a\u0648\u0639\u064a\u200e \u200e \"Hizb Al-'Amal Al-Shuyu'iy\"; also translated as the \"Party for Communist Action\") is a Syrian communist party active in the 1980s and early 1990s. The party, a Marxist\u2013Leninist splinter group from the Syrian Communist Party, was first formed in August 1976 as the \"League for Communist Action,\" and was renamed to \"Communist Labor Party\" on 6 August 1981. The party, banned by the government of Syria since its establishment, was victim to a number of crackdowns, where 200 of its members were arrested in 1986 alone. 21 members were sentenced by the Supreme State Security Court for \"membership in a secret organization created to change the economic or social structure of the state\". Amnesty International protested on behalf of the prisoners. The party continued to secretly distribute its publications\u2013\"ar-Raya al-Hamra'a\" (\"\"The Red Banner\"\"), \"ash-Shyu'i\" (\"\"The Communist\"\"), \"al-Brulitari\" (\"\"The Proletarian\"\")\u2013until 1991. On 6 August 2003, the party announced its return to the political scene in a statement, followed by a new publication called \"al-An\" (\"\"Now\"\")."
+        ],
+        "thoughts": [
+            "The organization whose first Grand Wizard was convicted for the 1966 murder of Vernon Dahmer is the Ku Klux Klan. Samuel Bowers, the former Imperial Wizard of the White Knights of the Ku Klux Klan, was convicted for the murder of Vernon Dahmer.",
+            "In 1967, the White Knights of the Ku Klux Klan had around four hundred active members.",
+            "In 1967, the White Knights of the Ku Klux Klan had around four hundred active members."
+        ],
+        "is_best": false
+    }
+]

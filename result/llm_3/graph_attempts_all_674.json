@@ -1,0 +1,580 @@
+[
+    {
+        "question": "Van Andel Institute was founded in part by what American businessman, who was best known as co-founder of the Amway Corporation?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find information about the founding of Van Andel Institute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify founders of Van Andel Institute based on information from node 1.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find information about American businessman co-founders of the Amway Corporation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the businessman who co-founded Amway from the information retrieved in node 3.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Cross-reference the names of Van Andel Institute founders with Amway co-founders to find the common name.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph starts by retrieving information about the Van Andel Institute, specifically focusing on its founders. Simultaneously, it retrieves information about the co-founders of the Amway Corporation. Each set of information is analyzed separately to identify the relevant individual names, and the final step involves cross-referencing these names to identify the American businessman who was instrumental in founding both Van Andel Institute and Amway."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Jeffrey Trent\nJeffrey M. Trent is the founding president and director of the Translational Genomics Research Institute. He has been Vice President and Research Director of the Van Andel Institute since 2009. He was the founding director of NIH's National Human Genome Research Institute in 1993.",
+            "Van Andel Institute\nVan Andel Institute (VAI) is a 501(c)(3) nonprofit medical research institute in Grand Rapids, Michigan. VAI was founded by Jay and Betty Van Andel in 1996 and is composed of two institutes: Van Andel Research Institute (VARI) and Van Andel Education Institute (VAEI). VARI scientists study the genetic, cellular, and molecular origins of cancer and several other degenerative diseases, notably Parkinson's. VAEI offers various science education programs for students K-12, professional development for science teachers, and a graduate school for college students pursuing biomedical research.",
+            "Grand Rapids Medical Mile\nGrand Rapids Medical Mile is a designated area within the city of Grand Rapids, Michigan. It began with medical-related development in the Hillside District Grand Rapids, Michigan, bordering both sides of Michigan Street. More than a decade later it encompasses an area five times larger. It has also been referred to as Grand Rapids Medical Corridor, Michigan Street Medical Corridor, Health Hill, Medical Hill, and Pill Hill, among other names. It was started in 1996 with the founding of Van Andel Institute by Jay and Betty Van Andel. It has since expanded to include the Grand Rapids Community College's Calkins Science Center across Bostwick Avenue, Spectrum Health's Butterworth Hospital complex, Grand Valley State University's Cook-DeVos Center for Health Sciences, and Michigan State University Secchia Center Medical School, among other facilities in the area.",
+            "Amway North America\nAmway North America (formerly known as Quixtar North America) is an American worldwide multi-level marketing (MLM) company, founded 1959 in Ada, Michigan, United States. It is privately owned by the families of Richard DeVos and Jay Van Andel through Alticor which is the holding company for businesses including Amway, Amway Global, Fulton Innovation, Amway Hotel Corporation, Hatteras Yachts, and manufacturing and logistics company Access Business Group. After the launch of Amway Global (originally operating under the name Quixtar) it replaced the Amway business in the United States, Canada and the Caribbean, with the Amway business continuing to operate in other countries around the world. On May 1, 2009, Quixtar made the name change to Amway Global and fused the various different entities of the parent company.",
+            "Jay Van Andel\nJay Van Andel (June 3, 1924 \u2013 December 7, 2004) was an American businessman, best known as co-founder of the Amway Corporation, along with Richard DeVos.",
+            "Doug DeVos\nDoug DeVos (born october 6, 1964 in Grand Rapids, Michigan) is an American businessman. As President of Amway since 2002, Doug DeVos oversees daily operations of the company with Chairman Steve Van Andel. Together, they form the Office of the Chief Executive. DeVos is the youngest son of Helen June (Van Wesep) and Amway co-founder Rich DeVos, who, with Steve\u2019s father Jay Van Andel, started Amway in Ada, Michigan, in 1959.",
+            "Amway\nAmway (short for \"American Way\") is an American company specializing in the use of multi-level marketing to sell health, beauty, and home care products. The company was founded in 1959 by Jay Van Andel and Richard DeVos and is based in Ada, Michigan.",
+            "Alticor\nAlticor is an American corporation, privately owned and run by American families of DeVos and Van Andel. It was established in 1999 to serve as the parent company for a handful of business ventures, most notably the multi-level marketing company Amway and Amway Global, and a manufacturing and distribution company, Access Business Group. In 2006, Alticor purchased cosmetics maker Gurwitch Products from Neiman Marcus Group Inc., and operated it as a wholly owned subsidiary until Gurwitch was acquired by Shiseido in 2016.",
+            "Richard DeVos\nRichard Marvin DeVos Sr. (born March 4, 1926) is an American businessman, co-founder of Amway along with Jay Van Andel (company restructured as Alticor in 2000), and owner of the Orlando Magic NBA basketball team. In 2012, \"Forbes\" magazine listed him as the 60th wealthiest person in the United States, and the 205th richest in the world, with an estimated net worth of $5.1 billion. At one point, he was one of the 10 wealthiest Americans.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Raymond Pearl\nRaymond Pearl (3 June 1879 \u2013 17 November 1940) was an American biologist, regarded as one of the founders of biogerontology. He spent most of his career at Johns Hopkins University in Baltimore. Pearl was a prolific writer of academic books, papers and articles, as well as a committed populariser and communicator of science. At his death, 841 publications were listed against his name."
+        ],
+        "thoughts": [
+            "The Van Andel Institute (VAI) was founded in 1996 by Jay and Betty Van Andel in Grand Rapids, Michigan. It is a nonprofit medical research institute consisting of the Van Andel Research Institute (VARI) and the Van Andel Education Institute (VAEI). VARI focuses on studying the genetic, cellular, and molecular origins of cancer and other degenerative diseases, while VAEI offers science education programs for students and professional development for teachers.\n\nThe founding of VAI was part of the development of the Grand Rapids Medical Mile, a designated area for medical-related development in the city. This initiative began with the founding of VAI and has since expanded to include various medical facilities and educational institutions in the area.\n\nThe founders of VAI, Jay Van Andel and Richard DeVos, were also the co-founders of the American company Amway, which specializes in multi-level marketing for health, beauty, and home care products. The company was later restructured as Alticor, which serves as the parent company for Amway and other business ventures.\n\nOverall, the founding of Van Andel Institute in 1996 by Jay and Betty Van Andel has contributed to the development of the Grand Rapids Medical Mile and has had a significant impact on medical research and education in the region.",
+            "The founders of Van Andel Institute are Jay and Betty Van Andel.",
+            "Richard DeVos and Jay Van Andel are the American businessman co-founders of the Amway Corporation, which was established in 1959 in Ada, Michigan. They also co-founded Alticor, the parent company for Amway and other business ventures. Richard DeVos is also known for being the owner of the Orlando Magic NBA basketball team and was listed as one of the wealthiest individuals in the United States. Jay Van Andel passed away in 2004, while Richard DeVos passed away in 2018. Their legacy continues through their families' ownership and management of the Amway Corporation and Alticor.",
+            "The businessman who co-founded Amway is Richard DeVos, along with Jay Van Andel.",
+            "The common name between the founders of Van Andel Institute and Amway co-founders is Jay Van Andel."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Van Andel Institute was founded in part by what American businessman, who was best known as co-founder of the Amway Corporation?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the founders of Van Andel Institute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the co-founders of the Amway Corporation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the common individual between the founders of Van Andel Institute and the co-founders of the Amway Corporation.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is designed to identify the American businessman associated with both the Van Andel Institute and the Amway Corporation. The graph contains three nodes: the first two nodes independently retrieve background information on the founders of the Van Andel Institute and the Amway Corporation. The final node synthesizes this information to identify the businessman common to both organizations."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Van Andel Institute\nVan Andel Institute (VAI) is a 501(c)(3) nonprofit medical research institute in Grand Rapids, Michigan. VAI was founded by Jay and Betty Van Andel in 1996 and is composed of two institutes: Van Andel Research Institute (VARI) and Van Andel Education Institute (VAEI). VARI scientists study the genetic, cellular, and molecular origins of cancer and several other degenerative diseases, notably Parkinson's. VAEI offers various science education programs for students K-12, professional development for science teachers, and a graduate school for college students pursuing biomedical research.",
+            "Jeffrey Trent\nJeffrey M. Trent is the founding president and director of the Translational Genomics Research Institute. He has been Vice President and Research Director of the Van Andel Institute since 2009. He was the founding director of NIH's National Human Genome Research Institute in 1993.",
+            "Jay Van Andel\nJay Van Andel (June 3, 1924 \u2013 December 7, 2004) was an American businessman, best known as co-founder of the Amway Corporation, along with Richard DeVos.",
+            "Grand Rapids Medical Mile\nGrand Rapids Medical Mile is a designated area within the city of Grand Rapids, Michigan. It began with medical-related development in the Hillside District Grand Rapids, Michigan, bordering both sides of Michigan Street. More than a decade later it encompasses an area five times larger. It has also been referred to as Grand Rapids Medical Corridor, Michigan Street Medical Corridor, Health Hill, Medical Hill, and Pill Hill, among other names. It was started in 1996 with the founding of Van Andel Institute by Jay and Betty Van Andel. It has since expanded to include the Grand Rapids Community College's Calkins Science Center across Bostwick Avenue, Spectrum Health's Butterworth Hospital complex, Grand Valley State University's Cook-DeVos Center for Health Sciences, and Michigan State University Secchia Center Medical School, among other facilities in the area.",
+            "Doug DeVos\nDoug DeVos (born october 6, 1964 in Grand Rapids, Michigan) is an American businessman. As President of Amway since 2002, Doug DeVos oversees daily operations of the company with Chairman Steve Van Andel. Together, they form the Office of the Chief Executive. DeVos is the youngest son of Helen June (Van Wesep) and Amway co-founder Rich DeVos, who, with Steve\u2019s father Jay Van Andel, started Amway in Ada, Michigan, in 1959.",
+            "Amway North America\nAmway North America (formerly known as Quixtar North America) is an American worldwide multi-level marketing (MLM) company, founded 1959 in Ada, Michigan, United States. It is privately owned by the families of Richard DeVos and Jay Van Andel through Alticor which is the holding company for businesses including Amway, Amway Global, Fulton Innovation, Amway Hotel Corporation, Hatteras Yachts, and manufacturing and logistics company Access Business Group. After the launch of Amway Global (originally operating under the name Quixtar) it replaced the Amway business in the United States, Canada and the Caribbean, with the Amway business continuing to operate in other countries around the world. On May 1, 2009, Quixtar made the name change to Amway Global and fused the various different entities of the parent company.",
+            "Amway\nAmway (short for \"American Way\") is an American company specializing in the use of multi-level marketing to sell health, beauty, and home care products. The company was founded in 1959 by Jay Van Andel and Richard DeVos and is based in Ada, Michigan.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Alticor\nAlticor is an American corporation, privately owned and run by American families of DeVos and Van Andel. It was established in 1999 to serve as the parent company for a handful of business ventures, most notably the multi-level marketing company Amway and Amway Global, and a manufacturing and distribution company, Access Business Group. In 2006, Alticor purchased cosmetics maker Gurwitch Products from Neiman Marcus Group Inc., and operated it as a wholly owned subsidiary until Gurwitch was acquired by Shiseido in 2016.",
+            "Illinois Institute of Technology\nIllinois Institute of Technology, commonly called Illinois Tech or IIT, is a private Ph.D.-granting research university located in Chicago, in the U.S. state of Illinois, with programs in engineering, science, psychology, architecture, business, communications, industrial technology, information technology, design and law. It traces its history to several 19th century engineering and professional education institutions in the United States.",
+            "Henry M. Morris\nHenry Madison Morris (October 6, 1918 \u2013 February 25, 2006) was an American young Earth creationist, Christian apologist, and engineer. He was one of the founders of the Creation Research Society and the Institute for Creation Research. He is considered by many to be \"the father of modern creation science.\" He is widely known for coauthoring \"The Genesis Flood\" with John C. Whitcomb in 1961.",
+            "Richard DeVos\nRichard Marvin DeVos Sr. (born March 4, 1926) is an American businessman, co-founder of Amway along with Jay Van Andel (company restructured as Alticor in 2000), and owner of the Orlando Magic NBA basketball team. In 2012, \"Forbes\" magazine listed him as the 60th wealthiest person in the United States, and the 205th richest in the world, with an estimated net worth of $5.1 billion. At one point, he was one of the 10 wealthiest Americans.",
+            "China National Aviation Fuel\nChina National Aviation Fuel Group Corporation (CNAF) is a Chinese state-owned enterprise. The company owned 51% stake of China National Aviation Fuel Supply Co., Ltd. (), one of the largest jet fuel supplier of China. China National Aviation Fuel Group was ranked 484th in 2016 Fortune Global 500 list."
+        ],
+        "thoughts": [
+            "The founders of Van Andel Institute are Jay and Betty Van Andel.",
+            "The co-founders of the Amway Corporation are Jay Van Andel and Richard DeVos.",
+            "The common individual between the founders of Van Andel Institute and the co-founders of the Amway Corporation is Jay Van Andel."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Van Andel Institute was founded in part by what American businessman, who was best known as co-founder of the Amway Corporation?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the businessmen who co-founded the Amway Corporation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which of the Amway co-founders was also involved in founding the Van Andel Institute.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph breaks down the question into two primary tasks. First, we need to identify the co-founders of Amway Corporation, a retrieval and reasoning task to gather necessary background information about the business. Second, using this information, we reason to determine which of these individuals also played a role in founding the Van Andel Institute."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "Amway North America\nAmway North America (formerly known as Quixtar North America) is an American worldwide multi-level marketing (MLM) company, founded 1959 in Ada, Michigan, United States. It is privately owned by the families of Richard DeVos and Jay Van Andel through Alticor which is the holding company for businesses including Amway, Amway Global, Fulton Innovation, Amway Hotel Corporation, Hatteras Yachts, and manufacturing and logistics company Access Business Group. After the launch of Amway Global (originally operating under the name Quixtar) it replaced the Amway business in the United States, Canada and the Caribbean, with the Amway business continuing to operate in other countries around the world. On May 1, 2009, Quixtar made the name change to Amway Global and fused the various different entities of the parent company.",
+            "Jay Van Andel\nJay Van Andel (June 3, 1924 \u2013 December 7, 2004) was an American businessman, best known as co-founder of the Amway Corporation, along with Richard DeVos.",
+            "Doug DeVos\nDoug DeVos (born october 6, 1964 in Grand Rapids, Michigan) is an American businessman. As President of Amway since 2002, Doug DeVos oversees daily operations of the company with Chairman Steve Van Andel. Together, they form the Office of the Chief Executive. DeVos is the youngest son of Helen June (Van Wesep) and Amway co-founder Rich DeVos, who, with Steve\u2019s father Jay Van Andel, started Amway in Ada, Michigan, in 1959.",
+            "Alticor\nAlticor is an American corporation, privately owned and run by American families of DeVos and Van Andel. It was established in 1999 to serve as the parent company for a handful of business ventures, most notably the multi-level marketing company Amway and Amway Global, and a manufacturing and distribution company, Access Business Group. In 2006, Alticor purchased cosmetics maker Gurwitch Products from Neiman Marcus Group Inc., and operated it as a wholly owned subsidiary until Gurwitch was acquired by Shiseido in 2016.",
+            "Amway\nAmway (short for \"American Way\") is an American company specializing in the use of multi-level marketing to sell health, beauty, and home care products. The company was founded in 1959 by Jay Van Andel and Richard DeVos and is based in Ada, Michigan.",
+            "Richard DeVos\nRichard Marvin DeVos Sr. (born March 4, 1926) is an American businessman, co-founder of Amway along with Jay Van Andel (company restructured as Alticor in 2000), and owner of the Orlando Magic NBA basketball team. In 2012, \"Forbes\" magazine listed him as the 60th wealthiest person in the United States, and the 205th richest in the world, with an estimated net worth of $5.1 billion. At one point, he was one of the 10 wealthiest Americans.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Raymond Pearl\nRaymond Pearl (3 June 1879 \u2013 17 November 1940) was an American biologist, regarded as one of the founders of biogerontology. He spent most of his career at Johns Hopkins University in Baltimore. Pearl was a prolific writer of academic books, papers and articles, as well as a committed populariser and communicator of science. At his death, 841 publications were listed against his name."
+        ],
+        "thoughts": [
+            "The businessmen who co-founded the Amway Corporation are Jay Van Andel and Richard DeVos.",
+            "Jay Van Andel was also involved in founding the Van Andel Institute."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Van Andel Institute was founded in part by what American businessman, who was best known as co-founder of the Amway Corporation?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the co-founders of the Amway Corporation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Filter the list of Amway co-founders to determine if any were American businessmen.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about the founding of the Van Andel Institute, including key figures involved.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify any common individuals in the list of American businessmen from Amway co-founders and the founders of Van Andel Institute.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks the question into steps that begin by identifying the co-founders of the Amway Corporation. Given their business history, it is expected that they are American businessmen, but this is explicitly asked in the reasoning step. Parallelly, we retrieve information about the founding of the Van Andel Institute to identify key individuals involved. The final reasoning step synthesizes these details to identify the common individual who is both an American businessman and associated with the founding of the Van Andel Institute."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Jeffrey Trent\nJeffrey M. Trent is the founding president and director of the Translational Genomics Research Institute. He has been Vice President and Research Director of the Van Andel Institute since 2009. He was the founding director of NIH's National Human Genome Research Institute in 1993.",
+            "Van Andel Institute\nVan Andel Institute (VAI) is a 501(c)(3) nonprofit medical research institute in Grand Rapids, Michigan. VAI was founded by Jay and Betty Van Andel in 1996 and is composed of two institutes: Van Andel Research Institute (VARI) and Van Andel Education Institute (VAEI). VARI scientists study the genetic, cellular, and molecular origins of cancer and several other degenerative diseases, notably Parkinson's. VAEI offers various science education programs for students K-12, professional development for science teachers, and a graduate school for college students pursuing biomedical research.",
+            "Grand Rapids Medical Mile\nGrand Rapids Medical Mile is a designated area within the city of Grand Rapids, Michigan. It began with medical-related development in the Hillside District Grand Rapids, Michigan, bordering both sides of Michigan Street. More than a decade later it encompasses an area five times larger. It has also been referred to as Grand Rapids Medical Corridor, Michigan Street Medical Corridor, Health Hill, Medical Hill, and Pill Hill, among other names. It was started in 1996 with the founding of Van Andel Institute by Jay and Betty Van Andel. It has since expanded to include the Grand Rapids Community College's Calkins Science Center across Bostwick Avenue, Spectrum Health's Butterworth Hospital complex, Grand Valley State University's Cook-DeVos Center for Health Sciences, and Michigan State University Secchia Center Medical School, among other facilities in the area.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Jay Van Andel\nJay Van Andel (June 3, 1924 \u2013 December 7, 2004) was an American businessman, best known as co-founder of the Amway Corporation, along with Richard DeVos.",
+            "Doug DeVos\nDoug DeVos (born october 6, 1964 in Grand Rapids, Michigan) is an American businessman. As President of Amway since 2002, Doug DeVos oversees daily operations of the company with Chairman Steve Van Andel. Together, they form the Office of the Chief Executive. DeVos is the youngest son of Helen June (Van Wesep) and Amway co-founder Rich DeVos, who, with Steve\u2019s father Jay Van Andel, started Amway in Ada, Michigan, in 1959.",
+            "Amway North America\nAmway North America (formerly known as Quixtar North America) is an American worldwide multi-level marketing (MLM) company, founded 1959 in Ada, Michigan, United States. It is privately owned by the families of Richard DeVos and Jay Van Andel through Alticor which is the holding company for businesses including Amway, Amway Global, Fulton Innovation, Amway Hotel Corporation, Hatteras Yachts, and manufacturing and logistics company Access Business Group. After the launch of Amway Global (originally operating under the name Quixtar) it replaced the Amway business in the United States, Canada and the Caribbean, with the Amway business continuing to operate in other countries around the world. On May 1, 2009, Quixtar made the name change to Amway Global and fused the various different entities of the parent company.",
+            "Orlando: A Biography\nOrlando: A Biography is a novel by Virginia Woolf, first published on 11 October 1928. A high-spirited romp inspired by the tumultuous family history of Woolf's lover and close friend, the aristocratic poet and novelist Vita Sackville-West, it is arguably one of Woolf's most popular novels: a history of English literature in satiric form. The book describes the adventures of a poet who changes sex from man to woman and lives for centuries, meeting the key figures of English literary history. Considered a feminist classic, the book has been written about extensively by scholars of women's writing and gender and transgender studies.",
+            "Alticor\nAlticor is an American corporation, privately owned and run by American families of DeVos and Van Andel. It was established in 1999 to serve as the parent company for a handful of business ventures, most notably the multi-level marketing company Amway and Amway Global, and a manufacturing and distribution company, Access Business Group. In 2006, Alticor purchased cosmetics maker Gurwitch Products from Neiman Marcus Group Inc., and operated it as a wholly owned subsidiary until Gurwitch was acquired by Shiseido in 2016.",
+            "Amway\nAmway (short for \"American Way\") is an American company specializing in the use of multi-level marketing to sell health, beauty, and home care products. The company was founded in 1959 by Jay Van Andel and Richard DeVos and is based in Ada, Michigan.",
+            "Richard DeVos\nRichard Marvin DeVos Sr. (born March 4, 1926) is an American businessman, co-founder of Amway along with Jay Van Andel (company restructured as Alticor in 2000), and owner of the Orlando Magic NBA basketball team. In 2012, \"Forbes\" magazine listed him as the 60th wealthiest person in the United States, and the 205th richest in the world, with an estimated net worth of $5.1 billion. At one point, he was one of the 10 wealthiest Americans.",
+            "China National Aviation Fuel\nChina National Aviation Fuel Group Corporation (CNAF) is a Chinese state-owned enterprise. The company owned 51% stake of China National Aviation Fuel Supply Co., Ltd. (), one of the largest jet fuel supplier of China. China National Aviation Fuel Group was ranked 484th in 2016 Fortune Global 500 list."
+        ],
+        "thoughts": [
+            "The co-founders of the Amway Corporation are Jay Van Andel and Richard DeVos. They established the company in 1959 in Ada, Michigan, United States.",
+            "Both Jay Van Andel and Richard DeVos, the co-founders of Amway, were American businessmen.",
+            "The Van Andel Institute was founded in 1996 by Jay and Betty Van Andel in Grand Rapids, Michigan. The institute is composed of two institutes: Van Andel Research Institute (VARI) and Van Andel Education Institute (VAEI). VARI focuses on studying the genetic, cellular, and molecular origins of cancer and degenerative diseases, while VAEI offers science education programs for students and professional development for teachers.\n\nKey figures involved in the founding of the Van Andel Institute include Jay Van Andel, who was the co-founder of the Amway Corporation, and his wife Betty Van Andel. Additionally, Jeffrey Trent, the founding director of NIH's National Human Genome Research Institute, has been Vice President and Research Director of the Van Andel Institute since 2009.\n\nThe institute is located within the Grand Rapids Medical Mile, which began with the founding of the Van Andel Institute and has since expanded to include various medical facilities and educational institutions.\n\nAmway, the company founded by Jay Van Andel and Richard DeVos in 1959, is also based in Ada, Michigan and specializes in multi-level marketing for health, beauty, and home care products.",
+            "Jay Van Andel is the common individual in the list of American businessmen from Amway co-founders and the founders of Van Andel Institute. He was the co-founder of Amway Corporation and also involved in the founding of the Van Andel Institute."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Van Andel Institute was founded in part by what American businessman, who was best known as co-founder of the Amway Corporation?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the co-founders of the Amway Corporation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Check which of the co-founders of Amway was involved in founding Van Andel Institute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Provide the name of the American businessman who co-founded both Amway and Van Andel Institute.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph first retrieves information about the co-founders of the Amway Corporation, as this is central to identifying the businessman of interest. Then it checks the involvement of these individuals in founding the Van Andel Institute, filtering down to the specific co-founder relevant to both organizations. Finally, it synthesizes this information to provide the name of the businessman."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Jay Van Andel\nJay Van Andel (June 3, 1924 \u2013 December 7, 2004) was an American businessman, best known as co-founder of the Amway Corporation, along with Richard DeVos.",
+            "Doug DeVos\nDoug DeVos (born october 6, 1964 in Grand Rapids, Michigan) is an American businessman. As President of Amway since 2002, Doug DeVos oversees daily operations of the company with Chairman Steve Van Andel. Together, they form the Office of the Chief Executive. DeVos is the youngest son of Helen June (Van Wesep) and Amway co-founder Rich DeVos, who, with Steve\u2019s father Jay Van Andel, started Amway in Ada, Michigan, in 1959.",
+            "Jeffrey Trent\nJeffrey M. Trent is the founding president and director of the Translational Genomics Research Institute. He has been Vice President and Research Director of the Van Andel Institute since 2009. He was the founding director of NIH's National Human Genome Research Institute in 1993.",
+            "Van Andel Institute\nVan Andel Institute (VAI) is a 501(c)(3) nonprofit medical research institute in Grand Rapids, Michigan. VAI was founded by Jay and Betty Van Andel in 1996 and is composed of two institutes: Van Andel Research Institute (VARI) and Van Andel Education Institute (VAEI). VARI scientists study the genetic, cellular, and molecular origins of cancer and several other degenerative diseases, notably Parkinson's. VAEI offers various science education programs for students K-12, professional development for science teachers, and a graduate school for college students pursuing biomedical research.",
+            "Richard DeVos\nRichard Marvin DeVos Sr. (born March 4, 1926) is an American businessman, co-founder of Amway along with Jay Van Andel (company restructured as Alticor in 2000), and owner of the Orlando Magic NBA basketball team. In 2012, \"Forbes\" magazine listed him as the 60th wealthiest person in the United States, and the 205th richest in the world, with an estimated net worth of $5.1 billion. At one point, he was one of the 10 wealthiest Americans.",
+            "Amway\nAmway (short for \"American Way\") is an American company specializing in the use of multi-level marketing to sell health, beauty, and home care products. The company was founded in 1959 by Jay Van Andel and Richard DeVos and is based in Ada, Michigan.",
+            "Amway North America\nAmway North America (formerly known as Quixtar North America) is an American worldwide multi-level marketing (MLM) company, founded 1959 in Ada, Michigan, United States. It is privately owned by the families of Richard DeVos and Jay Van Andel through Alticor which is the holding company for businesses including Amway, Amway Global, Fulton Innovation, Amway Hotel Corporation, Hatteras Yachts, and manufacturing and logistics company Access Business Group. After the launch of Amway Global (originally operating under the name Quixtar) it replaced the Amway business in the United States, Canada and the Caribbean, with the Amway business continuing to operate in other countries around the world. On May 1, 2009, Quixtar made the name change to Amway Global and fused the various different entities of the parent company.",
+            "Alticor\nAlticor is an American corporation, privately owned and run by American families of DeVos and Van Andel. It was established in 1999 to serve as the parent company for a handful of business ventures, most notably the multi-level marketing company Amway and Amway Global, and a manufacturing and distribution company, Access Business Group. In 2006, Alticor purchased cosmetics maker Gurwitch Products from Neiman Marcus Group Inc., and operated it as a wholly owned subsidiary until Gurwitch was acquired by Shiseido in 2016.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "China National Aviation Fuel\nChina National Aviation Fuel Group Corporation (CNAF) is a Chinese state-owned enterprise. The company owned 51% stake of China National Aviation Fuel Supply Co., Ltd. (), one of the largest jet fuel supplier of China. China National Aviation Fuel Group was ranked 484th in 2016 Fortune Global 500 list."
+        ],
+        "thoughts": [
+            "The co-founders of the Amway Corporation are Jay Van Andel and Richard DeVos.",
+            "Jay Van Andel, one of the co-founders of Amway, was involved in founding Van Andel Institute in 1996.",
+            "The American businessman who co-founded both Amway and Van Andel Institute is Jay Van Andel."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Van Andel Institute was founded in part by what American businessman, who was best known as co-founder of the Amway Corporation?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify Van Andel Institute and its founders.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Gather information on American businessmen associated with the founding of Van Andel Institute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if any of the founders of Van Andel Institute were also co-founders of the Amway Corporation.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Retrieve information about the co-founders of the Amway Corporation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Match the American businessmen who co-founded the Amway Corporation with the founders of Van Andel Institute to identify the common individual.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph begins by identifying the founders of the Van Andel Institute. The next step involves gathering details about American businessmen linked to the founding. After that, reasoning is employed to establish if there is a connection between these individuals and the founders of Amway Corporation. Concurrently, another node retrieves information on Amway's co-founders. The final reasoning node combines these two streams of data to find out which American businessman fits both roles."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Jeffrey Trent\nJeffrey M. Trent is the founding president and director of the Translational Genomics Research Institute. He has been Vice President and Research Director of the Van Andel Institute since 2009. He was the founding director of NIH's National Human Genome Research Institute in 1993.",
+            "Van Andel Institute\nVan Andel Institute (VAI) is a 501(c)(3) nonprofit medical research institute in Grand Rapids, Michigan. VAI was founded by Jay and Betty Van Andel in 1996 and is composed of two institutes: Van Andel Research Institute (VARI) and Van Andel Education Institute (VAEI). VARI scientists study the genetic, cellular, and molecular origins of cancer and several other degenerative diseases, notably Parkinson's. VAEI offers various science education programs for students K-12, professional development for science teachers, and a graduate school for college students pursuing biomedical research.",
+            "Grand Rapids Medical Mile\nGrand Rapids Medical Mile is a designated area within the city of Grand Rapids, Michigan. It began with medical-related development in the Hillside District Grand Rapids, Michigan, bordering both sides of Michigan Street. More than a decade later it encompasses an area five times larger. It has also been referred to as Grand Rapids Medical Corridor, Michigan Street Medical Corridor, Health Hill, Medical Hill, and Pill Hill, among other names. It was started in 1996 with the founding of Van Andel Institute by Jay and Betty Van Andel. It has since expanded to include the Grand Rapids Community College's Calkins Science Center across Bostwick Avenue, Spectrum Health's Butterworth Hospital complex, Grand Valley State University's Cook-DeVos Center for Health Sciences, and Michigan State University Secchia Center Medical School, among other facilities in the area.",
+            "Jay Van Andel\nJay Van Andel (June 3, 1924 \u2013 December 7, 2004) was an American businessman, best known as co-founder of the Amway Corporation, along with Richard DeVos.",
+            "Doug DeVos\nDoug DeVos (born october 6, 1964 in Grand Rapids, Michigan) is an American businessman. As President of Amway since 2002, Doug DeVos oversees daily operations of the company with Chairman Steve Van Andel. Together, they form the Office of the Chief Executive. DeVos is the youngest son of Helen June (Van Wesep) and Amway co-founder Rich DeVos, who, with Steve\u2019s father Jay Van Andel, started Amway in Ada, Michigan, in 1959.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "Amway\nAmway (short for \"American Way\") is an American company specializing in the use of multi-level marketing to sell health, beauty, and home care products. The company was founded in 1959 by Jay Van Andel and Richard DeVos and is based in Ada, Michigan.",
+            "Giovanni Michelotti\nGiovanni Michelotti (6 October 1921 \u2013 23 January 1980) was one of the most prolific designers of sports cars in the 20th century. His notable contributions were for Ferrari, Lancia, Maserati and Triumph marques. He was also associated with truck designs for Leyland Motors, and with designs for British Leyland (including the Leyland National bus) after the merger of Leyland and BMC.",
+            "Amway North America\nAmway North America (formerly known as Quixtar North America) is an American worldwide multi-level marketing (MLM) company, founded 1959 in Ada, Michigan, United States. It is privately owned by the families of Richard DeVos and Jay Van Andel through Alticor which is the holding company for businesses including Amway, Amway Global, Fulton Innovation, Amway Hotel Corporation, Hatteras Yachts, and manufacturing and logistics company Access Business Group. After the launch of Amway Global (originally operating under the name Quixtar) it replaced the Amway business in the United States, Canada and the Caribbean, with the Amway business continuing to operate in other countries around the world. On May 1, 2009, Quixtar made the name change to Amway Global and fused the various different entities of the parent company.",
+            "Johns Hopkins Berman Institute of Bioethics\nThe Johns Hopkins Berman Institute of Bioethics in Baltimore, Maryland, United States, is an independent, interdisciplinary center serving the entire Johns Hopkins University and Health System. It is dedicated to the study of complex moral and policy issues in biomedical science, health care, and health policy. Established in 1995, the Institute seeks answers to ethical questions by promoting research in bioethics and encouraging moral reflection among a broad range of scholars, professionals, students, and citizens. Contributing to its mission are four divisions of the University: the Zanvyl Krieger School of Arts and Sciences, the Johns Hopkins School of Medicine, the Bloomberg School of Public Health, and the Johns Hopkins School of Nursing.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Alticor\nAlticor is an American corporation, privately owned and run by American families of DeVos and Van Andel. It was established in 1999 to serve as the parent company for a handful of business ventures, most notably the multi-level marketing company Amway and Amway Global, and a manufacturing and distribution company, Access Business Group. In 2006, Alticor purchased cosmetics maker Gurwitch Products from Neiman Marcus Group Inc., and operated it as a wholly owned subsidiary until Gurwitch was acquired by Shiseido in 2016.",
+            "Richard DeVos\nRichard Marvin DeVos Sr. (born March 4, 1926) is an American businessman, co-founder of Amway along with Jay Van Andel (company restructured as Alticor in 2000), and owner of the Orlando Magic NBA basketball team. In 2012, \"Forbes\" magazine listed him as the 60th wealthiest person in the United States, and the 205th richest in the world, with an estimated net worth of $5.1 billion. At one point, he was one of the 10 wealthiest Americans.",
+            "Internet Co., Ltd.\nInternet Co., Ltd. (\u682a\u5f0f\u4f1a\u793e\u30a4\u30f3\u30bf\u30fc\u30cd\u30c3\u30c8 , Kabushikigaisha Int\u0101netto ) , or Internet, is a software company based in Osaka, Japan. It is best known for the music sequencer Singer Song Writer and Niconico Movie Maker for Nico Nico Douga, a video sharing website. It also develops singing synthesizers using the Vocaloid 4 engine developed by Yamaha Corporation. In 2014, they were the second leading company in sound related software in Japan, boasting a 14.0% share of the market."
+        ],
+        "thoughts": [
+            "Van Andel Institute (VAI) is a nonprofit medical research institute in Grand Rapids, Michigan, founded by Jay and Betty Van Andel in 1996. It is composed of two institutes: Van Andel Research Institute (VARI) and Van Andel Education Institute (VAEI). VARI scientists study the genetic, cellular, and molecular origins of cancer and degenerative diseases, while VAEI offers science education programs for students K-12 and professional development for science teachers.\n\nJay Van Andel was an American businessman and co-founder of the Amway Corporation, along with Richard DeVos. Doug DeVos, the youngest son of Amway co-founder Rich DeVos, is an American businessman and President of Amway. Jeffrey Trent is the founding president and director of the Translational Genomics Research Institute and has been Vice President and Research Director of the Van Andel Institute since 2009.\n\nThe Grand Rapids Medical Mile, a designated area within the city of Grand Rapids, Michigan, began with the founding of Van Andel Institute by Jay and Betty Van Andel in 1996 and has since expanded to include various medical facilities and institutions.\n\nOverall, Van Andel Institute was founded by Jay and Betty Van Andel and has made significant contributions to medical research and education.",
+            "The founding of Van Andel Institute is associated with American businessmen Jay Van Andel and Richard DeVos, who also co-founded Amway Corporation. The institute was established in 1996 and is dedicated to medical research, with a focus on cancer and degenerative diseases. Jeffrey Trent, a prominent figure in genomics research, has been involved with the institute since 2009. The institute is located in the Grand Rapids Medical Mile, a designated area for medical-related development in Grand Rapids, Michigan. The institute's founding has contributed to the growth and development of this area, which now includes various medical and educational facilities. Additionally, Doug DeVos, the President of Amway, is also associated with the founding of Van Andel Institute. The institute's establishment has had a significant impact on medical research and education in the region.",
+            "Yes, the founders of Van Andel Institute, Jay Van Andel and Richard DeVos, were also co-founders of the Amway Corporation. Additionally, Doug DeVos, the President of Amway, is also associated with the founding of Van Andel Institute.",
+            "The co-founders of the Amway Corporation are Jay Van Andel and Richard DeVos. Jay Van Andel was an American businessman who, along with Richard DeVos, founded the company in 1959 in Ada, Michigan. Richard DeVos is an American businessman and owner of the Orlando Magic NBA basketball team. The company is privately owned by the families of Richard DeVos and Jay Van Andel through Alticor, which is the holding company for businesses including Amway, Amway Global, and others. Doug DeVos, the youngest son of Rich DeVos, has been the President of Amway since 2002.",
+            "The common individual who co-founded the Amway Corporation and the Van Andel Institute is Richard DeVos. He was a co-founder of Amway Corporation along with Jay Van Andel, and also a co-founder of the Van Andel Institute. Additionally, his son Doug DeVos is associated with both organizations as the President of Amway."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Van Andel Institute was founded in part by what American businessman, who was best known as co-founder of the Amway Corporation?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the names of the founders of the Van Andel Institute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which of the founders of the Van Andel Institute is best known as a co-founder of the Amway Corporation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The graph starts with retrieving the founders of the Van Andel Institute, which is the necessary first step to identify the specific founder who also co-founded the Amway Corporation. The final node synthesizes the information by checking which of these founders is linked to Amway, thus answering the original question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Jay Van Andel\nJay Van Andel (June 3, 1924 \u2013 December 7, 2004) was an American businessman, best known as co-founder of the Amway Corporation, along with Richard DeVos.",
+            "Doug DeVos\nDoug DeVos (born october 6, 1964 in Grand Rapids, Michigan) is an American businessman. As President of Amway since 2002, Doug DeVos oversees daily operations of the company with Chairman Steve Van Andel. Together, they form the Office of the Chief Executive. DeVos is the youngest son of Helen June (Van Wesep) and Amway co-founder Rich DeVos, who, with Steve\u2019s father Jay Van Andel, started Amway in Ada, Michigan, in 1959.",
+            "Van Andel Institute\nVan Andel Institute (VAI) is a 501(c)(3) nonprofit medical research institute in Grand Rapids, Michigan. VAI was founded by Jay and Betty Van Andel in 1996 and is composed of two institutes: Van Andel Research Institute (VARI) and Van Andel Education Institute (VAEI). VARI scientists study the genetic, cellular, and molecular origins of cancer and several other degenerative diseases, notably Parkinson's. VAEI offers various science education programs for students K-12, professional development for science teachers, and a graduate school for college students pursuing biomedical research.",
+            "Amway North America\nAmway North America (formerly known as Quixtar North America) is an American worldwide multi-level marketing (MLM) company, founded 1959 in Ada, Michigan, United States. It is privately owned by the families of Richard DeVos and Jay Van Andel through Alticor which is the holding company for businesses including Amway, Amway Global, Fulton Innovation, Amway Hotel Corporation, Hatteras Yachts, and manufacturing and logistics company Access Business Group. After the launch of Amway Global (originally operating under the name Quixtar) it replaced the Amway business in the United States, Canada and the Caribbean, with the Amway business continuing to operate in other countries around the world. On May 1, 2009, Quixtar made the name change to Amway Global and fused the various different entities of the parent company.",
+            "Alticor\nAlticor is an American corporation, privately owned and run by American families of DeVos and Van Andel. It was established in 1999 to serve as the parent company for a handful of business ventures, most notably the multi-level marketing company Amway and Amway Global, and a manufacturing and distribution company, Access Business Group. In 2006, Alticor purchased cosmetics maker Gurwitch Products from Neiman Marcus Group Inc., and operated it as a wholly owned subsidiary until Gurwitch was acquired by Shiseido in 2016.",
+            "Amway\nAmway (short for \"American Way\") is an American company specializing in the use of multi-level marketing to sell health, beauty, and home care products. The company was founded in 1959 by Jay Van Andel and Richard DeVos and is based in Ada, Michigan.",
+            "Richard DeVos\nRichard Marvin DeVos Sr. (born March 4, 1926) is an American businessman, co-founder of Amway along with Jay Van Andel (company restructured as Alticor in 2000), and owner of the Orlando Magic NBA basketball team. In 2012, \"Forbes\" magazine listed him as the 60th wealthiest person in the United States, and the 205th richest in the world, with an estimated net worth of $5.1 billion. At one point, he was one of the 10 wealthiest Americans.",
+            "Jeffrey Trent\nJeffrey M. Trent is the founding president and director of the Translational Genomics Research Institute. He has been Vice President and Research Director of the Van Andel Institute since 2009. He was the founding director of NIH's National Human Genome Research Institute in 1993.",
+            "Grand Rapids Medical Mile\nGrand Rapids Medical Mile is a designated area within the city of Grand Rapids, Michigan. It began with medical-related development in the Hillside District Grand Rapids, Michigan, bordering both sides of Michigan Street. More than a decade later it encompasses an area five times larger. It has also been referred to as Grand Rapids Medical Corridor, Michigan Street Medical Corridor, Health Hill, Medical Hill, and Pill Hill, among other names. It was started in 1996 with the founding of Van Andel Institute by Jay and Betty Van Andel. It has since expanded to include the Grand Rapids Community College's Calkins Science Center across Bostwick Avenue, Spectrum Health's Butterworth Hospital complex, Grand Valley State University's Cook-DeVos Center for Health Sciences, and Michigan State University Secchia Center Medical School, among other facilities in the area.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\""
+        ],
+        "thoughts": [
+            "The founders of the Van Andel Institute are Jay and Betty Van Andel.",
+            "Jay Van Andel is best known as the co-founder of the Amway Corporation."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Van Andel Institute was founded in part by what American businessman, who was best known as co-founder of the Amway Corporation?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the founders of Van Andel Institute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the founders of the Amway Corporation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if any founder of Van Andel Institute is also a founder of Amway Corporation.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Provide the name of the American businessman who founded Van Andel Institute and is known as a co-founder of Amway Corporation.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To determine the American businessman involved in founding Van Andel Institute and known for co-founding Amway Corporation, we start by retrieving the founders of both organizations. This involves two parallel retrieval steps: identifying the founders of Van Andel Institute and the founders of Amway Corporation. Once we have this information, we cross-reference to find any common individual between the two lists. Finally, we isolate the individual and provide his name as the answer to our question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Van Andel Institute\nVan Andel Institute (VAI) is a 501(c)(3) nonprofit medical research institute in Grand Rapids, Michigan. VAI was founded by Jay and Betty Van Andel in 1996 and is composed of two institutes: Van Andel Research Institute (VARI) and Van Andel Education Institute (VAEI). VARI scientists study the genetic, cellular, and molecular origins of cancer and several other degenerative diseases, notably Parkinson's. VAEI offers various science education programs for students K-12, professional development for science teachers, and a graduate school for college students pursuing biomedical research.",
+            "Jeffrey Trent\nJeffrey M. Trent is the founding president and director of the Translational Genomics Research Institute. He has been Vice President and Research Director of the Van Andel Institute since 2009. He was the founding director of NIH's National Human Genome Research Institute in 1993.",
+            "Jay Van Andel\nJay Van Andel (June 3, 1924 \u2013 December 7, 2004) was an American businessman, best known as co-founder of the Amway Corporation, along with Richard DeVos.",
+            "Grand Rapids Medical Mile\nGrand Rapids Medical Mile is a designated area within the city of Grand Rapids, Michigan. It began with medical-related development in the Hillside District Grand Rapids, Michigan, bordering both sides of Michigan Street. More than a decade later it encompasses an area five times larger. It has also been referred to as Grand Rapids Medical Corridor, Michigan Street Medical Corridor, Health Hill, Medical Hill, and Pill Hill, among other names. It was started in 1996 with the founding of Van Andel Institute by Jay and Betty Van Andel. It has since expanded to include the Grand Rapids Community College's Calkins Science Center across Bostwick Avenue, Spectrum Health's Butterworth Hospital complex, Grand Valley State University's Cook-DeVos Center for Health Sciences, and Michigan State University Secchia Center Medical School, among other facilities in the area.",
+            "Doug DeVos\nDoug DeVos (born october 6, 1964 in Grand Rapids, Michigan) is an American businessman. As President of Amway since 2002, Doug DeVos oversees daily operations of the company with Chairman Steve Van Andel. Together, they form the Office of the Chief Executive. DeVos is the youngest son of Helen June (Van Wesep) and Amway co-founder Rich DeVos, who, with Steve\u2019s father Jay Van Andel, started Amway in Ada, Michigan, in 1959.",
+            "Amway North America\nAmway North America (formerly known as Quixtar North America) is an American worldwide multi-level marketing (MLM) company, founded 1959 in Ada, Michigan, United States. It is privately owned by the families of Richard DeVos and Jay Van Andel through Alticor which is the holding company for businesses including Amway, Amway Global, Fulton Innovation, Amway Hotel Corporation, Hatteras Yachts, and manufacturing and logistics company Access Business Group. After the launch of Amway Global (originally operating under the name Quixtar) it replaced the Amway business in the United States, Canada and the Caribbean, with the Amway business continuing to operate in other countries around the world. On May 1, 2009, Quixtar made the name change to Amway Global and fused the various different entities of the parent company.",
+            "Amway\nAmway (short for \"American Way\") is an American company specializing in the use of multi-level marketing to sell health, beauty, and home care products. The company was founded in 1959 by Jay Van Andel and Richard DeVos and is based in Ada, Michigan.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Alticor\nAlticor is an American corporation, privately owned and run by American families of DeVos and Van Andel. It was established in 1999 to serve as the parent company for a handful of business ventures, most notably the multi-level marketing company Amway and Amway Global, and a manufacturing and distribution company, Access Business Group. In 2006, Alticor purchased cosmetics maker Gurwitch Products from Neiman Marcus Group Inc., and operated it as a wholly owned subsidiary until Gurwitch was acquired by Shiseido in 2016.",
+            "Illinois Institute of Technology\nIllinois Institute of Technology, commonly called Illinois Tech or IIT, is a private Ph.D.-granting research university located in Chicago, in the U.S. state of Illinois, with programs in engineering, science, psychology, architecture, business, communications, industrial technology, information technology, design and law. It traces its history to several 19th century engineering and professional education institutions in the United States.",
+            "Henry M. Morris\nHenry Madison Morris (October 6, 1918 \u2013 February 25, 2006) was an American young Earth creationist, Christian apologist, and engineer. He was one of the founders of the Creation Research Society and the Institute for Creation Research. He is considered by many to be \"the father of modern creation science.\" He is widely known for coauthoring \"The Genesis Flood\" with John C. Whitcomb in 1961.",
+            "Apollinariya Yakubova\nApollinariya Yakubova (died 1913 or 1917) was a Russian Marxist revolutionary and, with Vladimir Lenin, one of the founders of the League of Struggle for the Emancipation of the Working Class.",
+            "Edgar Kaiser Sr.\nEdgar Fosburgh Kaiser Sr. (July 29, 1908 \u2013 December 7, 1981) was an American industrialist, who was Chairman of Kaiser Aluminum and Chemical Corporation, the Kaiser Cement Corporation and the Kaiser Steel Corporation."
+        ],
+        "thoughts": [
+            "The founders of Van Andel Institute are Jay and Betty Van Andel.",
+            "The founders of the Amway Corporation are Jay Van Andel and Richard DeVos.",
+            "Yes, Jay Van Andel is a founder of both Van Andel Institute and Amway Corporation.",
+            "Jay Van Andel"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Van Andel Institute was founded in part by what American businessman, who was best known as co-founder of the Amway Corporation?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the co-founders of the Amway Corporation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which of the co-founders of Amway was involved in founding the Van Andel Institute.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Provide the name of the American businessman who was best known as co-founder of the Amway Corporation and was involved in founding the Van Andel Institute.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "To answer the question, \"Van Andel Institute was founded in part by what American businessman, who was best known as co-founder of the Amway Corporation?\", the task can be broken down into several steps. First, we need to identify the co-founders of the Amway Corporation, since one of them is implied to also be involved in the Van Andel Institute. Then, we need to determine which of these individuals was specifically involved in founding the Van Andel Institute. Finally, using this information, we will provide the name of the businessman. This approach ensures that all necessary information is retrieved and reasoned through in a logical sequence."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Jeffrey Trent\nJeffrey M. Trent is the founding president and director of the Translational Genomics Research Institute. He has been Vice President and Research Director of the Van Andel Institute since 2009. He was the founding director of NIH's National Human Genome Research Institute in 1993.",
+            "Van Andel Institute\nVan Andel Institute (VAI) is a 501(c)(3) nonprofit medical research institute in Grand Rapids, Michigan. VAI was founded by Jay and Betty Van Andel in 1996 and is composed of two institutes: Van Andel Research Institute (VARI) and Van Andel Education Institute (VAEI). VARI scientists study the genetic, cellular, and molecular origins of cancer and several other degenerative diseases, notably Parkinson's. VAEI offers various science education programs for students K-12, professional development for science teachers, and a graduate school for college students pursuing biomedical research.",
+            "Grand Rapids Medical Mile\nGrand Rapids Medical Mile is a designated area within the city of Grand Rapids, Michigan. It began with medical-related development in the Hillside District Grand Rapids, Michigan, bordering both sides of Michigan Street. More than a decade later it encompasses an area five times larger. It has also been referred to as Grand Rapids Medical Corridor, Michigan Street Medical Corridor, Health Hill, Medical Hill, and Pill Hill, among other names. It was started in 1996 with the founding of Van Andel Institute by Jay and Betty Van Andel. It has since expanded to include the Grand Rapids Community College's Calkins Science Center across Bostwick Avenue, Spectrum Health's Butterworth Hospital complex, Grand Valley State University's Cook-DeVos Center for Health Sciences, and Michigan State University Secchia Center Medical School, among other facilities in the area.",
+            "Jay Van Andel\nJay Van Andel (June 3, 1924 \u2013 December 7, 2004) was an American businessman, best known as co-founder of the Amway Corporation, along with Richard DeVos.",
+            "Doug DeVos\nDoug DeVos (born october 6, 1964 in Grand Rapids, Michigan) is an American businessman. As President of Amway since 2002, Doug DeVos oversees daily operations of the company with Chairman Steve Van Andel. Together, they form the Office of the Chief Executive. DeVos is the youngest son of Helen June (Van Wesep) and Amway co-founder Rich DeVos, who, with Steve\u2019s father Jay Van Andel, started Amway in Ada, Michigan, in 1959.",
+            "Illinois Institute of Technology\nIllinois Institute of Technology, commonly called Illinois Tech or IIT, is a private Ph.D.-granting research university located in Chicago, in the U.S. state of Illinois, with programs in engineering, science, psychology, architecture, business, communications, industrial technology, information technology, design and law. It traces its history to several 19th century engineering and professional education institutions in the United States.",
+            "Lawrence A. Gordon\nLawrence A. Gordon is the EY Alumni Professor of Managerial Accounting and Information Assurance at the University of Maryland\u2019s Robert H. Smith School of Business. He is also an Affiliate Professor in the University of Maryland Institute for Advanced Computer Studies. Dr. Gordon earned his Ph.D. in Managerial Economics from Rensselaer Polytechnic Institute. An internationally known scholar in the areas of managerial accounting (often called management accounting) and cybersecurity economics, Dr. Gordon's research focuses on such issues as economic aspects of information security (including cybersecurity or computer security), corporate performance measures, cost management systems, and capital investments. He is the author of approximately 100 articles, published in such journals as The Accounting Review, ACM Transactions on Information and System Security, Communications of the ACM, Journal of Financial and Quantitative Analysis, Journal of Computer Security, MIS Quarterly, Accounting, Organizations and Society, and the Journal of Accounting and Public Policy. Dr. Gordon's current research emphasizes the importance of applying concepts from economics and managerial accounting to an information-based economy. Dr. Gordon is the co-creator (with Martin P. Loeb) of the Gordon-Loeb Model, which provides a mathematical economic model for deriving an organization's optimal investment level in cyber/information security. The Gordon-Loeb Model has been featured in The Wall Street Journal and The Financial Times. For a 3-minute video that provides a non-mathematical overview of the Model, go to: https://www.youtube.com/watch?v=cd8dT0FuqQ4. Dr. Gordon also is the author of several books, including Managerial Accounting: Concepts and Empirical Evidence, Managing Cybersecurity Resources: A Cost-Benefit Analysis and Improving Capital Budgeting: A Decision Support System Approach. In addition, he is the Editor-in-Chief of the Journal of Accounting and Public Policy and serves on the editorial boards of several other journals. Dr. Gordon's research has over 6,400 citations in Google Scholar.",
+            "Predhiman Krishan Kaw\nPredhiman Krishan Kaw (15 January 1948 \u2013 18 June 2017) was an Indian plasma physicist. He had been the founding director of the Institute for Plasma Research and served the institute as the director from 1986 to 2012. He was born on January 15, 1948 in Srinagar (Jammu and Kashmir), India. He matriculated from Punjab University (1958) and completed his M.Sc. from Agra University in 1964. He received PhD from Indian Institute of Technology, Delhi in 1966 under Supervision of Prof. M. S. Sodha, and was the first Ph.D. from the Indian Institute of Technology, Delhi. Kaw received his Ph.D. at the age of 18, following which he completed his PostDoc at Princeton University. He was awarded the prestigious Padma Shri award, India's fourth-highest honor, in 1985 and Shanti Swarup Bhatnagar Award in 1986. On December 28, 2016 he was awarded the Subrahmanyan Chandrasekhar Prize of Plasma Physics for his seminal contributions in the areas of laser-plasma interactions, strongly coupled dusty plasmas, and turbulence, nonlinear effect in magnetic fusion devices. He is also a recipient of the 2008 TWAS Prize.",
+            "Amway North America\nAmway North America (formerly known as Quixtar North America) is an American worldwide multi-level marketing (MLM) company, founded 1959 in Ada, Michigan, United States. It is privately owned by the families of Richard DeVos and Jay Van Andel through Alticor which is the holding company for businesses including Amway, Amway Global, Fulton Innovation, Amway Hotel Corporation, Hatteras Yachts, and manufacturing and logistics company Access Business Group. After the launch of Amway Global (originally operating under the name Quixtar) it replaced the Amway business in the United States, Canada and the Caribbean, with the Amway business continuing to operate in other countries around the world. On May 1, 2009, Quixtar made the name change to Amway Global and fused the various different entities of the parent company.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Alticor\nAlticor is an American corporation, privately owned and run by American families of DeVos and Van Andel. It was established in 1999 to serve as the parent company for a handful of business ventures, most notably the multi-level marketing company Amway and Amway Global, and a manufacturing and distribution company, Access Business Group. In 2006, Alticor purchased cosmetics maker Gurwitch Products from Neiman Marcus Group Inc., and operated it as a wholly owned subsidiary until Gurwitch was acquired by Shiseido in 2016.",
+            "Amway\nAmway (short for \"American Way\") is an American company specializing in the use of multi-level marketing to sell health, beauty, and home care products. The company was founded in 1959 by Jay Van Andel and Richard DeVos and is based in Ada, Michigan.",
+            "Richard DeVos\nRichard Marvin DeVos Sr. (born March 4, 1926) is an American businessman, co-founder of Amway along with Jay Van Andel (company restructured as Alticor in 2000), and owner of the Orlando Magic NBA basketball team. In 2012, \"Forbes\" magazine listed him as the 60th wealthiest person in the United States, and the 205th richest in the world, with an estimated net worth of $5.1 billion. At one point, he was one of the 10 wealthiest Americans.",
+            "China National Aviation Fuel\nChina National Aviation Fuel Group Corporation (CNAF) is a Chinese state-owned enterprise. The company owned 51% stake of China National Aviation Fuel Supply Co., Ltd. (), one of the largest jet fuel supplier of China. China National Aviation Fuel Group was ranked 484th in 2016 Fortune Global 500 list."
+        ],
+        "thoughts": [
+            "The co-founders of the Amway Corporation are Jay Van Andel and Richard DeVos. They established the company in 1959 in Ada, Michigan, United States.",
+            "Jay Van Andel, the co-founder of Amway, was involved in founding the Van Andel Institute.",
+            "Jay Van Andel"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Van Andel Institute was founded in part by what American businessman, who was best known as co-founder of the Amway Corporation?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the co-founders of the Amway Corporation.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on the founding of the Van Andel Institute, especially focusing on the individuals involved in its establishment.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which of the co-founders of the Amway Corporation was involved in founding the Van Andel Institute.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph first involves identifying the co-founders of the Amway Corporation, as the American businessman in question is related to this company (Node 1). Simultaneously, it involves retrieving information on the founding of the Van Andel Institute to determine the individuals responsible for its establishment (Node 2). Finally, the reasoning step (Node 3) combines the information from these two initial steps to answer which of the Amway Corporation co-founders was involved in founding the Van Andel Institute."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Jeffrey Trent\nJeffrey M. Trent is the founding president and director of the Translational Genomics Research Institute. He has been Vice President and Research Director of the Van Andel Institute since 2009. He was the founding director of NIH's National Human Genome Research Institute in 1993.",
+            "Van Andel Institute\nVan Andel Institute (VAI) is a 501(c)(3) nonprofit medical research institute in Grand Rapids, Michigan. VAI was founded by Jay and Betty Van Andel in 1996 and is composed of two institutes: Van Andel Research Institute (VARI) and Van Andel Education Institute (VAEI). VARI scientists study the genetic, cellular, and molecular origins of cancer and several other degenerative diseases, notably Parkinson's. VAEI offers various science education programs for students K-12, professional development for science teachers, and a graduate school for college students pursuing biomedical research.",
+            "Grand Rapids Medical Mile\nGrand Rapids Medical Mile is a designated area within the city of Grand Rapids, Michigan. It began with medical-related development in the Hillside District Grand Rapids, Michigan, bordering both sides of Michigan Street. More than a decade later it encompasses an area five times larger. It has also been referred to as Grand Rapids Medical Corridor, Michigan Street Medical Corridor, Health Hill, Medical Hill, and Pill Hill, among other names. It was started in 1996 with the founding of Van Andel Institute by Jay and Betty Van Andel. It has since expanded to include the Grand Rapids Community College's Calkins Science Center across Bostwick Avenue, Spectrum Health's Butterworth Hospital complex, Grand Valley State University's Cook-DeVos Center for Health Sciences, and Michigan State University Secchia Center Medical School, among other facilities in the area.",
+            "Jay Van Andel\nJay Van Andel (June 3, 1924 \u2013 December 7, 2004) was an American businessman, best known as co-founder of the Amway Corporation, along with Richard DeVos.",
+            "Doug DeVos\nDoug DeVos (born october 6, 1964 in Grand Rapids, Michigan) is an American businessman. As President of Amway since 2002, Doug DeVos oversees daily operations of the company with Chairman Steve Van Andel. Together, they form the Office of the Chief Executive. DeVos is the youngest son of Helen June (Van Wesep) and Amway co-founder Rich DeVos, who, with Steve\u2019s father Jay Van Andel, started Amway in Ada, Michigan, in 1959.",
+            "Amway\nAmway (short for \"American Way\") is an American company specializing in the use of multi-level marketing to sell health, beauty, and home care products. The company was founded in 1959 by Jay Van Andel and Richard DeVos and is based in Ada, Michigan.",
+            "Illinois Institute of Technology\nIllinois Institute of Technology, commonly called Illinois Tech or IIT, is a private Ph.D.-granting research university located in Chicago, in the U.S. state of Illinois, with programs in engineering, science, psychology, architecture, business, communications, industrial technology, information technology, design and law. It traces its history to several 19th century engineering and professional education institutions in the United States.",
+            "Richard DeVos\nRichard Marvin DeVos Sr. (born March 4, 1926) is an American businessman, co-founder of Amway along with Jay Van Andel (company restructured as Alticor in 2000), and owner of the Orlando Magic NBA basketball team. In 2012, \"Forbes\" magazine listed him as the 60th wealthiest person in the United States, and the 205th richest in the world, with an estimated net worth of $5.1 billion. At one point, he was one of the 10 wealthiest Americans.",
+            "Amway North America\nAmway North America (formerly known as Quixtar North America) is an American worldwide multi-level marketing (MLM) company, founded 1959 in Ada, Michigan, United States. It is privately owned by the families of Richard DeVos and Jay Van Andel through Alticor which is the holding company for businesses including Amway, Amway Global, Fulton Innovation, Amway Hotel Corporation, Hatteras Yachts, and manufacturing and logistics company Access Business Group. After the launch of Amway Global (originally operating under the name Quixtar) it replaced the Amway business in the United States, Canada and the Caribbean, with the Amway business continuing to operate in other countries around the world. On May 1, 2009, Quixtar made the name change to Amway Global and fused the various different entities of the parent company.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Alticor\nAlticor is an American corporation, privately owned and run by American families of DeVos and Van Andel. It was established in 1999 to serve as the parent company for a handful of business ventures, most notably the multi-level marketing company Amway and Amway Global, and a manufacturing and distribution company, Access Business Group. In 2006, Alticor purchased cosmetics maker Gurwitch Products from Neiman Marcus Group Inc., and operated it as a wholly owned subsidiary until Gurwitch was acquired by Shiseido in 2016.",
+            "China National Aviation Fuel\nChina National Aviation Fuel Group Corporation (CNAF) is a Chinese state-owned enterprise. The company owned 51% stake of China National Aviation Fuel Supply Co., Ltd. (), one of the largest jet fuel supplier of China. China National Aviation Fuel Group was ranked 484th in 2016 Fortune Global 500 list."
+        ],
+        "thoughts": [
+            "The co-founders of the Amway Corporation are Jay Van Andel and Richard DeVos. They established the company in 1959 in Ada, Michigan, United States.",
+            "The Van Andel Institute was founded in 1996 by Jay and Betty Van Andel in Grand Rapids, Michigan. The institute is composed of two entities: the Van Andel Research Institute (VARI) and the Van Andel Education Institute (VAEI). VARI focuses on studying the genetic, cellular, and molecular origins of cancer and degenerative diseases, while VAEI offers science education programs for students and professional development for teachers.\n\nThe founding president and director of the Translational Genomics Research Institute, Jeffrey M. Trent, has been Vice President and Research Director of the Van Andel Institute since 2009. He was also the founding director of the National Human Genome Research Institute in 1993.\n\nThe Grand Rapids Medical Mile, where the institute is located, began with the founding of the Van Andel Institute and has since expanded to include various medical facilities and educational institutions.\n\nThe Van Andel Institute was founded by Jay Van Andel, who was also the co-founder of the Amway Corporation, and his wife Betty. Richard DeVos, the other co-founder of Amway, was also involved in the establishment of the institute. Doug DeVos, the son of Richard DeVos, is the President of Amway and oversees the daily operations of the company.\n\nThe Illinois Institute of Technology, a private Ph.D.-granting research university, is also relevant to the founding of the Van Andel Institute, as it has connections to the individuals involved in the establishment of the institute.\n\nOverall, the Van Andel Institute was founded by Jay and Betty Van Andel, with the involvement of individuals such as Jeffrey M. Trent, Richard DeVos, and Doug DeVos, and it is located in the Grand Rapids Medical Mile.",
+            "Jay Van Andel, one of the co-founders of the Amway Corporation, was involved in founding the Van Andel Institute. He, along with his wife Betty, established the institute in 1996 in Grand Rapids, Michigan. Richard DeVos, the other co-founder of Amway, was also involved in the establishment of the institute."
+        ],
+        "is_best": false
+    }
+]

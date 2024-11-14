@@ -1,0 +1,616 @@
+[
+    {
+        "question": "Who is current vice captain of the English Test team, Jamie Atkinson or Ben Stokes?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the current vice captain of the English Test cricket team.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine if Jamie Atkinson is the current vice captain of the English Test team.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Ben Stokes is the current vice captain of the English Test team.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Compare the results from nodes 2 and 3 to identify who is the vice captain between Jamie Atkinson and Ben Stokes.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The graph consists of four steps. The first step is a retrieval step to determine who is the current vice captain of the English Test cricket team. Steps two and three are reasoning steps to check if Jamie Atkinson or Ben Stokes is the current vice captain, based on the information from the first step. The final node synthesizes the results to identify which of the two individuals is the vice captain."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Ben Stokes\nBenjamin Andrew \"Ben\" Stokes (born 4 June 1991) is an English international cricketer who is the current vice captain of the English Test team. Born in Christchurch, New Zealand, Ben moved to northern England at the age of 12, where he learnt the game and began playing club cricket for local teams. He is an all-rounder who bowls right-arm fast-medium pace and bats left-handed.",
+            "Joe Root\nJoseph Edward Root (born 30 December 1990) is an English cricketer, who is the current captain of the English Test team. He also represents Yorkshire domestically. He was originally a right-handed opening batsman and occasional off-spinner, with a similar playing style to former England captain Michael Vaughan. However, he has played the majority of his cricket for England in the middle order. He fields predominantly at second slip or gully.",
+            "List of England Test cricketers\nThis is a list of England Test cricketers. A Test match is an international two-innings per side cricket match between two of the leading cricketing nations. The list is arranged in the order in which each player won his Test cap by playing for the England cricket team. Where more than one player won his first Test cap in the same Test match, those players are listed alphabetically by surname. In the text, the numbers that follow the players' names correspond to their place in the chronological list of English Test cricketers. Current players have their chronological number on the front of their shirts.",
+            "Nain Abidi\nSyeda Nain Fatima Abidi (born 23 May 1985 in Karachi; Urdu: ) is an international cricketer from Pakistan. She is a right-handed batsman with good footwork and can bowl too. Abidi holds the all-time record of being first Pakistani player to score a century in women\u2019s one-day internationals. Abidi is a Syed. Abidi was vice captain of the Pakistan women cricket team and is vice captain of her club Ztbl from 2008.",
+            "Bev Brentnall\nBeverley \"Bev\" Anne Brentnall (born 1936 in Auckland, New Zealand) is the first woman to have captained New Zealand in a women's one-day international, an event which happened in 1973. Three of the five ODIs in which Brentnall captained were won by her team. Brentnall, who was a wicketkeeper/batsman, also played in ten women's Test matches. As Vice Captain, Brentnall helped lead the 1972 New Zealand team that won the first ever test victory over Australia. She was Captain of the North Shore Association team that won both North Island and New Zealand championships.",
+            "Ravi Ratnayeke\nJoseph Ravindran \"Ravi\" Ratnayeke (born 2 May 1960), is a former Sri Lankan cricketer and ODI captain, who batted left-handed and bowled right-arm medium pace. Ratnayeke played 22 Tests and 78 ODIs from 1982 to 1990, his Test best bowling performance of eight wickets for 83 runs at Jinnah Stadium (Sialkot) Pakistan was a Sri Lankan Test record at the time, and was also vice captain to Arjuna Ranatunga.",
+            "Stafanie Taylor\nStafanie Roxann Taylor, OD (born 11 June 1991) is a Jamaican cricketer who is current captain of West Indies women's cricket team. She has represented West Indies women's cricket team over 80 times since her debut in 2008. A right-handed batsman and off break bowler, Taylor was selected as the 2011 ICC Women's Cricketer of the Year \u2013 the first West Indian to receive the accolade. Born in Jamaica, Taylor broke into the West Indies team in 2008, aged 17, and immediately inserted herself as a key member of the team. She scored her highest Twenty20 total on debut, striking 90 runs from 49 balls to help her side to a large victory. In the 2016 World Twenty20, she was the highest run-scorer and named player of the series. She played in her 100th Women's One Day International (WODI) match, when the West Indies played India in the group stage of the 2017 Women's Cricket World Cup, on 29 June 2017.",
+            "Broome Pinniger\nBroome Eric Pinniger (December 28, 1902 \u2013 December 30, 1996) was an Indian field hockey player who competed in the 1928 Summer Olympics and 1932 Summer Olympics. In 1928 he was vice captain of the Indian field hockey team, which won the gold medal. He played five matches as halfback and scored one goal. Four years later he was again vice captain of the Indian field hockey team, which won the gold medal. He played two matches as halfback. He was born in Saharanpur, India. He studied at Oak Grove School, Mussoorie."
+        ],
+        "thoughts": [
+            "The current vice captain of the English Test cricket team is Ben Stokes.",
+            "Based on the upstream task, it is determined that Jamie Atkinson is not the current vice captain of the English Test team. The current vice captain is Ben Stokes.",
+            "Yes, Ben Stokes is the current vice captain of the English Test team.",
+            "Based on the results from nodes 2 and 3, it is confirmed that Ben Stokes is the current vice captain of the English Test team. Jamie Atkinson is not the vice captain."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who is current vice captain of the English Test team, Jamie Atkinson or Ben Stokes?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the current vice captain of the English Test cricket team.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Jamie Atkinson's current roles and affiliations in cricket, if any.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about Ben Stokes' current roles and affiliations in cricket, if any.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Compare the role of Jamie Atkinson and Ben Stokes with the vice captain role of the English Test team to determine if either holds that position.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The graph starts by retrieving the current vice captain of the English Test cricket team (Node 1). It parallels this by gathering information on both Jamie Atkinson (Node 2) and Ben Stokes (Node 3) to understand their current roles in cricket. Finally, all retrieved information is analyzed in Node 4 to determine which of the two, Jamie Atkinson or Ben Stokes, is the current vice captain or if neither holds the position."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Ben Stokes\nBenjamin Andrew \"Ben\" Stokes (born 4 June 1991) is an English international cricketer who is the current vice captain of the English Test team. Born in Christchurch, New Zealand, Ben moved to northern England at the age of 12, where he learnt the game and began playing club cricket for local teams. He is an all-rounder who bowls right-arm fast-medium pace and bats left-handed.",
+            "Jamie Atkinson\nJames John Atkinson (born 24 August 1990 in Hong Kong) is an international cricketer who plays cricket for Hong Kong. He also captained the Hong Kong cricket team before stepping down in May 2015. A wicket-keeper, he has also represented Hong Kong at Under-19s level, and was selected as part of their squad for the 2010 U-19 Cricket World Cup. where he became Facebook friends with Ben Stokes He was the first player born in the 1990s to play in a One Day International. His father Steve played Minor Counties cricket.",
+            "Gerard Stokes\nGerard James \"Ged\" Stokes (born 1955) is a former New Zealand rugby league coach and player who represented his country. He is a former coach of the Serbian national side and father of England international cricketer Ben Stokes.",
+            "Ben Falcone\nBenjamin Scott Falcone (born August 25, 1973) is an American actor, comedian and filmmaker. He is married to actress Melissa McCarthy, with whom he has two children. He appeared in small roles of McCarthy's films \"Bridesmaids\", \"Identity Thief\", and \"The Heat\", and co-starred in \"What to Expect When You're Expecting\" and \"Enough Said\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Helen Atkinson-Wood\nHelen Atkinson-Wood (born 14 March 1955) is an English actress and comedian born in Cheadle Hulme, Cheshire.",
+            "List of England Test cricketers\nThis is a list of England Test cricketers. A Test match is an international two-innings per side cricket match between two of the leading cricketing nations. The list is arranged in the order in which each player won his Test cap by playing for the England cricket team. Where more than one player won his first Test cap in the same Test match, those players are listed alphabetically by surname. In the text, the numbers that follow the players' names correspond to their place in the chronological list of English Test cricketers. Current players have their chronological number on the front of their shirts.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Cricket in the United Arab Emirates\nCricket is a popular sport in the United Arab Emirates. The country currently hosts the matches of Pakistani cricket team due to the Lahore attacks on the Sri Lankan cricket team. UAE has participated in various competition by International Cricket Council (ICC) and is an associate member of the ICC. The country will also host few games for UAE cricket team (Home Leg) and Afghanistan cricket team at Sharjah Cricket Association Stadium, Sharjah in 2011\u201313 ICC Intercontinental Cup and 2011\u201313 ICC Intercontinental Cup One-Day. The 2012 ICC World Twenty20 Qualifier is also scheduled in the United Arab Emirates at Dubai International Cricket Stadium, Dubai, ICC Global Cricket Academy (Oval 2), Dubai and Sharjah Cricket Stadium, Sharjah. Currently Sheikh Zayed Stadium in Abu Dhabi, Dubai Sports City Cricket Stadium in Dubai and Sharjah Cricket Association Stadium in Sharjah are used by Pakistan for their international cricket matches.",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Paper Gods\nPaper Gods is the fourteenth studio album from British new wave band Duran Duran on Warner Bros. Records. The record was announced on 15 June 2015 via an official press release posted on their website, confirming a scheduled worldwide release date of 11 September 2015. The record was produced by Mr Hudson and Joshua Blair, who has worked with the band on \"All You Need Is Now\" (2010) and \"A Diamond in the Mind\"; Nile Rodgers, who had previously first worked on the band's \"The Reflex\", his remixed version reaching number 1, \"The Wild Boys\" single and \"Notorious\" album, and Mark Ronson, who produced \"All You Need Is Now\". The first single, \"Pressure Off\", features vocals from American singer Janelle Mon\u00e1e. Duran Duran promoted the album through the Paper Gods on Tour.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "Stafanie Taylor\nStafanie Roxann Taylor, OD (born 11 June 1991) is a Jamaican cricketer who is current captain of West Indies women's cricket team. She has represented West Indies women's cricket team over 80 times since her debut in 2008. A right-handed batsman and off break bowler, Taylor was selected as the 2011 ICC Women's Cricketer of the Year \u2013 the first West Indian to receive the accolade. Born in Jamaica, Taylor broke into the West Indies team in 2008, aged 17, and immediately inserted herself as a key member of the team. She scored her highest Twenty20 total on debut, striking 90 runs from 49 balls to help her side to a large victory. In the 2016 World Twenty20, she was the highest run-scorer and named player of the series. She played in her 100th Women's One Day International (WODI) match, when the West Indies played India in the group stage of the 2017 Women's Cricket World Cup, on 29 June 2017.",
+            "Sam Waterston\nSamuel Atkinson Waterston (born November 15, 1940) is an American actor, producer and director. Among other roles, he is noted for his portrayal of Sydney Schanberg in \"The Killing Fields\" (1984), for which he received an Academy Award nomination, and his starring role as Jack McCoy on the long-running NBC television series \"Law & Order\" (1994\u20132010), which brought him Golden Globe and Screen Actors Guild Awards. He has been nominated for multiple Golden Globe, Screen Actors Guild, BAFTA and Emmy awards, having starred in over eighty film and television productions during his fifty-year career. He has also starred in numerous stage productions. AllMovie historian Hal Erickson characterized Waterston as having \"cultivated a loyal following with his quietly charismatic, unfailingly solid performances.\"",
+            "Ben Folds Five\nBen Folds Five are an American alternative rock trio formed in 1993 in Chapel Hill, North Carolina. The group's members are Ben Folds (lead vocals, piano, keyboards, melodica, principal songwriting), Robert Sledge (bass, contrabass, synthesizer, backing vocals), and Darren Jessee (drums, percussion, backing vocals, songwriter). The group achieved mainstream success in the alternative, indie and pop music scenes. Their single \"Brick\" from the 1997 album \"Whatever and Ever Amen\" gained airplay on many mainstream radio stations. During their first seven years together, the band released three proper studio records, one retrospective album of B-sides and outtakes, and eight singles. They also contributed to a number of soundtracks and compilations. Ben Folds Five disbanded in October 2000. They reunited in 2011 and released their fourth album \"The Sound of the Life of the Mind\" in 2012.",
+            "Joe Root\nJoseph Edward Root (born 30 December 1990) is an English cricketer, who is the current captain of the English Test team. He also represents Yorkshire domestically. He was originally a right-handed opening batsman and occasional off-spinner, with a similar playing style to former England captain Michael Vaughan. However, he has played the majority of his cricket for England in the middle order. He fields predominantly at second slip or gully."
+        ],
+        "thoughts": [
+            "The current vice captain of the English Test cricket team is Ben Stokes.",
+            "Jamie Atkinson is a former international cricketer who played for Hong Kong and captained the team until May 2015. He is also a wicket-keeper and has represented Hong Kong at the Under-19 level. As of now, there is no information available about his current roles and affiliations in cricket.",
+            "Ben Stokes is currently the vice captain of the English Test cricket team.",
+            "Based on the information gathered, it is clear that Ben Stokes currently holds the position of vice captain of the English Test cricket team. There is no information available to suggest that Jamie Atkinson holds the vice captain role. Therefore, Ben Stokes is the one who holds the vice captain position in the team."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Who is current vice captain of the English Test team, Jamie Atkinson or Ben Stokes?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the current vice captain of the English Test cricket team.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Check if Jamie Atkinson is mentioned as a vice captain in recent cricket team announcements.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Check if Ben Stokes is mentioned as a vice captain in recent cricket team announcements.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine who is the current vice captain based on the most recent information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins by retrieving up-to-date information about the current vice captain of the English Test cricket team. It proceeds by investigating whether each of the individuals mentioned (Jamie Atkinson and Ben Stokes) have been announced as vice captain. Finally, it synthesizes all retrieved data to conclude who holds the position based on the most recent announcements."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Ben Stokes\nBenjamin Andrew \"Ben\" Stokes (born 4 June 1991) is an English international cricketer who is the current vice captain of the English Test team. Born in Christchurch, New Zealand, Ben moved to northern England at the age of 12, where he learnt the game and began playing club cricket for local teams. He is an all-rounder who bowls right-arm fast-medium pace and bats left-handed.",
+            "Joe Root\nJoseph Edward Root (born 30 December 1990) is an English cricketer, who is the current captain of the English Test team. He also represents Yorkshire domestically. He was originally a right-handed opening batsman and occasional off-spinner, with a similar playing style to former England captain Michael Vaughan. However, he has played the majority of his cricket for England in the middle order. He fields predominantly at second slip or gully.",
+            "List of England Test cricketers\nThis is a list of England Test cricketers. A Test match is an international two-innings per side cricket match between two of the leading cricketing nations. The list is arranged in the order in which each player won his Test cap by playing for the England cricket team. Where more than one player won his first Test cap in the same Test match, those players are listed alphabetically by surname. In the text, the numbers that follow the players' names correspond to their place in the chronological list of English Test cricketers. Current players have their chronological number on the front of their shirts.",
+            "Jamie Atkinson\nJames John Atkinson (born 24 August 1990 in Hong Kong) is an international cricketer who plays cricket for Hong Kong. He also captained the Hong Kong cricket team before stepping down in May 2015. A wicket-keeper, he has also represented Hong Kong at Under-19s level, and was selected as part of their squad for the 2010 U-19 Cricket World Cup. where he became Facebook friends with Ben Stokes He was the first player born in the 1990s to play in a One Day International. His father Steve played Minor Counties cricket.",
+            "Nain Abidi\nSyeda Nain Fatima Abidi (born 23 May 1985 in Karachi; Urdu: ) is an international cricketer from Pakistan. She is a right-handed batsman with good footwork and can bowl too. Abidi holds the all-time record of being first Pakistani player to score a century in women\u2019s one-day internationals. Abidi is a Syed. Abidi was vice captain of the Pakistan women cricket team and is vice captain of her club Ztbl from 2008.",
+            "Bev Brentnall\nBeverley \"Bev\" Anne Brentnall (born 1936 in Auckland, New Zealand) is the first woman to have captained New Zealand in a women's one-day international, an event which happened in 1973. Three of the five ODIs in which Brentnall captained were won by her team. Brentnall, who was a wicketkeeper/batsman, also played in ten women's Test matches. As Vice Captain, Brentnall helped lead the 1972 New Zealand team that won the first ever test victory over Australia. She was Captain of the North Shore Association team that won both North Island and New Zealand championships.",
+            "Gerard Stokes\nGerard James \"Ged\" Stokes (born 1955) is a former New Zealand rugby league coach and player who represented his country. He is a former coach of the Serbian national side and father of England international cricketer Ben Stokes.",
+            "Ravi Ratnayeke\nJoseph Ravindran \"Ravi\" Ratnayeke (born 2 May 1960), is a former Sri Lankan cricketer and ODI captain, who batted left-handed and bowled right-arm medium pace. Ratnayeke played 22 Tests and 78 ODIs from 1982 to 1990, his Test best bowling performance of eight wickets for 83 runs at Jinnah Stadium (Sialkot) Pakistan was a Sri Lankan Test record at the time, and was also vice captain to Arjuna Ranatunga.",
+            "Stafanie Taylor\nStafanie Roxann Taylor, OD (born 11 June 1991) is a Jamaican cricketer who is current captain of West Indies women's cricket team. She has represented West Indies women's cricket team over 80 times since her debut in 2008. A right-handed batsman and off break bowler, Taylor was selected as the 2011 ICC Women's Cricketer of the Year \u2013 the first West Indian to receive the accolade. Born in Jamaica, Taylor broke into the West Indies team in 2008, aged 17, and immediately inserted herself as a key member of the team. She scored her highest Twenty20 total on debut, striking 90 runs from 49 balls to help her side to a large victory. In the 2016 World Twenty20, she was the highest run-scorer and named player of the series. She played in her 100th Women's One Day International (WODI) match, when the West Indies played India in the group stage of the 2017 Women's Cricket World Cup, on 29 June 2017.",
+            "Broome Pinniger\nBroome Eric Pinniger (December 28, 1902 \u2013 December 30, 1996) was an Indian field hockey player who competed in the 1928 Summer Olympics and 1932 Summer Olympics. In 1928 he was vice captain of the Indian field hockey team, which won the gold medal. He played five matches as halfback and scored one goal. Four years later he was again vice captain of the Indian field hockey team, which won the gold medal. He played two matches as halfback. He was born in Saharanpur, India. He studied at Oak Grove School, Mussoorie.",
+            "Kamran Rasheed\nKamran Rasheed Khan (born 1949) is a Pakistani American first-class cricketer as well cricket administrator who played for United States of America national cricket team from 1979 to 1990 as well as played domestic cricket for Lahore cricket team, Pakistan Railways cricket team, Punjab University cricket team from 1964/65 to 1970/71 as a wicket-keeper. He was also the President of United States of America Cricket Association for brief period of time 1999 to 2000.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "The current vice captain of the English Test cricket team is Ben Stokes.",
+            "There is no mention of Jamie Atkinson as a vice captain in recent cricket team announcements in the provided information.",
+            "Based on the information provided, Ben Stokes is mentioned as the current vice captain of the English Test team. Therefore, he is indeed mentioned as a vice captain in recent cricket team announcements.",
+            "Based on the most recent information, the current vice captain of the English Test cricket team is Ben Stokes."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who is current vice captain of the English Test team, Jamie Atkinson or Ben Stokes?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the current vice captain of the English Test cricket team.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine if Jamie Atkinson is associated with the English Test cricket team.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Check if Ben Stokes is the current vice captain of the English Test cricket team.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Based on the information gathered, determine if the vice captain is Jamie Atkinson, Ben Stokes, or another individual.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The graph starts by retrieving the current vice captain of the English Test team. It then separately checks the involvement of Jamie Atkinson in the team, as he is not commonly associated with it, and verifies if Ben Stokes holds the vice captaincy. Finally, the reasoning step synthesizes the information to determine who is the actual vice captain between the options given or if it's another person."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Ben Stokes\nBenjamin Andrew \"Ben\" Stokes (born 4 June 1991) is an English international cricketer who is the current vice captain of the English Test team. Born in Christchurch, New Zealand, Ben moved to northern England at the age of 12, where he learnt the game and began playing club cricket for local teams. He is an all-rounder who bowls right-arm fast-medium pace and bats left-handed.",
+            "Joe Root\nJoseph Edward Root (born 30 December 1990) is an English cricketer, who is the current captain of the English Test team. He also represents Yorkshire domestically. He was originally a right-handed opening batsman and occasional off-spinner, with a similar playing style to former England captain Michael Vaughan. However, he has played the majority of his cricket for England in the middle order. He fields predominantly at second slip or gully.",
+            "Jamie Atkinson\nJames John Atkinson (born 24 August 1990 in Hong Kong) is an international cricketer who plays cricket for Hong Kong. He also captained the Hong Kong cricket team before stepping down in May 2015. A wicket-keeper, he has also represented Hong Kong at Under-19s level, and was selected as part of their squad for the 2010 U-19 Cricket World Cup. where he became Facebook friends with Ben Stokes He was the first player born in the 1990s to play in a One Day International. His father Steve played Minor Counties cricket.",
+            "List of England Test cricketers\nThis is a list of England Test cricketers. A Test match is an international two-innings per side cricket match between two of the leading cricketing nations. The list is arranged in the order in which each player won his Test cap by playing for the England cricket team. Where more than one player won his first Test cap in the same Test match, those players are listed alphabetically by surname. In the text, the numbers that follow the players' names correspond to their place in the chronological list of English Test cricketers. Current players have their chronological number on the front of their shirts.",
+            "Nain Abidi\nSyeda Nain Fatima Abidi (born 23 May 1985 in Karachi; Urdu: ) is an international cricketer from Pakistan. She is a right-handed batsman with good footwork and can bowl too. Abidi holds the all-time record of being first Pakistani player to score a century in women\u2019s one-day internationals. Abidi is a Syed. Abidi was vice captain of the Pakistan women cricket team and is vice captain of her club Ztbl from 2008.",
+            "Bev Brentnall\nBeverley \"Bev\" Anne Brentnall (born 1936 in Auckland, New Zealand) is the first woman to have captained New Zealand in a women's one-day international, an event which happened in 1973. Three of the five ODIs in which Brentnall captained were won by her team. Brentnall, who was a wicketkeeper/batsman, also played in ten women's Test matches. As Vice Captain, Brentnall helped lead the 1972 New Zealand team that won the first ever test victory over Australia. She was Captain of the North Shore Association team that won both North Island and New Zealand championships.",
+            "Gerard Stokes\nGerard James \"Ged\" Stokes (born 1955) is a former New Zealand rugby league coach and player who represented his country. He is a former coach of the Serbian national side and father of England international cricketer Ben Stokes.",
+            "Ravi Ratnayeke\nJoseph Ravindran \"Ravi\" Ratnayeke (born 2 May 1960), is a former Sri Lankan cricketer and ODI captain, who batted left-handed and bowled right-arm medium pace. Ratnayeke played 22 Tests and 78 ODIs from 1982 to 1990, his Test best bowling performance of eight wickets for 83 runs at Jinnah Stadium (Sialkot) Pakistan was a Sri Lankan Test record at the time, and was also vice captain to Arjuna Ranatunga.",
+            "Stafanie Taylor\nStafanie Roxann Taylor, OD (born 11 June 1991) is a Jamaican cricketer who is current captain of West Indies women's cricket team. She has represented West Indies women's cricket team over 80 times since her debut in 2008. A right-handed batsman and off break bowler, Taylor was selected as the 2011 ICC Women's Cricketer of the Year \u2013 the first West Indian to receive the accolade. Born in Jamaica, Taylor broke into the West Indies team in 2008, aged 17, and immediately inserted herself as a key member of the team. She scored her highest Twenty20 total on debut, striking 90 runs from 49 balls to help her side to a large victory. In the 2016 World Twenty20, she was the highest run-scorer and named player of the series. She played in her 100th Women's One Day International (WODI) match, when the West Indies played India in the group stage of the 2017 Women's Cricket World Cup, on 29 June 2017.",
+            "Kamran Rasheed\nKamran Rasheed Khan (born 1949) is a Pakistani American first-class cricketer as well cricket administrator who played for United States of America national cricket team from 1979 to 1990 as well as played domestic cricket for Lahore cricket team, Pakistan Railways cricket team, Punjab University cricket team from 1964/65 to 1970/71 as a wicket-keeper. He was also the President of United States of America Cricket Association for brief period of time 1999 to 2000.",
+            "Cricket in the United Arab Emirates\nCricket is a popular sport in the United Arab Emirates. The country currently hosts the matches of Pakistani cricket team due to the Lahore attacks on the Sri Lankan cricket team. UAE has participated in various competition by International Cricket Council (ICC) and is an associate member of the ICC. The country will also host few games for UAE cricket team (Home Leg) and Afghanistan cricket team at Sharjah Cricket Association Stadium, Sharjah in 2011\u201313 ICC Intercontinental Cup and 2011\u201313 ICC Intercontinental Cup One-Day. The 2012 ICC World Twenty20 Qualifier is also scheduled in the United Arab Emirates at Dubai International Cricket Stadium, Dubai, ICC Global Cricket Academy (Oval 2), Dubai and Sharjah Cricket Stadium, Sharjah. Currently Sheikh Zayed Stadium in Abu Dhabi, Dubai Sports City Cricket Stadium in Dubai and Sharjah Cricket Association Stadium in Sharjah are used by Pakistan for their international cricket matches.",
+            "Helen Atkinson-Wood\nHelen Atkinson-Wood (born 14 March 1955) is an English actress and comedian born in Cheadle Hulme, Cheshire.",
+            "Broome Pinniger\nBroome Eric Pinniger (December 28, 1902 \u2013 December 30, 1996) was an Indian field hockey player who competed in the 1928 Summer Olympics and 1932 Summer Olympics. In 1928 he was vice captain of the Indian field hockey team, which won the gold medal. He played five matches as halfback and scored one goal. Four years later he was again vice captain of the Indian field hockey team, which won the gold medal. He played two matches as halfback. He was born in Saharanpur, India. He studied at Oak Grove School, Mussoorie.",
+            "Adnan Akmal\nAdnan Akmal (Urdu: \u200e ), born 13 March 1985, is a Pakistani cricketer. He is a right-handed batsman and wicket-keeper who plays for Zarai Taraqiati Bank Ltd Cricket Team and has represented his country at U-17 level. Most recently, he was called up for Pakistan's tour against South Africa in the UAE, as a replacement for the first choice keeper, Zulqarnain Haider. His brothers, Kamran Akmal and Umar Akmal, both have central contracts with the Pakistan Cricket Board, and are regular fixtures in the national side. Adnan made his Test debut against South Africa on 12 November 2010."
+        ],
+        "thoughts": [
+            "Jamie Atkinson is not associated with the English Test cricket team. He is an international cricketer who plays for Hong Kong, and there is no mention of him being associated with the English Test team.",
+            "The current vice captain of the English Test cricket team is Ben Stokes.",
+            "Yes, Ben Stokes is the current vice captain of the English Test cricket team.",
+            "Based on the information gathered, the vice captain of the English Test cricket team is Ben Stokes."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who is current vice captain of the English Test team, Jamie Atkinson or Ben Stokes?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the current vice captain of the English Test cricket team.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Check if Jamie Atkinson is the vice captain of the English Test cricket team.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Check if Ben Stokes is the vice captain of the English Test cricket team.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine who between Jamie Atkinson or Ben Stokes is the current vice captain of the English Test cricket team based on the previous steps.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The graph begins with a retrieval step to gather the latest information on the vice captaincy of the English Test cricket team (Node 1). Following this, two parallel reasoning steps analyze the retrieved data to check whether Jamie Atkinson (Node 2) or Ben Stokes (Node 3) holds this position. Finally, a concluding reasoning step (Node 4) synthesizes the findings to definitively answer the question of which of the two, Jamie Atkinson or Ben Stokes, is the current vice captain."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Paper Gods\nPaper Gods is the fourteenth studio album from British new wave band Duran Duran on Warner Bros. Records. The record was announced on 15 June 2015 via an official press release posted on their website, confirming a scheduled worldwide release date of 11 September 2015. The record was produced by Mr Hudson and Joshua Blair, who has worked with the band on \"All You Need Is Now\" (2010) and \"A Diamond in the Mind\"; Nile Rodgers, who had previously first worked on the band's \"The Reflex\", his remixed version reaching number 1, \"The Wild Boys\" single and \"Notorious\" album, and Mark Ronson, who produced \"All You Need Is Now\". The first single, \"Pressure Off\", features vocals from American singer Janelle Mon\u00e1e. Duran Duran promoted the album through the Paper Gods on Tour.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition."
+        ],
+        "thoughts": [
+            "The current vice captain of the English Test cricket team is Ben Stokes.",
+            "Based on the upstream task, it is determined that Jamie Atkinson is not the vice captain of the English Test cricket team. The current vice captain is Ben Stokes.",
+            "Yes, Ben Stokes is the vice captain of the English Test cricket team.",
+            "Based on the previous steps, it is determined that Ben Stokes is the current vice captain of the English Test cricket team."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who is current vice captain of the English Test team, Jamie Atkinson or Ben Stokes?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine the current vice captain of the English Test cricket team.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Compare the current vice captain to Jamie Atkinson.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the current vice captain to Ben Stokes.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Jamie Atkinson or Ben Stokes is the current vice captain based on the comparisons.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph starts by determining who the current vice captain of the English Test cricket team is (Node 1). Then it compares this information with Jamie Atkinson (Node 2) and Ben Stokes (Node 3) independently. Finally, it performs reasoning to determine if Jamie Atkinson or Ben Stokes matches the current vice captain (Node 4). This structure ensures that the required comparisons are made based on up-to-date information about the team hierarchy."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Ben Stokes\nBenjamin Andrew \"Ben\" Stokes (born 4 June 1991) is an English international cricketer who is the current vice captain of the English Test team. Born in Christchurch, New Zealand, Ben moved to northern England at the age of 12, where he learnt the game and began playing club cricket for local teams. He is an all-rounder who bowls right-arm fast-medium pace and bats left-handed.",
+            "Joe Root\nJoseph Edward Root (born 30 December 1990) is an English cricketer, who is the current captain of the English Test team. He also represents Yorkshire domestically. He was originally a right-handed opening batsman and occasional off-spinner, with a similar playing style to former England captain Michael Vaughan. However, he has played the majority of his cricket for England in the middle order. He fields predominantly at second slip or gully.",
+            "List of England Test cricketers\nThis is a list of England Test cricketers. A Test match is an international two-innings per side cricket match between two of the leading cricketing nations. The list is arranged in the order in which each player won his Test cap by playing for the England cricket team. Where more than one player won his first Test cap in the same Test match, those players are listed alphabetically by surname. In the text, the numbers that follow the players' names correspond to their place in the chronological list of English Test cricketers. Current players have their chronological number on the front of their shirts.",
+            "Nain Abidi\nSyeda Nain Fatima Abidi (born 23 May 1985 in Karachi; Urdu: ) is an international cricketer from Pakistan. She is a right-handed batsman with good footwork and can bowl too. Abidi holds the all-time record of being first Pakistani player to score a century in women\u2019s one-day internationals. Abidi is a Syed. Abidi was vice captain of the Pakistan women cricket team and is vice captain of her club Ztbl from 2008.",
+            "Bev Brentnall\nBeverley \"Bev\" Anne Brentnall (born 1936 in Auckland, New Zealand) is the first woman to have captained New Zealand in a women's one-day international, an event which happened in 1973. Three of the five ODIs in which Brentnall captained were won by her team. Brentnall, who was a wicketkeeper/batsman, also played in ten women's Test matches. As Vice Captain, Brentnall helped lead the 1972 New Zealand team that won the first ever test victory over Australia. She was Captain of the North Shore Association team that won both North Island and New Zealand championships.",
+            "Ravi Ratnayeke\nJoseph Ravindran \"Ravi\" Ratnayeke (born 2 May 1960), is a former Sri Lankan cricketer and ODI captain, who batted left-handed and bowled right-arm medium pace. Ratnayeke played 22 Tests and 78 ODIs from 1982 to 1990, his Test best bowling performance of eight wickets for 83 runs at Jinnah Stadium (Sialkot) Pakistan was a Sri Lankan Test record at the time, and was also vice captain to Arjuna Ranatunga.",
+            "Stafanie Taylor\nStafanie Roxann Taylor, OD (born 11 June 1991) is a Jamaican cricketer who is current captain of West Indies women's cricket team. She has represented West Indies women's cricket team over 80 times since her debut in 2008. A right-handed batsman and off break bowler, Taylor was selected as the 2011 ICC Women's Cricketer of the Year \u2013 the first West Indian to receive the accolade. Born in Jamaica, Taylor broke into the West Indies team in 2008, aged 17, and immediately inserted herself as a key member of the team. She scored her highest Twenty20 total on debut, striking 90 runs from 49 balls to help her side to a large victory. In the 2016 World Twenty20, she was the highest run-scorer and named player of the series. She played in her 100th Women's One Day International (WODI) match, when the West Indies played India in the group stage of the 2017 Women's Cricket World Cup, on 29 June 2017.",
+            "Broome Pinniger\nBroome Eric Pinniger (December 28, 1902 \u2013 December 30, 1996) was an Indian field hockey player who competed in the 1928 Summer Olympics and 1932 Summer Olympics. In 1928 he was vice captain of the Indian field hockey team, which won the gold medal. He played five matches as halfback and scored one goal. Four years later he was again vice captain of the Indian field hockey team, which won the gold medal. He played two matches as halfback. He was born in Saharanpur, India. He studied at Oak Grove School, Mussoorie."
+        ],
+        "thoughts": [
+            "The current vice captain of the English Test cricket team is Ben Stokes.",
+            "The current vice captain, Ben Stokes, is a talented all-rounder known for his aggressive batting and effective bowling. He is known for his leadership skills and has been a key player for the team in recent years. On the other hand, Jamie Atkinson was a former Hong Kong cricketer who was known for his solid wicket-keeping skills and consistent batting performances. While both players have shown leadership qualities, their playing styles and roles within their respective teams are quite different. Stokes is more of an all-rounder, while Atkinson was primarily a wicket-keeper batsman.",
+            "The current vice captain of the English Test cricket team is not Ben Stokes. As of now, the vice captain is Jos Buttler. Ben Stokes is a key player in the team, known for his all-round abilities and leadership on the field. Both players bring different strengths to the team, with Stokes being a dynamic all-rounder and Buttler being a skilled wicketkeeper-batsman. While Stokes has been a standout performer in high-pressure situations, Buttler's calm and composed approach as vice captain has also been valuable to the team. Overall, both players contribute significantly to the team in their respective roles.",
+            "Based on the comparisons, it can be determined that Ben Stokes is not the current vice captain of the English Test cricket team. The current vice captain is Jos Buttler. Therefore, Jamie Atkinson's status as vice captain is not provided in the given information."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who is current vice captain of the English Test team, Jamie Atkinson or Ben Stokes?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the current vice captain of the English Test cricket team.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Compare the retrieved vice captain's name with Jamie Atkinson and Ben Stokes to determine who the current vice captain is.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The task involves first retrieving information about the current vice captain of the English Test cricket team. Once that information is retrieved, the next step is to determine if the vice captain is Jamie Atkinson or Ben Stokes by comparing the names."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Paper Gods\nPaper Gods is the fourteenth studio album from British new wave band Duran Duran on Warner Bros. Records. The record was announced on 15 June 2015 via an official press release posted on their website, confirming a scheduled worldwide release date of 11 September 2015. The record was produced by Mr Hudson and Joshua Blair, who has worked with the band on \"All You Need Is Now\" (2010) and \"A Diamond in the Mind\"; Nile Rodgers, who had previously first worked on the band's \"The Reflex\", his remixed version reaching number 1, \"The Wild Boys\" single and \"Notorious\" album, and Mark Ronson, who produced \"All You Need Is Now\". The first single, \"Pressure Off\", features vocals from American singer Janelle Mon\u00e1e. Duran Duran promoted the album through the Paper Gods on Tour.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition."
+        ],
+        "thoughts": [
+            "The current vice captain of the English Test cricket team is Ben Stokes.",
+            "The retrieved vice captain's name is Ben Stokes, which matches the name of the current vice captain of the English Test cricket team. Therefore, the current vice captain is Ben Stokes."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who is current vice captain of the English Test team, Jamie Atkinson or Ben Stokes?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify who is the current vice-captain of the English Test cricket team.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Analyze the retrieved information to determine whether Jamie Atkinson or Ben Stokes is the current vice-captain.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The graph consists of two main steps. The first step is to retrieve the most current information about the vice-captain of the English Test team. Once this information is gathered, the second step involves reasoning - comparing the retrieved information to determine whether Jamie Atkinson or Ben Stokes holds the position."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Ben Stokes\nBenjamin Andrew \"Ben\" Stokes (born 4 June 1991) is an English international cricketer who is the current vice captain of the English Test team. Born in Christchurch, New Zealand, Ben moved to northern England at the age of 12, where he learnt the game and began playing club cricket for local teams. He is an all-rounder who bowls right-arm fast-medium pace and bats left-handed.",
+            "Joe Root\nJoseph Edward Root (born 30 December 1990) is an English cricketer, who is the current captain of the English Test team. He also represents Yorkshire domestically. He was originally a right-handed opening batsman and occasional off-spinner, with a similar playing style to former England captain Michael Vaughan. However, he has played the majority of his cricket for England in the middle order. He fields predominantly at second slip or gully.",
+            "List of England Test cricketers\nThis is a list of England Test cricketers. A Test match is an international two-innings per side cricket match between two of the leading cricketing nations. The list is arranged in the order in which each player won his Test cap by playing for the England cricket team. Where more than one player won his first Test cap in the same Test match, those players are listed alphabetically by surname. In the text, the numbers that follow the players' names correspond to their place in the chronological list of English Test cricketers. Current players have their chronological number on the front of their shirts.",
+            "Nain Abidi\nSyeda Nain Fatima Abidi (born 23 May 1985 in Karachi; Urdu: ) is an international cricketer from Pakistan. She is a right-handed batsman with good footwork and can bowl too. Abidi holds the all-time record of being first Pakistani player to score a century in women\u2019s one-day internationals. Abidi is a Syed. Abidi was vice captain of the Pakistan women cricket team and is vice captain of her club Ztbl from 2008.",
+            "Bev Brentnall\nBeverley \"Bev\" Anne Brentnall (born 1936 in Auckland, New Zealand) is the first woman to have captained New Zealand in a women's one-day international, an event which happened in 1973. Three of the five ODIs in which Brentnall captained were won by her team. Brentnall, who was a wicketkeeper/batsman, also played in ten women's Test matches. As Vice Captain, Brentnall helped lead the 1972 New Zealand team that won the first ever test victory over Australia. She was Captain of the North Shore Association team that won both North Island and New Zealand championships.",
+            "Ravi Ratnayeke\nJoseph Ravindran \"Ravi\" Ratnayeke (born 2 May 1960), is a former Sri Lankan cricketer and ODI captain, who batted left-handed and bowled right-arm medium pace. Ratnayeke played 22 Tests and 78 ODIs from 1982 to 1990, his Test best bowling performance of eight wickets for 83 runs at Jinnah Stadium (Sialkot) Pakistan was a Sri Lankan Test record at the time, and was also vice captain to Arjuna Ranatunga.",
+            "Stafanie Taylor\nStafanie Roxann Taylor, OD (born 11 June 1991) is a Jamaican cricketer who is current captain of West Indies women's cricket team. She has represented West Indies women's cricket team over 80 times since her debut in 2008. A right-handed batsman and off break bowler, Taylor was selected as the 2011 ICC Women's Cricketer of the Year \u2013 the first West Indian to receive the accolade. Born in Jamaica, Taylor broke into the West Indies team in 2008, aged 17, and immediately inserted herself as a key member of the team. She scored her highest Twenty20 total on debut, striking 90 runs from 49 balls to help her side to a large victory. In the 2016 World Twenty20, she was the highest run-scorer and named player of the series. She played in her 100th Women's One Day International (WODI) match, when the West Indies played India in the group stage of the 2017 Women's Cricket World Cup, on 29 June 2017.",
+            "Broome Pinniger\nBroome Eric Pinniger (December 28, 1902 \u2013 December 30, 1996) was an Indian field hockey player who competed in the 1928 Summer Olympics and 1932 Summer Olympics. In 1928 he was vice captain of the Indian field hockey team, which won the gold medal. He played five matches as halfback and scored one goal. Four years later he was again vice captain of the Indian field hockey team, which won the gold medal. He played two matches as halfback. He was born in Saharanpur, India. He studied at Oak Grove School, Mussoorie."
+        ],
+        "thoughts": [
+            "The current vice-captain of the English Test cricket team is Ben Stokes.",
+            "Based on the retrieved information, Ben Stokes is the current vice-captain of the English Test cricket team."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who is current vice captain of the English Test team, Jamie Atkinson or Ben Stokes?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the current vice captain of the English Test cricket team.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify who Jamie Atkinson is in the context of cricket.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify who Ben Stokes is in the context of cricket.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Verify if the vice captain identified in Node 1 is either Jamie Atkinson or Ben Stokes.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Provide the answer whether Jamie Atkinson or Ben Stokes is the current vice captain of the English Test team based on the reasoning step.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph breaks down the task into retrieving and verifying the roles of Jamie Atkinson and Ben Stokes in cricket and determining the current vice captain of the English Test team. The reasoning step then confirms whether either of the two is the vice captain."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Ben Stokes\nBenjamin Andrew \"Ben\" Stokes (born 4 June 1991) is an English international cricketer who is the current vice captain of the English Test team. Born in Christchurch, New Zealand, Ben moved to northern England at the age of 12, where he learnt the game and began playing club cricket for local teams. He is an all-rounder who bowls right-arm fast-medium pace and bats left-handed.",
+            "Jamie Atkinson\nJames John Atkinson (born 24 August 1990 in Hong Kong) is an international cricketer who plays cricket for Hong Kong. He also captained the Hong Kong cricket team before stepping down in May 2015. A wicket-keeper, he has also represented Hong Kong at Under-19s level, and was selected as part of their squad for the 2010 U-19 Cricket World Cup. where he became Facebook friends with Ben Stokes He was the first player born in the 1990s to play in a One Day International. His father Steve played Minor Counties cricket.",
+            "Gerard Stokes\nGerard James \"Ged\" Stokes (born 1955) is a former New Zealand rugby league coach and player who represented his country. He is a former coach of the Serbian national side and father of England international cricketer Ben Stokes.",
+            "Cricket fighting\nCricket fighting is a blood sport involving the fighting of male crickets. Unlike most blood sports such as bullfighting and cockfighting, cricket fighting rarely causes injuries to the animals. It is a popular pastime in China and dates back more than 1,000 years to the Tang Dynasty. However, the sport has been losing its popularity in China.",
+            "Cricket in the United Arab Emirates\nCricket is a popular sport in the United Arab Emirates. The country currently hosts the matches of Pakistani cricket team due to the Lahore attacks on the Sri Lankan cricket team. UAE has participated in various competition by International Cricket Council (ICC) and is an associate member of the ICC. The country will also host few games for UAE cricket team (Home Leg) and Afghanistan cricket team at Sharjah Cricket Association Stadium, Sharjah in 2011\u201313 ICC Intercontinental Cup and 2011\u201313 ICC Intercontinental Cup One-Day. The 2012 ICC World Twenty20 Qualifier is also scheduled in the United Arab Emirates at Dubai International Cricket Stadium, Dubai, ICC Global Cricket Academy (Oval 2), Dubai and Sharjah Cricket Stadium, Sharjah. Currently Sheikh Zayed Stadium in Abu Dhabi, Dubai Sports City Cricket Stadium in Dubai and Sharjah Cricket Association Stadium in Sharjah are used by Pakistan for their international cricket matches.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Defender (association football)\nIn the sport of association football, a defender is an outfield player whose primary role is to prevent the opposing team from scoring goals.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Jamie Foxx\nEric Marlon Bishop (born December 13, 1967), known professionally by his stage name Jamie Foxx, is an American actor, singer, songwriter, musician, producer, and comedian. He won an Academy Award for Best Actor, BAFTA Award for Best Actor in a Leading Role, and a Golden Globe Award for Best Actor in a Musical or Comedy, for his portrayal of Ray Charles in the 2004 biographical film \"Ray\". The same year, he was nominated for the Academy Award for Best Supporting Actor for his role in the crime film \"Collateral\". As of spring 2017, Foxx serves as host and executive producer of the new Fox game show \"Beat Shazam\".",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Paper Gods\nPaper Gods is the fourteenth studio album from British new wave band Duran Duran on Warner Bros. Records. The record was announced on 15 June 2015 via an official press release posted on their website, confirming a scheduled worldwide release date of 11 September 2015. The record was produced by Mr Hudson and Joshua Blair, who has worked with the band on \"All You Need Is Now\" (2010) and \"A Diamond in the Mind\"; Nile Rodgers, who had previously first worked on the band's \"The Reflex\", his remixed version reaching number 1, \"The Wild Boys\" single and \"Notorious\" album, and Mark Ronson, who produced \"All You Need Is Now\". The first single, \"Pressure Off\", features vocals from American singer Janelle Mon\u00e1e. Duran Duran promoted the album through the Paper Gods on Tour.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "Ben Falcone\nBenjamin Scott Falcone (born August 25, 1973) is an American actor, comedian and filmmaker. He is married to actress Melissa McCarthy, with whom he has two children. He appeared in small roles of McCarthy's films \"Bridesmaids\", \"Identity Thief\", and \"The Heat\", and co-starred in \"What to Expect When You're Expecting\" and \"Enough Said\".",
+            "Kamran Rasheed\nKamran Rasheed Khan (born 1949) is a Pakistani American first-class cricketer as well cricket administrator who played for United States of America national cricket team from 1979 to 1990 as well as played domestic cricket for Lahore cricket team, Pakistan Railways cricket team, Punjab University cricket team from 1964/65 to 1970/71 as a wicket-keeper. He was also the President of United States of America Cricket Association for brief period of time 1999 to 2000.",
+            "Garrett Morris\nGarrett Morris (born February 1, 1937) is an American comedian and actor. He was part of the original cast of the sketch comedy program \"Saturday Night Live\", appearing from 1975 to 1980. Morris also had a long-running role as Junior \"Uncle Junior\" King on the sitcom \"The Jamie Foxx Show\", which aired from 1996\u20132001. Morris had a starring role as Earl Washington on the CBS sitcom \"2 Broke Girls\", from 2011-2017. He was also in the sitcom \"Martin\" as Stan Winters from 1992-1995.",
+            "Reliance Cricket Stadium\nReliance Cricket Stadium is cricket stadium in Nagothane, Maharashtra. Previously, the stadium was known as Indian Petrochemicals Corporation Limited Ground. The ground owned by Reliance Industries.",
+            "North of Ireland F.C.\nNorth of Ireland Football Club is a former Irish rugby union club that was based in Belfast, Northern Ireland. It was the first rugby club formed in what is now Northern Ireland and only two other clubs - Dublin University and Wanderers - were formed earlier anywhere else in all Ireland. It was founded in 1868 by members of North of Ireland Cricket Club. NIFC also played in the first recorded rugby game in Ulster when they played a 20-a-side match against Queen's University RFC."
+        ],
+        "thoughts": [
+            "The current vice captain of the English Test cricket team is Ben Stokes.",
+            "Jamie Atkinson is an international cricketer who plays for Hong Kong and has also captained the Hong Kong cricket team. He is a wicket-keeper and has represented Hong Kong at the Under-19 level as well. Atkinson was the first player born in the 1990s to play in a One Day International. His father, Steve, also played Minor Counties cricket.",
+            "Ben Stokes is an English international cricketer who is the current vice captain of the English Test team. He is an all-rounder who bowls right-arm fast-medium pace and bats left-handed. He was born in Christchurch, New Zealand, and moved to northern England at the age of 12, where he learned the game and began playing club cricket for local teams. His father, Gerard Stokes, is a former New Zealand rugby league coach and player.",
+            "Based on the information from the upstream tasks, the current vice captain of the English Test cricket team is Ben Stokes. Therefore, the vice captain identified in Node 1 is Ben Stokes. Jamie Atkinson is not the vice captain of the English Test cricket team.",
+            "Ben Stokes is the current vice captain of the English Test team. Jamie Atkinson is not the vice captain."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who is current vice captain of the English Test team, Jamie Atkinson or Ben Stokes?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Verify if Jamie Atkinson is currently associated with the English Test cricket team.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve current information about Ben Stokes' role in the English Test cricket team.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Establish the current vice captain of the English Test cricket team.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Compare the roles of Jamie Atkinson and Ben Stokes with the current vice captain position in the team.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The graph starts by gathering information about the association of both individuals with the English Test cricket team. Jamie Atkinson's status with the team is first confirmed, as he is less commonly linked to it compared to Ben Stokes. In parallel, Ben Stokes' current position in the team is retrieved. Simultaneously, we accurate information on who currently holds the vice-captaincy. The final node synthesizes this information to determine which, if any, of the two individuals is the current vice captain."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Ben Stokes\nBenjamin Andrew \"Ben\" Stokes (born 4 June 1991) is an English international cricketer who is the current vice captain of the English Test team. Born in Christchurch, New Zealand, Ben moved to northern England at the age of 12, where he learnt the game and began playing club cricket for local teams. He is an all-rounder who bowls right-arm fast-medium pace and bats left-handed.",
+            "Joe Root\nJoseph Edward Root (born 30 December 1990) is an English cricketer, who is the current captain of the English Test team. He also represents Yorkshire domestically. He was originally a right-handed opening batsman and occasional off-spinner, with a similar playing style to former England captain Michael Vaughan. However, he has played the majority of his cricket for England in the middle order. He fields predominantly at second slip or gully.",
+            "List of England Test cricketers\nThis is a list of England Test cricketers. A Test match is an international two-innings per side cricket match between two of the leading cricketing nations. The list is arranged in the order in which each player won his Test cap by playing for the England cricket team. Where more than one player won his first Test cap in the same Test match, those players are listed alphabetically by surname. In the text, the numbers that follow the players' names correspond to their place in the chronological list of English Test cricketers. Current players have their chronological number on the front of their shirts.",
+            "Jamie Atkinson\nJames John Atkinson (born 24 August 1990 in Hong Kong) is an international cricketer who plays cricket for Hong Kong. He also captained the Hong Kong cricket team before stepping down in May 2015. A wicket-keeper, he has also represented Hong Kong at Under-19s level, and was selected as part of their squad for the 2010 U-19 Cricket World Cup. where he became Facebook friends with Ben Stokes He was the first player born in the 1990s to play in a One Day International. His father Steve played Minor Counties cricket.",
+            "Nain Abidi\nSyeda Nain Fatima Abidi (born 23 May 1985 in Karachi; Urdu: ) is an international cricketer from Pakistan. She is a right-handed batsman with good footwork and can bowl too. Abidi holds the all-time record of being first Pakistani player to score a century in women\u2019s one-day internationals. Abidi is a Syed. Abidi was vice captain of the Pakistan women cricket team and is vice captain of her club Ztbl from 2008.",
+            "Bev Brentnall\nBeverley \"Bev\" Anne Brentnall (born 1936 in Auckland, New Zealand) is the first woman to have captained New Zealand in a women's one-day international, an event which happened in 1973. Three of the five ODIs in which Brentnall captained were won by her team. Brentnall, who was a wicketkeeper/batsman, also played in ten women's Test matches. As Vice Captain, Brentnall helped lead the 1972 New Zealand team that won the first ever test victory over Australia. She was Captain of the North Shore Association team that won both North Island and New Zealand championships.",
+            "Ravi Ratnayeke\nJoseph Ravindran \"Ravi\" Ratnayeke (born 2 May 1960), is a former Sri Lankan cricketer and ODI captain, who batted left-handed and bowled right-arm medium pace. Ratnayeke played 22 Tests and 78 ODIs from 1982 to 1990, his Test best bowling performance of eight wickets for 83 runs at Jinnah Stadium (Sialkot) Pakistan was a Sri Lankan Test record at the time, and was also vice captain to Arjuna Ranatunga.",
+            "Gerard Stokes\nGerard James \"Ged\" Stokes (born 1955) is a former New Zealand rugby league coach and player who represented his country. He is a former coach of the Serbian national side and father of England international cricketer Ben Stokes.",
+            "Stafanie Taylor\nStafanie Roxann Taylor, OD (born 11 June 1991) is a Jamaican cricketer who is current captain of West Indies women's cricket team. She has represented West Indies women's cricket team over 80 times since her debut in 2008. A right-handed batsman and off break bowler, Taylor was selected as the 2011 ICC Women's Cricketer of the Year \u2013 the first West Indian to receive the accolade. Born in Jamaica, Taylor broke into the West Indies team in 2008, aged 17, and immediately inserted herself as a key member of the team. She scored her highest Twenty20 total on debut, striking 90 runs from 49 balls to help her side to a large victory. In the 2016 World Twenty20, she was the highest run-scorer and named player of the series. She played in her 100th Women's One Day International (WODI) match, when the West Indies played India in the group stage of the 2017 Women's Cricket World Cup, on 29 June 2017.",
+            "Cricket in the United Arab Emirates\nCricket is a popular sport in the United Arab Emirates. The country currently hosts the matches of Pakistani cricket team due to the Lahore attacks on the Sri Lankan cricket team. UAE has participated in various competition by International Cricket Council (ICC) and is an associate member of the ICC. The country will also host few games for UAE cricket team (Home Leg) and Afghanistan cricket team at Sharjah Cricket Association Stadium, Sharjah in 2011\u201313 ICC Intercontinental Cup and 2011\u201313 ICC Intercontinental Cup One-Day. The 2012 ICC World Twenty20 Qualifier is also scheduled in the United Arab Emirates at Dubai International Cricket Stadium, Dubai, ICC Global Cricket Academy (Oval 2), Dubai and Sharjah Cricket Stadium, Sharjah. Currently Sheikh Zayed Stadium in Abu Dhabi, Dubai Sports City Cricket Stadium in Dubai and Sharjah Cricket Association Stadium in Sharjah are used by Pakistan for their international cricket matches.",
+            "Kamran Rasheed\nKamran Rasheed Khan (born 1949) is a Pakistani American first-class cricketer as well cricket administrator who played for United States of America national cricket team from 1979 to 1990 as well as played domestic cricket for Lahore cricket team, Pakistan Railways cricket team, Punjab University cricket team from 1964/65 to 1970/71 as a wicket-keeper. He was also the President of United States of America Cricket Association for brief period of time 1999 to 2000.",
+            "Broome Pinniger\nBroome Eric Pinniger (December 28, 1902 \u2013 December 30, 1996) was an Indian field hockey player who competed in the 1928 Summer Olympics and 1932 Summer Olympics. In 1928 he was vice captain of the Indian field hockey team, which won the gold medal. He played five matches as halfback and scored one goal. Four years later he was again vice captain of the Indian field hockey team, which won the gold medal. He played two matches as halfback. He was born in Saharanpur, India. He studied at Oak Grove School, Mussoorie.",
+            "Wet leakage current test\nThe wet leakage current test is an electrical withstanding test carried out on electrical appliances to test the electrical isolation of the housing. The test is carried out by submersing the appliance into water with one lead attached to the electrical leads of the appliance, and the other lead connected to the water. It is often carried out on photovoltaic modules in order to qualify them for IEC61646 or IEC61625 certification.",
+            "Adnan Akmal\nAdnan Akmal (Urdu: \u200e ), born 13 March 1985, is a Pakistani cricketer. He is a right-handed batsman and wicket-keeper who plays for Zarai Taraqiati Bank Ltd Cricket Team and has represented his country at U-17 level. Most recently, he was called up for Pakistan's tour against South Africa in the UAE, as a replacement for the first choice keeper, Zulqarnain Haider. His brothers, Kamran Akmal and Umar Akmal, both have central contracts with the Pakistan Cricket Board, and are regular fixtures in the national side. Adnan made his Test debut against South Africa on 12 November 2010."
+        ],
+        "thoughts": [
+            "Based on the information provided, Jamie Atkinson is not currently associated with the English Test cricket team. He is an international cricketer who plays for Hong Kong, and there is no mention of him being part of the English Test team. The current captain of the English Test team is Joe Root, and the vice-captain is Ben Stokes. Therefore, Jamie Atkinson is not currently associated with the English Test cricket team.",
+            "Ben Stokes is currently the vice captain of the English Test cricket team. He is an all-rounder who bowls right-arm fast-medium pace and bats left-handed. He was born in Christchurch, New Zealand, and moved to northern England at the age of 12, where he learned the game and began playing club cricket for local teams. His father, Gerard Stokes, is a former New Zealand rugby league coach and player. As the vice captain, Stokes plays a crucial leadership role in the team and contributes with both bat and ball.",
+            "The current vice captain of the English Test cricket team is Ben Stokes.",
+            "Jamie Atkinson is not currently associated with the English Test cricket team, so his role cannot be compared to the current vice-captain position. However, Ben Stokes, the current vice-captain, plays a crucial leadership role in the team and contributes with both bat and ball. Stokes is an all-rounder who brings a balance of batting and bowling skills to the team, and his experience and leadership qualities make him an important figure in the team's success. Therefore, while Jamie Atkinson's role is not relevant to the current vice-captain position, Ben Stokes plays a significant and impactful role as the vice-captain of the English Test cricket team."
+        ],
+        "is_best": false
+    }
+]

@@ -1,0 +1,821 @@
+[
+    {
+        "question": "Which dog's ancestors include Gordon and Irish Setters: the Manchester Terrier or the Scotch Collie?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine the ancestor breeds of the Manchester Terrier.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the ancestor breeds of the Scotch Collie.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify if Gordon Setters or Irish Setters are among the ancestor breeds of the Manchester Terrier using information from Node 1.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify if Gordon Setters or Irish Setters are among the ancestor breeds of the Scotch Collie using information from Node 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Based on results from Nodes 3 and 4, determine which dog, the Manchester Terrier or the Scotch Collie, has ancestors including Gordon and Irish Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph starts by retrieving the ancestral breeds for both the Manchester Terrier and the Scotch Collie. Each of these retrieval nodes (1 and 2) feeds into reasoning nodes (3 and 4) that identify the presence of Gordon or Irish Setters among those ancestors. Finally, node 5 aggregates this information to determine which dog breed's ancestors include the specified Setter breeds."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Toy Manchester Terrier\nThe Toy Manchester Terrier is a breed of dog, categorized as a terrier. The breed was bred down in size in North America from the Manchester Terrier, and is placed in the Toy Group by the American Kennel Club and the Canadian Kennel Club (the Manchester Terrier is placed in the Terrier Group.) Neither the F\u00e9d\u00e9ration Cynologique Internationale nor The Kennel Club recognize a Toy variety of the Manchester Terrier.",
+            "Russkiy Toy\nThe Russian Toy (also known as the Russian Toy Terrier, and in Russia as the Russkiy Toy, Toychik,Russian: \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0442\u043e\u0439, \u0422\u043e\u0439\u0447\u0438\u043a ) is a very small breed of dog originally bred in Russia from the English Toy Terrier which is known today as the Manchester Terrier. There are two types of coats in the breed: smooth coat and long coat. The smooth-coated variety was previously known as the Russian Toy Terrier and long-coated as the Moscow Long Haired Toy Terrier. Both were brought together under the same Russian Toy Terrier name in 1988 and the \"Terrier\" was dropped from the name when the breed was added in 2006 to the official list of breeds registered with the F\u00e9d\u00e9ration Cynologique Internationale and has been registered in the Foundation Stock Service of the American Kennel Club since 2008, allowed to compete in AKC companion events since 2010. The first official breed standard of the two varieties was written in 1966 in Russia.",
+            "Teddy Roosevelt Terrier\nThe Teddy Roosevelt Terrier is a small to medium-sized American hunting terrier. Lower-set with shorter legs, more muscular, and heavier bone density than its cousin the American Rat Terrier. There is much diversity in the history of the Teddy Roosevelt Terrier breed and it shares a common early history with the American Rat Terrier, Fox Paulistinha and Tenterfield Terrier. It is said the Rat Terrier background stems from the terriers or other dogs that were brought over by early English and other working class immigrants. Since the breed was a farm, hunting and utility dog there was little to no planned breeding other than breeding dogs with agreeable traits to each other in order to produce the desired work ethic in the dog. It is assumed that the Feist (dog), Bull Terrier, Smooth Fox Terrier, Manchester Terrier, Whippet, Italian Greyhound, the now extinct English White Terrier, Turnspit dog and or Wry Legged Terrier all share in the Teddy Roosevelt Terrier's ancestry. These early Ratting Terriers were then most likely bred to the Beagle or Beagle cross bred dogs (for increased scenting ability) and other dogs. Maximizing the influences from these various breeds provides the modern Teddy Roosevelt Terrier with a keen sense of awareness and prey drive, an acute sense of smell and a very high intellect. Although they tend to be aloof with strangers they are devoted companion dogs with a strong desire to please and be near their owners side at all times.",
+            "Manchester Terrier\nThe Manchester Terrier is a breed of dog of the smooth-haired terrier type.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Feist (dog)\nA Feist is a small hunting dog, descended from the terriers brought over to the United States by English miners and other working class immigrants. These terriers probably included crosses between the Smooth Fox Terrier, the Manchester Terrier and the now extinct English White Terrier. These dogs were used as ratters, and gambling on their prowess in killing rats was a favorite hobby of their owners. Some of these dogs have been crossed with Whippets or Italian Greyhounds (for speed) and Beagles (for hunting ability) - extending the family to include a larger variety of purpose than the original ratter, or Rat Terrier.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Kim Tae-yeon discography\nKim Tae-yeon, better known by the mononym Taeyeon, is a South Korean singer. Her discography consists of one studio album, two extended plays (EPs), twenty singles (including four as featured artist), and three promotional singles. She debuted as a member of South Korean girl group Girls' Generation in August 2007 and initially gained some popularity as a singer upon recording soundtrack songs \"If\" for \"Hong Gil Dong\" and \"Can You Hear Me\" for \"Beethoven Virus\" (2008). She subsequently established herself as one of the most renowned vocalist on the South Korean music scene with further soundtrack recordings, notably \"I Love You\" for \"\" (2010), \"Missing You like Crazy\" for \"The King 2 Hearts\", \"Closer\" for \"To the Beautiful You\" (2012), and \"And One\" for \"That Winter, the Wind Blows\" (2013), all of which managed to enter the top ten of South Korea's Gaon Digital Chart. Apart from soundtrack recordings, Taeyeon has also recorded duets with other artists, most notably \"Like a Star\" with The One and \"Different\" with Kim Bum-soo, which peaked at numbers one and two on the Gaon Digital Chart, respectively.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Pattern of My Life\n\"Pattern of My Life\" is the second and last single released from Annie Lennox's first greatest hits album \"The Annie Lennox Collection\". The song is a cover version of \"Closer Now\" by Keane which was a b-side to their debut single \"Call Me What You Like\". Lennox retitled the song, referring to a lyric in the song. This single was released on 24 May 2009 in the United Kingdom.",
+            "All That You Are (Goo Goo Dolls song)\n\"All That You Are\" is a song recorded by American alternative rock band the Goo Goo Dolls included in the \"\" , which was released on June 14, 2011. \"All That You Are\" was released to the Apple iTunes Store on June 14, 2011, the same day the soundtrack was released. Also Linkin Park and Paramore released their singles for the film, \"Iridescent\" and \"Monster\" respectively. This is the second song the Goo Goo Dolls have made for a \"Transformers\" movie with the first being \"Before It's Too Late (Sam and Mikaela's Theme), which was made for \"Transformers\".",
+            "Disease (song)\n\"Disease\" was released on September 30, 2002 as the first single from Matchbox Twenty's third album, \"More Than You Think You Are\". It was co-written by Matchbox Twenty lead singer Rob Thomas and The Rolling Stones frontman Mick Jagger. The song peaked at #29 on the \"Billboard\" Hot 100. \"Disease\" was one of two songs written and presented to Mick Jagger, by Rob Thomas in which Jagger actually gives back the song, saying \"it would sound better coming from you\".",
+            "Clairvoyant (EP)\nClairvoyant is an EP by the Canadian singer-songwriter Jenn Grant, released in May 2014 for European release on Outside Music. The EP preceded by a few months her fifth full studio album, \"Compostela\". It features collaborations with Buck 65 and others. Her Buck 65 collaboration \"Spades\" and the Stewart Legere collaboration \"No One's Gonna Love You (Quite Like I Do)\", (also on \"Compostela\") appear alongside four other tunes on this EP."
+        ],
+        "thoughts": [
+            "The ancestor breeds of the Manchester Terrier include the English Toy Terrier, the Smooth Fox Terrier, the Italian Greyhound, the Whippet, the Feist, and the now extinct English White Terrier. These breeds were used in the development of the Manchester Terrier, contributing to its characteristics and traits.",
+            "Based on the information from Node 1, neither Gordon Setters nor Irish Setters are among the ancestor breeds of the Manchester Terrier. The ancestor breeds include the English Toy Terrier, the Smooth Fox Terrier, the Italian Greyhound, the Whippet, the Feist, and the now extinct English White Terrier.",
+            "The Scotch Collie is a breed of dog that is believed to have originated from the collie-type dogs brought to Scotland by the Celts. The ancestor breeds of the Scotch Collie are likely the Border Collie and the Bearded Collie, both of which are known for their herding abilities and similar physical characteristics to the Scotch Collie. These breeds were likely crossed to create the Scotch Collie, which was originally used as a herding dog in Scotland.",
+            "Based on the information from Node 2, neither Gordon Setters nor Irish Setters are mentioned as ancestor breeds of the Scotch Collie. The Border Collie and the Bearded Collie are identified as the likely ancestor breeds.",
+            "Based on the results from Nodes 3 and 4, neither the Manchester Terrier nor the Scotch Collie have ancestors including Gordon and Irish Setters."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which dog's ancestors include Gordon and Irish Setters: the Manchester Terrier or the Scotch Collie?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the ancestors of the Manchester Terrier.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the ancestors of the Scotch Collie.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if the ancestors of the Manchester Terrier include Gordon and Irish Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if the ancestors of the Scotch Collie include Gordon and Irish Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the ancestry findings to determine which dog (Manchester Terrier or Scotch Collie) has Gordon and Irish Setters as ancestors.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "5",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to methodically determine which dog breed has Gordon and Irish Setters among its ancestors. The first two nodes retrieve information about the ancestors of the Manchester Terrier and Scotch Collie, respectively. Subsequent nodes perform reasoning to check if Gordon and Irish Setters are among those ancestors. The final node synthesizes the results from both breed checks to determine the correct answer."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "Toy Manchester Terrier\nThe Toy Manchester Terrier is a breed of dog, categorized as a terrier. The breed was bred down in size in North America from the Manchester Terrier, and is placed in the Toy Group by the American Kennel Club and the Canadian Kennel Club (the Manchester Terrier is placed in the Terrier Group.) Neither the F\u00e9d\u00e9ration Cynologique Internationale nor The Kennel Club recognize a Toy variety of the Manchester Terrier.",
+            "Manchester Terrier\nThe Manchester Terrier is a breed of dog of the smooth-haired terrier type.",
+            "Feist (dog)\nA Feist is a small hunting dog, descended from the terriers brought over to the United States by English miners and other working class immigrants. These terriers probably included crosses between the Smooth Fox Terrier, the Manchester Terrier and the now extinct English White Terrier. These dogs were used as ratters, and gambling on their prowess in killing rats was a favorite hobby of their owners. Some of these dogs have been crossed with Whippets or Italian Greyhounds (for speed) and Beagles (for hunting ability) - extending the family to include a larger variety of purpose than the original ratter, or Rat Terrier.",
+            "Russkiy Toy\nThe Russian Toy (also known as the Russian Toy Terrier, and in Russia as the Russkiy Toy, Toychik,Russian: \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0442\u043e\u0439, \u0422\u043e\u0439\u0447\u0438\u043a ) is a very small breed of dog originally bred in Russia from the English Toy Terrier which is known today as the Manchester Terrier. There are two types of coats in the breed: smooth coat and long coat. The smooth-coated variety was previously known as the Russian Toy Terrier and long-coated as the Moscow Long Haired Toy Terrier. Both were brought together under the same Russian Toy Terrier name in 1988 and the \"Terrier\" was dropped from the name when the breed was added in 2006 to the official list of breeds registered with the F\u00e9d\u00e9ration Cynologique Internationale and has been registered in the Foundation Stock Service of the American Kennel Club since 2008, allowed to compete in AKC companion events since 2010. The first official breed standard of the two varieties was written in 1966 in Russia.",
+            "Teddy Roosevelt Terrier\nThe Teddy Roosevelt Terrier is a small to medium-sized American hunting terrier. Lower-set with shorter legs, more muscular, and heavier bone density than its cousin the American Rat Terrier. There is much diversity in the history of the Teddy Roosevelt Terrier breed and it shares a common early history with the American Rat Terrier, Fox Paulistinha and Tenterfield Terrier. It is said the Rat Terrier background stems from the terriers or other dogs that were brought over by early English and other working class immigrants. Since the breed was a farm, hunting and utility dog there was little to no planned breeding other than breeding dogs with agreeable traits to each other in order to produce the desired work ethic in the dog. It is assumed that the Feist (dog), Bull Terrier, Smooth Fox Terrier, Manchester Terrier, Whippet, Italian Greyhound, the now extinct English White Terrier, Turnspit dog and or Wry Legged Terrier all share in the Teddy Roosevelt Terrier's ancestry. These early Ratting Terriers were then most likely bred to the Beagle or Beagle cross bred dogs (for increased scenting ability) and other dogs. Maximizing the influences from these various breeds provides the modern Teddy Roosevelt Terrier with a keen sense of awareness and prey drive, an acute sense of smell and a very high intellect. Although they tend to be aloof with strangers they are devoted companion dogs with a strong desire to please and be near their owners side at all times.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Bull and Terrier\nThe Bull and Terrier is a breed of dog that was the progenitor of the American Pit Bull Terrier, American Staffordshire Terrier, English Bull Terrier and the Staffordshire Bull Terrier.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "American Pit Bull Terrier\nThe American Pit Bull Terrier (APBT) is a dog breed. It is a medium-sized, solidly-built, intelligent, short-haired dog whose early ancestors came from the British Isles. When compared with the English Staffordshire Bull Terrier (another breed within the type commonly called pit bulls), the American Pit Bull Terrier is larger by margins of 6 - in height and 25 - in weight. The American Pit Bull Terrier varies in size. Males normally are about 18-21 inches (45\u201353\u00a0cm) in height and around 35-60 pounds (15\u201327\u00a0kg) in weight. Females are normally around 17-20 inches (43\u201350\u00a0cm) in height and 30-50 pounds (13\u201322\u00a0kg) in weight.",
+            "Jai Ho! (You Are My Destiny)\n\"Jai Ho! (You Are My Destiny)\" is a song performed by American girl group The Pussycat Dolls for their second studio album \"Doll Domination\" (2008). It was released on February 23, 2009, by Interscope Records as the fourth single from the record. After watching \"Slumdog Millionaire\" record executives Jimmy Iovine and Ron Fair wanted to turn \"Jai Ho\" into a \"pop record without deviating from the original melody\" and asked Scherzinger to do her own interpretation of the song. The song was credited as \"\"A. R. Rahman and The Pussycat Dolls featuring Nicole Scherzinger\"\".",
+            "Chamuco\nThe Chamuco (a Mexican word which means \"devil\") or Mexican Pitbull is a dog breed not recognized by any Canofile association. It originated in the center of Mexico, it was developed in this country in the 1970s, product of the accidental or intentional crosses of the American Pit Bull Terrier with the now extinct Mexican Bulldog, street dogs, American Bully, Pitbull Blue, Staffordshire bull terrier, American Staffordshire Terrier, and probably with the Boxer. Its name comes from the Mexican slang \"Chamuco\", which means devil because of its temperament and tenacity. Also it called Mexican pitbull or miniature pitbull, but actually is Dogo of Mexican origin.",
+            "Northport Traction Company\nNorthport Traction Company was a trolley service in the Town of Huntington in New York. It ran from 1902 to 1924 and served East Northport and Northport, New York. The company only had one line throughout its history which ran from Northport (LIRR station) to Northport Harbor, at what is today Cow Harbor Park. Unlike Huntington Railroad to the west, Northport Traction Company never expanded beyond either Northport or East Northport, and no record exists of any proposal to do so."
+        ],
+        "thoughts": [
+            "The ancestors of the Manchester Terrier include the Smooth Fox Terrier, the now extinct English White Terrier, and the Feist, which is a small hunting dog descended from terriers brought over to the United States by English miners and other working class immigrants. The Feist likely included crosses between the Smooth Fox Terrier, the Manchester Terrier, and the now extinct English White Terrier. Additionally, the Russian Toy Terrier, also known as the Russian Toy Terrier, was originally bred in Russia from the English Toy Terrier, which is known today as the Manchester Terrier. The Teddy Roosevelt Terrier also shares ancestry with the Manchester Terrier, as it is assumed that the Feist, Bull Terrier, Smooth Fox Terrier, Whippet, Italian Greyhound, and the now extinct English White Terrier all share in the Teddy Roosevelt Terrier's ancestry. Therefore, the Manchester Terrier has a diverse ancestry that includes various terrier breeds and hunting dogs.",
+            "The ancestors of the Manchester Terrier do not include Gordon and Irish Setters. The ancestors include the Smooth Fox Terrier, the now extinct English White Terrier, Feist, Russian Toy Terrier, and Teddy Roosevelt Terrier, but there is no mention of Gordon or Irish Setters in the ancestry.",
+            "The Scotch Collie is a breed of dog that originated from Scotland. Its ancestors can be traced back to the herding dogs of Scotland, particularly the Border Collie and the Old English Sheepdog. These dogs were bred for their herding abilities and intelligence, and their descendants eventually became known as the Scotch Collie.",
+            "Based on the information provided, the ancestors of the Scotch Collie include the Border Collie and the Old English Sheepdog, but there is no mention of Gordon or Irish Setters in its lineage. Therefore, it can be determined that the ancestors of the Scotch Collie do not include Gordon and Irish Setters.",
+            "Based on the ancestry findings, neither the Manchester Terrier nor the Scotch Collie have Gordon and Irish Setters as ancestors."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which dog's ancestors include Gordon and Irish Setters: the Manchester Terrier or the Scotch Collie?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information on the ancestry of the Manchester Terrier breed.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on the ancestry of the Scotch Collie breed.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify if Gordon Setters are part of the ancestry of the Manchester Terrier.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify if Irish Setters are part of the ancestry of the Manchester Terrier.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Identify if Gordon Setters are part of the ancestry of the Scotch Collie.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Identify if Irish Setters are part of the ancestry of the Scotch Collie.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "7",
+                        "instruction": "Combine results to determine which breed has both Gordon and Irish Setters as ancestors.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4",
+                            "5",
+                            "6"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "7"
+            },
+            "explanation": "The execution graph starts with retrieving ancestral data of both the Manchester Terrier and the Scotch Collie. Each retrieval node feeds into reasoning nodes that check for the presence of Gordon and Irish Setters specifically. The final reasoning node combines these checks to conclude which breed has both setters in its ancestry."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Scotch Collie\nThe Scotch Collie is a landrace breed of dog which originated from the highland regions of Scotland. The breed consisted of both the long-haired (now known as Rough) Collie and the short-haired (now known as Smooth) Collie. It is generally believed to have descended from a variety of ancient herding dogs, some dating back to the Roman occupation, which may have included Roman Cattle Dogs, Native Celtic Dogs and Viking Herding Spitzes. Other ancestors include the Gordon and Irish Setters.",
+            "Toy Manchester Terrier\nThe Toy Manchester Terrier is a breed of dog, categorized as a terrier. The breed was bred down in size in North America from the Manchester Terrier, and is placed in the Toy Group by the American Kennel Club and the Canadian Kennel Club (the Manchester Terrier is placed in the Terrier Group.) Neither the F\u00e9d\u00e9ration Cynologique Internationale nor The Kennel Club recognize a Toy variety of the Manchester Terrier.",
+            "Manchester Terrier\nThe Manchester Terrier is a breed of dog of the smooth-haired terrier type.",
+            "Teddy Roosevelt Terrier\nThe Teddy Roosevelt Terrier is a small to medium-sized American hunting terrier. Lower-set with shorter legs, more muscular, and heavier bone density than its cousin the American Rat Terrier. There is much diversity in the history of the Teddy Roosevelt Terrier breed and it shares a common early history with the American Rat Terrier, Fox Paulistinha and Tenterfield Terrier. It is said the Rat Terrier background stems from the terriers or other dogs that were brought over by early English and other working class immigrants. Since the breed was a farm, hunting and utility dog there was little to no planned breeding other than breeding dogs with agreeable traits to each other in order to produce the desired work ethic in the dog. It is assumed that the Feist (dog), Bull Terrier, Smooth Fox Terrier, Manchester Terrier, Whippet, Italian Greyhound, the now extinct English White Terrier, Turnspit dog and or Wry Legged Terrier all share in the Teddy Roosevelt Terrier's ancestry. These early Ratting Terriers were then most likely bred to the Beagle or Beagle cross bred dogs (for increased scenting ability) and other dogs. Maximizing the influences from these various breeds provides the modern Teddy Roosevelt Terrier with a keen sense of awareness and prey drive, an acute sense of smell and a very high intellect. Although they tend to be aloof with strangers they are devoted companion dogs with a strong desire to please and be near their owners side at all times.",
+            "Russkiy Toy\nThe Russian Toy (also known as the Russian Toy Terrier, and in Russia as the Russkiy Toy, Toychik,Russian: \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0442\u043e\u0439, \u0422\u043e\u0439\u0447\u0438\u043a ) is a very small breed of dog originally bred in Russia from the English Toy Terrier which is known today as the Manchester Terrier. There are two types of coats in the breed: smooth coat and long coat. The smooth-coated variety was previously known as the Russian Toy Terrier and long-coated as the Moscow Long Haired Toy Terrier. Both were brought together under the same Russian Toy Terrier name in 1988 and the \"Terrier\" was dropped from the name when the breed was added in 2006 to the official list of breeds registered with the F\u00e9d\u00e9ration Cynologique Internationale and has been registered in the Foundation Stock Service of the American Kennel Club since 2008, allowed to compete in AKC companion events since 2010. The first official breed standard of the two varieties was written in 1966 in Russia.",
+            "Bull and Terrier\nThe Bull and Terrier is a breed of dog that was the progenitor of the American Pit Bull Terrier, American Staffordshire Terrier, English Bull Terrier and the Staffordshire Bull Terrier.",
+            "American Pit Bull Terrier\nThe American Pit Bull Terrier (APBT) is a dog breed. It is a medium-sized, solidly-built, intelligent, short-haired dog whose early ancestors came from the British Isles. When compared with the English Staffordshire Bull Terrier (another breed within the type commonly called pit bulls), the American Pit Bull Terrier is larger by margins of 6 - in height and 25 - in weight. The American Pit Bull Terrier varies in size. Males normally are about 18-21 inches (45\u201353\u00a0cm) in height and around 35-60 pounds (15\u201327\u00a0kg) in weight. Females are normally around 17-20 inches (43\u201350\u00a0cm) in height and 30-50 pounds (13\u201322\u00a0kg) in weight.",
+            "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+            "Collie\nThe collie is a distinctive type of herding dog, including many related landraces and standardised breeds. The type originated in Scotland and Northern England. The collie is a medium-sized, fairly lightly built dog, with a pointed snout. Many types have a distinctive white pattern over the shoulders. Collies are very active and agile, and most types of collies have a very strong herding instinct. Collie breeds have spread through many parts of the world (especially Australia and North America) and have diversified into many varieties, sometimes with mixture from other dog types. Some collie breeds have remained as working dogs, used for herding cattle, sheep and other livestock, while others are kept as pets, show dogs or for dog sports, in which they display great agility, stamina and trainability. While the AKC has a breed they call \"Collie\", in fact collie dogs are a distinctive type of herding dog including many related landraces and formal breeds. There are usually major distinctions between show dogs and those bred for herding trials or dog sports. They typically display great agility, stamina and trainability and more importantly sagacity.",
+            "Feist (dog)\nA Feist is a small hunting dog, descended from the terriers brought over to the United States by English miners and other working class immigrants. These terriers probably included crosses between the Smooth Fox Terrier, the Manchester Terrier and the now extinct English White Terrier. These dogs were used as ratters, and gambling on their prowess in killing rats was a favorite hobby of their owners. Some of these dogs have been crossed with Whippets or Italian Greyhounds (for speed) and Beagles (for hunting ability) - extending the family to include a larger variety of purpose than the original ratter, or Rat Terrier.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Muzzle (song)\n\"Muzzle\" is a song by American alternative rock band The Smashing Pumpkins from their third album, \"Mellon Collie and the Infinite Sadness\". It was one of the last songs written by Billy Corgan for \"Mellon Collie\", with the song's lyrics referring to what Corgan thought the public's perception was of him at the time. It was rumored to be the Smashing Pumpkins fifth and final single from this album, as is evidenced by the fact that a promotional single for the song was issued to radio stations worldwide. However, the song \"Thirty-Three\" was released as the fifth and final single instead.",
+            "Dickran Tevrizian\nDickran M. Tevrizian Jr. (born 1940) was a United States federal judge for the Central District of California. Confirmed in 1985, he is the first United States federal judge of Armenian ancestry.",
+            "Masatoshi G\u00fcnd\u00fcz Ikeda\nMasato\u015fi G\u00fcnd\u00fcz \u0130keda (Japanese: \u6c60\u7530 \u6b63\u654f \u30ae\u30e5\u30f3\u30c9\u30a5\u30ba Ikeda Masatoshi Gyunduzu ) (25 February 1926 \u2013 9 February 2003), was a Turkish mathematician of Japanese ancestry, known for his contributions to the field of algebraic number theory."
+        ],
+        "thoughts": [
+            "The Manchester Terrier has a diverse ancestry, with influences from various breeds such as the Feist, Bull Terrier, Smooth Fox Terrier, Whippet, Italian Greyhound, English White Terrier, Turnspit dog, and Wry Legged Terrier. The breed was also bred down in size in North America to create the Toy Manchester Terrier, which is recognized by the American Kennel Club and the Canadian Kennel Club. Additionally, the Russian Toy Terrier, also known as the Russkiy Toy, has its origins in the English Toy Terrier, which is known today as the Manchester Terrier. The Manchester Terrier's ancestry also includes the Bull and Terrier, which is the progenitor of several other terrier breeds, including the American Pit Bull Terrier. The Manchester Terrier's lineage is further connected to the Feist, a small hunting dog with influences from the Smooth Fox Terrier and the now extinct English White Terrier. Overall, the Manchester Terrier's ancestry is a mix of various terrier and hunting dog breeds, contributing to its unique characteristics and traits.",
+            "Based on the information provided, there is no mention of Gordon Setters being part of the ancestry of the Manchester Terrier. The Manchester Terrier's ancestry is primarily a mix of various terrier and hunting dog breeds, with influences from breeds such as the Feist, Bull Terrier, Smooth Fox Terrier, Whippet, Italian Greyhound, English White Terrier, Turnspit dog, and Wry Legged Terrier. Therefore, it can be concluded that Gordon Setters are not part of the ancestry of the Manchester Terrier.",
+            "Based on the information provided, there is no mention of Irish Setters being part of the ancestry of the Manchester Terrier. The Manchester Terrier's ancestry is described as a mix of various terrier and hunting dog breeds, including the Feist, Bull Terrier, Smooth Fox Terrier, Whippet, Italian Greyhound, English White Terrier, Turnspit dog, Wry Legged Terrier, and Bull and Terrier. Therefore, it can be concluded that Irish Setters are not part of the ancestry of the Manchester Terrier.",
+            "The Scotch Collie breed originated from the highland regions of Scotland and is believed to have descended from a variety of ancient herding dogs, including Roman Cattle Dogs, Native Celtic Dogs, Viking Herding Spitzes, Gordon and Irish Setters. The breed consisted of both the long-haired (Rough) Collie and the short-haired (Smooth) Collie. The Collie is a distinctive type of herding dog that originated in Scotland and Northern England, with many related landraces and standardised breeds. The breed has spread through many parts of the world and has diversified into many varieties, sometimes with mixture from other dog types. The Grand Bleu de Gascogne and the Teddy Roosevelt Terrier are also mentioned as breeds with diverse ancestry, with influences from various other breeds contributing to their modern characteristics.",
+            "Yes, Gordon Setters are part of the ancestry of the Scotch Collie.",
+            "Yes, Irish Setters are part of the ancestry of the Scotch Collie.",
+            "Based on the combined results, the breed that has both Gordon and Irish Setters as ancestors is the Scotch Collie."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Which dog's ancestors include Gordon and Irish Setters: the Manchester Terrier or the Scotch Collie?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the ancestry of the Manchester Terrier.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the ancestry of the Scotch Collie.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the ancestry of the Manchester Terrier to determine if it includes Gordon and Irish Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the ancestry of the Scotch Collie to determine if it includes Gordon and Irish Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the results of the ancestry analysis to determine which dog, the Manchester Terrier or the Scotch Collie, has ancestors that include Gordon and Irish Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph first retrieves information on the ancestry of both the Manchester Terrier and the Scotch Collie separately. These steps are necessary to gather complete and accurate genetic heritage data of each dog breed. Once the ancestry data is retrieved, reasoning is employed to analyze the ancestry for the presence of Gordon and Irish Setters for both breeds. Finally, the results of these analyses are compared to determine which of the two breeds has ancestors that include Gordon and Irish Setters."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Scotch Collie\nThe Scotch Collie is a landrace breed of dog which originated from the highland regions of Scotland. The breed consisted of both the long-haired (now known as Rough) Collie and the short-haired (now known as Smooth) Collie. It is generally believed to have descended from a variety of ancient herding dogs, some dating back to the Roman occupation, which may have included Roman Cattle Dogs, Native Celtic Dogs and Viking Herding Spitzes. Other ancestors include the Gordon and Irish Setters.",
+            "Collie\nThe collie is a distinctive type of herding dog, including many related landraces and standardised breeds. The type originated in Scotland and Northern England. The collie is a medium-sized, fairly lightly built dog, with a pointed snout. Many types have a distinctive white pattern over the shoulders. Collies are very active and agile, and most types of collies have a very strong herding instinct. Collie breeds have spread through many parts of the world (especially Australia and North America) and have diversified into many varieties, sometimes with mixture from other dog types. Some collie breeds have remained as working dogs, used for herding cattle, sheep and other livestock, while others are kept as pets, show dogs or for dog sports, in which they display great agility, stamina and trainability. While the AKC has a breed they call \"Collie\", in fact collie dogs are a distinctive type of herding dog including many related landraces and formal breeds. There are usually major distinctions between show dogs and those bred for herding trials or dog sports. They typically display great agility, stamina and trainability and more importantly sagacity.",
+            "Toy Manchester Terrier\nThe Toy Manchester Terrier is a breed of dog, categorized as a terrier. The breed was bred down in size in North America from the Manchester Terrier, and is placed in the Toy Group by the American Kennel Club and the Canadian Kennel Club (the Manchester Terrier is placed in the Terrier Group.) Neither the F\u00e9d\u00e9ration Cynologique Internationale nor The Kennel Club recognize a Toy variety of the Manchester Terrier.",
+            "Manchester Terrier\nThe Manchester Terrier is a breed of dog of the smooth-haired terrier type.",
+            "Muzzle (song)\n\"Muzzle\" is a song by American alternative rock band The Smashing Pumpkins from their third album, \"Mellon Collie and the Infinite Sadness\". It was one of the last songs written by Billy Corgan for \"Mellon Collie\", with the song's lyrics referring to what Corgan thought the public's perception was of him at the time. It was rumored to be the Smashing Pumpkins fifth and final single from this album, as is evidenced by the fact that a promotional single for the song was issued to radio stations worldwide. However, the song \"Thirty-Three\" was released as the fifth and final single instead.",
+            "Masatoshi G\u00fcnd\u00fcz Ikeda\nMasato\u015fi G\u00fcnd\u00fcz \u0130keda (Japanese: \u6c60\u7530 \u6b63\u654f \u30ae\u30e5\u30f3\u30c9\u30a5\u30ba Ikeda Masatoshi Gyunduzu ) (25 February 1926 \u2013 9 February 2003), was a Turkish mathematician of Japanese ancestry, known for his contributions to the field of algebraic number theory.",
+            "Teddy Roosevelt Terrier\nThe Teddy Roosevelt Terrier is a small to medium-sized American hunting terrier. Lower-set with shorter legs, more muscular, and heavier bone density than its cousin the American Rat Terrier. There is much diversity in the history of the Teddy Roosevelt Terrier breed and it shares a common early history with the American Rat Terrier, Fox Paulistinha and Tenterfield Terrier. It is said the Rat Terrier background stems from the terriers or other dogs that were brought over by early English and other working class immigrants. Since the breed was a farm, hunting and utility dog there was little to no planned breeding other than breeding dogs with agreeable traits to each other in order to produce the desired work ethic in the dog. It is assumed that the Feist (dog), Bull Terrier, Smooth Fox Terrier, Manchester Terrier, Whippet, Italian Greyhound, the now extinct English White Terrier, Turnspit dog and or Wry Legged Terrier all share in the Teddy Roosevelt Terrier's ancestry. These early Ratting Terriers were then most likely bred to the Beagle or Beagle cross bred dogs (for increased scenting ability) and other dogs. Maximizing the influences from these various breeds provides the modern Teddy Roosevelt Terrier with a keen sense of awareness and prey drive, an acute sense of smell and a very high intellect. Although they tend to be aloof with strangers they are devoted companion dogs with a strong desire to please and be near their owners side at all times.",
+            "Dickran Tevrizian\nDickran M. Tevrizian Jr. (born 1940) was a United States federal judge for the Central District of California. Confirmed in 1985, he is the first United States federal judge of Armenian ancestry.",
+            "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+            "Blank family\nThe Blank family is a family of Jews, some of whom converted to Orthodox Christianity in the Russian Empire, mostly notable as the immediate ancestry of the maternal grandfather of Vladimir Lenin according to various published researchers who suggest that Lenin's maternal grandfather was a Jewish convert to Christianity (Alexander Blank). Whether or not Lenin, whose matrilineal \"Blank\" surname also traces to non-Jewish German roots, was actually partly descended from the Jewish Blank family remains contested.",
+            "Ellison Onizuka\nEllison Shoji Onizuka (June 24, 1946 \u2013 January 28, 1986 ) was an American astronaut from Kealakekua, Hawaii, who successfully flew into space with the Space Shuttle \"Discovery\" on STS-51-C. He died in the destruction of the Space Shuttle \"Challenger\", on which he was serving as Mission Specialist for mission STS-51-L. He was the first Asian American and the first person of Japanese ancestry to reach space.",
+            "Feist (dog)\nA Feist is a small hunting dog, descended from the terriers brought over to the United States by English miners and other working class immigrants. These terriers probably included crosses between the Smooth Fox Terrier, the Manchester Terrier and the now extinct English White Terrier. These dogs were used as ratters, and gambling on their prowess in killing rats was a favorite hobby of their owners. Some of these dogs have been crossed with Whippets or Italian Greyhounds (for speed) and Beagles (for hunting ability) - extending the family to include a larger variety of purpose than the original ratter, or Rat Terrier.",
+            "Russkiy Toy\nThe Russian Toy (also known as the Russian Toy Terrier, and in Russia as the Russkiy Toy, Toychik,Russian: \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0442\u043e\u0439, \u0422\u043e\u0439\u0447\u0438\u043a ) is a very small breed of dog originally bred in Russia from the English Toy Terrier which is known today as the Manchester Terrier. There are two types of coats in the breed: smooth coat and long coat. The smooth-coated variety was previously known as the Russian Toy Terrier and long-coated as the Moscow Long Haired Toy Terrier. Both were brought together under the same Russian Toy Terrier name in 1988 and the \"Terrier\" was dropped from the name when the breed was added in 2006 to the official list of breeds registered with the F\u00e9d\u00e9ration Cynologique Internationale and has been registered in the Foundation Stock Service of the American Kennel Club since 2008, allowed to compete in AKC companion events since 2010. The first official breed standard of the two varieties was written in 1966 in Russia.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bull and Terrier\nThe Bull and Terrier is a breed of dog that was the progenitor of the American Pit Bull Terrier, American Staffordshire Terrier, English Bull Terrier and the Staffordshire Bull Terrier.",
+            "American Pit Bull Terrier\nThe American Pit Bull Terrier (APBT) is a dog breed. It is a medium-sized, solidly-built, intelligent, short-haired dog whose early ancestors came from the British Isles. When compared with the English Staffordshire Bull Terrier (another breed within the type commonly called pit bulls), the American Pit Bull Terrier is larger by margins of 6 - in height and 25 - in weight. The American Pit Bull Terrier varies in size. Males normally are about 18-21 inches (45\u201353\u00a0cm) in height and around 35-60 pounds (15\u201327\u00a0kg) in weight. Females are normally around 17-20 inches (43\u201350\u00a0cm) in height and 30-50 pounds (13\u201322\u00a0kg) in weight."
+        ],
+        "thoughts": [
+            "The Manchester Terrier is a breed of dog that has been bred down in size to create the Toy Manchester Terrier, which is placed in the Toy Group by the American Kennel Club and the Canadian Kennel Club. The Manchester Terrier itself is categorized as a terrier and is placed in the Terrier Group by these organizations. The Russian Toy Terrier, also known as the Russkiy Toy, is a very small breed of dog originally bred in Russia from the English Toy Terrier, which is known today as the Manchester Terrier. Additionally, the Feist (dog) is a small hunting dog descended from terriers brought over to the United States by English miners and other working class immigrants, and it is believed to have crosses with the Smooth Fox Terrier and the Manchester Terrier. These dogs were used as ratters, and some have been crossed with Whippets, Italian Greyhounds, and Beagles, extending the family to include a larger variety of purpose than the original ratter. The Bull and Terrier is a breed of dog that was the progenitor of the American Pit Bull Terrier, which is a medium-sized, solidly-built, intelligent, short-haired dog whose early ancestors came from the British Isles. The American Pit Bull Terrier is larger than the English Staffordshire Bull Terrier and varies in size.",
+            "Based on the information provided, there is no direct mention of Gordon or Irish Setters in the ancestry of the Manchester Terrier. The breed is said to have been bred down in size from the English Toy Terrier, and there are mentions of crosses with other terriers such as the Smooth Fox Terrier and the Bull and Terrier. However, there is no indication of Gordon or Irish Setters being part of the Manchester Terrier's ancestry.",
+            "The Scotch Collie is a landrace breed of dog that originated from the highland regions of Scotland. It is believed to have descended from a variety of ancient herding dogs, including Roman Cattle Dogs, Native Celtic Dogs, Viking Herding Spitzes, Gordon and Irish Setters. The breed consisted of both the long-haired (Rough) Collie and the short-haired (Smooth) Collie. The collie is a distinctive type of herding dog that originated in Scotland and Northern England, with many related landraces and standardised breeds. The collie is a medium-sized, fairly lightly built dog, with a pointed snout, and many types have a distinctive white pattern over the shoulders. The breed has spread through many parts of the world and has diversified into many varieties, sometimes with mixture from other dog types. The Scotch Collie and collie breeds are known for their herding instinct, agility, stamina, and trainability.",
+            "The ancestry of the Scotch Collie does include Gordon and Irish Setters. The breed is believed to have descended from a variety of ancient herding dogs, including Roman Cattle Dogs, Native Celtic Dogs, Viking Herding Spitzes, Gordon and Irish Setters. This indicates that the Scotch Collie has a diverse ancestry that includes these two setter breeds.",
+            "Based on the ancestry analysis, it is evident that the Scotch Collie has ancestors that include Gordon and Irish Setters, while the Manchester Terrier does not have any direct mention of these setter breeds in its ancestry. Therefore, the Scotch Collie is the dog breed with ancestors that include Gordon and Irish Setters."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which dog's ancestors include Gordon and Irish Setters: the Manchester Terrier or the Scotch Collie?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the lineage and ancestors of the Manchester Terrier.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the lineage and ancestors of the Scotch Collie.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine whether Gordon Setters are part of the ancestry of the Manchester Terrier.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine whether Gordon Setters are part of the ancestry of the Scotch Collie.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Determine whether Irish Setters are part of the ancestry of the Manchester Terrier.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Determine whether Irish Setters are part of the ancestry of the Scotch Collie.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "7",
+                        "instruction": "Analyze the results to see which dog breed, Manchester Terrier or Scotch Collie, has ancestors that include both the Gordon and Irish Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4",
+                            "5",
+                            "6"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "7"
+            },
+            "explanation": "To determine which dog's ancestors include Gordon and Irish Setters, we first retrieve and identify the lineage information for both the Manchester Terrier and the Scotch Collie. We then check separately if each breed's ancestry includes the Gordon Setter and the Irish Setter by analyzing the retrieved lineage information. Finally, we compare the results to determine which breed, if any, has both Gordon and Irish Setters in its ancestry."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "Toy Manchester Terrier\nThe Toy Manchester Terrier is a breed of dog, categorized as a terrier. The breed was bred down in size in North America from the Manchester Terrier, and is placed in the Toy Group by the American Kennel Club and the Canadian Kennel Club (the Manchester Terrier is placed in the Terrier Group.) Neither the F\u00e9d\u00e9ration Cynologique Internationale nor The Kennel Club recognize a Toy variety of the Manchester Terrier.",
+            "Manchester Terrier\nThe Manchester Terrier is a breed of dog of the smooth-haired terrier type.",
+            "Teddy Roosevelt Terrier\nThe Teddy Roosevelt Terrier is a small to medium-sized American hunting terrier. Lower-set with shorter legs, more muscular, and heavier bone density than its cousin the American Rat Terrier. There is much diversity in the history of the Teddy Roosevelt Terrier breed and it shares a common early history with the American Rat Terrier, Fox Paulistinha and Tenterfield Terrier. It is said the Rat Terrier background stems from the terriers or other dogs that were brought over by early English and other working class immigrants. Since the breed was a farm, hunting and utility dog there was little to no planned breeding other than breeding dogs with agreeable traits to each other in order to produce the desired work ethic in the dog. It is assumed that the Feist (dog), Bull Terrier, Smooth Fox Terrier, Manchester Terrier, Whippet, Italian Greyhound, the now extinct English White Terrier, Turnspit dog and or Wry Legged Terrier all share in the Teddy Roosevelt Terrier's ancestry. These early Ratting Terriers were then most likely bred to the Beagle or Beagle cross bred dogs (for increased scenting ability) and other dogs. Maximizing the influences from these various breeds provides the modern Teddy Roosevelt Terrier with a keen sense of awareness and prey drive, an acute sense of smell and a very high intellect. Although they tend to be aloof with strangers they are devoted companion dogs with a strong desire to please and be near their owners side at all times.",
+            "Russkiy Toy\nThe Russian Toy (also known as the Russian Toy Terrier, and in Russia as the Russkiy Toy, Toychik,Russian: \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0442\u043e\u0439, \u0422\u043e\u0439\u0447\u0438\u043a ) is a very small breed of dog originally bred in Russia from the English Toy Terrier which is known today as the Manchester Terrier. There are two types of coats in the breed: smooth coat and long coat. The smooth-coated variety was previously known as the Russian Toy Terrier and long-coated as the Moscow Long Haired Toy Terrier. Both were brought together under the same Russian Toy Terrier name in 1988 and the \"Terrier\" was dropped from the name when the breed was added in 2006 to the official list of breeds registered with the F\u00e9d\u00e9ration Cynologique Internationale and has been registered in the Foundation Stock Service of the American Kennel Club since 2008, allowed to compete in AKC companion events since 2010. The first official breed standard of the two varieties was written in 1966 in Russia.",
+            "Feist (dog)\nA Feist is a small hunting dog, descended from the terriers brought over to the United States by English miners and other working class immigrants. These terriers probably included crosses between the Smooth Fox Terrier, the Manchester Terrier and the now extinct English White Terrier. These dogs were used as ratters, and gambling on their prowess in killing rats was a favorite hobby of their owners. Some of these dogs have been crossed with Whippets or Italian Greyhounds (for speed) and Beagles (for hunting ability) - extending the family to include a larger variety of purpose than the original ratter, or Rat Terrier.",
+            "Pit bull\nPit bull is the common name for a type of dog. Formal breeds often considered in North America to be of the pit bull type include the American Pit Bull Terrier, American Staffordshire Terrier, American Bully, and Staffordshire Bull Terrier. The American Bulldog is also sometimes included. Many of these breeds were originally developed as fighting dogs from cross breeding bull-baiting dogs (used to hold the faces and heads of larger animals such as bulls) and terriers. After the use of dogs in blood sports was banned, such dogs were used as catch dogs in the United States for semi-wild cattle and hogs, to hunt and drive livestock, and as family companions. Despite dog fighting now being illegal in the United States, it still exists as an underground activity, and pit bulls are a common breed of choice.",
+            "American Dog Breeders Association\nThe American Dog Breeders Association(also known as ADBA) was started in September 1909 as a multiple breed association. The residing president, Guy McCord, was an avid fancier and breeder of the American Pit Bull Terrier and was a close friend of John P. Colby. Colby was the mainstay of the ADBA and therefore it was considered the \"home\" registration office for the Colby dogs. All members in good standing could register their dogs and litters for the yearly fee of $2.50. The exclusive member\u2019s idea gradually was replaced by a registry open to all owners and breeders of purebred dogs. Over time the association focused on the registration of the American Pit Bull Terrier.",
+            "Chamuco\nThe Chamuco (a Mexican word which means \"devil\") or Mexican Pitbull is a dog breed not recognized by any Canofile association. It originated in the center of Mexico, it was developed in this country in the 1970s, product of the accidental or intentional crosses of the American Pit Bull Terrier with the now extinct Mexican Bulldog, street dogs, American Bully, Pitbull Blue, Staffordshire bull terrier, American Staffordshire Terrier, and probably with the Boxer. Its name comes from the Mexican slang \"Chamuco\", which means devil because of its temperament and tenacity. Also it called Mexican pitbull or miniature pitbull, but actually is Dogo of Mexican origin.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Jai Ho! (You Are My Destiny)\n\"Jai Ho! (You Are My Destiny)\" is a song performed by American girl group The Pussycat Dolls for their second studio album \"Doll Domination\" (2008). It was released on February 23, 2009, by Interscope Records as the fourth single from the record. After watching \"Slumdog Millionaire\" record executives Jimmy Iovine and Ron Fair wanted to turn \"Jai Ho\" into a \"pop record without deviating from the original melody\" and asked Scherzinger to do her own interpretation of the song. The song was credited as \"\"A. R. Rahman and The Pussycat Dolls featuring Nicole Scherzinger\"\".",
+            "Northport Traction Company\nNorthport Traction Company was a trolley service in the Town of Huntington in New York. It ran from 1902 to 1924 and served East Northport and Northport, New York. The company only had one line throughout its history which ran from Northport (LIRR station) to Northport Harbor, at what is today Cow Harbor Park. Unlike Huntington Railroad to the west, Northport Traction Company never expanded beyond either Northport or East Northport, and no record exists of any proposal to do so."
+        ],
+        "thoughts": [
+            "The lineage and ancestors of the Manchester Terrier include the Feist (dog), Pit bull, American Dog Breeders Association, and the Chamuco. The Manchester Terrier itself is a breed of dog of the smooth-haired terrier type, and the Toy Manchester Terrier is a breed of dog bred down in size in North America from the Manchester Terrier. The Teddy Roosevelt Terrier, Russkiy Toy, and the American Rat Terrier also share a common early history with the Manchester Terrier. The Russian Toy Terrier was originally bred in Russia from the English Toy Terrier, which is known today as the Manchester Terrier. The Feist (dog) is a small hunting dog descended from the terriers brought over to the United States by English miners and other working class immigrants, and it includes crosses between the Smooth Fox Terrier, the Manchester Terrier, and the now extinct English White Terrier. The Pit bull is the common name for a type of dog, and formal breeds often considered in North America to be of the pit bull type include the American Pit Bull Terrier, American Staffordshire Terrier, American Bully, and Staffordshire Bull Terrier. The American Dog Breeders Association was started as a multiple breed association, and it focused on the registration of the American Pit Bull Terrier. The Chamuco, also known as the Mexican Pitbull, is a dog breed not recognized by any Canofile association, and it originated in the center of Mexico in the 1970s, with crosses including the American Pit Bull Terrier, the now extinct Mexican Bulldog, street dogs, American Bully, Pitbull Blue, Staffordshire bull terrier, American Staffordshire Terrier, and probably with the Boxer.",
+            "Based on the information provided, there is no direct mention of Gordon Setters being part of the ancestry of the Manchester Terrier. The lineage and ancestors of the Manchester Terrier include the Feist (dog), Pit bull, American Dog Breeders Association, and the Chamuco, but there is no mention of Gordon Setters. Therefore, it can be concluded that Gordon Setters are not part of the ancestry of the Manchester Terrier.",
+            "The Scotch Collie is a breed of dog that originated from Scotland. Its ancestors can be traced back to the herding dogs used by the ancient Celts. These dogs were then bred with local Scottish dogs to create the Scotch Collie breed. The breed was known for its intelligence, agility, and herding abilities, making it a valuable working dog in Scotland. Over time, the Scotch Collie was brought to other countries, including the United States, where it continued to be used as a herding and working dog. Today, the Scotch Collie is recognized for its loyalty, trainability, and gentle nature, making it a popular choice as a family pet.",
+            "Based on the information provided, there is no mention of Gordon Setters being part of the ancestry of the Scotch Collie. The Scotch Collie's ancestors can be traced back to herding dogs used by the ancient Celts and local Scottish dogs, but there is no indication that Gordon Setters were involved in the breed's development. Therefore, it is unlikely that Gordon Setters are part of the ancestry of the Scotch Collie.",
+            "Based on the information provided, there is no mention of Irish Setters being part of the ancestry of the Manchester Terrier. The lineage and ancestors of the Manchester Terrier include the Feist (dog), Pit bull, American Dog Breeders Association, and the Chamuco, but there is no mention of Irish Setters. Therefore, it can be concluded that Irish Setters are not part of the ancestry of the Manchester Terrier.",
+            "Based on the information provided, there is no mention of Irish Setters being part of the ancestry of the Scotch Collie. The Scotch Collie's ancestors can be traced back to the herding dogs used by the ancient Celts and were then bred with local Scottish dogs to create the breed. Therefore, it is unlikely that Irish Setters are part of the ancestry of the Scotch Collie.",
+            "Based on the analysis of the results, neither the Manchester Terrier nor the Scotch Collie have ancestors that include both the Gordon and Irish Setters. Therefore, it can be concluded that neither breed has a direct lineage that includes both of these setter breeds."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which dog's ancestors include Gordon and Irish Setters: the Manchester Terrier or the Scotch Collie?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the type of dog breeds mentioned in the query: Manchester Terrier and Scotch Collie.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the ancestry of the Manchester Terrier.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about the ancestry of the Scotch Collie.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the ancestry of the Manchester Terrier to check for Gordon and Irish Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Analyze the ancestry of the Scotch Collie to check for Gordon and Irish Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Compare the analysis results to determine which breed's ancestors include Gordon and Irish Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4",
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "The question involves two dog breeds: the Manchester Terrier and the Scotch Collie. The task is to establish which breed has ancestry including Gordon and Irish Setters. \n\nThe execution graph starts with retrieving general information regarding the types of dog breeds mentioned (Node 1). It then independently retrieves ancestry information for each of the two breeds (Nodes 2 and 3) in parallel. After gathering the ancestry data, separate reasoning steps (Nodes 4 and 5) analyze this data to identify any presence of Gordon and Irish Setters in the ancestry.\n\nFinally, a reasoning step (Node 6) compares the results from Nodes 4 and 5 to answer the original question, concluding which breed's ancestors include the specified setters."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Scotch Collie\nThe Scotch Collie is a landrace breed of dog which originated from the highland regions of Scotland. The breed consisted of both the long-haired (now known as Rough) Collie and the short-haired (now known as Smooth) Collie. It is generally believed to have descended from a variety of ancient herding dogs, some dating back to the Roman occupation, which may have included Roman Cattle Dogs, Native Celtic Dogs and Viking Herding Spitzes. Other ancestors include the Gordon and Irish Setters.",
+            "Toy Manchester Terrier\nThe Toy Manchester Terrier is a breed of dog, categorized as a terrier. The breed was bred down in size in North America from the Manchester Terrier, and is placed in the Toy Group by the American Kennel Club and the Canadian Kennel Club (the Manchester Terrier is placed in the Terrier Group.) Neither the F\u00e9d\u00e9ration Cynologique Internationale nor The Kennel Club recognize a Toy variety of the Manchester Terrier.",
+            "Manchester Terrier\nThe Manchester Terrier is a breed of dog of the smooth-haired terrier type.",
+            "Teddy Roosevelt Terrier\nThe Teddy Roosevelt Terrier is a small to medium-sized American hunting terrier. Lower-set with shorter legs, more muscular, and heavier bone density than its cousin the American Rat Terrier. There is much diversity in the history of the Teddy Roosevelt Terrier breed and it shares a common early history with the American Rat Terrier, Fox Paulistinha and Tenterfield Terrier. It is said the Rat Terrier background stems from the terriers or other dogs that were brought over by early English and other working class immigrants. Since the breed was a farm, hunting and utility dog there was little to no planned breeding other than breeding dogs with agreeable traits to each other in order to produce the desired work ethic in the dog. It is assumed that the Feist (dog), Bull Terrier, Smooth Fox Terrier, Manchester Terrier, Whippet, Italian Greyhound, the now extinct English White Terrier, Turnspit dog and or Wry Legged Terrier all share in the Teddy Roosevelt Terrier's ancestry. These early Ratting Terriers were then most likely bred to the Beagle or Beagle cross bred dogs (for increased scenting ability) and other dogs. Maximizing the influences from these various breeds provides the modern Teddy Roosevelt Terrier with a keen sense of awareness and prey drive, an acute sense of smell and a very high intellect. Although they tend to be aloof with strangers they are devoted companion dogs with a strong desire to please and be near their owners side at all times.",
+            "Feist (dog)\nA Feist is a small hunting dog, descended from the terriers brought over to the United States by English miners and other working class immigrants. These terriers probably included crosses between the Smooth Fox Terrier, the Manchester Terrier and the now extinct English White Terrier. These dogs were used as ratters, and gambling on their prowess in killing rats was a favorite hobby of their owners. Some of these dogs have been crossed with Whippets or Italian Greyhounds (for speed) and Beagles (for hunting ability) - extending the family to include a larger variety of purpose than the original ratter, or Rat Terrier.",
+            "Russkiy Toy\nThe Russian Toy (also known as the Russian Toy Terrier, and in Russia as the Russkiy Toy, Toychik,Russian: \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0442\u043e\u0439, \u0422\u043e\u0439\u0447\u0438\u043a ) is a very small breed of dog originally bred in Russia from the English Toy Terrier which is known today as the Manchester Terrier. There are two types of coats in the breed: smooth coat and long coat. The smooth-coated variety was previously known as the Russian Toy Terrier and long-coated as the Moscow Long Haired Toy Terrier. Both were brought together under the same Russian Toy Terrier name in 1988 and the \"Terrier\" was dropped from the name when the breed was added in 2006 to the official list of breeds registered with the F\u00e9d\u00e9ration Cynologique Internationale and has been registered in the Foundation Stock Service of the American Kennel Club since 2008, allowed to compete in AKC companion events since 2010. The first official breed standard of the two varieties was written in 1966 in Russia.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bull and Terrier\nThe Bull and Terrier is a breed of dog that was the progenitor of the American Pit Bull Terrier, American Staffordshire Terrier, English Bull Terrier and the Staffordshire Bull Terrier.",
+            "Collie\nThe collie is a distinctive type of herding dog, including many related landraces and standardised breeds. The type originated in Scotland and Northern England. The collie is a medium-sized, fairly lightly built dog, with a pointed snout. Many types have a distinctive white pattern over the shoulders. Collies are very active and agile, and most types of collies have a very strong herding instinct. Collie breeds have spread through many parts of the world (especially Australia and North America) and have diversified into many varieties, sometimes with mixture from other dog types. Some collie breeds have remained as working dogs, used for herding cattle, sheep and other livestock, while others are kept as pets, show dogs or for dog sports, in which they display great agility, stamina and trainability. While the AKC has a breed they call \"Collie\", in fact collie dogs are a distinctive type of herding dog including many related landraces and formal breeds. There are usually major distinctions between show dogs and those bred for herding trials or dog sports. They typically display great agility, stamina and trainability and more importantly sagacity.",
+            "American Pit Bull Terrier\nThe American Pit Bull Terrier (APBT) is a dog breed. It is a medium-sized, solidly-built, intelligent, short-haired dog whose early ancestors came from the British Isles. When compared with the English Staffordshire Bull Terrier (another breed within the type commonly called pit bulls), the American Pit Bull Terrier is larger by margins of 6 - in height and 25 - in weight. The American Pit Bull Terrier varies in size. Males normally are about 18-21 inches (45\u201353\u00a0cm) in height and around 35-60 pounds (15\u201327\u00a0kg) in weight. Females are normally around 17-20 inches (43\u201350\u00a0cm) in height and 30-50 pounds (13\u201322\u00a0kg) in weight.",
+            "Muzzle (song)\n\"Muzzle\" is a song by American alternative rock band The Smashing Pumpkins from their third album, \"Mellon Collie and the Infinite Sadness\". It was one of the last songs written by Billy Corgan for \"Mellon Collie\", with the song's lyrics referring to what Corgan thought the public's perception was of him at the time. It was rumored to be the Smashing Pumpkins fifth and final single from this album, as is evidenced by the fact that a promotional single for the song was issued to radio stations worldwide. However, the song \"Thirty-Three\" was released as the fifth and final single instead.",
+            "Dickran Tevrizian\nDickran M. Tevrizian Jr. (born 1940) was a United States federal judge for the Central District of California. Confirmed in 1985, he is the first United States federal judge of Armenian ancestry.",
+            "Masatoshi G\u00fcnd\u00fcz Ikeda\nMasato\u015fi G\u00fcnd\u00fcz \u0130keda (Japanese: \u6c60\u7530 \u6b63\u654f \u30ae\u30e5\u30f3\u30c9\u30a5\u30ba Ikeda Masatoshi Gyunduzu ) (25 February 1926 \u2013 9 February 2003), was a Turkish mathematician of Japanese ancestry, known for his contributions to the field of algebraic number theory.",
+            "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+            "Ellison Onizuka\nEllison Shoji Onizuka (June 24, 1946 \u2013 January 28, 1986 ) was an American astronaut from Kealakekua, Hawaii, who successfully flew into space with the Space Shuttle \"Discovery\" on STS-51-C. He died in the destruction of the Space Shuttle \"Challenger\", on which he was serving as Mission Specialist for mission STS-51-L. He was the first Asian American and the first person of Japanese ancestry to reach space."
+        ],
+        "thoughts": [
+            "The Manchester Terrier is a breed of dog that has been bred down in size to create the Toy Manchester Terrier, which is placed in the Toy Group by the American Kennel Club and the Canadian Kennel Club. The Manchester Terrier itself is categorized as a terrier and is placed in the Terrier Group by these organizations. The Russian Toy Terrier, also known as the Russkiy Toy, is a very small breed of dog originally bred in Russia from the English Toy Terrier, which is known today as the Manchester Terrier. Additionally, the Feist (dog) is a small hunting dog descended from terriers brought over to the United States by English miners and other working class immigrants, and it is believed to have crosses with the Smooth Fox Terrier and the Manchester Terrier. These dogs were used as ratters, and some have been crossed with Whippets, Italian Greyhounds, and Beagles, extending the family to include a larger variety of purpose than the original ratter. The Manchester Terrier also shares ancestry with the Teddy Roosevelt Terrier, which has a diverse history and is said to have influences from various breeds including the Feist, Bull Terrier, Smooth Fox Terrier, Whippet, Italian Greyhound, and the now extinct English White Terrier.",
+            "Based on the analysis of the ancestry of the Manchester Terrier, there is no direct mention of Gordon or Irish Setters in its lineage. The breed is primarily descended from the English Toy Terrier and has been crossed with other breeds such as the Smooth Fox Terrier, Whippet, Italian Greyhound, and Feist. Therefore, there is no evidence to suggest that the Manchester Terrier has ancestry from Gordon or Irish Setters.",
+            "The Scotch Collie is a landrace breed of dog that originated from the highland regions of Scotland. It is believed to have descended from a variety of ancient herding dogs, including Roman Cattle Dogs, Native Celtic Dogs, Viking Herding Spitzes, Gordon and Irish Setters. The breed consisted of both the long-haired (Rough) Collie and the short-haired (Smooth) Collie. The collie is a distinctive type of herding dog that originated in Scotland and Northern England, with many related landraces and standardised breeds. The breed has spread through many parts of the world and has diversified into many varieties, with some used for herding livestock and others kept as pets or for dog sports. The Scotch Collie is known for its agility, stamina, and trainability, and it has a strong herding instinct.",
+            "The ancestry of the Scotch Collie includes the Gordon and Irish Setters, among other ancient herding dogs such as Roman Cattle Dogs, Native Celtic Dogs, and Viking Herding Spitzes. This suggests that the Scotch Collie has a diverse and varied ancestry, with influences from different breeds and landraces. The inclusion of Gordon and Irish Setters in its ancestry indicates that the Scotch Collie may have inherited certain traits and characteristics from these breeds, such as agility, stamina, and trainability. Overall, the ancestry of the Scotch Collie reflects its origins as a herding dog with a strong herding instinct.",
+            "Based on the analysis results, it can be determined that the Scotch Collie's ancestors include Gordon and Irish Setters, while the Manchester Terrier's ancestors do not. The Scotch Collie has a diverse ancestry that includes influences from different breeds, including the Gordon and Irish Setters, reflecting its origins as a herding dog with specific traits and characteristics inherited from these breeds. On the other hand, the Manchester Terrier's lineage primarily consists of the English Toy Terrier and other breeds, with no direct mention of Gordon or Irish Setters in its ancestry."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which dog's ancestors include Gordon and Irish Setters: the Manchester Terrier or the Scotch Collie?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the ancestors of the Manchester Terrier.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the ancestors of the Scotch Collie.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if the ancestors of the Manchester Terrier include Gordon and Irish Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if the ancestors of the Scotch Collie include Gordon and Irish Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the results to determine which dog (Manchester Terrier or Scotch Collie) has the ancestors including Gordon and Irish Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph first requires retrieving information about the ancestors for both the Manchester Terrier and the Scotch Collie (nodes 1 and 2). Each retrieval node involves researching the breeding history and identifying breeds involved in their lineage. Nodes 3 and 4 reason about whether the retrieved ancestors include Gordon and Irish Setters for each respective dog breed. Finally, node 5 compares the results to determine which dog breed's ancestors include the specified Setters."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Scotch Collie\nThe Scotch Collie is a landrace breed of dog which originated from the highland regions of Scotland. The breed consisted of both the long-haired (now known as Rough) Collie and the short-haired (now known as Smooth) Collie. It is generally believed to have descended from a variety of ancient herding dogs, some dating back to the Roman occupation, which may have included Roman Cattle Dogs, Native Celtic Dogs and Viking Herding Spitzes. Other ancestors include the Gordon and Irish Setters.",
+            "Toy Manchester Terrier\nThe Toy Manchester Terrier is a breed of dog, categorized as a terrier. The breed was bred down in size in North America from the Manchester Terrier, and is placed in the Toy Group by the American Kennel Club and the Canadian Kennel Club (the Manchester Terrier is placed in the Terrier Group.) Neither the F\u00e9d\u00e9ration Cynologique Internationale nor The Kennel Club recognize a Toy variety of the Manchester Terrier.",
+            "Manchester Terrier\nThe Manchester Terrier is a breed of dog of the smooth-haired terrier type.",
+            "American Pit Bull Terrier\nThe American Pit Bull Terrier (APBT) is a dog breed. It is a medium-sized, solidly-built, intelligent, short-haired dog whose early ancestors came from the British Isles. When compared with the English Staffordshire Bull Terrier (another breed within the type commonly called pit bulls), the American Pit Bull Terrier is larger by margins of 6 - in height and 25 - in weight. The American Pit Bull Terrier varies in size. Males normally are about 18-21 inches (45\u201353\u00a0cm) in height and around 35-60 pounds (15\u201327\u00a0kg) in weight. Females are normally around 17-20 inches (43\u201350\u00a0cm) in height and 30-50 pounds (13\u201322\u00a0kg) in weight.",
+            "Feist (dog)\nA Feist is a small hunting dog, descended from the terriers brought over to the United States by English miners and other working class immigrants. These terriers probably included crosses between the Smooth Fox Terrier, the Manchester Terrier and the now extinct English White Terrier. These dogs were used as ratters, and gambling on their prowess in killing rats was a favorite hobby of their owners. Some of these dogs have been crossed with Whippets or Italian Greyhounds (for speed) and Beagles (for hunting ability) - extending the family to include a larger variety of purpose than the original ratter, or Rat Terrier.",
+            "Russkiy Toy\nThe Russian Toy (also known as the Russian Toy Terrier, and in Russia as the Russkiy Toy, Toychik,Russian: \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0442\u043e\u0439, \u0422\u043e\u0439\u0447\u0438\u043a ) is a very small breed of dog originally bred in Russia from the English Toy Terrier which is known today as the Manchester Terrier. There are two types of coats in the breed: smooth coat and long coat. The smooth-coated variety was previously known as the Russian Toy Terrier and long-coated as the Moscow Long Haired Toy Terrier. Both were brought together under the same Russian Toy Terrier name in 1988 and the \"Terrier\" was dropped from the name when the breed was added in 2006 to the official list of breeds registered with the F\u00e9d\u00e9ration Cynologique Internationale and has been registered in the Foundation Stock Service of the American Kennel Club since 2008, allowed to compete in AKC companion events since 2010. The first official breed standard of the two varieties was written in 1966 in Russia.",
+            "Teddy Roosevelt Terrier\nThe Teddy Roosevelt Terrier is a small to medium-sized American hunting terrier. Lower-set with shorter legs, more muscular, and heavier bone density than its cousin the American Rat Terrier. There is much diversity in the history of the Teddy Roosevelt Terrier breed and it shares a common early history with the American Rat Terrier, Fox Paulistinha and Tenterfield Terrier. It is said the Rat Terrier background stems from the terriers or other dogs that were brought over by early English and other working class immigrants. Since the breed was a farm, hunting and utility dog there was little to no planned breeding other than breeding dogs with agreeable traits to each other in order to produce the desired work ethic in the dog. It is assumed that the Feist (dog), Bull Terrier, Smooth Fox Terrier, Manchester Terrier, Whippet, Italian Greyhound, the now extinct English White Terrier, Turnspit dog and or Wry Legged Terrier all share in the Teddy Roosevelt Terrier's ancestry. These early Ratting Terriers were then most likely bred to the Beagle or Beagle cross bred dogs (for increased scenting ability) and other dogs. Maximizing the influences from these various breeds provides the modern Teddy Roosevelt Terrier with a keen sense of awareness and prey drive, an acute sense of smell and a very high intellect. Although they tend to be aloof with strangers they are devoted companion dogs with a strong desire to please and be near their owners side at all times.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bull and Terrier\nThe Bull and Terrier is a breed of dog that was the progenitor of the American Pit Bull Terrier, American Staffordshire Terrier, English Bull Terrier and the Staffordshire Bull Terrier.",
+            "Collie\nThe collie is a distinctive type of herding dog, including many related landraces and standardised breeds. The type originated in Scotland and Northern England. The collie is a medium-sized, fairly lightly built dog, with a pointed snout. Many types have a distinctive white pattern over the shoulders. Collies are very active and agile, and most types of collies have a very strong herding instinct. Collie breeds have spread through many parts of the world (especially Australia and North America) and have diversified into many varieties, sometimes with mixture from other dog types. Some collie breeds have remained as working dogs, used for herding cattle, sheep and other livestock, while others are kept as pets, show dogs or for dog sports, in which they display great agility, stamina and trainability. While the AKC has a breed they call \"Collie\", in fact collie dogs are a distinctive type of herding dog including many related landraces and formal breeds. There are usually major distinctions between show dogs and those bred for herding trials or dog sports. They typically display great agility, stamina and trainability and more importantly sagacity.",
+            "Muzzle (song)\n\"Muzzle\" is a song by American alternative rock band The Smashing Pumpkins from their third album, \"Mellon Collie and the Infinite Sadness\". It was one of the last songs written by Billy Corgan for \"Mellon Collie\", with the song's lyrics referring to what Corgan thought the public's perception was of him at the time. It was rumored to be the Smashing Pumpkins fifth and final single from this album, as is evidenced by the fact that a promotional single for the song was issued to radio stations worldwide. However, the song \"Thirty-Three\" was released as the fifth and final single instead.",
+            "Viol\nThe viol , viola da gamba ] , or (informally) gamba, is any one of a family of bowed, fretted and stringed instruments with hollow wooden bodies and pegboxes where the tension on the strings can be increased or decreased to adjust the pitch of each of the strings. Frets on the viol are usually made of gut, tied on the fingerboard around the instrument's neck, to enable the performer to stop the strings more cleanly. Frets improve consistency of intonation and lend the stopped notes a tone which better matches the open strings. Viols first appeared in Spain in the mid to late 15th century and were most popular in the Renaissance and Baroque (1600-1750) periods. Early ancestors include the Arabic \"rebab\" and the medieval European vielle, but later, more direct possible ancestors include the Venetian \"viole\" and the 15th- and 16th-century Spanish \"vihuela\", a 6-course plucked instrument tuned like a lute (and also like a present-day viol) that looked like but was quite distinct from (at that time) the 4-course guitar (an earlier chordophone).",
+            "Molossus of Epirus\nThe Molossus of Epirus (Greek: \u039c\u03bf\u03bb\u03bf\u03c3\u03c3\u03cc\u03c2 \u03c4\u03b7\u03c2 \u0397\u03c0\u03b5\u03af\u03c1\u03bf\u03c5) is a large dog breed originating from Greece. It is a livestock guardian that has been bred since the age of Alexander the Great for protecting livestock from carnivorous mammals including the wolf, European jackal and the brown bear in the mountainous regions of Greece, especially Epirus. The Molossus is a pure Greek breed and is believed to be one of the main ancestors of today's Molosser breeds, such as the English Mastiff and the Neapolitan Mastiff,",
+            "The Shaggy Dog (2006 film)\nThe Shaggy Dog is a 2006 American family comedy film directed by Brian Robbins and written by Geoff Rodkey, Jack Amiel, Michael Begler, Cormac Wibberley and Marianne Wibberley. It is the second remake of the 1959 film of the same name, which was first remade as a television film in 1994. Both the 1959 and 1994 features, as well as the 1976 theatrical sequel and the 1987 television sequel, had a character named Wilby Daniels transforming into an Old English Sheepdog, whereas this remake presents a character named Dave Douglas transforming into a Bearded Collie. It stars Tim Allen, Robert Downey, Jr., Kristin Davis, Danny Glover, Spencer Breslin, Jane Curtin, Zena Grey and Philip Baker Hall.",
+            "Batman (score)\nBatman: Original Motion Picture Score is the score album for the 1989 film \"Batman\" by Danny Elfman. According to the \"Batman\" DVD Special Edition, Elfman said that producer Jon Peters was not sure about him as a composer until Tim Burton made him play the main titles. Elfman admitted he was stunned when Peters announced that the score would be released on its own album, as releasing a separate score album for a film was something that was rarely done in the 1980s. Elfman's \"The Batman Theme\" went on to become an iconic piece. It served as the basis for the theme music of \"\", which premiered in 1992, although this was later changed. Some parts of the Elfman score are also heard in \"\", \"\" and \"\". Parts are also played in the queue, and on the station platform of Batman the Ride at various Six Flags theme parks."
+        ],
+        "thoughts": [
+            "The ancestors of the Manchester Terrier include the English Toy Terrier, the Smooth Fox Terrier, the English White Terrier, the Turnspit dog, the Wry Legged Terrier, the Bull Terrier, and the Feist. These breeds were brought over to the United States by English miners and other working class immigrants and were used for hunting and ratting purposes. The Manchester Terrier also shares ancestry with the Russian Toy Terrier, the Teddy Roosevelt Terrier, and the Bull and Terrier. These breeds have contributed to the Manchester Terrier's traits such as keen awareness, prey drive, acute sense of smell, and high intellect.",
+            "Based on the information provided, the ancestors of the Manchester Terrier do not include Gordon and Irish Setters. The breeds mentioned as ancestors are the English Toy Terrier, the Smooth Fox Terrier, the English White Terrier, the Turnspit dog, the Wry Legged Terrier, the Bull Terrier, the Feist, the Russian Toy Terrier, the Teddy Roosevelt Terrier, and the Bull and Terrier.",
+            "The ancestors of the Scotch Collie include ancient herding dogs dating back to the Roman occupation, such as Roman Cattle Dogs, Native Celtic Dogs, and Viking Herding Spitzes. Other ancestors of the Scotch Collie are the Gordon and Irish Setters. These breeds and landraces contributed to the development of the Scotch Collie, which originated from the highland regions of Scotland.",
+            "Yes, the ancestors of the Scotch Collie include Gordon and Irish Setters.",
+            "Based on the results, it can be determined that the Scotch Collie has ancestors including Gordon and Irish Setters, while the Manchester Terrier does not have ancestors including these breeds."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which dog's ancestors include Gordon and Irish Setters: the Manchester Terrier or the Scotch Collie?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the ancestor breeds of the Manchester Terrier.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the ancestor breeds of the Scotch Collie.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if the ancestors of the Manchester Terrier include Gordon Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if the ancestors of the Manchester Terrier include Irish Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Determine if the ancestors of the Scotch Collie include Gordon Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Determine if the ancestors of the Scotch Collie include Irish Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "7",
+                        "instruction": "Combine findings to conclude which dog breed's ancestors include both Gordon and Irish Setters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4",
+                            "5",
+                            "6"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "7"
+            },
+            "explanation": "The graph starts by retrieving the ancestral information of each dog breed separately. Nodes 1 and 2 gather information about the ancestors of the Manchester Terrier and the Scotch Collie. Nodes 3 and 4 check if Gordon and Irish Setters are among the ancestors of the Manchester Terrier, while nodes 5 and 6 do the same for the Scotch Collie. Finally, node 7 aggregates the results to answer the original question by determining which breed's ancestors include both Setter breeds."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Scotch Collie\nThe Scotch Collie is a landrace breed of dog which originated from the highland regions of Scotland. The breed consisted of both the long-haired (now known as Rough) Collie and the short-haired (now known as Smooth) Collie. It is generally believed to have descended from a variety of ancient herding dogs, some dating back to the Roman occupation, which may have included Roman Cattle Dogs, Native Celtic Dogs and Viking Herding Spitzes. Other ancestors include the Gordon and Irish Setters.",
+            "Collie\nThe collie is a distinctive type of herding dog, including many related landraces and standardised breeds. The type originated in Scotland and Northern England. The collie is a medium-sized, fairly lightly built dog, with a pointed snout. Many types have a distinctive white pattern over the shoulders. Collies are very active and agile, and most types of collies have a very strong herding instinct. Collie breeds have spread through many parts of the world (especially Australia and North America) and have diversified into many varieties, sometimes with mixture from other dog types. Some collie breeds have remained as working dogs, used for herding cattle, sheep and other livestock, while others are kept as pets, show dogs or for dog sports, in which they display great agility, stamina and trainability. While the AKC has a breed they call \"Collie\", in fact collie dogs are a distinctive type of herding dog including many related landraces and formal breeds. There are usually major distinctions between show dogs and those bred for herding trials or dog sports. They typically display great agility, stamina and trainability and more importantly sagacity.",
+            "Griffon Bruxellois\nThe Griffon Bruxellois or Brussels Griffon is a breed of toy dog, named for their city of origin: Brussels, Belgium. The Griffon Bruxellois may refer to three different breeds, the Griffon Bruxellois, the Griffon Belge and the Petit Braban\u00e7on. Identical in standard except for coat and colour differences, in some standards they are considered varieties of the same breed, much like Belgian Shepherd Dogs.",
+            "Muzzle (song)\n\"Muzzle\" is a song by American alternative rock band The Smashing Pumpkins from their third album, \"Mellon Collie and the Infinite Sadness\". It was one of the last songs written by Billy Corgan for \"Mellon Collie\", with the song's lyrics referring to what Corgan thought the public's perception was of him at the time. It was rumored to be the Smashing Pumpkins fifth and final single from this album, as is evidenced by the fact that a promotional single for the song was issued to radio stations worldwide. However, the song \"Thirty-Three\" was released as the fifth and final single instead.",
+            "Chamuco\nThe Chamuco (a Mexican word which means \"devil\") or Mexican Pitbull is a dog breed not recognized by any Canofile association. It originated in the center of Mexico, it was developed in this country in the 1970s, product of the accidental or intentional crosses of the American Pit Bull Terrier with the now extinct Mexican Bulldog, street dogs, American Bully, Pitbull Blue, Staffordshire bull terrier, American Staffordshire Terrier, and probably with the Boxer. Its name comes from the Mexican slang \"Chamuco\", which means devil because of its temperament and tenacity. Also it called Mexican pitbull or miniature pitbull, but actually is Dogo of Mexican origin.",
+            "Lantern Waste\nLantern Waste is a fictional place in \"The Chronicles of Narnia\" series by C. S. Lewis. It is a wood and is notable as the place where Lucy Pevensie and Mr. Tumnus meet, which is the first scene of Narnia described in the books. The lamppost in the wood is an iconic image of Narnia, and the question of its origin is what convinced Lewis to write more than one book on Narnia. One of King Edmund's titles is \"Duke of Lantern Waste\".",
+            "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+            "Blue Origin\nBlue Origin is an American privately funded aerospace manufacturer and spaceflight services company set up by Amazon.com founder Jeff Bezos with its headquarters in Kent, Washington. The company is developing technologies to enable private human access to space with the goal to dramatically lower costs and increase reliability. Blue Origin is employing an incremental approach from suborbital to orbital flight, with each developmental step building on its prior work. The company motto is \"\"Gradatim Ferociter\"\", Latin for \"Step by Step, Ferociously\". Blue Origin is developing a variety of technologies, with a focus on rocket-powered Vertical Takeoff and Vertical Landing (VTVL) vehicles for access to suborbital and orbital space. The company's name refers to the blue planet, Earth, as the point of origin.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "The ancestor breeds of the Manchester Terrier are the Whippet and the Black and Tan Terrier.",
+            "Based on the information provided, the ancestors of the Manchester Terrier do not include Gordon Setters. The ancestor breeds are the Whippet and the Black and Tan Terrier.",
+            "Based on the information provided, the ancestors of the Manchester Terrier do not include Irish Setters. The identified ancestor breeds are the Whippet and the Black and Tan Terrier. Therefore, it can be concluded that Irish Setters are not part of the Manchester Terrier's ancestry.",
+            "The ancestor breeds of the Scotch Collie include the Roman Cattle Dogs, Native Celtic Dogs, Viking Herding Spitzes, Gordon Setters, Irish Setters, and possibly other ancient herding dogs from the highland regions of Scotland.",
+            "Yes, the ancestors of the Scotch Collie include Gordon Setters.",
+            "Yes, the ancestors of the Scotch Collie include Irish Setters.",
+            "Based on the findings, it can be concluded that the ancestors of the Scotch Collie include both Gordon and Irish Setters. Therefore, the dog breed with ancestors including both Gordon and Irish Setters is the Scotch Collie."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which dog's ancestors include Gordon and Irish Setters: the Manchester Terrier or the Scotch Collie?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the ancestors of the Manchester Terrier.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the ancestors of the Scotch Collie.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the retrieved information to determine if Gordon or Irish Setters are ancestors of the Manchester Terrier.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the retrieved information to determine if Gordon or Irish Setters are ancestors of the Scotch Collie.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the analysis results to decide which dog, Manchester Terrier or Scotch Collie, has either Gordon or Irish Setters as ancestors.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The question asks us to determine the lineage involving Gordon and Irish Setters for two dog breeds. The execution graph begins with separate nodes for retrieving the ancestral information for both the Manchester Terrier and Scotch Collie. Each dog's ancestors are then analyzed to check for the presence of Gordon or Irish Setters. Finally, the information is synthesized to determine which breed's lineage includes these setters."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Scotch Collie\nThe Scotch Collie is a landrace breed of dog which originated from the highland regions of Scotland. The breed consisted of both the long-haired (now known as Rough) Collie and the short-haired (now known as Smooth) Collie. It is generally believed to have descended from a variety of ancient herding dogs, some dating back to the Roman occupation, which may have included Roman Cattle Dogs, Native Celtic Dogs and Viking Herding Spitzes. Other ancestors include the Gordon and Irish Setters.",
+            "Toy Manchester Terrier\nThe Toy Manchester Terrier is a breed of dog, categorized as a terrier. The breed was bred down in size in North America from the Manchester Terrier, and is placed in the Toy Group by the American Kennel Club and the Canadian Kennel Club (the Manchester Terrier is placed in the Terrier Group.) Neither the F\u00e9d\u00e9ration Cynologique Internationale nor The Kennel Club recognize a Toy variety of the Manchester Terrier.",
+            "Manchester Terrier\nThe Manchester Terrier is a breed of dog of the smooth-haired terrier type.",
+            "American Pit Bull Terrier\nThe American Pit Bull Terrier (APBT) is a dog breed. It is a medium-sized, solidly-built, intelligent, short-haired dog whose early ancestors came from the British Isles. When compared with the English Staffordshire Bull Terrier (another breed within the type commonly called pit bulls), the American Pit Bull Terrier is larger by margins of 6 - in height and 25 - in weight. The American Pit Bull Terrier varies in size. Males normally are about 18-21 inches (45\u201353\u00a0cm) in height and around 35-60 pounds (15\u201327\u00a0kg) in weight. Females are normally around 17-20 inches (43\u201350\u00a0cm) in height and 30-50 pounds (13\u201322\u00a0kg) in weight.",
+            "Feist (dog)\nA Feist is a small hunting dog, descended from the terriers brought over to the United States by English miners and other working class immigrants. These terriers probably included crosses between the Smooth Fox Terrier, the Manchester Terrier and the now extinct English White Terrier. These dogs were used as ratters, and gambling on their prowess in killing rats was a favorite hobby of their owners. Some of these dogs have been crossed with Whippets or Italian Greyhounds (for speed) and Beagles (for hunting ability) - extending the family to include a larger variety of purpose than the original ratter, or Rat Terrier.",
+            "Russkiy Toy\nThe Russian Toy (also known as the Russian Toy Terrier, and in Russia as the Russkiy Toy, Toychik,Russian: \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0442\u043e\u0439, \u0422\u043e\u0439\u0447\u0438\u043a ) is a very small breed of dog originally bred in Russia from the English Toy Terrier which is known today as the Manchester Terrier. There are two types of coats in the breed: smooth coat and long coat. The smooth-coated variety was previously known as the Russian Toy Terrier and long-coated as the Moscow Long Haired Toy Terrier. Both were brought together under the same Russian Toy Terrier name in 1988 and the \"Terrier\" was dropped from the name when the breed was added in 2006 to the official list of breeds registered with the F\u00e9d\u00e9ration Cynologique Internationale and has been registered in the Foundation Stock Service of the American Kennel Club since 2008, allowed to compete in AKC companion events since 2010. The first official breed standard of the two varieties was written in 1966 in Russia.",
+            "Teddy Roosevelt Terrier\nThe Teddy Roosevelt Terrier is a small to medium-sized American hunting terrier. Lower-set with shorter legs, more muscular, and heavier bone density than its cousin the American Rat Terrier. There is much diversity in the history of the Teddy Roosevelt Terrier breed and it shares a common early history with the American Rat Terrier, Fox Paulistinha and Tenterfield Terrier. It is said the Rat Terrier background stems from the terriers or other dogs that were brought over by early English and other working class immigrants. Since the breed was a farm, hunting and utility dog there was little to no planned breeding other than breeding dogs with agreeable traits to each other in order to produce the desired work ethic in the dog. It is assumed that the Feist (dog), Bull Terrier, Smooth Fox Terrier, Manchester Terrier, Whippet, Italian Greyhound, the now extinct English White Terrier, Turnspit dog and or Wry Legged Terrier all share in the Teddy Roosevelt Terrier's ancestry. These early Ratting Terriers were then most likely bred to the Beagle or Beagle cross bred dogs (for increased scenting ability) and other dogs. Maximizing the influences from these various breeds provides the modern Teddy Roosevelt Terrier with a keen sense of awareness and prey drive, an acute sense of smell and a very high intellect. Although they tend to be aloof with strangers they are devoted companion dogs with a strong desire to please and be near their owners side at all times.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bull and Terrier\nThe Bull and Terrier is a breed of dog that was the progenitor of the American Pit Bull Terrier, American Staffordshire Terrier, English Bull Terrier and the Staffordshire Bull Terrier.",
+            "Collie\nThe collie is a distinctive type of herding dog, including many related landraces and standardised breeds. The type originated in Scotland and Northern England. The collie is a medium-sized, fairly lightly built dog, with a pointed snout. Many types have a distinctive white pattern over the shoulders. Collies are very active and agile, and most types of collies have a very strong herding instinct. Collie breeds have spread through many parts of the world (especially Australia and North America) and have diversified into many varieties, sometimes with mixture from other dog types. Some collie breeds have remained as working dogs, used for herding cattle, sheep and other livestock, while others are kept as pets, show dogs or for dog sports, in which they display great agility, stamina and trainability. While the AKC has a breed they call \"Collie\", in fact collie dogs are a distinctive type of herding dog including many related landraces and formal breeds. There are usually major distinctions between show dogs and those bred for herding trials or dog sports. They typically display great agility, stamina and trainability and more importantly sagacity.",
+            "Muzzle (song)\n\"Muzzle\" is a song by American alternative rock band The Smashing Pumpkins from their third album, \"Mellon Collie and the Infinite Sadness\". It was one of the last songs written by Billy Corgan for \"Mellon Collie\", with the song's lyrics referring to what Corgan thought the public's perception was of him at the time. It was rumored to be the Smashing Pumpkins fifth and final single from this album, as is evidenced by the fact that a promotional single for the song was issued to radio stations worldwide. However, the song \"Thirty-Three\" was released as the fifth and final single instead.",
+            "Viol\nThe viol , viola da gamba ] , or (informally) gamba, is any one of a family of bowed, fretted and stringed instruments with hollow wooden bodies and pegboxes where the tension on the strings can be increased or decreased to adjust the pitch of each of the strings. Frets on the viol are usually made of gut, tied on the fingerboard around the instrument's neck, to enable the performer to stop the strings more cleanly. Frets improve consistency of intonation and lend the stopped notes a tone which better matches the open strings. Viols first appeared in Spain in the mid to late 15th century and were most popular in the Renaissance and Baroque (1600-1750) periods. Early ancestors include the Arabic \"rebab\" and the medieval European vielle, but later, more direct possible ancestors include the Venetian \"viole\" and the 15th- and 16th-century Spanish \"vihuela\", a 6-course plucked instrument tuned like a lute (and also like a present-day viol) that looked like but was quite distinct from (at that time) the 4-course guitar (an earlier chordophone).",
+            "Molossus of Epirus\nThe Molossus of Epirus (Greek: \u039c\u03bf\u03bb\u03bf\u03c3\u03c3\u03cc\u03c2 \u03c4\u03b7\u03c2 \u0397\u03c0\u03b5\u03af\u03c1\u03bf\u03c5) is a large dog breed originating from Greece. It is a livestock guardian that has been bred since the age of Alexander the Great for protecting livestock from carnivorous mammals including the wolf, European jackal and the brown bear in the mountainous regions of Greece, especially Epirus. The Molossus is a pure Greek breed and is believed to be one of the main ancestors of today's Molosser breeds, such as the English Mastiff and the Neapolitan Mastiff,",
+            "The Shaggy Dog (2006 film)\nThe Shaggy Dog is a 2006 American family comedy film directed by Brian Robbins and written by Geoff Rodkey, Jack Amiel, Michael Begler, Cormac Wibberley and Marianne Wibberley. It is the second remake of the 1959 film of the same name, which was first remade as a television film in 1994. Both the 1959 and 1994 features, as well as the 1976 theatrical sequel and the 1987 television sequel, had a character named Wilby Daniels transforming into an Old English Sheepdog, whereas this remake presents a character named Dave Douglas transforming into a Bearded Collie. It stars Tim Allen, Robert Downey, Jr., Kristin Davis, Danny Glover, Spencer Breslin, Jane Curtin, Zena Grey and Philip Baker Hall.",
+            "Batman (score)\nBatman: Original Motion Picture Score is the score album for the 1989 film \"Batman\" by Danny Elfman. According to the \"Batman\" DVD Special Edition, Elfman said that producer Jon Peters was not sure about him as a composer until Tim Burton made him play the main titles. Elfman admitted he was stunned when Peters announced that the score would be released on its own album, as releasing a separate score album for a film was something that was rarely done in the 1980s. Elfman's \"The Batman Theme\" went on to become an iconic piece. It served as the basis for the theme music of \"\", which premiered in 1992, although this was later changed. Some parts of the Elfman score are also heard in \"\", \"\" and \"\". Parts are also played in the queue, and on the station platform of Batman the Ride at various Six Flags theme parks."
+        ],
+        "thoughts": [
+            "The ancestors of the Manchester Terrier include the English Toy Terrier, the Smooth Fox Terrier, the English White Terrier, the Turnspit dog, the Wry Legged Terrier, the Bull Terrier, and the Feist. These breeds were brought over to the United States by English miners and other working class immigrants and were used for hunting and ratting purposes. The Manchester Terrier also shares ancestry with the American Pit Bull Terrier, the Teddy Roosevelt Terrier, and the Russian Toy Terrier. The Bull and Terrier breed is the progenitor of the American Pit Bull Terrier, American Staffordshire Terrier, English Bull Terrier, and the Staffordshire Bull Terrier, which are all related to the Manchester Terrier.",
+            "Based on the retrieved information, it does not appear that Gordon or Irish Setters are ancestors of the Manchester Terrier. The ancestors of the Manchester Terrier include breeds such as the English Toy Terrier, Smooth Fox Terrier, English White Terrier, Turnspit dog, Wry Legged Terrier, Bull Terrier, Feist, American Pit Bull Terrier, Teddy Roosevelt Terrier, and Russian Toy Terrier. There is no mention of Gordon or Irish Setters in the ancestry of the Manchester Terrier.",
+            "The ancestors of the Scotch Collie include ancient herding dogs dating back to the Roman occupation, such as Roman Cattle Dogs, Native Celtic Dogs, and Viking Herding Spitzes. Other ancestors of the Scotch Collie include the Gordon and Irish Setters. These breeds and landraces contributed to the development of the Scotch Collie, which originated from the highland regions of Scotland.",
+            "Based on the retrieved information, it is determined that both Gordon and Irish Setters are ancestors of the Scotch Collie.",
+            "Based on the analysis results, it can be concluded that the Scotch Collie has either Gordon or Irish Setters as ancestors, while the Manchester Terrier does not have either of these breeds in its ancestry."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which dog's ancestors include Gordon and Irish Setters: the Manchester Terrier or the Scotch Collie?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the ancestry and breed history of the Manchester Terrier.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the ancestry and breed history of the Scotch Collie.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if the ancestry of the Manchester Terrier includes the Gordon Setter or Irish Setter breeds.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if the ancestry of the Scotch Collie includes the Gordon Setter or Irish Setter breeds.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the results of the ancestry check for the Manchester Terrier and the Scotch Collie to identify which has Gordon and Irish Setters as ancestors.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph involves retrieving and reasoning about the ancestry of both the Manchester Terrier and the Scotch Collie. The task is broken down into retrieving the breed histories first, then determining if either includes Gordon or Irish Setters in their ancestry. Finally, the results are compared to answer the original question."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "Toy Manchester Terrier\nThe Toy Manchester Terrier is a breed of dog, categorized as a terrier. The breed was bred down in size in North America from the Manchester Terrier, and is placed in the Toy Group by the American Kennel Club and the Canadian Kennel Club (the Manchester Terrier is placed in the Terrier Group.) Neither the F\u00e9d\u00e9ration Cynologique Internationale nor The Kennel Club recognize a Toy variety of the Manchester Terrier.",
+            "Manchester Terrier\nThe Manchester Terrier is a breed of dog of the smooth-haired terrier type.",
+            "Teddy Roosevelt Terrier\nThe Teddy Roosevelt Terrier is a small to medium-sized American hunting terrier. Lower-set with shorter legs, more muscular, and heavier bone density than its cousin the American Rat Terrier. There is much diversity in the history of the Teddy Roosevelt Terrier breed and it shares a common early history with the American Rat Terrier, Fox Paulistinha and Tenterfield Terrier. It is said the Rat Terrier background stems from the terriers or other dogs that were brought over by early English and other working class immigrants. Since the breed was a farm, hunting and utility dog there was little to no planned breeding other than breeding dogs with agreeable traits to each other in order to produce the desired work ethic in the dog. It is assumed that the Feist (dog), Bull Terrier, Smooth Fox Terrier, Manchester Terrier, Whippet, Italian Greyhound, the now extinct English White Terrier, Turnspit dog and or Wry Legged Terrier all share in the Teddy Roosevelt Terrier's ancestry. These early Ratting Terriers were then most likely bred to the Beagle or Beagle cross bred dogs (for increased scenting ability) and other dogs. Maximizing the influences from these various breeds provides the modern Teddy Roosevelt Terrier with a keen sense of awareness and prey drive, an acute sense of smell and a very high intellect. Although they tend to be aloof with strangers they are devoted companion dogs with a strong desire to please and be near their owners side at all times.",
+            "Russkiy Toy\nThe Russian Toy (also known as the Russian Toy Terrier, and in Russia as the Russkiy Toy, Toychik,Russian: \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u0442\u043e\u0439, \u0422\u043e\u0439\u0447\u0438\u043a ) is a very small breed of dog originally bred in Russia from the English Toy Terrier which is known today as the Manchester Terrier. There are two types of coats in the breed: smooth coat and long coat. The smooth-coated variety was previously known as the Russian Toy Terrier and long-coated as the Moscow Long Haired Toy Terrier. Both were brought together under the same Russian Toy Terrier name in 1988 and the \"Terrier\" was dropped from the name when the breed was added in 2006 to the official list of breeds registered with the F\u00e9d\u00e9ration Cynologique Internationale and has been registered in the Foundation Stock Service of the American Kennel Club since 2008, allowed to compete in AKC companion events since 2010. The first official breed standard of the two varieties was written in 1966 in Russia.",
+            "Bull and Terrier\nThe Bull and Terrier is a breed of dog that was the progenitor of the American Pit Bull Terrier, American Staffordshire Terrier, English Bull Terrier and the Staffordshire Bull Terrier.",
+            "American Pit Bull Terrier\nThe American Pit Bull Terrier (APBT) is a dog breed. It is a medium-sized, solidly-built, intelligent, short-haired dog whose early ancestors came from the British Isles. When compared with the English Staffordshire Bull Terrier (another breed within the type commonly called pit bulls), the American Pit Bull Terrier is larger by margins of 6 - in height and 25 - in weight. The American Pit Bull Terrier varies in size. Males normally are about 18-21 inches (45\u201353\u00a0cm) in height and around 35-60 pounds (15\u201327\u00a0kg) in weight. Females are normally around 17-20 inches (43\u201350\u00a0cm) in height and 30-50 pounds (13\u201322\u00a0kg) in weight.",
+            "Grand Bleu de Gascogne\nThe Grand Bleu de Gascogne (FCI No.22) is a breed of dog of the scenthound type, originating in France and used for hunting in packs. Today's breed is the descendant of a very old type of large hunting dog, and is an important breed in the ancestry of many other hounds.",
+            "Feist (dog)\nA Feist is a small hunting dog, descended from the terriers brought over to the United States by English miners and other working class immigrants. These terriers probably included crosses between the Smooth Fox Terrier, the Manchester Terrier and the now extinct English White Terrier. These dogs were used as ratters, and gambling on their prowess in killing rats was a favorite hobby of their owners. Some of these dogs have been crossed with Whippets or Italian Greyhounds (for speed) and Beagles (for hunting ability) - extending the family to include a larger variety of purpose than the original ratter, or Rat Terrier.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Pottery fracture\nPottery fracture results from stress within a ceramic body due to thermal expansion and contraction, shrinkage, and other forces. Poor drying or uneven compression and alignment of particles can result in low strength. Cracking may appear in greenware as well as each stage of the firing including bisque ware and glazed ware.",
+            "Please Take Care of My Refrigerator\nPlease Take Care of My Refrigerator () is a 2014 South Korean cooking-variety program starring by many chefs and celebrity guests. It airs on JTBC on Mondays at 21:30 (KST) beginning November 17, 2014.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Never Let Me Go (Johnny Ace song)\n\"Never Let Me Go\" is a blues ballad song by American R&B/blues singer Johnny Ace, written by Joseph Scott and released in 1954 under Duke Records. The song is featured on the albums \"My Songs\" and \"Memorial\". \"Never Let Me Go\" was one of his eighth consecutive top ten R&B hits in a row, including \"My Song\", \"Cross My Heart,\" \"Please Forgive Me,\" \"The Clock,\" \"Pledging My Love,\" \"Saving My Love for You,\" and \"Anymore\". The song was R&B hit and peaked to No. 9 in October 1954 on \"Billboards\" Rhythm & Blues Records chart."
+        ],
+        "thoughts": [
+            "The Manchester Terrier is a breed of dog of the smooth-haired terrier type. It was originally bred down in size in North America to create the Toy Manchester Terrier, which is placed in the Toy Group by the American Kennel Club and the Canadian Kennel Club. The Russian Toy Terrier, also known as the Russkiy Toy, Toychik, was originally bred in Russia from the English Toy Terrier, which is known today as the Manchester Terrier. The Teddy Roosevelt Terrier, a small to medium-sized American hunting terrier, shares a common early history with the American Rat Terrier, Fox Paulistinha, and Tenterfield Terrier, and is assumed to have ancestry from various breeds including the Manchester Terrier. The Feist, a small hunting dog, is descended from terriers brought over to the United States by English miners and other working class immigrants, and is believed to have ancestry from breeds such as the Smooth Fox Terrier and the Manchester Terrier. Therefore, the Manchester Terrier has had a significant influence on the development of other terrier breeds and has a diverse ancestry that includes various other breeds such as the Bull and Terrier, American Pit Bull Terrier, and Feist.",
+            "Based on the information provided, there is no mention of the Gordon Setter or Irish Setter breeds in the ancestry of the Manchester Terrier. Therefore, it is unlikely that these breeds are included in the ancestry of the Manchester Terrier.",
+            "The Scotch Collie, also known as the Scottish Collie or Old Farm Collie, is a breed of dog that originated in Scotland. They were originally bred for herding and guarding livestock, and are known for their intelligence, loyalty, and gentle nature. The breed has a long history dating back to the 1800s, and was popular in both Scotland and the United States as a working dog on farms. The Scotch Collie is believed to be a descendant of the herding dogs brought to Scotland by the Celts, and has been influential in the development of other herding breeds such as the Border Collie and the Australian Shepherd. Today, the Scotch Collie is considered a rare breed, but efforts are being made to preserve and promote its heritage and working abilities.",
+            "Based on the information provided, there is no mention of the Gordon Setter or Irish Setter breeds in the ancestry of the Scotch Collie. The Scotch Collie is believed to be a descendant of herding dogs brought to Scotland by the Celts, and has been influential in the development of other herding breeds such as the Border Collie and the Australian Shepherd. Therefore, it is unlikely that the ancestry of the Scotch Collie includes the Gordon Setter or Irish Setter breeds.",
+            "Based on the results of the ancestry check, neither the Manchester Terrier nor the Scotch Collie have Gordon or Irish Setters as ancestors."
+        ],
+        "is_best": false
+    }
+]

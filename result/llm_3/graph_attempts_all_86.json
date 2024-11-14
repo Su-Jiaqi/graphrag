@@ -1,0 +1,706 @@
+[
+    {
+        "question": "The actor that plays Joe MacMillan in \"Halt and Catch Fire\" also starred with Carrie Coon in what 2017 horror film?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the actor who plays Joe MacMillan in 'Halt and Catch Fire'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find films starring the actor identified in Node 1, released in 2017.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve films that feature Carrie Coon and were released in 2017.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the common film between the results from Node 2 and Node 3.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To solve the problem, the execution graph begins by identifying the actor who played Joe MacMillan in 'Halt and Catch Fire', which is the first retrieval and reasoning step. The result is used to find the films this actor starred in during 2017. Simultaneously, another retrieval step gathers films featuring Carrie Coon released in the same year. Finally, a reasoning step identifies the common film between the two lists, which answers the original question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "The Keeping Hours\nThe Keeping Hours is a 2017 American supernatural romantic horror film directed by Karen Moncrieff and written by Rebecca Sonnenshine. The film stars Lee Pace and Carrie Coon.",
+            "Carrie Coon\nCarrie Alexandra Coon (born January 24, 1981) is an American actress. On stage, Coon was nominated for a Tony Award for her performance in the 2012 revival of \"Who's Afraid of Virginia Woolf?\". In film, she starred as Margo Dunne in the 2014 thriller film \"Gone Girl\". From 2014 to 2017, she starred as Nora Durst in the HBO drama series \"The Leftovers\", for which she received widespread critical acclaim, winning a Critics' Choice Television Award for Best Actress in a Drama Series. Coon also won for the TCA Award for Individual Achievement in Drama, for \"The Leftovers\" and for her lead role as Gloria Burgle in the third season of the FX anthology series \"Fargo\", along with a nomination for the Primetime Emmy Award for Outstanding Lead Actress in a Limited Series or Movie for \"Fargo\".",
+            "Lee Pace\nLee Grinner Pace (born March 25, 1979) is an American actor. Pace has been featured in film, stage and television. He currently stars as protagonist Joe MacMillan in AMC's \"Halt and Catch Fire\". He also played Roy Walker/the Masked Bandit in the 2006 film \"The Fall\". He has appeared in film series, including \"\" as Garrett and \"The Hobbit\" trilogy as Thranduil. He played villain Ronan the Accuser in the film \"Guardians of the Galaxy\", and starred as Ned in the ABC series \"Pushing Daisies\" for which he was nominated for the Golden Globe Award and Primetime Emmy Award for Outstanding Lead Actor in a Comedy Series in 2008.",
+            "List of Halt and Catch Fire episodes\n\"Halt and Catch Fire\" is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers, that premiered on AMC on June 1, 2014. The series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the third and fourth seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, whose execution would cause the computer's central processing unit to stop working (but not really catch fire).",
+            "Halt and Catch Fire (TV series)\nHalt and Catch Fire is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers that premiered on AMC on June 1, 2014. Taking place over a period of ten years, the series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the latter two seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, the execution of which would cause the computer's central processing unit to stop working (\"catch fire\" was a humorous exaggeration).",
+            "Jamie Foxx\nEric Marlon Bishop (born December 13, 1967), known professionally by his stage name Jamie Foxx, is an American actor, singer, songwriter, musician, producer, and comedian. He won an Academy Award for Best Actor, BAFTA Award for Best Actor in a Leading Role, and a Golden Globe Award for Best Actor in a Musical or Comedy, for his portrayal of Ray Charles in the 2004 biographical film \"Ray\". The same year, he was nominated for the Academy Award for Best Supporting Actor for his role in the crime film \"Collateral\". As of spring 2017, Foxx serves as host and executive producer of the new Fox game show \"Beat Shazam\".",
+            "Mark O'Brien (actor)\nMark O'Brien (born May 7, 1984) is a Canadian actor and director. He is best known for playing the role of Des Courtney in \"Republic of Doyle\" and Tom Rendon in \"Halt and Catch Fire.",
+            "The Rage: Carrie 2\nThe Rage: Carrie 2 is a 1999 American supernatural horror film directed by Katt Shea and a sequel to the 1976 horror film \"Carrie\", based on the novel of the same name by Stephen King, and features Carrie White's baby half sister Rachel Lang in the lead role. Directed by Katt Shea, the film stars Emily Bergl, Jason London, Dylan Bruno, J. Smith-Cameron, and Amy Irving who reprises her role of Sue Snell from the previous film.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Hollow (2016 film)\nThe Hollow is a 2016 American crime film, directed and written by Miles Doleac. The film won 3 awards (Best Actor, Supporting Actor, and Cinematography) at the 2016 Long Island International Film Expo.",
+            "Aleksei Petrenko\nAleksei Vasilyevich Petrenko (Russian: \u0410\u043b\u0435\u043a\u0441\u0435\u0439 \u0412\u0430\u0441\u0438\u043b\u044c\u0435\u0432\u0438\u0447 \u041f\u0435\u0442\u0440\u0435\u043d\u043a\u043e ; 26 March 1938 \u2013 22 February 2017) was a Soviet and Russian film and stage actor. He played Grigori Rasputin in the Elem Klimov's historical drama",
+            "Kerry Bish\u00e9\nKerry Lynne Bish\u00e9 (born May 1, 1984) is a New Zealand-born American actress, known for her lead role as Donna Clark in the AMC television series \"Halt and Catch Fire\". Bish\u00e9 played the lead/narrator role on the final season of ABC's medical sitcom \"Scrubs\" and starred in the critically acclaimed drama film \"Argo\".",
+            "Juano Hernandez\nJuano Hern\u00e1ndez (July 19, 1896 \u2013 July 17, 1970) was an Afro-Puerto Rican stage and film actor who was a pioneer in the African American film industry. He made his silent debut in \"The Life of General Villa\", and talking picture debut in an Oscar Micheaux film, \"The Girl from Chicago\", which was directed at black audiences. Hern\u00e1ndez also performed in a series of dramatic roles in mainstream Hollywood movies. His participation in the film \"Intruder in the Dust\" (1949) earned him a Golden Globe Award nomination for \"New Star of the Year.\" Later in life he returned to Puerto Rico, where he intended to make a film based on the life of Sixto Escobar.",
+            "Scott Michael Foster\nScott Michael Foster (born March 4, 1985) is an American actor. He is best known for his roles as Captain John Paul \"Cappie\" Jones in the ABC Family comedy-drama series \"Greek\" (2007-2011), Leo Hendrie in the ABC Family drama \"Chasing Life\" (2014\u20142015) and as Nathaniel Plimpton III in \"Crazy Ex-Girlfriend\". Foster also had recurring roles on \"Californication\", \"Halt and Catch Fire\", and \"Once Upon a Time\".",
+            "Toby Huss\nToby Huss (born December 9, 1966) is an American actor known for portraying Artie in the Nickelodeon series \"The Adventures of Pete & Pete\" (1993\u20131996). He is also known for his voice-over work on the long-running animated series \"King of the Hill\" (1997\u20132010) and his role as Felix \"Stumpy\" Dreifuss on HBO's \"Carniv\u00e0le\" (2003\u20132005). He currently plays John Bosworth on the AMC original period drama \"Halt and Catch Fire\".",
+            "Robinne Lee\nRobinne Lee (born July 16, 1974) is an American actress and author ab. She made her screen debut in the 1997 independent film \"Hav Plenty\", and later has appeared in films \"National Security\" (2003), \"Deliver Us from Eva\" (2003), \"Hitch\" (2005), \"Seven Pounds\" (2008), \"Fifty Shades Darker\" (2017), and the upcoming \"Fifty Shades Freed\". Her first novel will be released by St Martin's Press in June 2017.",
+            "Bruce Lee and I\nBruce Lee and I (, released in the United States as Bruce Lee: His Last Days, His Last Nights) is a 1976 Hong Kong biographical action film directed by Lo Mar, and starring Betty Ting Pei and Danny Lee. The film was released in the Hong Kong on 9 January 1976. The film is based on Bruce Lee's last days leading up to his death in Pei's apartment at Hong Kong on 20 July 1973.",
+            "Tell (2014 film)\nTell is a 2014 crime thriller starring Katee Sackhoff, Jason Lee and Milo Ventimiglia. Written by actor/screenwriter Timothy Williams, Tell was produced by Haven Entertainment, distributed by Orion Pictures, and was released on December 4.",
+            "Meet Market (film)\nMeet Market is a 2004 film directed by Charlie Loventhal and starring Alan Tudyk, Krista Allen, Elizabeth Berkley, Laurie Holden and Julian McMahon. The movie is a comedy about singles in Los Angeles who attempt to find love in the aisles of a supermarket. The film was released directly to DVD on February 12, 2008.",
+            "10 to Midnight\n10 to Midnight is a 1983 American crime thriller film directed by J. Lee Thompson from a screenplay originally written by William Roberts. The film stars Charles Bronson in the lead role with a supporting cast that includes Lisa Eilbacher, Andrew Stevens, Gene Davis, Geoffrey Lewis, and Wilford Brimley. \"10 to Midnight\" was released by City Films, a subsidiary of Cannon Films, to American cinemas on March 11, 1983.",
+            "Monster (2014 film)\nMonster () is a 2014 South Korean thriller film written and directed by Hwang In-ho, starring Lee Min-ki and Kim Go-eun."
+        ],
+        "thoughts": [
+            "Lee Pace plays Joe MacMillan in 'Halt and Catch Fire'.",
+            "The film \"The Keeping Hours\" released in 2017 stars Lee Pace.",
+            "The film featuring Carrie Coon and released in 2017 is \"The Keeping Hours\".",
+            "The common film between the results from Node 2 and Node 3 is \"The Keeping Hours\" released in 2017."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "The actor that plays Joe MacMillan in \"Halt and Catch Fire\" also starred with Carrie Coon in what 2017 horror film?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the actor who plays Joe MacMillan in 'Halt and Catch Fire'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "List movies released in 2017 that feature Carrie Coon.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the common 2017 horror film that both the actor identified in step 1 and Carrie Coon featured in.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The task is to find a common 2017 horror film featuring both the actor who played Joe MacMillan and Carrie Coon. First, we identify the actor from 'Halt and Catch Fire'. Next, we find movies from 2017 featuring Carrie Coon. Then, we reason out which horror film from 2017 features both actors."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Lee Pace\nLee Grinner Pace (born March 25, 1979) is an American actor. Pace has been featured in film, stage and television. He currently stars as protagonist Joe MacMillan in AMC's \"Halt and Catch Fire\". He also played Roy Walker/the Masked Bandit in the 2006 film \"The Fall\". He has appeared in film series, including \"\" as Garrett and \"The Hobbit\" trilogy as Thranduil. He played villain Ronan the Accuser in the film \"Guardians of the Galaxy\", and starred as Ned in the ABC series \"Pushing Daisies\" for which he was nominated for the Golden Globe Award and Primetime Emmy Award for Outstanding Lead Actor in a Comedy Series in 2008.",
+            "List of Halt and Catch Fire episodes\n\"Halt and Catch Fire\" is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers, that premiered on AMC on June 1, 2014. The series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the third and fourth seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, whose execution would cause the computer's central processing unit to stop working (but not really catch fire).",
+            "Halt and Catch Fire (TV series)\nHalt and Catch Fire is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers that premiered on AMC on June 1, 2014. Taking place over a period of ten years, the series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the latter two seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, the execution of which would cause the computer's central processing unit to stop working (\"catch fire\" was a humorous exaggeration).",
+            "The Keeping Hours\nThe Keeping Hours is a 2017 American supernatural romantic horror film directed by Karen Moncrieff and written by Rebecca Sonnenshine. The film stars Lee Pace and Carrie Coon.",
+            "Carrie Coon\nCarrie Alexandra Coon (born January 24, 1981) is an American actress. On stage, Coon was nominated for a Tony Award for her performance in the 2012 revival of \"Who's Afraid of Virginia Woolf?\". In film, she starred as Margo Dunne in the 2014 thriller film \"Gone Girl\". From 2014 to 2017, she starred as Nora Durst in the HBO drama series \"The Leftovers\", for which she received widespread critical acclaim, winning a Critics' Choice Television Award for Best Actress in a Drama Series. Coon also won for the TCA Award for Individual Achievement in Drama, for \"The Leftovers\" and for her lead role as Gloria Burgle in the third season of the FX anthology series \"Fargo\", along with a nomination for the Primetime Emmy Award for Outstanding Lead Actress in a Limited Series or Movie for \"Fargo\".",
+            "Mark O'Brien (actor)\nMark O'Brien (born May 7, 1984) is a Canadian actor and director. He is best known for playing the role of Des Courtney in \"Republic of Doyle\" and Tom Rendon in \"Halt and Catch Fire.",
+            "The Leftovers (TV series)\nThe Leftovers is an American television drama series created by Damon Lindelof and Tom Perrotta, that aired on HBO from June 29, 2014, to June 4, 2017. It is based on Perrotta's novel of the same name. The pilot was written by Lindelof and Perrotta, and directed by Peter Berg. The series stars an ensemble cast featuring Justin Theroux, Amy Brenneman, Christopher Eccleston, Liv Tyler, Chris Zylka, Margaret Qualley, Carrie Coon, Ann Dowd, Regina King, and Scott Glenn. The series was renewed for a second season, which premiered on October 4, 2015, and concluded December 6, 2015. On December 10, 2015, HBO renewed the show for a third and final season, which premiered on April 16, 2017 and concluded on June 4, 2017.",
+            "Kerry Bish\u00e9\nKerry Lynne Bish\u00e9 (born May 1, 1984) is a New Zealand-born American actress, known for her lead role as Donna Clark in the AMC television series \"Halt and Catch Fire\". Bish\u00e9 played the lead/narrator role on the final season of ABC's medical sitcom \"Scrubs\" and starred in the critically acclaimed drama film \"Argo\".",
+            "Scott Michael Foster\nScott Michael Foster (born March 4, 1985) is an American actor. He is best known for his roles as Captain John Paul \"Cappie\" Jones in the ABC Family comedy-drama series \"Greek\" (2007-2011), Leo Hendrie in the ABC Family drama \"Chasing Life\" (2014\u20142015) and as Nathaniel Plimpton III in \"Crazy Ex-Girlfriend\". Foster also had recurring roles on \"Californication\", \"Halt and Catch Fire\", and \"Once Upon a Time\".",
+            "Toby Huss\nToby Huss (born December 9, 1966) is an American actor known for portraying Artie in the Nickelodeon series \"The Adventures of Pete & Pete\" (1993\u20131996). He is also known for his voice-over work on the long-running animated series \"King of the Hill\" (1997\u20132010) and his role as Felix \"Stumpy\" Dreifuss on HBO's \"Carniv\u00e0le\" (2003\u20132005). He currently plays John Bosworth on the AMC original period drama \"Halt and Catch Fire\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Rage: Carrie 2\nThe Rage: Carrie 2 is a 1999 American supernatural horror film directed by Katt Shea and a sequel to the 1976 horror film \"Carrie\", based on the novel of the same name by Stephen King, and features Carrie White's baby half sister Rachel Lang in the lead role. Directed by Katt Shea, the film stars Emily Bergl, Jason London, Dylan Bruno, J. Smith-Cameron, and Amy Irving who reprises her role of Sue Snell from the previous film.",
+            "Lilla J\u00f6nssonligan\nLilla J\u00f6nssonligan (English: The Little J\u00f6nssonleague ) is a Swedish film series that consists of four movies. The film series is a spin-off of the original \"J\u00f6nssonligan\" film series. The main difference about the two series is that the main characters are portrayed as kids instead of adults in this one, hence the word \"little\" in the title. Rocky, the original third member, is not featured in any of the films. Unlike the \"adult J\u00f6nssonligan\", where the gang where bumbling anti-heroes, the \"litte J\u00f6nssonligan\" is often straight up heroic.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Villa Rides\nVilla Rides is a 1968 American Technicolor western war film in Panavision starring Yul Brynner (in toupee) in the title role and Robert Mitchum as an American adventurer and pilot of fortune. The supporting cast includes Charles Bronson as Fierro, Herbert Lom as Huerta, and Alexander Knox as Madero. Sam Peckinpah wrote the original script and was set to direct but Brynner didn't like his depiction of Villa as cruel and had Robert Towne rewrite the script and sought another director. The screenplay is based on the biography by William Douglas Lansford."
+        ],
+        "thoughts": [
+            "Lee Pace plays Joe MacMillan in 'Halt and Catch Fire'.",
+            "The Keeping Hours is the only movie released in 2017 that features Carrie Coon.",
+            "The common 2017 horror film that both Lee Pace and Carrie Coon featured in is \"The Keeping Hours\"."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "The actor that plays Joe MacMillan in \"Halt and Catch Fire\" also starred with Carrie Coon in what 2017 horror film?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the actor who plays Joe MacMillan in 'Halt and Catch Fire'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify movies starring this actor released in 2017.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify Carrie Coon's filmography to find any horror films released in 2017.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Cross-reference the list of 2017 horror films starring the actor from Node 2 with Carrie Coon's 2017 horror films to find a match.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph first identifies the actor who played Joe MacMillan. Then, it retrieves the films that actor starred in during 2017 (Node 2). Parallelly, it identifies any 2017 horror films starring Carrie Coon (Node 3). Finally, it cross-references these two lists to find the common horror film that fits the criteria, thus providing the final answer."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "The Keeping Hours\nThe Keeping Hours is a 2017 American supernatural romantic horror film directed by Karen Moncrieff and written by Rebecca Sonnenshine. The film stars Lee Pace and Carrie Coon.",
+            "Lee Pace\nLee Grinner Pace (born March 25, 1979) is an American actor. Pace has been featured in film, stage and television. He currently stars as protagonist Joe MacMillan in AMC's \"Halt and Catch Fire\". He also played Roy Walker/the Masked Bandit in the 2006 film \"The Fall\". He has appeared in film series, including \"\" as Garrett and \"The Hobbit\" trilogy as Thranduil. He played villain Ronan the Accuser in the film \"Guardians of the Galaxy\", and starred as Ned in the ABC series \"Pushing Daisies\" for which he was nominated for the Golden Globe Award and Primetime Emmy Award for Outstanding Lead Actor in a Comedy Series in 2008.",
+            "List of Halt and Catch Fire episodes\n\"Halt and Catch Fire\" is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers, that premiered on AMC on June 1, 2014. The series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the third and fourth seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, whose execution would cause the computer's central processing unit to stop working (but not really catch fire).",
+            "Halt and Catch Fire (TV series)\nHalt and Catch Fire is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers that premiered on AMC on June 1, 2014. Taking place over a period of ten years, the series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the latter two seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, the execution of which would cause the computer's central processing unit to stop working (\"catch fire\" was a humorous exaggeration).",
+            "Mark O'Brien (actor)\nMark O'Brien (born May 7, 1984) is a Canadian actor and director. He is best known for playing the role of Des Courtney in \"Republic of Doyle\" and Tom Rendon in \"Halt and Catch Fire.",
+            "Carrie Coon\nCarrie Alexandra Coon (born January 24, 1981) is an American actress. On stage, Coon was nominated for a Tony Award for her performance in the 2012 revival of \"Who's Afraid of Virginia Woolf?\". In film, she starred as Margo Dunne in the 2014 thriller film \"Gone Girl\". From 2014 to 2017, she starred as Nora Durst in the HBO drama series \"The Leftovers\", for which she received widespread critical acclaim, winning a Critics' Choice Television Award for Best Actress in a Drama Series. Coon also won for the TCA Award for Individual Achievement in Drama, for \"The Leftovers\" and for her lead role as Gloria Burgle in the third season of the FX anthology series \"Fargo\", along with a nomination for the Primetime Emmy Award for Outstanding Lead Actress in a Limited Series or Movie for \"Fargo\".",
+            "Kerry Bish\u00e9\nKerry Lynne Bish\u00e9 (born May 1, 1984) is a New Zealand-born American actress, known for her lead role as Donna Clark in the AMC television series \"Halt and Catch Fire\". Bish\u00e9 played the lead/narrator role on the final season of ABC's medical sitcom \"Scrubs\" and starred in the critically acclaimed drama film \"Argo\".",
+            "Scott Michael Foster\nScott Michael Foster (born March 4, 1985) is an American actor. He is best known for his roles as Captain John Paul \"Cappie\" Jones in the ABC Family comedy-drama series \"Greek\" (2007-2011), Leo Hendrie in the ABC Family drama \"Chasing Life\" (2014\u20142015) and as Nathaniel Plimpton III in \"Crazy Ex-Girlfriend\". Foster also had recurring roles on \"Californication\", \"Halt and Catch Fire\", and \"Once Upon a Time\".",
+            "Toby Huss\nToby Huss (born December 9, 1966) is an American actor known for portraying Artie in the Nickelodeon series \"The Adventures of Pete & Pete\" (1993\u20131996). He is also known for his voice-over work on the long-running animated series \"King of the Hill\" (1997\u20132010) and his role as Felix \"Stumpy\" Dreifuss on HBO's \"Carniv\u00e0le\" (2003\u20132005). He currently plays John Bosworth on the AMC original period drama \"Halt and Catch Fire\".",
+            "The Leftovers (TV series)\nThe Leftovers is an American television drama series created by Damon Lindelof and Tom Perrotta, that aired on HBO from June 29, 2014, to June 4, 2017. It is based on Perrotta's novel of the same name. The pilot was written by Lindelof and Perrotta, and directed by Peter Berg. The series stars an ensemble cast featuring Justin Theroux, Amy Brenneman, Christopher Eccleston, Liv Tyler, Chris Zylka, Margaret Qualley, Carrie Coon, Ann Dowd, Regina King, and Scott Glenn. The series was renewed for a second season, which premiered on October 4, 2015, and concluded December 6, 2015. On December 10, 2015, HBO renewed the show for a third and final season, which premiered on April 16, 2017 and concluded on June 4, 2017.",
+            "The Rage: Carrie 2\nThe Rage: Carrie 2 is a 1999 American supernatural horror film directed by Katt Shea and a sequel to the 1976 horror film \"Carrie\", based on the novel of the same name by Stephen King, and features Carrie White's baby half sister Rachel Lang in the lead role. Directed by Katt Shea, the film stars Emily Bergl, Jason London, Dylan Bruno, J. Smith-Cameron, and Amy Irving who reprises her role of Sue Snell from the previous film.",
+            "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bruce Lee and I\nBruce Lee and I (, released in the United States as Bruce Lee: His Last Days, His Last Nights) is a 1976 Hong Kong biographical action film directed by Lo Mar, and starring Betty Ting Pei and Danny Lee. The film was released in the Hong Kong on 9 January 1976. The film is based on Bruce Lee's last days leading up to his death in Pei's apartment at Hong Kong on 20 July 1973.",
+            "Robinne Lee\nRobinne Lee (born July 16, 1974) is an American actress and author ab. She made her screen debut in the 1997 independent film \"Hav Plenty\", and later has appeared in films \"National Security\" (2003), \"Deliver Us from Eva\" (2003), \"Hitch\" (2005), \"Seven Pounds\" (2008), \"Fifty Shades Darker\" (2017), and the upcoming \"Fifty Shades Freed\". Her first novel will be released by St Martin's Press in June 2017.",
+            "List of horror films of the 1930s\nA list of horror films released in the 1930s. The American horror film was properly created in the 1930s, most notably the Universal Horror film productions. \"White Zombie\" is considered to be the first feature length zombie film and has been described as the archetype and model of all zombie movies. A number of Hollywood actors made a name for themselves in horror films of this decade, in particular Bela Lugosi (\"Dracula\", 1931) and Boris Karloff (\"Frankenstein\", 1931). Fredric March won an Academy Award for Best Actor in \"Dr. Jekyll and Mr. Hyde\", 1931. Films of this era frequently took their inspiration from the literature of gothic horror and more often dealt with themes of science versus religion rather than supernatural themes.",
+            "Tell (2014 film)\nTell is a 2014 crime thriller starring Katee Sackhoff, Jason Lee and Milo Ventimiglia. Written by actor/screenwriter Timothy Williams, Tell was produced by Haven Entertainment, distributed by Orion Pictures, and was released on December 4.",
+            "Hrithik Roshan filmography\nHrithik Roshan is an Indian actor known for his work in Bollywood films. As a child, he made uncredited appearances in three films directed by his maternal grandfather, J. Om Prakash, the first of which was in \"Aasha\" (1980). In 1986, Roshan played the adopted son of Rajinikanth's character in Prakash's crime drama \"Bhagwaan Dada\". Roshan subsequently worked as an assistant director on four films, including \"Khudgarz\" (1987) and \"Karan Arjun\" (1995), all of which were directed by his father, Rakesh.",
+            "Midnite Movies\nMidnite Movies is a line of B movies released first on VHS and later on DVD by MGM Home Entertainment. The line was begun by MGM in March 2001 following its acquisition of Orion Pictures, which bought out Filmways, the owner of American International Pictures. AIP had a library of B movies from the 1950s and 1960s that were science fiction, horror, and exploitation films. The \"Midnite Movies\" collection is primarily derived from the AIP library (including most of Roger Corman's and Vincent Price's horror movies) but also included Hammer Film Productions, Amicus Productions, United Artists, and Empire International Pictures movies as well. The DVDs were first released as single films but most later releases would be double features on single double-sided discs. Sony Pictures Home Entertainment later became owners of the MGM library and continued the \"Midnite Movies\" line with distributor 20th Century Fox Home Entertainment. All double feature titles released on the 20th Century Fox label were two-disc packages. By 2011, no new titles were forthcoming; the previous catalog titles slowly went out of print and the \"Midnite Movies\" website was taken down.",
+            "Luke Lee\nLuke Lee Wen Loong (born December 16, 1991) is a Singaporean actor, best known for portraying characters in both film and television. His best known role was Sergeant Heng in Jack Neo's army movies \"Ah Boys to Men\" and \"Ah Boys to Men 2\". He has also appeared in Hong Kong-Singapore horror film \"A Fantastic Ghost Wedding\". Notable roles include appearing in MediaCorp Channel 5's \"Tanglin (TV series)\", \"Point of Entry (TV series)\", HBO (Asia) 's \"Serangoon Road (TV series)\" as well as BBC's \"Insatiable Teens\".",
+            "Monster (2014 film)\nMonster () is a 2014 South Korean thriller film written and directed by Hwang In-ho, starring Lee Min-ki and Kim Go-eun."
+        ],
+        "thoughts": [
+            "Lee Pace plays Joe MacMillan in 'Halt and Catch Fire'.",
+            "The Keeping Hours is the only movie starring Lee Pace released in 2017.",
+            "Carrie Coon starred in the 2017 American supernatural romantic horror film \"The Keeping Hours\".",
+            "The only 2017 horror film starring Lee Pace is \"The Keeping Hours.\" Carrie Coon also starred in \"The Keeping Hours\" in 2017, making it the only match between the two actors' 2017 horror films."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "The actor that plays Joe MacMillan in \"Halt and Catch Fire\" also starred with Carrie Coon in what 2017 horror film?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the actor who plays Joe MacMillan in 'Halt and Catch Fire'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "List the 2017 horror films starring Carrie Coon.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the list of films featuring the actor identified in step 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Find the common film between the list of films retrieved in step 2 and step 3 which both star Carrie Coon and the actor identified in step 1.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins with identifying the actor who plays Joe MacMillan in 'Halt and Catch Fire'. Next, it retrieves a list of 2017 horror films starring Carrie Coon. Simultaneously, it gathers a list of films featuring the actor identified in the first step. Finally, it finds the common 2017 horror film in which both the identified actor and Carrie Coon starred."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "The Keeping Hours\nThe Keeping Hours is a 2017 American supernatural romantic horror film directed by Karen Moncrieff and written by Rebecca Sonnenshine. The film stars Lee Pace and Carrie Coon.",
+            "Lee Pace\nLee Grinner Pace (born March 25, 1979) is an American actor. Pace has been featured in film, stage and television. He currently stars as protagonist Joe MacMillan in AMC's \"Halt and Catch Fire\". He also played Roy Walker/the Masked Bandit in the 2006 film \"The Fall\". He has appeared in film series, including \"\" as Garrett and \"The Hobbit\" trilogy as Thranduil. He played villain Ronan the Accuser in the film \"Guardians of the Galaxy\", and starred as Ned in the ABC series \"Pushing Daisies\" for which he was nominated for the Golden Globe Award and Primetime Emmy Award for Outstanding Lead Actor in a Comedy Series in 2008.",
+            "List of Halt and Catch Fire episodes\n\"Halt and Catch Fire\" is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers, that premiered on AMC on June 1, 2014. The series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the third and fourth seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, whose execution would cause the computer's central processing unit to stop working (but not really catch fire).",
+            "Halt and Catch Fire (TV series)\nHalt and Catch Fire is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers that premiered on AMC on June 1, 2014. Taking place over a period of ten years, the series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the latter two seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, the execution of which would cause the computer's central processing unit to stop working (\"catch fire\" was a humorous exaggeration).",
+            "Mark O'Brien (actor)\nMark O'Brien (born May 7, 1984) is a Canadian actor and director. He is best known for playing the role of Des Courtney in \"Republic of Doyle\" and Tom Rendon in \"Halt and Catch Fire.",
+            "Carrie Coon\nCarrie Alexandra Coon (born January 24, 1981) is an American actress. On stage, Coon was nominated for a Tony Award for her performance in the 2012 revival of \"Who's Afraid of Virginia Woolf?\". In film, she starred as Margo Dunne in the 2014 thriller film \"Gone Girl\". From 2014 to 2017, she starred as Nora Durst in the HBO drama series \"The Leftovers\", for which she received widespread critical acclaim, winning a Critics' Choice Television Award for Best Actress in a Drama Series. Coon also won for the TCA Award for Individual Achievement in Drama, for \"The Leftovers\" and for her lead role as Gloria Burgle in the third season of the FX anthology series \"Fargo\", along with a nomination for the Primetime Emmy Award for Outstanding Lead Actress in a Limited Series or Movie for \"Fargo\".",
+            "Kerry Bish\u00e9\nKerry Lynne Bish\u00e9 (born May 1, 1984) is a New Zealand-born American actress, known for her lead role as Donna Clark in the AMC television series \"Halt and Catch Fire\". Bish\u00e9 played the lead/narrator role on the final season of ABC's medical sitcom \"Scrubs\" and starred in the critically acclaimed drama film \"Argo\".",
+            "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+            "Scott Michael Foster\nScott Michael Foster (born March 4, 1985) is an American actor. He is best known for his roles as Captain John Paul \"Cappie\" Jones in the ABC Family comedy-drama series \"Greek\" (2007-2011), Leo Hendrie in the ABC Family drama \"Chasing Life\" (2014\u20142015) and as Nathaniel Plimpton III in \"Crazy Ex-Girlfriend\". Foster also had recurring roles on \"Californication\", \"Halt and Catch Fire\", and \"Once Upon a Time\".",
+            "Toby Huss\nToby Huss (born December 9, 1966) is an American actor known for portraying Artie in the Nickelodeon series \"The Adventures of Pete & Pete\" (1993\u20131996). He is also known for his voice-over work on the long-running animated series \"King of the Hill\" (1997\u20132010) and his role as Felix \"Stumpy\" Dreifuss on HBO's \"Carniv\u00e0le\" (2003\u20132005). He currently plays John Bosworth on the AMC original period drama \"Halt and Catch Fire\".",
+            "The Rage: Carrie 2\nThe Rage: Carrie 2 is a 1999 American supernatural horror film directed by Katt Shea and a sequel to the 1976 horror film \"Carrie\", based on the novel of the same name by Stephen King, and features Carrie White's baby half sister Rachel Lang in the lead role. Directed by Katt Shea, the film stars Emily Bergl, Jason London, Dylan Bruno, J. Smith-Cameron, and Amy Irving who reprises her role of Sue Snell from the previous film.",
+            "The Leftovers (TV series)\nThe Leftovers is an American television drama series created by Damon Lindelof and Tom Perrotta, that aired on HBO from June 29, 2014, to June 4, 2017. It is based on Perrotta's novel of the same name. The pilot was written by Lindelof and Perrotta, and directed by Peter Berg. The series stars an ensemble cast featuring Justin Theroux, Amy Brenneman, Christopher Eccleston, Liv Tyler, Chris Zylka, Margaret Qualley, Carrie Coon, Ann Dowd, Regina King, and Scott Glenn. The series was renewed for a second season, which premiered on October 4, 2015, and concluded December 6, 2015. On December 10, 2015, HBO renewed the show for a third and final season, which premiered on April 16, 2017 and concluded on June 4, 2017.",
+            "List of horror films of the 1930s\nA list of horror films released in the 1930s. The American horror film was properly created in the 1930s, most notably the Universal Horror film productions. \"White Zombie\" is considered to be the first feature length zombie film and has been described as the archetype and model of all zombie movies. A number of Hollywood actors made a name for themselves in horror films of this decade, in particular Bela Lugosi (\"Dracula\", 1931) and Boris Karloff (\"Frankenstein\", 1931). Fredric March won an Academy Award for Best Actor in \"Dr. Jekyll and Mr. Hyde\", 1931. Films of this era frequently took their inspiration from the literature of gothic horror and more often dealt with themes of science versus religion rather than supernatural themes.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Sissy Spacek\nMary Elizabeth \"Sissy\" Spacek ( ; born December 25, 1949) is an American actress and singer. She began her career in the early 1970s and first gained attention for her role in the film \"Badlands\" (1973). Her major breakthrough came in 1976 when she played the title character of Carrie White in Brian De Palma's horror film \"Carrie\", based on the first novel by Stephen King, for which she earned an Oscar nomination (a rare feat for an actor or actress in a horror movie). She won the Academy Award for Best Actress for her portrayal of Loretta Lynn in the 1980 film \"Coal Miner's Daughter,\" and also earned a Grammy nomination for the song \"Coal Miner's Daughter\" from the film's soundtrack. She went on to receive further Oscar nominations for her roles in \"Missing\" (1982), \"The River\" (1984) and \"Crimes of the Heart\" (1986). \"Coal Miner's Daughter\" and \"Crimes of the Heart\" also won her the Golden Globe Award for Best Actress in a Musical or Comedy.",
+            "Lee Sung-jae\nLee Sung-jae (born August 23, 1970) is a South Korean actor. Among his notable works include the films \"Art Museum by the Zoo\", \"Attack the Gas Station\", \"Barking Dogs Never Bite\", and \"Kick the Moon\", as well as the television series \"Lie\" and \"A Wife's Credentials\".",
+            "Robinne Lee\nRobinne Lee (born July 16, 1974) is an American actress and author ab. She made her screen debut in the 1997 independent film \"Hav Plenty\", and later has appeared in films \"National Security\" (2003), \"Deliver Us from Eva\" (2003), \"Hitch\" (2005), \"Seven Pounds\" (2008), \"Fifty Shades Darker\" (2017), and the upcoming \"Fifty Shades Freed\". Her first novel will be released by St Martin's Press in June 2017.",
+            "Jeremy Renner\nJeremy Lee Renner (born January 7, 1971) is an American actor. He appeared largely in independent films, such as \"Dahmer\" (2002) and \"Neo Ned\" (2005). Renner appeared in supporting roles in bigger films, such as \"S.W.A.T.\" (2003) and \"28 Weeks Later\" (2007). He was nominated for the Academy Award for Best Supporting Actor for his much-praised performance in \"The Town\" (2010).",
+            "John Cho\nJohn Cho (born Cho Yo-han; June 16, 1972) is an American film and television actor and musician. He is best known as Harold Lee in the \"Harold & Kumar\" films; as the character John, MILF Guy No. 2, who popularized the term \"MILF\" in the \"American Pie\" films; and as the character Hikaru Sulu in the \"Star Trek\" reboot film series. Early in his career he also starred in the Asian-American films \"Better Luck Tomorrow\", \"Shopping for Fangs\", and \"Yellow\".",
+            "10 to Midnight\n10 to Midnight is a 1983 American crime thriller film directed by J. Lee Thompson from a screenplay originally written by William Roberts. The film stars Charles Bronson in the lead role with a supporting cast that includes Lisa Eilbacher, Andrew Stevens, Gene Davis, Geoffrey Lewis, and Wilford Brimley. \"10 to Midnight\" was released by City Films, a subsidiary of Cannon Films, to American cinemas on March 11, 1983.",
+            "Bosko the Musketeer\nBosko the Musketeer is an American animated short film. It is a \"Looney Tunes\" cartoon, featuring Bosko, the first star of the series. It was released on August 12, 1933, although some sources note September 16 as a date; this is problematic, as that would imply that the last films featuring Bosko as the star of Warner Bros. cartoons were released after the first film featuring Buddy, the second star of the series. It was, like most \"Looney Tunes\" of the time, directed by Hugh Harman; Frank Marsales was the musical director."
+        ],
+        "thoughts": [
+            "The 2017 horror film starring Carrie Coon is \"The Keeping Hours\".",
+            "Lee Pace plays Joe MacMillan in 'Halt and Catch Fire'.",
+            "Films featuring Lee Pace:\n1. The Fall (2006)\n2. The Twilight Saga: Breaking Dawn \u2013 Part 2 (2012)\n3. Guardians of the Galaxy (2014)\n4. The Hobbit film series (2012-2014)\n5. The Keeping Hours (2017)",
+            "The common film between the list of films retrieved in step 2 (\"The Keeping Hours\") and step 3 (featuring Lee Pace) that stars Carrie Coon is \"The Keeping Hours\"."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "The actor that plays Joe MacMillan in \"Halt and Catch Fire\" also starred with Carrie Coon in what 2017 horror film?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the actor who plays Joe MacMillan in 'Halt and Catch Fire'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify movies from 2017 that starred Carrie Coon.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify other movies that the actor who plays Joe MacMillan appeared in during 2017.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Cross-reference the list of movies from nodes 2 and 3 to find a common movie.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks down the question into identifying the main actor from 'Halt and Catch Fire', finding films Carrie Coon starred in during 2017, determining films from 2017 featuring the identified actor, and cross-referencing for a common film. This approach ensures capturing the relationship between the actors and the target film."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Lee Pace\nLee Grinner Pace (born March 25, 1979) is an American actor. Pace has been featured in film, stage and television. He currently stars as protagonist Joe MacMillan in AMC's \"Halt and Catch Fire\". He also played Roy Walker/the Masked Bandit in the 2006 film \"The Fall\". He has appeared in film series, including \"\" as Garrett and \"The Hobbit\" trilogy as Thranduil. He played villain Ronan the Accuser in the film \"Guardians of the Galaxy\", and starred as Ned in the ABC series \"Pushing Daisies\" for which he was nominated for the Golden Globe Award and Primetime Emmy Award for Outstanding Lead Actor in a Comedy Series in 2008.",
+            "List of Halt and Catch Fire episodes\n\"Halt and Catch Fire\" is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers, that premiered on AMC on June 1, 2014. The series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the third and fourth seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, whose execution would cause the computer's central processing unit to stop working (but not really catch fire).",
+            "Halt and Catch Fire (TV series)\nHalt and Catch Fire is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers that premiered on AMC on June 1, 2014. Taking place over a period of ten years, the series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the latter two seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, the execution of which would cause the computer's central processing unit to stop working (\"catch fire\" was a humorous exaggeration).",
+            "Mark O'Brien (actor)\nMark O'Brien (born May 7, 1984) is a Canadian actor and director. He is best known for playing the role of Des Courtney in \"Republic of Doyle\" and Tom Rendon in \"Halt and Catch Fire.",
+            "Kerry Bish\u00e9\nKerry Lynne Bish\u00e9 (born May 1, 1984) is a New Zealand-born American actress, known for her lead role as Donna Clark in the AMC television series \"Halt and Catch Fire\". Bish\u00e9 played the lead/narrator role on the final season of ABC's medical sitcom \"Scrubs\" and starred in the critically acclaimed drama film \"Argo\".",
+            "The Keeping Hours\nThe Keeping Hours is a 2017 American supernatural romantic horror film directed by Karen Moncrieff and written by Rebecca Sonnenshine. The film stars Lee Pace and Carrie Coon.",
+            "Scott Michael Foster\nScott Michael Foster (born March 4, 1985) is an American actor. He is best known for his roles as Captain John Paul \"Cappie\" Jones in the ABC Family comedy-drama series \"Greek\" (2007-2011), Leo Hendrie in the ABC Family drama \"Chasing Life\" (2014\u20142015) and as Nathaniel Plimpton III in \"Crazy Ex-Girlfriend\". Foster also had recurring roles on \"Californication\", \"Halt and Catch Fire\", and \"Once Upon a Time\".",
+            "Toby Huss\nToby Huss (born December 9, 1966) is an American actor known for portraying Artie in the Nickelodeon series \"The Adventures of Pete & Pete\" (1993\u20131996). He is also known for his voice-over work on the long-running animated series \"King of the Hill\" (1997\u20132010) and his role as Felix \"Stumpy\" Dreifuss on HBO's \"Carniv\u00e0le\" (2003\u20132005). He currently plays John Bosworth on the AMC original period drama \"Halt and Catch Fire\".",
+            "Robinne Lee\nRobinne Lee (born July 16, 1974) is an American actress and author ab. She made her screen debut in the 1997 independent film \"Hav Plenty\", and later has appeared in films \"National Security\" (2003), \"Deliver Us from Eva\" (2003), \"Hitch\" (2005), \"Seven Pounds\" (2008), \"Fifty Shades Darker\" (2017), and the upcoming \"Fifty Shades Freed\". Her first novel will be released by St Martin's Press in June 2017.",
+            "Luke Lee\nLuke Lee Wen Loong (born December 16, 1991) is a Singaporean actor, best known for portraying characters in both film and television. His best known role was Sergeant Heng in Jack Neo's army movies \"Ah Boys to Men\" and \"Ah Boys to Men 2\". He has also appeared in Hong Kong-Singapore horror film \"A Fantastic Ghost Wedding\". Notable roles include appearing in MediaCorp Channel 5's \"Tanglin (TV series)\", \"Point of Entry (TV series)\", HBO (Asia) 's \"Serangoon Road (TV series)\" as well as BBC's \"Insatiable Teens\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Jeremy Renner\nJeremy Lee Renner (born January 7, 1971) is an American actor. He appeared largely in independent films, such as \"Dahmer\" (2002) and \"Neo Ned\" (2005). Renner appeared in supporting roles in bigger films, such as \"S.W.A.T.\" (2003) and \"28 Weeks Later\" (2007). He was nominated for the Academy Award for Best Supporting Actor for his much-praised performance in \"The Town\" (2010).",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Martemyan Ryutin\nMartemyan Nikitich Ryutin (Russian: \u041c\u0430\u0440\u0442\u0435\u043c\u044c\u044f\u0301\u043d \u041d\u0438\u043a\u0438\u0301\u0442\u0438\u0447 \u0420\u044e\u0301\u0442\u0438\u043d ) (1890\u20131937) was a Russian Marxist revolutionary, and a political functionary of the Russian Communist Party. Ryutin is best remembered as the leader of a pro-peasant political faction organized against Soviet leader Joseph Stalin in the early 1930s and as the primary author of a 200-page oppositional platform. Ryutin was arrested by the Soviet secret police, along with his co-thinkers, in what has come to be known as the Ryutin Affair. He was executed in January 1937 as part of the Yezhovshchina (Great Purge) conducted against political oppositionists and suspected economic \"wreckers\" and spies.",
+            "Lois Toulson\nLois Toulson (born 26 September 1999, Huddersfield U.K.) is a British diver. A specialist in the 10 metre platform, she won the gold medal at the inaugural European Games in 2015, and the senior European title in 2017. She competed in the women's synchronized ten meter platform event at the 2016 Summer Olympics with Tonia Couch. She won silver in mixed 10m platform synchro at the 2017 World Aquatics Championships with Matty Lee.",
+            "Operation Dragoon\nOperation Dragoon (initially Operation Anvil) was the code name for the Allied invasion of Southern France on 15August 1944. The operation was initially planned to be executed in conjunction with Operation Overlord, the Allied landing in the Normandy, but the lack of available resources led to a cancellation of the second landing. By July 1944 the landing was reconsidered, as the clogged-up ports in Normandy did not have the capacity to adequately supply the Allied forces. Concurrently, the French High Command pushed for a revival of the operation that would include large numbers of French troops. As a result, the operation was finally approved in July to be executed in August.",
+            "Ren\u00e9e Bourque\nRen\u00e9e Lee Moniz (born October 16, 1977) is an American actress born and raised in Rhode Island. She is also known as \"Ren\u00e9e Moniz\" and \"Renee Bourque Moniz\". She has appeared in \"American Hustle\" and in the movie \"27 Dresses\" where she plays Katherine Heigl's co-worker at Urban Everest.",
+            "Bob Hope\nBob Hope, KBE, KC*SG, KSS (born Leslie Towns Hope; May 29, 1903 \u2013 July 27, 2003) was an American comedian, vaudevillian, actor, singer, dancer, athlete and author. With a career spanning nearly 80 years, Hope appeared in more than 70 short and feature films, including a series of \"Road\" movies. In addition to hosting the Academy Awards show nineteen times, more than any other host, he appeared in many stage productions and television roles, and was the author of 14 books. The song \"Thanks for the Memory\" is widely regarded as his signature tune.",
+            "Louise Peete\nLouise Peete (September 20, 1880 \u2013 April 11, 1947) was a convicted American murderer. Peete was first convicted of murdering wealthy mining engineer Jacob C. Denton in 1920 and was sentenced to life in prison. She was paroled in April 1939. In May 1945, she was convicted of murdering her employer, Margaret Logan, and sentenced to death. She was executed in April 1947 making her the second, and one of only four women, to be executed in the California gas chamber.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Mission patch\nA mission patch is a cloth reproduction of a spaceflight mission emblem worn by astronauts and other personnel affiliated with that mission. It is usually executed as an embroidered patch. The term space patch is mostly applied to an emblem designed for a manned space mission. Traditionally, the patch is worn on the space suit that astronauts and cosmonauts wear when launched into space. Mission patches have been adopted by the crew and personnel of many other space ventures, public and private.",
+            "Chess problem\nA chess problem, also called a chess composition, is a puzzle set by somebody using chess pieces on a chess board, that presents the solver with a particular task to be achieved. For instance, a position might be given with the instruction that White is to move first, and checkmate Black in two moves against any possible defense. A person who creates such problems is known as a composer. There is a good deal of specialized jargon used in connection with chess problems; see glossary of chess problems for a list.",
+            "William Kidd\nWilliam Kidd, also \"Captain William Kidd\" or simply \"Captain Kidd\" (c.1654 \u2013 23 May 1701) was a Scottish sailor who was tried and executed for piracy after returning from a voyage to the Indian Ocean. Some modern historians deem his piratical reputation unjust."
+        ],
+        "thoughts": [
+            "There are no movies from 2017 that starred Carrie Coon.",
+            "Lee Pace plays Joe MacMillan in 'Halt and Catch Fire'.",
+            "In 2017, Lee Pace, who plays Joe MacMillan in \"Halt and Catch Fire\", appeared in the movie \"The Keeping Hours\". No other movies featuring Lee Pace were released in 2017.",
+            "Based on the information from upstream task 2 and 3, there are no common movies from 2017 that starred both Carrie Coon and Lee Pace."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "The actor that plays Joe MacMillan in \"Halt and Catch Fire\" also starred with Carrie Coon in what 2017 horror film?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the actor who plays Joe MacMillan in 'Halt and Catch Fire'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify films from 2017 in which this actor starred.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify films from 2017 in which Carrie Coon starred.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Find the common film between the 2017 films featuring the actor from 'Halt and Catch Fire' and those featuring Carrie Coon.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To answer the question, start by retrieving the actor who plays Joe MacMillan. Then find the list of movies released in 2017 that this actor appeared in. Simultaneously, retrieve the 2017 films that starred Carrie Coon. Finally, identify the film in which both the actor from 'Halt and Catch Fire' and Carrie Coon appeared. This final step synthesizes the information to answer the question."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Carrie Coon\nCarrie Alexandra Coon (born January 24, 1981) is an American actress. On stage, Coon was nominated for a Tony Award for her performance in the 2012 revival of \"Who's Afraid of Virginia Woolf?\". In film, she starred as Margo Dunne in the 2014 thriller film \"Gone Girl\". From 2014 to 2017, she starred as Nora Durst in the HBO drama series \"The Leftovers\", for which she received widespread critical acclaim, winning a Critics' Choice Television Award for Best Actress in a Drama Series. Coon also won for the TCA Award for Individual Achievement in Drama, for \"The Leftovers\" and for her lead role as Gloria Burgle in the third season of the FX anthology series \"Fargo\", along with a nomination for the Primetime Emmy Award for Outstanding Lead Actress in a Limited Series or Movie for \"Fargo\".",
+            "The Keeping Hours\nThe Keeping Hours is a 2017 American supernatural romantic horror film directed by Karen Moncrieff and written by Rebecca Sonnenshine. The film stars Lee Pace and Carrie Coon.",
+            "The Leftovers (TV series)\nThe Leftovers is an American television drama series created by Damon Lindelof and Tom Perrotta, that aired on HBO from June 29, 2014, to June 4, 2017. It is based on Perrotta's novel of the same name. The pilot was written by Lindelof and Perrotta, and directed by Peter Berg. The series stars an ensemble cast featuring Justin Theroux, Amy Brenneman, Christopher Eccleston, Liv Tyler, Chris Zylka, Margaret Qualley, Carrie Coon, Ann Dowd, Regina King, and Scott Glenn. The series was renewed for a second season, which premiered on October 4, 2015, and concluded December 6, 2015. On December 10, 2015, HBO renewed the show for a third and final season, which premiered on April 16, 2017 and concluded on June 4, 2017.",
+            "The Rage: Carrie 2\nThe Rage: Carrie 2 is a 1999 American supernatural horror film directed by Katt Shea and a sequel to the 1976 horror film \"Carrie\", based on the novel of the same name by Stephen King, and features Carrie White's baby half sister Rachel Lang in the lead role. Directed by Katt Shea, the film stars Emily Bergl, Jason London, Dylan Bruno, J. Smith-Cameron, and Amy Irving who reprises her role of Sue Snell from the previous film.",
+            "Sissy Spacek\nMary Elizabeth \"Sissy\" Spacek ( ; born December 25, 1949) is an American actress and singer. She began her career in the early 1970s and first gained attention for her role in the film \"Badlands\" (1973). Her major breakthrough came in 1976 when she played the title character of Carrie White in Brian De Palma's horror film \"Carrie\", based on the first novel by Stephen King, for which she earned an Oscar nomination (a rare feat for an actor or actress in a horror movie). She won the Academy Award for Best Actress for her portrayal of Loretta Lynn in the 1980 film \"Coal Miner's Daughter,\" and also earned a Grammy nomination for the song \"Coal Miner's Daughter\" from the film's soundtrack. She went on to receive further Oscar nominations for her roles in \"Missing\" (1982), \"The River\" (1984) and \"Crimes of the Heart\" (1986). \"Coal Miner's Daughter\" and \"Crimes of the Heart\" also won her the Golden Globe Award for Best Actress in a Musical or Comedy.",
+            "Lee Pace\nLee Grinner Pace (born March 25, 1979) is an American actor. Pace has been featured in film, stage and television. He currently stars as protagonist Joe MacMillan in AMC's \"Halt and Catch Fire\". He also played Roy Walker/the Masked Bandit in the 2006 film \"The Fall\". He has appeared in film series, including \"\" as Garrett and \"The Hobbit\" trilogy as Thranduil. He played villain Ronan the Accuser in the film \"Guardians of the Galaxy\", and starred as Ned in the ABC series \"Pushing Daisies\" for which he was nominated for the Golden Globe Award and Primetime Emmy Award for Outstanding Lead Actor in a Comedy Series in 2008.",
+            "List of Halt and Catch Fire episodes\n\"Halt and Catch Fire\" is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers, that premiered on AMC on June 1, 2014. The series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the third and fourth seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, whose execution would cause the computer's central processing unit to stop working (but not really catch fire).",
+            "Through a Glass Window\nThrough a Glass Window is a 1922 American drama silent film directed by Maurice Campbell and written by Olga Printzlau. The film stars May McAvoy, Fanny Midgley, Burwell Hamrick, Raymond McKee, F. A. Turner and Carrie Clark Ward. The film was released on April 2, 1922, by Paramount Pictures.",
+            "Halt and Catch Fire (TV series)\nHalt and Catch Fire is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers that premiered on AMC on June 1, 2014. Taking place over a period of ten years, the series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the latter two seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, the execution of which would cause the computer's central processing unit to stop working (\"catch fire\" was a humorous exaggeration).",
+            "Napoleon Dynamite\nNapoleon Dynamite is a 2004 American comedy film produced by Jeremy Coon, Chris Wyatt, Sean C. Covel and Jory Weitz, written by Jared and Jerusha Hess and directed by Jared Hess. The film stars Jon Heder in the role of the title character, for which he was paid $1,000. After the film's runaway success, Heder re-negotiated his compensation and received a cut of the profits. The film was Jared Hess' first full-length feature and is partially adapted from his earlier short film, \"Peluca\". \"Napoleon Dynamite\" was acquired at the Sundance Film Festival by Fox Searchlight Pictures and Paramount Pictures, in association with MTV Films. It was filmed in and near Franklin County, Idaho in the summer of 2003. It debuted at the Sundance Film Festival in January 2004. The film's total worldwide gross revenue was $46,118,097. The film has since developed a cult following.",
+            "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+            "Mark O'Brien (actor)\nMark O'Brien (born May 7, 1984) is a Canadian actor and director. He is best known for playing the role of Des Courtney in \"Republic of Doyle\" and Tom Rendon in \"Halt and Catch Fire.",
+            "Kerry Bish\u00e9\nKerry Lynne Bish\u00e9 (born May 1, 1984) is a New Zealand-born American actress, known for her lead role as Donna Clark in the AMC television series \"Halt and Catch Fire\". Bish\u00e9 played the lead/narrator role on the final season of ABC's medical sitcom \"Scrubs\" and starred in the critically acclaimed drama film \"Argo\".",
+            "Scott Michael Foster\nScott Michael Foster (born March 4, 1985) is an American actor. He is best known for his roles as Captain John Paul \"Cappie\" Jones in the ABC Family comedy-drama series \"Greek\" (2007-2011), Leo Hendrie in the ABC Family drama \"Chasing Life\" (2014\u20142015) and as Nathaniel Plimpton III in \"Crazy Ex-Girlfriend\". Foster also had recurring roles on \"Californication\", \"Halt and Catch Fire\", and \"Once Upon a Time\".",
+            "Toby Huss\nToby Huss (born December 9, 1966) is an American actor known for portraying Artie in the Nickelodeon series \"The Adventures of Pete & Pete\" (1993\u20131996). He is also known for his voice-over work on the long-running animated series \"King of the Hill\" (1997\u20132010) and his role as Felix \"Stumpy\" Dreifuss on HBO's \"Carniv\u00e0le\" (2003\u20132005). He currently plays John Bosworth on the AMC original period drama \"Halt and Catch Fire\".",
+            "Robinne Lee\nRobinne Lee (born July 16, 1974) is an American actress and author ab. She made her screen debut in the 1997 independent film \"Hav Plenty\", and later has appeared in films \"National Security\" (2003), \"Deliver Us from Eva\" (2003), \"Hitch\" (2005), \"Seven Pounds\" (2008), \"Fifty Shades Darker\" (2017), and the upcoming \"Fifty Shades Freed\". Her first novel will be released by St Martin's Press in June 2017.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "John Cho\nJohn Cho (born Cho Yo-han; June 16, 1972) is an American film and television actor and musician. He is best known as Harold Lee in the \"Harold & Kumar\" films; as the character John, MILF Guy No. 2, who popularized the term \"MILF\" in the \"American Pie\" films; and as the character Hikaru Sulu in the \"Star Trek\" reboot film series. Early in his career he also starred in the Asian-American films \"Better Luck Tomorrow\", \"Shopping for Fangs\", and \"Yellow\".",
+            "Lea Thompson\nLea Katherine Thompson (born May 31, 1961) is an American actress, television director, and television producer. She is known for her role as Lorraine Baines in the \"Back to the Future\" trilogy and as the title character in the 1990s NBC sitcom \"Caroline in the City\". Other films for which she is known include \"All the Right Moves\" (1983), \"Red Dawn\" (1984), \"Howard the Duck\" (1986) \"Some Kind of Wonderful\" (1987), and \"The Beverly Hillbillies\" (1993). From 2011-2017, she co-starred as Kathryn Kennish in the Freeform (formerly ABC Family) series \"Switched at Birth\".",
+            "Tara Reid\nTara Donna Reid (born November 8, 1975) is an American actress. She is known for playing Vicky in the films \"American Pie\" (1999), \"American Pie 2\" (2001) and \"American Reunion\" (2012), and Bunny Lebowski in \"The Big Lebowski\" (1998). In 2013, she starred as April Wexler in the television film \"Sharknado\", and went on to reprise the role in four sequels (2013\u20132017).",
+            "Batman in film\nThe fictional superhero Batman, who appears in American comic books published by DC Comics, has appeared in various films since his inception. Created by Bob Kane and Bill Finger, the character first starred in two serial films in the 1940s, \"Batman\" and \"Batman and Robin\". The character also appeared in the 1966 film \"Batman\", which was a feature film adaptation of the 1960s \"Batman\" TV series starring Adam West and Burt Ward, who also starred in the film. Toward the end of the 1980s, the Warner Bros. studio began producing a series of feature films starring Batman, beginning with the 1989 film \"Batman\", directed by Tim Burton and starring Michael Keaton. Burton and Keaton returned for the 1992 sequel \"Batman Returns\", and in 1995, Joel Schumacher directed \"Batman Forever\" with Val Kilmer as Batman. Schumacher also directed the 1997 sequel \"Batman & Robin\", which starred George Clooney. \"Batman & Robin\" was poorly received by both critics and fans, leading to the cancellation of \"Batman Unchained\".",
+            "Sarah Paulson\nSarah Catharine Paulson (born December 17, 1974) is an American actress. After beginning her acting career on stage, she starred in the 1990s television series \"American Gothic\" (1995\u201396) and \"Jack & Jill\" (1999\u20132001). Paulson later appeared in comedy films such as \"What Women Want\" (2000) and \"Down with Love\" (2003), and had dramatic roles in films such as \"Path to War\" (2002) and \"The Notorious Bettie Page\" (2005). From 2006 to 2007, Paulson played the role of Harriet Hayes in the NBC comedy-drama series \"Studio 60 on the Sunset Strip\", for which she received her first Golden Globe Award nomination. In 2008, she starred as Ellen Dolan in the superhero noir film \"The Spirit\"."
+        ],
+        "thoughts": [
+            "Lee Pace plays Joe MacMillan in 'Halt and Catch Fire'.",
+            "The Keeping Hours (2017)",
+            "The films from 2017 in which Carrie Coon starred are \"The Keeping Hours\" and the third and final season of the HBO drama series \"The Leftovers\".",
+            "The common film between the 2017 films featuring the actor from 'Halt and Catch Fire' and those featuring Carrie Coon is \"The Keeping Hours\" (2017)."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "The actor that plays Joe MacMillan in \"Halt and Catch Fire\" also starred with Carrie Coon in what 2017 horror film?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the actor who plays Joe MacMillan in 'Halt and Catch Fire'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify films starring Carrie Coon released in 2017.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find movies starring the actor from node 1 in 2017.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify any common film titles between the lists from nodes 2 and 3.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins by retrieving the actor who plays Joe MacMillan in 'Halt and Catch Fire'. Then, in parallel, it identifies films released in 2017 starring Carrie Coon. Concurrently, it retrieves 2017 films starring the identified actor. Finally, it determines the common film(s) between these two lists to find the answer."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Lee Pace\nLee Grinner Pace (born March 25, 1979) is an American actor. Pace has been featured in film, stage and television. He currently stars as protagonist Joe MacMillan in AMC's \"Halt and Catch Fire\". He also played Roy Walker/the Masked Bandit in the 2006 film \"The Fall\". He has appeared in film series, including \"\" as Garrett and \"The Hobbit\" trilogy as Thranduil. He played villain Ronan the Accuser in the film \"Guardians of the Galaxy\", and starred as Ned in the ABC series \"Pushing Daisies\" for which he was nominated for the Golden Globe Award and Primetime Emmy Award for Outstanding Lead Actor in a Comedy Series in 2008.",
+            "Mark O'Brien (actor)\nMark O'Brien (born May 7, 1984) is a Canadian actor and director. He is best known for playing the role of Des Courtney in \"Republic of Doyle\" and Tom Rendon in \"Halt and Catch Fire.",
+            "Halt and Catch Fire (TV series)\nHalt and Catch Fire is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers that premiered on AMC on June 1, 2014. Taking place over a period of ten years, the series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the latter two seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, the execution of which would cause the computer's central processing unit to stop working (\"catch fire\" was a humorous exaggeration).",
+            "Toby Huss\nToby Huss (born December 9, 1966) is an American actor known for portraying Artie in the Nickelodeon series \"The Adventures of Pete & Pete\" (1993\u20131996). He is also known for his voice-over work on the long-running animated series \"King of the Hill\" (1997\u20132010) and his role as Felix \"Stumpy\" Dreifuss on HBO's \"Carniv\u00e0le\" (2003\u20132005). He currently plays John Bosworth on the AMC original period drama \"Halt and Catch Fire\".",
+            "List of Halt and Catch Fire episodes\n\"Halt and Catch Fire\" is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers, that premiered on AMC on June 1, 2014. The series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the third and fourth seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, whose execution would cause the computer's central processing unit to stop working (but not really catch fire).",
+            "The Keeping Hours\nThe Keeping Hours is a 2017 American supernatural romantic horror film directed by Karen Moncrieff and written by Rebecca Sonnenshine. The film stars Lee Pace and Carrie Coon.",
+            "Carrie Coon\nCarrie Alexandra Coon (born January 24, 1981) is an American actress. On stage, Coon was nominated for a Tony Award for her performance in the 2012 revival of \"Who's Afraid of Virginia Woolf?\". In film, she starred as Margo Dunne in the 2014 thriller film \"Gone Girl\". From 2014 to 2017, she starred as Nora Durst in the HBO drama series \"The Leftovers\", for which she received widespread critical acclaim, winning a Critics' Choice Television Award for Best Actress in a Drama Series. Coon also won for the TCA Award for Individual Achievement in Drama, for \"The Leftovers\" and for her lead role as Gloria Burgle in the third season of the FX anthology series \"Fargo\", along with a nomination for the Primetime Emmy Award for Outstanding Lead Actress in a Limited Series or Movie for \"Fargo\".",
+            "Scott Michael Foster\nScott Michael Foster (born March 4, 1985) is an American actor. He is best known for his roles as Captain John Paul \"Cappie\" Jones in the ABC Family comedy-drama series \"Greek\" (2007-2011), Leo Hendrie in the ABC Family drama \"Chasing Life\" (2014\u20142015) and as Nathaniel Plimpton III in \"Crazy Ex-Girlfriend\". Foster also had recurring roles on \"Californication\", \"Halt and Catch Fire\", and \"Once Upon a Time\".",
+            "The Leftovers (TV series)\nThe Leftovers is an American television drama series created by Damon Lindelof and Tom Perrotta, that aired on HBO from June 29, 2014, to June 4, 2017. It is based on Perrotta's novel of the same name. The pilot was written by Lindelof and Perrotta, and directed by Peter Berg. The series stars an ensemble cast featuring Justin Theroux, Amy Brenneman, Christopher Eccleston, Liv Tyler, Chris Zylka, Margaret Qualley, Carrie Coon, Ann Dowd, Regina King, and Scott Glenn. The series was renewed for a second season, which premiered on October 4, 2015, and concluded December 6, 2015. On December 10, 2015, HBO renewed the show for a third and final season, which premiered on April 16, 2017 and concluded on June 4, 2017.",
+            "Kerry Bish\u00e9\nKerry Lynne Bish\u00e9 (born May 1, 1984) is a New Zealand-born American actress, known for her lead role as Donna Clark in the AMC television series \"Halt and Catch Fire\". Bish\u00e9 played the lead/narrator role on the final season of ABC's medical sitcom \"Scrubs\" and starred in the critically acclaimed drama film \"Argo\".",
+            "Sameer Iqbal Patel\nSameer Iqbal Patel, also referred to as Sammir I Patel and Sameer Patel, is a theatre personality from India. Sameer, who started his career modeling for various brands, did TV shows, and wrote and directed a dozen commercial plays including 'Jo Khaya So Pachchtaye', 'Hawa Hawai', '3 Flights Down', and 'Baat Baat Mein Bigdey Haalaat'. He has just completed his directorial debut Hotel Beautifool. As an actor, he has featured in national television shows including \"Ehsaas\", \"Mr. Aur Mrs. Verma Ki Rasoi\", the \"Noor Jehan\" television show and others. He is also the writer of the television show \"Yeh Chanda Kanoon Hai\", which airs on SAB TV. Sameer's theatre production, a Hindi comedy play, named \"Baat Baat Mein Bigdey Haalat,\" featured veteran actor Rakesh Bedi and Chetanya Adib. Sameer has completed his debut film \"Hotel Beautifool,\" which is due for release in 2017, adapted from his hit play Baat Baat Mein Bigdey Halaat. After 'Hotel Beautifool', Sameer has started working on his next project, a Hindi feature film named Tata Goodbye, a black comedy.",
+            "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Jing Tian\nJing Tian (born 21 July 1988) is a Chinese actress. She graduated from the Beijing Dance Academy and Beijing Film Academy. She is known for her roles in war epic \"The Warring States\" (2011) and the action films \"Special ID\" and \"Police Story 2013\" (both in 2013). She is part of the cast for three Legendary Pictures films, including a prominent role in \"The Great Wall\" (2016) as well as \"\" (2017) and the upcoming \"\".",
+            "List of Scream characters\nWes Craven's \"Scream\" series features a large cast of characters created primarily by Kevin Williamson with contributions from Craven and Ehren Kruger. The series focuses on the character of Sidney Prescott (Neve Campbell) and a succession of murderers who adopt a ghost-like disguise, dubbed Ghostface, to taunt and attempt to kill her. The series comprises four films: \"Scream\" (1996), \"Scream 2\" (1997), \"Scream 3\" (2000) and \"Scream 4\" (2011).",
+            "The Rage: Carrie 2\nThe Rage: Carrie 2 is a 1999 American supernatural horror film directed by Katt Shea and a sequel to the 1976 horror film \"Carrie\", based on the novel of the same name by Stephen King, and features Carrie White's baby half sister Rachel Lang in the lead role. Directed by Katt Shea, the film stars Emily Bergl, Jason London, Dylan Bruno, J. Smith-Cameron, and Amy Irving who reprises her role of Sue Snell from the previous film.",
+            "Robinne Lee\nRobinne Lee (born July 16, 1974) is an American actress and author ab. She made her screen debut in the 1997 independent film \"Hav Plenty\", and later has appeared in films \"National Security\" (2003), \"Deliver Us from Eva\" (2003), \"Hitch\" (2005), \"Seven Pounds\" (2008), \"Fifty Shades Darker\" (2017), and the upcoming \"Fifty Shades Freed\". Her first novel will be released by St Martin's Press in June 2017.",
+            "Bruce Lee and I\nBruce Lee and I (, released in the United States as Bruce Lee: His Last Days, His Last Nights) is a 1976 Hong Kong biographical action film directed by Lo Mar, and starring Betty Ting Pei and Danny Lee. The film was released in the Hong Kong on 9 January 1976. The film is based on Bruce Lee's last days leading up to his death in Pei's apartment at Hong Kong on 20 July 1973.",
+            "Luke Lee\nLuke Lee Wen Loong (born December 16, 1991) is a Singaporean actor, best known for portraying characters in both film and television. His best known role was Sergeant Heng in Jack Neo's army movies \"Ah Boys to Men\" and \"Ah Boys to Men 2\". He has also appeared in Hong Kong-Singapore horror film \"A Fantastic Ghost Wedding\". Notable roles include appearing in MediaCorp Channel 5's \"Tanglin (TV series)\", \"Point of Entry (TV series)\", HBO (Asia) 's \"Serangoon Road (TV series)\" as well as BBC's \"Insatiable Teens\".",
+            "Monster (2014 film)\nMonster () is a 2014 South Korean thriller film written and directed by Hwang In-ho, starring Lee Min-ki and Kim Go-eun.",
+            "Poseidon (TV series)\nPoseidon () is a 2011 South Korean action television series starring Choi Siwon, Lee Si-young, Lee Sung-jae, Han Jung-soo, Jung Woon-taek and Kil Yong-woo. It aired on KBS2 from September 19 to November 8, 2011, on Mondays and Tuesdays at 21:55 for 16 episodes.",
+            "Jealousy Incarnate\nJealousy Incarnate () is a South Korean television series starring Gong Hyo-jin, Jo Jung-suk, Go Kyung-pyo, Lee Mi-sook, Park Ji-young, Lee Sung-jae and Seo Ji-hye. It aired every Wednesday and Thursday at 22:00 (KST) on SBS from August 24 to November 10, 2016 for 24 episodes."
+        ],
+        "thoughts": [
+            "The film starring Carrie Coon released in 2017 is \"The Keeping Hours\".",
+            "Lee Pace plays Joe MacMillan in 'Halt and Catch Fire'.",
+            "The Keeping Hours is a movie starring Lee Pace in 2017.",
+            "The common film title between the lists from nodes 2 and 3 is \"The Keeping Hours\"."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "The actor that plays Joe MacMillan in \"Halt and Catch Fire\" also starred with Carrie Coon in what 2017 horror film?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the actor who plays Joe MacMillan in 'Halt and Catch Fire'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which 2017 horror film the actor from node 1 starred in alongside Carrie Coon.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph consists of two main nodes. \n\nThe first node identifies the actor who played the character Joe MacMillan in the TV series 'Halt and Catch Fire'. This is a retrieval and reasoning step where we get the name of the actor, Lee Pace.\n\nThe second node builds on this information to find a 2017 horror film where Lee Pace appeared alongside Carrie Coon. This requires retrieval of film data and cross-referencing it with Carrie Coon's filmography in 2017 to find the matching film 'The Keeping Hours'.\n\nThis sequential approach ensures that we gather the correct actor information before searching for the film, maintaining the logical flow of the task."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "The Keeping Hours\nThe Keeping Hours is a 2017 American supernatural romantic horror film directed by Karen Moncrieff and written by Rebecca Sonnenshine. The film stars Lee Pace and Carrie Coon.",
+            "Carrie Coon\nCarrie Alexandra Coon (born January 24, 1981) is an American actress. On stage, Coon was nominated for a Tony Award for her performance in the 2012 revival of \"Who's Afraid of Virginia Woolf?\". In film, she starred as Margo Dunne in the 2014 thriller film \"Gone Girl\". From 2014 to 2017, she starred as Nora Durst in the HBO drama series \"The Leftovers\", for which she received widespread critical acclaim, winning a Critics' Choice Television Award for Best Actress in a Drama Series. Coon also won for the TCA Award for Individual Achievement in Drama, for \"The Leftovers\" and for her lead role as Gloria Burgle in the third season of the FX anthology series \"Fargo\", along with a nomination for the Primetime Emmy Award for Outstanding Lead Actress in a Limited Series or Movie for \"Fargo\".",
+            "Lee Pace\nLee Grinner Pace (born March 25, 1979) is an American actor. Pace has been featured in film, stage and television. He currently stars as protagonist Joe MacMillan in AMC's \"Halt and Catch Fire\". He also played Roy Walker/the Masked Bandit in the 2006 film \"The Fall\". He has appeared in film series, including \"\" as Garrett and \"The Hobbit\" trilogy as Thranduil. He played villain Ronan the Accuser in the film \"Guardians of the Galaxy\", and starred as Ned in the ABC series \"Pushing Daisies\" for which he was nominated for the Golden Globe Award and Primetime Emmy Award for Outstanding Lead Actor in a Comedy Series in 2008.",
+            "List of Halt and Catch Fire episodes\n\"Halt and Catch Fire\" is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers, that premiered on AMC on June 1, 2014. The series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the third and fourth seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, whose execution would cause the computer's central processing unit to stop working (but not really catch fire).",
+            "Halt and Catch Fire (TV series)\nHalt and Catch Fire is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers that premiered on AMC on June 1, 2014. Taking place over a period of ten years, the series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the latter two seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, the execution of which would cause the computer's central processing unit to stop working (\"catch fire\" was a humorous exaggeration).",
+            "Mark O'Brien (actor)\nMark O'Brien (born May 7, 1984) is a Canadian actor and director. He is best known for playing the role of Des Courtney in \"Republic of Doyle\" and Tom Rendon in \"Halt and Catch Fire.",
+            "The Rage: Carrie 2\nThe Rage: Carrie 2 is a 1999 American supernatural horror film directed by Katt Shea and a sequel to the 1976 horror film \"Carrie\", based on the novel of the same name by Stephen King, and features Carrie White's baby half sister Rachel Lang in the lead role. Directed by Katt Shea, the film stars Emily Bergl, Jason London, Dylan Bruno, J. Smith-Cameron, and Amy Irving who reprises her role of Sue Snell from the previous film.",
+            "Kerry Bish\u00e9\nKerry Lynne Bish\u00e9 (born May 1, 1984) is a New Zealand-born American actress, known for her lead role as Donna Clark in the AMC television series \"Halt and Catch Fire\". Bish\u00e9 played the lead/narrator role on the final season of ABC's medical sitcom \"Scrubs\" and starred in the critically acclaimed drama film \"Argo\".",
+            "The Leftovers (TV series)\nThe Leftovers is an American television drama series created by Damon Lindelof and Tom Perrotta, that aired on HBO from June 29, 2014, to June 4, 2017. It is based on Perrotta's novel of the same name. The pilot was written by Lindelof and Perrotta, and directed by Peter Berg. The series stars an ensemble cast featuring Justin Theroux, Amy Brenneman, Christopher Eccleston, Liv Tyler, Chris Zylka, Margaret Qualley, Carrie Coon, Ann Dowd, Regina King, and Scott Glenn. The series was renewed for a second season, which premiered on October 4, 2015, and concluded December 6, 2015. On December 10, 2015, HBO renewed the show for a third and final season, which premiered on April 16, 2017 and concluded on June 4, 2017.",
+            "Scott Michael Foster\nScott Michael Foster (born March 4, 1985) is an American actor. He is best known for his roles as Captain John Paul \"Cappie\" Jones in the ABC Family comedy-drama series \"Greek\" (2007-2011), Leo Hendrie in the ABC Family drama \"Chasing Life\" (2014\u20142015) and as Nathaniel Plimpton III in \"Crazy Ex-Girlfriend\". Foster also had recurring roles on \"Californication\", \"Halt and Catch Fire\", and \"Once Upon a Time\".",
+            "Toby Huss\nToby Huss (born December 9, 1966) is an American actor known for portraying Artie in the Nickelodeon series \"The Adventures of Pete & Pete\" (1993\u20131996). He is also known for his voice-over work on the long-running animated series \"King of the Hill\" (1997\u20132010) and his role as Felix \"Stumpy\" Dreifuss on HBO's \"Carniv\u00e0le\" (2003\u20132005). He currently plays John Bosworth on the AMC original period drama \"Halt and Catch Fire\".",
+            "Sissy Spacek\nMary Elizabeth \"Sissy\" Spacek ( ; born December 25, 1949) is an American actress and singer. She began her career in the early 1970s and first gained attention for her role in the film \"Badlands\" (1973). Her major breakthrough came in 1976 when she played the title character of Carrie White in Brian De Palma's horror film \"Carrie\", based on the first novel by Stephen King, for which she earned an Oscar nomination (a rare feat for an actor or actress in a horror movie). She won the Academy Award for Best Actress for her portrayal of Loretta Lynn in the 1980 film \"Coal Miner's Daughter,\" and also earned a Grammy nomination for the song \"Coal Miner's Daughter\" from the film's soundtrack. She went on to receive further Oscar nominations for her roles in \"Missing\" (1982), \"The River\" (1984) and \"Crimes of the Heart\" (1986). \"Coal Miner's Daughter\" and \"Crimes of the Heart\" also won her the Golden Globe Award for Best Actress in a Musical or Comedy.",
+            "Spellbound (2011 film)\nSpellbound (; lit. \"Chilling Romance\") is a 2011 South Korean horror romantic comedy film, starring Son Ye-jin and Lee Min-ki. It is about a magician who falls in love with a woman who can see ghosts. It was written and directed by Hwang In-ho which also marks his directorial debut.",
+            "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein."
+        ],
+        "thoughts": [
+            "Lee Pace plays Joe MacMillan in 'Halt and Catch Fire'.",
+            "The actor from node 1, Lee Pace, starred in the 2017 horror film \"The Keeping Hours\" alongside Carrie Coon."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "The actor that plays Joe MacMillan in \"Halt and Catch Fire\" also starred with Carrie Coon in what 2017 horror film?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the actor who plays Joe MacMillan in 'Halt and Catch Fire'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve films starring Carrie Coon released in 2017.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve films from 2017 that the actor identified in Node 1 starred in.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Find the common film between the results of Node 2 and Node 3.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The question requires determining a film that includes two specific actors released in a particular year. The first step identifies the actor who plays Joe MacMillan in the specified show. The second step gathers 2017 films featuring Carrie Coon. The third step finds 2017 films starring the actor identified earlier. The final step identifies which film appears in both lists, providing the answer."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Lee Pace\nLee Grinner Pace (born March 25, 1979) is an American actor. Pace has been featured in film, stage and television. He currently stars as protagonist Joe MacMillan in AMC's \"Halt and Catch Fire\". He also played Roy Walker/the Masked Bandit in the 2006 film \"The Fall\". He has appeared in film series, including \"\" as Garrett and \"The Hobbit\" trilogy as Thranduil. He played villain Ronan the Accuser in the film \"Guardians of the Galaxy\", and starred as Ned in the ABC series \"Pushing Daisies\" for which he was nominated for the Golden Globe Award and Primetime Emmy Award for Outstanding Lead Actor in a Comedy Series in 2008.",
+            "List of Halt and Catch Fire episodes\n\"Halt and Catch Fire\" is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers, that premiered on AMC on June 1, 2014. The series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the third and fourth seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, whose execution would cause the computer's central processing unit to stop working (but not really catch fire).",
+            "Halt and Catch Fire (TV series)\nHalt and Catch Fire is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers that premiered on AMC on June 1, 2014. Taking place over a period of ten years, the series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the latter two seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, the execution of which would cause the computer's central processing unit to stop working (\"catch fire\" was a humorous exaggeration).",
+            "The Keeping Hours\nThe Keeping Hours is a 2017 American supernatural romantic horror film directed by Karen Moncrieff and written by Rebecca Sonnenshine. The film stars Lee Pace and Carrie Coon.",
+            "Carrie Coon\nCarrie Alexandra Coon (born January 24, 1981) is an American actress. On stage, Coon was nominated for a Tony Award for her performance in the 2012 revival of \"Who's Afraid of Virginia Woolf?\". In film, she starred as Margo Dunne in the 2014 thriller film \"Gone Girl\". From 2014 to 2017, she starred as Nora Durst in the HBO drama series \"The Leftovers\", for which she received widespread critical acclaim, winning a Critics' Choice Television Award for Best Actress in a Drama Series. Coon also won for the TCA Award for Individual Achievement in Drama, for \"The Leftovers\" and for her lead role as Gloria Burgle in the third season of the FX anthology series \"Fargo\", along with a nomination for the Primetime Emmy Award for Outstanding Lead Actress in a Limited Series or Movie for \"Fargo\".",
+            "Mark O'Brien (actor)\nMark O'Brien (born May 7, 1984) is a Canadian actor and director. He is best known for playing the role of Des Courtney in \"Republic of Doyle\" and Tom Rendon in \"Halt and Catch Fire.",
+            "The Leftovers (TV series)\nThe Leftovers is an American television drama series created by Damon Lindelof and Tom Perrotta, that aired on HBO from June 29, 2014, to June 4, 2017. It is based on Perrotta's novel of the same name. The pilot was written by Lindelof and Perrotta, and directed by Peter Berg. The series stars an ensemble cast featuring Justin Theroux, Amy Brenneman, Christopher Eccleston, Liv Tyler, Chris Zylka, Margaret Qualley, Carrie Coon, Ann Dowd, Regina King, and Scott Glenn. The series was renewed for a second season, which premiered on October 4, 2015, and concluded December 6, 2015. On December 10, 2015, HBO renewed the show for a third and final season, which premiered on April 16, 2017 and concluded on June 4, 2017.",
+            "Kerry Bish\u00e9\nKerry Lynne Bish\u00e9 (born May 1, 1984) is a New Zealand-born American actress, known for her lead role as Donna Clark in the AMC television series \"Halt and Catch Fire\". Bish\u00e9 played the lead/narrator role on the final season of ABC's medical sitcom \"Scrubs\" and starred in the critically acclaimed drama film \"Argo\".",
+            "Scott Michael Foster\nScott Michael Foster (born March 4, 1985) is an American actor. He is best known for his roles as Captain John Paul \"Cappie\" Jones in the ABC Family comedy-drama series \"Greek\" (2007-2011), Leo Hendrie in the ABC Family drama \"Chasing Life\" (2014\u20142015) and as Nathaniel Plimpton III in \"Crazy Ex-Girlfriend\". Foster also had recurring roles on \"Californication\", \"Halt and Catch Fire\", and \"Once Upon a Time\".",
+            "Toby Huss\nToby Huss (born December 9, 1966) is an American actor known for portraying Artie in the Nickelodeon series \"The Adventures of Pete & Pete\" (1993\u20131996). He is also known for his voice-over work on the long-running animated series \"King of the Hill\" (1997\u20132010) and his role as Felix \"Stumpy\" Dreifuss on HBO's \"Carniv\u00e0le\" (2003\u20132005). He currently plays John Bosworth on the AMC original period drama \"Halt and Catch Fire\".",
+            "Robinne Lee\nRobinne Lee (born July 16, 1974) is an American actress and author ab. She made her screen debut in the 1997 independent film \"Hav Plenty\", and later has appeared in films \"National Security\" (2003), \"Deliver Us from Eva\" (2003), \"Hitch\" (2005), \"Seven Pounds\" (2008), \"Fifty Shades Darker\" (2017), and the upcoming \"Fifty Shades Freed\". Her first novel will be released by St Martin's Press in June 2017.",
+            "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Jing Tian\nJing Tian (born 21 July 1988) is a Chinese actress. She graduated from the Beijing Dance Academy and Beijing Film Academy. She is known for her roles in war epic \"The Warring States\" (2011) and the action films \"Special ID\" and \"Police Story 2013\" (both in 2013). She is part of the cast for three Legendary Pictures films, including a prominent role in \"The Great Wall\" (2016) as well as \"\" (2017) and the upcoming \"\".",
+            "List of Scream characters\nWes Craven's \"Scream\" series features a large cast of characters created primarily by Kevin Williamson with contributions from Craven and Ehren Kruger. The series focuses on the character of Sidney Prescott (Neve Campbell) and a succession of murderers who adopt a ghost-like disguise, dubbed Ghostface, to taunt and attempt to kill her. The series comprises four films: \"Scream\" (1996), \"Scream 2\" (1997), \"Scream 3\" (2000) and \"Scream 4\" (2011).",
+            "The Rage: Carrie 2\nThe Rage: Carrie 2 is a 1999 American supernatural horror film directed by Katt Shea and a sequel to the 1976 horror film \"Carrie\", based on the novel of the same name by Stephen King, and features Carrie White's baby half sister Rachel Lang in the lead role. Directed by Katt Shea, the film stars Emily Bergl, Jason London, Dylan Bruno, J. Smith-Cameron, and Amy Irving who reprises her role of Sue Snell from the previous film.",
+            "Poseidon (TV series)\nPoseidon () is a 2011 South Korean action television series starring Choi Siwon, Lee Si-young, Lee Sung-jae, Han Jung-soo, Jung Woon-taek and Kil Yong-woo. It aired on KBS2 from September 19 to November 8, 2011, on Mondays and Tuesdays at 21:55 for 16 episodes.",
+            "Jealousy Incarnate\nJealousy Incarnate () is a South Korean television series starring Gong Hyo-jin, Jo Jung-suk, Go Kyung-pyo, Lee Mi-sook, Park Ji-young, Lee Sung-jae and Seo Ji-hye. It aired every Wednesday and Thursday at 22:00 (KST) on SBS from August 24 to November 10, 2016 for 24 episodes.",
+            "Ad Genius Lee Tae-baek\nAd Genius Lee Tae-baek () is a 2013 South Korean television series starring Jin Goo, Park Ha-sun, Jo Hyun-jae and Han Chae-young. Set in the cutthroat field of advertising where creativity and competition coexist, the drama is the success story of underdog Lee Tae-baek who fights his way to becoming the best ad man in the business. It aired on KBS2 from February 4 to March 26, 2013 on Mondays and Tuesdays at 21:55 for 16 episodes.",
+            "Bruce Lee and I\nBruce Lee and I (, released in the United States as Bruce Lee: His Last Days, His Last Nights) is a 1976 Hong Kong biographical action film directed by Lo Mar, and starring Betty Ting Pei and Danny Lee. The film was released in the Hong Kong on 9 January 1976. The film is based on Bruce Lee's last days leading up to his death in Pei's apartment at Hong Kong on 20 July 1973.",
+            "Personal Taste\nPersonal Taste (; lit. \"Kae-in's Taste\" or \"Kae-in's Preference\"; also known as Personal Preference) is a 2010 South Korean television series, starring Son Ye-jin and Lee Min-ho. It is adapted from Lee Se-in's 2007 novel of the same name about a furniture designer, Park Kae-in, who lives together with architect Jeon Jin-ho under the mistaken assumption that he's gay. It aired on MBC from March 31 to May 20, 2010 on Wednesdays and Thursdays at 21:55 for 16 episodes."
+        ],
+        "thoughts": [
+            "The film starring Carrie Coon released in 2017 is \"The Keeping Hours\".",
+            "Lee Pace plays Joe MacMillan in 'Halt and Catch Fire'.",
+            "The film from 2017 that Lee Pace starred in is \"The Keeping Hours\".",
+            "The common film between the results of Node 2 and Node 3 is \"The Keeping Hours\" released in 2017."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "The actor that plays Joe MacMillan in \"Halt and Catch Fire\" also starred with Carrie Coon in what 2017 horror film?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the actor who plays Joe MacMillan in 'Halt and Catch Fire'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the list of films starring the identified actor in 2017.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify a 2017 horror film from the list of films.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Find films released in 2017 starring both the identified actor and Carrie Coon.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Determine if the common film identified is a horror film.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Synthesize information to find the 2017 horror film starring Joe MacMillan's actor and Carrie Coon.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "The execution graph begins by identifying the actor who plays Joe MacMillan in 'Halt and Catch Fire'. This information is used to retrieve a list of films that the actor starred in during 2017. Concurrently, the node also retrieves films from 2017 featuring both this actor and Carrie Coon. The retrieval steps are followed by reasoning steps to isolate the relevant 2017 horror film from these lists, which are then synthesized to answer the question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "The Keeping Hours\nThe Keeping Hours is a 2017 American supernatural romantic horror film directed by Karen Moncrieff and written by Rebecca Sonnenshine. The film stars Lee Pace and Carrie Coon.",
+            "Lee Pace\nLee Grinner Pace (born March 25, 1979) is an American actor. Pace has been featured in film, stage and television. He currently stars as protagonist Joe MacMillan in AMC's \"Halt and Catch Fire\". He also played Roy Walker/the Masked Bandit in the 2006 film \"The Fall\". He has appeared in film series, including \"\" as Garrett and \"The Hobbit\" trilogy as Thranduil. He played villain Ronan the Accuser in the film \"Guardians of the Galaxy\", and starred as Ned in the ABC series \"Pushing Daisies\" for which he was nominated for the Golden Globe Award and Primetime Emmy Award for Outstanding Lead Actor in a Comedy Series in 2008.",
+            "List of Halt and Catch Fire episodes\n\"Halt and Catch Fire\" is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers, that premiered on AMC on June 1, 2014. The series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the third and fourth seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, whose execution would cause the computer's central processing unit to stop working (but not really catch fire).",
+            "Halt and Catch Fire (TV series)\nHalt and Catch Fire is an American period drama television series created by Christopher Cantwell and Christopher C. Rogers that premiered on AMC on June 1, 2014. Taking place over a period of ten years, the series depicts a fictionalized insider's view of the personal computer revolution of the 1980s and later the growth of the World Wide Web in the early 1990s. The series' first two seasons are set in the Silicon Prairie of Dallas\u2013Fort Worth, while the latter two seasons are set in Silicon Valley. The show's title refers to computer machine code instruction HCF, the execution of which would cause the computer's central processing unit to stop working (\"catch fire\" was a humorous exaggeration).",
+            "Mark O'Brien (actor)\nMark O'Brien (born May 7, 1984) is a Canadian actor and director. He is best known for playing the role of Des Courtney in \"Republic of Doyle\" and Tom Rendon in \"Halt and Catch Fire.",
+            "Carrie Coon\nCarrie Alexandra Coon (born January 24, 1981) is an American actress. On stage, Coon was nominated for a Tony Award for her performance in the 2012 revival of \"Who's Afraid of Virginia Woolf?\". In film, she starred as Margo Dunne in the 2014 thriller film \"Gone Girl\". From 2014 to 2017, she starred as Nora Durst in the HBO drama series \"The Leftovers\", for which she received widespread critical acclaim, winning a Critics' Choice Television Award for Best Actress in a Drama Series. Coon also won for the TCA Award for Individual Achievement in Drama, for \"The Leftovers\" and for her lead role as Gloria Burgle in the third season of the FX anthology series \"Fargo\", along with a nomination for the Primetime Emmy Award for Outstanding Lead Actress in a Limited Series or Movie for \"Fargo\".",
+            "Kerry Bish\u00e9\nKerry Lynne Bish\u00e9 (born May 1, 1984) is a New Zealand-born American actress, known for her lead role as Donna Clark in the AMC television series \"Halt and Catch Fire\". Bish\u00e9 played the lead/narrator role on the final season of ABC's medical sitcom \"Scrubs\" and starred in the critically acclaimed drama film \"Argo\".",
+            "Scott Michael Foster\nScott Michael Foster (born March 4, 1985) is an American actor. He is best known for his roles as Captain John Paul \"Cappie\" Jones in the ABC Family comedy-drama series \"Greek\" (2007-2011), Leo Hendrie in the ABC Family drama \"Chasing Life\" (2014\u20142015) and as Nathaniel Plimpton III in \"Crazy Ex-Girlfriend\". Foster also had recurring roles on \"Californication\", \"Halt and Catch Fire\", and \"Once Upon a Time\".",
+            "Toby Huss\nToby Huss (born December 9, 1966) is an American actor known for portraying Artie in the Nickelodeon series \"The Adventures of Pete & Pete\" (1993\u20131996). He is also known for his voice-over work on the long-running animated series \"King of the Hill\" (1997\u20132010) and his role as Felix \"Stumpy\" Dreifuss on HBO's \"Carniv\u00e0le\" (2003\u20132005). He currently plays John Bosworth on the AMC original period drama \"Halt and Catch Fire\".",
+            "Robinne Lee\nRobinne Lee (born July 16, 1974) is an American actress and author ab. She made her screen debut in the 1997 independent film \"Hav Plenty\", and later has appeared in films \"National Security\" (2003), \"Deliver Us from Eva\" (2003), \"Hitch\" (2005), \"Seven Pounds\" (2008), \"Fifty Shades Darker\" (2017), and the upcoming \"Fifty Shades Freed\". Her first novel will be released by St Martin's Press in June 2017.",
+            "The Leftovers (TV series)\nThe Leftovers is an American television drama series created by Damon Lindelof and Tom Perrotta, that aired on HBO from June 29, 2014, to June 4, 2017. It is based on Perrotta's novel of the same name. The pilot was written by Lindelof and Perrotta, and directed by Peter Berg. The series stars an ensemble cast featuring Justin Theroux, Amy Brenneman, Christopher Eccleston, Liv Tyler, Chris Zylka, Margaret Qualley, Carrie Coon, Ann Dowd, Regina King, and Scott Glenn. The series was renewed for a second season, which premiered on October 4, 2015, and concluded December 6, 2015. On December 10, 2015, HBO renewed the show for a third and final season, which premiered on April 16, 2017 and concluded on June 4, 2017.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Bruce Lee and I\nBruce Lee and I (, released in the United States as Bruce Lee: His Last Days, His Last Nights) is a 1976 Hong Kong biographical action film directed by Lo Mar, and starring Betty Ting Pei and Danny Lee. The film was released in the Hong Kong on 9 January 1976. The film is based on Bruce Lee's last days leading up to his death in Pei's apartment at Hong Kong on 20 July 1973.",
+            "Willard (1971 film)\nWillard is a 1971 American horror film directed by Daniel Mann and starring Bruce Davison and Ernest Borgnine. Based on the novel \"Ratman's Notebooks\" by Stephen Gilbert, the film was nominated for an Edgar Award for best picture. The supporting cast included Elsa Lanchester in one of her last performances, and Sondra Locke in one of her first. The film was a summer hit in 1971; opening to good reviews and high box office returns. It inspired other horror films with wild animals as predators, such as the hit films \"Jaws\" (1975), as well as psychological thrillers with social outcasts as the protagonists, such as \"Carrie\" (1976).",
+            "Tell (2014 film)\nTell is a 2014 crime thriller starring Katee Sackhoff, Jason Lee and Milo Ventimiglia. Written by actor/screenwriter Timothy Williams, Tell was produced by Haven Entertainment, distributed by Orion Pictures, and was released on December 4.",
+            "Laundry Day\nLaundry Day is an American independent dark comedy/crime film set in New Orleans starring Kerry Cahill, Billy Slaughter, Dave Davis, and Samantha Ann. It is the directorial debut of Randy Mack, who also wrote and produced via Armak Productions. The original score was composed and performed by Peter Orr of legendary New Orleans band Sneaky Pete & The Fens. It is currently represented by Circus Road Films and planning a 2017 film festival premiere.",
+            "Monster (2014 film)\nMonster () is a 2014 South Korean thriller film written and directed by Hwang In-ho, starring Lee Min-ki and Kim Go-eun.",
+            "List of American Pie characters\nThis is a list of characters from the film series \"American Pie\" consisting of \"American Pie\" (1999), \"American Pie 2\" (2001), \"American Wedding\" (2003), \"\" (2005), \"\" (2006), \"\" (2007), \"\" (2009), and \"American Reunion\" (2012). Only one character, Noah Levenstein played by Eugene Levy, has appeared in all eight released films. Biggs, Hannigan, Scott, Nicholas, Thomas, Coolidge, Cho, Isfield, Cheek, and Owen all play their characters in four films each; other characters appear in fewer films.",
+            "Ad Genius Lee Tae-baek\nAd Genius Lee Tae-baek () is a 2013 South Korean television series starring Jin Goo, Park Ha-sun, Jo Hyun-jae and Han Chae-young. Set in the cutthroat field of advertising where creativity and competition coexist, the drama is the success story of underdog Lee Tae-baek who fights his way to becoming the best ad man in the business. It aired on KBS2 from February 4 to March 26, 2013 on Mondays and Tuesdays at 21:55 for 16 episodes."
+        ],
+        "thoughts": [
+            "Lee Pace plays Joe MacMillan in 'Halt and Catch Fire'.",
+            "The list of films starring Lee Pace in 2017 is as follows:\n1. The Keeping Hours",
+            "The 2017 horror film from the list of films is \"The Keeping Hours.\"",
+            "The film \"The Keeping Hours\" released in 2017 stars both Lee Pace and Carrie Coon.",
+            "The film \"The Keeping Hours\" is not a horror film. It is a supernatural drama film that focuses on themes of love, loss, and redemption.",
+            "The 2017 horror film starring Joe MacMillan's actor and Carrie Coon is \"The Keeping Hours.\" However, it is important to note that \"The Keeping Hours\" is not a horror film, but rather a supernatural drama film that explores themes of love, loss, and redemption."
+        ],
+        "is_best": false
+    }
+]

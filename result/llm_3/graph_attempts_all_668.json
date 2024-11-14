@@ -1,0 +1,705 @@
+[
+    {
+        "question": "Do Dillingham Airport and Rafael Hern\u00e1ndez Airport both handle civilian (passenger) service?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Dillingham Airport, specifically whether it handles civilian (passenger) service.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Rafael Hern\u00e1ndez Airport, specifically whether it handles civilian (passenger) service.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Dillingham Airport handles civilian (passenger) service based on the information retrieved.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Rafael Hern\u00e1ndez Airport handles civilian (passenger) service based on the information retrieved.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the findings from both Dillingham Airport and Rafael Hern\u00e1ndez Airport to conclude whether both handle civilian (passenger) service.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the task into key components: retrieving data for each airport independently and determining their ability to handle civilian (passenger) service. The final reasoning step synthesizes results from both airports to answer the original question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Dillingham Airport\nDillingham Airport (IATA: DLG, ICAO: PADL, FAA LID: DLG) is a state owned, public use airport located two nautical miles (4 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. Scheduled passenger service is available at this airport.",
+            "Rafael Hern\u00e1ndez Airport\nRafael Hern\u00e1ndez Airport (IATA: BQN, ICAO: TJBQ, FAA LID: BQN) is a joint civil-military airport located in Aguadilla, Puerto Rico. It is named after the Puerto Rican composer Rafael Hern\u00e1ndez Mar\u00edn and is the second largest international airport in Puerto Rico in the region of Porta del Sol, Puerto Rico's west coast. It is also home to Coast Guard Air Station Borinquen. Rafael Hernandez Airport mainly serves Puerto Rican westerners living in the Eastern Region of the United States. The airport previously served as a focus city for PAWA Dominicana.",
+            "Air Cortez\nAir Cortez was a United States FAR 121 and 135 commuter airline that operated from 1977 to 1986. Air Cortez served a number of cities in Southern California, Arizona, Nevada and Baja California. In 1981, Air Cortez was operating nonstop passenger service between Ontario Airport (ONT) and Yuma, Arizona (YUM) with a Beech 18 prop aircraft. In 1985, the airline was operating scheduled passenger service between Las Vegas (LAS) and Grand Canyon National Park Airport (GCN) with Fairchild F-27 turboprop and Cessna 402 prop aircraft. Air Cortez also operated scheduled international passenger service to Mexico with the Fairchild F-27 on a routing of Ontario-San Diego-Guaymas-Mulege-Loreto.",
+            "Twin Hills Airport\nTwin Hills Airport (IATA: TWA,\u00a0FAA LID: A63) is a state-owned, public-use airport serving Twin Hills, in the Dillingham Census Area of the U.S. state of Alaska. Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Koliganek Airport\nKoliganek Airport (IATA: KGK,\u00a0ICAO: PAJZ,\u00a0FAA LID: JZZ) is a state-owned, public-use airport located one nautical mile (1.85\u00a0km) east of the central business district of Koliganek, in the Dillingham Census Area of the U.S. state of Alaska. Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Shannons Pond Seaplane Base\nShannons Pond Seaplane Base (FAA LID: 0Z3) is a public-use seaplane base located three nautical miles (6 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. As per Federal Aviation Administration records, this facility had 1,000 passenger boardings (enplanements) in calendar year 2008. It is 3 mi west of Dillingham Airport.",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Grand Canyon Airlines\nGrand Canyon Airlines is an 14 CFR Part 135 air carrier headquartered on the grounds of Boulder City Airport, Boulder City, NV. Grand Canyon Airlines also has bases at Grand Canyon National Park Airport, AZ, and Page Airport, AZ. It operates sightseeing tours and scheduled passenger service over and around the Grand Canyon. Its headquarters and main operation center is Grand Canyon National Park Airport and Boulder City Airport, Nevada.",
+            "Fina Air\nFina Air was an airline based in San Juan, Puerto Rico named after Josefina Canto who was the mother of Lazaro Canto. It operated charter flights to the Dominican Republic from Luis Mu\u00f1oz Mar\u00edn International Airport in San Juan, Rafael Hern\u00e1ndez Airport in Aguadilla and Eugenio Mar\u00eda de Hostos Airport in Mayag\u00fcez. The airline has now ceased operations.",
+            "Bishop International Airport\nBishop International Airport (IATA: FNT,\u00a0ICAO: KFNT,\u00a0FAA LID: FNT) is a commercial and general aviation airport located in Flint, Michigan. It is named after banker and General Motors board member Arthur Giles Bishop (April 12, 1851 \u2013 January 22, 1944), who donated 220 acres of his farmland for the airport in 1928. The third busiest airport in Michigan, it surpassed competitor MBS International Airport in terms of airline operations in 2002. In 2007, 1,071,238 passengers used Bishop International Airport; in 2011, 938,914 passengers used the airport. It is included in the Federal Aviation Administration (FAA) National Plan of Integrated Airport Systems for 2017\u20132021, in which it is categorized as a small hub primary commercial service facility. The airport is currently served by several passenger airlines: Allegiant Air, Southwest Airlines and Delta Air Lines operate mainline service out of the airport, as well as affiliates of Delta Connection, United Express and American Eagle. Additionally, FedEx Express and a FedEx Feeder affiliate operate cargo services out of the airport. Accompanying the airlines is fixed-base operator Av Flight that handles both general aviation and airline operations and the flight school American Wings Aviation. Bishop International Airport is in southwestern Flint, and is surrounded by Flint Township to the north, east and west; and Mundy Township to the south.",
+            "Punta Borinquen Radar Station\nPunta Borinquen Radar Station is a facility of the Puerto Rico Air National Guard home for the 141st Air Control Squadron. Located adjacent to Rafael Hern\u00e1ndez Airport (which operates at the old Ramey Air Force Base), the facility has operated since 1964 when the 140th Aircraft Control and Warning Squadron (ACWS) was created under the control of Air Defense Command (ADC).",
+            "Air Wisconsin\nAir Wisconsin Airlines is a regional airline based at Appleton International Airport in the town of Greenville, Wisconsin, United States, near Appleton. Air Wisconsin is the largest privately held regional airline in the United States. It currently operates regional jet flights as American Eagle under contract to American Airlines via a code sharing agreement, serving cities in the U.S. and Canada with hubs at Boston Logan International Airport (BOS), Charlotte Douglas International Airport (CLT), Philadelphia International Airport (PHL) and Ronald Reagan Washington National Airport (DCA) . Air Wisconsin previously operated United Express service on behalf of United Airlines followed by US Airways Express service on behalf of US Airways prior to becoming an American Eagle regional air carrier. The company has announced it will once again partner with United Airlines as a United Express code sharing air carrier with primary hubs to be located at Chicago O'Hare International Airport (ORD) and Washington Dulles International Airport (IAD) beginning in September 2017 and will be \"exclusively operating\" as United Express by March 2018."
+        ],
+        "thoughts": [
+            "Dillingham Airport does handle civilian (passenger) service. Scheduled passenger service is available at this airport, with Peninsula Airways (PenAir) providing airline service to and from other airports in the Dillingham Census Area of Alaska.",
+            "Based on the information retrieved, Dillingham Airport does handle civilian (passenger) service. Scheduled passenger service is available at this airport, with Peninsula Airways (PenAir) providing airline service to and from other airports in the Dillingham Census Area of Alaska.",
+            "Rafael Hern\u00e1ndez Airport is a joint civil-military airport located in Aguadilla, Puerto Rico. It serves as the second largest international airport in Puerto Rico and mainly serves Puerto Rican westerners living in the Eastern Region of the United States. It is also home to Coast Guard Air Station Borinquen. The airport previously served as a focus city for PAWA Dominicana. Therefore, it does handle civilian (passenger) service.",
+            "Based on the information retrieved, Rafael Hern\u00e1ndez Airport does handle civilian (passenger) service. It is the second largest international airport in Puerto Rico and serves Puerto Rican westerners living in the Eastern Region of the United States. Additionally, it previously served as a focus city for PAWA Dominicana, further indicating its civilian service.",
+            "Both Dillingham Airport and Rafael Hern\u00e1ndez Airport handle civilian (passenger) service. Dillingham Airport offers scheduled passenger service through Peninsula Airways (PenAir) to and from other airports in the Dillingham Census Area of Alaska. Rafael Hern\u00e1ndez Airport is the second largest international airport in Puerto Rico and serves Puerto Rican westerners living in the Eastern Region of the United States, as well as previously serving as a focus city for PAWA Dominicana, indicating its civilian service."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Do Dillingham Airport and Rafael Hern\u00e1ndez Airport both handle civilian (passenger) service?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Dillingham Airport, including services it provides.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Rafael Hern\u00e1ndez Airport, including services it provides.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Dillingham Airport handles civilian (passenger) services based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Rafael Hern\u00e1ndez Airport handles civilian (passenger) services based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Analyze the conclusions about both airports to answer if they both handle civilian (passenger) services.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph breaks down the question into steps. First, it retrieves information about the services provided by each airport. Then, it determines whether each airport provides civilian (passenger) services. Finally, it combines these conclusions to answer the original question about both airports handling passenger services."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Rafael Hern\u00e1ndez Airport\nRafael Hern\u00e1ndez Airport (IATA: BQN, ICAO: TJBQ, FAA LID: BQN) is a joint civil-military airport located in Aguadilla, Puerto Rico. It is named after the Puerto Rican composer Rafael Hern\u00e1ndez Mar\u00edn and is the second largest international airport in Puerto Rico in the region of Porta del Sol, Puerto Rico's west coast. It is also home to Coast Guard Air Station Borinquen. Rafael Hernandez Airport mainly serves Puerto Rican westerners living in the Eastern Region of the United States. The airport previously served as a focus city for PAWA Dominicana.",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Puerto Rico Firefighters Corps\nThe Puerto Rico Firefighters Corps \u2014Spanish: \"Cuerpo de Bomberos de Puerto Rico\" (CBPR)\u2014 is the statewide fire department that provides fire protection, rescue, and protection from other hazards in Puerto Rico. It was established in 1942 under the Puerto Rico Fire Services. In addition, it offers fire protection services to all the airports under the authority of the Puerto Rico Ports Authority, including the Luis Mu\u00f1oz Marin International Airport, Rafael Hern\u00e1ndez Airport, and Mercedita Airport and they serve as crash rescue divisions. A separate agency, the Puerto Rico Medical Emergency Corps, provides emergency medical services to all Puerto Rico.",
+            "Fina Air\nFina Air was an airline based in San Juan, Puerto Rico named after Josefina Canto who was the mother of Lazaro Canto. It operated charter flights to the Dominican Republic from Luis Mu\u00f1oz Mar\u00edn International Airport in San Juan, Rafael Hern\u00e1ndez Airport in Aguadilla and Eugenio Mar\u00eda de Hostos Airport in Mayag\u00fcez. The airline has now ceased operations.",
+            "Dillingham Airport\nDillingham Airport (IATA: DLG, ICAO: PADL, FAA LID: DLG) is a state owned, public use airport located two nautical miles (4 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. Scheduled passenger service is available at this airport.",
+            "Twin Hills Airport\nTwin Hills Airport (IATA: TWA,\u00a0FAA LID: A63) is a state-owned, public-use airport serving Twin Hills, in the Dillingham Census Area of the U.S. state of Alaska. Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Koliganek Airport\nKoliganek Airport (IATA: KGK,\u00a0ICAO: PAJZ,\u00a0FAA LID: JZZ) is a state-owned, public-use airport located one nautical mile (1.85\u00a0km) east of the central business district of Koliganek, in the Dillingham Census Area of the U.S. state of Alaska. Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Punta Borinquen Radar Station\nPunta Borinquen Radar Station is a facility of the Puerto Rico Air National Guard home for the 141st Air Control Squadron. Located adjacent to Rafael Hern\u00e1ndez Airport (which operates at the old Ramey Air Force Base), the facility has operated since 1964 when the 140th Aircraft Control and Warning Squadron (ACWS) was created under the control of Air Defense Command (ADC).",
+            "Hernandez Houses\nRafael Hernandez Houses, also known as Hernandez Houses, is a public housing development built and maintained by the New York City Housing Authority (NYCHA) on the Lower East Side of Manhattan at . The development is named after Rafael Hern\u00e1ndez Mar\u00edn (1892-1965), a Puerto Rican music composer who served in the United States Armed Forces during World War I. After studying music in Puerto Rico and Mexico, Rafael Hern\u00e1ndez Mar\u00edn travelled to New York City, then to Latin America; after he returned to his homeland Puerto Rico, he became the director of the Puerto Rican Symphonic Orchestra.",
+            "Shannons Pond Seaplane Base\nShannons Pond Seaplane Base (FAA LID: 0Z3) is a public-use seaplane base located three nautical miles (6 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. As per Federal Aviation Administration records, this facility had 1,000 passenger boardings (enplanements) in calendar year 2008. It is 3 mi west of Dillingham Airport.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Israir Airlines\nIsrair Airlines Ltd. (Hebrew: \u05d9\u05e9\u05e8\u05d0\u05d9\u05d9\u05e8\u200e \u200e ), usually referred to as Israir, is an Israeli airline headquartered in Tel Aviv. It operates domestic scheduled and air taxi flights from Sde Dov Airport, Haifa Airport, Ben Gurion International Airport, and Eilat Airport, as well as international charter services from Ben Gurion International Airport to Europe and Asia. It also operates VIP flights, and is Israel's third-largest airline after El Al and Arkia Israel Airlines, employing some 350 staff."
+        ],
+        "thoughts": [
+            "Dillingham Airport (IATA: DLG, ICAO: PADL, FAA LID: DLG) is a state-owned, public-use airport located in Dillingham, Alaska. It offers scheduled passenger service and serves as a hub for other nearby airports such as Twin Hills Airport and Koliganek Airport, which provide scheduled airline service to Dillingham Airport. Additionally, Shannons Pond Seaplane Base, located near Dillingham Airport, offers public-use seaplane services.\n\nThe airport provides essential services such as passenger boarding, baggage handling, and aircraft maintenance. It plays a crucial role in connecting the Dillingham Census Area to other parts of Alaska and beyond.",
+            "Based on the retrieved information, Dillingham Airport does handle civilian (passenger) services. It offers scheduled passenger service and provides essential services such as passenger boarding and baggage handling. Additionally, it serves as a hub for nearby airports that also offer scheduled airline service to Dillingham Airport. Therefore, it can be concluded that Dillingham Airport handles civilian (passenger) services.",
+            "Rafael Hern\u00e1ndez Airport (IATA: BQN, ICAO: TJBQ, FAA LID: BQN) is a joint civil-military airport located in Aguadilla, Puerto Rico. It is the second largest international airport in Puerto Rico and serves Puerto Rican westerners living in the Eastern Region of the United States. The airport provides services such as fire protection, rescue, and protection from other hazards through the Puerto Rico Firefighters Corps, as well as crash rescue divisions. It also previously served as a focus city for PAWA Dominicana and operated charter flights to the Dominican Republic through Fina Air. Additionally, the airport is home to the Punta Borinquen Radar Station, a facility of the Puerto Rico Air National Guard.",
+            "Based on the information retrieved, Rafael Hern\u00e1ndez Airport does handle civilian (passenger) services. It is the second largest international airport in Puerto Rico and serves Puerto Rican westerners living in the Eastern Region of the United States. It also previously served as a focus city for PAWA Dominicana and operated charter flights to the Dominican Republic through Fina Air. Therefore, it is confirmed that Rafael Hern\u00e1ndez Airport handles civilian (passenger) services.",
+            "Both Dillingham Airport and Rafael Hern\u00e1ndez Airport handle civilian (passenger) services. Dillingham Airport offers scheduled passenger service and serves as a hub for nearby airports, while Rafael Hern\u00e1ndez Airport is the second largest international airport in Puerto Rico and serves Puerto Rican westerners living in the Eastern Region of the United States. Therefore, both airports provide essential services for civilian passengers."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Do Dillingham Airport and Rafael Hern\u00e1ndez Airport both handle civilian (passenger) service?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Dillingham Airport, including whether it handles civilian passenger service.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Rafael Hern\u00e1ndez Airport, including whether it handles civilian passenger service.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Combine the results about Dillingham Airport and Rafael Hern\u00e1ndez Airport to determine if both handle civilian passenger service.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is designed to independently verify the status of civilian (passenger) service at both airports. Nodes 1 and 2 independently retrieve and assess this information for Dillingham Airport and Rafael Hern\u00e1ndez Airport, respectively. Once the necessary information is gathered, node 3 synthesizes the data to conclude whether both airports handle civilian passenger service."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Dillingham Airport\nDillingham Airport (IATA: DLG, ICAO: PADL, FAA LID: DLG) is a state owned, public use airport located two nautical miles (4 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. Scheduled passenger service is available at this airport.",
+            "Rafael Hern\u00e1ndez Airport\nRafael Hern\u00e1ndez Airport (IATA: BQN, ICAO: TJBQ, FAA LID: BQN) is a joint civil-military airport located in Aguadilla, Puerto Rico. It is named after the Puerto Rican composer Rafael Hern\u00e1ndez Mar\u00edn and is the second largest international airport in Puerto Rico in the region of Porta del Sol, Puerto Rico's west coast. It is also home to Coast Guard Air Station Borinquen. Rafael Hernandez Airport mainly serves Puerto Rican westerners living in the Eastern Region of the United States. The airport previously served as a focus city for PAWA Dominicana.",
+            "Twin Hills Airport\nTwin Hills Airport (IATA: TWA,\u00a0FAA LID: A63) is a state-owned, public-use airport serving Twin Hills, in the Dillingham Census Area of the U.S. state of Alaska. Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Koliganek Airport\nKoliganek Airport (IATA: KGK,\u00a0ICAO: PAJZ,\u00a0FAA LID: JZZ) is a state-owned, public-use airport located one nautical mile (1.85\u00a0km) east of the central business district of Koliganek, in the Dillingham Census Area of the U.S. state of Alaska. Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Shannons Pond Seaplane Base\nShannons Pond Seaplane Base (FAA LID: 0Z3) is a public-use seaplane base located three nautical miles (6 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. As per Federal Aviation Administration records, this facility had 1,000 passenger boardings (enplanements) in calendar year 2008. It is 3 mi west of Dillingham Airport.",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Fina Air\nFina Air was an airline based in San Juan, Puerto Rico named after Josefina Canto who was the mother of Lazaro Canto. It operated charter flights to the Dominican Republic from Luis Mu\u00f1oz Mar\u00edn International Airport in San Juan, Rafael Hern\u00e1ndez Airport in Aguadilla and Eugenio Mar\u00eda de Hostos Airport in Mayag\u00fcez. The airline has now ceased operations.",
+            "Air Cortez\nAir Cortez was a United States FAR 121 and 135 commuter airline that operated from 1977 to 1986. Air Cortez served a number of cities in Southern California, Arizona, Nevada and Baja California. In 1981, Air Cortez was operating nonstop passenger service between Ontario Airport (ONT) and Yuma, Arizona (YUM) with a Beech 18 prop aircraft. In 1985, the airline was operating scheduled passenger service between Las Vegas (LAS) and Grand Canyon National Park Airport (GCN) with Fairchild F-27 turboprop and Cessna 402 prop aircraft. Air Cortez also operated scheduled international passenger service to Mexico with the Fairchild F-27 on a routing of Ontario-San Diego-Guaymas-Mulege-Loreto.",
+            "Punta Borinquen Radar Station\nPunta Borinquen Radar Station is a facility of the Puerto Rico Air National Guard home for the 141st Air Control Squadron. Located adjacent to Rafael Hern\u00e1ndez Airport (which operates at the old Ramey Air Force Base), the facility has operated since 1964 when the 140th Aircraft Control and Warning Squadron (ACWS) was created under the control of Air Defense Command (ADC).",
+            "Puerto Rico Firefighters Corps\nThe Puerto Rico Firefighters Corps \u2014Spanish: \"Cuerpo de Bomberos de Puerto Rico\" (CBPR)\u2014 is the statewide fire department that provides fire protection, rescue, and protection from other hazards in Puerto Rico. It was established in 1942 under the Puerto Rico Fire Services. In addition, it offers fire protection services to all the airports under the authority of the Puerto Rico Ports Authority, including the Luis Mu\u00f1oz Marin International Airport, Rafael Hern\u00e1ndez Airport, and Mercedita Airport and they serve as crash rescue divisions. A separate agency, the Puerto Rico Medical Emergency Corps, provides emergency medical services to all Puerto Rico.",
+            "Grand Canyon Airlines\nGrand Canyon Airlines is an 14 CFR Part 135 air carrier headquartered on the grounds of Boulder City Airport, Boulder City, NV. Grand Canyon Airlines also has bases at Grand Canyon National Park Airport, AZ, and Page Airport, AZ. It operates sightseeing tours and scheduled passenger service over and around the Grand Canyon. Its headquarters and main operation center is Grand Canyon National Park Airport and Boulder City Airport, Nevada.",
+            "Bishop International Airport\nBishop International Airport (IATA: FNT,\u00a0ICAO: KFNT,\u00a0FAA LID: FNT) is a commercial and general aviation airport located in Flint, Michigan. It is named after banker and General Motors board member Arthur Giles Bishop (April 12, 1851 \u2013 January 22, 1944), who donated 220 acres of his farmland for the airport in 1928. The third busiest airport in Michigan, it surpassed competitor MBS International Airport in terms of airline operations in 2002. In 2007, 1,071,238 passengers used Bishop International Airport; in 2011, 938,914 passengers used the airport. It is included in the Federal Aviation Administration (FAA) National Plan of Integrated Airport Systems for 2017\u20132021, in which it is categorized as a small hub primary commercial service facility. The airport is currently served by several passenger airlines: Allegiant Air, Southwest Airlines and Delta Air Lines operate mainline service out of the airport, as well as affiliates of Delta Connection, United Express and American Eagle. Additionally, FedEx Express and a FedEx Feeder affiliate operate cargo services out of the airport. Accompanying the airlines is fixed-base operator Av Flight that handles both general aviation and airline operations and the flight school American Wings Aviation. Bishop International Airport is in southwestern Flint, and is surrounded by Flint Township to the north, east and west; and Mundy Township to the south.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein."
+        ],
+        "thoughts": [
+            "Dillingham Airport is a state-owned, public use airport located in Alaska. It does handle civilian passenger service, with scheduled airline service provided by Peninsula Airways (PenAir). Twin Hills Airport and Koliganek Airport also provide scheduled airline service to Dillingham Airport. Additionally, Shannons Pond Seaplane Base, located near Dillingham, had 1,000 passenger boardings in 2008. Therefore, Dillingham Airport does handle civilian passenger service.",
+            "Rafael Hern\u00e1ndez Airport is a joint civil-military airport located in Aguadilla, Puerto Rico. It is the second largest international airport in Puerto Rico and mainly serves Puerto Rican westerners living in the Eastern Region of the United States. The airport previously served as a focus city for PAWA Dominicana. It handles civilian passenger service and is also home to Coast Guard Air Station Borinquen. Additionally, the Puerto Rico Firefighters Corps provides fire protection services to the airport and serves as a crash rescue division.",
+            "Both Dillingham Airport and Rafael Hern\u00e1ndez Airport handle civilian passenger service. Dillingham Airport in Alaska provides scheduled airline service and had 1,000 passenger boardings in 2008, while Rafael Hern\u00e1ndez Airport in Puerto Rico is the second largest international airport in the region and serves Puerto Rican westerners living in the Eastern Region of the United States. Therefore, both airports handle civilian passenger service."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Do Dillingham Airport and Rafael Hern\u00e1ndez Airport both handle civilian (passenger) service?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the type of services Dillingham Airport handles.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the type of services Rafael Hern\u00e1ndez Airport handles.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Dillingham Airport handles civilian (passenger) services based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Rafael Hern\u00e1ndez Airport handles civilian (passenger) services based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to establish if both airports handle civilian (passenger) services.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the question into steps that involve retrieving information about the services provided by each airport and then reasoning to determine if they both handle civilian passenger services. This involves independent retrieval actions for each airport followed by reasoning steps that combine the information to answer the question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Rafael Hern\u00e1ndez Airport\nRafael Hern\u00e1ndez Airport (IATA: BQN, ICAO: TJBQ, FAA LID: BQN) is a joint civil-military airport located in Aguadilla, Puerto Rico. It is named after the Puerto Rican composer Rafael Hern\u00e1ndez Mar\u00edn and is the second largest international airport in Puerto Rico in the region of Porta del Sol, Puerto Rico's west coast. It is also home to Coast Guard Air Station Borinquen. Rafael Hernandez Airport mainly serves Puerto Rican westerners living in the Eastern Region of the United States. The airport previously served as a focus city for PAWA Dominicana.",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Puerto Rico Firefighters Corps\nThe Puerto Rico Firefighters Corps \u2014Spanish: \"Cuerpo de Bomberos de Puerto Rico\" (CBPR)\u2014 is the statewide fire department that provides fire protection, rescue, and protection from other hazards in Puerto Rico. It was established in 1942 under the Puerto Rico Fire Services. In addition, it offers fire protection services to all the airports under the authority of the Puerto Rico Ports Authority, including the Luis Mu\u00f1oz Marin International Airport, Rafael Hern\u00e1ndez Airport, and Mercedita Airport and they serve as crash rescue divisions. A separate agency, the Puerto Rico Medical Emergency Corps, provides emergency medical services to all Puerto Rico.",
+            "Fina Air\nFina Air was an airline based in San Juan, Puerto Rico named after Josefina Canto who was the mother of Lazaro Canto. It operated charter flights to the Dominican Republic from Luis Mu\u00f1oz Mar\u00edn International Airport in San Juan, Rafael Hern\u00e1ndez Airport in Aguadilla and Eugenio Mar\u00eda de Hostos Airport in Mayag\u00fcez. The airline has now ceased operations.",
+            "Dillingham Airport\nDillingham Airport (IATA: DLG, ICAO: PADL, FAA LID: DLG) is a state owned, public use airport located two nautical miles (4 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. Scheduled passenger service is available at this airport.",
+            "Twin Hills Airport\nTwin Hills Airport (IATA: TWA,\u00a0FAA LID: A63) is a state-owned, public-use airport serving Twin Hills, in the Dillingham Census Area of the U.S. state of Alaska. Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Koliganek Airport\nKoliganek Airport (IATA: KGK,\u00a0ICAO: PAJZ,\u00a0FAA LID: JZZ) is a state-owned, public-use airport located one nautical mile (1.85\u00a0km) east of the central business district of Koliganek, in the Dillingham Census Area of the U.S. state of Alaska. Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Punta Borinquen Radar Station\nPunta Borinquen Radar Station is a facility of the Puerto Rico Air National Guard home for the 141st Air Control Squadron. Located adjacent to Rafael Hern\u00e1ndez Airport (which operates at the old Ramey Air Force Base), the facility has operated since 1964 when the 140th Aircraft Control and Warning Squadron (ACWS) was created under the control of Air Defense Command (ADC).",
+            "Hernandez Houses\nRafael Hernandez Houses, also known as Hernandez Houses, is a public housing development built and maintained by the New York City Housing Authority (NYCHA) on the Lower East Side of Manhattan at . The development is named after Rafael Hern\u00e1ndez Mar\u00edn (1892-1965), a Puerto Rican music composer who served in the United States Armed Forces during World War I. After studying music in Puerto Rico and Mexico, Rafael Hern\u00e1ndez Mar\u00edn travelled to New York City, then to Latin America; after he returned to his homeland Puerto Rico, he became the director of the Puerto Rican Symphonic Orchestra.",
+            "Shannons Pond Seaplane Base\nShannons Pond Seaplane Base (FAA LID: 0Z3) is a public-use seaplane base located three nautical miles (6 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. As per Federal Aviation Administration records, this facility had 1,000 passenger boardings (enplanements) in calendar year 2008. It is 3 mi west of Dillingham Airport.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Pensacola International Airport\nPensacola International Airport (IATA: PNS,\u00a0ICAO: KPNS,\u00a0FAA LID: PNS) , formerly Pensacola Gulf Coast Regional Airport and Pensacola Regional Airport (Hagler Field), is a public use airport three\u00a0nautical miles (6\u00a0km) northeast of the central business district of Pensacola, in Escambia County, Florida, United States. It is owned by the City of Pensacola. Despite the name, this airport does not offer direct international flights. This airport is one of the five major airports in North Florida, others being: Northwest Florida Beaches International Airport, Destin-Fort Walton Beach Airport Tallahassee International Airport, and Jacksonville International Airport.",
+            "Bella Rose Arts Centre\nThe Bella Rose Arts Centre is a community-based proscenium theatre performing arts centre located inside of Halifax West High School in the Clayton Park neighbourhood of the Halifax. The 600 seat, professional grade, multi-purpose theatre has the capacity to handle almost any type of event from music and dance shows, to theatrical productions, and conferences. It currently functions primarily as a rental venue.",
+            "Israir Airlines\nIsrair Airlines Ltd. (Hebrew: \u05d9\u05e9\u05e8\u05d0\u05d9\u05d9\u05e8\u200e \u200e ), usually referred to as Israir, is an Israeli airline headquartered in Tel Aviv. It operates domestic scheduled and air taxi flights from Sde Dov Airport, Haifa Airport, Ben Gurion International Airport, and Eilat Airport, as well as international charter services from Ben Gurion International Airport to Europe and Asia. It also operates VIP flights, and is Israel's third-largest airline after El Al and Arkia Israel Airlines, employing some 350 staff."
+        ],
+        "thoughts": [
+            "Dillingham Airport in Alaska handles scheduled passenger services, with connections to Twin Hills Airport and Koliganek Airport provided by Peninsula Airways (PenAir). Additionally, Shannons Pond Seaplane Base, located near Dillingham Airport, offers public-use seaplane services.",
+            "Based on the information retrieved, Dillingham Airport in Alaska does handle civilian (passenger) services, as it offers scheduled passenger services and connections to other airports provided by Peninsula Airways. Additionally, the nearby Shannons Pond Seaplane Base also offers public-use seaplane services, further indicating the presence of civilian passenger services at Dillingham Airport.",
+            "Rafael Hern\u00e1ndez Airport, located in Aguadilla, Puerto Rico, is a joint civil-military airport that mainly serves Puerto Rican westerners living in the Eastern Region of the United States. It is the second largest international airport in Puerto Rico and is also home to Coast Guard Air Station Borinquen. The airport previously served as a focus city for PAWA Dominicana. Additionally, the airport is under the authority of the Puerto Rico Ports Authority and receives fire protection services from the Puerto Rico Firefighters Corps, including crash rescue divisions. It also previously served as a base for Fina Air, an airline that operated charter flights to the Dominican Republic. Furthermore, the airport is adjacent to the Punta Borinquen Radar Station, a facility of the Puerto Rico Air National Guard.",
+            "Based on the retrieved information, Rafael Hern\u00e1ndez Airport in Aguadilla, Puerto Rico, handles civilian (passenger) services as it is the second largest international airport in Puerto Rico and serves Puerto Rican westerners living in the Eastern Region of the United States. It also previously served as a focus city for PAWA Dominicana and as a base for Fina Air, an airline that operated charter flights to the Dominican Republic.",
+            "Both Dillingham Airport in Alaska and Rafael Hern\u00e1ndez Airport in Aguadilla, Puerto Rico handle civilian (passenger) services. Dillingham Airport offers scheduled passenger services and connections to other airports, while Rafael Hern\u00e1ndez Airport is the second largest international airport in Puerto Rico and serves Puerto Rican westerners living in the Eastern Region of the United States."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Do Dillingham Airport and Rafael Hern\u00e1ndez Airport both handle civilian (passenger) service?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Dillingham Airport, including if it handles civilian (passenger) services.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Rafael Hern\u00e1ndez Airport, including if it handles civilian (passenger) services.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Dillingham Airport provides civilian (passenger) service based on its operational details.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Rafael Hern\u00e1ndez Airport provides civilian (passenger) service based on its operational details.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Based on the analyses of both airports, conclude if both handle civilian (passenger) services.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph begins by retrieving data about each of the airports separately (Dillingham Airport in node 1 and Rafael Hern\u00e1ndez Airport in node 2). Then, nodes 3 and 4 independently determine whether each airport supports civilian (passenger) services based on the retrieved information. Finally, node 5 synthesizes the conclusions from nodes 3 and 4 to answer the original question, confirming whether both airports provide civilian services."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Rafael Hern\u00e1ndez Airport\nRafael Hern\u00e1ndez Airport (IATA: BQN, ICAO: TJBQ, FAA LID: BQN) is a joint civil-military airport located in Aguadilla, Puerto Rico. It is named after the Puerto Rican composer Rafael Hern\u00e1ndez Mar\u00edn and is the second largest international airport in Puerto Rico in the region of Porta del Sol, Puerto Rico's west coast. It is also home to Coast Guard Air Station Borinquen. Rafael Hernandez Airport mainly serves Puerto Rican westerners living in the Eastern Region of the United States. The airport previously served as a focus city for PAWA Dominicana.",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Dillingham Airport\nDillingham Airport (IATA: DLG, ICAO: PADL, FAA LID: DLG) is a state owned, public use airport located two nautical miles (4 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. Scheduled passenger service is available at this airport.",
+            "Shannons Pond Seaplane Base\nShannons Pond Seaplane Base (FAA LID: 0Z3) is a public-use seaplane base located three nautical miles (6 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. As per Federal Aviation Administration records, this facility had 1,000 passenger boardings (enplanements) in calendar year 2008. It is 3 mi west of Dillingham Airport.",
+            "Punta Borinquen Radar Station\nPunta Borinquen Radar Station is a facility of the Puerto Rico Air National Guard home for the 141st Air Control Squadron. Located adjacent to Rafael Hern\u00e1ndez Airport (which operates at the old Ramey Air Force Base), the facility has operated since 1964 when the 140th Aircraft Control and Warning Squadron (ACWS) was created under the control of Air Defense Command (ADC).",
+            "Fina Air\nFina Air was an airline based in San Juan, Puerto Rico named after Josefina Canto who was the mother of Lazaro Canto. It operated charter flights to the Dominican Republic from Luis Mu\u00f1oz Mar\u00edn International Airport in San Juan, Rafael Hern\u00e1ndez Airport in Aguadilla and Eugenio Mar\u00eda de Hostos Airport in Mayag\u00fcez. The airline has now ceased operations.",
+            "Twin Hills Airport\nTwin Hills Airport (IATA: TWA,\u00a0FAA LID: A63) is a state-owned, public-use airport serving Twin Hills, in the Dillingham Census Area of the U.S. state of Alaska. Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Puerto Rico Firefighters Corps\nThe Puerto Rico Firefighters Corps \u2014Spanish: \"Cuerpo de Bomberos de Puerto Rico\" (CBPR)\u2014 is the statewide fire department that provides fire protection, rescue, and protection from other hazards in Puerto Rico. It was established in 1942 under the Puerto Rico Fire Services. In addition, it offers fire protection services to all the airports under the authority of the Puerto Rico Ports Authority, including the Luis Mu\u00f1oz Marin International Airport, Rafael Hern\u00e1ndez Airport, and Mercedita Airport and they serve as crash rescue divisions. A separate agency, the Puerto Rico Medical Emergency Corps, provides emergency medical services to all Puerto Rico.",
+            "Koliganek Airport\nKoliganek Airport (IATA: KGK,\u00a0ICAO: PAJZ,\u00a0FAA LID: JZZ) is a state-owned, public-use airport located one nautical mile (1.85\u00a0km) east of the central business district of Koliganek, in the Dillingham Census Area of the U.S. state of Alaska. Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Hernandez Houses\nRafael Hernandez Houses, also known as Hernandez Houses, is a public housing development built and maintained by the New York City Housing Authority (NYCHA) on the Lower East Side of Manhattan at . The development is named after Rafael Hern\u00e1ndez Mar\u00edn (1892-1965), a Puerto Rican music composer who served in the United States Armed Forces during World War I. After studying music in Puerto Rico and Mexico, Rafael Hern\u00e1ndez Mar\u00edn travelled to New York City, then to Latin America; after he returned to his homeland Puerto Rico, he became the director of the Puerto Rican Symphonic Orchestra.",
+            "List of protomartyrs\nA protomartyr (Koine Greek, \"\u03c0\u03c1\u03cc\u03c4\u03bf\u03c2\" \"pr\u00f3tos\" \"first\" + \"\u03bc\u03ac\u03c1\u03c4\u03c5\u03c1\u03b1\u03c2\" \"m\u00e1rtyras\" \"martyr\") is the first Christian martyr in a country or among a particular group, such as a religious order. Similarly, the phrase the Protomartyr (with no other qualification of country or region) can mean Saint Stephen, the first martyr of the Christian church or Saint Thecla, the first female martyr of the Christian church.",
+            "Beer shop\nA beer shop (also referred to as beershop) is a retail store where beer and other goods related to beer are sold. Beer shops can be found all around the world, but there are many located in famous beer countries like Belgium, Germany or England. Beer shops range in size, and may be located on streets or in shopping malls. Beer shops usually offer many different kinds of beer brands. Some shops offer only regional beer brands which are famous or well known in their region. Others also offer a big range of beer including beer brand from all around the world.",
+            "Bishop International Airport\nBishop International Airport (IATA: FNT,\u00a0ICAO: KFNT,\u00a0FAA LID: FNT) is a commercial and general aviation airport located in Flint, Michigan. It is named after banker and General Motors board member Arthur Giles Bishop (April 12, 1851 \u2013 January 22, 1944), who donated 220 acres of his farmland for the airport in 1928. The third busiest airport in Michigan, it surpassed competitor MBS International Airport in terms of airline operations in 2002. In 2007, 1,071,238 passengers used Bishop International Airport; in 2011, 938,914 passengers used the airport. It is included in the Federal Aviation Administration (FAA) National Plan of Integrated Airport Systems for 2017\u20132021, in which it is categorized as a small hub primary commercial service facility. The airport is currently served by several passenger airlines: Allegiant Air, Southwest Airlines and Delta Air Lines operate mainline service out of the airport, as well as affiliates of Delta Connection, United Express and American Eagle. Additionally, FedEx Express and a FedEx Feeder affiliate operate cargo services out of the airport. Accompanying the airlines is fixed-base operator Av Flight that handles both general aviation and airline operations and the flight school American Wings Aviation. Bishop International Airport is in southwestern Flint, and is surrounded by Flint Township to the north, east and west; and Mundy Township to the south.",
+            "Air Cortez\nAir Cortez was a United States FAR 121 and 135 commuter airline that operated from 1977 to 1986. Air Cortez served a number of cities in Southern California, Arizona, Nevada and Baja California. In 1981, Air Cortez was operating nonstop passenger service between Ontario Airport (ONT) and Yuma, Arizona (YUM) with a Beech 18 prop aircraft. In 1985, the airline was operating scheduled passenger service between Las Vegas (LAS) and Grand Canyon National Park Airport (GCN) with Fairchild F-27 turboprop and Cessna 402 prop aircraft. Air Cortez also operated scheduled international passenger service to Mexico with the Fairchild F-27 on a routing of Ontario-San Diego-Guaymas-Mulege-Loreto.",
+            "Grand Canyon Airlines\nGrand Canyon Airlines is an 14 CFR Part 135 air carrier headquartered on the grounds of Boulder City Airport, Boulder City, NV. Grand Canyon Airlines also has bases at Grand Canyon National Park Airport, AZ, and Page Airport, AZ. It operates sightseeing tours and scheduled passenger service over and around the Grand Canyon. Its headquarters and main operation center is Grand Canyon National Park Airport and Boulder City Airport, Nevada.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein."
+        ],
+        "thoughts": [
+            "Dillingham Airport is a state-owned, public use airport located in Alaska, and it does handle civilian (passenger) services. Scheduled passenger service is available at this airport.",
+            "Based on the operational details, Dillingham Airport does provide civilian (passenger) service. Scheduled passenger service is available at this state-owned, public use airport located in Alaska.",
+            "Rafael Hern\u00e1ndez Airport is a joint civil-military airport located in Aguadilla, Puerto Rico. It is the second largest international airport in Puerto Rico and mainly serves Puerto Rican westerners living in the Eastern Region of the United States. The airport previously served as a focus city for PAWA Dominicana, indicating that it does handle civilian (passenger) services. Additionally, the airport is home to Coast Guard Air Station Borinquen and is adjacent to the Punta Borinquen Radar Station, which is a facility of the Puerto Rico Air National Guard. The Puerto Rico Firefighters Corps provides fire protection services to the airport, and Fina Air operated charter flights to the Dominican Republic from Rafael Hern\u00e1ndez Airport. Therefore, it can be concluded that Rafael Hern\u00e1ndez Airport does handle civilian (passenger) services.",
+            "Based on the operational details provided, Rafael Hern\u00e1ndez Airport does indeed provide civilian (passenger) service. It serves as a focus city for PAWA Dominicana and has also hosted charter flights to the Dominican Republic. Additionally, it is the second largest international airport in Puerto Rico and mainly serves Puerto Rican westerners living in the Eastern Region of the United States. Therefore, it can be concluded that Rafael Hern\u00e1ndez Airport does handle civilian (passenger) services.",
+            "Based on the analyses of both airports, it can be concluded that both Dillingham Airport and Rafael Hern\u00e1ndez Airport handle civilian (passenger) services. Scheduled passenger service is available at Dillingham Airport in Alaska, and Rafael Hern\u00e1ndez Airport in Puerto Rico serves as a focus city for PAWA Dominicana and hosts charter flights to the Dominican Republic, in addition to serving Puerto Rican westerners living in the Eastern Region of the United States."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Do Dillingham Airport and Rafael Hern\u00e1ndez Airport both handle civilian (passenger) service?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Dillingham Airport, including whether it handles civilian passenger service.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Rafael Hern\u00e1ndez Airport, including whether it handles civilian passenger service.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Dillingham Airport handles civilian passenger service based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Rafael Hern\u00e1ndez Airport handles civilian passenger service based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the conclusions about both airports to answer if they both handle civilian (passenger) service.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks the question into separate retrieval tasks for each airport. Each retrieval node gathers data about whether the respective airport handles civilian passenger service. Subsequent reasoning nodes analyze the retrieved information to determine each airport's status. Finally, the results are combined to provide a coherent answer to the question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Dillingham Airport\nDillingham Airport (IATA: DLG, ICAO: PADL, FAA LID: DLG) is a state owned, public use airport located two nautical miles (4 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. Scheduled passenger service is available at this airport.",
+            "Rafael Hern\u00e1ndez Airport\nRafael Hern\u00e1ndez Airport (IATA: BQN, ICAO: TJBQ, FAA LID: BQN) is a joint civil-military airport located in Aguadilla, Puerto Rico. It is named after the Puerto Rican composer Rafael Hern\u00e1ndez Mar\u00edn and is the second largest international airport in Puerto Rico in the region of Porta del Sol, Puerto Rico's west coast. It is also home to Coast Guard Air Station Borinquen. Rafael Hernandez Airport mainly serves Puerto Rican westerners living in the Eastern Region of the United States. The airport previously served as a focus city for PAWA Dominicana.",
+            "Twin Hills Airport\nTwin Hills Airport (IATA: TWA,\u00a0FAA LID: A63) is a state-owned, public-use airport serving Twin Hills, in the Dillingham Census Area of the U.S. state of Alaska. Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Koliganek Airport\nKoliganek Airport (IATA: KGK,\u00a0ICAO: PAJZ,\u00a0FAA LID: JZZ) is a state-owned, public-use airport located one nautical mile (1.85\u00a0km) east of the central business district of Koliganek, in the Dillingham Census Area of the U.S. state of Alaska. Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Shannons Pond Seaplane Base\nShannons Pond Seaplane Base (FAA LID: 0Z3) is a public-use seaplane base located three nautical miles (6 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. As per Federal Aviation Administration records, this facility had 1,000 passenger boardings (enplanements) in calendar year 2008. It is 3 mi west of Dillingham Airport.",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Fina Air\nFina Air was an airline based in San Juan, Puerto Rico named after Josefina Canto who was the mother of Lazaro Canto. It operated charter flights to the Dominican Republic from Luis Mu\u00f1oz Mar\u00edn International Airport in San Juan, Rafael Hern\u00e1ndez Airport in Aguadilla and Eugenio Mar\u00eda de Hostos Airport in Mayag\u00fcez. The airline has now ceased operations.",
+            "Air Cortez\nAir Cortez was a United States FAR 121 and 135 commuter airline that operated from 1977 to 1986. Air Cortez served a number of cities in Southern California, Arizona, Nevada and Baja California. In 1981, Air Cortez was operating nonstop passenger service between Ontario Airport (ONT) and Yuma, Arizona (YUM) with a Beech 18 prop aircraft. In 1985, the airline was operating scheduled passenger service between Las Vegas (LAS) and Grand Canyon National Park Airport (GCN) with Fairchild F-27 turboprop and Cessna 402 prop aircraft. Air Cortez also operated scheduled international passenger service to Mexico with the Fairchild F-27 on a routing of Ontario-San Diego-Guaymas-Mulege-Loreto.",
+            "Punta Borinquen Radar Station\nPunta Borinquen Radar Station is a facility of the Puerto Rico Air National Guard home for the 141st Air Control Squadron. Located adjacent to Rafael Hern\u00e1ndez Airport (which operates at the old Ramey Air Force Base), the facility has operated since 1964 when the 140th Aircraft Control and Warning Squadron (ACWS) was created under the control of Air Defense Command (ADC).",
+            "Puerto Rico Firefighters Corps\nThe Puerto Rico Firefighters Corps \u2014Spanish: \"Cuerpo de Bomberos de Puerto Rico\" (CBPR)\u2014 is the statewide fire department that provides fire protection, rescue, and protection from other hazards in Puerto Rico. It was established in 1942 under the Puerto Rico Fire Services. In addition, it offers fire protection services to all the airports under the authority of the Puerto Rico Ports Authority, including the Luis Mu\u00f1oz Marin International Airport, Rafael Hern\u00e1ndez Airport, and Mercedita Airport and they serve as crash rescue divisions. A separate agency, the Puerto Rico Medical Emergency Corps, provides emergency medical services to all Puerto Rico.",
+            "Grand Canyon Airlines\nGrand Canyon Airlines is an 14 CFR Part 135 air carrier headquartered on the grounds of Boulder City Airport, Boulder City, NV. Grand Canyon Airlines also has bases at Grand Canyon National Park Airport, AZ, and Page Airport, AZ. It operates sightseeing tours and scheduled passenger service over and around the Grand Canyon. Its headquarters and main operation center is Grand Canyon National Park Airport and Boulder City Airport, Nevada.",
+            "Bishop International Airport\nBishop International Airport (IATA: FNT,\u00a0ICAO: KFNT,\u00a0FAA LID: FNT) is a commercial and general aviation airport located in Flint, Michigan. It is named after banker and General Motors board member Arthur Giles Bishop (April 12, 1851 \u2013 January 22, 1944), who donated 220 acres of his farmland for the airport in 1928. The third busiest airport in Michigan, it surpassed competitor MBS International Airport in terms of airline operations in 2002. In 2007, 1,071,238 passengers used Bishop International Airport; in 2011, 938,914 passengers used the airport. It is included in the Federal Aviation Administration (FAA) National Plan of Integrated Airport Systems for 2017\u20132021, in which it is categorized as a small hub primary commercial service facility. The airport is currently served by several passenger airlines: Allegiant Air, Southwest Airlines and Delta Air Lines operate mainline service out of the airport, as well as affiliates of Delta Connection, United Express and American Eagle. Additionally, FedEx Express and a FedEx Feeder affiliate operate cargo services out of the airport. Accompanying the airlines is fixed-base operator Av Flight that handles both general aviation and airline operations and the flight school American Wings Aviation. Bishop International Airport is in southwestern Flint, and is surrounded by Flint Township to the north, east and west; and Mundy Township to the south.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein."
+        ],
+        "thoughts": [
+            "Dillingham Airport is a state-owned, public use airport located in Alaska, and it does handle civilian passenger service. Scheduled passenger service is available at this airport. Additionally, scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir) from Twin Hills Airport and Koliganek Airport. Shannons Pond Seaplane Base, located near Dillingham Airport, also had 1,000 passenger boardings in calendar year 2008.",
+            "Based on the information retrieved, Dillingham Airport does handle civilian passenger service. Scheduled passenger service is available at the airport, and there are scheduled airline services provided by Peninsula Airways from nearby airports. Additionally, Shannons Pond Seaplane Base, located near Dillingham Airport, also had passenger boardings in 2008. Therefore, it can be concluded that Dillingham Airport handles civilian passenger service.",
+            "Rafael Hern\u00e1ndez Airport is a joint civil-military airport located in Aguadilla, Puerto Rico. It is the second largest international airport in Puerto Rico and mainly serves Puerto Rican westerners living in the Eastern Region of the United States. The airport previously served as a focus city for PAWA Dominicana. It handles civilian passenger service and is also home to Coast Guard Air Station Borinquen. Additionally, the Puerto Rico Firefighters Corps provides fire protection services to the airport and serves as a crash rescue division.",
+            "Based on the retrieved information, Rafael Hern\u00e1ndez Airport does handle civilian passenger service.",
+            "Both Dillingham Airport and Rafael Hern\u00e1ndez Airport handle civilian passenger service."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Do Dillingham Airport and Rafael Hern\u00e1ndez Airport both handle civilian (passenger) service?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Dillingham Airport, focusing on whether it handles civilian (passenger) service.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about Rafael Hern\u00e1ndez Airport, focusing on whether it handles civilian (passenger) service.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the information about Dillingham Airport to determine if it handles civilian (passenger) service.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the information about Rafael Hern\u00e1ndez Airport to determine if it handles civilian (passenger) service.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results about both airports to determine if they both handle civilian (passenger) service.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "5",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the question into retrieval steps (nodes 1 and 2) for gathering information about each airport, followed by reasoning steps (nodes 3 and 4) to analyze whether each airport handles civilian service. The final step (node 5) synthesizes these results to answer the original question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Rafael Hern\u00e1ndez Airport\nRafael Hern\u00e1ndez Airport (IATA: BQN, ICAO: TJBQ, FAA LID: BQN) is a joint civil-military airport located in Aguadilla, Puerto Rico. It is named after the Puerto Rican composer Rafael Hern\u00e1ndez Mar\u00edn and is the second largest international airport in Puerto Rico in the region of Porta del Sol, Puerto Rico's west coast. It is also home to Coast Guard Air Station Borinquen. Rafael Hernandez Airport mainly serves Puerto Rican westerners living in the Eastern Region of the United States. The airport previously served as a focus city for PAWA Dominicana.",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Fina Air\nFina Air was an airline based in San Juan, Puerto Rico named after Josefina Canto who was the mother of Lazaro Canto. It operated charter flights to the Dominican Republic from Luis Mu\u00f1oz Mar\u00edn International Airport in San Juan, Rafael Hern\u00e1ndez Airport in Aguadilla and Eugenio Mar\u00eda de Hostos Airport in Mayag\u00fcez. The airline has now ceased operations.",
+            "Punta Borinquen Radar Station\nPunta Borinquen Radar Station is a facility of the Puerto Rico Air National Guard home for the 141st Air Control Squadron. Located adjacent to Rafael Hern\u00e1ndez Airport (which operates at the old Ramey Air Force Base), the facility has operated since 1964 when the 140th Aircraft Control and Warning Squadron (ACWS) was created under the control of Air Defense Command (ADC).",
+            "Puerto Rico Firefighters Corps\nThe Puerto Rico Firefighters Corps \u2014Spanish: \"Cuerpo de Bomberos de Puerto Rico\" (CBPR)\u2014 is the statewide fire department that provides fire protection, rescue, and protection from other hazards in Puerto Rico. It was established in 1942 under the Puerto Rico Fire Services. In addition, it offers fire protection services to all the airports under the authority of the Puerto Rico Ports Authority, including the Luis Mu\u00f1oz Marin International Airport, Rafael Hern\u00e1ndez Airport, and Mercedita Airport and they serve as crash rescue divisions. A separate agency, the Puerto Rico Medical Emergency Corps, provides emergency medical services to all Puerto Rico.",
+            "Hernandez Houses\nRafael Hernandez Houses, also known as Hernandez Houses, is a public housing development built and maintained by the New York City Housing Authority (NYCHA) on the Lower East Side of Manhattan at . The development is named after Rafael Hern\u00e1ndez Mar\u00edn (1892-1965), a Puerto Rican music composer who served in the United States Armed Forces during World War I. After studying music in Puerto Rico and Mexico, Rafael Hern\u00e1ndez Mar\u00edn travelled to New York City, then to Latin America; after he returned to his homeland Puerto Rico, he became the director of the Puerto Rican Symphonic Orchestra.",
+            "Selamselae\nSelamselae also known as Selemselitanus and Selamselae is a suppressed titular see of the Roman Catholic Church, It is under the jurisdiction of Archdiocese of Carthage and was active through the Vandal and Roman Empires. A Bishop Felix, is known from late antiquity, and the current bishop is Gustavo Rodolfo Mendoza Hern\u00e1ndez of Guatemala. The original seat of the ancient diocese was an oppidum (native town) in the Roman province of Africa Proconsularis, called Selem, though nothing is known of the town not even its location.",
+            "Carlos Hern\u00e1ndez (boxer)\nCarlos Hern\u00e1ndez (born January 23, 1971 in Los Angeles, California) is a retired Salvadoran American boxer. He made boxing history by becoming the IBF super featherweight champion by beating David Santos. Carlos Hern\u00e1ndez counted in that fight with the backing up of Alexis Arg\u00fcello, Roberto Dur\u00e1n and the Salvadoran President, all of whom were at ringside cheering for him. On October 4, 2003, he retained the title against former IBF lightweight champion Steve Forbes, with an eleventh round technical decision.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "Dillingham Airport is a public airport located in Dillingham, Alaska. It primarily serves the Dillingham area and handles both commercial and general aviation. It does provide civilian (passenger) service.",
+            "Based on the information provided, Dillingham Airport handles both commercial and general aviation, indicating that it does provide civilian (passenger) service. Therefore, it can be concluded that Dillingham Airport does handle civilian (passenger) service.",
+            "Rafael Hern\u00e1ndez Airport is a joint civil-military airport located in Aguadilla, Puerto Rico. It serves as the second largest international airport in Puerto Rico and mainly serves Puerto Rican westerners living in the Eastern Region of the United States. The airport previously served as a focus city for PAWA Dominicana, indicating that it does handle civilian (passenger) service. Additionally, the Puerto Rico Firefighters Corps provides fire protection services to Rafael Hern\u00e1ndez Airport, including crash rescue divisions, further confirming its role in handling civilian air traffic.",
+            "Based on the information provided, Rafael Hern\u00e1ndez Airport does handle civilian (passenger) service. It serves as an international airport and has previously been a focus city for a commercial airline. Additionally, the presence of fire protection services for civilian air traffic further confirms its role in handling civilian passengers.",
+            "Based on the results from both airports, it can be concluded that both Dillingham Airport and Rafael Hern\u00e1ndez Airport handle civilian (passenger) service. Dillingham Airport handles both commercial and general aviation, indicating civilian service, while Rafael Hern\u00e1ndez Airport serves as an international airport and has previously been a focus city for a commercial airline, further confirming its role in handling civilian passengers."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Do Dillingham Airport and Rafael Hern\u00e1ndez Airport both handle civilian (passenger) service?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve data on Dillingham Airport's services and operations.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve data on Rafael Hern\u00e1ndez Airport's services and operations.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Dillingham Airport handles civilian passenger service based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Rafael Hern\u00e1ndez Airport handles civilian passenger service based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Synthesize the information to conclude if both Dillingham Airport and Rafael Hern\u00e1ndez Airport handle civilian passenger service.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph is designed to first independently verify the type of services offered at Dillingham Airport and Rafael Hern\u00e1ndez Airport. This involves retrieving relevant operational data for each airport and reasoning whether they handle civilian passenger service. Finally, the last node synthesizes this information to answer if both airports serve civilian passengers."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Rafael Hern\u00e1ndez Airport\nRafael Hern\u00e1ndez Airport (IATA: BQN, ICAO: TJBQ, FAA LID: BQN) is a joint civil-military airport located in Aguadilla, Puerto Rico. It is named after the Puerto Rican composer Rafael Hern\u00e1ndez Mar\u00edn and is the second largest international airport in Puerto Rico in the region of Porta del Sol, Puerto Rico's west coast. It is also home to Coast Guard Air Station Borinquen. Rafael Hernandez Airport mainly serves Puerto Rican westerners living in the Eastern Region of the United States. The airport previously served as a focus city for PAWA Dominicana.",
+            "Fina Air\nFina Air was an airline based in San Juan, Puerto Rico named after Josefina Canto who was the mother of Lazaro Canto. It operated charter flights to the Dominican Republic from Luis Mu\u00f1oz Mar\u00edn International Airport in San Juan, Rafael Hern\u00e1ndez Airport in Aguadilla and Eugenio Mar\u00eda de Hostos Airport in Mayag\u00fcez. The airline has now ceased operations.",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Dillingham Airport\nDillingham Airport (IATA: DLG, ICAO: PADL, FAA LID: DLG) is a state owned, public use airport located two nautical miles (4 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. Scheduled passenger service is available at this airport.",
+            "Puerto Rico Firefighters Corps\nThe Puerto Rico Firefighters Corps \u2014Spanish: \"Cuerpo de Bomberos de Puerto Rico\" (CBPR)\u2014 is the statewide fire department that provides fire protection, rescue, and protection from other hazards in Puerto Rico. It was established in 1942 under the Puerto Rico Fire Services. In addition, it offers fire protection services to all the airports under the authority of the Puerto Rico Ports Authority, including the Luis Mu\u00f1oz Marin International Airport, Rafael Hern\u00e1ndez Airport, and Mercedita Airport and they serve as crash rescue divisions. A separate agency, the Puerto Rico Medical Emergency Corps, provides emergency medical services to all Puerto Rico.",
+            "Twin Hills Airport\nTwin Hills Airport (IATA: TWA,\u00a0FAA LID: A63) is a state-owned, public-use airport serving Twin Hills, in the Dillingham Census Area of the U.S. state of Alaska. Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Koliganek Airport\nKoliganek Airport (IATA: KGK,\u00a0ICAO: PAJZ,\u00a0FAA LID: JZZ) is a state-owned, public-use airport located one nautical mile (1.85\u00a0km) east of the central business district of Koliganek, in the Dillingham Census Area of the U.S. state of Alaska. Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Punta Borinquen Radar Station\nPunta Borinquen Radar Station is a facility of the Puerto Rico Air National Guard home for the 141st Air Control Squadron. Located adjacent to Rafael Hern\u00e1ndez Airport (which operates at the old Ramey Air Force Base), the facility has operated since 1964 when the 140th Aircraft Control and Warning Squadron (ACWS) was created under the control of Air Defense Command (ADC).",
+            "Hernandez Houses\nRafael Hernandez Houses, also known as Hernandez Houses, is a public housing development built and maintained by the New York City Housing Authority (NYCHA) on the Lower East Side of Manhattan at . The development is named after Rafael Hern\u00e1ndez Mar\u00edn (1892-1965), a Puerto Rican music composer who served in the United States Armed Forces during World War I. After studying music in Puerto Rico and Mexico, Rafael Hern\u00e1ndez Mar\u00edn travelled to New York City, then to Latin America; after he returned to his homeland Puerto Rico, he became the director of the Puerto Rican Symphonic Orchestra.",
+            "Shannons Pond Seaplane Base\nShannons Pond Seaplane Base (FAA LID: 0Z3) is a public-use seaplane base located three nautical miles (6 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. As per Federal Aviation Administration records, this facility had 1,000 passenger boardings (enplanements) in calendar year 2008. It is 3 mi west of Dillingham Airport.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Juli\u00e1n Hern\u00e1ndez (filmmaker)\nJuli\u00e1n Hern\u00e1ndez (born 1972 in Mexico City, Mexico as Juli\u00e1n Hern\u00e1ndez P\u00e9rez) is a Mexican multi-awarded filmmaker. He won twice the Teddy Award at Berlin Film Festival with his movies\" Thousand Clouds of Peace Fence the Sky, Love, Your Being Love Will Never End \" (2003), and \"Raging Sun, Raging Sky (\"2009). He studied at the Centro Universitario de Estudios Cinematogr\u00e1ficos (CUEC), from where he was expelled due to his gay-themed films during a homophobic administration, and was not mentioned as a serious director until he started winning international recognition. He has credited his use of cinematographic language to influences from filmmakers such as Michelangelo Antonioni, Leonardo Favio, Robert Bresson, and Alain Resnais. Hern\u00e1ndez has directed more than 20 awarded short films (both documentaries and fictional), and became a gay-cinema icon for his feature films, including Broken Sky. Along with producer and director , he founded Cooperativa Cinematogr\u00e1fica Morelos. which later became the prestigious production company , producing 29 films over two decades.",
+            "Colomac Airport\nColomac Airport (TC LID: CFY8) , was located near Colomac Mine in the Northwest Territories, Canada where caribou may be found on the runway. Prior permission was required to land except in the case of an emergency.",
+            "Susquehanna Area Regional Airport Authority\nThe Susquehanna Area Regional Airport Authority (SARAA) is the governing authority of Harrisburg International Airport, Capital City Airport, Franklin County Regional Airport and Gettysburg Regional Airport in south-central Pennsylvania. SARAA was incorporated on September 9, 1997, and officially took over control of HIA and CXY airports from the Commonwealth of Pennsylvania on January 1, 1998.",
+            "Deadhorse Airport\nDeadhorse Airport (IATA: SCC, ICAO: PASC, FAA LID: SCC) is a public airport located in Deadhorse on the North Slope of Alaska. It can be accessed from Fairbanks via the Elliott and Dalton highways. It is near Prudhoe Bay and is sometimes also called Prudhoe Airport."
+        ],
+        "thoughts": [
+            "Dillingham Airport (IATA: DLG, ICAO: PADL, FAA LID: DLG) is a state-owned, public-use airport located in Dillingham, Alaska. It offers scheduled passenger services and is an important transportation hub for the Dillingham Census Area. Additionally, there are other nearby airports such as Twin Hills Airport and Koliganek Airport that provide scheduled airline services to Dillingham Airport. Shannons Pond Seaplane Base is also available for public use, located near Dillingham Airport. The airport had 1,000 passenger boardings in 2008. Overall, Dillingham Airport plays a crucial role in providing air transportation services to the region.",
+            "Yes, Dillingham Airport handles civilian passenger service. It offers scheduled passenger services and is an important transportation hub for the Dillingham Census Area. Additionally, it had 1,000 passenger boardings in 2008, indicating that it serves civilian passengers.",
+            "Rafael Hern\u00e1ndez Airport is a joint civil-military airport located in Aguadilla, Puerto Rico. It is the second largest international airport in Puerto Rico and serves Puerto Rican westerners living in the Eastern Region of the United States. The airport previously served as a focus city for PAWA Dominicana. It is also home to Coast Guard Air Station Borinquen and the Puerto Rico Firefighters Corps provides fire protection services to the airport.\n\nIn addition, the airport has a radar station, the Punta Borinquen Radar Station, which is a facility of the Puerto Rico Air National Guard. The airport also had services from Fina Air, an airline that operated charter flights to the Dominican Republic, but has since ceased operations.\n\nThe airport is located adjacent to the Rafael Hernandez Houses, a public housing development in Manhattan, New York, named after the Puerto Rican music composer Rafael Hern\u00e1ndez Mar\u00edn.\n\nFurthermore, the airport is mentioned in relation to the Cura\u00e7ao International Airport, as it has the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport and Pointe-\u00e0-Pitre International Airport in Guadeloupe.\n\nOverall, Rafael Hern\u00e1ndez Airport serves as an important transportation hub for the region and is supported by various agencies and facilities for its operations and services.",
+            "Based on the information retrieved, Rafael Hern\u00e1ndez Airport does handle civilian passenger service. It is the second largest international airport in Puerto Rico and serves Puerto Rican westerners living in the Eastern Region of the United States. It previously served as a focus city for PAWA Dominicana and had services from Fina Air. Additionally, it is mentioned in relation to other international airports and serves as an important transportation hub for the region.",
+            "Both Dillingham Airport and Rafael Hern\u00e1ndez Airport handle civilian passenger service. Dillingham Airport offers scheduled passenger services and serves as an important transportation hub for the Dillingham Census Area, while Rafael Hern\u00e1ndez Airport is the second largest international airport in Puerto Rico and serves as an important transportation hub for the region."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Do Dillingham Airport and Rafael Hern\u00e1ndez Airport both handle civilian (passenger) service?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the types of services handled by Dillingham Airport, focusing on whether it provides civilian (passenger) service.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the types of services handled by Rafael Hern\u00e1ndez Airport, focusing on whether it provides civilian (passenger) service.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the retrieved information to determine if Dillingham Airport handles civilian (passenger) service.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the retrieved information to determine if Rafael Hern\u00e1ndez Airport handles civilian (passenger) service.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Synthesize the analysis results to determine if both airports handle civilian (passenger) service.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is structured to first independently retrieve and analyze information about each airport's service type. Since the information about each airport can be retrieved and processed in parallel, the initial nodes are designed to handle each airport separately. Finally, the results are synthesized to answer the main question about whether both airports handle civilian (passenger) service."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Rafael Hern\u00e1ndez Airport\nRafael Hern\u00e1ndez Airport (IATA: BQN, ICAO: TJBQ, FAA LID: BQN) is a joint civil-military airport located in Aguadilla, Puerto Rico. It is named after the Puerto Rican composer Rafael Hern\u00e1ndez Mar\u00edn and is the second largest international airport in Puerto Rico in the region of Porta del Sol, Puerto Rico's west coast. It is also home to Coast Guard Air Station Borinquen. Rafael Hernandez Airport mainly serves Puerto Rican westerners living in the Eastern Region of the United States. The airport previously served as a focus city for PAWA Dominicana.",
+            "Fina Air\nFina Air was an airline based in San Juan, Puerto Rico named after Josefina Canto who was the mother of Lazaro Canto. It operated charter flights to the Dominican Republic from Luis Mu\u00f1oz Mar\u00edn International Airport in San Juan, Rafael Hern\u00e1ndez Airport in Aguadilla and Eugenio Mar\u00eda de Hostos Airport in Mayag\u00fcez. The airline has now ceased operations.",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Punta Borinquen Radar Station\nPunta Borinquen Radar Station is a facility of the Puerto Rico Air National Guard home for the 141st Air Control Squadron. Located adjacent to Rafael Hern\u00e1ndez Airport (which operates at the old Ramey Air Force Base), the facility has operated since 1964 when the 140th Aircraft Control and Warning Squadron (ACWS) was created under the control of Air Defense Command (ADC).",
+            "Puerto Rico Firefighters Corps\nThe Puerto Rico Firefighters Corps \u2014Spanish: \"Cuerpo de Bomberos de Puerto Rico\" (CBPR)\u2014 is the statewide fire department that provides fire protection, rescue, and protection from other hazards in Puerto Rico. It was established in 1942 under the Puerto Rico Fire Services. In addition, it offers fire protection services to all the airports under the authority of the Puerto Rico Ports Authority, including the Luis Mu\u00f1oz Marin International Airport, Rafael Hern\u00e1ndez Airport, and Mercedita Airport and they serve as crash rescue divisions. A separate agency, the Puerto Rico Medical Emergency Corps, provides emergency medical services to all Puerto Rico.",
+            "Hernandez Houses\nRafael Hernandez Houses, also known as Hernandez Houses, is a public housing development built and maintained by the New York City Housing Authority (NYCHA) on the Lower East Side of Manhattan at . The development is named after Rafael Hern\u00e1ndez Mar\u00edn (1892-1965), a Puerto Rican music composer who served in the United States Armed Forces during World War I. After studying music in Puerto Rico and Mexico, Rafael Hern\u00e1ndez Mar\u00edn travelled to New York City, then to Latin America; after he returned to his homeland Puerto Rico, he became the director of the Puerto Rican Symphonic Orchestra.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition."
+        ],
+        "thoughts": [
+            "Dillingham Airport is a public airport located in Dillingham, Alaska. It primarily serves as a hub for general aviation and air taxi services, as well as providing scheduled passenger service to various destinations within Alaska. The airport does handle civilian (passenger) service, in addition to other types of aviation services.",
+            "Based on the information retrieved, Dillingham Airport does handle civilian (passenger) service in addition to general aviation and air taxi services. Therefore, it is a public airport that serves both civilian and other types of aviation services.",
+            "Rafael Hern\u00e1ndez Airport is a joint civil-military airport located in Aguadilla, Puerto Rico. It mainly serves Puerto Rican westerners living in the Eastern Region of the United States and previously served as a focus city for PAWA Dominicana. The airport provides civilian (passenger) service, as it is used for charter flights to the Dominican Republic by Fina Air. Additionally, the Puerto Rico Firefighters Corps provides fire protection services to the airport, including crash rescue divisions. Therefore, Rafael Hern\u00e1ndez Airport handles civilian (passenger) services.",
+            "Rafael Hern\u00e1ndez Airport does handle civilian (passenger) service, as it serves Puerto Rican westerners and previously operated as a focus city for PAWA Dominicana. Additionally, it is used for charter flights to the Dominican Republic by Fina Air, indicating its civilian passenger service. Therefore, the airport does handle civilian (passenger) services.",
+            "Based on the analysis results, both Dillingham Airport and Rafael Hern\u00e1ndez Airport handle civilian (passenger) service in addition to other types of aviation services. Therefore, both airports serve the civilian passenger market."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Do Dillingham Airport and Rafael Hern\u00e1ndez Airport both handle civilian (passenger) service?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify if Dillingham Airport handles civilian (passenger) service.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify if Rafael Hern\u00e1ndez Airport handles civilian (passenger) service.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if both Dillingham Airport and Rafael Hern\u00e1ndez Airport handle civilian (passenger) service by combining the results from nodes 1 and 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of two retrieval and reasoning nodes that independently check whether each airport handles civilian (passenger) service. The final reasoning node combines the outcomes of these two checks to answer the original question about both airports."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Dillingham Airport\nDillingham Airport (IATA: DLG, ICAO: PADL, FAA LID: DLG) is a state owned, public use airport located two nautical miles (4 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. Scheduled passenger service is available at this airport.",
+            "Rafael Hern\u00e1ndez Airport\nRafael Hern\u00e1ndez Airport (IATA: BQN, ICAO: TJBQ, FAA LID: BQN) is a joint civil-military airport located in Aguadilla, Puerto Rico. It is named after the Puerto Rican composer Rafael Hern\u00e1ndez Mar\u00edn and is the second largest international airport in Puerto Rico in the region of Porta del Sol, Puerto Rico's west coast. It is also home to Coast Guard Air Station Borinquen. Rafael Hernandez Airport mainly serves Puerto Rican westerners living in the Eastern Region of the United States. The airport previously served as a focus city for PAWA Dominicana.",
+            "Twin Hills Airport\nTwin Hills Airport (IATA: TWA,\u00a0FAA LID: A63) is a state-owned, public-use airport serving Twin Hills, in the Dillingham Census Area of the U.S. state of Alaska. Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Koliganek Airport\nKoliganek Airport (IATA: KGK,\u00a0ICAO: PAJZ,\u00a0FAA LID: JZZ) is a state-owned, public-use airport located one nautical mile (1.85\u00a0km) east of the central business district of Koliganek, in the Dillingham Census Area of the U.S. state of Alaska. Scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Shannons Pond Seaplane Base\nShannons Pond Seaplane Base (FAA LID: 0Z3) is a public-use seaplane base located three nautical miles (6 km) west of the central business district of Dillingham, a city in the Dillingham Census Area of the U.S. state of Alaska. As per Federal Aviation Administration records, this facility had 1,000 passenger boardings (enplanements) in calendar year 2008. It is 3 mi west of Dillingham Airport.",
+            "Cura\u00e7ao International Airport\nHato International Airport or Cura\u00e7ao International Airport (formerly \"Dr. Albert Plesman International Airport\") (IATA: CUR,\u00a0ICAO: TNCC) is the airport of Willemstad, Cura\u00e7ao. It has services to the Caribbean region, South America, North America and Europe. Hato Airport is a fairly large facility, with the third longest commercial runway in the Caribbean region after Rafael Hern\u00e1ndez Airport in Puerto Rico and Pointe-\u00e0-Pitre International Airport in Guadeloupe. The airport serves as a main base for Insel Air.",
+            "Fina Air\nFina Air was an airline based in San Juan, Puerto Rico named after Josefina Canto who was the mother of Lazaro Canto. It operated charter flights to the Dominican Republic from Luis Mu\u00f1oz Mar\u00edn International Airport in San Juan, Rafael Hern\u00e1ndez Airport in Aguadilla and Eugenio Mar\u00eda de Hostos Airport in Mayag\u00fcez. The airline has now ceased operations.",
+            "Grand Canyon Airlines\nGrand Canyon Airlines is an 14 CFR Part 135 air carrier headquartered on the grounds of Boulder City Airport, Boulder City, NV. Grand Canyon Airlines also has bases at Grand Canyon National Park Airport, AZ, and Page Airport, AZ. It operates sightseeing tours and scheduled passenger service over and around the Grand Canyon. Its headquarters and main operation center is Grand Canyon National Park Airport and Boulder City Airport, Nevada.",
+            "Air Cortez\nAir Cortez was a United States FAR 121 and 135 commuter airline that operated from 1977 to 1986. Air Cortez served a number of cities in Southern California, Arizona, Nevada and Baja California. In 1981, Air Cortez was operating nonstop passenger service between Ontario Airport (ONT) and Yuma, Arizona (YUM) with a Beech 18 prop aircraft. In 1985, the airline was operating scheduled passenger service between Las Vegas (LAS) and Grand Canyon National Park Airport (GCN) with Fairchild F-27 turboprop and Cessna 402 prop aircraft. Air Cortez also operated scheduled international passenger service to Mexico with the Fairchild F-27 on a routing of Ontario-San Diego-Guaymas-Mulege-Loreto.",
+            "Punta Borinquen Radar Station\nPunta Borinquen Radar Station is a facility of the Puerto Rico Air National Guard home for the 141st Air Control Squadron. Located adjacent to Rafael Hern\u00e1ndez Airport (which operates at the old Ramey Air Force Base), the facility has operated since 1964 when the 140th Aircraft Control and Warning Squadron (ACWS) was created under the control of Air Defense Command (ADC).",
+            "Puerto Rico Firefighters Corps\nThe Puerto Rico Firefighters Corps \u2014Spanish: \"Cuerpo de Bomberos de Puerto Rico\" (CBPR)\u2014 is the statewide fire department that provides fire protection, rescue, and protection from other hazards in Puerto Rico. It was established in 1942 under the Puerto Rico Fire Services. In addition, it offers fire protection services to all the airports under the authority of the Puerto Rico Ports Authority, including the Luis Mu\u00f1oz Marin International Airport, Rafael Hern\u00e1ndez Airport, and Mercedita Airport and they serve as crash rescue divisions. A separate agency, the Puerto Rico Medical Emergency Corps, provides emergency medical services to all Puerto Rico.",
+            "Hernandez Houses\nRafael Hernandez Houses, also known as Hernandez Houses, is a public housing development built and maintained by the New York City Housing Authority (NYCHA) on the Lower East Side of Manhattan at . The development is named after Rafael Hern\u00e1ndez Mar\u00edn (1892-1965), a Puerto Rican music composer who served in the United States Armed Forces during World War I. After studying music in Puerto Rico and Mexico, Rafael Hern\u00e1ndez Mar\u00edn travelled to New York City, then to Latin America; after he returned to his homeland Puerto Rico, he became the director of the Puerto Rican Symphonic Orchestra.",
+            "Bishop International Airport\nBishop International Airport (IATA: FNT,\u00a0ICAO: KFNT,\u00a0FAA LID: FNT) is a commercial and general aviation airport located in Flint, Michigan. It is named after banker and General Motors board member Arthur Giles Bishop (April 12, 1851 \u2013 January 22, 1944), who donated 220 acres of his farmland for the airport in 1928. The third busiest airport in Michigan, it surpassed competitor MBS International Airport in terms of airline operations in 2002. In 2007, 1,071,238 passengers used Bishop International Airport; in 2011, 938,914 passengers used the airport. It is included in the Federal Aviation Administration (FAA) National Plan of Integrated Airport Systems for 2017\u20132021, in which it is categorized as a small hub primary commercial service facility. The airport is currently served by several passenger airlines: Allegiant Air, Southwest Airlines and Delta Air Lines operate mainline service out of the airport, as well as affiliates of Delta Connection, United Express and American Eagle. Additionally, FedEx Express and a FedEx Feeder affiliate operate cargo services out of the airport. Accompanying the airlines is fixed-base operator Av Flight that handles both general aviation and airline operations and the flight school American Wings Aviation. Bishop International Airport is in southwestern Flint, and is surrounded by Flint Township to the north, east and west; and Mundy Township to the south.",
+            "Air Wisconsin\nAir Wisconsin Airlines is a regional airline based at Appleton International Airport in the town of Greenville, Wisconsin, United States, near Appleton. Air Wisconsin is the largest privately held regional airline in the United States. It currently operates regional jet flights as American Eagle under contract to American Airlines via a code sharing agreement, serving cities in the U.S. and Canada with hubs at Boston Logan International Airport (BOS), Charlotte Douglas International Airport (CLT), Philadelphia International Airport (PHL) and Ronald Reagan Washington National Airport (DCA) . Air Wisconsin previously operated United Express service on behalf of United Airlines followed by US Airways Express service on behalf of US Airways prior to becoming an American Eagle regional air carrier. The company has announced it will once again partner with United Airlines as a United Express code sharing air carrier with primary hubs to be located at Chicago O'Hare International Airport (ORD) and Washington Dulles International Airport (IAD) beginning in September 2017 and will be \"exclusively operating\" as United Express by March 2018."
+        ],
+        "thoughts": [
+            "Dillingham Airport handles civilian (passenger) service. Scheduled passenger service is available at this airport, and scheduled airline service to Dillingham Airport is provided by Peninsula Airways (PenAir).",
+            "Rafael Hern\u00e1ndez Airport handles civilian (passenger) service, as it serves Puerto Rican westerners living in the Eastern Region of the United States and previously served as a focus city for PAWA Dominicana. Additionally, it is the second largest international airport in Puerto Rico and is home to Coast Guard Air Station Borinquen. Therefore, it is primarily focused on civilian passenger service.",
+            "Both Dillingham Airport and Rafael Hern\u00e1ndez Airport handle civilian (passenger) service. Scheduled passenger service is available at Dillingham Airport, and it is provided by Peninsula Airways. Rafael Hern\u00e1ndez Airport serves Puerto Rican westerners living in the Eastern Region of the United States and previously served as a focus city for PAWA Dominicana, indicating its focus on civilian passenger service."
+        ],
+        "is_best": false
+    }
+]

@@ -1,0 +1,792 @@
+[
+    {
+        "attempt": 1,
+        "question": "Are The Maine and Black both from Tempe, Arizona?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about the band 'The Maine', including their place of origin.",
+                "output": "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums, including \"Can't Stop Won't Stop\", \"Black & White\", \"Pioneer\", \"Forever Halloween\", \"American Candy\", and \"Lovely Little Lonely\".",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about the band 'Black', including their place of origin.",
+                "output": "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if The Maine is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the retrieved information, The Maine is indeed from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "1",
+                        "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums, including \"Can't Stop Won't Stop\", \"Black & White\", \"Pioneer\", \"Forever Halloween\", \"American Candy\", and \"Lovely Little Lonely\"."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Black is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the information provided, it cannot be determined if the band Black is from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "2",
+                        "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Consolidate the conclusions about both bands and determine if both are from Tempe, Arizona.",
+                "output": "Based on the information gathered, it can be concluded that The Maine is from Tempe, Arizona. However, it cannot be determined if the band Black is also from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, The Maine is indeed from Tempe, Arizona."
+                    ],
+                    [
+                        "4",
+                        "Based on the information provided, it cannot be determined if the band Black is from Tempe, Arizona."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album.",
+            "2016 Maine Black Bears football team\nThe 2016 Maine Black Bears football team represented the University of Maine in the 2016 NCAA Division I FCS football season. They were led by first-year head coach Joe Harasymiak and played their home games at Alfond Stadium. They were a member of the Colonial Athletic Association. They finished the season 6\u20135, 5\u20133 in CAA play to finish in a tie for fourth place.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "John C. Talbot\nJohn Coffin Talbot (1784\u20131860) was an American businessperson and politician from Maine. Talbot, a Democrat, served 6 one-year terms in the Maine Legislature, including two in the Maine House of Representatives (1825; 1831) and four in the Maine Senate (1832-1833; 1836-1837). In his 4th and final Senate term, Talbot was elected Senate President.",
+            "The Maine (band)\nThe Maine is an American rock band from Tempe, Arizona, formed in 2007. Their first release, the EP \"Stay Up, Get Down\" was released in late 2007, followed by a five-song EP titled \"The Way We Talk\" on December 11, 2007. The band's first full-length album, \"Can't Stop Won't Stop\" was released July 8, 2008. \"...And a Happy New Year\" was released in December 2008. Their second full-length album, \"Black & White\", (July 13, 2010) sold 22,634 copies in its first week. On December 6, 2011, the group's third album, \"Pioneer\", was released and it peaked at No. 90 on the Billboard 200. Their fourth full-length record \"Forever Halloween\"(June 4, 2013) reached No. 39 on the Billboard 200 by selling over 10,000 copies in its first week and was followed by its deluxe edition on June 17, 2014. Their fifth studio album, \"American Candy\", was released on March 31, 2015. \"Lovely Little Lonely\", their sixth full-length record, was released on April 7, 2017.",
+            "2017 Maine Black Bears football team\nThe 2017 Maine Black Bears football team represents the University of Maine in the 2017 NCAA Division I FCS football season. They are led by second-year head coach Joe Harasymiak and play their home games at Alfond Stadium. They are a member of the Colonial Athletic Association. Maine initially had a game scheduled on September 30 against Central Florida but that game was canceled on September 14 in the aftermath of Hurricane Irma.",
+            "Kimo Williams\nKimo Williams is an American composer, musician and professor who has performed with a number of ensembles including his ensemble Kimotion and the Lt. Dan Band, that he co-founded with film/TV actor Gary Sinise. While he is perhaps best known for his work with the Lt. Dan Band, Williams has worked on a number of other projects including: award-winning photography, releasing four CDs, writing a stageplay and working on an opera based on the Courts Martial of Henry O Flipper, the first black graduate from West Point. Cognizant of the opportunities he had, as well as those he did not due to a childhood in which he moved often, Williams speaks to students about his history, their future and their need to combat mediocrity.",
+            "Erskine Academy\nErskine Academy is a private high school located in South China, Maine that serves eight surrounding towns. The campus occupies about 25 acre of land and includes several academic buildings as well as various athletic fields."
+        ],
+        "recall": 0.2777777777777778
+    },
+    {
+        "attempt": 2,
+        "question": "Are The Maine and Black both from Tempe, Arizona?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about the band 'The Maine', including their place of origin.",
+                "output": "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums, including \"Can't Stop Won't Stop\", \"Black & White\", \"Pioneer\", \"Forever Halloween\", \"American Candy\", and \"Lovely Little Lonely\".",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about the band 'Black', including their place of origin.",
+                "output": "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if The Maine is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the retrieved information, The Maine is indeed from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "1",
+                        "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums, including \"Can't Stop Won't Stop\", \"Black & White\", \"Pioneer\", \"Forever Halloween\", \"American Candy\", and \"Lovely Little Lonely\"."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Black is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the information provided, it cannot be determined if the band Black is from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "2",
+                        "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Consolidate the conclusions about both bands and determine if both are from Tempe, Arizona.",
+                "output": "Based on the information gathered, it can be concluded that The Maine is from Tempe, Arizona. However, it cannot be determined if the band Black is also from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, The Maine is indeed from Tempe, Arizona."
+                    ],
+                    [
+                        "4",
+                        "Based on the information provided, it cannot be determined if the band Black is from Tempe, Arizona."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album.",
+            "2016 Maine Black Bears football team\nThe 2016 Maine Black Bears football team represented the University of Maine in the 2016 NCAA Division I FCS football season. They were led by first-year head coach Joe Harasymiak and played their home games at Alfond Stadium. They were a member of the Colonial Athletic Association. They finished the season 6\u20135, 5\u20133 in CAA play to finish in a tie for fourth place.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "John C. Talbot\nJohn Coffin Talbot (1784\u20131860) was an American businessperson and politician from Maine. Talbot, a Democrat, served 6 one-year terms in the Maine Legislature, including two in the Maine House of Representatives (1825; 1831) and four in the Maine Senate (1832-1833; 1836-1837). In his 4th and final Senate term, Talbot was elected Senate President.",
+            "The Maine (band)\nThe Maine is an American rock band from Tempe, Arizona, formed in 2007. Their first release, the EP \"Stay Up, Get Down\" was released in late 2007, followed by a five-song EP titled \"The Way We Talk\" on December 11, 2007. The band's first full-length album, \"Can't Stop Won't Stop\" was released July 8, 2008. \"...And a Happy New Year\" was released in December 2008. Their second full-length album, \"Black & White\", (July 13, 2010) sold 22,634 copies in its first week. On December 6, 2011, the group's third album, \"Pioneer\", was released and it peaked at No. 90 on the Billboard 200. Their fourth full-length record \"Forever Halloween\"(June 4, 2013) reached No. 39 on the Billboard 200 by selling over 10,000 copies in its first week and was followed by its deluxe edition on June 17, 2014. Their fifth studio album, \"American Candy\", was released on March 31, 2015. \"Lovely Little Lonely\", their sixth full-length record, was released on April 7, 2017.",
+            "2017 Maine Black Bears football team\nThe 2017 Maine Black Bears football team represents the University of Maine in the 2017 NCAA Division I FCS football season. They are led by second-year head coach Joe Harasymiak and play their home games at Alfond Stadium. They are a member of the Colonial Athletic Association. Maine initially had a game scheduled on September 30 against Central Florida but that game was canceled on September 14 in the aftermath of Hurricane Irma.",
+            "Kimo Williams\nKimo Williams is an American composer, musician and professor who has performed with a number of ensembles including his ensemble Kimotion and the Lt. Dan Band, that he co-founded with film/TV actor Gary Sinise. While he is perhaps best known for his work with the Lt. Dan Band, Williams has worked on a number of other projects including: award-winning photography, releasing four CDs, writing a stageplay and working on an opera based on the Courts Martial of Henry O Flipper, the first black graduate from West Point. Cognizant of the opportunities he had, as well as those he did not due to a childhood in which he moved often, Williams speaks to students about his history, their future and their need to combat mediocrity.",
+            "Erskine Academy\nErskine Academy is a private high school located in South China, Maine that serves eight surrounding towns. The campus occupies about 25 acre of land and includes several academic buildings as well as various athletic fields."
+        ],
+        "recall": 0.2777777777777778
+    },
+    {
+        "attempt": 3,
+        "question": "Are The Maine and Black both from Tempe, Arizona?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about the band 'The Maine', including their place of origin.",
+                "output": "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums and EPs since then. Their music has gained popularity and they have achieved success in the music industry.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about the band 'Black', including their place of origin.",
+                "output": "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if The Maine is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the information provided, The Maine is indeed from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "1",
+                        "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums and EPs since then. Their music has gained popularity and they have achieved success in the music industry."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Black is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the information provided, it cannot be determined if the band Black is from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "2",
+                        "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Consolidate the conclusions about both bands and determine if both are from Tempe, Arizona.",
+                "output": "Based on the information provided, The Maine is confirmed to be from Tempe, Arizona. However, it cannot be determined if the band Black is also from Tempe, Arizona. Therefore, it is inconclusive if both bands are from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the information provided, The Maine is indeed from Tempe, Arizona."
+                    ],
+                    [
+                        "4",
+                        "Based on the information provided, it cannot be determined if the band Black is from Tempe, Arizona."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album.",
+            "2016 Maine Black Bears football team\nThe 2016 Maine Black Bears football team represented the University of Maine in the 2016 NCAA Division I FCS football season. They were led by first-year head coach Joe Harasymiak and played their home games at Alfond Stadium. They were a member of the Colonial Athletic Association. They finished the season 6\u20135, 5\u20133 in CAA play to finish in a tie for fourth place.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "John C. Talbot\nJohn Coffin Talbot (1784\u20131860) was an American businessperson and politician from Maine. Talbot, a Democrat, served 6 one-year terms in the Maine Legislature, including two in the Maine House of Representatives (1825; 1831) and four in the Maine Senate (1832-1833; 1836-1837). In his 4th and final Senate term, Talbot was elected Senate President.",
+            "The Maine (band)\nThe Maine is an American rock band from Tempe, Arizona, formed in 2007. Their first release, the EP \"Stay Up, Get Down\" was released in late 2007, followed by a five-song EP titled \"The Way We Talk\" on December 11, 2007. The band's first full-length album, \"Can't Stop Won't Stop\" was released July 8, 2008. \"...And a Happy New Year\" was released in December 2008. Their second full-length album, \"Black & White\", (July 13, 2010) sold 22,634 copies in its first week. On December 6, 2011, the group's third album, \"Pioneer\", was released and it peaked at No. 90 on the Billboard 200. Their fourth full-length record \"Forever Halloween\"(June 4, 2013) reached No. 39 on the Billboard 200 by selling over 10,000 copies in its first week and was followed by its deluxe edition on June 17, 2014. Their fifth studio album, \"American Candy\", was released on March 31, 2015. \"Lovely Little Lonely\", their sixth full-length record, was released on April 7, 2017.",
+            "2017 Maine Black Bears football team\nThe 2017 Maine Black Bears football team represents the University of Maine in the 2017 NCAA Division I FCS football season. They are led by second-year head coach Joe Harasymiak and play their home games at Alfond Stadium. They are a member of the Colonial Athletic Association. Maine initially had a game scheduled on September 30 against Central Florida but that game was canceled on September 14 in the aftermath of Hurricane Irma.",
+            "Kimo Williams\nKimo Williams is an American composer, musician and professor who has performed with a number of ensembles including his ensemble Kimotion and the Lt. Dan Band, that he co-founded with film/TV actor Gary Sinise. While he is perhaps best known for his work with the Lt. Dan Band, Williams has worked on a number of other projects including: award-winning photography, releasing four CDs, writing a stageplay and working on an opera based on the Courts Martial of Henry O Flipper, the first black graduate from West Point. Cognizant of the opportunities he had, as well as those he did not due to a childhood in which he moved often, Williams speaks to students about his history, their future and their need to combat mediocrity.",
+            "Erskine Academy\nErskine Academy is a private high school located in South China, Maine that serves eight surrounding towns. The campus occupies about 25 acre of land and includes several academic buildings as well as various athletic fields."
+        ],
+        "recall": 0.2777777777777778
+    },
+    {
+        "attempt": 4,
+        "question": "Are The Maine and Black both from Tempe, Arizona?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about the band 'The Maine', including their place of origin.",
+                "output": "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums and EPs since then.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about the band 'Black', including their place of origin.",
+                "output": "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if The Maine is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the retrieved information, The Maine is indeed from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "1",
+                        "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums and EPs since then."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Black is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the information provided, it cannot be determined if the band Black is from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "2",
+                        "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Consolidate the conclusions about both bands and determine if both are from Tempe, Arizona.",
+                "output": "Based on the information gathered, it can be concluded that The Maine is from Tempe, Arizona. However, it cannot be determined if the band Black is also from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, The Maine is indeed from Tempe, Arizona."
+                    ],
+                    [
+                        "4",
+                        "Based on the information provided, it cannot be determined if the band Black is from Tempe, Arizona."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album.",
+            "2016 Maine Black Bears football team\nThe 2016 Maine Black Bears football team represented the University of Maine in the 2016 NCAA Division I FCS football season. They were led by first-year head coach Joe Harasymiak and played their home games at Alfond Stadium. They were a member of the Colonial Athletic Association. They finished the season 6\u20135, 5\u20133 in CAA play to finish in a tie for fourth place.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "John C. Talbot\nJohn Coffin Talbot (1784\u20131860) was an American businessperson and politician from Maine. Talbot, a Democrat, served 6 one-year terms in the Maine Legislature, including two in the Maine House of Representatives (1825; 1831) and four in the Maine Senate (1832-1833; 1836-1837). In his 4th and final Senate term, Talbot was elected Senate President.",
+            "The Maine (band)\nThe Maine is an American rock band from Tempe, Arizona, formed in 2007. Their first release, the EP \"Stay Up, Get Down\" was released in late 2007, followed by a five-song EP titled \"The Way We Talk\" on December 11, 2007. The band's first full-length album, \"Can't Stop Won't Stop\" was released July 8, 2008. \"...And a Happy New Year\" was released in December 2008. Their second full-length album, \"Black & White\", (July 13, 2010) sold 22,634 copies in its first week. On December 6, 2011, the group's third album, \"Pioneer\", was released and it peaked at No. 90 on the Billboard 200. Their fourth full-length record \"Forever Halloween\"(June 4, 2013) reached No. 39 on the Billboard 200 by selling over 10,000 copies in its first week and was followed by its deluxe edition on June 17, 2014. Their fifth studio album, \"American Candy\", was released on March 31, 2015. \"Lovely Little Lonely\", their sixth full-length record, was released on April 7, 2017.",
+            "2017 Maine Black Bears football team\nThe 2017 Maine Black Bears football team represents the University of Maine in the 2017 NCAA Division I FCS football season. They are led by second-year head coach Joe Harasymiak and play their home games at Alfond Stadium. They are a member of the Colonial Athletic Association. Maine initially had a game scheduled on September 30 against Central Florida but that game was canceled on September 14 in the aftermath of Hurricane Irma.",
+            "Kimo Williams\nKimo Williams is an American composer, musician and professor who has performed with a number of ensembles including his ensemble Kimotion and the Lt. Dan Band, that he co-founded with film/TV actor Gary Sinise. While he is perhaps best known for his work with the Lt. Dan Band, Williams has worked on a number of other projects including: award-winning photography, releasing four CDs, writing a stageplay and working on an opera based on the Courts Martial of Henry O Flipper, the first black graduate from West Point. Cognizant of the opportunities he had, as well as those he did not due to a childhood in which he moved often, Williams speaks to students about his history, their future and their need to combat mediocrity.",
+            "Erskine Academy\nErskine Academy is a private high school located in South China, Maine that serves eight surrounding towns. The campus occupies about 25 acre of land and includes several academic buildings as well as various athletic fields."
+        ],
+        "recall": 0.2777777777777778
+    },
+    {
+        "attempt": 5,
+        "question": "Are The Maine and Black both from Tempe, Arizona?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about the band 'The Maine', including their place of origin.",
+                "output": "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums and EPs since then. Their music has achieved success, with their albums reaching high positions on the Billboard 200 chart.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about the band 'Black', including their place of origin.",
+                "output": "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if The Maine is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the information retrieved, The Maine is indeed from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "1",
+                        "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums and EPs since then. Their music has achieved success, with their albums reaching high positions on the Billboard 200 chart."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Black is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the information provided, it cannot be determined if the band Black is from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "2",
+                        "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Consolidate the conclusions about both bands and determine if both are from Tempe, Arizona.",
+                "output": "The conclusion is that The Maine is from Tempe, Arizona, while it cannot be determined if the band Black is also from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the information retrieved, The Maine is indeed from Tempe, Arizona."
+                    ],
+                    [
+                        "4",
+                        "Based on the information provided, it cannot be determined if the band Black is from Tempe, Arizona."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album.",
+            "2016 Maine Black Bears football team\nThe 2016 Maine Black Bears football team represented the University of Maine in the 2016 NCAA Division I FCS football season. They were led by first-year head coach Joe Harasymiak and played their home games at Alfond Stadium. They were a member of the Colonial Athletic Association. They finished the season 6\u20135, 5\u20133 in CAA play to finish in a tie for fourth place.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "John C. Talbot\nJohn Coffin Talbot (1784\u20131860) was an American businessperson and politician from Maine. Talbot, a Democrat, served 6 one-year terms in the Maine Legislature, including two in the Maine House of Representatives (1825; 1831) and four in the Maine Senate (1832-1833; 1836-1837). In his 4th and final Senate term, Talbot was elected Senate President.",
+            "The Maine (band)\nThe Maine is an American rock band from Tempe, Arizona, formed in 2007. Their first release, the EP \"Stay Up, Get Down\" was released in late 2007, followed by a five-song EP titled \"The Way We Talk\" on December 11, 2007. The band's first full-length album, \"Can't Stop Won't Stop\" was released July 8, 2008. \"...And a Happy New Year\" was released in December 2008. Their second full-length album, \"Black & White\", (July 13, 2010) sold 22,634 copies in its first week. On December 6, 2011, the group's third album, \"Pioneer\", was released and it peaked at No. 90 on the Billboard 200. Their fourth full-length record \"Forever Halloween\"(June 4, 2013) reached No. 39 on the Billboard 200 by selling over 10,000 copies in its first week and was followed by its deluxe edition on June 17, 2014. Their fifth studio album, \"American Candy\", was released on March 31, 2015. \"Lovely Little Lonely\", their sixth full-length record, was released on April 7, 2017.",
+            "2017 Maine Black Bears football team\nThe 2017 Maine Black Bears football team represents the University of Maine in the 2017 NCAA Division I FCS football season. They are led by second-year head coach Joe Harasymiak and play their home games at Alfond Stadium. They are a member of the Colonial Athletic Association. Maine initially had a game scheduled on September 30 against Central Florida but that game was canceled on September 14 in the aftermath of Hurricane Irma.",
+            "Kimo Williams\nKimo Williams is an American composer, musician and professor who has performed with a number of ensembles including his ensemble Kimotion and the Lt. Dan Band, that he co-founded with film/TV actor Gary Sinise. While he is perhaps best known for his work with the Lt. Dan Band, Williams has worked on a number of other projects including: award-winning photography, releasing four CDs, writing a stageplay and working on an opera based on the Courts Martial of Henry O Flipper, the first black graduate from West Point. Cognizant of the opportunities he had, as well as those he did not due to a childhood in which he moved often, Williams speaks to students about his history, their future and their need to combat mediocrity.",
+            "Erskine Academy\nErskine Academy is a private high school located in South China, Maine that serves eight surrounding towns. The campus occupies about 25 acre of land and includes several academic buildings as well as various athletic fields."
+        ],
+        "recall": 0.2777777777777778
+    },
+    {
+        "attempt": 6,
+        "question": "Are The Maine and Black both from Tempe, Arizona?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about the band 'The Maine', including their place of origin.",
+                "output": "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums, including \"Can't Stop Won't Stop\", \"Black & White\", \"Pioneer\", \"Forever Halloween\", \"American Candy\", and \"Lovely Little Lonely\".",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about the band 'Black', including their place of origin.",
+                "output": "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if The Maine is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the retrieved information, The Maine is indeed from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "1",
+                        "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums, including \"Can't Stop Won't Stop\", \"Black & White\", \"Pioneer\", \"Forever Halloween\", \"American Candy\", and \"Lovely Little Lonely\"."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Black is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the information provided, it cannot be determined if the band Black is from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "2",
+                        "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Consolidate the conclusions about both bands and determine if both are from Tempe, Arizona.",
+                "output": "Based on the information gathered, it can be concluded that The Maine is from Tempe, Arizona. However, it cannot be determined if the band Black is also from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, The Maine is indeed from Tempe, Arizona."
+                    ],
+                    [
+                        "4",
+                        "Based on the information provided, it cannot be determined if the band Black is from Tempe, Arizona."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album.",
+            "2016 Maine Black Bears football team\nThe 2016 Maine Black Bears football team represented the University of Maine in the 2016 NCAA Division I FCS football season. They were led by first-year head coach Joe Harasymiak and played their home games at Alfond Stadium. They were a member of the Colonial Athletic Association. They finished the season 6\u20135, 5\u20133 in CAA play to finish in a tie for fourth place.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "John C. Talbot\nJohn Coffin Talbot (1784\u20131860) was an American businessperson and politician from Maine. Talbot, a Democrat, served 6 one-year terms in the Maine Legislature, including two in the Maine House of Representatives (1825; 1831) and four in the Maine Senate (1832-1833; 1836-1837). In his 4th and final Senate term, Talbot was elected Senate President.",
+            "The Maine (band)\nThe Maine is an American rock band from Tempe, Arizona, formed in 2007. Their first release, the EP \"Stay Up, Get Down\" was released in late 2007, followed by a five-song EP titled \"The Way We Talk\" on December 11, 2007. The band's first full-length album, \"Can't Stop Won't Stop\" was released July 8, 2008. \"...And a Happy New Year\" was released in December 2008. Their second full-length album, \"Black & White\", (July 13, 2010) sold 22,634 copies in its first week. On December 6, 2011, the group's third album, \"Pioneer\", was released and it peaked at No. 90 on the Billboard 200. Their fourth full-length record \"Forever Halloween\"(June 4, 2013) reached No. 39 on the Billboard 200 by selling over 10,000 copies in its first week and was followed by its deluxe edition on June 17, 2014. Their fifth studio album, \"American Candy\", was released on March 31, 2015. \"Lovely Little Lonely\", their sixth full-length record, was released on April 7, 2017.",
+            "2017 Maine Black Bears football team\nThe 2017 Maine Black Bears football team represents the University of Maine in the 2017 NCAA Division I FCS football season. They are led by second-year head coach Joe Harasymiak and play their home games at Alfond Stadium. They are a member of the Colonial Athletic Association. Maine initially had a game scheduled on September 30 against Central Florida but that game was canceled on September 14 in the aftermath of Hurricane Irma.",
+            "Kimo Williams\nKimo Williams is an American composer, musician and professor who has performed with a number of ensembles including his ensemble Kimotion and the Lt. Dan Band, that he co-founded with film/TV actor Gary Sinise. While he is perhaps best known for his work with the Lt. Dan Band, Williams has worked on a number of other projects including: award-winning photography, releasing four CDs, writing a stageplay and working on an opera based on the Courts Martial of Henry O Flipper, the first black graduate from West Point. Cognizant of the opportunities he had, as well as those he did not due to a childhood in which he moved often, Williams speaks to students about his history, their future and their need to combat mediocrity.",
+            "Erskine Academy\nErskine Academy is a private high school located in South China, Maine that serves eight surrounding towns. The campus occupies about 25 acre of land and includes several academic buildings as well as various athletic fields."
+        ],
+        "recall": 0.2777777777777778
+    },
+    {
+        "attempt": 7,
+        "question": "Are The Maine and Black both from Tempe, Arizona?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about the band 'The Maine', including their place of origin.",
+                "output": "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums, including \"Can't Stop Won't Stop\", \"Black & White\", \"Pioneer\", \"Forever Halloween\", \"American Candy\", and \"Lovely Little Lonely\".",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about the band 'Black', including their place of origin.",
+                "output": "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if The Maine is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the retrieved information, The Maine is indeed from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "1",
+                        "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums, including \"Can't Stop Won't Stop\", \"Black & White\", \"Pioneer\", \"Forever Halloween\", \"American Candy\", and \"Lovely Little Lonely\"."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Black is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the information provided, it cannot be determined if the band Black is from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "2",
+                        "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Consolidate the conclusions about both bands and determine if both are from Tempe, Arizona.",
+                "output": "Based on the information gathered, it can be concluded that The Maine is from Tempe, Arizona. However, it cannot be determined if the band Black is also from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, The Maine is indeed from Tempe, Arizona."
+                    ],
+                    [
+                        "4",
+                        "Based on the information provided, it cannot be determined if the band Black is from Tempe, Arizona."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album.",
+            "2016 Maine Black Bears football team\nThe 2016 Maine Black Bears football team represented the University of Maine in the 2016 NCAA Division I FCS football season. They were led by first-year head coach Joe Harasymiak and played their home games at Alfond Stadium. They were a member of the Colonial Athletic Association. They finished the season 6\u20135, 5\u20133 in CAA play to finish in a tie for fourth place.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "John C. Talbot\nJohn Coffin Talbot (1784\u20131860) was an American businessperson and politician from Maine. Talbot, a Democrat, served 6 one-year terms in the Maine Legislature, including two in the Maine House of Representatives (1825; 1831) and four in the Maine Senate (1832-1833; 1836-1837). In his 4th and final Senate term, Talbot was elected Senate President.",
+            "The Maine (band)\nThe Maine is an American rock band from Tempe, Arizona, formed in 2007. Their first release, the EP \"Stay Up, Get Down\" was released in late 2007, followed by a five-song EP titled \"The Way We Talk\" on December 11, 2007. The band's first full-length album, \"Can't Stop Won't Stop\" was released July 8, 2008. \"...And a Happy New Year\" was released in December 2008. Their second full-length album, \"Black & White\", (July 13, 2010) sold 22,634 copies in its first week. On December 6, 2011, the group's third album, \"Pioneer\", was released and it peaked at No. 90 on the Billboard 200. Their fourth full-length record \"Forever Halloween\"(June 4, 2013) reached No. 39 on the Billboard 200 by selling over 10,000 copies in its first week and was followed by its deluxe edition on June 17, 2014. Their fifth studio album, \"American Candy\", was released on March 31, 2015. \"Lovely Little Lonely\", their sixth full-length record, was released on April 7, 2017.",
+            "2017 Maine Black Bears football team\nThe 2017 Maine Black Bears football team represents the University of Maine in the 2017 NCAA Division I FCS football season. They are led by second-year head coach Joe Harasymiak and play their home games at Alfond Stadium. They are a member of the Colonial Athletic Association. Maine initially had a game scheduled on September 30 against Central Florida but that game was canceled on September 14 in the aftermath of Hurricane Irma.",
+            "Kimo Williams\nKimo Williams is an American composer, musician and professor who has performed with a number of ensembles including his ensemble Kimotion and the Lt. Dan Band, that he co-founded with film/TV actor Gary Sinise. While he is perhaps best known for his work with the Lt. Dan Band, Williams has worked on a number of other projects including: award-winning photography, releasing four CDs, writing a stageplay and working on an opera based on the Courts Martial of Henry O Flipper, the first black graduate from West Point. Cognizant of the opportunities he had, as well as those he did not due to a childhood in which he moved often, Williams speaks to students about his history, their future and their need to combat mediocrity.",
+            "Erskine Academy\nErskine Academy is a private high school located in South China, Maine that serves eight surrounding towns. The campus occupies about 25 acre of land and includes several academic buildings as well as various athletic fields."
+        ],
+        "recall": 0.2777777777777778
+    },
+    {
+        "attempt": 8,
+        "question": "Are The Maine and Black both from Tempe, Arizona?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about the band 'The Maine', including their place of origin.",
+                "output": "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums, including \"Can't Stop Won't Stop\", \"Black & White\", \"Pioneer\", \"Forever Halloween\", \"American Candy\", and \"Lovely Little Lonely\".",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about the band 'Black', including their place of origin.",
+                "output": "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if The Maine is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the retrieved information, The Maine is indeed from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "1",
+                        "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums, including \"Can't Stop Won't Stop\", \"Black & White\", \"Pioneer\", \"Forever Halloween\", \"American Candy\", and \"Lovely Little Lonely\"."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Black is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the retrieved information, it cannot be determined if the band Black is from Tempe, Arizona as the band is not mentioned in the provided information.",
+                "upstream": [
+                    [
+                        "2",
+                        "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Consolidate the conclusions about both bands and determine if both are from Tempe, Arizona.",
+                "output": "Based on the information gathered, it can be concluded that The Maine is from Tempe, Arizona. However, it cannot be determined if the band Black is from Tempe, Arizona as there is no mention of the band in the provided information. Therefore, it is inconclusive if both bands are from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, The Maine is indeed from Tempe, Arizona."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, it cannot be determined if the band Black is from Tempe, Arizona as the band is not mentioned in the provided information."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album.",
+            "2016 Maine Black Bears football team\nThe 2016 Maine Black Bears football team represented the University of Maine in the 2016 NCAA Division I FCS football season. They were led by first-year head coach Joe Harasymiak and played their home games at Alfond Stadium. They were a member of the Colonial Athletic Association. They finished the season 6\u20135, 5\u20133 in CAA play to finish in a tie for fourth place.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "John C. Talbot\nJohn Coffin Talbot (1784\u20131860) was an American businessperson and politician from Maine. Talbot, a Democrat, served 6 one-year terms in the Maine Legislature, including two in the Maine House of Representatives (1825; 1831) and four in the Maine Senate (1832-1833; 1836-1837). In his 4th and final Senate term, Talbot was elected Senate President.",
+            "The Maine (band)\nThe Maine is an American rock band from Tempe, Arizona, formed in 2007. Their first release, the EP \"Stay Up, Get Down\" was released in late 2007, followed by a five-song EP titled \"The Way We Talk\" on December 11, 2007. The band's first full-length album, \"Can't Stop Won't Stop\" was released July 8, 2008. \"...And a Happy New Year\" was released in December 2008. Their second full-length album, \"Black & White\", (July 13, 2010) sold 22,634 copies in its first week. On December 6, 2011, the group's third album, \"Pioneer\", was released and it peaked at No. 90 on the Billboard 200. Their fourth full-length record \"Forever Halloween\"(June 4, 2013) reached No. 39 on the Billboard 200 by selling over 10,000 copies in its first week and was followed by its deluxe edition on June 17, 2014. Their fifth studio album, \"American Candy\", was released on March 31, 2015. \"Lovely Little Lonely\", their sixth full-length record, was released on April 7, 2017.",
+            "2017 Maine Black Bears football team\nThe 2017 Maine Black Bears football team represents the University of Maine in the 2017 NCAA Division I FCS football season. They are led by second-year head coach Joe Harasymiak and play their home games at Alfond Stadium. They are a member of the Colonial Athletic Association. Maine initially had a game scheduled on September 30 against Central Florida but that game was canceled on September 14 in the aftermath of Hurricane Irma.",
+            "Kimo Williams\nKimo Williams is an American composer, musician and professor who has performed with a number of ensembles including his ensemble Kimotion and the Lt. Dan Band, that he co-founded with film/TV actor Gary Sinise. While he is perhaps best known for his work with the Lt. Dan Band, Williams has worked on a number of other projects including: award-winning photography, releasing four CDs, writing a stageplay and working on an opera based on the Courts Martial of Henry O Flipper, the first black graduate from West Point. Cognizant of the opportunities he had, as well as those he did not due to a childhood in which he moved often, Williams speaks to students about his history, their future and their need to combat mediocrity.",
+            "Erskine Academy\nErskine Academy is a private high school located in South China, Maine that serves eight surrounding towns. The campus occupies about 25 acre of land and includes several academic buildings as well as various athletic fields."
+        ],
+        "recall": 0.2777777777777778
+    },
+    {
+        "attempt": 9,
+        "question": "Are The Maine and Black both from Tempe, Arizona?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about the band 'The Maine', including their place of origin.",
+                "output": "The band 'The Maine' is an American rock band that originated from Tempe, Arizona. They are not associated with the state of Maine.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about the band 'Black', including their place of origin.",
+                "output": "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if The Maine is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the retrieved information, The Maine is indeed from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "1",
+                        "The band 'The Maine' is an American rock band that originated from Tempe, Arizona. They are not associated with the state of Maine."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Black is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the information provided, it cannot be determined if the band Black is from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "2",
+                        "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Consolidate the conclusions about both bands and determine if both are from Tempe, Arizona.",
+                "output": "Based on the conclusions from the upstream tasks, it can be determined that The Maine is from Tempe, Arizona. However, it cannot be confirmed if the band Black is also from Tempe, Arizona. Therefore, it is inconclusive if both bands are from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, The Maine is indeed from Tempe, Arizona."
+                    ],
+                    [
+                        "4",
+                        "Based on the information provided, it cannot be determined if the band Black is from Tempe, Arizona."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Maine Legislature\nThe Maine Legislature is the state legislature of the U.S. state of Maine. It is a bicameral body composed of the lower house Maine House of Representatives and the upper house Maine Senate. The Legislature convenes at the State House in Augusta, where it has met since 1832.",
+            "Soundtrack of Your Summer Tour\nThe Soundtrack of Your Summer Tour was a tour that was co-headlined by Good Charlotte, and pop-rock band, Boys Like Girls. The Soundtrack of Your Summer Tour included guest bands such as Metro Station and The Maine on selected dates. The tour consisted of 39 dates in the United States and two in Canada. The name of the tour came from a line in the Boys Like Girls song, \"Thunder\".",
+            "Saint Joseph's College of Maine\nSaint Joseph's College of Maine is a private Catholic liberal arts college in Standish, Maine, that grants bachelor's degrees in a traditional on-campus setting, as well as bachelor's and master's degrees via online education. The college\u2019s 430 acre campus in southern Maine is located on the shore of Sebago Lake, just 18 mi from Portland, Maine\u2019s largest city. It is the only Catholic college in Maine.",
+            "John C. Talbot\nJohn Coffin Talbot (1784\u20131860) was an American businessperson and politician from Maine. Talbot, a Democrat, served 6 one-year terms in the Maine Legislature, including two in the Maine House of Representatives (1825; 1831) and four in the Maine Senate (1832-1833; 1836-1837). In his 4th and final Senate term, Talbot was elected Senate President.",
+            "G. Steven Rowe\nG. Steven Rowe, known commonly as Steve Rowe, is a former Maine politician. A Democrat, he first entered politics in 1992 as a member of the Maine House of Representatives. In 1998, he became the 94th Speaker of the Maine House of Representatives, serving until he was term-limited from the House in 2000. In 2001, Rowe was elected as the 54th Maine Attorney General, serving eight years in that position.",
+            "Farmington Falls, Maine\nFarmington Falls is an unincorporated village in the town of Farmington, Franklin County, Maine, United States. The community is located along the Sandy River 5 mi southeast of the village of Farmington; U.S. Route 2, Maine State Route 27, Maine State Route 41, and Maine State Route 156 all pass through the village. Farmington Falls has a post office with ZIP code 04940.",
+            "Maine State Route 111\nState Route 111, also known as the Carl Broggi Highway, is a 13.7 mi long state highway in southern Maine. It runs east\u2013west, connecting the towns of Alfred and Biddeford. It is a major east-west corridor in central York County, Maine."
+        ],
+        "recall": 0.0
+    },
+    {
+        "attempt": 10,
+        "question": "Are The Maine and Black both from Tempe, Arizona?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve information about the band 'The Maine', including their place of origin.",
+                "output": "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums, including \"Can't Stop Won't Stop\", \"Black & White\", \"Pioneer\", \"Forever Halloween\", \"American Candy\", and \"Lovely Little Lonely\".",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve information about the band 'Black', including their place of origin.",
+                "output": "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if The Maine is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the retrieved information, The Maine is indeed from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "1",
+                        "The Maine is an American rock band that originated from Tempe, Arizona. They were formed in 2007 and have released several albums, including \"Can't Stop Won't Stop\", \"Black & White\", \"Pioneer\", \"Forever Halloween\", \"American Candy\", and \"Lovely Little Lonely\"."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Black is from Tempe, Arizona based on the retrieved information.",
+                "output": "Based on the retrieved information, it cannot be determined if the band Black is from Tempe, Arizona as the band is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text.",
+                "upstream": [
+                    [
+                        "2",
+                        "The band 'Black' is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Consolidate the conclusions about both bands and determine if both are from Tempe, Arizona.",
+                "output": "The conclusion is that The Maine is from Tempe, Arizona, while the origin of the band Black cannot be determined from the provided information. Therefore, it cannot be confirmed if both bands are from Tempe, Arizona.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, The Maine is indeed from Tempe, Arizona."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, it cannot be determined if the band Black is from Tempe, Arizona as the band is not mentioned in the provided information. Therefore, their place of origin cannot be determined from the given text."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album.",
+            "2016 Maine Black Bears football team\nThe 2016 Maine Black Bears football team represented the University of Maine in the 2016 NCAA Division I FCS football season. They were led by first-year head coach Joe Harasymiak and played their home games at Alfond Stadium. They were a member of the Colonial Athletic Association. They finished the season 6\u20135, 5\u20133 in CAA play to finish in a tie for fourth place.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "John C. Talbot\nJohn Coffin Talbot (1784\u20131860) was an American businessperson and politician from Maine. Talbot, a Democrat, served 6 one-year terms in the Maine Legislature, including two in the Maine House of Representatives (1825; 1831) and four in the Maine Senate (1832-1833; 1836-1837). In his 4th and final Senate term, Talbot was elected Senate President.",
+            "The Maine (band)\nThe Maine is an American rock band from Tempe, Arizona, formed in 2007. Their first release, the EP \"Stay Up, Get Down\" was released in late 2007, followed by a five-song EP titled \"The Way We Talk\" on December 11, 2007. The band's first full-length album, \"Can't Stop Won't Stop\" was released July 8, 2008. \"...And a Happy New Year\" was released in December 2008. Their second full-length album, \"Black & White\", (July 13, 2010) sold 22,634 copies in its first week. On December 6, 2011, the group's third album, \"Pioneer\", was released and it peaked at No. 90 on the Billboard 200. Their fourth full-length record \"Forever Halloween\"(June 4, 2013) reached No. 39 on the Billboard 200 by selling over 10,000 copies in its first week and was followed by its deluxe edition on June 17, 2014. Their fifth studio album, \"American Candy\", was released on March 31, 2015. \"Lovely Little Lonely\", their sixth full-length record, was released on April 7, 2017.",
+            "2017 Maine Black Bears football team\nThe 2017 Maine Black Bears football team represents the University of Maine in the 2017 NCAA Division I FCS football season. They are led by second-year head coach Joe Harasymiak and play their home games at Alfond Stadium. They are a member of the Colonial Athletic Association. Maine initially had a game scheduled on September 30 against Central Florida but that game was canceled on September 14 in the aftermath of Hurricane Irma.",
+            "Kimo Williams\nKimo Williams is an American composer, musician and professor who has performed with a number of ensembles including his ensemble Kimotion and the Lt. Dan Band, that he co-founded with film/TV actor Gary Sinise. While he is perhaps best known for his work with the Lt. Dan Band, Williams has worked on a number of other projects including: award-winning photography, releasing four CDs, writing a stageplay and working on an opera based on the Courts Martial of Henry O Flipper, the first black graduate from West Point. Cognizant of the opportunities he had, as well as those he did not due to a childhood in which he moved often, Williams speaks to students about his history, their future and their need to combat mediocrity.",
+            "Erskine Academy\nErskine Academy is a private high school located in South China, Maine that serves eight surrounding towns. The campus occupies about 25 acre of land and includes several academic buildings as well as various athletic fields."
+        ],
+        "recall": 0.2777777777777778
+    }
+]

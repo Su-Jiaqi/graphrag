@@ -1,0 +1,492 @@
+[
+    {
+        "question": "Which sister of Margarita \"Peggy\" Schuyler Van Rensselaer is sometimes called Betsey?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the known sisters of Margarita \"Peggy\" Schuyler Van Rensselaer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the full names and nicknames of each sister of Margarita \"Peggy\" Schuyler Van Rensselaer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify which Schuyler sister is sometimes called \"Betsey.\"",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts by identifying all known sisters of Margarita \"Peggy\" Schuyler Van Rensselaer. The second step involves expanding this information to include the full names and common nicknames of each sister. Finally, the reasoning step synthesizes this information to determine which sister is sometimes referred to as \"Betsey.\" The design allows steps 1 and 2 to handle retrieval and preliminary reasoning, accumulating the necessary data to resolve which sister has the nickname \"Betsey.\""
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Peggy Schuyler\nMargarita \"Peggy\" Schuyler Van Rensselaer (September 19, 1758 \u2013 March 14, 1801) was the third daughter of Continental Army General Philip Schuyler. She was the wife of Stephen Van Rensselaer III, sister of Angelica Schuyler Church, Philip Jeremiah Schuyler, and Elizabeth Schuyler Hamilton, and sister in law of John Barker Church and Alexander Hamilton.",
+            "Angelica Schuyler Church\nAngelica Church (n\u00e9e Schuyler ; February 20, 1756 \u2013 March 13, 1814) was the eldest daughter of Continental Army General Philip Schuyler, wife of British MP John Barker Church, sister of Elizabeth Schuyler Hamilton (wife of Alexander Hamilton), Margarita \"Peggy\" Schuyler Van Rensselaer and Philip Jeremiah Schuyler.",
+            "Philip Jeremiah Schuyler\nPhilip Jeremiah Schuyler (January 21, 1768 Albany, New York \u2013 February 21, 1835 New York City) was an American politician from New York. His siblings included Angelica Schuyler Church, Elizabeth Schuyler Hamilton, and Margarita \"Peggy\" Schuyler Van Renesslaer.",
+            "Mariana Griswold Van Rensselaer\nMariana Griswold Van Rensselaer (February 21, 1851 \u2013 January 20, 1934), usually known as Mrs. Schuyler Van Rensselaer, was an American author.",
+            "Mrs. Schuyler Van Rensselaer (Mariana Griswold)\nMrs. Schuyler Van Rensselaer (Mariana Griswold) is a bronze sculpture by American artist Augustus Saint-Gaudens. It was designed in 1888 and cast in 1890. This artwork portrays the American author, art critic, and reformer Mariana Griswold Van Rensselaer (1851\u20131934), who \"championed Saint-Gaudens in articles on his public monuments and relief sculptures\".",
+            "Schuyler V. Cammann\nSchuyler Van Rensselaer Cammann (February 2, 1912 in New York City \u2013 September 9, 1991 in Sugar Hill, New Hampshire) was an anthropologist best known for work in Asia.",
+            "Philip Kiliaen van Rensselaer\nPhilip Kiliaen van Rensselaer (May 19, 1747 \u2013 March 3, 1798) was the second son of Colonel Kiliaen van Rensselaer and Ariaantie (Schuyler). He was a merchant by trade, and his experience in transporting cargo may have helped qualify him as keeper of the Albany arsenal. He was variously referred to as storekeeper, military storekeeper and Commissary for the Northern Department.",
+            "Philip S. Van Rensselaer\nPhilip Schuyler Van Rensselaer (April 15, 1767 \u2013 September 25, 1824) was the Mayor of Albany, New York on two occasions. He has the third longest tenure of service by an Albany Mayor, after Erastus Corning II and Gerald Jennings."
+        ],
+        "thoughts": [
+            "The known sisters of Margarita \"Peggy\" Schuyler Van Rensselaer are Angelica Schuyler Church and Elizabeth Schuyler Hamilton.",
+            "The full names and nicknames of each sister of Margarita \"Peggy\" Schuyler Van Rensselaer are:\n\n1. Angelica Schuyler Church\n   - Full Name: Angelica Church (n\u00e9e Schuyler)\n   - Nickname: Angelica\n\n2. Elizabeth Schuyler Hamilton\n   - Full Name: Elizabeth Schuyler Hamilton\n   - Nickname: Eliza\n\n3. Mariana Griswold Van Rensselaer\n   - Full Name: Mariana Griswold Van Rensselaer\n   - Nickname: Mrs. Schuyler Van Rensselaer\n\n4. Philip Jeremiah Schuyler\n   - Full Name: Philip Jeremiah Schuyler\n\n5. Schuyler V. Cammann\n   - Full Name: Schuyler Van Rensselaer Cammann",
+            "The Schuyler sister sometimes called \"Betsey\" is Elizabeth Schuyler Hamilton."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which sister of Margarita \"Peggy\" Schuyler Van Rensselaer is sometimes called Betsey?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify Margarita \"Peggy\" Schuyler Van Rensselaer's sisters.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find out which of these sisters is sometimes referred to as \"Betsey\".",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The task is to find which sister of Margarita \"Peggy\" Schuyler is sometimes called Betsey. The execution graph starts by retrieving the names of all her sisters (Node 1). Next, using this information, we determine which sister goes by the name Betsey (Node 2). This stepwise approach allows us to identify and verify the sister in question efficiently."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Peggy Schuyler\nMargarita \"Peggy\" Schuyler Van Rensselaer (September 19, 1758 \u2013 March 14, 1801) was the third daughter of Continental Army General Philip Schuyler. She was the wife of Stephen Van Rensselaer III, sister of Angelica Schuyler Church, Philip Jeremiah Schuyler, and Elizabeth Schuyler Hamilton, and sister in law of John Barker Church and Alexander Hamilton.",
+            "Angelica Schuyler Church\nAngelica Church (n\u00e9e Schuyler ; February 20, 1756 \u2013 March 13, 1814) was the eldest daughter of Continental Army General Philip Schuyler, wife of British MP John Barker Church, sister of Elizabeth Schuyler Hamilton (wife of Alexander Hamilton), Margarita \"Peggy\" Schuyler Van Rensselaer and Philip Jeremiah Schuyler.",
+            "Philip Jeremiah Schuyler\nPhilip Jeremiah Schuyler (January 21, 1768 Albany, New York \u2013 February 21, 1835 New York City) was an American politician from New York. His siblings included Angelica Schuyler Church, Elizabeth Schuyler Hamilton, and Margarita \"Peggy\" Schuyler Van Renesslaer.",
+            "Mariana Griswold Van Rensselaer\nMariana Griswold Van Rensselaer (February 21, 1851 \u2013 January 20, 1934), usually known as Mrs. Schuyler Van Rensselaer, was an American author.",
+            "Mrs. Schuyler Van Rensselaer (Mariana Griswold)\nMrs. Schuyler Van Rensselaer (Mariana Griswold) is a bronze sculpture by American artist Augustus Saint-Gaudens. It was designed in 1888 and cast in 1890. This artwork portrays the American author, art critic, and reformer Mariana Griswold Van Rensselaer (1851\u20131934), who \"championed Saint-Gaudens in articles on his public monuments and relief sculptures\".",
+            "Philip S. Van Rensselaer\nPhilip Schuyler Van Rensselaer (April 15, 1767 \u2013 September 25, 1824) was the Mayor of Albany, New York on two occasions. He has the third longest tenure of service by an Albany Mayor, after Erastus Corning II and Gerald Jennings.",
+            "Schuyler V. Cammann\nSchuyler Van Rensselaer Cammann (February 2, 1912 in New York City \u2013 September 9, 1991 in Sugar Hill, New Hampshire) was an anthropologist best known for work in Asia.",
+            "Philip Kiliaen van Rensselaer\nPhilip Kiliaen van Rensselaer (May 19, 1747 \u2013 March 3, 1798) was the second son of Colonel Kiliaen van Rensselaer and Ariaantie (Schuyler). He was a merchant by trade, and his experience in transporting cargo may have helped qualify him as keeper of the Albany arsenal. He was variously referred to as storekeeper, military storekeeper and Commissary for the Northern Department."
+        ],
+        "thoughts": [
+            "Peggy Schuyler Van Rensselaer's sisters were Angelica Schuyler Church and Elizabeth Schuyler Hamilton.",
+            "The sister who is sometimes referred to as \"Betsey\" is Elizabeth Schuyler Hamilton."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which sister of Margarita \"Peggy\" Schuyler Van Rensselaer is sometimes called Betsey?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the sisters of Margarita \"Peggy\" Schuyler Van Rensselaer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the names and any known nicknames or alternate names of Margarita Schuyler's sisters.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify which of Margarita Schuyler's sisters is sometimes referred to as \"Betsey.\"",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph begins by retrieving the basic family structure, particularly focusing on the sisters of Margarita Schuyler Van Rensselaer. Once the list of sisters is obtained, it gathers detailed information about these sisters, including any nicknames they might have. The final step involves analyzing this information to identify which sister is known by the name \"Betsey.\""
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Angelica Schuyler Church\nAngelica Church (n\u00e9e Schuyler ; February 20, 1756 \u2013 March 13, 1814) was the eldest daughter of Continental Army General Philip Schuyler, wife of British MP John Barker Church, sister of Elizabeth Schuyler Hamilton (wife of Alexander Hamilton), Margarita \"Peggy\" Schuyler Van Rensselaer and Philip Jeremiah Schuyler.",
+            "Peggy Schuyler\nMargarita \"Peggy\" Schuyler Van Rensselaer (September 19, 1758 \u2013 March 14, 1801) was the third daughter of Continental Army General Philip Schuyler. She was the wife of Stephen Van Rensselaer III, sister of Angelica Schuyler Church, Philip Jeremiah Schuyler, and Elizabeth Schuyler Hamilton, and sister in law of John Barker Church and Alexander Hamilton.",
+            "Philip Jeremiah Schuyler\nPhilip Jeremiah Schuyler (January 21, 1768 Albany, New York \u2013 February 21, 1835 New York City) was an American politician from New York. His siblings included Angelica Schuyler Church, Elizabeth Schuyler Hamilton, and Margarita \"Peggy\" Schuyler Van Renesslaer.",
+            "Elizabeth Schuyler Hamilton\nElizabeth Hamilton (n\u00e9e Schuyler ; August 9, 1757 \u2013 November 9, 1854), sometimes called \"Eliza\" or \"Betsey,\" was co-founder and deputy director of the first private orphanage in New York City. She was the wife of American founding father Alexander Hamilton.",
+            "William S. Hamilton\nWilliam Stephen Hamilton (August 4, 1797 \u2013 October 9, 1850), a son of Alexander Hamilton and Elizabeth Schuyler Hamilton, was an American politician and miner who lived much of his life in the U.S. state of Illinois and territorial Wisconsin. Hamilton was born in New York, where he attended the United States Military Academy before he resigned and moved to Illinois in 1817. In Illinois he lived in Springfield and Peoria and eventually migrated to the lead-mining region of southern Wisconsin and established Hamilton's Diggings at present-day Wiota. Hamilton served in various political offices and as a commander in two Midwest Indian Wars. In 1849 he moved to California on the heels of the California Gold Rush. He died in Sacramento, most likely of cholera, in October 1850.",
+            "Schuyler V. Cammann\nSchuyler Van Rensselaer Cammann (February 2, 1912 in New York City \u2013 September 9, 1991 in Sugar Hill, New Hampshire) was an anthropologist best known for work in Asia.",
+            "Mariana Griswold Van Rensselaer\nMariana Griswold Van Rensselaer (February 21, 1851 \u2013 January 20, 1934), usually known as Mrs. Schuyler Van Rensselaer, was an American author.",
+            "James Schuyler\nJames Marcus Schuyler (November 9, 1923 \u2013 April 12, 1991) was an American poet. His awards include the Pulitzer Prize for Poetry for his 1980 collection \"The Morning of the Poem\". He was a central figure in the New York School and is often associated with fellow New York School poets John Ashbery, Frank O'Hara, Kenneth Koch, and Barbara Guest.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "See Yourself\n\"See Yourself\" is a song by English musician George Harrison, released on his 1976 album \"Thirty Three & 1/3\". Harrison began writing the song in 1967, while he was a member of the Beatles, in response to the public outcry surrounding bandmate Paul McCartney's admission that he had taken the hallucinogenic drug LSD. McCartney's announcement created a reaction in the press similar to that caused in 1966 by John Lennon's statement that the Beatles were more popular than Christianity. In its finished form, the song's lyrics advocate self-awareness and consideration for the consequences of one's actions. Musically, the composition contains unusual shifts in time signature from standard 4/4 to 9/8, while the songwords reflect the era of its genesis by recalling themes first espoused in the Beatles tracks \"Within You Without You\" and \"All You Need Is Love\"."
+        ],
+        "thoughts": [
+            "The sisters of Margarita \"Peggy\" Schuyler Van Rensselaer are Angelica Schuyler Church and Elizabeth Schuyler Hamilton.",
+            "The names and any known nicknames or alternate names of Margarita Schuyler's sisters are:\n\n1. Angelica Schuyler Church\n   - Alternate name: Angelica Church\n\n2. Elizabeth Schuyler Hamilton\n   - Nicknames: Eliza, Betsey\n\n3. Margarita \"Peggy\" Schuyler Van Rensselaer\n   - Alternate name: Peggy\n\n4. Philip Jeremiah Schuyler\n   - No known nicknames or alternate names mentioned in the provided information.",
+            "Elizabeth Schuyler Hamilton is sometimes referred to as \"Betsey.\""
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Which sister of Margarita \"Peggy\" Schuyler Van Rensselaer is sometimes called Betsey?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the siblings of Margarita 'Peggy' Schuyler Van Rensselaer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify and retrieve more details about each of Margarita's siblings, focusing on their nicknames or alternative names.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Examine the retrieved information to find out which sibling of Margarita is sometimes called 'Betsey'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The task is broken down into steps by first gathering detailed information about Margarita 'Peggy' Schuyler Van Rensselaer's siblings. The process starts by identifying all siblings (Node 1), then delves deeper to uncover additional information, particularly focusing on nicknames (Node 2). Finally, this information is analyzed to find out which sister is sometimes referred to as 'Betsey' (Node 3)."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Peggy Schuyler\nMargarita \"Peggy\" Schuyler Van Rensselaer (September 19, 1758 \u2013 March 14, 1801) was the third daughter of Continental Army General Philip Schuyler. She was the wife of Stephen Van Rensselaer III, sister of Angelica Schuyler Church, Philip Jeremiah Schuyler, and Elizabeth Schuyler Hamilton, and sister in law of John Barker Church and Alexander Hamilton.",
+            "Philip Jeremiah Schuyler\nPhilip Jeremiah Schuyler (January 21, 1768 Albany, New York \u2013 February 21, 1835 New York City) was an American politician from New York. His siblings included Angelica Schuyler Church, Elizabeth Schuyler Hamilton, and Margarita \"Peggy\" Schuyler Van Renesslaer.",
+            "Angelica Schuyler Church\nAngelica Church (n\u00e9e Schuyler ; February 20, 1756 \u2013 March 13, 1814) was the eldest daughter of Continental Army General Philip Schuyler, wife of British MP John Barker Church, sister of Elizabeth Schuyler Hamilton (wife of Alexander Hamilton), Margarita \"Peggy\" Schuyler Van Rensselaer and Philip Jeremiah Schuyler.",
+            "Mariana Griswold Van Rensselaer\nMariana Griswold Van Rensselaer (February 21, 1851 \u2013 January 20, 1934), usually known as Mrs. Schuyler Van Rensselaer, was an American author.",
+            "Mrs. Schuyler Van Rensselaer (Mariana Griswold)\nMrs. Schuyler Van Rensselaer (Mariana Griswold) is a bronze sculpture by American artist Augustus Saint-Gaudens. It was designed in 1888 and cast in 1890. This artwork portrays the American author, art critic, and reformer Mariana Griswold Van Rensselaer (1851\u20131934), who \"championed Saint-Gaudens in articles on his public monuments and relief sculptures\".",
+            "Philip S. Van Rensselaer\nPhilip Schuyler Van Rensselaer (April 15, 1767 \u2013 September 25, 1824) was the Mayor of Albany, New York on two occasions. He has the third longest tenure of service by an Albany Mayor, after Erastus Corning II and Gerald Jennings.",
+            "Philip Kiliaen van Rensselaer\nPhilip Kiliaen van Rensselaer (May 19, 1747 \u2013 March 3, 1798) was the second son of Colonel Kiliaen van Rensselaer and Ariaantie (Schuyler). He was a merchant by trade, and his experience in transporting cargo may have helped qualify him as keeper of the Albany arsenal. He was variously referred to as storekeeper, military storekeeper and Commissary for the Northern Department.",
+            "Saving Forever\nSaving Forever is an American pop rock band from South Chicago, Illinois made up of brothers Khaden (born 2004), Kye (born 2002) and Kavah Harris (born 2001). The trio released \"Twenty 1\" followed by the single \"Million Ways\" in 2017 accompanied by a music video. The sibling band comes from a very musical family. It was picked as Elvis Duran's Artist of the Month and was featured on NBC's \"Today\" show hosted by Kathie Lee Gifford and Hoda Kotb and broadcast nationally where they performed live their single \"Million Ways\".",
+            "Schuyler V. Cammann\nSchuyler Van Rensselaer Cammann (February 2, 1912 in New York City \u2013 September 9, 1991 in Sugar Hill, New Hampshire) was an anthropologist best known for work in Asia.",
+            "Toyota Tercel\nThe Toyota Tercel is a subcompact manufactured by Toyota from 1978 to 1999 across five generations, in five body configurations sized between the Corolla and the Starlet. Manufactured at the Takaoka plant in Toyota City, Japan, and sharing its platform with the Cynos (a.k.a. Paseo) and the Starlet, the Tercel was marketed variously as the Toyota Corolla II\u2014sold at Toyota Japanese dealerships called \"Toyota Corolla Store\"s\u2014and was replaced by the Toyota Platz in 1999. It was also known as the Toyota Corsa and sold at Toyopet Store locations. Starting with the second generation, the Tercel dealership network was changed to Toyota Vista Stores, as its badge engineered sibling, the Corolla II, was exclusive to Toyota Corolla Store locations.",
+            "Suzuki F10D engine\nSuzuki F10D engine is an inline 4-cylinder 1061cc engine that was developed in India by Maruti Suzuki for the domestic market. It was debuted in the Maruti Wagon-R in India in 2001. It was briefly installed in Maruti Alto and it was the engine that the first Maruti Zen Estilo came with. This engine is very similar to the 3-cylinder F8D 12-valve engine that was optional on the Maruti 800 at the time. The bore and stroke of F10D is the same as that of the smaller sibling and shares quite a few parts like pistons, rings, conrods and valves. The cast-iron engine block is very similar to that of the older F10A 970cc engine that powered the earlier Maruti Gypsy and Maruti 1000. Both F10A and F10D shares the same stroke length; but interchangeability of parts between these two engines is not known.",
+            "Walter Hearne\nWalter Hearne (15 January 1864 \u2013 2 April 1925) was an English cricketer for Kent CCC. He was the elder brother of the great Middlesex bowler J.T.Hearne and was a bowler of somewhat similar style, being a medium paced right-hander with great accuracy and a pronounced off-break. However, unlike his younger sibling, Walter Hearne was not physically robust and suffered throughout his short career from knee problems, which ultimately led to his giving up the game at for the time a very young age. Also, even in his best season, Walter Hearne did not demonstrate that he possessed John Thomas\u2019 sting on a firm pitch: indeed on the best wicket he had to bowl during 1894 at the Oval, he was severely punished taking only two wickets for 129. There was, however, no denying his deadliness on sticky wickets: in one spell during 1894 he took in three games thirty-eight wickets for 241 runs, including thirteen for 98 against Surrey at Catford. Walter Hearne's cricket basically began and ended with his bowling: prior to making a score of 34 not out in his last-ever match his highest score had been only 22, and he was not a strong field as his more famous brother was.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "Fame Gurukul\nFame Gurukul was an Indian prime-time reality show on Sony Entertainment Television (India) which premiered on 27 June 2005. The program was produced by the same production house of \"Indian Idol\". The concept of the show was to select a pair of India's best singers/performers.",
+            "Star 67\nStar 67 is a 2012 crime thriller directed by Kathi Selvakumar and Triden V Balasingam, featuring Imman Kannan in the lead role. The soundtrack of the film was composed by Senthuran Alagaiya, while cinematography and editing were handled by Kuhenthiran and Triden V. Balasingam, respectively. It was produced by Wotar Sound Pictures. It had a decent run at select cinemas and tasted success at the box office."
+        ],
+        "thoughts": [
+            "Margarita 'Peggy' Schuyler Van Rensselaer was the sister of Angelica Schuyler Church and Elizabeth Schuyler Hamilton.",
+            "1. Peggy Schuyler - also known as Margarita \"Peggy\" Schuyler Van Rensselaer\n2. Philip Jeremiah Schuyler - also known as Philip Jeremiah Schuyler\n3. Angelica Schuyler Church - also known as Angelica Church\n4. Mariana Griswold Van Rensselaer - also known as Mrs. Schuyler Van Rensselaer\n5. Philip S. Van Rensselaer - also known as Philip Schuyler Van Rensselaer\n6. Philip Kiliaen van Rensselaer - also known as Philip Kiliaen van Rensselaer\n7. Schuyler V. Cammann - also known as Schuyler Van Rensselaer Cammann",
+            "The sibling of Margarita who is sometimes called 'Betsey' is Angelica Schuyler Church."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which sister of Margarita \"Peggy\" Schuyler Van Rensselaer is sometimes called Betsey?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify all the sisters of Margarita \"Peggy\" Schuyler Van Rensselaer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find out if any of the sisters of Margarita \"Peggy\" Schuyler Van Rensselaer is sometimes called \"Betsey\".",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The task involves identifying the sisters of Margarita \"Peggy\" Schuyler Van Rensselaer and then determining which one of them is sometimes called \"Betsey.\" First, we retrieve the list of her sisters. Then, we reason over this list to identify if any of them is known by the nickname \"Betsey.\""
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Peggy Schuyler\nMargarita \"Peggy\" Schuyler Van Rensselaer (September 19, 1758 \u2013 March 14, 1801) was the third daughter of Continental Army General Philip Schuyler. She was the wife of Stephen Van Rensselaer III, sister of Angelica Schuyler Church, Philip Jeremiah Schuyler, and Elizabeth Schuyler Hamilton, and sister in law of John Barker Church and Alexander Hamilton.",
+            "Angelica Schuyler Church\nAngelica Church (n\u00e9e Schuyler ; February 20, 1756 \u2013 March 13, 1814) was the eldest daughter of Continental Army General Philip Schuyler, wife of British MP John Barker Church, sister of Elizabeth Schuyler Hamilton (wife of Alexander Hamilton), Margarita \"Peggy\" Schuyler Van Rensselaer and Philip Jeremiah Schuyler.",
+            "Philip Jeremiah Schuyler\nPhilip Jeremiah Schuyler (January 21, 1768 Albany, New York \u2013 February 21, 1835 New York City) was an American politician from New York. His siblings included Angelica Schuyler Church, Elizabeth Schuyler Hamilton, and Margarita \"Peggy\" Schuyler Van Renesslaer.",
+            "Mariana Griswold Van Rensselaer\nMariana Griswold Van Rensselaer (February 21, 1851 \u2013 January 20, 1934), usually known as Mrs. Schuyler Van Rensselaer, was an American author.",
+            "Philip Kiliaen van Rensselaer\nPhilip Kiliaen van Rensselaer (May 19, 1747 \u2013 March 3, 1798) was the second son of Colonel Kiliaen van Rensselaer and Ariaantie (Schuyler). He was a merchant by trade, and his experience in transporting cargo may have helped qualify him as keeper of the Albany arsenal. He was variously referred to as storekeeper, military storekeeper and Commissary for the Northern Department.",
+            "Mrs. Schuyler Van Rensselaer (Mariana Griswold)\nMrs. Schuyler Van Rensselaer (Mariana Griswold) is a bronze sculpture by American artist Augustus Saint-Gaudens. It was designed in 1888 and cast in 1890. This artwork portrays the American author, art critic, and reformer Mariana Griswold Van Rensselaer (1851\u20131934), who \"championed Saint-Gaudens in articles on his public monuments and relief sculptures\".",
+            "Philip S. Van Rensselaer\nPhilip Schuyler Van Rensselaer (April 15, 1767 \u2013 September 25, 1824) was the Mayor of Albany, New York on two occasions. He has the third longest tenure of service by an Albany Mayor, after Erastus Corning II and Gerald Jennings.",
+            "Schuyler V. Cammann\nSchuyler Van Rensselaer Cammann (February 2, 1912 in New York City \u2013 September 9, 1991 in Sugar Hill, New Hampshire) was an anthropologist best known for work in Asia."
+        ],
+        "thoughts": [
+            "The sisters of Margarita \"Peggy\" Schuyler Van Rensselaer are:\n\n1. Angelica Schuyler Church\n2. Elizabeth Schuyler Hamilton",
+            "Yes, one of the sisters of Margarita \"Peggy\" Schuyler Van Rensselaer is sometimes called \"Betsey\". Elizabeth Schuyler Hamilton is often referred to as \"Betsey\"."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which sister of Margarita \"Peggy\" Schuyler Van Rensselaer is sometimes called Betsey?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find information about Margarita 'Peggy' Schuyler Van Rensselaer and her siblings.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the sisters of Margarita 'Peggy' Schuyler Van Rensselaer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which sister of Margarita 'Peggy' Schuyler Van Rensselaer is sometimes called Betsey.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is structured to first gather information about Margarita 'Peggy' Schuyler Van Rensselaer and her siblings to establish the context. The second step processes this information to specifically identify her sisters. The final reasoning step uses the information from her sisters to find which one is sometimes referred to as Betsey, thereby answering the original question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Peggy Schuyler\nMargarita \"Peggy\" Schuyler Van Rensselaer (September 19, 1758 \u2013 March 14, 1801) was the third daughter of Continental Army General Philip Schuyler. She was the wife of Stephen Van Rensselaer III, sister of Angelica Schuyler Church, Philip Jeremiah Schuyler, and Elizabeth Schuyler Hamilton, and sister in law of John Barker Church and Alexander Hamilton.",
+            "Philip Jeremiah Schuyler\nPhilip Jeremiah Schuyler (January 21, 1768 Albany, New York \u2013 February 21, 1835 New York City) was an American politician from New York. His siblings included Angelica Schuyler Church, Elizabeth Schuyler Hamilton, and Margarita \"Peggy\" Schuyler Van Renesslaer.",
+            "Angelica Schuyler Church\nAngelica Church (n\u00e9e Schuyler ; February 20, 1756 \u2013 March 13, 1814) was the eldest daughter of Continental Army General Philip Schuyler, wife of British MP John Barker Church, sister of Elizabeth Schuyler Hamilton (wife of Alexander Hamilton), Margarita \"Peggy\" Schuyler Van Rensselaer and Philip Jeremiah Schuyler.",
+            "Mariana Griswold Van Rensselaer\nMariana Griswold Van Rensselaer (February 21, 1851 \u2013 January 20, 1934), usually known as Mrs. Schuyler Van Rensselaer, was an American author.",
+            "Mrs. Schuyler Van Rensselaer (Mariana Griswold)\nMrs. Schuyler Van Rensselaer (Mariana Griswold) is a bronze sculpture by American artist Augustus Saint-Gaudens. It was designed in 1888 and cast in 1890. This artwork portrays the American author, art critic, and reformer Mariana Griswold Van Rensselaer (1851\u20131934), who \"championed Saint-Gaudens in articles on his public monuments and relief sculptures\".",
+            "Philip S. Van Rensselaer\nPhilip Schuyler Van Rensselaer (April 15, 1767 \u2013 September 25, 1824) was the Mayor of Albany, New York on two occasions. He has the third longest tenure of service by an Albany Mayor, after Erastus Corning II and Gerald Jennings.",
+            "Philip Kiliaen van Rensselaer\nPhilip Kiliaen van Rensselaer (May 19, 1747 \u2013 March 3, 1798) was the second son of Colonel Kiliaen van Rensselaer and Ariaantie (Schuyler). He was a merchant by trade, and his experience in transporting cargo may have helped qualify him as keeper of the Albany arsenal. He was variously referred to as storekeeper, military storekeeper and Commissary for the Northern Department.",
+            "Schuyler V. Cammann\nSchuyler Van Rensselaer Cammann (February 2, 1912 in New York City \u2013 September 9, 1991 in Sugar Hill, New Hampshire) was an anthropologist best known for work in Asia."
+        ],
+        "thoughts": [
+            "Margarita \"Peggy\" Schuyler Van Rensselaer was the third daughter of Continental Army General Philip Schuyler and had siblings named Angelica Schuyler Church, Philip Jeremiah Schuyler, and Elizabeth Schuyler Hamilton. She was also the sister-in-law of John Barker Church and Alexander Hamilton. Her brother, Philip Jeremiah Schuyler, was an American politician from New York, and her sister, Angelica Schuyler Church, was the wife of British MP John Barker Church. Mariana Griswold Van Rensselaer, also known as Mrs. Schuyler Van Rensselaer, was an American author and a bronze sculpture was created in her honor by artist Augustus Saint-Gaudens. Other notable family members include Philip S. Van Rensselaer, who served as the Mayor of Albany, New York, and Philip Kiliaen van Rensselaer, a merchant and military storekeeper. Additionally, Schuyler V. Cammann, an anthropologist, was also part of the family.",
+            "The sisters of Margarita \"Peggy\" Schuyler Van Rensselaer are Angelica Schuyler Church and Elizabeth Schuyler Hamilton.",
+            "The sister of Margarita \"Peggy\" Schuyler Van Rensselaer who is sometimes called Betsey is Elizabeth Schuyler Hamilton."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which sister of Margarita \"Peggy\" Schuyler Van Rensselaer is sometimes called Betsey?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the sisters of Margarita \"Peggy\" Schuyler Van Rensselaer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify which of Margarita's sisters is sometimes called Betsey.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph consists of two main nodes. The first node retrieves data about Margarita 'Peggy' Schuyler Van Rensselaer's sisters; this includes full names and any known nicknames. The second node reasons over the retrieved information to identify which sister is sometimes referred to as Betsey. This step-by-step approach ensures clear retrieval and identification within the dataset."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Peggy Schuyler\nMargarita \"Peggy\" Schuyler Van Rensselaer (September 19, 1758 \u2013 March 14, 1801) was the third daughter of Continental Army General Philip Schuyler. She was the wife of Stephen Van Rensselaer III, sister of Angelica Schuyler Church, Philip Jeremiah Schuyler, and Elizabeth Schuyler Hamilton, and sister in law of John Barker Church and Alexander Hamilton.",
+            "Angelica Schuyler Church\nAngelica Church (n\u00e9e Schuyler ; February 20, 1756 \u2013 March 13, 1814) was the eldest daughter of Continental Army General Philip Schuyler, wife of British MP John Barker Church, sister of Elizabeth Schuyler Hamilton (wife of Alexander Hamilton), Margarita \"Peggy\" Schuyler Van Rensselaer and Philip Jeremiah Schuyler.",
+            "Philip Jeremiah Schuyler\nPhilip Jeremiah Schuyler (January 21, 1768 Albany, New York \u2013 February 21, 1835 New York City) was an American politician from New York. His siblings included Angelica Schuyler Church, Elizabeth Schuyler Hamilton, and Margarita \"Peggy\" Schuyler Van Renesslaer.",
+            "Mariana Griswold Van Rensselaer\nMariana Griswold Van Rensselaer (February 21, 1851 \u2013 January 20, 1934), usually known as Mrs. Schuyler Van Rensselaer, was an American author.",
+            "Mrs. Schuyler Van Rensselaer (Mariana Griswold)\nMrs. Schuyler Van Rensselaer (Mariana Griswold) is a bronze sculpture by American artist Augustus Saint-Gaudens. It was designed in 1888 and cast in 1890. This artwork portrays the American author, art critic, and reformer Mariana Griswold Van Rensselaer (1851\u20131934), who \"championed Saint-Gaudens in articles on his public monuments and relief sculptures\".",
+            "Philip S. Van Rensselaer\nPhilip Schuyler Van Rensselaer (April 15, 1767 \u2013 September 25, 1824) was the Mayor of Albany, New York on two occasions. He has the third longest tenure of service by an Albany Mayor, after Erastus Corning II and Gerald Jennings.",
+            "Philip Kiliaen van Rensselaer\nPhilip Kiliaen van Rensselaer (May 19, 1747 \u2013 March 3, 1798) was the second son of Colonel Kiliaen van Rensselaer and Ariaantie (Schuyler). He was a merchant by trade, and his experience in transporting cargo may have helped qualify him as keeper of the Albany arsenal. He was variously referred to as storekeeper, military storekeeper and Commissary for the Northern Department.",
+            "Schuyler V. Cammann\nSchuyler Van Rensselaer Cammann (February 2, 1912 in New York City \u2013 September 9, 1991 in Sugar Hill, New Hampshire) was an anthropologist best known for work in Asia."
+        ],
+        "thoughts": [
+            "The sisters of Margarita \"Peggy\" Schuyler Van Rensselaer were Angelica Schuyler Church and Elizabeth Schuyler Hamilton. Angelica was the eldest daughter of Continental Army General Philip Schuyler and was married to British MP John Barker Church. Elizabeth was the second daughter of Philip Schuyler and was married to Alexander Hamilton.",
+            "The sister of Margarita sometimes called Betsey is Elizabeth Schuyler Hamilton."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which sister of Margarita \"Peggy\" Schuyler Van Rensselaer is sometimes called Betsey?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the sisters of Margarita 'Peggy' Schuyler Van Rensselaer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find out which of Margarita 'Peggy' Schuyler Van Rensselaer's sisters is sometimes called 'Betsey'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph for this task includes two main nodes. The first node retrieves all possible sisters of Margarita 'Peggy' Schuyler Van Rensselaer. The second node reasons through the retrieved information to determine which sister is sometimes referred to as 'Betsey'. This logical separation allows for efficient processing with a clear retrieval step followed by reasoning."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Peggy Schuyler\nMargarita \"Peggy\" Schuyler Van Rensselaer (September 19, 1758 \u2013 March 14, 1801) was the third daughter of Continental Army General Philip Schuyler. She was the wife of Stephen Van Rensselaer III, sister of Angelica Schuyler Church, Philip Jeremiah Schuyler, and Elizabeth Schuyler Hamilton, and sister in law of John Barker Church and Alexander Hamilton.",
+            "Angelica Schuyler Church\nAngelica Church (n\u00e9e Schuyler ; February 20, 1756 \u2013 March 13, 1814) was the eldest daughter of Continental Army General Philip Schuyler, wife of British MP John Barker Church, sister of Elizabeth Schuyler Hamilton (wife of Alexander Hamilton), Margarita \"Peggy\" Schuyler Van Rensselaer and Philip Jeremiah Schuyler.",
+            "Philip Jeremiah Schuyler\nPhilip Jeremiah Schuyler (January 21, 1768 Albany, New York \u2013 February 21, 1835 New York City) was an American politician from New York. His siblings included Angelica Schuyler Church, Elizabeth Schuyler Hamilton, and Margarita \"Peggy\" Schuyler Van Renesslaer.",
+            "Mariana Griswold Van Rensselaer\nMariana Griswold Van Rensselaer (February 21, 1851 \u2013 January 20, 1934), usually known as Mrs. Schuyler Van Rensselaer, was an American author.",
+            "Mrs. Schuyler Van Rensselaer (Mariana Griswold)\nMrs. Schuyler Van Rensselaer (Mariana Griswold) is a bronze sculpture by American artist Augustus Saint-Gaudens. It was designed in 1888 and cast in 1890. This artwork portrays the American author, art critic, and reformer Mariana Griswold Van Rensselaer (1851\u20131934), who \"championed Saint-Gaudens in articles on his public monuments and relief sculptures\".",
+            "Philip S. Van Rensselaer\nPhilip Schuyler Van Rensselaer (April 15, 1767 \u2013 September 25, 1824) was the Mayor of Albany, New York on two occasions. He has the third longest tenure of service by an Albany Mayor, after Erastus Corning II and Gerald Jennings.",
+            "Philip Kiliaen van Rensselaer\nPhilip Kiliaen van Rensselaer (May 19, 1747 \u2013 March 3, 1798) was the second son of Colonel Kiliaen van Rensselaer and Ariaantie (Schuyler). He was a merchant by trade, and his experience in transporting cargo may have helped qualify him as keeper of the Albany arsenal. He was variously referred to as storekeeper, military storekeeper and Commissary for the Northern Department.",
+            "Schuyler V. Cammann\nSchuyler Van Rensselaer Cammann (February 2, 1912 in New York City \u2013 September 9, 1991 in Sugar Hill, New Hampshire) was an anthropologist best known for work in Asia."
+        ],
+        "thoughts": [
+            "The sisters of Margarita \"Peggy\" Schuyler Van Rensselaer are Angelica Schuyler Church and Elizabeth Schuyler Hamilton.",
+            "The sister of Margarita \"Peggy\" Schuyler Van Rensselaer who is sometimes called \"Betsey\" is Elizabeth Schuyler Hamilton."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which sister of Margarita \"Peggy\" Schuyler Van Rensselaer is sometimes called Betsey?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the family and siblings of Margarita \"Peggy\" Schuyler Van Rensselaer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the names and any commonly used nicknames of Margarita \"Peggy\" Schuyler Van Rensselaer's sisters.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which of the sisters has the nickname \"Betsey.\"",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph for this question begins by retrieving information about the family of Margarita \"Peggy\" Schuyler Van Rensselaer, specifically focusing on her siblings. The next step involves identifying the names and any known nicknames of her sisters. Finally, the graph includes a reasoning step to match the nickname \"Betsey\" to the correct sister, thus arriving at the answer."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "Philip Jeremiah Schuyler\nPhilip Jeremiah Schuyler (January 21, 1768 Albany, New York \u2013 February 21, 1835 New York City) was an American politician from New York. His siblings included Angelica Schuyler Church, Elizabeth Schuyler Hamilton, and Margarita \"Peggy\" Schuyler Van Renesslaer.",
+            "Peggy Schuyler\nMargarita \"Peggy\" Schuyler Van Rensselaer (September 19, 1758 \u2013 March 14, 1801) was the third daughter of Continental Army General Philip Schuyler. She was the wife of Stephen Van Rensselaer III, sister of Angelica Schuyler Church, Philip Jeremiah Schuyler, and Elizabeth Schuyler Hamilton, and sister in law of John Barker Church and Alexander Hamilton.",
+            "Angelica Schuyler Church\nAngelica Church (n\u00e9e Schuyler ; February 20, 1756 \u2013 March 13, 1814) was the eldest daughter of Continental Army General Philip Schuyler, wife of British MP John Barker Church, sister of Elizabeth Schuyler Hamilton (wife of Alexander Hamilton), Margarita \"Peggy\" Schuyler Van Rensselaer and Philip Jeremiah Schuyler.",
+            "Mariana Griswold Van Rensselaer\nMariana Griswold Van Rensselaer (February 21, 1851 \u2013 January 20, 1934), usually known as Mrs. Schuyler Van Rensselaer, was an American author.",
+            "Mrs. Schuyler Van Rensselaer (Mariana Griswold)\nMrs. Schuyler Van Rensselaer (Mariana Griswold) is a bronze sculpture by American artist Augustus Saint-Gaudens. It was designed in 1888 and cast in 1890. This artwork portrays the American author, art critic, and reformer Mariana Griswold Van Rensselaer (1851\u20131934), who \"championed Saint-Gaudens in articles on his public monuments and relief sculptures\".",
+            "Philip S. Van Rensselaer\nPhilip Schuyler Van Rensselaer (April 15, 1767 \u2013 September 25, 1824) was the Mayor of Albany, New York on two occasions. He has the third longest tenure of service by an Albany Mayor, after Erastus Corning II and Gerald Jennings.",
+            "Philip Kiliaen van Rensselaer\nPhilip Kiliaen van Rensselaer (May 19, 1747 \u2013 March 3, 1798) was the second son of Colonel Kiliaen van Rensselaer and Ariaantie (Schuyler). He was a merchant by trade, and his experience in transporting cargo may have helped qualify him as keeper of the Albany arsenal. He was variously referred to as storekeeper, military storekeeper and Commissary for the Northern Department.",
+            "Schuyler V. Cammann\nSchuyler Van Rensselaer Cammann (February 2, 1912 in New York City \u2013 September 9, 1991 in Sugar Hill, New Hampshire) was an anthropologist best known for work in Asia."
+        ],
+        "thoughts": [
+            "Margarita \"Peggy\" Schuyler Van Rensselaer was the daughter of Continental Army General Philip Schuyler and had siblings including Angelica Schuyler Church, Elizabeth Schuyler Hamilton, Philip Jeremiah Schuyler, and Mariana Griswold Van Rensselaer. She was also the sister-in-law of John Barker Church and Alexander Hamilton. Additionally, she was related to Philip S. Van Rensselaer, Philip Kiliaen van Rensselaer, and Schuyler V. Cammann through the Van Rensselaer family.",
+            "The names and commonly used nicknames of Margarita \"Peggy\" Schuyler Van Rensselaer's sisters are:\n\n1. Angelica Schuyler Church - commonly known as Angelica Schuyler\n2. Elizabeth Schuyler Hamilton - commonly known as Eliza Schuyler or Betsy Schuyler",
+            "The sister with the nickname \"Betsey\" is Elizabeth Schuyler Hamilton."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which sister of Margarita \"Peggy\" Schuyler Van Rensselaer is sometimes called Betsey?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about Margarita \"Peggy\" Schuyler Van Rensselaer's sisters.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "For each sister of Peggy Schuyler, check their full names and nicknames to identify who is sometimes called Betsey.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify which sister is sometimes called Betsey from the associations of sisters' names and nicknames.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts by retrieving information about the sisters of Margarita \"Peggy\" Schuyler Van Rensselaer. This is necessary to understand who her siblings are. Once we have the list of her sisters, the next step is to examine any available information about their nicknames. This will help in determining which sister is referred to as Betsey. Finally, the reasoning step consolidates the findings to answer the original question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Peggy Schuyler\nMargarita \"Peggy\" Schuyler Van Rensselaer (September 19, 1758 \u2013 March 14, 1801) was the third daughter of Continental Army General Philip Schuyler. She was the wife of Stephen Van Rensselaer III, sister of Angelica Schuyler Church, Philip Jeremiah Schuyler, and Elizabeth Schuyler Hamilton, and sister in law of John Barker Church and Alexander Hamilton.",
+            "Philip Jeremiah Schuyler\nPhilip Jeremiah Schuyler (January 21, 1768 Albany, New York \u2013 February 21, 1835 New York City) was an American politician from New York. His siblings included Angelica Schuyler Church, Elizabeth Schuyler Hamilton, and Margarita \"Peggy\" Schuyler Van Renesslaer.",
+            "Angelica Schuyler Church\nAngelica Church (n\u00e9e Schuyler ; February 20, 1756 \u2013 March 13, 1814) was the eldest daughter of Continental Army General Philip Schuyler, wife of British MP John Barker Church, sister of Elizabeth Schuyler Hamilton (wife of Alexander Hamilton), Margarita \"Peggy\" Schuyler Van Rensselaer and Philip Jeremiah Schuyler.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Mrs. Schuyler Van Rensselaer (Mariana Griswold)\nMrs. Schuyler Van Rensselaer (Mariana Griswold) is a bronze sculpture by American artist Augustus Saint-Gaudens. It was designed in 1888 and cast in 1890. This artwork portrays the American author, art critic, and reformer Mariana Griswold Van Rensselaer (1851\u20131934), who \"championed Saint-Gaudens in articles on his public monuments and relief sculptures\".",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "The Clark Sisters\nThe Clark Sisters are an American gospel vocal group consisting of five sisters: Jacky Clark Chisholm (b. 1948), Denise Clark Bradford (b. 1953), Elbernita \"Twinkie\" Clark-Terrell (b. 1954), Dorinda Clark-Cole (b. 1957), and Karen Clark Sheard (b. 1960). The Clark Sisters are the daughters of gospel musician and choral director Mattie Moss Clark. They are credited for helping to bring gospel music to the mainstream and are considered as pioneers of contemporary gospel. Their biggest crossover hits include: \"Is My Living in Vain?\", \"Hallelujah\", \"He Gave Me Nothing to Lose\", \"Endow Me\", their hit song \"Jesus Is A Love Song\", \"Pure Gold\", \"Expect a Miracle\", and their largest mainstream crossover gold certified, \"You Brought the Sunshine\". The Clark Sisters have won three Grammy Awards. With 16 albums to their credit and millions in sales, the Clark Sisters are the highest-selling female gospel group in history."
+        ],
+        "thoughts": [
+            "Peggy Schuyler Van Rensselaer had three sisters: Angelica Schuyler Church, Elizabeth Schuyler Hamilton, and Mariana \"Peggy\" Schuyler Van Rensselaer. Her brother was Philip Jeremiah Schuyler.",
+            "The sister of Peggy Schuyler who is sometimes called Betsey is Elizabeth Schuyler Hamilton. Her full name is Elizabeth Schuyler Hamilton and her nickname is Betsey.",
+            "The sister who is sometimes called Betsey is Elizabeth Schuyler Hamilton."
+        ],
+        "is_best": false
+    }
+]

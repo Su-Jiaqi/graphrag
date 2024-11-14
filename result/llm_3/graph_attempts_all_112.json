@@ -1,0 +1,666 @@
+[
+    {
+        "question": "Who was Chamberlain and Colonel of the military staff of The Merrie Monarch?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about 'The Merrie Monarch'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine who held the position of Chamberlain for 'The Merrie Monarch'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine who held the position of Colonel of the military staff for 'The Merrie Monarch'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Combine the information about the Chamberlain and the Colonel of the military staff to identify if they are the same person or different, and to answer who they were.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph is designed to first retrieve background information about 'The Merrie Monarch', which is necessary to understand the historical context and to identify any individuals associated with this title. Nodes 2 and 3 parallelize the task of identifying the Chamberlain and Colonel positions, as they can be looked up independently once we have the relevant context from node 1. Finally, node 4 combines these pieces of information to determine the identities of these positions and whether they refer to the same person or different individuals, thereby answering the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Merrie Monarch Festival\nThe Merrie Monarch Festival is a week-long cultural festival that takes place annually in Hilo, Hawaii during the week after Easter. It honors King David Kal\u0101kaua, who was called the \"Merrie Monarch\" for his patronage of the arts and is credited with restoring many Hawaiian cultural traditions during his reign, including the hula. Many \"h\u0101lau hula\" (schools), including some from the U.S. mainland and some international performers, attend the festival each year to participate in exhibitions and competitions. The festival has received worldwide attention and is considered the most prestigious of all hula contests.",
+            "Charles Hastings Judd\nColonel Charles Hastings Judd (September 8, 1835 \u2013 April 18, 1890) was an American businessman, rancher, courtier and politician of the Kingdom of Hawaii. He served as Chamberlain and Colonel of the military staff of King Kal\u0101kaua and traveled with the monarch on his 1881 world tour.",
+            "Kal\u0101kaua\nKal\u0101kaua (November 16, 1836 \u2013 January 20, 1891), born David La\u02bb amea Kamananakapu Mahinulani Naloiaehuokalani Lumialani Kal\u0101kaua and sometimes called The Merrie Monarch, was the last king (and second to last monarch) of the Kingdom of Hawai\u02bb i. He reigned from February 12, 1874 until his death in San Francisco, California, on January 20, 1891. Kal\u0101kaua had a convivial personality and enjoyed entertaining guests with his singing and ukulele playing. At his coronation and his birthday jubilee, the hula that had been banned from public in the kingdom became a celebration of Hawaiian culture.",
+            "George W. Macfarlane\nGeorge Walter Hunter Macfarlane (March 1, 1849 \u2013 February 20, 1921) was a British businessman, courtier and politician of the Kingdom of Hawaii. He served Colonel of the military staff of King Kal\u0101kaua, traveling with the monarch on his 1881 world tour. He also served as his final chamberlain of king and was at his deathbed in 1891.",
+            "Aloha Dalire\nFabianne Pomaialoha Wong Dalire, known professionally as Aloha Dalire, (June 22, 1950 \u2013 August 6, 2014) was an American Hawaiian kumu hula, or master hula teacher. She won the first Miss Aloha Hula as Aloha Wong, in 1971, the same year that the Merrie Monarch Festival was established. The Miss Aloha Hula title is hula's top solo wahine (women's) honor.",
+            "Muumuu\nThe muumuu or mu\u02bb umu\u02bb u (] ) is a loose dress of Hawaiian origin that hangs from the shoulder. Like the aloha shirt, muumuu exports are often brilliantly colored with floral patterns of generic Polynesian motifs. Muumuus for local Hawaiian residents are more subdued in tone. Muumuus are no longer as widely worn at work as the aloha shirt, but continue to be the preferred formal dress for weddings and festivals such as the Merrie Monarch hula competition. Muumuus are also popular as maternity wear because they do not restrict the waist.",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "Monarch Beverage Company\nThe Monarch Beverage Company Inc is a diversified, international beverage company based in Atlanta, Georgia. The company's CEO is Jacques Bombal. The company was founded in 1965 by Frank Armstrong. Monarch Beverage Company aimed to establish itself by offering lesser-known soft drink brands that had strong regional sales and appeal. Monarch Beverage Company purchased Dad's from IC Industries of Chicago in 1986. Around that time, it was the second largest volume (12 million cases) root beer brand and was distributed by the Coca-Cola bottler network. In 2007, The Dad's Root Beer Company, LLC of Jasper, Indiana, acquired the Dad's Root Beer brand as well as the rights to Bubble Up, Dr. Wells and Sun Crest in the U.S. and some other countries from The Monarch Beverage Co. of Atlanta.",
+            "Ottoman Military College\nThe Ottoman Military College or Imperial Military Staff College or Ottoman Army War College (Ottoman Turkish: \"Mekteb-i Erk\u00e2n-\u0131 Harbiyye-i \u015e\u00e2h\u00e2ne\"\u200e or \"Erk\u00e2n-\u0131 Harbiye Mektebi\"), was a two-year military staff college of the Ottoman Empire. It was located in Istanbul. Its mission was to educate staff officers for the Ottoman Army.",
+            "Corps of Military Staff Clerks\nThe Corps of Military Staff Clerks was an administrative corps of the Canadian Army. The Headquarters Corps of Military Staff Clerks was established in 1905.",
+            "Class of 1984\nClass of 1984 is a 1982 Canadian-American action crime thriller film directed by Mark Lester and co-written by Tom Holland and John Saxton based on a story by Holland. The film stars Perry King, Merrie Lynn Ross, Timothy Van Patten, Stefan Arngrim, Michael J. Fox (credited as Michael Fox in an early role shortly before his breakthrough on the TV series \"Family Ties\"), and Roddy McDowall.",
+            "Cadet branch\nIn history and heraldry, a cadet branch consists of the male-line descendants of a monarch or patriarch's younger sons (cadets). In the ruling dynasties and noble families of much of Europe and Asia, the family's major assets\u2014realm, titles, fiefs, property and income\u2014have historically been passed from a father to his firstborn son in what is known as primogeniture; younger sons\u2014cadets\u2014inherited less wealth and authority to pass to future generations of descendants.",
+            "Mayor of Hawaii County\nThe Mayor of Hawaii is the chief executive officer of the County of Hawaii in the state of Hawaii. He or she has municipal jurisdiction over the Big Island of Hawaii. The current mayor is Harry Kim. The Mayor of Hawaii County is the successor of the Royal Governors of Hawaii Island of the Kingdom of Hawaii."
+        ],
+        "thoughts": [
+            "The Merrie Monarch Festival is a week-long cultural festival that takes place annually in Hilo, Hawaii, honoring King David Kal\u0101kaua, who was known as the \"Merrie Monarch\" for his support of the arts and restoration of Hawaiian cultural traditions, including the hula. The festival attracts h\u0101lau hula from the U.S. mainland and international performers, making it the most prestigious hula contest.\n\nAloha Dalire, also known as Fabianne Pomaialoha Wong Dalire, was a renowned American Hawaiian kumu hula who won the first Miss Aloha Hula title in 1971, the same year the Merrie Monarch Festival was established. The Miss Aloha Hula title is hula's top solo women's honor.\n\nKing Kal\u0101kaua, also known as The Merrie Monarch, was the last king of the Kingdom of Hawai\u02bbi and is credited with restoring the celebration of Hawaiian culture, including the hula, during his reign.\n\nThe muumuu, a loose dress of Hawaiian origin, is a popular formal dress for events such as the Merrie Monarch hula competition.\n\nColonel Charles Hastings Judd and George W. Macfarlane were both businessmen, courtiers, and politicians of the Kingdom of Hawaii who served as Chamberlain and Colonel of the military staff of King Kal\u0101kaua.\n\nThe Mayor of Hawaii County is the chief executive officer of the County of Hawaii, with municipal jurisdiction over the Big Island of Hawaii. The current mayor is Harry Kim.",
+            "The position of Chamberlain for 'The Merrie Monarch' was held by George W. Macfarlane.",
+            "Colonel Charles Hastings Judd held the position of Colonel of the military staff for 'The Merrie Monarch' during the reign of King Kal\u0101kaua. He served as Chamberlain and Colonel of the military staff of King Kal\u0101kaua and traveled with the monarch on his 1881 world tour.",
+            "The Chamberlain and the Colonel of the military staff for 'The Merrie Monarch' were different individuals. The Chamberlain was George W. Macfarlane, while the Colonel of the military staff was Colonel Charles Hastings Judd. They both served during the reign of King Kal\u0101kaua, with Judd also serving as Chamberlain and traveling with the monarch on his 1881 world tour."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who was Chamberlain and Colonel of the military staff of The Merrie Monarch?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify who 'The Merrie Monarch' refers to historically.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Once identified as a historical figure, find information on their military staff members.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the person who held the title of Chamberlain and Colonel within 'The Merrie Monarch\u2019s' military staff.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph is designed to determine historical information about the Merrie Monarch and specifically who served as Chamberlain and Colonel. The first step is to identify who 'The Merrie Monarch' refers to, usually known in history. After identifying the monarch, the second step involves gathering information about their staff, particularly focusing on those with military roles. Finally, the specific search is for an individual who held both titles of Chamberlain and Colonel within this monarch's military staff."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Charles Hastings Judd\nColonel Charles Hastings Judd (September 8, 1835 \u2013 April 18, 1890) was an American businessman, rancher, courtier and politician of the Kingdom of Hawaii. He served as Chamberlain and Colonel of the military staff of King Kal\u0101kaua and traveled with the monarch on his 1881 world tour.",
+            "George W. Macfarlane\nGeorge Walter Hunter Macfarlane (March 1, 1849 \u2013 February 20, 1921) was a British businessman, courtier and politician of the Kingdom of Hawaii. He served Colonel of the military staff of King Kal\u0101kaua, traveling with the monarch on his 1881 world tour. He also served as his final chamberlain of king and was at his deathbed in 1891.",
+            "Merrie Monarch Festival\nThe Merrie Monarch Festival is a week-long cultural festival that takes place annually in Hilo, Hawaii during the week after Easter. It honors King David Kal\u0101kaua, who was called the \"Merrie Monarch\" for his patronage of the arts and is credited with restoring many Hawaiian cultural traditions during his reign, including the hula. Many \"h\u0101lau hula\" (schools), including some from the U.S. mainland and some international performers, attend the festival each year to participate in exhibitions and competitions. The festival has received worldwide attention and is considered the most prestigious of all hula contests.",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "Corps of Military Staff Clerks\nThe Corps of Military Staff Clerks was an administrative corps of the Canadian Army. The Headquarters Corps of Military Staff Clerks was established in 1905.",
+            "Kal\u0101kaua\nKal\u0101kaua (November 16, 1836 \u2013 January 20, 1891), born David La\u02bb amea Kamananakapu Mahinulani Naloiaehuokalani Lumialani Kal\u0101kaua and sometimes called The Merrie Monarch, was the last king (and second to last monarch) of the Kingdom of Hawai\u02bb i. He reigned from February 12, 1874 until his death in San Francisco, California, on January 20, 1891. Kal\u0101kaua had a convivial personality and enjoyed entertaining guests with his singing and ukulele playing. At his coronation and his birthday jubilee, the hula that had been banned from public in the kingdom became a celebration of Hawaiian culture.",
+            "Ottoman Military College\nThe Ottoman Military College or Imperial Military Staff College or Ottoman Army War College (Ottoman Turkish: \"Mekteb-i Erk\u00e2n-\u0131 Harbiyye-i \u015e\u00e2h\u00e2ne\"\u200e or \"Erk\u00e2n-\u0131 Harbiye Mektebi\"), was a two-year military staff college of the Ottoman Empire. It was located in Istanbul. Its mission was to educate staff officers for the Ottoman Army.",
+            "King Kobra III\nKing Kobra III, released in 1988 on New Renaissance Records, was the first and last album by the Edwards, Michael-Phillips, Northrup, Hart and Appice line-up of King Kobra. After the demise of the original line-up, remaining members Carmine Appice and David Michael-Phillips teamed up with Johnny Edwards, Jeff Northrup and Larry Hart, all 3 members of the Sacramento, CA band Northrup at the time.",
+            "Aloha Dalire\nFabianne Pomaialoha Wong Dalire, known professionally as Aloha Dalire, (June 22, 1950 \u2013 August 6, 2014) was an American Hawaiian kumu hula, or master hula teacher. She won the first Miss Aloha Hula as Aloha Wong, in 1971, the same year that the Merrie Monarch Festival was established. The Miss Aloha Hula title is hula's top solo wahine (women's) honor.",
+            "The SpongeBob SquarePants Movie\nThe SpongeBob SquarePants Movie is a 2004 American live-action/animated comedy film based on the Nickelodeon television series \"SpongeBob SquarePants\". The film was co-written, directed, and co-produced by series creator Stephen Hillenburg and starred the series' cast of Tom Kenny, Bill Fagerbakke, Clancy Brown, Rodger Bumpass and Mr. Lawrence, with guest performances by Scarlett Johansson, Jeffrey Tambor, Alec Baldwin and David Hasselhoff. It was produced by Hillenburg's production company United Plankton Pictures and Nickelodeon Movies, it was distributed by Paramount Pictures and was also the first film in the \"SpongeBob SquarePants\" film series. In the film, Plankton devises a plan to steal King Neptune's crown and send it to Shell City, and SpongeBob and Patrick must retrieve the crown to save Mr. Krabs from King Neptune's wrath and Bikini Bottom from Plankton's plan.",
+            "Muumuu\nThe muumuu or mu\u02bb umu\u02bb u (] ) is a loose dress of Hawaiian origin that hangs from the shoulder. Like the aloha shirt, muumuu exports are often brilliantly colored with floral patterns of generic Polynesian motifs. Muumuus for local Hawaiian residents are more subdued in tone. Muumuus are no longer as widely worn at work as the aloha shirt, but continue to be the preferred formal dress for weddings and festivals such as the Merrie Monarch hula competition. Muumuus are also popular as maternity wear because they do not restrict the waist.",
+            "1994 Shankill Road killings\nThe 1994 Shankill Road killings took place on 16 June 1994. The Irish National Liberation Army (INLA) shot dead three Ulster Volunteer Force (UVF) members \u2013 high-ranking member Trevor King, Colin Craig and David Hamilton \u2013 on the Shankill Road in Belfast, close to the UVF HQ.The following day, the UVF launched two 'retaliatory' attacks. In the first, UVF members shot dead a Catholic civilian taxi driver in Carrickfergus. In the second, they shot dead two Protestant civilians in Newtownabbey, whom they believed were Catholics. The Loughinisland massacre, two days later, is believed to have been a further retaliation.",
+            "Cadet branch\nIn history and heraldry, a cadet branch consists of the male-line descendants of a monarch or patriarch's younger sons (cadets). In the ruling dynasties and noble families of much of Europe and Asia, the family's major assets\u2014realm, titles, fiefs, property and income\u2014have historically been passed from a father to his firstborn son in what is known as primogeniture; younger sons\u2014cadets\u2014inherited less wealth and authority to pass to future generations of descendants.",
+            "Zulu royal family\nThe Zulu royal family consists of the reigning monarch of the Zulus of South Africa, King Goodwill Zwelithini kaBhekuzulu, his consorts, legitimate descendants, near relatives and male-line descendants of his great-grandfather, King Mpande who, as a half-brother of the Zulu \"Pater Patriae\", King Shaka, reigned from 1840 to 1872. Shaka's policies and conquests transformed a small clan into one of South Africa's most influential pre-colonial realms, extending over much of what is now KwaZulu-Natal.",
+            "Monarch Beverage Company\nThe Monarch Beverage Company Inc is a diversified, international beverage company based in Atlanta, Georgia. The company's CEO is Jacques Bombal. The company was founded in 1965 by Frank Armstrong. Monarch Beverage Company aimed to establish itself by offering lesser-known soft drink brands that had strong regional sales and appeal. Monarch Beverage Company purchased Dad's from IC Industries of Chicago in 1986. Around that time, it was the second largest volume (12 million cases) root beer brand and was distributed by the Coca-Cola bottler network. In 2007, The Dad's Root Beer Company, LLC of Jasper, Indiana, acquired the Dad's Root Beer brand as well as the rights to Bubble Up, Dr. Wells and Sun Crest in the U.S. and some other countries from The Monarch Beverage Co. of Atlanta.",
+            "Drangiana\nDrangiana or Zarangiana (Greek: \u0394\u03c1\u03b1\u03b3\u03b3\u03b9\u03b1\u03bd\u03ae , \"Drangian\u0113\"; also attested in Old Western Iranian as \"Zranka\" was a historical region and administrative division of the Achaemenid Empire. This region comprises territory around Hamun Lake, wetlands in endorheic Sistan Basin on the Iran-Afghan border, and its primary watershed Helmand river in what is nowadays southwestern region of Afghanistan."
+        ],
+        "thoughts": [
+            "The Merrie Monarch refers historically to King David Kal\u0101kaua, the last king of the Kingdom of Hawai\u02bbi. He was known as the \"Merrie Monarch\" for his patronage of the arts and for restoring many Hawaiian cultural traditions, including the hula, during his reign. The Merrie Monarch Festival in Hilo, Hawaii is held annually to honor his legacy and is considered the most prestigious hula contest.",
+            "Unfortunately, there is no relevant information available on the military staff members of historical figures.",
+            "Colonel Charles Hastings Judd held the title of Chamberlain and Colonel within 'The Merrie Monarch\u2019s' military staff."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who was Chamberlain and Colonel of the military staff of The Merrie Monarch?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify who is referred to by 'The Merrie Monarch'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the military staff of the identified Merrie Monarch.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine who held the title of Chamberlain in the identified military staff.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine who held the title of Colonel in the identified military staff.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine results to find who held the titles of both Chamberlain and Colonel, or determine if they were separate individuals in the staff of The Merrie Monarch.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The question requires information about specific roles within the military staff of a historical figure known as 'The Merrie Monarch'. First, we identify who 'The Merrie Monarch' refers to, which is a key retrieval step. Historically, this refers to King Charles II of England. Next, we gather details about his military staff, specifically looking for individuals who held the titles of Chamberlain and Colonel. These roles may be filled by one person or two different individuals, which the final node determines by combining insights from the reasoning steps."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "George W. Macfarlane\nGeorge Walter Hunter Macfarlane (March 1, 1849 \u2013 February 20, 1921) was a British businessman, courtier and politician of the Kingdom of Hawaii. He served Colonel of the military staff of King Kal\u0101kaua, traveling with the monarch on his 1881 world tour. He also served as his final chamberlain of king and was at his deathbed in 1891.",
+            "Charles Hastings Judd\nColonel Charles Hastings Judd (September 8, 1835 \u2013 April 18, 1890) was an American businessman, rancher, courtier and politician of the Kingdom of Hawaii. He served as Chamberlain and Colonel of the military staff of King Kal\u0101kaua and traveled with the monarch on his 1881 world tour.",
+            "Coins of the Hawaiian dollar\nIn 1847, the Kingdom of Hawai\u02bbi, under the reign of King Kamehaheha III, issued its first official coinage\u2014a large one-cent copper penny\u2014to alleviate the chronic shortage of small denomination coins circulating in the Hawaiian Islands. The next and last official coinage of the Hawaiian Islands was minted in 1883, by King Kal\u0101kaua I; however during the intervening period, the changing needs of the Hawaiian Islands were met by circulating private-issued tokens and the coins of the United States of America.",
+            "Kal\u0101kaua\nKal\u0101kaua (November 16, 1836 \u2013 January 20, 1891), born David La\u02bb amea Kamananakapu Mahinulani Naloiaehuokalani Lumialani Kal\u0101kaua and sometimes called The Merrie Monarch, was the last king (and second to last monarch) of the Kingdom of Hawai\u02bb i. He reigned from February 12, 1874 until his death in San Francisco, California, on January 20, 1891. Kal\u0101kaua had a convivial personality and enjoyed entertaining guests with his singing and ukulele playing. At his coronation and his birthday jubilee, the hula that had been banned from public in the kingdom became a celebration of Hawaiian culture.",
+            "Merrie Monarch Festival\nThe Merrie Monarch Festival is a week-long cultural festival that takes place annually in Hilo, Hawaii during the week after Easter. It honors King David Kal\u0101kaua, who was called the \"Merrie Monarch\" for his patronage of the arts and is credited with restoring many Hawaiian cultural traditions during his reign, including the hula. Many \"h\u0101lau hula\" (schools), including some from the U.S. mainland and some international performers, attend the festival each year to participate in exhibitions and competitions. The festival has received worldwide attention and is considered the most prestigious of all hula contests.",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "The Last King of Scotland (film)\nThe Last King of Scotland is a 2006 historical drama film based on Giles Foden's novel \"The Last King of Scotland\" (1998), adapted by screenwriters Peter Morgan and Jeremy Brock, and directed by Kevin Macdonald. The film was a co-production between companies from the United Kingdom and Germany.",
+            "Netjerkare Siptah\nNetjerkare Siptah (also Neitiqerty Siptah and likely the same person as Nitocris) was an Ancient Egyptian pharaoh, the seventh and last ruler of the 6th Dynasty. Alternatively some scholars classify him as the first king of the combined 7th and 8th Dynasties. As the last king of the 6th Dynasty, Netjerkare Siptah is considered by some Egyptologists to be the last king of the Old Kingdom period.",
+            "King Kobra III\nKing Kobra III, released in 1988 on New Renaissance Records, was the first and last album by the Edwards, Michael-Phillips, Northrup, Hart and Appice line-up of King Kobra. After the demise of the original line-up, remaining members Carmine Appice and David Michael-Phillips teamed up with Johnny Edwards, Jeff Northrup and Larry Hart, all 3 members of the Sacramento, CA band Northrup at the time.",
+            "Aloha Dalire\nFabianne Pomaialoha Wong Dalire, known professionally as Aloha Dalire, (June 22, 1950 \u2013 August 6, 2014) was an American Hawaiian kumu hula, or master hula teacher. She won the first Miss Aloha Hula as Aloha Wong, in 1971, the same year that the Merrie Monarch Festival was established. The Miss Aloha Hula title is hula's top solo wahine (women's) honor.",
+            "Muumuu\nThe muumuu or mu\u02bb umu\u02bb u (] ) is a loose dress of Hawaiian origin that hangs from the shoulder. Like the aloha shirt, muumuu exports are often brilliantly colored with floral patterns of generic Polynesian motifs. Muumuus for local Hawaiian residents are more subdued in tone. Muumuus are no longer as widely worn at work as the aloha shirt, but continue to be the preferred formal dress for weddings and festivals such as the Merrie Monarch hula competition. Muumuus are also popular as maternity wear because they do not restrict the waist.",
+            "Monarch Beverage Company\nThe Monarch Beverage Company Inc is a diversified, international beverage company based in Atlanta, Georgia. The company's CEO is Jacques Bombal. The company was founded in 1965 by Frank Armstrong. Monarch Beverage Company aimed to establish itself by offering lesser-known soft drink brands that had strong regional sales and appeal. Monarch Beverage Company purchased Dad's from IC Industries of Chicago in 1986. Around that time, it was the second largest volume (12 million cases) root beer brand and was distributed by the Coca-Cola bottler network. In 2007, The Dad's Root Beer Company, LLC of Jasper, Indiana, acquired the Dad's Root Beer brand as well as the rights to Bubble Up, Dr. Wells and Sun Crest in the U.S. and some other countries from The Monarch Beverage Co. of Atlanta.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Zulu royal family\nThe Zulu royal family consists of the reigning monarch of the Zulus of South Africa, King Goodwill Zwelithini kaBhekuzulu, his consorts, legitimate descendants, near relatives and male-line descendants of his great-grandfather, King Mpande who, as a half-brother of the Zulu \"Pater Patriae\", King Shaka, reigned from 1840 to 1872. Shaka's policies and conquests transformed a small clan into one of South Africa's most influential pre-colonial realms, extending over much of what is now KwaZulu-Natal.",
+            "Chess problem\nA chess problem, also called a chess composition, is a puzzle set by somebody using chess pieces on a chess board, that presents the solver with a particular task to be achieved. For instance, a position might be given with the instruction that White is to move first, and checkmate Black in two moves against any possible defense. A person who creates such problems is known as a composer. There is a good deal of specialized jargon used in connection with chess problems; see glossary of chess problems for a list."
+        ],
+        "thoughts": [
+            "The Merrie Monarch refers to King David Kal\u0101kaua, the last king of the Kingdom of Hawai\u02bbi, who was known for his patronage of the arts and restoration of Hawaiian cultural traditions, including the hula. The Merrie Monarch Festival is named in his honor and is considered the most prestigious hula contest.",
+            "The military staff of King Kal\u0101kaua included Colonel George W. Macfarlane and Colonel Charles Hastings Judd. They traveled with the monarch on his 1881 world tour and served as his chamberlain. The military staff was responsible for the administrative, operational, and logistical needs of the King's unit, providing a bi-directional flow of information between the commanding officer and subordinate military units.",
+            "Colonel George W. Macfarlane and Colonel Charles Hastings Judd held the title of Chamberlain in the military staff of King Kal\u0101kaua.",
+            "Colonel George W. Macfarlane and Colonel Charles Hastings Judd held the title of Colonel in the military staff of King Kal\u0101kaua.",
+            "Colonel George W. Macfarlane and Colonel Charles Hastings Judd held the titles of both Chamberlain and Colonel in the military staff of King Kal\u0101kaua."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who was Chamberlain and Colonel of the military staff of The Merrie Monarch?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify 'The Merrie Monarch' and provide information about his reign and significance.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify key figures associated with 'The Merrie Monarch', including roles such as Chamberlain and Colonel of his military staff.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine who held the position of Chamberlain during 'The Merrie Monarch's' reign.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine who held the position of Colonel of the military staff during 'The Merrie Monarch's' reign.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Consolidate information about who was both Chamberlain and Colonel in 'The Merrie Monarch's' military staff.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "1. First, we need to understand who 'The Merrie Monarch' was, which will guide us in identifying figures associated with his reign. This involves retrieving information about him and his era. \n\n2. Second, we focus on identifying key roles and figures during his reign, specifically those titled Chamberlain and Colonel of the military staff. \n\n3. Third and fourth steps involve isolating who specifically held the positions of Chamberlain and Colonel to narrow down potential persons who could have been both. \n\n5. Finally, we synthesize all this information to determine if there was someone who was both the Chamberlain and Colonel under 'The Merrie Monarch.' This provides a focused answer to the question by integrating roles related to the historical context provided in step 1."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Charles Hastings Judd\nColonel Charles Hastings Judd (September 8, 1835 \u2013 April 18, 1890) was an American businessman, rancher, courtier and politician of the Kingdom of Hawaii. He served as Chamberlain and Colonel of the military staff of King Kal\u0101kaua and traveled with the monarch on his 1881 world tour.",
+            "Merrie Monarch Festival\nThe Merrie Monarch Festival is a week-long cultural festival that takes place annually in Hilo, Hawaii during the week after Easter. It honors King David Kal\u0101kaua, who was called the \"Merrie Monarch\" for his patronage of the arts and is credited with restoring many Hawaiian cultural traditions during his reign, including the hula. Many \"h\u0101lau hula\" (schools), including some from the U.S. mainland and some international performers, attend the festival each year to participate in exhibitions and competitions. The festival has received worldwide attention and is considered the most prestigious of all hula contests.",
+            "George W. Macfarlane\nGeorge Walter Hunter Macfarlane (March 1, 1849 \u2013 February 20, 1921) was a British businessman, courtier and politician of the Kingdom of Hawaii. He served Colonel of the military staff of King Kal\u0101kaua, traveling with the monarch on his 1881 world tour. He also served as his final chamberlain of king and was at his deathbed in 1891.",
+            "Kal\u0101kaua\nKal\u0101kaua (November 16, 1836 \u2013 January 20, 1891), born David La\u02bb amea Kamananakapu Mahinulani Naloiaehuokalani Lumialani Kal\u0101kaua and sometimes called The Merrie Monarch, was the last king (and second to last monarch) of the Kingdom of Hawai\u02bb i. He reigned from February 12, 1874 until his death in San Francisco, California, on January 20, 1891. Kal\u0101kaua had a convivial personality and enjoyed entertaining guests with his singing and ukulele playing. At his coronation and his birthday jubilee, the hula that had been banned from public in the kingdom became a celebration of Hawaiian culture.",
+            "Coins of the Hawaiian dollar\nIn 1847, the Kingdom of Hawai\u02bbi, under the reign of King Kamehaheha III, issued its first official coinage\u2014a large one-cent copper penny\u2014to alleviate the chronic shortage of small denomination coins circulating in the Hawaiian Islands. The next and last official coinage of the Hawaiian Islands was minted in 1883, by King Kal\u0101kaua I; however during the intervening period, the changing needs of the Hawaiian Islands were met by circulating private-issued tokens and the coins of the United States of America.",
+            "Zulu royal family\nThe Zulu royal family consists of the reigning monarch of the Zulus of South Africa, King Goodwill Zwelithini kaBhekuzulu, his consorts, legitimate descendants, near relatives and male-line descendants of his great-grandfather, King Mpande who, as a half-brother of the Zulu \"Pater Patriae\", King Shaka, reigned from 1840 to 1872. Shaka's policies and conquests transformed a small clan into one of South Africa's most influential pre-colonial realms, extending over much of what is now KwaZulu-Natal.",
+            "King Nan of Zhou\nKing Nan of Zhou (?\u2013256 BC), born Ji Yan and less commonly known as King Yin of Zhou, was the 36th and last king of the Chinese Zhou dynasty, the son of King Shenjing of Zhou and grandson of King Xian of Zhou. He was king for fifty-nine years, the longest in the Zhou Dynasty and all of pre-imperial China (in terms of the reign length followed by King Mu of Zhou). By the time of King Nan's reign, the kings of Zhou had lost almost all political and military power, as even their remaining crown land was split into two states or factions, led by rival feudal lords: West Zhou, where the capital Wangcheng was located, and East Zhou, centred at Chengzhou and Kung. Therefore, Nan lacked any personal territory and was effectively under the control of the local feudal lords, essentially relying on their charity.",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "Cadet branch\nIn history and heraldry, a cadet branch consists of the male-line descendants of a monarch or patriarch's younger sons (cadets). In the ruling dynasties and noble families of much of Europe and Asia, the family's major assets\u2014realm, titles, fiefs, property and income\u2014have historically been passed from a father to his firstborn son in what is known as primogeniture; younger sons\u2014cadets\u2014inherited less wealth and authority to pass to future generations of descendants.",
+            "Muumuu\nThe muumuu or mu\u02bb umu\u02bb u (] ) is a loose dress of Hawaiian origin that hangs from the shoulder. Like the aloha shirt, muumuu exports are often brilliantly colored with floral patterns of generic Polynesian motifs. Muumuus for local Hawaiian residents are more subdued in tone. Muumuus are no longer as widely worn at work as the aloha shirt, but continue to be the preferred formal dress for weddings and festivals such as the Merrie Monarch hula competition. Muumuus are also popular as maternity wear because they do not restrict the waist.",
+            "Aloha Dalire\nFabianne Pomaialoha Wong Dalire, known professionally as Aloha Dalire, (June 22, 1950 \u2013 August 6, 2014) was an American Hawaiian kumu hula, or master hula teacher. She won the first Miss Aloha Hula as Aloha Wong, in 1971, the same year that the Merrie Monarch Festival was established. The Miss Aloha Hula title is hula's top solo wahine (women's) honor.",
+            "Gage Clarke\nGage Clarke (March 3, 1900 \u2013 October 22, 1964) was an American character actor best known for his role as the principal in \"Mister Peepers\". His other work consisted largely of one-shot appearances in television series such as seven major supporting roles as different characters in \"Maverick\", twelve roles in \"Gunsmoke\" (Clarke played a key role in the \"Maverick\" spoof of \"Gunsmoke\", an episode entitled \"Gun-Shy\"), \"Mister Ed\", \"Laramie\", \"Ben Casey\", \"Checkmate\", \"The Twilight Zone\", \"The Real McCoys\" (twice), four roles in \"Alfred Hitchcock Presents\", \"Bourbon Street Beat\", \"Thriller\", \"Have Gun Will Travel\", and many others, as well as movies including \"I Want to Live!\", \"The Bad Seed\", \"The Brothers Karamazov\", and \"The Absent-Minded Professor\". Clarke, a slightly overweight actor with a double chin, specialized in playing avuncular, rather timid characters, with one of his largest parts being frightened gambler \"Foursquare Farley\" in the \"Maverick\" episode \"Greenbacks, Unlimited\" opposite James Garner and John Dehner. He made two guest appearances on \"Perry Mason\", including the role of Frederick Rollins in \"The Case of the Glittering Goldfish\" in 1959. He also played the part of Mr. Murg in \"Pollyanna\" in 1960.",
+            "Legacy of Che Guevara\nThe legacy of Argentine Marxist revolutionary Che Guevara (June 14, 1928 \u2013 October 9, 1967) is constantly evolving in the collective imagination. As a ubiquitous symbol of counterculture worldwide, Guevara is one of the most recognizable and influential revolutionary figures of the twentieth century. However, during his life, and even more since his death, Che has elicited controversy and wildly divergent opinions as to who he was and what he represented. Mostly revered and occasionally reviled, he is passionately characterized along the entire continuum as everything from a heroic defender of the poor, to a cold-hearted executioner. Admired, sanctified, romanticized and derided, his crystallized status as either a brilliant intellectual or a violent ideologue is usually dependent on where one falls along the left and right of the political spectrum. The debate around his legacy is further complicated by the fact that Guevara exists simultaneously as several different entities, both literal man and global emblem, leading to disputes between what people contend he did and what he now represents.",
+            "Charles X Gustav of Sweden\nCharles X Gustav, also Carl Gustav (Swedish: \"Karl X Gustav\" ; 8 November 1622 \u2013 13 February 1660), was King of Sweden from 1654 until his death. He was the son of John Casimir, Count Palatine of Zweibr\u00fccken-Kleeburg and Catherine of Sweden. After his father's death he also succeeded him as Pfalzgraf. He was married to Hedwig Eleonora of Holstein-Gottorp, who bore his son and successor, Charles XI. Charles X Gustav was the second Wittelsbach king of Sweden after the childless king Christopher of Bavaria (1441\u20131448) and he was the first king of the Swedish \"Caroline era\", which had its peak during the end of the reign of his son, Charles XI. He led Sweden during the Second Northern War, enlarging the Swedish Empire. By his predecessor Christina, he was considered \"de facto\" Duke of Eyland (\u00d6land) before ascending to the Swedish throne.",
+            "King Kang of Chu\nKing Kang of Chu (, died 545 BC) was from 559 to 545 BC the king of Chu, a major power during the Spring and Autumn period of ancient China. Born Xiong Zhao (), he succeeded his father King Gong of Chu. His reign was marked by constant wars with Jin, Chu's traditional enemy, and Wu, its new enemy. He ruled for 15 years and was succeeded by his son, Jia'ao, who would four years later be murdered by King Kang's younger brother King Ling of Chu.",
+            "Angelo Montrone\nAngelo Montrone is an American record producer, songwriter, and talent scout (A&R). Montrone has played a key role as producer and A&R man for Grammy-winning acts including Matisyahu and Los Lonely Boys, as well as producing acts such as jam band favorite Railroad Earth, and discovering a young Jennifer Love Hewitt. Over the course of his nearly 30-year career, he has worked as an independent record producer as well as being a staff producer and A&R man for Sony, Elektra Entertainment, Atlantic Records, Or Music, Razor & Tie, and Majestic Music. Montrone had a #4 song on the Billboard Dance Charts with \"Break Me\". Also, his song \"Free to Be a Woman\" was the theme song for the Style Network's show \"The Modern Girl\". He is the founder and CEO of the Majestic Music record label based in Hampton Falls, New Hampshire.",
+            "What the Butler Saw (play)\nWhat the Butler Saw is a farce written by the English playwright Joe Orton. It was premi\u00e8red at the Queen's Theatre in London on 5 March 1969. It was Orton's final play and the second to be performed after his death, following \"Funeral Games\" in 1968.",
+            "Won Gyun\nWon Gyun (Korean: \uc6d0\uade0, hanja:\u5143\u5747 ; 12 February 1540 \u2013 27 August 1597) was a Korean general and admiral during the Joseon Dynasty. He is best known for his campaigns against Japanese during Hideyoshi's invasions of Korea. Won was a member of Wonju Won family, which was well known for its members' military accomplishments. He was born in 1540 near Pyeongtaek and demonstrated his skill as warrior at a young age. He was qualified as a military officer and was first assigned to the northern border to defend against the Jurchens, who frequently raided Korean villages. Won led many successful campaigns with Yi Il and Yi Sun-sin against the Jurchens. After considerable accomplishments on the northern frontier, he was promoted to admiral in 1592 and sent to the southern coast of Gyeongsang Province to command the province's Western Fleet, along with Yi Sun-sin, who became admiral before Won and took command of Jeolla Province's Eastern Fleet. At the time, Won and Yi were cavalry leaders who had no experience with naval warfare.",
+            "Archie A. Peck\nArchie A. Peck (November 22, 1894 \u2013 September 15, 1978) was a soldier in the United States Army who received the Medal of Honor for his actions during World War I. While serving as a private foot soldier in the US 77th Division during the Meuse-Argonne Offensive, his unit ended up with several others behind German lines, in what was later known as \"the Lost Battalion\". This was the bloodiest battle of the war involving US troops. Peck acted gallantly in the surrounding unit, saving two wounded men under machine gun fire."
+        ],
+        "thoughts": [
+            "The Merrie Monarch, also known as King David Kal\u0101kaua, was the last king of the Kingdom of Hawai\u02bbi and is credited with restoring many Hawaiian cultural traditions during his reign, including the hula. He was known for his patronage of the arts and his convivial personality, earning him the nickname \"Merrie Monarch.\" The Merrie Monarch Festival, held annually in Hilo, Hawaii, honors his legacy and is considered the most prestigious of all hula contests.\n\nDuring his reign from 1874 to 1891, King Kal\u0101kaua played a significant role in revitalizing Hawaiian culture and traditions, particularly the hula, which had been banned from public performance. His efforts to celebrate and preserve Hawaiian culture have had a lasting impact, and the Merrie Monarch Festival continues to be a symbol of the cultural revival he championed.\n\nThe legacy of King Kal\u0101kaua and the Merrie Monarch Festival serves as a reminder of the importance of preserving and celebrating indigenous cultures, and the festival has become a global platform for showcasing the beauty and significance of hula and Hawaiian traditions.",
+            "Key figures associated with 'The Merrie Monarch' include King Kal\u0101kaua, who was known as the \"Merrie Monarch\" for his patronage of the arts and restoration of Hawaiian cultural traditions. Charles Hastings Judd and George W. Macfarlane served as Chamberlain and Colonel of the military staff for King Kal\u0101kaua, traveling with him on his 1881 world tour. The festival itself, the Merrie Monarch Festival, honors King Kal\u0101kaua and is considered the most prestigious hula contest, attracting h\u0101lau hula from around the world. The muumuu, a loose dress of Hawaiian origin, is also associated with the festival, being the preferred formal dress for events such as the hula competition. These key figures and elements are integral to the celebration and preservation of Hawaiian culture at 'The Merrie Monarch'.",
+            "During 'The Merrie Monarch's' reign, the position of Chamberlain was held by Charles Hastings Judd.",
+            "Colonel Charles Hastings Judd held the position of Colonel of the military staff during the reign of King Kal\u0101kaua, also known as \"The Merrie Monarch.\" He served as Chamberlain and Colonel of the military staff of King Kal\u0101kaua and traveled with the monarch on his 1881 world tour.",
+            "Charles Hastings Judd held the positions of both Chamberlain and Colonel in 'The Merrie Monarch's' military staff during the reign of King Kal\u0101kaua. He served as Chamberlain and Colonel of the military staff and traveled with the monarch on his 1881 world tour."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Who was Chamberlain and Colonel of the military staff of The Merrie Monarch?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify who 'The Merrie Monarch' refers to.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Search for information about the royal or historical figure known as 'The Merrie Monarch'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the time period and context of 'The Merrie Monarch'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Investigate who held the positions of Chamberlain and Colonel of the military staff during the reign of 'The Merrie Monarch'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compile the information to identify the person who was both Chamberlain and Colonel of the military staff of 'The Merrie Monarch'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The question requires understanding who 'The Merrie Monarch' refers to before determining who held the positions of Chamberlain and Colonel during their reign. The execution graph starts with identifying 'The Merrie Monarch', typically known to be King Charles II of England, but requires verification. After establishing the correct historical context (nodes 1-3), the next node (4) involves retrieving specific historical roles associated with 'The Merrie Monarch'. The final node (5) consolidates this information to answer the question directly."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Charles Hastings Judd\nColonel Charles Hastings Judd (September 8, 1835 \u2013 April 18, 1890) was an American businessman, rancher, courtier and politician of the Kingdom of Hawaii. He served as Chamberlain and Colonel of the military staff of King Kal\u0101kaua and traveled with the monarch on his 1881 world tour.",
+            "George W. Macfarlane\nGeorge Walter Hunter Macfarlane (March 1, 1849 \u2013 February 20, 1921) was a British businessman, courtier and politician of the Kingdom of Hawaii. He served Colonel of the military staff of King Kal\u0101kaua, traveling with the monarch on his 1881 world tour. He also served as his final chamberlain of king and was at his deathbed in 1891.",
+            "Merrie Monarch Festival\nThe Merrie Monarch Festival is a week-long cultural festival that takes place annually in Hilo, Hawaii during the week after Easter. It honors King David Kal\u0101kaua, who was called the \"Merrie Monarch\" for his patronage of the arts and is credited with restoring many Hawaiian cultural traditions during his reign, including the hula. Many \"h\u0101lau hula\" (schools), including some from the U.S. mainland and some international performers, attend the festival each year to participate in exhibitions and competitions. The festival has received worldwide attention and is considered the most prestigious of all hula contests.",
+            "Kal\u0101kaua\nKal\u0101kaua (November 16, 1836 \u2013 January 20, 1891), born David La\u02bb amea Kamananakapu Mahinulani Naloiaehuokalani Lumialani Kal\u0101kaua and sometimes called The Merrie Monarch, was the last king (and second to last monarch) of the Kingdom of Hawai\u02bb i. He reigned from February 12, 1874 until his death in San Francisco, California, on January 20, 1891. Kal\u0101kaua had a convivial personality and enjoyed entertaining guests with his singing and ukulele playing. At his coronation and his birthday jubilee, the hula that had been banned from public in the kingdom became a celebration of Hawaiian culture.",
+            "Aloha Dalire\nFabianne Pomaialoha Wong Dalire, known professionally as Aloha Dalire, (June 22, 1950 \u2013 August 6, 2014) was an American Hawaiian kumu hula, or master hula teacher. She won the first Miss Aloha Hula as Aloha Wong, in 1971, the same year that the Merrie Monarch Festival was established. The Miss Aloha Hula title is hula's top solo wahine (women's) honor.",
+            "Muumuu\nThe muumuu or mu\u02bb umu\u02bb u (] ) is a loose dress of Hawaiian origin that hangs from the shoulder. Like the aloha shirt, muumuu exports are often brilliantly colored with floral patterns of generic Polynesian motifs. Muumuus for local Hawaiian residents are more subdued in tone. Muumuus are no longer as widely worn at work as the aloha shirt, but continue to be the preferred formal dress for weddings and festivals such as the Merrie Monarch hula competition. Muumuus are also popular as maternity wear because they do not restrict the waist.",
+            "Coins of the Hawaiian dollar\nIn 1847, the Kingdom of Hawai\u02bbi, under the reign of King Kamehaheha III, issued its first official coinage\u2014a large one-cent copper penny\u2014to alleviate the chronic shortage of small denomination coins circulating in the Hawaiian Islands. The next and last official coinage of the Hawaiian Islands was minted in 1883, by King Kal\u0101kaua I; however during the intervening period, the changing needs of the Hawaiian Islands were met by circulating private-issued tokens and the coins of the United States of America.",
+            "King Nan of Zhou\nKing Nan of Zhou (?\u2013256 BC), born Ji Yan and less commonly known as King Yin of Zhou, was the 36th and last king of the Chinese Zhou dynasty, the son of King Shenjing of Zhou and grandson of King Xian of Zhou. He was king for fifty-nine years, the longest in the Zhou Dynasty and all of pre-imperial China (in terms of the reign length followed by King Mu of Zhou). By the time of King Nan's reign, the kings of Zhou had lost almost all political and military power, as even their remaining crown land was split into two states or factions, led by rival feudal lords: West Zhou, where the capital Wangcheng was located, and East Zhou, centred at Chengzhou and Kung. Therefore, Nan lacked any personal territory and was effectively under the control of the local feudal lords, essentially relying on their charity.",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "Magnus Barefoot\nMagnus Olafsson (Old Norse: \"Magn\u00fas \u00d3l\u00e1fsson\", Norwegian: \"Magnus Olavsson\"; 1073 \u2013 24 August 1103), better known as Magnus Barefoot (Old Norse: \"Magn\u00fas berf\u0153ttr\", Norwegian: \"Magnus Berrf\u00f8tt\"), was King of Norway (as Magnus III) from 1093 until his death in 1103. His reign was marked by aggressive military campaigns and conquest, particularly in the Norse-dominated parts of the British Isles and Ireland, where he extended his rule to the Kingdom of the Isles and Dublin.",
+            "Zulu royal family\nThe Zulu royal family consists of the reigning monarch of the Zulus of South Africa, King Goodwill Zwelithini kaBhekuzulu, his consorts, legitimate descendants, near relatives and male-line descendants of his great-grandfather, King Mpande who, as a half-brother of the Zulu \"Pater Patriae\", King Shaka, reigned from 1840 to 1872. Shaka's policies and conquests transformed a small clan into one of South Africa's most influential pre-colonial realms, extending over much of what is now KwaZulu-Natal.",
+            "Cadet branch\nIn history and heraldry, a cadet branch consists of the male-line descendants of a monarch or patriarch's younger sons (cadets). In the ruling dynasties and noble families of much of Europe and Asia, the family's major assets\u2014realm, titles, fiefs, property and income\u2014have historically been passed from a father to his firstborn son in what is known as primogeniture; younger sons\u2014cadets\u2014inherited less wealth and authority to pass to future generations of descendants.",
+            "Tokyo City\nTokyo City (\u6771\u4eac\u5e02 , \"T\u014dky\u014d-shi\" ) was a municipality in Japan and part of Tokyo-fu which existed from 1 May 1889 until its merger with its prefecture on 1 July 1943. The historical boundaries of Tokyo City are now occupied by the 23 Special Wards of Tokyo. The new merged government became what is now Tokyo, also known as the \"Tokyo Metropolis\", or, ambiguously, \"Tokyo Prefecture\".",
+            "Drangiana\nDrangiana or Zarangiana (Greek: \u0394\u03c1\u03b1\u03b3\u03b3\u03b9\u03b1\u03bd\u03ae , \"Drangian\u0113\"; also attested in Old Western Iranian as \"Zranka\" was a historical region and administrative division of the Achaemenid Empire. This region comprises territory around Hamun Lake, wetlands in endorheic Sistan Basin on the Iran-Afghan border, and its primary watershed Helmand river in what is nowadays southwestern region of Afghanistan.",
+            "Watch What Happens Live with Andy Cohen\nWatch What Happens Live with Andy Cohen (previously named Watch What Happens Live until December 19, 2016) is an American pop culture-based late-night talk show hosted by Andy Cohen that premiered on July 16, 2009. It features Bravo's own reality programming in the manner of an aftershow, and celebrities' recent news. The show is produced live from New York City, making possible interaction with viewers by phone and social media. In November 2013, Bravo renewed \"Watch What Happens: Live\" for two additional seasons. On March 2, 2016, the show aired its 1000th episode.",
+            "Laysan\nLaysan ( ; Hawaiian: Kau\u014d ] ), located 808 nmi northwest of Honolulu at N25\u00b0 42' 14\" W171\u00b0 44' 04\", is one of the Northwestern Hawaiian Islands. It comprises one land mass of 1016 acre , about 1 by in size. It is an atoll of sorts, although the land completely surrounds a shallow central lake some 8 ft above sea level that has a salinity approximately three times greater than the ocean. Laysan's Hawaiian name of Kau\u014d means \"egg\", referring to its shape and how much life springs from the island."
+        ],
+        "thoughts": [
+            "The Merrie Monarch refers to King David Kal\u0101kaua, the last king of the Kingdom of Hawai\u02bbi, who was known for his patronage of the arts and for restoring many Hawaiian cultural traditions, including the hula, during his reign. He is honored annually at the Merrie Monarch Festival in Hilo, Hawaii.",
+            "The Merrie Monarch is a title associated with King David Kal\u0101kaua, the last king of the Kingdom of Hawai\u02bbi. He was known for his patronage of the arts and for restoring many Hawaiian cultural traditions, including the hula. The Merrie Monarch Festival, which takes place annually in Hilo, Hawaii, is named in his honor and is considered the most prestigious of all hula contests. The festival attracts h\u0101lau hula from the U.S. mainland and international performers to participate in exhibitions and competitions.\n\nAloha Dalire, a renowned Hawaiian kumu hula, won the first Miss Aloha Hula title in 1971, the same year that the Merrie Monarch Festival was established. The festival continues to be a celebration of Hawaiian culture and tradition, with the muumuu being the preferred formal dress for events such as the hula competition.\n\nOverall, the Merrie Monarch is a significant figure in Hawaiian history and culture, and the festival named in his honor continues to be a symbol of the preservation and celebration of Hawaiian traditions.",
+            "The time period of 'The Merrie Monarch' refers to the reign of King David Kal\u0101kaua, the last king of the Kingdom of Hawai\u02bbi, during the late 19th century. The context of 'The Merrie Monarch' is within the cultural revival and preservation efforts of Hawaiian traditions, particularly the hula, which was championed by King Kal\u0101kaua. The Merrie Monarch Festival, established in 1971, continues to honor and celebrate Hawaiian culture and tradition, making it a significant event in the preservation of Hawaiian heritage.",
+            "During the reign of King Kal\u0101kaua, the positions of Chamberlain and Colonel of the military staff were held by Charles Hastings Judd and George W. Macfarlane. Charles Hastings Judd served as both Chamberlain and Colonel of the military staff, while George W. Macfarlane served as Colonel of the military staff and later as the final chamberlain of the king. These individuals played important roles in the court and military administration during the reign of the \"Merrie Monarch.\"",
+            "The person who was both Chamberlain and Colonel of the military staff of 'The Merrie Monarch' was Charles Hastings Judd."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who was Chamberlain and Colonel of the military staff of The Merrie Monarch?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify who 'The Merrie Monarch' refers to in historical context.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Research the military staff positions associated with 'The Merrie Monarch', specifically those with the titles 'Chamberlain' and 'Colonel'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the individuals who held the positions of Chamberlain and Colonel on the military staff of 'The Merrie Monarch'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Combine the information about the individuals who were Chamberlain and Colonel to answer the question.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins by understanding the reference to 'The Merrie Monarch', which sets the historical context for the query. From there, it involves retrieving details about specific military staff roles\u2014'Chamberlain' and 'Colonel'\u2014associated with 'The Merrie Monarch'. The next step is to identify the specific individuals who held these positions. Finally, the gathered information is synthesized to answer the original question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Charles Hastings Judd\nColonel Charles Hastings Judd (September 8, 1835 \u2013 April 18, 1890) was an American businessman, rancher, courtier and politician of the Kingdom of Hawaii. He served as Chamberlain and Colonel of the military staff of King Kal\u0101kaua and traveled with the monarch on his 1881 world tour.",
+            "George W. Macfarlane\nGeorge Walter Hunter Macfarlane (March 1, 1849 \u2013 February 20, 1921) was a British businessman, courtier and politician of the Kingdom of Hawaii. He served Colonel of the military staff of King Kal\u0101kaua, traveling with the monarch on his 1881 world tour. He also served as his final chamberlain of king and was at his deathbed in 1891.",
+            "Coins of the Hawaiian dollar\nIn 1847, the Kingdom of Hawai\u02bbi, under the reign of King Kamehaheha III, issued its first official coinage\u2014a large one-cent copper penny\u2014to alleviate the chronic shortage of small denomination coins circulating in the Hawaiian Islands. The next and last official coinage of the Hawaiian Islands was minted in 1883, by King Kal\u0101kaua I; however during the intervening period, the changing needs of the Hawaiian Islands were met by circulating private-issued tokens and the coins of the United States of America.",
+            "Kal\u0101kaua\nKal\u0101kaua (November 16, 1836 \u2013 January 20, 1891), born David La\u02bb amea Kamananakapu Mahinulani Naloiaehuokalani Lumialani Kal\u0101kaua and sometimes called The Merrie Monarch, was the last king (and second to last monarch) of the Kingdom of Hawai\u02bb i. He reigned from February 12, 1874 until his death in San Francisco, California, on January 20, 1891. Kal\u0101kaua had a convivial personality and enjoyed entertaining guests with his singing and ukulele playing. At his coronation and his birthday jubilee, the hula that had been banned from public in the kingdom became a celebration of Hawaiian culture.",
+            "Merrie Monarch Festival\nThe Merrie Monarch Festival is a week-long cultural festival that takes place annually in Hilo, Hawaii during the week after Easter. It honors King David Kal\u0101kaua, who was called the \"Merrie Monarch\" for his patronage of the arts and is credited with restoring many Hawaiian cultural traditions during his reign, including the hula. Many \"h\u0101lau hula\" (schools), including some from the U.S. mainland and some international performers, attend the festival each year to participate in exhibitions and competitions. The festival has received worldwide attention and is considered the most prestigious of all hula contests.",
+            "Magnus Barefoot\nMagnus Olafsson (Old Norse: \"Magn\u00fas \u00d3l\u00e1fsson\", Norwegian: \"Magnus Olavsson\"; 1073 \u2013 24 August 1103), better known as Magnus Barefoot (Old Norse: \"Magn\u00fas berf\u0153ttr\", Norwegian: \"Magnus Berrf\u00f8tt\"), was King of Norway (as Magnus III) from 1093 until his death in 1103. His reign was marked by aggressive military campaigns and conquest, particularly in the Norse-dominated parts of the British Isles and Ireland, where he extended his rule to the Kingdom of the Isles and Dublin.",
+            "Ptolemy of Epirus\nPtolemy (Greek: ); 237 BC-died 234 \u0412\u0421), king of Epirus, was the second son of Alexander II, king of Epirus, and Olympias, grandson of the great Pyrrhus and brother of Phthia of Macedon. He was named in honor of his late uncle Ptolemy, a late brother of his parents. He succeeded to the throne on the death of his elder brother, Pyrrhus II of Epirus, but reigned only a very short time, having set out on a military expedition, during the course of which he fell sick and died. Polyaenus, instead, tells us a different story and states that he was treasonably assassinated. The date of his reign cannot be fixed with certainty, but as he was contemporary with Demetrius II, king of Macedonia, it may be placed between 239 and 229 BC. He was succeeded by his niece Deidamia.",
+            "King Kang of Chu\nKing Kang of Chu (, died 545 BC) was from 559 to 545 BC the king of Chu, a major power during the Spring and Autumn period of ancient China. Born Xiong Zhao (), he succeeded his father King Gong of Chu. His reign was marked by constant wars with Jin, Chu's traditional enemy, and Wu, its new enemy. He ruled for 15 years and was succeeded by his son, Jia'ao, who would four years later be murdered by King Kang's younger brother King Ling of Chu.",
+            "Aloha Dalire\nFabianne Pomaialoha Wong Dalire, known professionally as Aloha Dalire, (June 22, 1950 \u2013 August 6, 2014) was an American Hawaiian kumu hula, or master hula teacher. She won the first Miss Aloha Hula as Aloha Wong, in 1971, the same year that the Merrie Monarch Festival was established. The Miss Aloha Hula title is hula's top solo wahine (women's) honor.",
+            "Muumuu\nThe muumuu or mu\u02bb umu\u02bb u (] ) is a loose dress of Hawaiian origin that hangs from the shoulder. Like the aloha shirt, muumuu exports are often brilliantly colored with floral patterns of generic Polynesian motifs. Muumuus for local Hawaiian residents are more subdued in tone. Muumuus are no longer as widely worn at work as the aloha shirt, but continue to be the preferred formal dress for weddings and festivals such as the Merrie Monarch hula competition. Muumuus are also popular as maternity wear because they do not restrict the waist.",
+            "Cadet branch\nIn history and heraldry, a cadet branch consists of the male-line descendants of a monarch or patriarch's younger sons (cadets). In the ruling dynasties and noble families of much of Europe and Asia, the family's major assets\u2014realm, titles, fiefs, property and income\u2014have historically been passed from a father to his firstborn son in what is known as primogeniture; younger sons\u2014cadets\u2014inherited less wealth and authority to pass to future generations of descendants.",
+            "Zulu royal family\nThe Zulu royal family consists of the reigning monarch of the Zulus of South Africa, King Goodwill Zwelithini kaBhekuzulu, his consorts, legitimate descendants, near relatives and male-line descendants of his great-grandfather, King Mpande who, as a half-brother of the Zulu \"Pater Patriae\", King Shaka, reigned from 1840 to 1872. Shaka's policies and conquests transformed a small clan into one of South Africa's most influential pre-colonial realms, extending over much of what is now KwaZulu-Natal.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Monarch Beverage Company\nThe Monarch Beverage Company Inc is a diversified, international beverage company based in Atlanta, Georgia. The company's CEO is Jacques Bombal. The company was founded in 1965 by Frank Armstrong. Monarch Beverage Company aimed to establish itself by offering lesser-known soft drink brands that had strong regional sales and appeal. Monarch Beverage Company purchased Dad's from IC Industries of Chicago in 1986. Around that time, it was the second largest volume (12 million cases) root beer brand and was distributed by the Coca-Cola bottler network. In 2007, The Dad's Root Beer Company, LLC of Jasper, Indiana, acquired the Dad's Root Beer brand as well as the rights to Bubble Up, Dr. Wells and Sun Crest in the U.S. and some other countries from The Monarch Beverage Co. of Atlanta."
+        ],
+        "thoughts": [
+            "The Merrie Monarch refers to King David Kal\u0101kaua, the last king of the Kingdom of Hawai\u02bbi. He was known for his patronage of the arts and for restoring many Hawaiian cultural traditions, including the hula, during his reign. The Merrie Monarch Festival, which takes place annually in Hilo, Hawaii, honors his legacy and is considered the most prestigious of all hula contests.",
+            "The military staff positions associated with The Merrie Monarch, specifically those with the titles 'Chamberlain' and 'Colonel', were held by Charles Hastings Judd and George W. Macfarlane. Charles Hastings Judd served as Chamberlain and Colonel of the military staff of King Kal\u0101kaua, while George W. Macfarlane served as Colonel of the military staff and also as the final chamberlain of the king. These positions were significant during the reign of King Kal\u0101kaua, who was known as The Merrie Monarch for his patronage of the arts and restoration of Hawaiian cultural traditions, including the hula. The Merrie Monarch Festival, which honors King Kal\u0101kaua, is a week-long cultural festival that takes place annually in Hilo, Hawaii.",
+            "Charles Hastings Judd served as Chamberlain and Colonel of the military staff of The Merrie Monarch, while George W. Macfarlane served as Colonel of the military staff and also as the final chamberlain of the king.",
+            "Charles Hastings Judd served as both Chamberlain and Colonel of the military staff of The Merrie Monarch, while George W. Macfarlane served as Colonel of the military staff and also as the final chamberlain of the king."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who was Chamberlain and Colonel of the military staff of The Merrie Monarch?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify who 'The Merrie Monarch' refers to in historical context.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the chamberlain of The Merrie Monarch identified in step 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about the colonel of the military staff of The Merrie Monarch identified in step 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Compile the information about both the chamberlain and the colonel of the military staff related to The Merrie Monarch.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The question requires identifying two historical roles related to 'The Merrie Monarch.' The execution graph begins with establishing who 'The Merrie Monarch' is historically, as this determines the context for the other roles (Node 1). Once we know The Merrie Monarch, we perform two parallel retrievals: one for the chamberlain (Node 2) and one for the colonel of the military staff (Node 3). The final node (Node 4) consolidates this information to provide a comprehensive answer regarding both roles."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Charles Hastings Judd\nColonel Charles Hastings Judd (September 8, 1835 \u2013 April 18, 1890) was an American businessman, rancher, courtier and politician of the Kingdom of Hawaii. He served as Chamberlain and Colonel of the military staff of King Kal\u0101kaua and traveled with the monarch on his 1881 world tour.",
+            "Coins of the Hawaiian dollar\nIn 1847, the Kingdom of Hawai\u02bbi, under the reign of King Kamehaheha III, issued its first official coinage\u2014a large one-cent copper penny\u2014to alleviate the chronic shortage of small denomination coins circulating in the Hawaiian Islands. The next and last official coinage of the Hawaiian Islands was minted in 1883, by King Kal\u0101kaua I; however during the intervening period, the changing needs of the Hawaiian Islands were met by circulating private-issued tokens and the coins of the United States of America.",
+            "George W. Macfarlane\nGeorge Walter Hunter Macfarlane (March 1, 1849 \u2013 February 20, 1921) was a British businessman, courtier and politician of the Kingdom of Hawaii. He served Colonel of the military staff of King Kal\u0101kaua, traveling with the monarch on his 1881 world tour. He also served as his final chamberlain of king and was at his deathbed in 1891.",
+            "Kal\u0101kaua\nKal\u0101kaua (November 16, 1836 \u2013 January 20, 1891), born David La\u02bb amea Kamananakapu Mahinulani Naloiaehuokalani Lumialani Kal\u0101kaua and sometimes called The Merrie Monarch, was the last king (and second to last monarch) of the Kingdom of Hawai\u02bb i. He reigned from February 12, 1874 until his death in San Francisco, California, on January 20, 1891. Kal\u0101kaua had a convivial personality and enjoyed entertaining guests with his singing and ukulele playing. At his coronation and his birthday jubilee, the hula that had been banned from public in the kingdom became a celebration of Hawaiian culture.",
+            "Merrie Monarch Festival\nThe Merrie Monarch Festival is a week-long cultural festival that takes place annually in Hilo, Hawaii during the week after Easter. It honors King David Kal\u0101kaua, who was called the \"Merrie Monarch\" for his patronage of the arts and is credited with restoring many Hawaiian cultural traditions during his reign, including the hula. Many \"h\u0101lau hula\" (schools), including some from the U.S. mainland and some international performers, attend the festival each year to participate in exhibitions and competitions. The festival has received worldwide attention and is considered the most prestigious of all hula contests.",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "King Kang of Chu\nKing Kang of Chu (, died 545 BC) was from 559 to 545 BC the king of Chu, a major power during the Spring and Autumn period of ancient China. Born Xiong Zhao (), he succeeded his father King Gong of Chu. His reign was marked by constant wars with Jin, Chu's traditional enemy, and Wu, its new enemy. He ruled for 15 years and was succeeded by his son, Jia'ao, who would four years later be murdered by King Kang's younger brother King Ling of Chu.",
+            "The Last King of Scotland (film)\nThe Last King of Scotland is a 2006 historical drama film based on Giles Foden's novel \"The Last King of Scotland\" (1998), adapted by screenwriters Peter Morgan and Jeremy Brock, and directed by Kevin Macdonald. The film was a co-production between companies from the United Kingdom and Germany.",
+            "King Nan of Zhou\nKing Nan of Zhou (?\u2013256 BC), born Ji Yan and less commonly known as King Yin of Zhou, was the 36th and last king of the Chinese Zhou dynasty, the son of King Shenjing of Zhou and grandson of King Xian of Zhou. He was king for fifty-nine years, the longest in the Zhou Dynasty and all of pre-imperial China (in terms of the reign length followed by King Mu of Zhou). By the time of King Nan's reign, the kings of Zhou had lost almost all political and military power, as even their remaining crown land was split into two states or factions, led by rival feudal lords: West Zhou, where the capital Wangcheng was located, and East Zhou, centred at Chengzhou and Kung. Therefore, Nan lacked any personal territory and was effectively under the control of the local feudal lords, essentially relying on their charity.",
+            "Netjerkare Siptah\nNetjerkare Siptah (also Neitiqerty Siptah and likely the same person as Nitocris) was an Ancient Egyptian pharaoh, the seventh and last ruler of the 6th Dynasty. Alternatively some scholars classify him as the first king of the combined 7th and 8th Dynasties. As the last king of the 6th Dynasty, Netjerkare Siptah is considered by some Egyptologists to be the last king of the Old Kingdom period.",
+            "King Kobra III\nKing Kobra III, released in 1988 on New Renaissance Records, was the first and last album by the Edwards, Michael-Phillips, Northrup, Hart and Appice line-up of King Kobra. After the demise of the original line-up, remaining members Carmine Appice and David Michael-Phillips teamed up with Johnny Edwards, Jeff Northrup and Larry Hart, all 3 members of the Sacramento, CA band Northrup at the time.",
+            "Aloha Dalire\nFabianne Pomaialoha Wong Dalire, known professionally as Aloha Dalire, (June 22, 1950 \u2013 August 6, 2014) was an American Hawaiian kumu hula, or master hula teacher. She won the first Miss Aloha Hula as Aloha Wong, in 1971, the same year that the Merrie Monarch Festival was established. The Miss Aloha Hula title is hula's top solo wahine (women's) honor.",
+            "Muumuu\nThe muumuu or mu\u02bb umu\u02bb u (] ) is a loose dress of Hawaiian origin that hangs from the shoulder. Like the aloha shirt, muumuu exports are often brilliantly colored with floral patterns of generic Polynesian motifs. Muumuus for local Hawaiian residents are more subdued in tone. Muumuus are no longer as widely worn at work as the aloha shirt, but continue to be the preferred formal dress for weddings and festivals such as the Merrie Monarch hula competition. Muumuus are also popular as maternity wear because they do not restrict the waist.",
+            "Cadet branch\nIn history and heraldry, a cadet branch consists of the male-line descendants of a monarch or patriarch's younger sons (cadets). In the ruling dynasties and noble families of much of Europe and Asia, the family's major assets\u2014realm, titles, fiefs, property and income\u2014have historically been passed from a father to his firstborn son in what is known as primogeniture; younger sons\u2014cadets\u2014inherited less wealth and authority to pass to future generations of descendants.",
+            "Zulu royal family\nThe Zulu royal family consists of the reigning monarch of the Zulus of South Africa, King Goodwill Zwelithini kaBhekuzulu, his consorts, legitimate descendants, near relatives and male-line descendants of his great-grandfather, King Mpande who, as a half-brother of the Zulu \"Pater Patriae\", King Shaka, reigned from 1840 to 1872. Shaka's policies and conquests transformed a small clan into one of South Africa's most influential pre-colonial realms, extending over much of what is now KwaZulu-Natal.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Monarch Beverage Company\nThe Monarch Beverage Company Inc is a diversified, international beverage company based in Atlanta, Georgia. The company's CEO is Jacques Bombal. The company was founded in 1965 by Frank Armstrong. Monarch Beverage Company aimed to establish itself by offering lesser-known soft drink brands that had strong regional sales and appeal. Monarch Beverage Company purchased Dad's from IC Industries of Chicago in 1986. Around that time, it was the second largest volume (12 million cases) root beer brand and was distributed by the Coca-Cola bottler network. In 2007, The Dad's Root Beer Company, LLC of Jasper, Indiana, acquired the Dad's Root Beer brand as well as the rights to Bubble Up, Dr. Wells and Sun Crest in the U.S. and some other countries from The Monarch Beverage Co. of Atlanta."
+        ],
+        "thoughts": [
+            "The Merrie Monarch refers to King David Kal\u0101kaua, the last king of the Kingdom of Hawai\u02bbi. He was known for his patronage of the arts and for restoring many Hawaiian cultural traditions, including the hula, during his reign. The Merrie Monarch Festival, which takes place annually in Hilo, Hawaii, honors his legacy and is considered the most prestigious of all hula contests.",
+            "The chamberlain of The Merrie Monarch, King Kal\u0101kaua, was George W. Macfarlane. He served as the final chamberlain of the king and was at his deathbed in 1891. Macfarlane was a British businessman, courtier, and politician of the Kingdom of Hawaii, and he also served as Colonel of the military staff of King Kal\u0101kaua, traveling with the monarch on his 1881 world tour.",
+            "The colonel of the military staff of The Merrie Monarch was Charles Hastings Judd. He served as Chamberlain and Colonel of the military staff of King Kal\u0101kaua and traveled with the monarch on his 1881 world tour. He was an American businessman, rancher, courtier, and politician of the Kingdom of Hawaii.",
+            "The chamberlain of The Merrie Monarch, King Kal\u0101kaua, was George W. Macfarlane, who also served as Colonel of the military staff. He was a British businessman, courtier, and politician of the Kingdom of Hawaii. The colonel of the military staff was Charles Hastings Judd, who also served as Chamberlain. He was an American businessman, rancher, courtier, and politician of the Kingdom of Hawaii. Both Macfarlane and Judd traveled with the monarch on his 1881 world tour."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who was Chamberlain and Colonel of the military staff of The Merrie Monarch?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify who The Merrie Monarch is.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the military staff of The Merrie Monarch, focusing on positions like Chamberlain and Colonel.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the identities of Chamberlain and Colonel from the information about The Merrie Monarch's military staff.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The question asks for the identities of Chamberlain and Colonel in the context of 'The Merrie Monarch'. To solve this, we need to first identify who 'The Merrie Monarch' refers to, as it is a title likely linked to a specific historical figure. Once identified, we retrieve detailed information about the military staff associated with this figure, specifying roles such as Chamberlain and Colonel. Finally, we reason through the retrieved data to extract the names of the individuals who held these positions."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Charles Hastings Judd\nColonel Charles Hastings Judd (September 8, 1835 \u2013 April 18, 1890) was an American businessman, rancher, courtier and politician of the Kingdom of Hawaii. He served as Chamberlain and Colonel of the military staff of King Kal\u0101kaua and traveled with the monarch on his 1881 world tour.",
+            "George W. Macfarlane\nGeorge Walter Hunter Macfarlane (March 1, 1849 \u2013 February 20, 1921) was a British businessman, courtier and politician of the Kingdom of Hawaii. He served Colonel of the military staff of King Kal\u0101kaua, traveling with the monarch on his 1881 world tour. He also served as his final chamberlain of king and was at his deathbed in 1891.",
+            "Merrie Monarch Festival\nThe Merrie Monarch Festival is a week-long cultural festival that takes place annually in Hilo, Hawaii during the week after Easter. It honors King David Kal\u0101kaua, who was called the \"Merrie Monarch\" for his patronage of the arts and is credited with restoring many Hawaiian cultural traditions during his reign, including the hula. Many \"h\u0101lau hula\" (schools), including some from the U.S. mainland and some international performers, attend the festival each year to participate in exhibitions and competitions. The festival has received worldwide attention and is considered the most prestigious of all hula contests.",
+            "Kal\u0101kaua\nKal\u0101kaua (November 16, 1836 \u2013 January 20, 1891), born David La\u02bb amea Kamananakapu Mahinulani Naloiaehuokalani Lumialani Kal\u0101kaua and sometimes called The Merrie Monarch, was the last king (and second to last monarch) of the Kingdom of Hawai\u02bb i. He reigned from February 12, 1874 until his death in San Francisco, California, on January 20, 1891. Kal\u0101kaua had a convivial personality and enjoyed entertaining guests with his singing and ukulele playing. At his coronation and his birthday jubilee, the hula that had been banned from public in the kingdom became a celebration of Hawaiian culture.",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "Aloha Dalire\nFabianne Pomaialoha Wong Dalire, known professionally as Aloha Dalire, (June 22, 1950 \u2013 August 6, 2014) was an American Hawaiian kumu hula, or master hula teacher. She won the first Miss Aloha Hula as Aloha Wong, in 1971, the same year that the Merrie Monarch Festival was established. The Miss Aloha Hula title is hula's top solo wahine (women's) honor.",
+            "Muumuu\nThe muumuu or mu\u02bb umu\u02bb u (] ) is a loose dress of Hawaiian origin that hangs from the shoulder. Like the aloha shirt, muumuu exports are often brilliantly colored with floral patterns of generic Polynesian motifs. Muumuus for local Hawaiian residents are more subdued in tone. Muumuus are no longer as widely worn at work as the aloha shirt, but continue to be the preferred formal dress for weddings and festivals such as the Merrie Monarch hula competition. Muumuus are also popular as maternity wear because they do not restrict the waist.",
+            "Corps of Military Staff Clerks\nThe Corps of Military Staff Clerks was an administrative corps of the Canadian Army. The Headquarters Corps of Military Staff Clerks was established in 1905.",
+            "Ottoman Military College\nThe Ottoman Military College or Imperial Military Staff College or Ottoman Army War College (Ottoman Turkish: \"Mekteb-i Erk\u00e2n-\u0131 Harbiyye-i \u015e\u00e2h\u00e2ne\"\u200e or \"Erk\u00e2n-\u0131 Harbiye Mektebi\"), was a two-year military staff college of the Ottoman Empire. It was located in Istanbul. Its mission was to educate staff officers for the Ottoman Army.",
+            "Watch What Happens Live with Andy Cohen\nWatch What Happens Live with Andy Cohen (previously named Watch What Happens Live until December 19, 2016) is an American pop culture-based late-night talk show hosted by Andy Cohen that premiered on July 16, 2009. It features Bravo's own reality programming in the manner of an aftershow, and celebrities' recent news. The show is produced live from New York City, making possible interaction with viewers by phone and social media. In November 2013, Bravo renewed \"Watch What Happens: Live\" for two additional seasons. On March 2, 2016, the show aired its 1000th episode.",
+            "Coins of the Hawaiian dollar\nIn 1847, the Kingdom of Hawai\u02bbi, under the reign of King Kamehaheha III, issued its first official coinage\u2014a large one-cent copper penny\u2014to alleviate the chronic shortage of small denomination coins circulating in the Hawaiian Islands. The next and last official coinage of the Hawaiian Islands was minted in 1883, by King Kal\u0101kaua I; however during the intervening period, the changing needs of the Hawaiian Islands were met by circulating private-issued tokens and the coins of the United States of America.",
+            "Cadet branch\nIn history and heraldry, a cadet branch consists of the male-line descendants of a monarch or patriarch's younger sons (cadets). In the ruling dynasties and noble families of much of Europe and Asia, the family's major assets\u2014realm, titles, fiefs, property and income\u2014have historically been passed from a father to his firstborn son in what is known as primogeniture; younger sons\u2014cadets\u2014inherited less wealth and authority to pass to future generations of descendants.",
+            "Laysan\nLaysan ( ; Hawaiian: Kau\u014d ] ), located 808 nmi northwest of Honolulu at N25\u00b0 42' 14\" W171\u00b0 44' 04\", is one of the Northwestern Hawaiian Islands. It comprises one land mass of 1016 acre , about 1 by in size. It is an atoll of sorts, although the land completely surrounds a shallow central lake some 8 ft above sea level that has a salinity approximately three times greater than the ocean. Laysan's Hawaiian name of Kau\u014d means \"egg\", referring to its shape and how much life springs from the island."
+        ],
+        "thoughts": [
+            "The Merrie Monarch is King David Kal\u0101kaua, the last king of the Kingdom of Hawai\u02bbi, who is honored for his patronage of the arts and restoration of Hawaiian cultural traditions, including the hula. The Merrie Monarch Festival is named after him and is considered the most prestigious hula contest, attracting h\u0101lau hula from around the world.",
+            "The military staff of The Merrie Monarch included individuals such as Charles Hastings Judd and George W. Macfarlane, who held the positions of Chamberlain and Colonel. They were responsible for the administrative, operational, and logistical needs of the King Kal\u0101kaua, and traveled with him on his 1881 world tour. The festival itself, The Merrie Monarch Festival, is a week-long cultural event that honors King David Kal\u0101kaua and is considered the most prestigious of all hula contests. The festival features performances from h\u0101lau hula and is attended by participants from the U.S. mainland and international performers. Additionally, the muumuu dress is the preferred formal attire for events such as the Merrie Monarch hula competition.",
+            "Chamberlain is Charles Hastings Judd and Colonel is George W. Macfarlane. They were part of the military staff of The Merrie Monarch and were responsible for the administrative, operational, and logistical needs of King Kal\u0101kaua."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who was Chamberlain and Colonel of the military staff of The Merrie Monarch?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify who or what 'The Merrie Monarch' refers to.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find historical figures associated with 'The Merrie Monarch,' focusing on roles related to Chamberlain and Colonel of the military staff.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify these figures' titles and roles to confirm who held both Chamberlain and Colonel of the military staff.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "This question requires understanding historical references and verifying specific roles. First, it is necessary to identify who 'The Merrie Monarch' refers to, as this term commonly refers to King Charles II of England but could potentially refer to other figures or contexts in history or culture. Once identified, we look for historical figures connected to 'The Merrie Monarch,' particularly those with titles of Chamberlain and Colonel of the military staff. Finally, we ensure the roles and titles match the question requirements to find the correct person."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Charles Hastings Judd\nColonel Charles Hastings Judd (September 8, 1835 \u2013 April 18, 1890) was an American businessman, rancher, courtier and politician of the Kingdom of Hawaii. He served as Chamberlain and Colonel of the military staff of King Kal\u0101kaua and traveled with the monarch on his 1881 world tour.",
+            "George W. Macfarlane\nGeorge Walter Hunter Macfarlane (March 1, 1849 \u2013 February 20, 1921) was a British businessman, courtier and politician of the Kingdom of Hawaii. He served Colonel of the military staff of King Kal\u0101kaua, traveling with the monarch on his 1881 world tour. He also served as his final chamberlain of king and was at his deathbed in 1891.",
+            "Merrie Monarch Festival\nThe Merrie Monarch Festival is a week-long cultural festival that takes place annually in Hilo, Hawaii during the week after Easter. It honors King David Kal\u0101kaua, who was called the \"Merrie Monarch\" for his patronage of the arts and is credited with restoring many Hawaiian cultural traditions during his reign, including the hula. Many \"h\u0101lau hula\" (schools), including some from the U.S. mainland and some international performers, attend the festival each year to participate in exhibitions and competitions. The festival has received worldwide attention and is considered the most prestigious of all hula contests.",
+            "Muumuu\nThe muumuu or mu\u02bb umu\u02bb u (] ) is a loose dress of Hawaiian origin that hangs from the shoulder. Like the aloha shirt, muumuu exports are often brilliantly colored with floral patterns of generic Polynesian motifs. Muumuus for local Hawaiian residents are more subdued in tone. Muumuus are no longer as widely worn at work as the aloha shirt, but continue to be the preferred formal dress for weddings and festivals such as the Merrie Monarch hula competition. Muumuus are also popular as maternity wear because they do not restrict the waist.",
+            "White savior\nThe term white savior, sometimes combined with savior complex to write white savior complex, refers to a white person who acts to help people of color, with the help in some contexts perceived to be self-serving. The role is considered a modern-day version of what is expressed in the poem \"The White Man's Burden\" (1899) by Rudyard Kipling. The term has been associated with Africa, and certain characters in film and television have been critiqued as white savior figures. Writer Teju Cole combined the term and \"industrial complex\" (derived from military-industrial complex and similarly applied elsewhere) to coin \"White Savior Industrial Complex\".",
+            "Kal\u0101kaua\nKal\u0101kaua (November 16, 1836 \u2013 January 20, 1891), born David La\u02bb amea Kamananakapu Mahinulani Naloiaehuokalani Lumialani Kal\u0101kaua and sometimes called The Merrie Monarch, was the last king (and second to last monarch) of the Kingdom of Hawai\u02bb i. He reigned from February 12, 1874 until his death in San Francisco, California, on January 20, 1891. Kal\u0101kaua had a convivial personality and enjoyed entertaining guests with his singing and ukulele playing. At his coronation and his birthday jubilee, the hula that had been banned from public in the kingdom became a celebration of Hawaiian culture.",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "Corps of Military Staff Clerks\nThe Corps of Military Staff Clerks was an administrative corps of the Canadian Army. The Headquarters Corps of Military Staff Clerks was established in 1905.",
+            "Ottoman Military College\nThe Ottoman Military College or Imperial Military Staff College or Ottoman Army War College (Ottoman Turkish: \"Mekteb-i Erk\u00e2n-\u0131 Harbiyye-i \u015e\u00e2h\u00e2ne\"\u200e or \"Erk\u00e2n-\u0131 Harbiye Mektebi\"), was a two-year military staff college of the Ottoman Empire. It was located in Istanbul. Its mission was to educate staff officers for the Ottoman Army.",
+            "Aloha Dalire\nFabianne Pomaialoha Wong Dalire, known professionally as Aloha Dalire, (June 22, 1950 \u2013 August 6, 2014) was an American Hawaiian kumu hula, or master hula teacher. She won the first Miss Aloha Hula as Aloha Wong, in 1971, the same year that the Merrie Monarch Festival was established. The Miss Aloha Hula title is hula's top solo wahine (women's) honor.",
+            "Cadet branch\nIn history and heraldry, a cadet branch consists of the male-line descendants of a monarch or patriarch's younger sons (cadets). In the ruling dynasties and noble families of much of Europe and Asia, the family's major assets\u2014realm, titles, fiefs, property and income\u2014have historically been passed from a father to his firstborn son in what is known as primogeniture; younger sons\u2014cadets\u2014inherited less wealth and authority to pass to future generations of descendants.",
+            "Zulu royal family\nThe Zulu royal family consists of the reigning monarch of the Zulus of South Africa, King Goodwill Zwelithini kaBhekuzulu, his consorts, legitimate descendants, near relatives and male-line descendants of his great-grandfather, King Mpande who, as a half-brother of the Zulu \"Pater Patriae\", King Shaka, reigned from 1840 to 1872. Shaka's policies and conquests transformed a small clan into one of South Africa's most influential pre-colonial realms, extending over much of what is now KwaZulu-Natal.",
+            "Monarch Beverage Company\nThe Monarch Beverage Company Inc is a diversified, international beverage company based in Atlanta, Georgia. The company's CEO is Jacques Bombal. The company was founded in 1965 by Frank Armstrong. Monarch Beverage Company aimed to establish itself by offering lesser-known soft drink brands that had strong regional sales and appeal. Monarch Beverage Company purchased Dad's from IC Industries of Chicago in 1986. Around that time, it was the second largest volume (12 million cases) root beer brand and was distributed by the Coca-Cola bottler network. In 2007, The Dad's Root Beer Company, LLC of Jasper, Indiana, acquired the Dad's Root Beer brand as well as the rights to Bubble Up, Dr. Wells and Sun Crest in the U.S. and some other countries from The Monarch Beverage Co. of Atlanta."
+        ],
+        "thoughts": [
+            "The Merrie Monarch refers to King David Kal\u0101kaua, the last king of the Kingdom of Hawai\u02bbi, who was known for his patronage of the arts and restoration of Hawaiian cultural traditions, including the hula. The Merrie Monarch Festival, held annually in Hilo, Hawaii, honors his legacy and is considered the most prestigious hula contest. The festival is a celebration of Hawaiian culture and tradition, with h\u0101lau hula from around the world participating in exhibitions and competitions.",
+            "The historical figures associated with 'The Merrie Monarch' who held roles related to Chamberlain and Colonel of the military staff include Charles Hastings Judd and George W. Macfarlane. Both individuals served as Chamberlain and Colonel of the military staff of King Kal\u0101kaua during his reign in the Kingdom of Hawaii. They traveled with the monarch on his 1881 world tour and played significant roles in the administration and logistical needs of the military staff. Their contributions to the monarchy and their involvement in the cultural and political affairs of the Kingdom of Hawaii are notable aspects of their historical significance.",
+            "Charles Hastings Judd and George W. Macfarlane held both the titles of Chamberlain and Colonel of the military staff during the reign of King Kal\u0101kaua in the Kingdom of Hawaii."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who was Chamberlain and Colonel of the military staff of The Merrie Monarch?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify who 'Chamberlain and Colonel' refers to in the context of a title or position.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the identity and historical context of 'The Merrie Monarch'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Match individuals identified as Chamberlain and Colonel to historical records about The Merrie Monarch to determine their identity.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The question asks for a specific title related to 'The Merrie Monarch'. We need to determine who held the combined role of Chamberlain and Colonel. First, identify what these roles entail and who they might refer to (Node 1). Next, gather information on who 'The Merrie Monarch' was, which is a historical reference needing contextual understanding (Node 2). Finally, synthesize this information by finding a match between the individuals from the first step and the historical data gathered about The Merrie Monarch, to provide a definitive answer (Node 3)."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "See Yourself\n\"See Yourself\" is a song by English musician George Harrison, released on his 1976 album \"Thirty Three & 1/3\". Harrison began writing the song in 1967, while he was a member of the Beatles, in response to the public outcry surrounding bandmate Paul McCartney's admission that he had taken the hallucinogenic drug LSD. McCartney's announcement created a reaction in the press similar to that caused in 1966 by John Lennon's statement that the Beatles were more popular than Christianity. In its finished form, the song's lyrics advocate self-awareness and consideration for the consequences of one's actions. Musically, the composition contains unusual shifts in time signature from standard 4/4 to 9/8, while the songwords reflect the era of its genesis by recalling themes first espoused in the Beatles tracks \"Within You Without You\" and \"All You Need Is Love\".",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "Chamberlain and Colonel does not refer to a specific title or position in the given context.",
+            "The Merrie Monarch is not mentioned in the provided text. Therefore, its identity and historical context cannot be determined based on the given information.",
+            "Based on the lack of specific information about Chamberlain and Colonel in relation to The Merrie Monarch, their identities and historical context cannot be determined based on the given information. Further research and specific historical records about The Merrie Monarch would be needed to accurately match these individuals to their roles and identities."
+        ],
+        "is_best": false
+    }
+]

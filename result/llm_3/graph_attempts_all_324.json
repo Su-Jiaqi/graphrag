@@ -1,0 +1,569 @@
+[
+    {
+        "question": "Are both Weberocereus and Conospermum part of the same genus?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve taxonomic classification of Weberocereus",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve taxonomic classification of Conospermum",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the genus of Weberocereus from its taxonomic classification",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the genus of Conospermum from its taxonomic classification",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the genera of Weberocereus and Conospermum to check if they are the same",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "3",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph begins by retrieving the taxonomic classification for both Weberocereus and Conospermum, which are crucial to determine their genuses. Once the classifications are retrieved, reasoning nodes are used to extract the genus. The final reasoning step checks if both belong to the same genus, which directly answers the question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Weberocereus\nWeberocereus is genus of cacti. It produces a green and white flower and is found mainly in Costa Rica and Nicaragua.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006).",
+            "Conospermum\nConospermum is a genus of about 50 species in the family Proteaceae that are endemic to Australia. Members of the genus are known as smokebushes - from a distance, their wispy heads of blue or grey flowers resemble puffs of smoke. They have an unusual pollination method that sometimes leads to the death of visiting insects. They are found in all Australian states, though most occur only in Western Australia. Smokebushes are rarely cultivated, though the flowers of several Western Australian species are harvested for the cut flower industry.",
+            "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+            "Taxonomy of the Cactaceae\nIn 1984, the International Organization for Succulent Plant Study set up a working party, now called the International Cactaceae Systematics Group, to produce a consensus classification of the cactus family, down to the level of genus. Their classification has been used as the basis for systems published since the mid-1990s. Treatments in the 21st century have generally divided the family into around 125\u2013130 genera and 1,400\u20131,500 species, which are then arranged in a number of tribes and subfamilies. However, subsequent molecular phylogenetic studies have shown that a very high proportion of the higher taxa (genera, tribes and subfamilies) are not monophyletic, i.e. they do not contain all of the descendants of a common ancestor. , the internal classification of the family Cactaceae remained uncertain and subject to change. A classification incorporating many of the insights from the molecular studies was produced by Nyffeler and Eggli in 2010.",
+            "Dissolved organic carbon\nDissolved organic carbon (DOC), sometimes known as dissolved organic material (DOM), is a broad classification for organic molecules of varied origin and composition within aquatic systems. The \"dissolved\" fraction of organic carbon is an operational classification. Many researchers use the term \"dissolved\" for compounds below 0.45 micrometers, but 0.22 micrometers is also common, saving colloidal for higher concentrations. A practical definition of dissolved typically used in marine chemistry is all substances that pass through a GF/F filter. The recommended measure technique is the HTCO technique after filtration on precombusted glass fiber filters, typically GF/F filters.",
+            "Giraffe\nThe giraffe (\"Giraffa\") is a genus of African even-toed ungulate mammals, the tallest living terrestrial animals and the largest ruminants. The genus currently consists of one species, \"Giraffa camelopardalis\", the type species. Seven other species are extinct, prehistoric species known from fossils. Taxonomic classifications of one to eight extant giraffe species have been described, based upon research into the mitochondrial and nuclear DNA, as well as morphological measurements of \"Giraffa,\" but the IUCN currently recognizes only one species with nine subspecies.",
+            "Compact car\nA compact car (North America), or small family car in British acceptation, is a classification of cars that are larger than a subcompact car but smaller than a mid-size car, roughly equivalent to the C-segment in Europe."
+        ],
+        "thoughts": [
+            "Kingdom: Plantae\nOrder: Caryophyllales\nFamily: Cactaceae\nGenus: Weberocereus",
+            "The genus of Weberocereus is Weberocereus.",
+            "The taxonomic classification of Conospermum is as follows:\n- Kingdom: Plantae\n- Clade: Tracheophytes\n- Clade: Angiosperms\n- Clade: Eudicots\n- Order: Proteales\n- Family: Proteaceae\n- Genus: Conospermum",
+            "The genus of Conospermum is Conospermum.",
+            "The genera of Weberocereus and Conospermum are not the same. Weberocereus belongs to the genus Weberocereus, while Conospermum belongs to the genus Conospermum. Therefore, they are different genera."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are both Weberocereus and Conospermum part of the same genus?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information on the classification of Weberocereus including its genus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on the classification of Conospermum including its genus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the genus for Weberocereus from the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the genus for Conospermum from the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the genus of Weberocereus and Conospermum to see if they are the same.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "This execution graph is designed to address the question of whether Weberocereus and Conospermum are part of the same genus. The task involves first retrieving taxonomical information for both plant groups (steps 1 and 2), which can be done in parallel since they are independent retrievals. The next steps (3 and 4) involve reasoning with the retrieved data to ascertain the genus for each plant. Finally, step 5 compares these genera to answer the question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Weberocereus\nWeberocereus is genus of cacti. It produces a green and white flower and is found mainly in Costa Rica and Nicaragua.",
+            "Conospermum\nConospermum is a genus of about 50 species in the family Proteaceae that are endemic to Australia. Members of the genus are known as smokebushes - from a distance, their wispy heads of blue or grey flowers resemble puffs of smoke. They have an unusual pollination method that sometimes leads to the death of visiting insects. They are found in all Australian states, though most occur only in Western Australia. Smokebushes are rarely cultivated, though the flowers of several Western Australian species are harvested for the cut flower industry.",
+            "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006).",
+            "Rhodostemonodaphne\nRhodostemonodaphne is a genus of flowering plants in the family Lauraceae. It is a neotropical genus consisting of approximately 41 species occurring in Central America and northern South America. This genus has many species that are valued for timber. The classification of the genus is unclear since the species in the genus fall into a well-supported but unresolved clade that also includes species with unisexual flowers currently placed in the genera \"Endlicheria\" and part of \"Ocotea\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Taxonomy of the Cactaceae\nIn 1984, the International Organization for Succulent Plant Study set up a working party, now called the International Cactaceae Systematics Group, to produce a consensus classification of the cactus family, down to the level of genus. Their classification has been used as the basis for systems published since the mid-1990s. Treatments in the 21st century have generally divided the family into around 125\u2013130 genera and 1,400\u20131,500 species, which are then arranged in a number of tribes and subfamilies. However, subsequent molecular phylogenetic studies have shown that a very high proportion of the higher taxa (genera, tribes and subfamilies) are not monophyletic, i.e. they do not contain all of the descendants of a common ancestor. , the internal classification of the family Cactaceae remained uncertain and subject to change. A classification incorporating many of the insights from the molecular studies was produced by Nyffeler and Eggli in 2010.",
+            "Asiatosuchus\nAsiatosuchus is an extinct genus of crocodyloid crocodilians that lived in Eurasia during the Paleogene. Many Paleogene crocodilians from Europe and Asia have been attributed to \"Asiatosuchus\" since the genus was named in 1940. These species have a generalized crocodilian morphology typified by flat, triangular skulls. The feature that traditionally united these species under the genus \"Asiatosuchus\" is a broad connection or symphysis between the two halves of the lower jaw. Recent studies of the evolutionary relationships of early crocodilians along with closer examinations of the morphology of fossil specimens suggest that only the first named species of \"Asiatosuchus\", \"A. grangeri\" from the Eocene of Mongolia, belongs in the genus. Most species are now regarded as \"nomina dubia\" or \"dubious names\", meaning that their type specimens lack the unique anatomical features necessary to justify their classification as distinct species. Other species such as \"\"A.\" germanicus\" and \"\"A.\" depressifrons\" are still considered valid species, but they do not form an evolutionary grouping with \"A. grangeri\" that would warrant them being placed together in the genus \"Asiatosuchus\".",
+            "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+            "Aceria clianthi\nAceria clianthi is a species of mite belonging to the family Eriophyidae. It is found only in New Zealand. It is notable for being host specific to threatened plants of the genus \"Clianthus\". It is classified by Buckley \"et al.\" as \"nationally critical\" under the New Zealand Threat Classification System. They stated \"\"Aceria clianthi\" (Eriophyidae), has been recorded only from kakabeak (\"Clianthus\" spp.) in cultivation and once on \"Lotus cornalatus\" [\"Lotus corniculatus\"] (Fabaceae), an introduced plant growing near kakabeak (Martin 2009). It is given the same threat classification as kakabeak (de Lange et al. 2009).\" Heenan had earlier stated that \"the two species [of \"Clianthus\"] are considered to be threatened, with \"C.\u00a0maximus\" having a rank of vulnerable, whereas \"C.\u00a0puniceus\" is critically endangered\", but the conservation status of \"C.\u00a0maximus\" was subsequently found to be more serious. These threat classifications for \"Clianthus\" apply to plants in the wild, but the species are widely cultivated. \"Aceria clianthi\" occurs on both plants in the wild and in cultivation."
+        ],
+        "thoughts": [
+            "Weberocereus is a genus of cacti, known for producing green and white flowers, and is mainly found in Costa Rica and Nicaragua.",
+            "The genus for Weberocereus is cacti.",
+            "Conospermum is a genus of about 50 species in the family Proteaceae that are endemic to Australia.",
+            "The genus for Conospermum is Proteaceae.",
+            "The genus of Weberocereus is cacti, while the genus of Conospermum is Proteaceae. Therefore, they are not the same genus."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Are both Weberocereus and Conospermum part of the same genus?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the genus classification of Weberocereus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the genus classification of Conospermum.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Check if the genus classification of Weberocereus matches that of Conospermum to determine if they are part of the same genus.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The graph starts with two retrieval steps to gather genus information for both Weberocereus and Conospermum. These steps are independent and thus executed in parallel. Following the retrieval, a reasoning step checks if the genus classifications match, answering whether both are part of the same genus."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "International business\nInternational business comprises all international trades services or investments (bonds, stocks) conducted by both the private and public sectors that take place between two or more countries beyond their political boundaries. The term \"international business\" refers to all those business activities which involve cross-border transactions of goods, services, and resources between two or more nations. Transactions of economic resources include capital, skills, people for the purpose of the international production of physical goods and services such as finance, banking, insurance, and construction. International business can also be referred to as globalization. Globalization is the shift toward a more integrated and interdependent economy. In order to conduct business overseas, multinational companies need to separate national markets into one huge global marketplace. Two macro factors underline the trend of greater globalization. The first is falling of barriers to make cross-border trade easier such as the free flow of goods and services, and capital, and the second factor is technological change, particularly the developments in communication, information processing, and transportation technologies.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Against All Will\nAgainst All Will is a rock quartet from Los Angeles, California, whose debut album lineup was formed in Spring 2009 by Jimmy Allen (formerly of Puddle of Mudd), Jeff Current (formerly of Seven Story Drop), Steve \"Boomstick\" Wilson (formerly of Dead Kennedys and t.A.T.u.), and Cello Dias (formerly of Soulfly). Songs \"All About You\" and \"The Drug I Need\" from their debut album entitled A Rhyme & Reason ranked in the national rock radio top 50 in 2010.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "R. Kelly (album)\nR. Kelly is the second studio album by R&B singer R. Kelly. It was released on November 14, 1995. The album was somewhat of a departure from his previous album's sexual innuendos, featuring slightly more introspective lyrics. \"R. Kelly\" was the artist's second number 1 R&B album and the first one to top the \"Billboard\" 200; it spawned three number 1 R&B singles in chronological order: \"You Remind Me of Something\", \"Down Low (Nobody Has to Know)\" and \"I Can't Sleep Baby (If I)\".",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Construct (album)\nConstruct is the tenth full-length studio album by Swedish melodic death metal band Dark Tranquillity. It was released on 27 May 2013 through Century Media Records. A music video for \"Uniformity\", directed by Patric Ullaeus, was released on 10 May 2013. The album was written during what the band described as their \"darkest period\" and drew critical praise for its melodrama and darkness. Construct would be the band's last studio album with founding member guitarist Martin Henriksson as he left the band in early 2016 due to loss of passion for playing music.",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "Pottery fracture\nPottery fracture results from stress within a ceramic body due to thermal expansion and contraction, shrinkage, and other forces. Poor drying or uneven compression and alignment of particles can result in low strength. Cracking may appear in greenware as well as each stage of the firing including bisque ware and glazed ware.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "BBC Sky at Night\nBBC Sky at Night magazine is a British monthly magazine about astronomy aimed at amateur astronomers and published by Immediate Media Company. The title of the periodical derives for the likenamed Television program produced by the BBC, \"The Sky at Night\". The magazine, in comparison with the TV series, includes more technical and scientific information. It also includes a bonus CD-ROM with software programs, latest astronomical photographs, written materials and in some issues, a 'classic' episode of \"The Sky at Night\" from the BBC archives.",
+            "Please Take Care of My Refrigerator\nPlease Take Care of My Refrigerator () is a 2014 South Korean cooking-variety program starring by many chefs and celebrity guests. It airs on JTBC on Mondays at 21:30 (KST) beginning November 17, 2014.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Never Let Me Go (Johnny Ace song)\n\"Never Let Me Go\" is a blues ballad song by American R&B/blues singer Johnny Ace, written by Joseph Scott and released in 1954 under Duke Records. The song is featured on the albums \"My Songs\" and \"Memorial\". \"Never Let Me Go\" was one of his eighth consecutive top ten R&B hits in a row, including \"My Song\", \"Cross My Heart,\" \"Please Forgive Me,\" \"The Clock,\" \"Pledging My Love,\" \"Saving My Love for You,\" and \"Anymore\". The song was R&B hit and peaked to No. 9 in October 1954 on \"Billboards\" Rhythm & Blues Records chart."
+        ],
+        "thoughts": [
+            "Weberocereus is a genus of cacti in the family Cactaceae. It is native to Mexico and Central America. The genus classification of Weberocereus places it within the plant kingdom, specifically in the division Magnoliophyta, class Magnoliopsida, order Caryophyllales, family Cactaceae, and subfamily Cactoideae.",
+            "The requested information about the genus classification of Conospermum is not present in the provided text.",
+            "Based on the information provided, we are unable to determine if the genus classification of Weberocereus matches that of Conospermum. This is because the genus classification of Conospermum was not provided. Without this information, we cannot determine if they are part of the same genus."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are both Weberocereus and Conospermum part of the same genus?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the genus of Weberocereus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the genus of Conospermum.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the genera of Weberocereus and Conospermum identified in nodes 1 and 2 to determine if they are part of the same genus.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts with two parallel retrieval nodes (1 and 2) to identify the genus of each plant: Weberocereus and Conospermum. Then, the final reasoning node (3) compares the results from these two nodes to determine if they are part of the same genus."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Weberocereus\nWeberocereus is genus of cacti. It produces a green and white flower and is found mainly in Costa Rica and Nicaragua.",
+            "Conospermum\nConospermum is a genus of about 50 species in the family Proteaceae that are endemic to Australia. Members of the genus are known as smokebushes - from a distance, their wispy heads of blue or grey flowers resemble puffs of smoke. They have an unusual pollination method that sometimes leads to the death of visiting insects. They are found in all Australian states, though most occur only in Western Australia. Smokebushes are rarely cultivated, though the flowers of several Western Australian species are harvested for the cut flower industry.",
+            "Nemegtomaia\nNemegtomaia is a genus of oviraptorid dinosaur from what is now Mongolia that lived in the Late Cretaceous Period, about 70million years ago. The first specimen was found in 1996, and became the basis of the new genus and species N. barsboldi in 2004. The original genus name was \"Nemegtia\", but this was changed to \"Nemegtomaia\" in 2005, as the former name was preoccupied. The first part of the generic name refers to the Nemegt Basin, where the animal was found, and the second part means \"good mother\", in reference to the fact that oviraptorids are known to have brooded their eggs. The specific name honours the palaeontologist Rinchen Barsbold. Two more specimens were found in 2007, one of which was found on top of a nest with eggs, but the dinosaur had received its genus name before it was found associated with eggs.",
+            "Quesnelia\nQuesnelia is a genus of the botanical family Bromeliaceae, subfamily Bromelioideae. The genus is named For M. Quesnel, French consul to French Guiana. Endemic to eastern Brazil, this genus contains 22 known species. This genus has two recognized subgenera: the type subgenus and \"Billbergiopsis\" .",
+            "Rhodostemonodaphne\nRhodostemonodaphne is a genus of flowering plants in the family Lauraceae. It is a neotropical genus consisting of approximately 41 species occurring in Central America and northern South America. This genus has many species that are valued for timber. The classification of the genus is unclear since the species in the genus fall into a well-supported but unresolved clade that also includes species with unisexual flowers currently placed in the genera \"Endlicheria\" and part of \"Ocotea\".",
+            "Cryptanthus\nCryptanthus is a genus in the botanical family Bromeliaceae, subfamily Bromelioideae. The genus name is from the Greek \u201ccryptos\u201d (hidden) and \u201canthos\u201d (flower). This genus has two recognized subgenera: the type subgenus and \"Hoplocryptanthus\" . All species of this genus are endemic to Brazil. The common name for any \"Cryptanthus\" is \"Earth Star\".",
+            "Coleataenia\nColeataenia is a grass genus in the Paniceae tribe of the Poaceae. Until recently this genus was part of \"Panicum\". In 2010, Zuloaga, Scataglini, & Morrone proposed the transfer of the \"Panicum\" sections \"Agrostoidea\" and \"Tenera\" to the new genus, \"Sorengia\". However, that same year, because one of the new species' synonyms was in the valid \"Coleataenia\" genus, Robert J. Soreng determined that \"Sorengia\" was not a valid name for the new genus and re-published it as \"Coleataenia\".",
+            "Palerontobia\nPalerontobia is a monotypic genus of tiger moths in the \"Erebidae\" family. The genus includes only one species, Palerontobia kozlovi, which is found in north-eastern Tibet (China, Qinghai). The scientific name consists of two parts, \"Pale,\" is a part of the genus name \"Palearctia\", and \"rontobia,\" is a part of the genus name \"Orontobia\". The species is named after Pyotr Kozlov, a disciple of Nikolay Przhevalsky, who first collected the Holotype in 1900.",
+            "Pimelea\nPimelea (often seen spelled \"Pimelia\", which is the name of a genus of beetles) is a genus of plants belonging to the family Thymelaeaceae. There are about 80 species in the genus, which is native to Australia and New Zealand. Many of the species are poisonous to cattle and horses."
+        ],
+        "thoughts": [
+            "The genus of Weberocereus is \"Weberocereus\".",
+            "The genus of Conospermum is Proteaceae.",
+            "The genera of Weberocereus and Conospermum identified in nodes 1 and 2 are not part of the same genus. Weberocereus belongs to the genus \"Weberocereus\" while Conospermum belongs to the genus Proteaceae. Therefore, they are not part of the same genus."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are both Weberocereus and Conospermum part of the same genus?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the scientific classification of Weberocereus, including its genus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the scientific classification of Conospermum, including its genus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if the genera of Weberocereus and Conospermum are the same by comparing their retrieved classification information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph consists of two retrieval nodes to obtain the genus information for Weberocereus and Conospermum, and a reasoning node that compares the two genera to determine if they are the same. This approach efficiently answers the question by directly comparing the classification of each plant."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "International business\nInternational business comprises all international trades services or investments (bonds, stocks) conducted by both the private and public sectors that take place between two or more countries beyond their political boundaries. The term \"international business\" refers to all those business activities which involve cross-border transactions of goods, services, and resources between two or more nations. Transactions of economic resources include capital, skills, people for the purpose of the international production of physical goods and services such as finance, banking, insurance, and construction. International business can also be referred to as globalization. Globalization is the shift toward a more integrated and interdependent economy. In order to conduct business overseas, multinational companies need to separate national markets into one huge global marketplace. Two macro factors underline the trend of greater globalization. The first is falling of barriers to make cross-border trade easier such as the free flow of goods and services, and capital, and the second factor is technological change, particularly the developments in communication, information processing, and transportation technologies.",
+            "Weberocereus\nWeberocereus is genus of cacti. It produces a green and white flower and is found mainly in Costa Rica and Nicaragua.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Against All Will\nAgainst All Will is a rock quartet from Los Angeles, California, whose debut album lineup was formed in Spring 2009 by Jimmy Allen (formerly of Puddle of Mudd), Jeff Current (formerly of Seven Story Drop), Steve \"Boomstick\" Wilson (formerly of Dead Kennedys and t.A.T.u.), and Cello Dias (formerly of Soulfly). Songs \"All About You\" and \"The Drug I Need\" from their debut album entitled A Rhyme & Reason ranked in the national rock radio top 50 in 2010.",
+            "R. Kelly (album)\nR. Kelly is the second studio album by R&B singer R. Kelly. It was released on November 14, 1995. The album was somewhat of a departure from his previous album's sexual innuendos, featuring slightly more introspective lyrics. \"R. Kelly\" was the artist's second number 1 R&B album and the first one to top the \"Billboard\" 200; it spawned three number 1 R&B singles in chronological order: \"You Remind Me of Something\", \"Down Low (Nobody Has to Know)\" and \"I Can't Sleep Baby (If I)\".",
+            "Construct (album)\nConstruct is the tenth full-length studio album by Swedish melodic death metal band Dark Tranquillity. It was released on 27 May 2013 through Century Media Records. A music video for \"Uniformity\", directed by Patric Ullaeus, was released on 10 May 2013. The album was written during what the band described as their \"darkest period\" and drew critical praise for its melodrama and darkness. Construct would be the band's last studio album with founding member guitarist Martin Henriksson as he left the band in early 2016 due to loss of passion for playing music.",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "BBC Sky at Night\nBBC Sky at Night magazine is a British monthly magazine about astronomy aimed at amateur astronomers and published by Immediate Media Company. The title of the periodical derives for the likenamed Television program produced by the BBC, \"The Sky at Night\". The magazine, in comparison with the TV series, includes more technical and scientific information. It also includes a bonus CD-ROM with software programs, latest astronomical photographs, written materials and in some issues, a 'classic' episode of \"The Sky at Night\" from the BBC archives.",
+            "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+            "Ardipithecus kadabba\nArdipithecus kadabba is the scientific classification given to fossil remains \"known only from teeth and bits and pieces of skeletal bones,\" originally estimated to be 5.8 to 5.2 million years old, and later revised to 5.77 to 5.54 million years. According to the first description, these fossils are close to the common ancestor of chimps and humans. Their development lines are estimated to have parted 6.5\u20135.5 million years ago. It has been described as a \"probable chronospecies\" (i.e. ancestor) of \"A. ramidus\". Although originally considered a subspecies of \"A. ramidus\", in 2004 anthropologists Yohannes Haile-Selassie, Gen Suwa, and Tim D. White published an article elevating \"A. kadabba\" to species level on the basis of newly discovered teeth from Ethiopia. These teeth show \"primitive morphology and wear pattern\" which demonstrate that \"A. kadabba\" is a distinct species from \"A. ramidus\".",
+            "Taxonomy of the Cactaceae\nIn 1984, the International Organization for Succulent Plant Study set up a working party, now called the International Cactaceae Systematics Group, to produce a consensus classification of the cactus family, down to the level of genus. Their classification has been used as the basis for systems published since the mid-1990s. Treatments in the 21st century have generally divided the family into around 125\u2013130 genera and 1,400\u20131,500 species, which are then arranged in a number of tribes and subfamilies. However, subsequent molecular phylogenetic studies have shown that a very high proportion of the higher taxa (genera, tribes and subfamilies) are not monophyletic, i.e. they do not contain all of the descendants of a common ancestor. , the internal classification of the family Cactaceae remained uncertain and subject to change. A classification incorporating many of the insights from the molecular studies was produced by Nyffeler and Eggli in 2010.",
+            "Dissolved organic carbon\nDissolved organic carbon (DOC), sometimes known as dissolved organic material (DOM), is a broad classification for organic molecules of varied origin and composition within aquatic systems. The \"dissolved\" fraction of organic carbon is an operational classification. Many researchers use the term \"dissolved\" for compounds below 0.45 micrometers, but 0.22 micrometers is also common, saving colloidal for higher concentrations. A practical definition of dissolved typically used in marine chemistry is all substances that pass through a GF/F filter. The recommended measure technique is the HTCO technique after filtration on precombusted glass fiber filters, typically GF/F filters.",
+            "Compact car\nA compact car (North America), or small family car in British acceptation, is a classification of cars that are larger than a subcompact car but smaller than a mid-size car, roughly equivalent to the C-segment in Europe.",
+            "Pimelea arenaria\nPimelea arenaria, also known as Pimelea villosa, is a species of shrub in the family Thymelaeaceae. It is endemic to New Zealand. Its conservation status puts it at risk and declining, as determined by the New Zealand Threat Classification System (NZTCS)."
+        ],
+        "thoughts": [
+            "Genus: Weberocereus\nScientific classification: Kingdom: Plantae, Order: Caryophyllales, Family: Cactaceae, Genus: Weberocereus",
+            "The scientific classification of Conospermum is as follows:\n- Kingdom: Plantae\n- Clade: Tracheophytes\n- Clade: Angiosperms\n- Clade: Eudicots\n- Order: Proteales\n- Family: Proteaceae\n- Genus: Conospermum",
+            "The genera of Weberocereus and Conospermum are not the same. Weberocereus belongs to the family Cactaceae, while Conospermum belongs to the family Proteaceae. Therefore, they are not the same genus."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are both Weberocereus and Conospermum part of the same genus?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the taxonomic classification of Weberocereus, focusing on its genus and family.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the taxonomic classification of Conospermum, focusing on its genus and family.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Analyze the taxonomic classifications of Weberocereus and Conospermum to determine if they share the same genus.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts with two retrieval steps: one for the taxonomic classification of Weberocereus and another for Conospermum. These steps ensure we gather the necessary information about each plant's genus and family. The reasoning step involves analyzing this information to check if both plants belong to the same genus. The final node provides the answer to the original question based on the analysis."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006).",
+            "Weberocereus\nWeberocereus is genus of cacti. It produces a green and white flower and is found mainly in Costa Rica and Nicaragua.",
+            "Conospermum\nConospermum is a genus of about 50 species in the family Proteaceae that are endemic to Australia. Members of the genus are known as smokebushes - from a distance, their wispy heads of blue or grey flowers resemble puffs of smoke. They have an unusual pollination method that sometimes leads to the death of visiting insects. They are found in all Australian states, though most occur only in Western Australia. Smokebushes are rarely cultivated, though the flowers of several Western Australian species are harvested for the cut flower industry.",
+            "Rhodostemonodaphne\nRhodostemonodaphne is a genus of flowering plants in the family Lauraceae. It is a neotropical genus consisting of approximately 41 species occurring in Central America and northern South America. This genus has many species that are valued for timber. The classification of the genus is unclear since the species in the genus fall into a well-supported but unresolved clade that also includes species with unisexual flowers currently placed in the genera \"Endlicheria\" and part of \"Ocotea\".",
+            "Taxonomy of the Cactaceae\nIn 1984, the International Organization for Succulent Plant Study set up a working party, now called the International Cactaceae Systematics Group, to produce a consensus classification of the cactus family, down to the level of genus. Their classification has been used as the basis for systems published since the mid-1990s. Treatments in the 21st century have generally divided the family into around 125\u2013130 genera and 1,400\u20131,500 species, which are then arranged in a number of tribes and subfamilies. However, subsequent molecular phylogenetic studies have shown that a very high proportion of the higher taxa (genera, tribes and subfamilies) are not monophyletic, i.e. they do not contain all of the descendants of a common ancestor. , the internal classification of the family Cactaceae remained uncertain and subject to change. A classification incorporating many of the insights from the molecular studies was produced by Nyffeler and Eggli in 2010.",
+            "Giraffe\nThe giraffe (\"Giraffa\") is a genus of African even-toed ungulate mammals, the tallest living terrestrial animals and the largest ruminants. The genus currently consists of one species, \"Giraffa camelopardalis\", the type species. Seven other species are extinct, prehistoric species known from fossils. Taxonomic classifications of one to eight extant giraffe species have been described, based upon research into the mitochondrial and nuclear DNA, as well as morphological measurements of \"Giraffa,\" but the IUCN currently recognizes only one species with nine subspecies.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Aceria clianthi\nAceria clianthi is a species of mite belonging to the family Eriophyidae. It is found only in New Zealand. It is notable for being host specific to threatened plants of the genus \"Clianthus\". It is classified by Buckley \"et al.\" as \"nationally critical\" under the New Zealand Threat Classification System. They stated \"\"Aceria clianthi\" (Eriophyidae), has been recorded only from kakabeak (\"Clianthus\" spp.) in cultivation and once on \"Lotus cornalatus\" [\"Lotus corniculatus\"] (Fabaceae), an introduced plant growing near kakabeak (Martin 2009). It is given the same threat classification as kakabeak (de Lange et al. 2009).\" Heenan had earlier stated that \"the two species [of \"Clianthus\"] are considered to be threatened, with \"C.\u00a0maximus\" having a rank of vulnerable, whereas \"C.\u00a0puniceus\" is critically endangered\", but the conservation status of \"C.\u00a0maximus\" was subsequently found to be more serious. These threat classifications for \"Clianthus\" apply to plants in the wild, but the species are widely cultivated. \"Aceria clianthi\" occurs on both plants in the wild and in cultivation.",
+            "Quesnelia\nQuesnelia is a genus of the botanical family Bromeliaceae, subfamily Bromelioideae. The genus is named For M. Quesnel, French consul to French Guiana. Endemic to eastern Brazil, this genus contains 22 known species. This genus has two recognized subgenera: the type subgenus and \"Billbergiopsis\" ."
+        ],
+        "thoughts": [
+            "The taxonomic classification of Weberocereus places it in the family Cactaceae and the genus Weberocereus.",
+            "Genus: Conospermum\nFamily: Proteaceae",
+            "Based on the taxonomic classifications, Weberocereus belongs to the family Cactaceae and the genus Weberocereus, while Conospermum belongs to the family Proteaceae and the genus Conospermum. Therefore, they do not share the same genus."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are both Weberocereus and Conospermum part of the same genus?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve taxonomic classification for Weberocereus, including its genus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve taxonomic classification for Conospermum, including its genus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the genus of Weberocereus and Conospermum to determine if they are part of the same genus.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The task is broken down into retrieving the taxonomic classification (specifically the genus) for both Weberocereus and Conospermum separately. Once this information is retrieved, it is then used to perform reasoning by comparing the genus of the two plants to determine if they belong to the same genus. This approach ensures that the taxonomic information is collected and processed correctly to answer the question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Weberocereus\nWeberocereus is genus of cacti. It produces a green and white flower and is found mainly in Costa Rica and Nicaragua.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006).",
+            "Conospermum\nConospermum is a genus of about 50 species in the family Proteaceae that are endemic to Australia. Members of the genus are known as smokebushes - from a distance, their wispy heads of blue or grey flowers resemble puffs of smoke. They have an unusual pollination method that sometimes leads to the death of visiting insects. They are found in all Australian states, though most occur only in Western Australia. Smokebushes are rarely cultivated, though the flowers of several Western Australian species are harvested for the cut flower industry.",
+            "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+            "Taxonomy of the Cactaceae\nIn 1984, the International Organization for Succulent Plant Study set up a working party, now called the International Cactaceae Systematics Group, to produce a consensus classification of the cactus family, down to the level of genus. Their classification has been used as the basis for systems published since the mid-1990s. Treatments in the 21st century have generally divided the family into around 125\u2013130 genera and 1,400\u20131,500 species, which are then arranged in a number of tribes and subfamilies. However, subsequent molecular phylogenetic studies have shown that a very high proportion of the higher taxa (genera, tribes and subfamilies) are not monophyletic, i.e. they do not contain all of the descendants of a common ancestor. , the internal classification of the family Cactaceae remained uncertain and subject to change. A classification incorporating many of the insights from the molecular studies was produced by Nyffeler and Eggli in 2010.",
+            "Dissolved organic carbon\nDissolved organic carbon (DOC), sometimes known as dissolved organic material (DOM), is a broad classification for organic molecules of varied origin and composition within aquatic systems. The \"dissolved\" fraction of organic carbon is an operational classification. Many researchers use the term \"dissolved\" for compounds below 0.45 micrometers, but 0.22 micrometers is also common, saving colloidal for higher concentrations. A practical definition of dissolved typically used in marine chemistry is all substances that pass through a GF/F filter. The recommended measure technique is the HTCO technique after filtration on precombusted glass fiber filters, typically GF/F filters.",
+            "Giraffe\nThe giraffe (\"Giraffa\") is a genus of African even-toed ungulate mammals, the tallest living terrestrial animals and the largest ruminants. The genus currently consists of one species, \"Giraffa camelopardalis\", the type species. Seven other species are extinct, prehistoric species known from fossils. Taxonomic classifications of one to eight extant giraffe species have been described, based upon research into the mitochondrial and nuclear DNA, as well as morphological measurements of \"Giraffa,\" but the IUCN currently recognizes only one species with nine subspecies.",
+            "Compact car\nA compact car (North America), or small family car in British acceptation, is a classification of cars that are larger than a subcompact car but smaller than a mid-size car, roughly equivalent to the C-segment in Europe."
+        ],
+        "thoughts": [
+            "The taxonomic classification for Weberocereus is as follows:\n- Kingdom: Plantae\n- Order: Caryophyllales\n- Family: Cactaceae\n- Genus: Weberocereus",
+            "Genus: Conospermum\nTaxonomic classification: Conospermum is a genus of about 50 species in the family Proteaceae that are endemic to Australia.",
+            "Based on the taxonomic classification, Weberocereus belongs to the family Cactaceae, while Conospermum belongs to the family Proteaceae. Therefore, they are not part of the same genus."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are both Weberocereus and Conospermum part of the same genus?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the genus of Weberocereus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the genus of Conospermum.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if the genus of Weberocereus and the genus of Conospermum are the same based on the information retrieved.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph for the question involves two initial retrieval steps: one for each plant genus. We retrieve information about the genus classification of both Weberocereus and Conospermum. The reasoning step then compares these classifications to determine if they belong to the same genus."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Weberocereus\nWeberocereus is genus of cacti. It produces a green and white flower and is found mainly in Costa Rica and Nicaragua.",
+            "Conospermum\nConospermum is a genus of about 50 species in the family Proteaceae that are endemic to Australia. Members of the genus are known as smokebushes - from a distance, their wispy heads of blue or grey flowers resemble puffs of smoke. They have an unusual pollination method that sometimes leads to the death of visiting insects. They are found in all Australian states, though most occur only in Western Australia. Smokebushes are rarely cultivated, though the flowers of several Western Australian species are harvested for the cut flower industry.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Quesnelia\nQuesnelia is a genus of the botanical family Bromeliaceae, subfamily Bromelioideae. The genus is named For M. Quesnel, French consul to French Guiana. Endemic to eastern Brazil, this genus contains 22 known species. This genus has two recognized subgenera: the type subgenus and \"Billbergiopsis\" .",
+            "Rhodostemonodaphne\nRhodostemonodaphne is a genus of flowering plants in the family Lauraceae. It is a neotropical genus consisting of approximately 41 species occurring in Central America and northern South America. This genus has many species that are valued for timber. The classification of the genus is unclear since the species in the genus fall into a well-supported but unresolved clade that also includes species with unisexual flowers currently placed in the genera \"Endlicheria\" and part of \"Ocotea\".",
+            "Cryptanthus\nCryptanthus is a genus in the botanical family Bromeliaceae, subfamily Bromelioideae. The genus name is from the Greek \u201ccryptos\u201d (hidden) and \u201canthos\u201d (flower). This genus has two recognized subgenera: the type subgenus and \"Hoplocryptanthus\" . All species of this genus are endemic to Brazil. The common name for any \"Cryptanthus\" is \"Earth Star\".",
+            "Coleataenia\nColeataenia is a grass genus in the Paniceae tribe of the Poaceae. Until recently this genus was part of \"Panicum\". In 2010, Zuloaga, Scataglini, & Morrone proposed the transfer of the \"Panicum\" sections \"Agrostoidea\" and \"Tenera\" to the new genus, \"Sorengia\". However, that same year, because one of the new species' synonyms was in the valid \"Coleataenia\" genus, Robert J. Soreng determined that \"Sorengia\" was not a valid name for the new genus and re-published it as \"Coleataenia\".",
+            "Palerontobia\nPalerontobia is a monotypic genus of tiger moths in the \"Erebidae\" family. The genus includes only one species, Palerontobia kozlovi, which is found in north-eastern Tibet (China, Qinghai). The scientific name consists of two parts, \"Pale,\" is a part of the genus name \"Palearctia\", and \"rontobia,\" is a part of the genus name \"Orontobia\". The species is named after Pyotr Kozlov, a disciple of Nikolay Przhevalsky, who first collected the Holotype in 1900.",
+            "Pimelea\nPimelea (often seen spelled \"Pimelia\", which is the name of a genus of beetles) is a genus of plants belonging to the family Thymelaeaceae. There are about 80 species in the genus, which is native to Australia and New Zealand. Many of the species are poisonous to cattle and horses."
+        ],
+        "thoughts": [
+            "Weberocereus is a genus of cacti that produces green and white flowers and is mainly found in Costa Rica and Nicaragua.",
+            "The genus Conospermum is a group of about 50 species of plants in the family Proteaceae, endemic to Australia. They are known as smokebushes due to their wispy heads of blue or grey flowers that resemble puffs of smoke. They have an unusual pollination method and are found in all Australian states, with most species occurring in Western Australia. Smokebushes are rarely cultivated, but the flowers of some Western Australian species are harvested for the cut flower industry.",
+            "The genus of Weberocereus and the genus of Conospermum are not the same based on the information retrieved. Weberocereus is a genus of cacti found in Central America, while Conospermum is a genus of plants endemic to Australia."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are both Weberocereus and Conospermum part of the same genus?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine the genus classification of Weberocereus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the genus classification of Conospermum.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the genus classification of Weberocereus and Conospermum to determine if they are part of the same genus.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts by retrieving the genus classification for each of the plant names provided, Weberocereus and Conospermum, as separate nodes since these are distinct tasks. Once both classifications are identified, a final node compares them to determine whether Weberocereus and Conospermum belong to the same genus. The reasoning in the final node synthesizes the results obtained from the retrieval steps."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Weberocereus\nWeberocereus is genus of cacti. It produces a green and white flower and is found mainly in Costa Rica and Nicaragua.",
+            "List of Utricularia species\nThere are around 233 species in the genus \"Utricularia\", belonging to the Bladderwort family (Lentibulariaceae). It is the largest genus of carnivorous plants and has a worldwide distribution, being absent only from Antarctica and the oceanic islands. This genus was considered to have 250 species until Peter Taylor reduced the number to 214 in his exhaustive study, \"The genus Utricularia - a taxonomic monograph\", published by HMSO (1989). Taylor's classification is generally accepted, though his division of the genus in two subgenera was soon seen as obsolete. Molecular genetic studies have mostly confirmed Taylor's sections with some modifications (Jobson et al., 2003), but reinstalled the division of the genus in three subgenera. This list follows the subgeneric classification \"sensu\" M\u00fcller & Borsch (2005), updated with new information in M\u00fcller et al. (2006).",
+            "Conospermum\nConospermum is a genus of about 50 species in the family Proteaceae that are endemic to Australia. Members of the genus are known as smokebushes - from a distance, their wispy heads of blue or grey flowers resemble puffs of smoke. They have an unusual pollination method that sometimes leads to the death of visiting insects. They are found in all Australian states, though most occur only in Western Australia. Smokebushes are rarely cultivated, though the flowers of several Western Australian species are harvested for the cut flower industry.",
+            "Taxonomy of the Cactaceae\nIn 1984, the International Organization for Succulent Plant Study set up a working party, now called the International Cactaceae Systematics Group, to produce a consensus classification of the cactus family, down to the level of genus. Their classification has been used as the basis for systems published since the mid-1990s. Treatments in the 21st century have generally divided the family into around 125\u2013130 genera and 1,400\u20131,500 species, which are then arranged in a number of tribes and subfamilies. However, subsequent molecular phylogenetic studies have shown that a very high proportion of the higher taxa (genera, tribes and subfamilies) are not monophyletic, i.e. they do not contain all of the descendants of a common ancestor. , the internal classification of the family Cactaceae remained uncertain and subject to change. A classification incorporating many of the insights from the molecular studies was produced by Nyffeler and Eggli in 2010.",
+            "Vegetation classification\nVegetation classification is the process of classifying and mapping the vegetation over an area of the earth's surface. Vegetation classification is often performed by state based agencies as part of land use, resource and environmental management. Many different methods of vegetation classification have been used. In general, there has been a shift from structural classification used by forestry for the mapping of timber resources, to floristic community mapping for biodiversity management. Whereas older forestry-based schemes considered factors such as height, species and density of the woody canopy, floristic community mapping shifts the emphasis onto ecological factors such as climate, soil type and floristic associations. Classification mapping is usually now done using Geographic Information Systems (GIS) software.",
+            "Asiatosuchus\nAsiatosuchus is an extinct genus of crocodyloid crocodilians that lived in Eurasia during the Paleogene. Many Paleogene crocodilians from Europe and Asia have been attributed to \"Asiatosuchus\" since the genus was named in 1940. These species have a generalized crocodilian morphology typified by flat, triangular skulls. The feature that traditionally united these species under the genus \"Asiatosuchus\" is a broad connection or symphysis between the two halves of the lower jaw. Recent studies of the evolutionary relationships of early crocodilians along with closer examinations of the morphology of fossil specimens suggest that only the first named species of \"Asiatosuchus\", \"A. grangeri\" from the Eocene of Mongolia, belongs in the genus. Most species are now regarded as \"nomina dubia\" or \"dubious names\", meaning that their type specimens lack the unique anatomical features necessary to justify their classification as distinct species. Other species such as \"\"A.\" germanicus\" and \"\"A.\" depressifrons\" are still considered valid species, but they do not form an evolutionary grouping with \"A. grangeri\" that would warrant them being placed together in the genus \"Asiatosuchus\".",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "Rhodostemonodaphne\nRhodostemonodaphne is a genus of flowering plants in the family Lauraceae. It is a neotropical genus consisting of approximately 41 species occurring in Central America and northern South America. This genus has many species that are valued for timber. The classification of the genus is unclear since the species in the genus fall into a well-supported but unresolved clade that also includes species with unisexual flowers currently placed in the genera \"Endlicheria\" and part of \"Ocotea\".",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti."
+        ],
+        "thoughts": [
+            "The genus classification of Weberocereus is Cactaceae, as it is a genus of cacti.",
+            "The genus classification of Conospermum is \"Proteaceae\".",
+            "Weberocereus and Conospermum are not part of the same genus, as they belong to different plant families. Weberocereus is classified under the family Cactaceae, while Conospermum is classified under the family Proteaceae. Therefore, they are not part of the same genus."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are both Weberocereus and Conospermum part of the same genus?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information on the genus of Weberocereus species.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on the genus of Conospermum species.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if the genus of Weberocereus is the same as the genus of Conospermum.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "To determine if Weberocereus and Conospermum are part of the same genus, we first need to retrieve information about the genus classification for each. Once we have the genus information for both Weberocereus and Conospermum species, we compare them to conclude whether they belong to the same genus."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Conospermum\nConospermum is a genus of about 50 species in the family Proteaceae that are endemic to Australia. Members of the genus are known as smokebushes - from a distance, their wispy heads of blue or grey flowers resemble puffs of smoke. They have an unusual pollination method that sometimes leads to the death of visiting insects. They are found in all Australian states, though most occur only in Western Australia. Smokebushes are rarely cultivated, though the flowers of several Western Australian species are harvested for the cut flower industry.",
+            "Texas hold 'em\nTexas hold 'em (also known as Texas holdem, hold 'em, and holdem) is a variation of the card game of poker. Two cards, known as the hole cards, are dealt face down to each player, and then five community cards are dealt face up in three stages. The stages consist of a series of three cards (\"the flop\"), later an additional single card (\"the turn\" or \"fourth street\"), and a final card (\"the river\" or \"fifth street\"). Each player seeks the best five card poker hand from any combination of the seven cards of the five community cards and their own two hole cards. (If a player's best five-card poker hand consists only of the five community cards and none of the player's hole cards, it is called \"playing the board\". If you play the board on the river, then you can do no better than tie the other player(s) in the game if no player can make a better hand than the board represents, using either or both hole cards.) Players have betting options to check, call, raise, or fold. Rounds of betting take place before the flop is dealt and after each subsequent deal.",
+            "Binomial nomenclature\nBinomial nomenclature (also called binominal nomenclature or binary nomenclature) is a formal system of naming species of living things by giving each a name composed of two parts, both of which use Latin grammatical forms, although they can be based on words from other languages. Such a name is called a binomial name (which may be shortened to just \"binomial\"), a binomen, binominal name or a scientific name; more informally it is also called a Latin name. The first part of the name identifies the genus to which the species belongs; the second part identifies the species within the genus. For example, humans belong to the genus \"Homo\" and within this genus to the species \"Homo sapiens\". The \"formal\" introduction of this system of naming species is credited to Carl Linnaeus, effectively beginning with his work \"Species Plantarum\" in 1753. But Gaspard Bauhin, in as early as 1623, had introduced in his book \"Pinax theatri botanici\" (English, \"Illustrated exposition of plants\") many names of genera that were later adopted by Linnaeus.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Geosocial networking\nGeosocial networking is a type of social networking in which geographic services and capabilities such as geocoding and geotagging are used to enable additional social dynamics. User-submitted location data or geolocation techniques can allow social networks to connect and coordinate users with local people or events that match their interests. Geolocation on web-based social network services can be IP-based or use hotspot trilateration. For mobile social networks, texted location information or mobile phone tracking can enable location-based services to enrich social networking.",
+            "Honeysuckle\nHoneysuckles (\"Lonicera\", ; syn. \"Caprifolium\" Mill.) are arching shrubs or twining bines in the family Caprifoliaceae, native to the Northern Hemisphere. Approximately 180 species of honeysuckle have been identified. About 100 of these species can be found in China and approximately 20 native species have been identified in Europe, 20 in India, and 20 in North America. Widely known species include \"Lonicera periclymenum\" (honeysuckle or woodbine), \"Lonicera japonica\" (Japanese honeysuckle, white honeysuckle, or Chinese honeysuckle) and \"Lonicera sempervirens\" (coral honeysuckle, trumpet honeysuckle, or woodbine honeysuckle). Hummingbirds are attracted to the flowers on some of these plants, especially \"L. sempervirens\" and \"L. ciliosa\" (orange honeysuckle). Honeysuckle derives its name from the edible sweet nectar obtainable from its tubular flowers. The name \"Lonicera\" stems from Adam Lonicer, a Renaissance botanist.",
+            "International business\nInternational business comprises all international trades services or investments (bonds, stocks) conducted by both the private and public sectors that take place between two or more countries beyond their political boundaries. The term \"international business\" refers to all those business activities which involve cross-border transactions of goods, services, and resources between two or more nations. Transactions of economic resources include capital, skills, people for the purpose of the international production of physical goods and services such as finance, banking, insurance, and construction. International business can also be referred to as globalization. Globalization is the shift toward a more integrated and interdependent economy. In order to conduct business overseas, multinational companies need to separate national markets into one huge global marketplace. Two macro factors underline the trend of greater globalization. The first is falling of barriers to make cross-border trade easier such as the free flow of goods and services, and capital, and the second factor is technological change, particularly the developments in communication, information processing, and transportation technologies.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Against All Will\nAgainst All Will is a rock quartet from Los Angeles, California, whose debut album lineup was formed in Spring 2009 by Jimmy Allen (formerly of Puddle of Mudd), Jeff Current (formerly of Seven Story Drop), Steve \"Boomstick\" Wilson (formerly of Dead Kennedys and t.A.T.u.), and Cello Dias (formerly of Soulfly). Songs \"All About You\" and \"The Drug I Need\" from their debut album entitled A Rhyme & Reason ranked in the national rock radio top 50 in 2010.",
+            "R. Kelly (album)\nR. Kelly is the second studio album by R&B singer R. Kelly. It was released on November 14, 1995. The album was somewhat of a departure from his previous album's sexual innuendos, featuring slightly more introspective lyrics. \"R. Kelly\" was the artist's second number 1 R&B album and the first one to top the \"Billboard\" 200; it spawned three number 1 R&B singles in chronological order: \"You Remind Me of Something\", \"Down Low (Nobody Has to Know)\" and \"I Can't Sleep Baby (If I)\".",
+            "Construct (album)\nConstruct is the tenth full-length studio album by Swedish melodic death metal band Dark Tranquillity. It was released on 27 May 2013 through Century Media Records. A music video for \"Uniformity\", directed by Patric Ullaeus, was released on 10 May 2013. The album was written during what the band described as their \"darkest period\" and drew critical praise for its melodrama and darkness. Construct would be the band's last studio album with founding member guitarist Martin Henriksson as he left the band in early 2016 due to loss of passion for playing music.",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "BBC Sky at Night\nBBC Sky at Night magazine is a British monthly magazine about astronomy aimed at amateur astronomers and published by Immediate Media Company. The title of the periodical derives for the likenamed Television program produced by the BBC, \"The Sky at Night\". The magazine, in comparison with the TV series, includes more technical and scientific information. It also includes a bonus CD-ROM with software programs, latest astronomical photographs, written materials and in some issues, a 'classic' episode of \"The Sky at Night\" from the BBC archives."
+        ],
+        "thoughts": [
+            "I'm sorry, but I couldn't find any information on the genus of Weberocereus species.",
+            "The genus of Conospermum species is part of the family Proteaceae and is endemic to Australia. There are about 50 species in this genus, known as smokebushes, which have unique pollination methods and are rarely cultivated. The flowers of several Western Australian species are harvested for the cut flower industry. The postpipe, on the other hand, is an archaeological term referring to the remains of an upright timber placed in a posthole, providing information about the species of wood used and the nature of the structure it once supported.",
+            "Based on the information gathered, the genus of Weberocereus is not the same as the genus of Conospermum. Weberocereus does not have any information available, while Conospermum is part of the family Proteaceae and is endemic to Australia. Therefore, the two genera are not the same."
+        ],
+        "is_best": false
+    }
+]

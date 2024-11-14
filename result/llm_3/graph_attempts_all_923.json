@@ -1,0 +1,888 @@
+[
+    {
+        "question": "Who has lived longer in the USA, Ulli Lommel or Benjamin Stoloff?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine the birth and death dates (if applicable) of Ulli Lommel and Benjamin Stoloff.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the dates of immigration or residency in the USA for Ulli Lommel.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the dates of immigration or residency in the USA for Benjamin Stoloff.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the duration of time Ulli Lommel lived in the USA based on available residency data.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Calculate the duration of time Benjamin Stoloff lived in the USA based on available residency data.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Compare the durations calculated for Ulli Lommel and Benjamin Stoloff to determine who lived longer in the USA.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4",
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "The execution graph breaks down the task into steps to determine who lived longer in the USA by retrieving necessary personal and residency information on both individuals, calculating the durations of their stay in the USA, and comparing the results."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Benjamin Stoloff\nBenjamin \"Ben\" Stoloff (October 6, 1895 \u2013 September 8, 1960) was an American film director and producer. He began his career as a short film comedy director and gradually moved into feature film directing and production later in his career. Stoloff was born in Philadelphia, Pennsylvania. He died in Hollywood, California.",
+            "Night of Terror\nNight of Terror is a 1933 American Pre-Code horror film directed by Benjamin Stoloff, and starring Bela Lugosi, Sally Blane, Wallace Ford, and Tully Marshall. Despite receiving top billing, Bela Lugosi has a relatively small part. The film is also known as He Lived to Kill and Terror in the Night.",
+            "Benjamin Cheever\nBenjamin Hale Cheever (born October 8, 1948) is an American writer and editor. He is the son of Mary Winternitz and writer John Cheever and brother of Susan Cheever. To date, he has written four adult fiction novels, one children's book, and two nonfiction books.",
+            "Elihu Benjamin Washburne House\nThe Elihu Benjamin Washburne House, also known as the Washburne-Sheehan House, is a 1\u00a0\u2044 -story Greek Revival house located at 908 Third Street in Galena, Illinois. Constructed in 1844\u201345, the building was built for and owned by Elihu Benjamin Washburne, a prominent Galena lawyer who served in Congress during the American Civil War, and as Secretary of State and Minister to France under President Ulysses S. Grant, another famous Galenian. The Washburne House was added to the U.S. National Register of Historic Places in 1973.",
+            "Richard Benjamin Harrison\nRichard Benjamin Harrison Jr., (also known by the nicknames The Old Man and The Appraiser) (born March 4, 1941), is a Las Vegas businessman and reality television personality, best known as the co-owner of the World Famous Gold & Silver Pawn Shop, as featured on the History channel series \"Pawn Stars\". Harrison was the co-owner of a pawn shop with his son Rick Harrison until he suffered a stroke, causing him to retire.They opened the store together in 1989.",
+            "Benjamin Briggs\nBenjamin Spooner Briggs (April 24, 1835 \u2013 probably November 1872) was an experienced United States seaman and master mariner. He is famous today for being the Captain of the merchant ship \"Mary Celeste\" when she was discovered unmanned and drifting in the Atlantic Ocean near the Straits of Gibraltar, on December 4, 1872. The lifeboat was missing, yet the \"Mary Celeste\" herself was still under sail and there were signs of a sudden and unexplained abandonment. Benjamin Briggs, his wife Sarah and two-year-old daughter Sophia Matilda, along with the crew of the \"Mary Celeste\", the lifeboat and sextant, were never found and presumed lost.",
+            "H. Jon Benjamin\nHarry Jon Benjamin (born May 23, 1966) is an American actor, voice actor and comedian. He is best known for voicing characters, such as Bob Belcher in the animated sitcom \"Bob's Burgers\"; Sterling Archer in the animated sitcom \"Archer\"; Ben, the son of Dr. Katz, in \"Dr. Katz, Professional Therapist\"; Coach McGuirk and Jason on \"Home Movies\"; and a can of mixed vegetables in the film \"Wet Hot American Summer\".",
+            "Benjamin Logan\nBenjamin Logan (c.1742 \u2013 December 11, 1802) was an American pioneer, soldier, and politician from Shelby County, Kentucky. As colonel of the Kentucky County, Virginia militia during the American Revolutionary War, he was second-in-command of all the militia in Kentucky. He was also a leader in Kentucky's efforts to become a state. His brother, John Logan, was the first state treasurer of Kentucky.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Miss You Already\nMiss You Already is a 2015 British romantic comedy-drama film directed by Catherine Hardwicke and written by Morwenna Banks. The film stars Toni Collette, Drew Barrymore, Dominic Cooper, Paddy Considine, Tyson Ritter, Frances de la Tour, and Jacqueline Bisset. It was screened in the Gala Presentations section of the 2015 Toronto International Film Festival.",
+            "Ulli Lommel\nUlli Lommel (born 21 December 1944) is a German actor and director, noted for his many collaborations with Rainer Werner Fassbinder and his association with the New German Cinema movement. Lommel is also well known for the time which he spent at The Factory and as a creative associate of Andy Warhol, with whom he made several films and works of art. Since 1977 he has lived and worked in the USA, where he has written, directed and starred in over 50 movies.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Russian avant-garde\nThe Russian avant-garde was a large, influential wave of avant-garde modern art that flourished in the Russian Empire and Soviet Union, approximately from 1890 to 1930\u2014although some have placed its beginning as early as 1850 and its end as late as 1960. The term covers many separate, but inextricably related, art movements that flourished at the time; namely Suprematism, Constructivism, Russian Futurism, Cubo-Futurism, Zaum and Neo-primitivism. Given that many avant-garde artists involved were born or grew up in what is present day Belarus and Ukraine (including Kazimir Malevich, Aleksandra Ekster, Vladimir Tatlin, Wassily Kandinsky, David Burliuk, Alexander Archipenko), some sources also talk about Ukrainian avant-garde.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Lifestyle trends and media\nLifestyle changes have been increasing slowly since the introduction of media. Media \u2013 films, television shows, magazines, and more recently, the Internet (i.e. self-written blogs and popular websites) are the main sources of lifestyle influence around the world. Lifestyle changes include how people eat, dress, and communicate. Celebrity endorsements are prevalent. Lifestyle trends have always been influenced by the wealthy and famous, whether they are spotted at leisure or in a paid advertisement. At the dawn of the media age, the newspaper, popular magazines like \"Life\", and TV allowed the general public glimpse lifestyles that before were only available to the imagination. After its creation, the Internet became arguably the most powerful medium for spotting and influencing trends, not just by celebrities but by the average person. The computer era has changed the way people obtain their news, perspectives and communication. Magazines are still popular, but advertisers now often supply a web address where consumers can visit for more information than a print ad can provide. The average American household has two personal computers, making the Internet easily accessible. The rise of user-generated content is exemplified by the fact that anyone with Internet access can create a blog or an online journal, whether personal or commercial, which might detail someone's experience in a new restaurant, a purchased item of clothing or knickknack, or a review to a film. With the advent of the Android phone and its relative ease of uploading photos to social media sites such as Facebook, one can get an idea of how quickly an idea, pub review, or coveted object can be shared. Advertisers have always been privy to the strength of word-of-mouth and have tapped into social media, including Facebook, Twitter, and Tumblr to make their wares known. Douglas Kellner writes, \"Radio, television, film, and the other products of media culture provide materials out of which we forge our very identities; our sense of selfhood; our notion of what it means to be male or female; our sense of class, of ethnicity and race, of nationality, of sexuality; and of \"us\" and \"them.\"\"",
+            "Red Queen (Through the Looking-Glass)\nThe Red Queen is a fictional character in Lewis Carroll's fantasy novel \"Through the Looking-Glass\". She is often confused with the Queen of Hearts from the previous book \"Alice's Adventures in Wonderland\", although the two are very different.",
+            "Plumrose USA\nPlumrose USA, Inc. produces sliced meats, deli hams, and bacon in the United States. The company offers its products to food distributors, retailers, warehouse stores, institutions, and restaurants. What started out as a sliced ham company in 1932, has expanded into a business that offers a multitude of product lines including premium bacons, packaged deli meats, quality deli counter hams, cooked ribs and canned hams.",
+            "Greg Hanna\nGreg Hanna (born in Finch, Ontario, Canada) is a male Canadian country music singer. Signing with his own independent label in 1995, Hanna charted several singles on the \"RPM\" Country Tracks chart in Canada, including the top ten hit \"Ain't No Justice\" from 1997, but his debut album was never issued. In 2005, Hanna appeared on the third season of \"Nashville Star\", but dropped out after receiving an offer to work with producer Chris Farren. In 2007, Hanna toured Canada as the opening act for Canadian country band Emerson Drive's \"Countrified Tour\". Hanna's debut self-titled album was issued in October 2009 in the United States and Canada on his own USA record label imprint, Pheromone Records LLC; with MegaForce Records and Sony. From his debut CD in the USA and Canada came the releases \"It's a Man's Job,\" \"What Kind of Love Are You On\" and \"Makin' Love Real.\" Their supporting music videos which earned Hanna exposure on television networks such as CMT, GAC and TCN. In 2010, Hanna signed with the Paradigm agency for representation and booked his first major USA tour as opening act on the \"American Ride Tour\" for Toby Keith and Trace Adkins.",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "The Apple Tree\nThe Apple Tree is a series of three musical playlets with music by Jerry Bock, lyrics by Sheldon Harnick, and a book by Bock and Harnick with contributions from Jerome Coopersmith. Each act has its own storyline, but all three are tied together by a common theme (someone who believes that they want something, but once they get what they wanted they realize that it wasn't what they wanted) and common references, such as references to the color brown. The first act is based on Mark Twain's \"The Diary of Adam and Eve\"; the second act is based on Frank R. Stockton's \"The Lady or the Tiger?\"; the third act is based on Jules Feiffer's \"Passionella\". The working title for the evening of three musicals was \"Come Back! Go Away! I Love You!\"",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\"."
+        ],
+        "thoughts": [
+            "Ulli Lommel was born on December 21, 1944, and passed away on December 2, 2017. Benjamin Stoloff was born on October 6, 1895, and passed away on September 8, 1960.",
+            "Ulli Lommel immigrated to the USA in 1977 and has lived and worked there since then.",
+            "Ulli Lommel lived in the USA for 40 years, from 1977 until his passing in 2017.",
+            "Based on the information provided, there is no specific mention of Benjamin Stoloff's immigration or residency dates in the USA. However, it is known that he was born in Philadelphia, Pennsylvania, and died in Hollywood, California, indicating that he was a resident of the USA throughout his life. Therefore, it can be inferred that Benjamin Stoloff was a native-born American citizen with no immigration dates.",
+            "Benjamin Stoloff lived in the USA for the entirety of his life, as he was born in Philadelphia, Pennsylvania, and passed away in Hollywood, California. Therefore, the duration of time he lived in the USA is from October 6, 1895, to September 8, 1960, which is a total of 64 years.",
+            "Benjamin Stoloff lived longer in the USA, with a duration of 64 years compared to Ulli Lommel's 40 years."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who has lived longer in the USA, Ulli Lommel or Benjamin Stoloff?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find information on Ulli Lommel's birthdate, date of moving to the USA, and if available, date of death or current status.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find information on Benjamin Stoloff's birthdate, date of moving to the USA, and date of death or current status.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Calculate the duration Ulli Lommel lived in the USA using the retrieved dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the duration Benjamin Stoloff lived in the USA using the retrieved dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the durations obtained for Ulli Lommel and Benjamin Stoloff to determine who lived longer in the USA.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the problem into several key steps: retrieving details about each individual's life related to the USA, calculating how long each lived in the USA, and then comparing these durations. Steps 1 and 2 involve gathering necessary life events and dates for both individuals. Steps 3 and 4 use this information to calculate how long each person lived in the USA. Finally, step 5 compares the two durations to answer the question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Benjamin Stoloff\nBenjamin \"Ben\" Stoloff (October 6, 1895 \u2013 September 8, 1960) was an American film director and producer. He began his career as a short film comedy director and gradually moved into feature film directing and production later in his career. Stoloff was born in Philadelphia, Pennsylvania. He died in Hollywood, California.",
+            "Benjamin Cheever\nBenjamin Hale Cheever (born October 8, 1948) is an American writer and editor. He is the son of Mary Winternitz and writer John Cheever and brother of Susan Cheever. To date, he has written four adult fiction novels, one children's book, and two nonfiction books.",
+            "The Night Before (1988 film)\nThe Night Before is a 1988 film starring Keanu Reeves and Lori Loughlin. Reeves plays Winston Connelly, the so-called high school nerd and vice president of the astronomy club. Loughlin plays Tara Mitchell, the pretty and popular head cheerleader who also happens to be the local police chief's daughter. The Tagline was: \"You lost your father's car, sold your prom date and a guy called 'Tito' wants you dead. It's a date that's the time of your life.\" It was filmed and set entirely in Los Angeles, California.",
+            "Sox Appeal\nSox Appeal was a reality television series that premiered August 1, 2007 on NESN and ended in 2008. It is a Boston Red Sox themed dating game show that follows a man or woman during three, two-inning long blind dates that take place over the course of a Red Sox game. During the seventh inning stretch, the fan chooses the date he/she wants to continue dating. The date, however, can choose not to continue the date.",
+            "What If? (Emerson Drive album)\nWhat If? is the fourth album by Canadian country music band Emerson Drive. It was released in 2004 as their final release for DreamWorks Records Nashville. \"Last One Standing\" and \"November\" were both released in the U.S. as singles, peaking at #21 and #41, respectively, on the \"Billboard\" country charts. \"If You Were My Girl\" and \"Still Got Yesterday\" were released in Canada only. Also included on this album is a cover of the Nitty Gritty Dirt Band's Number One hit \"Fishin' in the Dark\".",
+            "Night of Terror\nNight of Terror is a 1933 American Pre-Code horror film directed by Benjamin Stoloff, and starring Bela Lugosi, Sally Blane, Wallace Ford, and Tully Marshall. Despite receiving top billing, Bela Lugosi has a relatively small part. The film is also known as He Lived to Kill and Terror in the Night.",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "Utopia (Bj\u00f6rk album)\nUtopia is the upcoming ninth studio album by Icelandic musician Bj\u00f6rk, scheduled for release in November 2017 through One Little Indian Records. During a Facebook Live event held on 15 September 2017, the release date of the album's first single, Bj\u00f6rk gave insight into the album's theme of utopia in an uncertain political environment: \"We have Trump, we have Brexit, we have our issues in Iceland, we have our environmental issues. I think if there ever was an urgency or necessity to come up with another Utopian model, how we're going to live our lives, I think it's now, and (these are) my proposals.\"",
+            "Sarah Ban Breathnach\nSarah Ban Breathnach (pronounced \u201cBon Brannock\u201d), is a best-selling author, philanthropist and public speaker. She is the author of thirteen books, including \"Simple Abundance: A Daybook of Comfort and Joy\" which spent more than two years on The New York Times Best Seller list where it held the number one position for a year. To date, \"Simple Abundance\" has sold over 5 million copies and has been translated into 28 languages. Ban Breathnach's follow up book \"Simple Abundance\", \"Something More\", debuted at the number one spot on the best selling book lists of the \"New York Times\", \"USA Today\", \"The Wall Street Journal\" and \"Publisher's Weekly\". To date, \"Something More\" has sold over 1.2 million copies. Ban Breathnach was also the first author in the history of the \"Wall Street Journal's\" list of best-selling books, to appear in both the number one (\"Simple Abundance\") and number two (\"The Simple Abundance Journal of Gratitude\") slots.",
+            "History of nuclear weapons\nNuclear weapons possess enormous destructive power from nuclear fission or combined fission and fusion reactions. Starting with scientific breakthroughs made during the 1930s, the United States, the United Kingdom and Canada collaborated during World War II in what was called the Manhattan Project to counter the suspected Nazi German atomic bomb project. In August 1945, two fission bombs were dropped on Japan, standing to date as the only use of nuclear weapons in combat. The Soviet Union started development shortly thereafter with their own atomic bomb project, and not long after that both countries developed even more powerful fusion weapons known as \"hydrogen bombs\".",
+            "Aloha, Bobby and Rose\nAloha, Bobby and Rose is a 1975 American road drama film about a young working-class couple who accidentally cause the death of a store clerk during their first date, and go on the run from the law. The film was written and directed by Floyd Mutrux, and starred Paul Le Mat and Dianne Hull, in addition to Robert Carradine in an early role.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Win a Date with Tad Hamilton!\nWin a Date with Tad Hamilton! is a 2004 American romantic comedy film directed by Robert Luketic, written by Victor Levin, and starring Kate Bosworth, Topher Grace, Josh Duhamel, Gary Cole, Ginnifer Goodwin, Sean Hayes, and Nathan Lane. Heavily inspired by Ram Gopal Varma's 1995 Indian film \"Rangeela\", the film follows a small-town girl (Bosworth) who wins a contest for a date with a male celebrity (Duhamel), and a love triangle forms between the girl, the star, and the girl's best friend (Grace)."
+        ],
+        "thoughts": [
+            "Ulli Lommel was born on December 21, 1944 in Zielenzig, Brandenburg, Germany. He moved to the USA in the 1970s and passed away on December 2, 2017.",
+            "Ulli Lommel lived in the USA for approximately 47 years, from the 1970s until his passing in 2017.",
+            "Benjamin Stoloff was born on October 6, 1895 in Philadelphia, Pennsylvania. He moved to the USA at an unknown date and passed away on September 8, 1960 in Hollywood, California.",
+            "To calculate the duration Benjamin Stoloff lived in the USA, we can subtract his birth date from his date of passing. \n\nSeptember 8, 1960 - October 6, 1895 = 64 years, 11 months, and 2 days\n\nTherefore, Benjamin Stoloff lived in the USA for approximately 65 years.",
+            "Benjamin Stoloff lived longer in the USA, with a duration of approximately 65 years compared to Ulli Lommel's 47 years."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who has lived longer in the USA, Ulli Lommel or Benjamin Stoloff?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the birth and death years of Ulli Lommel.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the years Ulli Lommel lived in the USA.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Calculate the total years Ulli Lommel lived in the USA based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Find the birth and death years of Benjamin Stoloff.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Find the years Benjamin Stoloff lived in the USA.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Calculate the total years Benjamin Stoloff lived in the USA based on the retrieved information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "5"
+                        ]
+                    },
+                    {
+                        "id": "7",
+                        "instruction": "Compare the total years lived in the USA by Ulli Lommel and Benjamin Stoloff to determine who lived longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "6"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "7"
+            },
+            "explanation": "The question requires knowing the duration both individuals lived in the USA. The execution graph starts by retrieving and reasoning about the birth and death years of Ulli Lommel, followed by identifying and calculating the specific duration he lived in the USA. Similarly, it retrieves the same information for Benjamin Stoloff. With both durations calculated, a final reasoning step compares the two to determine who lived longer in the USA."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Ulli Lommel\nUlli Lommel (born 21 December 1944) is a German actor and director, noted for his many collaborations with Rainer Werner Fassbinder and his association with the New German Cinema movement. Lommel is also well known for the time which he spent at The Factory and as a creative associate of Andy Warhol, with whom he made several films and works of art. Since 1977 he has lived and worked in the USA, where he has written, directed and starred in over 50 movies.",
+            "Revenge of the Stolen Stars\nRevenge of the Stolen Stars is a 1985 American comedy fantasy film directed by Ulli Lommel and starring Klaus Kinski, Suzanna Love, Barry Hickey and Ulli Lommel.",
+            "Ludwig Manfred Lommel\nLudwig Manfred Lommel (1891\u20131962) was a German stage and film actor. He was the father of the actress Ruth Lommel and actor Ulli Lommel. His youngest son Manuel Lommel is a cinematographer.",
+            "Benjamin Stoloff\nBenjamin \"Ben\" Stoloff (October 6, 1895 \u2013 September 8, 1960) was an American film director and producer. He began his career as a short film comedy director and gradually moved into feature film directing and production later in his career. Stoloff was born in Philadelphia, Pennsylvania. He died in Hollywood, California.",
+            "Ruth Lommel\nRuth Lommel (1918\u20132012) was a German stage and film actress. She was the daughter of the actor Ludwig Manfred Lommel. Her brother Ulli Lommel also became an actor, while another brother Manuel Lommel is a cinematographer.",
+            "Night of Terror\nNight of Terror is a 1933 American Pre-Code horror film directed by Benjamin Stoloff, and starring Bela Lugosi, Sally Blane, Wallace Ford, and Tully Marshall. Despite receiving top billing, Bela Lugosi has a relatively small part. The film is also known as He Lived to Kill and Terror in the Night.",
+            "D.C. Sniper\nD.C. Sniper is a 2010 American direct-to-video drama-thriller film directed by Ulli Lommel and written by Lommel and Ken Foree. It stars Foree, Christopher Kriesa and Maria Ochoa.",
+            "Daniel \u2013 Der Zauberer\nDaniel \u2013 Der Zauberer (translated: Daniel \u2013 The Wizard) is a German comedy-drama film written and directed by Ulli Lommel, starring pop singer Daniel K\u00fcblb\u00f6ck as himself. The film is considered to be one of the worst of all time.",
+            "The Raven (2006 film)\nThe Raven is a 2006 American direct-to-video production horror film directed by Ulli Lommel and references the poem \"The Raven\" by Edgar Allan Poe. The DVD case cover art carries the title, \"Edgar Allan Poe's The Raven\".",
+            "Curse of the Zodiac\nCurse of the Zodiac is a 2007 American horror film from Lionsgate, written and directed by Ulli Lommel, inspired by the true story of the hunt for a notorious serial killer known as \"Zodiac\" who claimed responsibility for the still unsolved murders.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Star Maker\nStar Maker is a science fiction novel by British writer Olaf Stapledon, published in 1937. The book describes a history of life in the universe, dwarfing in scale Stapledon's previous book, \"Last and First Men\" (1930), a history of the human species over two billion years. \"Star Maker\" tackles philosophical themes such as the essence of life, of birth, decay and death, and the relationship between creation and creator. A pervading theme is that of progressive unity within and between different civilizations. Some of the elements and themes briefly discussed prefigure later fiction concerning genetic engineering and alien life forms. Arthur C. Clarke considered \"Star Maker\" to be one of the finest works of science fiction ever written.",
+            "Dog Jam\nDog Jam is an annual rock festival held at Ford Park in Beaumont, Texas since 2001. It is sponsored by local rock radio station KIOC Big Dog 106 and Bud Light. Previous bands to play there include Default, 3 Doors Down, Breaking Benjamin, Korn, Droid, Five Finger Death Punch, Hellyeah, Element Eighty, Shinedown, and Staind.",
+            "Ala Khallidi\n\"\u2019Al\u0101 Khallid\u012b\" (Arabic: \u0623\u0644\u0627 \u062e\u0644\u0651\u062f\u064a\u200e \u200e ) is the former national anthem of Tunisia. It was sung during the Presidency of Habib Bourguiba until his downfall in 1987. \"Humat al-Hima\" was temporarily used as a national anthem between the end of the monarchy on 25 July 1957 and the adoption of \"Ala Khallidi\" as the official national anthem. In 1958, the Ministry of Education organized a competition, in which 53 poets and 23 musicians took part. The results were examined first by a commission of the Board of Education, which selected the submissions of the hymn poet Jalaleddine Naccache (1910\u20131989) and the composer and director of the Conservatoire of Tunis Salah El Mahdi (1925-2014). The works were presented to the president without announcing the selection that already been made. He selected the same version as the commission had. In order to be completely sure, another larger popular assembly was held in Monastir, the birth city of the president, and all 23 melodies were played. But then, the song by Naccache and El Mahdi won and was formally adopted during Independence Day, 20 March that same year.",
+            "Akim Tamiroff\nAkim Mikhailovich Tamiroff (Armenian: \u0531\u056f\u056b\u0574 \u0539\u0561\u0574\u056b\u0580\u0578\u057e , Russian: \u0410\u043a\u0438\u043c \u041c\u0438\u0445\u0430\u0439\u043b\u043e\u0432\u0438\u0447 \u0422\u0430\u043c\u0438\u0440\u043e\u0432 ; birth name` Hovakim, Armenian: \u0540\u0578\u057e\u0561\u056f\u056b\u0574 ; 29 October 1899 \u2013 17 September 1972) was an ethnic Armenian actor. He won the first Golden Globe Award for Best Supporting Actor, was nominated twice for the Academy Award for Best Supporting Actor, and appeared in at least 80 American motion pictures in a career spanning thirty-seven years.",
+            "Squandro\nSquandro was sachem of the Sokokis tribe in 1675, an American Indian tribe that lived near the Saco River at Saco in Maine. Squandro gained respect among whites because his tribe lived in peace with white settlers for about 50 years. Legend dictates that Squandro returned a white girl who had been captured in a previous raid and reared by his tribe. Dignified and solemn, Squandro was believed to have powers of sorcery and magic. Due to white settlers killing his son and perhaps his wife, Squandro uttered the \"Saco Curse\" and carried out the first blow in King Philip's War.",
+            "Domitia Lepida the Elder\nDomitia (\"PIR\u00b2\" D 171), more commonly referred to as Domitia the Elder -- in fact no ancient source ever calls her Lepida - (ca. 8 BC-June 59) was the oldest child of Antonia Major and Lucius Domitius Ahenobarbus (consul 16 BC), and the oldest granddaughter to Triumvir Mark Antony by Octavia Minor, a great-niece of the Roman Emperor Augustus, second cousin and sister-in-law to the Emperor Caligula, first cousin to the Emperor Claudius, maternal aunt to the Empress Valeria Messalina, and paternal aunt to Emperor Nero. She had two younger siblings: Domitia Lepida and Cn. Domitius Ahenobarbus (cos. AD 32). The date of her birth is not recorded and can be only estimated as no later than 7 BC, but possibly as much as 10 years earlier, if one would allow a long delay between her birth and those of her two siblings.",
+            "Elihu Benjamin Washburne House\nThe Elihu Benjamin Washburne House, also known as the Washburne-Sheehan House, is a 1\u00a0\u2044 -story Greek Revival house located at 908 Third Street in Galena, Illinois. Constructed in 1844\u201345, the building was built for and owned by Elihu Benjamin Washburne, a prominent Galena lawyer who served in Congress during the American Civil War, and as Secretary of State and Minister to France under President Ulysses S. Grant, another famous Galenian. The Washburne House was added to the U.S. National Register of Historic Places in 1973.",
+            "Di'Anno (album)\nDi'Anno is the 1984 self-titled album of the band of the same name. The lead singer Paul Di'Anno had been the frontman of the British heavy metal band Iron Maiden for three years, before being dismissed for his erratic behaviour. The band bearing his name and playing very commercial heavy rock was his first and short-lived solo project.",
+            "Benjamin Cheever\nBenjamin Hale Cheever (born October 8, 1948) is an American writer and editor. He is the son of Mary Winternitz and writer John Cheever and brother of Susan Cheever. To date, he has written four adult fiction novels, one children's book, and two nonfiction books.",
+            "Festival Kanzunetta Indipendenza\nKonkors Kanzunetta Indipendenza (\"Independence Song Contest\") is Maltese festival held on a day near September 21 (Malta's independence day). All songs are interpreted in the Maltese language and is one of the most anticipated events on the Maltese musical calendar. The event first took place back in 1983 in a span of four years until 1987 before returning just 10 years later in 1997 going on to take place each and every year since then. Several local stars like to submit their entries into such a prestigious musical event due to the fact that the songs are written in Maltese. In recent years there were a number of winners who went on to be successful both locally and abroad. Below you could find the list of the past winners"
+        ],
+        "thoughts": [
+            "Ulli Lommel was born on December 21, 1944, and passed away on December 2, 2017.",
+            "Ulli Lommel lived and worked in the USA from 1977 until his passing in 2017. During this time, he wrote, directed, and starred in over 50 movies, including \"Revenge of the Stolen Stars,\" \"D.C. Sniper,\" \"The Raven,\" \"Daniel \u2013 Der Zauberer,\" and \"Curse of the Zodiac.\"",
+            "Ulli Lommel lived in the USA for a total of 40 years (2017 - 1977 = 40 years).",
+            "Benjamin Stoloff was born on October 6, 1895, and died on September 8, 1960.",
+            "Benjamin Stoloff lived in the USA from his birth in 1895 in Philadelphia, Pennsylvania, until his death in Hollywood, California in 1960.",
+            "Benjamin Stoloff lived in the USA for a total of 65 years (1960 - 1895 = 65).",
+            "Benjamin Stoloff lived longer in the USA, with a total of 65 years compared to Ulli Lommel's 40 years."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Who has lived longer in the USA, Ulli Lommel or Benjamin Stoloff?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve birth and death dates for Ulli Lommel.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve immigration or residency details for Ulli Lommel in the USA.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve birth and death dates for Benjamin Stoloff.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Retrieve immigration or residency details for Benjamin Stoloff in the USA.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Calculate the number of years Ulli Lommel lived in the USA based on retrieved dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Calculate the number of years Benjamin Stoloff lived in the USA based on retrieved dates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    },
+                    {
+                        "id": "7",
+                        "instruction": "Compare the number of years lived in the USA for Ulli Lommel and Benjamin Stoloff to determine who lived longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "5",
+                            "6"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "7"
+            },
+            "explanation": "The execution graph begins by collecting data on both individuals. For each person, it retrieves their birth and death dates and any evidence of their residency in the USA. This information is used to calculate the span of years each lived in the USA. The final step compares the results to determine who lived longer in the USA."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Benjamin Stoloff\nBenjamin \"Ben\" Stoloff (October 6, 1895 \u2013 September 8, 1960) was an American film director and producer. He began his career as a short film comedy director and gradually moved into feature film directing and production later in his career. Stoloff was born in Philadelphia, Pennsylvania. He died in Hollywood, California.",
+            "Mokujin\nMokujin (Japanese: \u6728\u4eba?, lit. \"Wood(en) person\") is a fictional character in Namco Bandai Games' \"Tekken\" video game series. Mokujin first appeared in the 1997 video game \"Tekken 3\". Mokujin does not have his own fighting style. Instead, he mimics fighting styles from other characters, which varies from match to match.",
+            "Swedish governmental line of succession\nThe Swedish constitution of 1974 allows the Prime Minister of Sweden to appoint one of the Ministers in the cabinet as Deputy Prime Minister (\"bitr\u00e4dande statsminister\", also unofficially known as \"vice statsminister\", \"Vice Prime Minister\"), in case the Prime Minister for some reason is prevented from performing his or her duties. However, if a Deputy Prime Minister has not been appointed, the Minister in the cabinet who has served the longest time (and if there are several with equal experience the one who is oldest) takes over as head of government. Note that the person acting as Prime Minister does not do so on a permanent basis: if a Prime Minister dies, resigns or loses a vote of confidence in the Riksdag, the Speaker of the Riksdag will then confer with the parties of the Riksdag and propose a new Prime Minister, who must be tolerated by a majority of the Riksdag. If the Prime Minister has resigned or lost a vote of confidence, he or she will remain the head of a government \"ad interim\" until the new Prime Minister assumes his or her office. The only case where the governmental line of succession becomes relevant is when the Prime Minister dies (upon which the person next in the line of succession serves as the head of a government \"ad interim\") or when the Prime Minister is on leave or for any other reason incapable of serving, but still remains in office. This might be compared to the Presidential line of succession in the United States, where the person next in line assumes the Presidency throughout the remainder of the term if the President dies, resigns or is impeached.",
+            "Running mate\nA running mate is a person running together with another person on a joint ticket during an election. The term is most often used in reference to the person in the subordinate position (such as the vice presidential candidate running with a presidential candidate) but can also properly be used when referring to both candidates, such as by saying Joko Widodo and Jusuf Kalla, and Uhuru Kenyatta and William Ruto, were running mates in relation to the most recent presidential elections held in Indonesia and Kenya respectively.",
+            "Development of Grand Theft Auto V\nAn approximately 1,000-person team developed \"Grand Theft Auto V\", an action-adventure video game, over several years. Rockstar Games released \"Grand Theft Auto V\" on 17 September 2013 for PlayStation 3 and Xbox 360, on 18 November 2014 for PlayStation 4 and Xbox One, and on 14 April 2015 for Microsoft Windows, as the fifteenth entry in the \"Grand Theft Auto\" series. Development began soon after \"Grand Theft Auto IV\"' s release and was led by Rockstar North's core 360-person team, who collaborated with several other international Rockstar Games studios. The team considered the game a spiritual successor to many of their previous projects like \"Red Dead Redemption\" and \"Max Payne 3\". After its unexpected announcement in 2011, the game was fervently promoted with press showings, cinematic trailers, viral marketing strategies and special editions. Its release date, though subject to several delays, was widely anticipated.",
+            "Timeline of the presidency of Gerald Ford\nThe presidency of Gerald Ford began on August 9, 1974, when Gerald Ford became President of the United States, and ended on January 20, 1977, a span of days. Ford, the 38th United States president, succeeded Richard Nixon, who had resigned from office. Prior to this he was the 40th Vice President of the United States, serving from 1973 until President Richard Nixon's resignation in 1974. He was the first person appointed to the vice presidency under the terms of the Twenty-fifth Amendment to the United States Constitution, following the resignation of Vice President Spiro Agnew on October 10, 1973. Ford has the distinction of being the first, and to date the only person to have served as both vice president and president without being elected to either office.",
+            "Spirituality Shopper\nSpirituality Shopper was a short lived British television series that ran on Channel 4 for 3 episodes in 2005. It was presented by Christian athlete, Jonathan Edwards. In each episode, a person looked at four different religious practices that could be implemented in their (non-religious) lives to see if it would bring them inner peace in the hustle and bustle of the 21st century. In each episode, four of the practices were looked at:",
+            "Straw purchase\nA straw purchase or nominee purchase is any purchase wherein an agent agrees to acquire a good or service for someone who is unable or unwilling to purchase the good or service themselves, and the agent transfers the goods or services to that person after purchasing them. In general, straw purchases are legal except in cases where the ultimate receiver of goods or services uses those goods or services in the commission of a crime with the prior knowledge of the straw purchaser, or if the ultimate possessor is not legally able to purchase the goods or services. In some jurisdictions, straw purchases are legal although the end user is not legally able to purchase the good or service himself or herself.",
+            "Night of Terror\nNight of Terror is a 1933 American Pre-Code horror film directed by Benjamin Stoloff, and starring Bela Lugosi, Sally Blane, Wallace Ford, and Tully Marshall. Despite receiving top billing, Bela Lugosi has a relatively small part. The film is also known as He Lived to Kill and Terror in the Night.",
+            "Henry Segrave\nSir Henry O'Neil de Hane Segrave (22 September 1896 \u2013 13 June 1930) was an early British pioneer in land speed and water speed records. Seagrave, who set three land and one water record, was the first person to hold both titles simultaneously and the first person to travel at over 200 mph in a land vehicle. He died in an accident in 1930 shortly after setting a new world water speed record on Windermere in the Lake District, England. The Segrave Trophy was established to commemorate his life.",
+            "Ulli Lommel\nUlli Lommel (born 21 December 1944) is a German actor and director, noted for his many collaborations with Rainer Werner Fassbinder and his association with the New German Cinema movement. Lommel is also well known for the time which he spent at The Factory and as a creative associate of Andy Warhol, with whom he made several films and works of art. Since 1977 he has lived and worked in the USA, where he has written, directed and starred in over 50 movies.",
+            "Joel Tabora\nJoel E. Tabora (born September 26, 1947, Manila, Philippines) is a Jesuit priest and the president of Ateneo de Davao University. He demonstrated a commitment to \"whole person formation\", social justice and spirituality.",
+            "Primary residence\nA person's primary residence, or main residence is the dwelling where they usually live, typically a house or an apartment. A person can only have one \"primary\" residence at any given time, though they may share the residence with other people. A primary residence is considered to be a legal residence for the purpose of income tax and/or acquiring a mortgage.",
+            "Adrian &quot;Wildman&quot; Cenni\nAdrian \"Wildman\" Cenni is a professional off-road truck racer, professional stunt man, and President/Founder of Atrium Staffing. Cenni is the first person to successfully land a true 360 degree barrel roll in a vehicle.",
+            "Red Dead Revolver\nRed Dead Revolver is a 2004 western action-adventure third-person shooter video game developed by Rockstar San Diego, published by Rockstar Games and distributed by Take-Two Interactive for the PlayStation 2 and Xbox. It is the first game in the \"Red Dead\" series.",
+            "Gerald Ford\nGerald Rudolph Ford Jr. (born Leslie Lynch King Jr.; July 14, 1913\u00a0\u2013 December 26, 2006) was an American politician who served as the 38th President of the United States from August 1974 to January 1977, following the resignation of Richard Nixon. Prior to this he served eight months as the 40th Vice President of the United States, following the resignation of Spiro Agnew. He was the first person appointed to the vice presidency under the terms of the 25th Amendment, and consequently the only person to have served as both Vice President and President of the United States without being elected to executive office. Before his appointment to the vice presidency, Ford served 25 years as U.S. Representative from Michigan's 5th congressional district, the final nine of them as the House Minority Leader.",
+            "Revenge of the Stolen Stars\nRevenge of the Stolen Stars is a 1985 American comedy fantasy film directed by Ulli Lommel and starring Klaus Kinski, Suzanna Love, Barry Hickey and Ulli Lommel.",
+            "Ludwig Manfred Lommel\nLudwig Manfred Lommel (1891\u20131962) was a German stage and film actor. He was the father of the actress Ruth Lommel and actor Ulli Lommel. His youngest son Manuel Lommel is a cinematographer.",
+            "Ruth Lommel\nRuth Lommel (1918\u20132012) was a German stage and film actress. She was the daughter of the actor Ludwig Manfred Lommel. Her brother Ulli Lommel also became an actor, while another brother Manuel Lommel is a cinematographer.",
+            "List of Leeds United F.C. seasons\nThis is a list of seasons played by Leeds United Association Football Club in English and European football. It covers the period from the club's inaugural season in 1919, following the demise of Leeds City earlier that year, to the end of the last completed season. It details the club's achievements in all major competitions, together with the top scorers and the average attendances for each season. Details of the abandoned 1939\u201340 season and unofficial Second World War leagues are not included.",
+            "D.C. Sniper\nD.C. Sniper is a 2010 American direct-to-video drama-thriller film directed by Ulli Lommel and written by Lommel and Ken Foree. It stars Foree, Christopher Kriesa and Maria Ochoa.",
+            "Elihu Benjamin Washburne House\nThe Elihu Benjamin Washburne House, also known as the Washburne-Sheehan House, is a 1\u00a0\u2044 -story Greek Revival house located at 908 Third Street in Galena, Illinois. Constructed in 1844\u201345, the building was built for and owned by Elihu Benjamin Washburne, a prominent Galena lawyer who served in Congress during the American Civil War, and as Secretary of State and Minister to France under President Ulysses S. Grant, another famous Galenian. The Washburne House was added to the U.S. National Register of Historic Places in 1973.",
+            "Benjamin Briggs\nBenjamin Spooner Briggs (April 24, 1835 \u2013 probably November 1872) was an experienced United States seaman and master mariner. He is famous today for being the Captain of the merchant ship \"Mary Celeste\" when she was discovered unmanned and drifting in the Atlantic Ocean near the Straits of Gibraltar, on December 4, 1872. The lifeboat was missing, yet the \"Mary Celeste\" herself was still under sail and there were signs of a sudden and unexplained abandonment. Benjamin Briggs, his wife Sarah and two-year-old daughter Sophia Matilda, along with the crew of the \"Mary Celeste\", the lifeboat and sextant, were never found and presumed lost.",
+            "H. Jon Benjamin\nHarry Jon Benjamin (born May 23, 1966) is an American actor, voice actor and comedian. He is best known for voicing characters, such as Bob Belcher in the animated sitcom \"Bob's Burgers\"; Sterling Archer in the animated sitcom \"Archer\"; Ben, the son of Dr. Katz, in \"Dr. Katz, Professional Therapist\"; Coach McGuirk and Jason on \"Home Movies\"; and a can of mixed vegetables in the film \"Wet Hot American Summer\".",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Daniel \u2013 Der Zauberer\nDaniel \u2013 Der Zauberer (translated: Daniel \u2013 The Wizard) is a German comedy-drama film written and directed by Ulli Lommel, starring pop singer Daniel K\u00fcblb\u00f6ck as himself. The film is considered to be one of the worst of all time.",
+            "The Raven (2006 film)\nThe Raven is a 2006 American direct-to-video production horror film directed by Ulli Lommel and references the poem \"The Raven\" by Edgar Allan Poe. The DVD case cover art carries the title, \"Edgar Allan Poe's The Raven\".",
+            "2016 Florida Atlantic Owls football team\nThe 2016 Florida Atlantic Owls football team represented Florida Atlantic University in the 2016 NCAA Division I FBS football season. The Owls played their home games at the FAU Stadium in Boca Raton, Florida, and competed in the East Division of Conference USA (C\u2013USA). They were led by third-year head coach Charlie Partridge. They finished the season 3\u20139, 2\u20136 in C-USA play to finish in a tie for sixth place in the East Division.",
+            "Curse of the Zodiac\nCurse of the Zodiac is a 2007 American horror film from Lionsgate, written and directed by Ulli Lommel, inspired by the true story of the hunt for a notorious serial killer known as \"Zodiac\" who claimed responsibility for the still unsolved murders."
+        ],
+        "thoughts": [
+            "Ulli Lommel was born on December 21, 1944, in Zielenzig, Brandenburg, Germany, and passed away on December 2, 2017, in Los Angeles, California, USA.",
+            "As of the available information, Ulli Lommel has been living and working in the USA since 1977. He has written, directed, and starred in over 50 movies in the country. However, specific immigration or residency details for Ulli Lommel in the USA are not provided in the available information. For more specific and official immigration or residency details, it is recommended to consult official government records or immigration authorities.",
+            "Ulli Lommel lived in the USA for approximately 40 years, from 1977 until his passing in 2017.",
+            "Benjamin Stoloff was born on October 6, 1895, and he passed away on September 8, 1960.",
+            "There is no specific information available regarding the immigration or residency details of Benjamin Stoloff in the USA. Benjamin Stoloff was an American film director and producer, born in Philadelphia, Pennsylvania, and died in Hollywood, California. His career in the film industry is well-documented, but there is no information provided about his immigration or residency status.",
+            "Based on the information provided, Benjamin Stoloff was born in 1895 and passed away in 1960. Since there is no specific information available regarding his immigration or residency in the USA, we can assume that he lived in the USA for his entire life. Therefore, he lived in the USA for 65 years (1960 - 1895 = 65).",
+            "Ulli Lommel lived in the USA for approximately 40 years, while Benjamin Stoloff lived in the USA for 65 years. Therefore, Benjamin Stoloff lived longer in the USA than Ulli Lommel."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who has lived longer in the USA, Ulli Lommel or Benjamin Stoloff?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve birth and death dates for Ulli Lommel.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about when Ulli Lommel moved to and left the USA, if applicable.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve birth and death dates for Benjamin Stoloff.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Retrieve information about when Benjamin Stoloff moved to and left the USA, if applicable.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Calculate the total time Ulli Lommel lived in the USA using the information retrieved.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Calculate the total time Benjamin Stoloff lived in the USA using the information retrieved.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    },
+                    {
+                        "id": "7",
+                        "instruction": "Compare the total time Ulli Lommel and Benjamin Stoloff lived in the USA and determine who lived longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "5",
+                            "6"
+                        ]
+                    }
+                ],
+                "root_node_id": "5",
+                "final_node_id": "7"
+            },
+            "explanation": "The graph breaks down the question into steps for retrieving relevant biographical data and calculating the duration of residence in the USA for both Ulli Lommel and Benjamin Stoloff. It starts by gathering necessary data on their birth, death, and residence in the USA. Separate nodes are used to retrieve this information for each individual. Subsequent reasoning nodes calculate the total duration each person lived in the USA based on the retrieved data. Finally, the last node compares these durations to answer the original question."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Primary residence\nA person's primary residence, or main residence is the dwelling where they usually live, typically a house or an apartment. A person can only have one \"primary\" residence at any given time, though they may share the residence with other people. A primary residence is considered to be a legal residence for the purpose of income tax and/or acquiring a mortgage.",
+            "Running mate\nA running mate is a person running together with another person on a joint ticket during an election. The term is most often used in reference to the person in the subordinate position (such as the vice presidential candidate running with a presidential candidate) but can also properly be used when referring to both candidates, such as by saying Joko Widodo and Jusuf Kalla, and Uhuru Kenyatta and William Ruto, were running mates in relation to the most recent presidential elections held in Indonesia and Kenya respectively.",
+            "Benjamin Stoloff\nBenjamin \"Ben\" Stoloff (October 6, 1895 \u2013 September 8, 1960) was an American film director and producer. He began his career as a short film comedy director and gradually moved into feature film directing and production later in his career. Stoloff was born in Philadelphia, Pennsylvania. He died in Hollywood, California.",
+            "Mokujin\nMokujin (Japanese: \u6728\u4eba?, lit. \"Wood(en) person\") is a fictional character in Namco Bandai Games' \"Tekken\" video game series. Mokujin first appeared in the 1997 video game \"Tekken 3\". Mokujin does not have his own fighting style. Instead, he mimics fighting styles from other characters, which varies from match to match.",
+            "Swedish governmental line of succession\nThe Swedish constitution of 1974 allows the Prime Minister of Sweden to appoint one of the Ministers in the cabinet as Deputy Prime Minister (\"bitr\u00e4dande statsminister\", also unofficially known as \"vice statsminister\", \"Vice Prime Minister\"), in case the Prime Minister for some reason is prevented from performing his or her duties. However, if a Deputy Prime Minister has not been appointed, the Minister in the cabinet who has served the longest time (and if there are several with equal experience the one who is oldest) takes over as head of government. Note that the person acting as Prime Minister does not do so on a permanent basis: if a Prime Minister dies, resigns or loses a vote of confidence in the Riksdag, the Speaker of the Riksdag will then confer with the parties of the Riksdag and propose a new Prime Minister, who must be tolerated by a majority of the Riksdag. If the Prime Minister has resigned or lost a vote of confidence, he or she will remain the head of a government \"ad interim\" until the new Prime Minister assumes his or her office. The only case where the governmental line of succession becomes relevant is when the Prime Minister dies (upon which the person next in the line of succession serves as the head of a government \"ad interim\") or when the Prime Minister is on leave or for any other reason incapable of serving, but still remains in office. This might be compared to the Presidential line of succession in the United States, where the person next in line assumes the Presidency throughout the remainder of the term if the President dies, resigns or is impeached.",
+            "Henry Segrave\nSir Henry O'Neil de Hane Segrave (22 September 1896 \u2013 13 June 1930) was an early British pioneer in land speed and water speed records. Seagrave, who set three land and one water record, was the first person to hold both titles simultaneously and the first person to travel at over 200 mph in a land vehicle. He died in an accident in 1930 shortly after setting a new world water speed record on Windermere in the Lake District, England. The Segrave Trophy was established to commemorate his life.",
+            "Joel Tabora\nJoel E. Tabora (born September 26, 1947, Manila, Philippines) is a Jesuit priest and the president of Ateneo de Davao University. He demonstrated a commitment to \"whole person formation\", social justice and spirituality.",
+            "Adrian &quot;Wildman&quot; Cenni\nAdrian \"Wildman\" Cenni is a professional off-road truck racer, professional stunt man, and President/Founder of Atrium Staffing. Cenni is the first person to successfully land a true 360 degree barrel roll in a vehicle.",
+            "Development of Grand Theft Auto V\nAn approximately 1,000-person team developed \"Grand Theft Auto V\", an action-adventure video game, over several years. Rockstar Games released \"Grand Theft Auto V\" on 17 September 2013 for PlayStation 3 and Xbox 360, on 18 November 2014 for PlayStation 4 and Xbox One, and on 14 April 2015 for Microsoft Windows, as the fifteenth entry in the \"Grand Theft Auto\" series. Development began soon after \"Grand Theft Auto IV\"' s release and was led by Rockstar North's core 360-person team, who collaborated with several other international Rockstar Games studios. The team considered the game a spiritual successor to many of their previous projects like \"Red Dead Redemption\" and \"Max Payne 3\". After its unexpected announcement in 2011, the game was fervently promoted with press showings, cinematic trailers, viral marketing strategies and special editions. Its release date, though subject to several delays, was widely anticipated.",
+            "Johannes Franciscus Swinkels\nJ.F. (Johannes) Swinkels (1851\u20131950) was an important person of the Dutch brewing industry. He was the fourth generation of Swinkels family running a brewery in the Dutch village of Lieshout, North Brabant. When he took over the brewery in 1884 he started its transformation from a local brewery into a worldwide but still family owned company with annual production of five hundred million litres of beer. Nowadays Bavaria is the second largest brewery in the Netherlands and Johannes is considered to be the founding father of its present-day success. Johannes was actually the first brewer in Lieshout who fully focused on the brewing business only when his ancestors always split their professional capacities in between brewery and agriculture given the favourable location of Lieshout surroundings.",
+            "Timeline of the presidency of Gerald Ford\nThe presidency of Gerald Ford began on August 9, 1974, when Gerald Ford became President of the United States, and ended on January 20, 1977, a span of days. Ford, the 38th United States president, succeeded Richard Nixon, who had resigned from office. Prior to this he was the 40th Vice President of the United States, serving from 1973 until President Richard Nixon's resignation in 1974. He was the first person appointed to the vice presidency under the terms of the Twenty-fifth Amendment to the United States Constitution, following the resignation of Vice President Spiro Agnew on October 10, 1973. Ford has the distinction of being the first, and to date the only person to have served as both vice president and president without being elected to either office.",
+            "Spirituality Shopper\nSpirituality Shopper was a short lived British television series that ran on Channel 4 for 3 episodes in 2005. It was presented by Christian athlete, Jonathan Edwards. In each episode, a person looked at four different religious practices that could be implemented in their (non-religious) lives to see if it would bring them inner peace in the hustle and bustle of the 21st century. In each episode, four of the practices were looked at:",
+            "Red Dead Revolver\nRed Dead Revolver is a 2004 western action-adventure third-person shooter video game developed by Rockstar San Diego, published by Rockstar Games and distributed by Take-Two Interactive for the PlayStation 2 and Xbox. It is the first game in the \"Red Dead\" series.",
+            "Gerald Ford\nGerald Rudolph Ford Jr. (born Leslie Lynch King Jr.; July 14, 1913\u00a0\u2013 December 26, 2006) was an American politician who served as the 38th President of the United States from August 1974 to January 1977, following the resignation of Richard Nixon. Prior to this he served eight months as the 40th Vice President of the United States, following the resignation of Spiro Agnew. He was the first person appointed to the vice presidency under the terms of the 25th Amendment, and consequently the only person to have served as both Vice President and President of the United States without being elected to executive office. Before his appointment to the vice presidency, Ford served 25 years as U.S. Representative from Michigan's 5th congressional district, the final nine of them as the House Minority Leader.",
+            "Straw purchase\nA straw purchase or nominee purchase is any purchase wherein an agent agrees to acquire a good or service for someone who is unable or unwilling to purchase the good or service themselves, and the agent transfers the goods or services to that person after purchasing them. In general, straw purchases are legal except in cases where the ultimate receiver of goods or services uses those goods or services in the commission of a crime with the prior knowledge of the straw purchaser, or if the ultimate possessor is not legally able to purchase the goods or services. In some jurisdictions, straw purchases are legal although the end user is not legally able to purchase the good or service himself or herself.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Joshua D. Zimmerman\nJoshua D. Zimmerman (born 1966) is Professor of History at Yeshiva University, where he holds the Eli and Diana Zborowski Professorial Chair in Interdisciplinary Holocaust Studies. He is the author of \"The Polish Underground and the Jews, 1939-1945\" by Cambridge University Press (2015, hardback) and of \"Contested Memories. Poles and Jews during the Holocaust and Its Aftermath\" by Rutgers University Press (2003, hardcover) as well as \"Poles, Jews and the Politics of Nationality: The Jewish Labor Bund and the Polish Socialist Party in Late Czarist Russia, 1892\u20131914.\"<ref name=\"yu.edu/faculty\"> </ref> Zimmerman graduated from the University of California at Santa Cruz in 1989 with a BA(Hons) in History, and with the M.A. in History from UCLA in 1993. In February 1998 he completed his PhD thesis in Comparative History at Brandeis University, and in the summer 2004 was appointed to the position of Associate Professor of History at Yeshiva University in New York City. Zimmerman is an American author proficient in Yiddish, Polish, Hebrew, Russian, and French.<ref name=\"yu.edu/cv\"> </ref>",
+            "Rumbold of Mechelen\nSaint Rumbold (or \"Rumold\", \"Romuold\", Latin: \"Rumoldus\" , Dutch: \"Rombout\" , French: \"Rombaut\" ) was an Irish or Scottish Christian missionary, although his true nationality is not known for certain.",
+            "Boulevard Brewing Company\nBoulevard Brewing Company is a brewery located in Kansas City, Missouri. The Brewers Association currently ranks the American arm of Boulevard's parent company, Duvel Moortgat USA, as the 12th largest craft brewery, and the 18th largest active brewery in the United States based on 2014 sales volume. Before the sale of Anheuser-Busch to InBev in 2008, Boulevard was the largest independent American brewery in the state of Missouri. Boulevard's beers are available in select markets across the country.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "Fame Gurukul\nFame Gurukul was an Indian prime-time reality show on Sony Entertainment Television (India) which premiered on 27 June 2005. The program was produced by the same production house of \"Indian Idol\". The concept of the show was to select a pair of India's best singers/performers.",
+            "Season 25: Oprah Behind The Scenes\nSeason 25: Oprah Behind The Scenes is an American documentary television series. The series began airing on OWN on January 1, 2011 and concluded on August 7, 2011. Each episode follows production for one or two episodes of the final season of \"The Oprah Winfrey Show\", featuring interview segments with Oprah Winfrey and the production staff. Three special edition episodes produced in house at Harpo were filmed on the Oprah set, featuring Oprah and her producers discussing highlights of the season's episodes with select viewers via Skype."
+        ],
+        "thoughts": [
+            "Ulli Lommel was born on December 21, 1944, and passed away on December 2, 2017.",
+            "There is no information provided about Ulli Lommel moving to or leaving the USA.",
+            "Based on the information provided, Ulli Lommel was born in 1944 and passed away in 2017. Since there is no specific information about when he moved to or left the USA, we can assume that he lived in the USA for his entire life. Therefore, the total time Ulli Lommel lived in the USA is 73 years (2017 - 1944).",
+            "Benjamin Stoloff was born on October 6, 1895, and passed away on September 8, 1960.",
+            "There is no information provided about when Benjamin Stoloff moved to or left the USA.",
+            "Without specific information about when Benjamin Stoloff moved to or left the USA, it is not possible to calculate the total time he lived in the USA.",
+            "Based on the information provided, Ulli Lommel lived in the USA for 73 years. Since there is no specific information about Benjamin Stoloff's time in the USA, we cannot determine who lived longer in the country."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who has lived longer in the USA, Ulli Lommel or Benjamin Stoloff?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve birth and death dates and places for Ulli Lommel.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve birth and death dates and places for Benjamin Stoloff.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the total time Ulli Lommel lived in the USA using the retrieved data.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the total time Benjamin Stoloff lived in the USA using the retrieved data.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the total times lived in the USA by Ulli Lommel and Benjamin Stoloff to determine who lived longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph breaks down the problem into steps to determine who lived longer in the USA, Ulli Lommel or Benjamin Stoloff. The first two nodes gather necessary biographical data, which includes places and dates of birth and death. The subsequent nodes calculate the time each individual lived in the USA based on this data. Finally, a comparative analysis is carried out to conclude who lived longer in the USA."
+        },
+        "recall": 0.6666666666666666,
+        "retrieved_passages": [
+            "Mokujin\nMokujin (Japanese: \u6728\u4eba?, lit. \"Wood(en) person\") is a fictional character in Namco Bandai Games' \"Tekken\" video game series. Mokujin first appeared in the 1997 video game \"Tekken 3\". Mokujin does not have his own fighting style. Instead, he mimics fighting styles from other characters, which varies from match to match.",
+            "Running mate\nA running mate is a person running together with another person on a joint ticket during an election. The term is most often used in reference to the person in the subordinate position (such as the vice presidential candidate running with a presidential candidate) but can also properly be used when referring to both candidates, such as by saying Joko Widodo and Jusuf Kalla, and Uhuru Kenyatta and William Ruto, were running mates in relation to the most recent presidential elections held in Indonesia and Kenya respectively.",
+            "Development of Grand Theft Auto V\nAn approximately 1,000-person team developed \"Grand Theft Auto V\", an action-adventure video game, over several years. Rockstar Games released \"Grand Theft Auto V\" on 17 September 2013 for PlayStation 3 and Xbox 360, on 18 November 2014 for PlayStation 4 and Xbox One, and on 14 April 2015 for Microsoft Windows, as the fifteenth entry in the \"Grand Theft Auto\" series. Development began soon after \"Grand Theft Auto IV\"' s release and was led by Rockstar North's core 360-person team, who collaborated with several other international Rockstar Games studios. The team considered the game a spiritual successor to many of their previous projects like \"Red Dead Redemption\" and \"Max Payne 3\". After its unexpected announcement in 2011, the game was fervently promoted with press showings, cinematic trailers, viral marketing strategies and special editions. Its release date, though subject to several delays, was widely anticipated.",
+            "Timeline of the presidency of Gerald Ford\nThe presidency of Gerald Ford began on August 9, 1974, when Gerald Ford became President of the United States, and ended on January 20, 1977, a span of days. Ford, the 38th United States president, succeeded Richard Nixon, who had resigned from office. Prior to this he was the 40th Vice President of the United States, serving from 1973 until President Richard Nixon's resignation in 1974. He was the first person appointed to the vice presidency under the terms of the Twenty-fifth Amendment to the United States Constitution, following the resignation of Vice President Spiro Agnew on October 10, 1973. Ford has the distinction of being the first, and to date the only person to have served as both vice president and president without being elected to either office.",
+            "Ulli Lommel\nUlli Lommel (born 21 December 1944) is a German actor and director, noted for his many collaborations with Rainer Werner Fassbinder and his association with the New German Cinema movement. Lommel is also well known for the time which he spent at The Factory and as a creative associate of Andy Warhol, with whom he made several films and works of art. Since 1977 he has lived and worked in the USA, where he has written, directed and starred in over 50 movies.",
+            "Revenge of the Stolen Stars\nRevenge of the Stolen Stars is a 1985 American comedy fantasy film directed by Ulli Lommel and starring Klaus Kinski, Suzanna Love, Barry Hickey and Ulli Lommel.",
+            "Henry Segrave\nSir Henry O'Neil de Hane Segrave (22 September 1896 \u2013 13 June 1930) was an early British pioneer in land speed and water speed records. Seagrave, who set three land and one water record, was the first person to hold both titles simultaneously and the first person to travel at over 200 mph in a land vehicle. He died in an accident in 1930 shortly after setting a new world water speed record on Windermere in the Lake District, England. The Segrave Trophy was established to commemorate his life.",
+            "Ludwig Manfred Lommel\nLudwig Manfred Lommel (1891\u20131962) was a German stage and film actor. He was the father of the actress Ruth Lommel and actor Ulli Lommel. His youngest son Manuel Lommel is a cinematographer.",
+            "Joel Tabora\nJoel E. Tabora (born September 26, 1947, Manila, Philippines) is a Jesuit priest and the president of Ateneo de Davao University. He demonstrated a commitment to \"whole person formation\", social justice and spirituality.",
+            "Ruth Lommel\nRuth Lommel (1918\u20132012) was a German stage and film actress. She was the daughter of the actor Ludwig Manfred Lommel. Her brother Ulli Lommel also became an actor, while another brother Manuel Lommel is a cinematographer.",
+            "Benjamin Stoloff\nBenjamin \"Ben\" Stoloff (October 6, 1895 \u2013 September 8, 1960) was an American film director and producer. He began his career as a short film comedy director and gradually moved into feature film directing and production later in his career. Stoloff was born in Philadelphia, Pennsylvania. He died in Hollywood, California.",
+            "Primary residence\nA person's primary residence, or main residence is the dwelling where they usually live, typically a house or an apartment. A person can only have one \"primary\" residence at any given time, though they may share the residence with other people. A primary residence is considered to be a legal residence for the purpose of income tax and/or acquiring a mortgage.",
+            "D.C. Sniper\nD.C. Sniper is a 2010 American direct-to-video drama-thriller film directed by Ulli Lommel and written by Lommel and Ken Foree. It stars Foree, Christopher Kriesa and Maria Ochoa.",
+            "Swedish governmental line of succession\nThe Swedish constitution of 1974 allows the Prime Minister of Sweden to appoint one of the Ministers in the cabinet as Deputy Prime Minister (\"bitr\u00e4dande statsminister\", also unofficially known as \"vice statsminister\", \"Vice Prime Minister\"), in case the Prime Minister for some reason is prevented from performing his or her duties. However, if a Deputy Prime Minister has not been appointed, the Minister in the cabinet who has served the longest time (and if there are several with equal experience the one who is oldest) takes over as head of government. Note that the person acting as Prime Minister does not do so on a permanent basis: if a Prime Minister dies, resigns or loses a vote of confidence in the Riksdag, the Speaker of the Riksdag will then confer with the parties of the Riksdag and propose a new Prime Minister, who must be tolerated by a majority of the Riksdag. If the Prime Minister has resigned or lost a vote of confidence, he or she will remain the head of a government \"ad interim\" until the new Prime Minister assumes his or her office. The only case where the governmental line of succession becomes relevant is when the Prime Minister dies (upon which the person next in the line of succession serves as the head of a government \"ad interim\") or when the Prime Minister is on leave or for any other reason incapable of serving, but still remains in office. This might be compared to the Presidential line of succession in the United States, where the person next in line assumes the Presidency throughout the remainder of the term if the President dies, resigns or is impeached.",
+            "Lara Croft and the Guardian of Light\nLara Croft and the Guardian of Light is an action-adventure game developed by Crystal Dynamics and published by Square Enix for Microsoft Windows, PlayStation 3, Xbox 360, Android and, iOS through digital distribution. It is part of the \"Tomb Raider\" series, but unlike previous games, the game does not carry the \"Tomb Raider\" brand and has a heavy emphasis on cooperative gameplay. In multiplayer, players take the role as either Lara Croft or a 2,000-year-old Mayan warrior named Totec. They must work together in order to stop the evil spirit Xolotl and retrieve the Mirror of Smoke. A single-player campaign mode is available that does not include the non-playable character AI following or helping Lara."
+        ],
+        "thoughts": [
+            "Ulli Lommel was born on December 21, 1944, in Germany. He passed away on December 2, 2017, in the United States.",
+            "Ulli Lommel lived in the USA for a total of 72 years, from 1944 to 2017.",
+            "Benjamin Stoloff was born on October 6, 1895, in Philadelphia, Pennsylvania, and he passed away on September 8, 1960, in Hollywood, California.",
+            "Benjamin Stoloff lived in the USA for a total of 64 years, from 1895 to 1960.",
+            "Ulli Lommel lived longer in the USA, with a total of 72 years compared to Benjamin Stoloff's 64 years."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who has lived longer in the USA, Ulli Lommel or Benjamin Stoloff?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the birth and death years of Ulli Lommel and any significant periods he lived in the USA.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the birth and death years of Benjamin Stoloff and any significant periods he lived in the USA.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the total number of years Ulli Lommel lived in the USA using his birth, death, and residency data.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the total number of years Benjamin Stoloff lived in the USA using his birth, death, and residency data.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the total number of years Ulli Lommel and Benjamin Stoloff lived in the USA and determine who lived there longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The task is broken down to first retrieve biographical information (birth, death, and periods of residency) for both Ulli Lommel and Benjamin Stoloff. Then, we calculate how many years each lived in the USA, and finally, compare these durations to determine who lived there longer."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Ulli Lommel\nUlli Lommel (born 21 December 1944) is a German actor and director, noted for his many collaborations with Rainer Werner Fassbinder and his association with the New German Cinema movement. Lommel is also well known for the time which he spent at The Factory and as a creative associate of Andy Warhol, with whom he made several films and works of art. Since 1977 he has lived and worked in the USA, where he has written, directed and starred in over 50 movies.",
+            "Revenge of the Stolen Stars\nRevenge of the Stolen Stars is a 1985 American comedy fantasy film directed by Ulli Lommel and starring Klaus Kinski, Suzanna Love, Barry Hickey and Ulli Lommel.",
+            "Ludwig Manfred Lommel\nLudwig Manfred Lommel (1891\u20131962) was a German stage and film actor. He was the father of the actress Ruth Lommel and actor Ulli Lommel. His youngest son Manuel Lommel is a cinematographer.",
+            "Ruth Lommel\nRuth Lommel (1918\u20132012) was a German stage and film actress. She was the daughter of the actor Ludwig Manfred Lommel. Her brother Ulli Lommel also became an actor, while another brother Manuel Lommel is a cinematographer.",
+            "D.C. Sniper\nD.C. Sniper is a 2010 American direct-to-video drama-thriller film directed by Ulli Lommel and written by Lommel and Ken Foree. It stars Foree, Christopher Kriesa and Maria Ochoa.",
+            "The Raven (2006 film)\nThe Raven is a 2006 American direct-to-video production horror film directed by Ulli Lommel and references the poem \"The Raven\" by Edgar Allan Poe. The DVD case cover art carries the title, \"Edgar Allan Poe's The Raven\".",
+            "Daniel \u2013 Der Zauberer\nDaniel \u2013 Der Zauberer (translated: Daniel \u2013 The Wizard) is a German comedy-drama film written and directed by Ulli Lommel, starring pop singer Daniel K\u00fcblb\u00f6ck as himself. The film is considered to be one of the worst of all time.",
+            "Curse of the Zodiac\nCurse of the Zodiac is a 2007 American horror film from Lionsgate, written and directed by Ulli Lommel, inspired by the true story of the hunt for a notorious serial killer known as \"Zodiac\" who claimed responsibility for the still unsolved murders.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "Ulli Lommel was born on December 21, 1944, and passed away on December 2, 2017. He lived and worked in the USA since 1977. Some significant periods he lived in the USA include the time he spent at The Factory and his collaborations with Andy Warhol, as well as his work as a writer, director, and actor in over 50 American movies. Notable American films directed by Ulli Lommel include \"Revenge of the Stolen Stars\" (1985), \"D.C. Sniper\" (2010), \"The Raven\" (2006), and \"Curse of the Zodiac\" (2007).",
+            "Ulli Lommel lived in the USA for a total of 40 years. He moved to the USA in 1977 and lived there until his passing in 2017.",
+            "Benjamin Stoloff was born in 1895 and passed away in 1960. He lived in the USA during significant periods, including the early to mid-20th century, during which he was active as a film director and producer.",
+            "Benjamin Stoloff lived in the USA for a total of 65 years (1960 - 1895 = 65).",
+            "Benjamin Stoloff lived in the USA longer than Ulli Lommel. Stoloff lived in the USA for a total of 65 years, while Lommel lived there for 40 years."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who has lived longer in the USA, Ulli Lommel or Benjamin Stoloff?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve birth and any known death dates for both Ulli Lommel and Benjamin Stoloff.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find records of when Ulli Lommel moved to the USA and for how long he lived there.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find records of when Benjamin Stoloff moved to the USA and for how long he lived there.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the length of time Ulli Lommel lived in the USA using his movement and possible death records.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Calculate the length of time Benjamin Stoloff lived in the USA using his movement and possible death records.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Compare the length of time each individual, Ulli Lommel and Benjamin Stoloff, lived in the USA and determine who lived longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4",
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "The execution graph splits the task into retrieval and reasoning steps. Initially, we gather essential dates related to birth, death, and residency in the USA for both individuals. Subsequently, the graph uses these data points to calculate the exact duration each person stayed in the USA. Finally, a comparison is made to determine who lived longer in the USA. This approach ensures each part of the question is addressed methodically, and any dependencies are respected."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Loveless (film)\nLoveless (Russian: \u041d\u0435\u043b\u044e\u0431\u043e\u0432\u044c ) is a 2017 Russian drama film directed by Andrey Zvyagintsev. The story concerns two separated parents living apart whose affections are long forgotten and whose relationship has become loveless. They are temporarily brought together after their only young child becomes a missing person and they attempt to find him. It was shot in Moscow, with international support after the Russian government disapproved of Zvyagintsev's 2014 film \"Leviathan\". \"Loveless\" opened to critical acclaim and it won the Jury Prize at the 2017 Cannes Film Festival. It was selected as the Russian entry for the Best Foreign Language Film at the 90th Academy Awards.",
+            "Development of Grand Theft Auto V\nAn approximately 1,000-person team developed \"Grand Theft Auto V\", an action-adventure video game, over several years. Rockstar Games released \"Grand Theft Auto V\" on 17 September 2013 for PlayStation 3 and Xbox 360, on 18 November 2014 for PlayStation 4 and Xbox One, and on 14 April 2015 for Microsoft Windows, as the fifteenth entry in the \"Grand Theft Auto\" series. Development began soon after \"Grand Theft Auto IV\"' s release and was led by Rockstar North's core 360-person team, who collaborated with several other international Rockstar Games studios. The team considered the game a spiritual successor to many of their previous projects like \"Red Dead Redemption\" and \"Max Payne 3\". After its unexpected announcement in 2011, the game was fervently promoted with press showings, cinematic trailers, viral marketing strategies and special editions. Its release date, though subject to several delays, was widely anticipated.",
+            "Ulli Lommel\nUlli Lommel (born 21 December 1944) is a German actor and director, noted for his many collaborations with Rainer Werner Fassbinder and his association with the New German Cinema movement. Lommel is also well known for the time which he spent at The Factory and as a creative associate of Andy Warhol, with whom he made several films and works of art. Since 1977 he has lived and worked in the USA, where he has written, directed and starred in over 50 movies.",
+            "Revenge of the Stolen Stars\nRevenge of the Stolen Stars is a 1985 American comedy fantasy film directed by Ulli Lommel and starring Klaus Kinski, Suzanna Love, Barry Hickey and Ulli Lommel.",
+            "Benjamin Stoloff\nBenjamin \"Ben\" Stoloff (October 6, 1895 \u2013 September 8, 1960) was an American film director and producer. He began his career as a short film comedy director and gradually moved into feature film directing and production later in his career. Stoloff was born in Philadelphia, Pennsylvania. He died in Hollywood, California.",
+            "Ludwig Manfred Lommel\nLudwig Manfred Lommel (1891\u20131962) was a German stage and film actor. He was the father of the actress Ruth Lommel and actor Ulli Lommel. His youngest son Manuel Lommel is a cinematographer.",
+            "Timeline of the presidency of Gerald Ford\nThe presidency of Gerald Ford began on August 9, 1974, when Gerald Ford became President of the United States, and ended on January 20, 1977, a span of days. Ford, the 38th United States president, succeeded Richard Nixon, who had resigned from office. Prior to this he was the 40th Vice President of the United States, serving from 1973 until President Richard Nixon's resignation in 1974. He was the first person appointed to the vice presidency under the terms of the Twenty-fifth Amendment to the United States Constitution, following the resignation of Vice President Spiro Agnew on October 10, 1973. Ford has the distinction of being the first, and to date the only person to have served as both vice president and president without being elected to either office.",
+            "Ruth Lommel\nRuth Lommel (1918\u20132012) was a German stage and film actress. She was the daughter of the actor Ludwig Manfred Lommel. Her brother Ulli Lommel also became an actor, while another brother Manuel Lommel is a cinematographer.",
+            "D.C. Sniper\nD.C. Sniper is a 2010 American direct-to-video drama-thriller film directed by Ulli Lommel and written by Lommel and Ken Foree. It stars Foree, Christopher Kriesa and Maria Ochoa.",
+            "Curse of the Zodiac\nCurse of the Zodiac is a 2007 American horror film from Lionsgate, written and directed by Ulli Lommel, inspired by the true story of the hunt for a notorious serial killer known as \"Zodiac\" who claimed responsibility for the still unsolved murders.",
+            "The Raven (2006 film)\nThe Raven is a 2006 American direct-to-video production horror film directed by Ulli Lommel and references the poem \"The Raven\" by Edgar Allan Poe. The DVD case cover art carries the title, \"Edgar Allan Poe's The Raven\".",
+            "Daniel \u2013 Der Zauberer\nDaniel \u2013 Der Zauberer (translated: Daniel \u2013 The Wizard) is a German comedy-drama film written and directed by Ulli Lommel, starring pop singer Daniel K\u00fcblb\u00f6ck as himself. The film is considered to be one of the worst of all time.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Raphael Holinshed\n) was an English chronicler, whose work, commonly known as \"Holinshed's Chronicles\", was one of the major sources used by William Shakespeare for a number of his plays.",
+            "Russian avant-garde\nThe Russian avant-garde was a large, influential wave of avant-garde modern art that flourished in the Russian Empire and Soviet Union, approximately from 1890 to 1930\u2014although some have placed its beginning as early as 1850 and its end as late as 1960. The term covers many separate, but inextricably related, art movements that flourished at the time; namely Suprematism, Constructivism, Russian Futurism, Cubo-Futurism, Zaum and Neo-primitivism. Given that many avant-garde artists involved were born or grew up in what is present day Belarus and Ukraine (including Kazimir Malevich, Aleksandra Ekster, Vladimir Tatlin, Wassily Kandinsky, David Burliuk, Alexander Archipenko), some sources also talk about Ukrainian avant-garde.",
+            "Information (Berlin album)\nInformation is the first album by Berlin, released in 1980 by Vinyl Records. It was recorded during the period when Terri Nunn had temporarily left the band to pursue an acting career and Virginia Macolino performed the lead vocals. Several songs were written by previous lead singer Toni Childs who went solo prior to the album's release.",
+            "Hurricane: Category 5\nHurricane: Category 5 was a Custom Coasters International wooden roller coaster located at the Myrtle Beach Pavilion. It replaced the Corkscrew roller coaster which existed since the late 1970s. The Pavilion unveiled their multimillion-dollar coaster May 6, 2000. During operation, Hurricane held the record for being the tallest, fastest, and longest wooden roller coaster in South Carolina. The ride closed with the Pavilion on September 30, 2006. Although Burroughs & Chapin attempted to sell the ride along with the Haunted Hotel, Log Flume, Treasure Hunt, and a few other rides, the ride was deemed too expensive a task to dismantle and relocate, and was ultimately demolished in March 2007. The only part of the ride not demolished were the two Gerstlauer trains used on the ride. These trains were shipped to Kings Island, an amusement park in Mason, Ohio. They were then repainted and installed on Son of Beast, which was at the time the world's tallest and fastest wooden roller coaster. Son of Beast was later demolished on November 20, 2012, following an incident that occurred in 2009.",
+            "Chess problem\nA chess problem, also called a chess composition, is a puzzle set by somebody using chess pieces on a chess board, that presents the solver with a particular task to be achieved. For instance, a position might be given with the instruction that White is to move first, and checkmate Black in two moves against any possible defense. A person who creates such problems is known as a composer. There is a good deal of specialized jargon used in connection with chess problems; see glossary of chess problems for a list.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Timeline of the Holocaust\nA timeline of the Holocaust is detailed in the events listed below. Also referred to as the Shoah (in Hebrew), the Holocaust was a genocide in which some six million European Jews were killed by Nazi Germany and its World War II collaborators. About 1.5 million of the victims were children. Two-thirds of the nine million Jews who had resided in Europe were murdered. The following timeline has been compiled from a variety of sources including the United States Holocaust Memorial Museum."
+        ],
+        "thoughts": [
+            "Ulli Lommel was born on December 21, 1944, and is still alive. Benjamin Stoloff was born on October 6, 1895, and passed away on September 8, 1960.",
+            "Ulli Lommel moved to the USA in 1977 and lived and worked there until his passing. He wrote, directed, and starred in over 50 movies during his time in the USA.",
+            "Based on the information provided, Ulli Lommel moved to the USA in 1977 and lived and worked there until his passing. Since he is still alive, we can calculate the length of time he has lived in the USA by subtracting 1977 from the current year. As of 2022, this would mean Ulli Lommel has lived in the USA for approximately 45 years.",
+            "There is no information available about Benjamin Stoloff in the provided text.",
+            "Based on the information provided, Benjamin Stoloff was born on October 6, 1895, and passed away on September 8, 1960. This means he lived in the USA for approximately 65 years, from 1895 to 1960.",
+            "Benjamin Stoloff lived longer in the USA, residing there for approximately 65 years, compared to Ulli Lommel who has lived in the USA for approximately 45 years."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who has lived longer in the USA, Ulli Lommel or Benjamin Stoloff?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the birth and death dates or the current age (if living) of Ulli Lommel.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the birth and death dates or the current age (if living) of Benjamin Stoloff.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the periods of Ulli Lommel's life spent in the USA, from available biographical information.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the periods of Benjamin Stoloff's life spent in the USA, from available biographical information.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Calculate the total time Ulli Lommel lived in the USA using the periods identified.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Calculate the total time Benjamin Stoloff lived in the USA using the periods identified.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    },
+                    {
+                        "id": "7",
+                        "instruction": "Compare the total times lived in the USA by Ulli Lommel and Benjamin Stoloff to determine who has lived longer in the USA.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "5",
+                            "6"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "7"
+            },
+            "explanation": "To determine who has lived longer in the USA between Ulli Lommel and Benjamin Stoloff, we start by gathering their birth and death dates or current ages (nodes 1 and 2). We then retrieve biographical information to determine the periods each individual lived in the USA (nodes 3 and 4). With this data, we calculate the total time spent in the USA for both (nodes 5 and 6). Finally, we compare these durations to answer the question (node 7)."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Benjamin Stoloff\nBenjamin \"Ben\" Stoloff (October 6, 1895 \u2013 September 8, 1960) was an American film director and producer. He began his career as a short film comedy director and gradually moved into feature film directing and production later in his career. Stoloff was born in Philadelphia, Pennsylvania. He died in Hollywood, California.",
+            "Revenge of the Stolen Stars\nRevenge of the Stolen Stars is a 1985 American comedy fantasy film directed by Ulli Lommel and starring Klaus Kinski, Suzanna Love, Barry Hickey and Ulli Lommel.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Ludwig Manfred Lommel\nLudwig Manfred Lommel (1891\u20131962) was a German stage and film actor. He was the father of the actress Ruth Lommel and actor Ulli Lommel. His youngest son Manuel Lommel is a cinematographer.",
+            "Ruth Lommel\nRuth Lommel (1918\u20132012) was a German stage and film actress. She was the daughter of the actor Ludwig Manfred Lommel. Her brother Ulli Lommel also became an actor, while another brother Manuel Lommel is a cinematographer.",
+            "D.C. Sniper\nD.C. Sniper is a 2010 American direct-to-video drama-thriller film directed by Ulli Lommel and written by Lommel and Ken Foree. It stars Foree, Christopher Kriesa and Maria Ochoa.",
+            "Ulli Lommel\nUlli Lommel (born 21 December 1944) is a German actor and director, noted for his many collaborations with Rainer Werner Fassbinder and his association with the New German Cinema movement. Lommel is also well known for the time which he spent at The Factory and as a creative associate of Andy Warhol, with whom he made several films and works of art. Since 1977 he has lived and worked in the USA, where he has written, directed and starred in over 50 movies.",
+            "The Raven (2006 film)\nThe Raven is a 2006 American direct-to-video production horror film directed by Ulli Lommel and references the poem \"The Raven\" by Edgar Allan Poe. The DVD case cover art carries the title, \"Edgar Allan Poe's The Raven\".",
+            "Daniel \u2013 Der Zauberer\nDaniel \u2013 Der Zauberer (translated: Daniel \u2013 The Wizard) is a German comedy-drama film written and directed by Ulli Lommel, starring pop singer Daniel K\u00fcblb\u00f6ck as himself. The film is considered to be one of the worst of all time.",
+            "Night of Terror\nNight of Terror is a 1933 American Pre-Code horror film directed by Benjamin Stoloff, and starring Bela Lugosi, Sally Blane, Wallace Ford, and Tully Marshall. Despite receiving top billing, Bela Lugosi has a relatively small part. The film is also known as He Lived to Kill and Terror in the Night.",
+            "Ralph Stout\nRalph Stout (d. 1697) was a pirate active in the Indian Ocean. He is best known for rescuing fellow pirate Robert Culliford after each of them spent separate 4-year periods in Mughal Empire prisons.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "Mount of Olives Jewish Cemetery\nThe Jewish Cemetery on the Mount of Olives, including the Silwan necropolis, is the most ancient and most important cemetery in Jerusalem. Burial on the Mount of Olives started some 3,000 years ago in the First Temple Period, and continues to this day. The cemetery contains about 70,000 tombs from various periods, including the tombs of famous figures in Jewish history.",
+            "The Last Station\nThe Last Station is a 2009 English-language German biographical drama film written and directed by Michael Hoffman, and based on Jay Parini's 1990 biographical novel of the same name, which chronicled the final months of Leo Tolstoy's life. The film stars Christopher Plummer as Tolstoy and Helen Mirren as his wife Sofya Tolstaya. The film is about the battle between Sofya and his disciple Vladimir Chertkov for his legacy and the copyright of his works. The film premiered at the 2009 Telluride Film Festival.",
+            "Primary residence\nA person's primary residence, or main residence is the dwelling where they usually live, typically a house or an apartment. A person can only have one \"primary\" residence at any given time, though they may share the residence with other people. A primary residence is considered to be a legal residence for the purpose of income tax and/or acquiring a mortgage.",
+            "Silviu Vulc\nSilviu Dorin Vulc more commonly known as Silviu Vulc is a Romanian heavyweight mixed martial artist. Silviu Vulc spent his early career boxing in Romania, he then moved to Russia to train with Red Devil Sport Club team mates with Fedor Emelianenko and Alexander Emelianenko. Vulc spent two years there training and fighting. During this time he had ten MMA fights with eight wins and three losses, the first seven fights being semi-professional before moving into the professional league. Vulc had a short professional career, defeating Rodrigo Mendes in the Desert Combat Challenge in Israel and losing twice. His last fight being in 2008 for M-1 Global. Silviu has spent most of his time and energy over the years coaching others in boxing and MMA around the world including time spent in Russia, Romania and London, England.",
+            "Postpipe\nIn archaeology, a postpipe (or post pipe) is the remains of an upright timber placed in a posthole. Given the right conditions, timbers may survive over long periods of time and a recovered postpipe can simply be of solid wood. Under less preservative conditions however, only a dark circular stain of organic material may be left in the fill of the posthole observable in plan and section. This differs in consistency from the less organic backfill of the posthole and can be identified simply through this change in make-up. The size and depth and of the postpipe can provide information as to any reuse of the posthole especially if several different postpipes can be identified. They can also indicate the species of wood used and help suggest the nature of the structure that the timber once supported. The term was first used by Maud Cunnington when she excavated the site of Woodhenge in the English county of Wiltshire during the 1920s and found numerous examples of decomposed timber posts.",
+            "Simon Bent\nSimon Bent is a British screenwriter and playwright, notable for work including BBC TV drama \"\" (2006), the screenplay for the feature film \"Christie Malry's Own Double-Entry\" (2000), and the Joe Orton biographical play \"Prick Up Your Ears\" based on John Lahr's book.",
+            "Hailey McCann\nHailey McCann (born October 3, 1995) is an American actress born in Riverside, California. McCann is one of four children and has two sisters and a brother. She played her first role in the 2003 short film \"Give or Take an Inch\". In the movie \"The Time Traveler's Wife\" she appeared alongside her younger sister, Tatum McCann as well as Eric Bana and Rachel McAdams. The sisters both played the character of Alba DeTamble in different time periods.",
+            "Chumlee\nAustin Lee Russell (born September 8, 1982), better known by his stage name of Chumlee, is an American actor, businessman and reality television personality, known as a cast member on the History Channel television show \"Pawn Stars\", which depicts the daily business at the Gold and Silver Pawn Shop in Las Vegas where Russell works as an employee. Chumlee came to work at the pawn shop five years before filming of the first season, having been a childhood friend of Corey Harrison, whose father, Rick Harrison, and grandfather, Richard Benjamin Harrison, opened the shop in 1989.",
+            "Ovambo people\nThe Ovambo people, also called Aawambo, Ambo, Aawambo (Ndonga) or Ovawambo (Kwanyama), are a Southern African tribal ethnic group. They are the largest ethnic group of Namibia, found in its northern regions and more often called Ovambo. They are also found in southern Angolan province of Cunene where the name Ambo is more common. The Ovambo consist of a number of kindred Bantu ethnic tribes who inhabit what was formerly called Owamboland. Accounting for about fifty percent of the Namibian population, the Ovambo are its largest ethnic group. In Angola, they are a minority, accounting for about two percent of the total Angolan population.",
+            "Benjamin Logan\nBenjamin Logan (c.1742 \u2013 December 11, 1802) was an American pioneer, soldier, and politician from Shelby County, Kentucky. As colonel of the Kentucky County, Virginia militia during the American Revolutionary War, he was second-in-command of all the militia in Kentucky. He was also a leader in Kentucky's efforts to become a state. His brother, John Logan, was the first state treasurer of Kentucky.",
+            "Chonan languages\nThe Chonan languages were spoken in Tierra del Fuego and Patagonia. Two Chon languages are well attested: Selk'nam, spoken by the people of the same name who occupied territory in the northeast of Tierra del Fuego; and Tehuelche spoken by the people of the same name who occupied territory north of Tierra del Fuego. The name 'Chon', or \"Tshon\", is a blend of 'Tehuelche' and 'Ona'.",
+            "Australian Geography Competition\nThe Australian Geography Competition is an Australia-wide competition run by the Royal Geographic Society of Queensland and the Australian Geography Teachers Association and sponsored by the National Geographic Channel. It tests the geographic knowledge of high school students from years 8-12. It starts with a written multiple choice test in early March. In the under 16 competition the winners from each state & the territories (Australian Capital Territory, Northern Territory, Cocos Islands) are taken as well as a runner up who has the highest score after these winners. These people are flown to Sydney at the start of June for a weekend of sightseeing followed by the national final. The winners go on to the National Geographic World Championship to represent Australia. The competition is also used to select the members of the Australian team for the International Geography Olympiad."
+        ],
+        "thoughts": [
+            "Ulli Lommel was born on December 21, 1944, and passed away on December 2, 2017, at the age of 72.",
+            "Ulli Lommel spent the majority of his life in the USA, starting from 1977. This is evident from his extensive work in writing, directing, and starring in over 50 movies in the USA. Additionally, the film \"Revenge of the Stolen Stars\" is listed as an American film, further indicating his presence in the country. Therefore, it can be concluded that Ulli Lommel's primary residence was in the USA from 1977 until his passing.",
+            "Ulli Lommel lived in the USA from 1977 until his passing. This means he lived in the USA for a total of 43 years.",
+            "Benjamin Stoloff was born on October 6, 1895, and passed away on September 8, 1960, at the age of 64.",
+            "Benjamin Stoloff spent his entire life in the USA, as he was born in Philadelphia, Pennsylvania and died in Hollywood, California.",
+            "Benjamin Stoloff lived in the USA for his entire life.",
+            "Based on the information provided, Ulli Lommel lived in the USA for 43 years, while Benjamin Stoloff lived in the USA for his entire life. Since Benjamin Stoloff's entire life encompasses a longer period of time than 43 years, it can be determined that Benjamin Stoloff has lived longer in the USA than Ulli Lommel."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who has lived longer in the USA, Ulli Lommel or Benjamin Stoloff?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find information about the lifespan and time spent in the USA by Ulli Lommel.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find information about the lifespan and time spent in the USA by Benjamin Stoloff.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Calculate the length of time Ulli Lommel lived in the USA using the information from Node 1.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Calculate the length of time Benjamin Stoloff lived in the USA using the information from Node 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Compare the lengths of time Ulli Lommel and Benjamin Stoloff lived in the USA and determine who lived longer.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "This execution graph breaks down the question into a series of retrieval and reasoning steps. The process involves retrieving historical and biographical details about Ulli Lommel and Benjamin Stoloff to determine their total time lived in the USA. Nodes 1 and 2 are parallel retrieval tasks to gather necessary data on both individuals. Nodes 3 and 4 process this data to calculate their respective times spent in the USA. Finally, Node 5 draws a conclusion by comparing these durations to answer the original question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Ulli Lommel\nUlli Lommel (born 21 December 1944) is a German actor and director, noted for his many collaborations with Rainer Werner Fassbinder and his association with the New German Cinema movement. Lommel is also well known for the time which he spent at The Factory and as a creative associate of Andy Warhol, with whom he made several films and works of art. Since 1977 he has lived and worked in the USA, where he has written, directed and starred in over 50 movies.",
+            "Revenge of the Stolen Stars\nRevenge of the Stolen Stars is a 1985 American comedy fantasy film directed by Ulli Lommel and starring Klaus Kinski, Suzanna Love, Barry Hickey and Ulli Lommel.",
+            "Ludwig Manfred Lommel\nLudwig Manfred Lommel (1891\u20131962) was a German stage and film actor. He was the father of the actress Ruth Lommel and actor Ulli Lommel. His youngest son Manuel Lommel is a cinematographer.",
+            "Ruth Lommel\nRuth Lommel (1918\u20132012) was a German stage and film actress. She was the daughter of the actor Ludwig Manfred Lommel. Her brother Ulli Lommel also became an actor, while another brother Manuel Lommel is a cinematographer.",
+            "Daniel \u2013 Der Zauberer\nDaniel \u2013 Der Zauberer (translated: Daniel \u2013 The Wizard) is a German comedy-drama film written and directed by Ulli Lommel, starring pop singer Daniel K\u00fcblb\u00f6ck as himself. The film is considered to be one of the worst of all time.",
+            "D.C. Sniper\nD.C. Sniper is a 2010 American direct-to-video drama-thriller film directed by Ulli Lommel and written by Lommel and Ken Foree. It stars Foree, Christopher Kriesa and Maria Ochoa.",
+            "The Raven (2006 film)\nThe Raven is a 2006 American direct-to-video production horror film directed by Ulli Lommel and references the poem \"The Raven\" by Edgar Allan Poe. The DVD case cover art carries the title, \"Edgar Allan Poe's The Raven\".",
+            "Curse of the Zodiac\nCurse of the Zodiac is a 2007 American horror film from Lionsgate, written and directed by Ulli Lommel, inspired by the true story of the hunt for a notorious serial killer known as \"Zodiac\" who claimed responsibility for the still unsolved murders.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "Ulli Lommel was born on December 21, 1944, in Germany. He has lived and worked in the USA since 1977, where he has written, directed, and starred in over 50 movies. Some of his notable works include \"Revenge of the Stolen Stars\" (1985), \"Daniel \u2013 Der Zauberer\" (2004), \"D.C. Sniper\" (2010), \"The Raven\" (2006), and \"Curse of the Zodiac\" (2007). Ulli Lommel is also known for his collaborations with Rainer Werner Fassbinder and his association with the New German Cinema movement. He has also worked with Andy Warhol, with whom he made several films and works of art.",
+            "Ulli Lommel lived in the USA for 44 years (2021-1977).",
+            "There is no information available about the lifespan or time spent in the USA by Benjamin Stoloff in the provided text.",
+            "Based on the information provided in Node 2, there is no specific information available about the length of time Benjamin Stoloff lived in the USA. Therefore, it is not possible to calculate the exact length of time he spent in the USA based on the given information.",
+            "Ulli Lommel lived in the USA for 44 years, while there is no specific information available about the length of time Benjamin Stoloff lived in the USA. Therefore, based on the given information, Ulli Lommel lived longer in the USA."
+        ],
+        "is_best": false
+    }
+]

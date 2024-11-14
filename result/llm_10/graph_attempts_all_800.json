@@ -1,0 +1,861 @@
+[
+    {
+        "question": "Which type of character is featured by the P.L. Travers's third book and last novel in the \"Mary Poppins\" series?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the titles of the \"Mary Poppins\" series by P. L. Travers.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the order of publication for the books in the \"Mary Poppins\" series.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the title of the third book in the \"Mary Poppins\" series.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Find the title of the last novel in the \"Mary Poppins\" series.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Determine the type of character featured in the third book of the \"Mary Poppins\" series using its title.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Determine the type of character featured in the last novel of the \"Mary Poppins\" series using its title.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    },
+                    {
+                        "id": "7",
+                        "instruction": "Synthesize the character types featured in the third book and last novel of the \"Mary Poppins\" series to identify any overlapping or distinct characteristics.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "5",
+                            "6"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "7"
+            },
+            "explanation": "The graph begins with retrieving all titles of the \"Mary Poppins\" series by P. L. Travers (Node 1), then determines the order of publication to identify the third book and the last novel in the series (Node 2). Nodes 3 and 4 find the specific titles of the third book and last novel, respectively. Nodes 5 and 6 determine the type of character featured in each book using their titles. Finally, Node 7 synthesizes the character types to provide a comprehensive answer to the question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Mary Poppins Opens the Door\nMary Poppins Opens the Door is a British children's fantasy novel by the Australian-British writer P.L. Travers, the third book and last novel in the \"Mary Poppins\" series that features the magical English nanny Mary Poppins. It was published in 1943 by Harcourt, Brace & World, Inc and illustrated by Mary Shepard and Agnes Sims.",
+            "Mary Poppins (film)\nMary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers. The screenplay is by Bill Walsh and Don DaGradi, loosely based on P. L. Travers' book series \"Mary Poppins\". The film, which combines live-action and animation, stars Julie Andrews in the role of Mary Poppins who visits a dysfunctional family in London and employs her unique brand of lifestyle to improve the family's dynamic. Dick Van Dyke, David Tomlinson, and Glynis Johns are featured in supporting roles. The film was shot entirely at the Walt Disney Studios in Burbank, California using painted London background scenes.",
+            "Chim Chim Cher-ee\n\"Chim Chim Cher-ee\" is a song from \"Mary Poppins\", the 1964 musical motion picture. It was originally sung by Dick Van Dyke and Julie Andrews, and also is featured in the Cameron Mackintosh/Disney \"Mary Poppins\" musical. The song can be heard in the \"Mary Poppins\" scene of The Great Movie Ride at Disney's Hollywood Studios and during the \"Mary Poppins\" segment of \"\" at Disneyland.",
+            "P. L. Travers\nPamela Lyndon Travers, OBE ( ; born Helen Lyndon Goff; 9 August 1899 \u2013 23 April 1996) was an Australian-born writer who spent most of her career in England. She is best known for the \"Mary Poppins\" series of children's books, which feature the magical nanny Mary Poppins.",
+            "Mary Poppins (character)\nMary Poppins is a fictional character and the eponymous protagonist of P. L. Travers' \"Mary Poppins\" books and all of their adaptations. A magical English nanny, she blows in on the East Wind and arrives at the Banks home at Number Seventeen Cherry Tree Lane, London, where she is given charge of the Banks children and teaches them valuable lessons with a magical touch. Travers gives Poppins the accent and vocabulary of a real London nanny: cockney base notes overlaid with a strangled gentility.",
+            "Mary Poppins (disambiguation)\n\"Mary Poppins\" is a series of children's books written by P.L. Travers.",
+            "Mary Poppins, Goodbye\nMary Poppins, Goodbye (Russian: \u041c\u044d\u0440\u0438 \u041f\u043e\u043f\u043f\u0438\u043d\u0441, \u0434\u043e \u0441\u0432\u0438\u0434\u0430\u043d\u0438\u044f! ; translit.\u00a0\"Meri Poppins, do svidaniya\") is a Soviet 1983 two-part musical miniseries (part 1 \"Lady Perfection\", part 2 \"Week ends on Wednesday\"), directed by Leonid Kvinikhidze. It is loosely based on Mary Poppins stories by P. L. Travers. The TV series were ordered by the Gosteleradio of USSR and produced by Mosfilm. The official television premiere was on January 8, 1984.",
+            "Mary Poppins (musical)\nMary Poppins is a musical with music and lyrics by the Sherman Brothers, with additional music and lyrics by George Stiles and Anthony Drewe, and a script by Julian Fellowes. The musical is based on the similarly titled Mary Poppins children's books by P. L. Travers and the 1964 Disney film, and is a fusion of various elements from the two.",
+            "Mary Shepard\nMary Eleanor Jessie Knox n\u00e9e Shepard (25 December 1909 \u2013 4 September 2000) was an English illustrator of children's books. She is best known for the \"Mary Poppins\" stories written by P. L. Travers (1934 to 1988): \"Mary Shepard: Putting Mary Poppins in the picture\", \"The Times\" of London titled an obituary article. She used her married name Mary Knox outside the publishing industry.",
+            "Mary Poppins Returns\nMary Poppins Returns (also known as Mary Poppins 2) is an upcoming American musical fantasy film directed by Rob Marshall and written by David Magee. It is the sequel to the 1964 film \"Mary Poppins\". The film stars Emily Blunt, Lin-Manuel Miranda, Ben Whishaw, Emily Mortimer, Pixie Davies, Joel Dawson, Nathanael Saleh, Julie Walters, Colin Firth, Dick Van Dyke and Meryl Streep. Set 25 years after the 1964 film, it will feature Mary Poppins, the former nanny of Jane and Michael Banks, re-visiting them after a family tragedy. The film is scheduled for release on December 25, 2018, giving it one of the longest gaps between film sequels in history.",
+            "Cherry Tree Lane\nCherry Tree Lane is a 2010 British urban dramatic real-time horror-thriller film, written and directed by Paul Andrew Williams.",
+            "Mary Poppins (song)\n\"Mary Poppins\" is a song from the 2015 stage musical \"Love Birds\" with music and lyrics by Robert J. Sherman. It is sung by \"The Original Quack Pack\", a penguin barbershop quartet who resemble the penguins from the 1964 Walt Disney motion picture, \"Mary Poppins\". In dialogue leading up to the song, the penguins explain that while they did know the same nanny, (Mary Poppins) they are not the same penguins as in the movie. The song expresses their longing for the magical nanny of literary fame."
+        ],
+        "thoughts": [
+            "1. Mary Poppins\n2. Mary Poppins Opens the Door",
+            "1. Mary Poppins (1934)\n2. Mary Poppins Comes Back (1935)\n3. Mary Poppins Opens the Door (1943)\n4. Mary Poppins in the Park (1952)\n5. Mary Poppins From A to Z (1962)\n6. Mary Poppins in the Kitchen (1975)\n7. Mary Poppins in Cherry Tree Lane (1982)",
+            "The title of the third book in the \"Mary Poppins\" series is \"Mary Poppins Opens the Door\" (1943).",
+            "The type of character featured in the third book of the \"Mary Poppins\" series is a magical English nanny named Mary Poppins.",
+            "The title of the last novel in the \"Mary Poppins\" series is \"Mary Poppins in Cherry Tree Lane\" (1982).",
+            "The last novel in the \"Mary Poppins\" series is titled \"Mary Poppins Opens the Door\", indicating that the character featured in this novel is Mary Poppins, the magical English nanny.",
+            "The character type featured in both the third book and the last novel of the \"Mary Poppins\" series is the magical English nanny, Mary Poppins. This character is known for her unique blend of sternness and warmth, her ability to perform magical feats, and her mysterious and enigmatic nature. These characteristics are consistent throughout the series, making Mary Poppins a distinct and consistent character type in the books."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which type of character is featured by the P.L. Travers's third book and last novel in the \"Mary Poppins\" series?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the list of books in the 'Mary Poppins' series by P.L. Travers.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which book is the third in the series from the list identified previously.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which book is the last novel in the series from the list identified previously.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the type of characters featured in the third book identified.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Identify the type of characters featured in the last novel identified.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "To answer the question about the type of character featured by the third book and the last novel in the \"Mary Poppins\" series, we start by listing all the books in the series. We then identify the third book and the last novel within the series separately. Finally, for each identified book, we gather information about the type of characters featured in them. This approach ensures that both parts of the question are addressed: identifying the specific books and determining the type of character featured in them."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Mary Poppins (character)\nMary Poppins is a fictional character and the eponymous protagonist of P. L. Travers' \"Mary Poppins\" books and all of their adaptations. A magical English nanny, she blows in on the East Wind and arrives at the Banks home at Number Seventeen Cherry Tree Lane, London, where she is given charge of the Banks children and teaches them valuable lessons with a magical touch. Travers gives Poppins the accent and vocabulary of a real London nanny: cockney base notes overlaid with a strangled gentility.",
+            "Cherry Tree Lane\nCherry Tree Lane is a 2010 British urban dramatic real-time horror-thriller film, written and directed by Paul Andrew Williams.",
+            "Mary Poppins Opens the Door\nMary Poppins Opens the Door is a British children's fantasy novel by the Australian-British writer P.L. Travers, the third book and last novel in the \"Mary Poppins\" series that features the magical English nanny Mary Poppins. It was published in 1943 by Harcourt, Brace & World, Inc and illustrated by Mary Shepard and Agnes Sims.",
+            "Chim Chim Cher-ee\n\"Chim Chim Cher-ee\" is a song from \"Mary Poppins\", the 1964 musical motion picture. It was originally sung by Dick Van Dyke and Julie Andrews, and also is featured in the Cameron Mackintosh/Disney \"Mary Poppins\" musical. The song can be heard in the \"Mary Poppins\" scene of The Great Movie Ride at Disney's Hollywood Studios and during the \"Mary Poppins\" segment of \"\" at Disneyland.",
+            "Mary Poppins (film)\nMary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers. The screenplay is by Bill Walsh and Don DaGradi, loosely based on P. L. Travers' book series \"Mary Poppins\". The film, which combines live-action and animation, stars Julie Andrews in the role of Mary Poppins who visits a dysfunctional family in London and employs her unique brand of lifestyle to improve the family's dynamic. Dick Van Dyke, David Tomlinson, and Glynis Johns are featured in supporting roles. The film was shot entirely at the Walt Disney Studios in Burbank, California using painted London background scenes.",
+            "Mary Poppins (disambiguation)\n\"Mary Poppins\" is a series of children's books written by P.L. Travers.",
+            "Mary Poppins Returns\nMary Poppins Returns (also known as Mary Poppins 2) is an upcoming American musical fantasy film directed by Rob Marshall and written by David Magee. It is the sequel to the 1964 film \"Mary Poppins\". The film stars Emily Blunt, Lin-Manuel Miranda, Ben Whishaw, Emily Mortimer, Pixie Davies, Joel Dawson, Nathanael Saleh, Julie Walters, Colin Firth, Dick Van Dyke and Meryl Streep. Set 25 years after the 1964 film, it will feature Mary Poppins, the former nanny of Jane and Michael Banks, re-visiting them after a family tragedy. The film is scheduled for release on December 25, 2018, giving it one of the longest gaps between film sequels in history.",
+            "Mary Poppins (song)\n\"Mary Poppins\" is a song from the 2015 stage musical \"Love Birds\" with music and lyrics by Robert J. Sherman. It is sung by \"The Original Quack Pack\", a penguin barbershop quartet who resemble the penguins from the 1964 Walt Disney motion picture, \"Mary Poppins\". In dialogue leading up to the song, the penguins explain that while they did know the same nanny, (Mary Poppins) they are not the same penguins as in the movie. The song expresses their longing for the magical nanny of literary fame.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Martemyan Ryutin\nMartemyan Nikitich Ryutin (Russian: \u041c\u0430\u0440\u0442\u0435\u043c\u044c\u044f\u0301\u043d \u041d\u0438\u043a\u0438\u0301\u0442\u0438\u0447 \u0420\u044e\u0301\u0442\u0438\u043d ) (1890\u20131937) was a Russian Marxist revolutionary, and a political functionary of the Russian Communist Party. Ryutin is best remembered as the leader of a pro-peasant political faction organized against Soviet leader Joseph Stalin in the early 1930s and as the primary author of a 200-page oppositional platform. Ryutin was arrested by the Soviet secret police, along with his co-thinkers, in what has come to be known as the Ryutin Affair. He was executed in January 1937 as part of the Yezhovshchina (Great Purge) conducted against political oppositionists and suspected economic \"wreckers\" and spies.",
+            "Operation Dragoon\nOperation Dragoon (initially Operation Anvil) was the code name for the Allied invasion of Southern France on 15August 1944. The operation was initially planned to be executed in conjunction with Operation Overlord, the Allied landing in the Normandy, but the lack of available resources led to a cancellation of the second landing. By July 1944 the landing was reconsidered, as the clogged-up ports in Normandy did not have the capacity to adequately supply the Allied forces. Concurrently, the French High Command pushed for a revival of the operation that would include large numbers of French troops. As a result, the operation was finally approved in July to be executed in August.",
+            "Louise Peete\nLouise Peete (September 20, 1880 \u2013 April 11, 1947) was a convicted American murderer. Peete was first convicted of murdering wealthy mining engineer Jacob C. Denton in 1920 and was sentenced to life in prison. She was paroled in April 1939. In May 1945, she was convicted of murdering her employer, Margaret Logan, and sentenced to death. She was executed in April 1947 making her the second, and one of only four women, to be executed in the California gas chamber.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Mission patch\nA mission patch is a cloth reproduction of a spaceflight mission emblem worn by astronauts and other personnel affiliated with that mission. It is usually executed as an embroidered patch. The term space patch is mostly applied to an emblem designed for a manned space mission. Traditionally, the patch is worn on the space suit that astronauts and cosmonauts wear when launched into space. Mission patches have been adopted by the crew and personnel of many other space ventures, public and private.",
+            "Chess problem\nA chess problem, also called a chess composition, is a puzzle set by somebody using chess pieces on a chess board, that presents the solver with a particular task to be achieved. For instance, a position might be given with the instruction that White is to move first, and checkmate Black in two moves against any possible defense. A person who creates such problems is known as a composer. There is a good deal of specialized jargon used in connection with chess problems; see glossary of chess problems for a list.",
+            "William Kidd\nWilliam Kidd, also \"Captain William Kidd\" or simply \"Captain Kidd\" (c.1654 \u2013 23 May 1701) was a Scottish sailor who was tried and executed for piracy after returning from a voyage to the Indian Ocean. Some modern historians deem his piratical reputation unjust."
+        ],
+        "thoughts": [
+            "The 'Mary Poppins' series by P.L. Travers includes the following books:\n1. Mary Poppins (1934)\n2. Mary Poppins Comes Back (1935)\n3. Mary Poppins Opens the Door (1943)\n4. Mary Poppins in the Park (1952)\n5. Mary Poppins from A to Z (1962)\n6. Mary Poppins in the Kitchen (1975)\n7. Mary Poppins in Cherry Tree Lane (1982)",
+            "The last novel in the 'Mary Poppins' series is \"Mary Poppins in Cherry Tree Lane\" (1982).",
+            "The last novel identified, \"Mary Poppins Opens the Door,\" features magical and fantastical characters such as Mary Poppins herself, who is a magical English nanny with the ability to teach valuable lessons with a touch of magic."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which type of character is featured by the P.L. Travers's third book and last novel in the \"Mary Poppins\" series?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the complete list of books in the 'Mary Poppins' series by P.L. Travers.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the order of publication for the 'Mary Poppins' series.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the third book in the series based on the order of publication.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the last novel in the series based on the order of publication.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "For the third book, find out the type of character that is featured.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "For the last novel, find out the type of character that is featured.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    },
+                    {
+                        "id": "7",
+                        "instruction": "Compare the types of characters featured in the third book and the last novel to determine if they are the same or different.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "5",
+                            "6"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "7"
+            },
+            "explanation": "To determine the type of characters featured in the third book and the last novel in the 'Mary Poppins' series by P.L. Travers, we first retrieve the list of books and determine their order. After identifying both the third book and the last novel, we independently find character types in each and finally compare these types to answer the question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Mary Poppins (disambiguation)\n\"Mary Poppins\" is a series of children's books written by P.L. Travers.",
+            "Mary Poppins Opens the Door\nMary Poppins Opens the Door is a British children's fantasy novel by the Australian-British writer P.L. Travers, the third book and last novel in the \"Mary Poppins\" series that features the magical English nanny Mary Poppins. It was published in 1943 by Harcourt, Brace & World, Inc and illustrated by Mary Shepard and Agnes Sims.",
+            "P. L. Travers\nPamela Lyndon Travers, OBE ( ; born Helen Lyndon Goff; 9 August 1899 \u2013 23 April 1996) was an Australian-born writer who spent most of her career in England. She is best known for the \"Mary Poppins\" series of children's books, which feature the magical nanny Mary Poppins.",
+            "Mary Poppins (character)\nMary Poppins is a fictional character and the eponymous protagonist of P. L. Travers' \"Mary Poppins\" books and all of their adaptations. A magical English nanny, she blows in on the East Wind and arrives at the Banks home at Number Seventeen Cherry Tree Lane, London, where she is given charge of the Banks children and teaches them valuable lessons with a magical touch. Travers gives Poppins the accent and vocabulary of a real London nanny: cockney base notes overlaid with a strangled gentility.",
+            "Mary Poppins (musical)\nMary Poppins is a musical with music and lyrics by the Sherman Brothers, with additional music and lyrics by George Stiles and Anthony Drewe, and a script by Julian Fellowes. The musical is based on the similarly titled Mary Poppins children's books by P. L. Travers and the 1964 Disney film, and is a fusion of various elements from the two.",
+            "Mary Shepard\nMary Eleanor Jessie Knox n\u00e9e Shepard (25 December 1909 \u2013 4 September 2000) was an English illustrator of children's books. She is best known for the \"Mary Poppins\" stories written by P. L. Travers (1934 to 1988): \"Mary Shepard: Putting Mary Poppins in the picture\", \"The Times\" of London titled an obituary article. She used her married name Mary Knox outside the publishing industry.",
+            "Mary Poppins, Goodbye\nMary Poppins, Goodbye (Russian: \u041c\u044d\u0440\u0438 \u041f\u043e\u043f\u043f\u0438\u043d\u0441, \u0434\u043e \u0441\u0432\u0438\u0434\u0430\u043d\u0438\u044f! ; translit.\u00a0\"Meri Poppins, do svidaniya\") is a Soviet 1983 two-part musical miniseries (part 1 \"Lady Perfection\", part 2 \"Week ends on Wednesday\"), directed by Leonid Kvinikhidze. It is loosely based on Mary Poppins stories by P. L. Travers. The TV series were ordered by the Gosteleradio of USSR and produced by Mosfilm. The official television premiere was on January 8, 1984.",
+            "Mary Poppins (film)\nMary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers. The screenplay is by Bill Walsh and Don DaGradi, loosely based on P. L. Travers' book series \"Mary Poppins\". The film, which combines live-action and animation, stars Julie Andrews in the role of Mary Poppins who visits a dysfunctional family in London and employs her unique brand of lifestyle to improve the family's dynamic. Dick Van Dyke, David Tomlinson, and Glynis Johns are featured in supporting roles. The film was shot entirely at the Walt Disney Studios in Burbank, California using painted London background scenes.",
+            "Chim Chim Cher-ee\n\"Chim Chim Cher-ee\" is a song from \"Mary Poppins\", the 1964 musical motion picture. It was originally sung by Dick Van Dyke and Julie Andrews, and also is featured in the Cameron Mackintosh/Disney \"Mary Poppins\" musical. The song can be heard in the \"Mary Poppins\" scene of The Great Movie Ride at Disney's Hollywood Studios and during the \"Mary Poppins\" segment of \"\" at Disneyland.",
+            "Codename: Kids Next Door\nCodename: Kids Next Door, commonly abbreviated to Kids Next Door or KND, is an American animated television series created by Tom Warburton for Cartoon Network, and the 13th of the network's \"Cartoon Cartoons\". The series centers on the adventures of five children who operate from a high-tech tree house, fighting against adult and teen villains with advanced 2\u00d74 technology. Using their codenames (Numbuh 1, Numbuh 2, Numbuh 3, Numbuh 4, and Numbuh 5), they are Sector V, part of a global organization called the Kids Next Door.",
+            "Mary Poppins Returns\nMary Poppins Returns (also known as Mary Poppins 2) is an upcoming American musical fantasy film directed by Rob Marshall and written by David Magee. It is the sequel to the 1964 film \"Mary Poppins\". The film stars Emily Blunt, Lin-Manuel Miranda, Ben Whishaw, Emily Mortimer, Pixie Davies, Joel Dawson, Nathanael Saleh, Julie Walters, Colin Firth, Dick Van Dyke and Meryl Streep. Set 25 years after the 1964 film, it will feature Mary Poppins, the former nanny of Jane and Michael Banks, re-visiting them after a family tragedy. The film is scheduled for release on December 25, 2018, giving it one of the longest gaps between film sequels in history."
+        ],
+        "thoughts": [
+            "The complete list of books in the 'Mary Poppins' series by P.L. Travers includes:\n\n1. Mary Poppins (1934)\n2. Mary Poppins Comes Back (1935)\n3. Mary Poppins Opens the Door (1943)\n4. Mary Poppins in the Park (1952)\n5. Mary Poppins From A to Z (1962)\n6. Mary Poppins in the Kitchen (1975)\n7. Mary Poppins in Cherry Tree Lane (1982)\n8. Mary Poppins and the House Next Door (1988)",
+            "The order of publication for the 'Mary Poppins' series is as follows:\n\n1. Mary Poppins (1934)\n2. Mary Poppins Comes Back (1935)\n3. Mary Poppins Opens the Door (1943)\n4. Mary Poppins in the Park (1952)\n5. Mary Poppins From A to Z (1962)\n6. Mary Poppins in the Kitchen (1975)\n7. Mary Poppins in Cherry Tree Lane (1982)\n8. Mary Poppins and the House Next Door (1988)",
+            "The third book in the 'Mary Poppins' series based on the order of publication is \"Mary Poppins Opens the Door\" (1943).",
+            "The type of character featured in the third book \"Mary Poppins Opens the Door\" is the magical English nanny Mary Poppins. She is the eponymous protagonist of the \"Mary Poppins\" series and is known for her unique brand of lifestyle and magical touch, teaching valuable lessons to the Banks children with her magical abilities.",
+            "Based on the order of publication, the last novel in the 'Mary Poppins' series is \"Mary Poppins and the House Next Door\" (1988).",
+            "The type of character featured in the last novel \"Mary Poppins Opens the Door\" is a magical English nanny named Mary Poppins. She is the eponymous protagonist of P.L. Travers' \"Mary Poppins\" books and is known for her unique brand of lifestyle and her ability to teach valuable lessons to the Banks children with a magical touch.",
+            "The types of characters featured in the third book \"Mary Poppins Opens the Door\" and the last novel are the same. Both feature the magical English nanny Mary Poppins as the eponymous protagonist, known for her unique lifestyle and magical abilities to teach valuable lessons to the Banks children."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which type of character is featured by the P.L. Travers's third book and last novel in the \"Mary Poppins\" series?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify all books in the 'Mary Poppins' series by P.L. Travers in chronological order.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the title of the third book in the 'Mary Poppins' series.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the title of the last novel in the 'Mary Poppins' series.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the type of character featured in 'Mary Poppins Opens the Door' (third book).",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Identify the type of character featured in 'Mary Poppins and the House Next Door' (last novel).",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Compile the information about the type of character featured in both the third book and the last novel of the 'Mary Poppins' series.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4",
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "The execution graph is constructed to first identify all books in the 'Mary Poppins' series to establish a timeline. Subsequent steps focus on identifying the third book and last novel as specified in the question. The nodes then execute retrieval and reasoning to find what specific characters are featured in these books, ensuring complete coverage to answer the character type features for both the specified books. Finally, the information is synthesized to provide a comprehensive answer."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Mary Poppins (disambiguation)\n\"Mary Poppins\" is a series of children's books written by P.L. Travers.",
+            "Mary Poppins Opens the Door\nMary Poppins Opens the Door is a British children's fantasy novel by the Australian-British writer P.L. Travers, the third book and last novel in the \"Mary Poppins\" series that features the magical English nanny Mary Poppins. It was published in 1943 by Harcourt, Brace & World, Inc and illustrated by Mary Shepard and Agnes Sims.",
+            "Mary Poppins (character)\nMary Poppins is a fictional character and the eponymous protagonist of P. L. Travers' \"Mary Poppins\" books and all of their adaptations. A magical English nanny, she blows in on the East Wind and arrives at the Banks home at Number Seventeen Cherry Tree Lane, London, where she is given charge of the Banks children and teaches them valuable lessons with a magical touch. Travers gives Poppins the accent and vocabulary of a real London nanny: cockney base notes overlaid with a strangled gentility.",
+            "P. L. Travers\nPamela Lyndon Travers, OBE ( ; born Helen Lyndon Goff; 9 August 1899 \u2013 23 April 1996) was an Australian-born writer who spent most of her career in England. She is best known for the \"Mary Poppins\" series of children's books, which feature the magical nanny Mary Poppins.",
+            "Mary Poppins (musical)\nMary Poppins is a musical with music and lyrics by the Sherman Brothers, with additional music and lyrics by George Stiles and Anthony Drewe, and a script by Julian Fellowes. The musical is based on the similarly titled Mary Poppins children's books by P. L. Travers and the 1964 Disney film, and is a fusion of various elements from the two.",
+            "Mary Shepard\nMary Eleanor Jessie Knox n\u00e9e Shepard (25 December 1909 \u2013 4 September 2000) was an English illustrator of children's books. She is best known for the \"Mary Poppins\" stories written by P. L. Travers (1934 to 1988): \"Mary Shepard: Putting Mary Poppins in the picture\", \"The Times\" of London titled an obituary article. She used her married name Mary Knox outside the publishing industry.",
+            "Mary Poppins, Goodbye\nMary Poppins, Goodbye (Russian: \u041c\u044d\u0440\u0438 \u041f\u043e\u043f\u043f\u0438\u043d\u0441, \u0434\u043e \u0441\u0432\u0438\u0434\u0430\u043d\u0438\u044f! ; translit.\u00a0\"Meri Poppins, do svidaniya\") is a Soviet 1983 two-part musical miniseries (part 1 \"Lady Perfection\", part 2 \"Week ends on Wednesday\"), directed by Leonid Kvinikhidze. It is loosely based on Mary Poppins stories by P. L. Travers. The TV series were ordered by the Gosteleradio of USSR and produced by Mosfilm. The official television premiere was on January 8, 1984.",
+            "Cherry Tree Lane\nCherry Tree Lane is a 2010 British urban dramatic real-time horror-thriller film, written and directed by Paul Andrew Williams.",
+            "Mary Poppins (film)\nMary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers. The screenplay is by Bill Walsh and Don DaGradi, loosely based on P. L. Travers' book series \"Mary Poppins\". The film, which combines live-action and animation, stars Julie Andrews in the role of Mary Poppins who visits a dysfunctional family in London and employs her unique brand of lifestyle to improve the family's dynamic. Dick Van Dyke, David Tomlinson, and Glynis Johns are featured in supporting roles. The film was shot entirely at the Walt Disney Studios in Burbank, California using painted London background scenes.",
+            "Chim Chim Cher-ee\n\"Chim Chim Cher-ee\" is a song from \"Mary Poppins\", the 1964 musical motion picture. It was originally sung by Dick Van Dyke and Julie Andrews, and also is featured in the Cameron Mackintosh/Disney \"Mary Poppins\" musical. The song can be heard in the \"Mary Poppins\" scene of The Great Movie Ride at Disney's Hollywood Studios and during the \"Mary Poppins\" segment of \"\" at Disneyland.",
+            "Mary Poppins Returns\nMary Poppins Returns (also known as Mary Poppins 2) is an upcoming American musical fantasy film directed by Rob Marshall and written by David Magee. It is the sequel to the 1964 film \"Mary Poppins\". The film stars Emily Blunt, Lin-Manuel Miranda, Ben Whishaw, Emily Mortimer, Pixie Davies, Joel Dawson, Nathanael Saleh, Julie Walters, Colin Firth, Dick Van Dyke and Meryl Streep. Set 25 years after the 1964 film, it will feature Mary Poppins, the former nanny of Jane and Michael Banks, re-visiting them after a family tragedy. The film is scheduled for release on December 25, 2018, giving it one of the longest gaps between film sequels in history.",
+            "Mary Poppins (song)\n\"Mary Poppins\" is a song from the 2015 stage musical \"Love Birds\" with music and lyrics by Robert J. Sherman. It is sung by \"The Original Quack Pack\", a penguin barbershop quartet who resemble the penguins from the 1964 Walt Disney motion picture, \"Mary Poppins\". In dialogue leading up to the song, the penguins explain that while they did know the same nanny, (Mary Poppins) they are not the same penguins as in the movie. The song expresses their longing for the magical nanny of literary fame."
+        ],
+        "thoughts": [
+            "1. Mary Poppins (1934)\n2. Mary Poppins Comes Back (1935)\n3. Mary Poppins Opens the Door (1943)\n4. Mary Poppins in the Park (1952)\n5. Mary Poppins From A to Z (1962)\n6. Mary Poppins in the Kitchen (1975)\n7. Mary Poppins in Cherry Tree Lane (1982)",
+            "The title of the third book in the 'Mary Poppins' series is \"Mary Poppins Opens the Door\" (1943).",
+            "The type of character featured in 'Mary Poppins Opens the Door' is a magical English nanny named Mary Poppins. She is the eponymous protagonist of P.L. Travers' \"Mary Poppins\" books and all of their adaptations, known for her unique brand of lifestyle and ability to teach valuable lessons with a magical touch.",
+            "The title of the last novel in the 'Mary Poppins' series is \"Mary Poppins in Cherry Tree Lane\" (1982).",
+            "The type of character featured in 'Mary Poppins and the House Next Door' is a magical English nanny named Mary Poppins. She is known for her unique brand of lifestyle and her ability to teach valuable lessons with a magical touch.",
+            "In both the third book, 'Mary Poppins Opens the Door', and the last novel, 'Mary Poppins and the House Next Door', the type of character featured is a magical English nanny named Mary Poppins. She is known for her unique brand of lifestyle and her ability to teach valuable lessons with a magical touch."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which type of character is featured by the P.L. Travers's third book and last novel in the \"Mary Poppins\" series?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the list of books in the 'Mary Poppins' series by P.L. Travers.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the order of the books identified in the Mary Poppins series.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the third book in the Mary Poppins series based on its order.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the last novel in the Mary Poppins series based on its order.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Retrieve and analyze the plot description or character list from the third book in the series to identify the type of main character featured.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Retrieve and analyze the plot description or character list from the last novel in the series to identify the type of main character featured.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    },
+                    {
+                        "id": "7",
+                        "instruction": "Synthesize information from the descriptions of both the third book and the last novel to identify the type of character featured in both.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "5",
+                            "6"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "7"
+            },
+            "explanation": "The question requires identifying the type of character featured in both the third book and the last novel of the 'Mary Poppins' series by P.L. Travers. The execution graph begins by retrieving a list of books in the series. Then, by determining the order, it identifies which books are the third and the last in the series. Each book is then analyzed for character types, and finally, information is synthesized to determine the type of character featured in both the specified books."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Mary Poppins Opens the Door\nMary Poppins Opens the Door is a British children's fantasy novel by the Australian-British writer P.L. Travers, the third book and last novel in the \"Mary Poppins\" series that features the magical English nanny Mary Poppins. It was published in 1943 by Harcourt, Brace & World, Inc and illustrated by Mary Shepard and Agnes Sims.",
+            "Mary Poppins (character)\nMary Poppins is a fictional character and the eponymous protagonist of P. L. Travers' \"Mary Poppins\" books and all of their adaptations. A magical English nanny, she blows in on the East Wind and arrives at the Banks home at Number Seventeen Cherry Tree Lane, London, where she is given charge of the Banks children and teaches them valuable lessons with a magical touch. Travers gives Poppins the accent and vocabulary of a real London nanny: cockney base notes overlaid with a strangled gentility.",
+            "Cherry Tree Lane\nCherry Tree Lane is a 2010 British urban dramatic real-time horror-thriller film, written and directed by Paul Andrew Williams.",
+            "Mary Poppins (film)\nMary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers. The screenplay is by Bill Walsh and Don DaGradi, loosely based on P. L. Travers' book series \"Mary Poppins\". The film, which combines live-action and animation, stars Julie Andrews in the role of Mary Poppins who visits a dysfunctional family in London and employs her unique brand of lifestyle to improve the family's dynamic. Dick Van Dyke, David Tomlinson, and Glynis Johns are featured in supporting roles. The film was shot entirely at the Walt Disney Studios in Burbank, California using painted London background scenes.",
+            "Chim Chim Cher-ee\n\"Chim Chim Cher-ee\" is a song from \"Mary Poppins\", the 1964 musical motion picture. It was originally sung by Dick Van Dyke and Julie Andrews, and also is featured in the Cameron Mackintosh/Disney \"Mary Poppins\" musical. The song can be heard in the \"Mary Poppins\" scene of The Great Movie Ride at Disney's Hollywood Studios and during the \"Mary Poppins\" segment of \"\" at Disneyland.",
+            "Snapper Carr\nLucas \"Snapper\" Carr is a fictional character appearing in American comic books published by DC Comics. The character, whose fictional nickname is almost always used by other characters in favor of his given name, was created by Gardner Fox (writer) and Mike Sekowsky (penciller), and made his first appearance in \"The Brave and the Bold\" in February 1960. From 1960 to 1969, Snapper Carr appeared as a supporting character to the Justice League of America, a superhero team. The character occasionally appeared in comics featuring the Justice League from 1969 to 1989, when the \"Invasion!\" limited-series comic book gave him superpowers. He was associated with a new superhero team, The Blasters, in various comics until 1993, when he lost his powers and became a main character in the \"Hourman\" comic book. After the cancellation of \"Hourman\" in April 2001, he became a main character in the \"Young Justice\" comic book beginning in December 2001. \"Young Justice\" was cancelled in May 2003, and he became associated with the governmental organization Checkmate, a role revealed when the character played a small but important role in the 2007-2008 limited series comic book \"52 Aftermath: The Four Horsemen\". The character made major appearances in \"Final Crisis: Resist\" in December 2008 and \"Justice League of America 80-Page Giant\" in November 2009.",
+            "Hit-Girl\nHit-Girl (Mindy McCready (comic) or Macready (film)) is a fictional character appearing in the \"Kick-Ass\" series, published by Marvel Comics under the company's imprint Icon Comics. The character was created by artist John Romita, Jr. and writer Mark Millar. She is a young but effective vigilante, trained by her father Damon McCready (a.k.a. Big Daddy) from an early age to be a costumed superhero and assassin. In \"Kick-Ass\", she is introduced as a supporting character. She featured in her own self-titled comic book series, \"Hit-Girl\", which was first published on 27 June 2012. She is portrayed by Chlo\u00eb Grace Moretz in the feature film adaptations \"Kick-Ass\" and \"Kick Ass 2\".",
+            "Mary Poppins (song)\n\"Mary Poppins\" is a song from the 2015 stage musical \"Love Birds\" with music and lyrics by Robert J. Sherman. It is sung by \"The Original Quack Pack\", a penguin barbershop quartet who resemble the penguins from the 1964 Walt Disney motion picture, \"Mary Poppins\". In dialogue leading up to the song, the penguins explain that while they did know the same nanny, (Mary Poppins) they are not the same penguins as in the movie. The song expresses their longing for the magical nanny of literary fame.",
+            "Candace Flynn\nCandace Gertrude Flynn is a main character of the Disney Channel animated television series \"Phineas and Ferb\", voiced by Ashley Tisdale and created and designed by Dan Povenmire. She first appeared in the series' pilot episode along with the other main characters who star in the A-Plot.",
+            "Angels (Denis Johnson novel)\nAngels is a 1983 novel by American author Denis Johnson. It was Johnson's first novel; previously, he had published several books of poetry. Alice Hoffman, writing for the \"New York Times\", referred to the novel as \"a mixture of poetry and obscenity\". A character from \"Angels\", Bill Houston, also appears in Johnson's 2007 novel \"Tree of Smoke\". In 1999, David Foster Wallace included the novel on his list of overlooked American books published after 1960.",
+            "Mary Poppins (disambiguation)\n\"Mary Poppins\" is a series of children's books written by P.L. Travers.",
+            "Mary Poppins Returns\nMary Poppins Returns (also known as Mary Poppins 2) is an upcoming American musical fantasy film directed by Rob Marshall and written by David Magee. It is the sequel to the 1964 film \"Mary Poppins\". The film stars Emily Blunt, Lin-Manuel Miranda, Ben Whishaw, Emily Mortimer, Pixie Davies, Joel Dawson, Nathanael Saleh, Julie Walters, Colin Firth, Dick Van Dyke and Meryl Streep. Set 25 years after the 1964 film, it will feature Mary Poppins, the former nanny of Jane and Michael Banks, re-visiting them after a family tragedy. The film is scheduled for release on December 25, 2018, giving it one of the longest gaps between film sequels in history.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Martemyan Ryutin\nMartemyan Nikitich Ryutin (Russian: \u041c\u0430\u0440\u0442\u0435\u043c\u044c\u044f\u0301\u043d \u041d\u0438\u043a\u0438\u0301\u0442\u0438\u0447 \u0420\u044e\u0301\u0442\u0438\u043d ) (1890\u20131937) was a Russian Marxist revolutionary, and a political functionary of the Russian Communist Party. Ryutin is best remembered as the leader of a pro-peasant political faction organized against Soviet leader Joseph Stalin in the early 1930s and as the primary author of a 200-page oppositional platform. Ryutin was arrested by the Soviet secret police, along with his co-thinkers, in what has come to be known as the Ryutin Affair. He was executed in January 1937 as part of the Yezhovshchina (Great Purge) conducted against political oppositionists and suspected economic \"wreckers\" and spies.",
+            "Operation Dragoon\nOperation Dragoon (initially Operation Anvil) was the code name for the Allied invasion of Southern France on 15August 1944. The operation was initially planned to be executed in conjunction with Operation Overlord, the Allied landing in the Normandy, but the lack of available resources led to a cancellation of the second landing. By July 1944 the landing was reconsidered, as the clogged-up ports in Normandy did not have the capacity to adequately supply the Allied forces. Concurrently, the French High Command pushed for a revival of the operation that would include large numbers of French troops. As a result, the operation was finally approved in July to be executed in August.",
+            "Louise Peete\nLouise Peete (September 20, 1880 \u2013 April 11, 1947) was a convicted American murderer. Peete was first convicted of murdering wealthy mining engineer Jacob C. Denton in 1920 and was sentenced to life in prison. She was paroled in April 1939. In May 1945, she was convicted of murdering her employer, Margaret Logan, and sentenced to death. She was executed in April 1947 making her the second, and one of only four women, to be executed in the California gas chamber.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Mission patch\nA mission patch is a cloth reproduction of a spaceflight mission emblem worn by astronauts and other personnel affiliated with that mission. It is usually executed as an embroidered patch. The term space patch is mostly applied to an emblem designed for a manned space mission. Traditionally, the patch is worn on the space suit that astronauts and cosmonauts wear when launched into space. Mission patches have been adopted by the crew and personnel of many other space ventures, public and private.",
+            "Chess problem\nA chess problem, also called a chess composition, is a puzzle set by somebody using chess pieces on a chess board, that presents the solver with a particular task to be achieved. For instance, a position might be given with the instruction that White is to move first, and checkmate Black in two moves against any possible defense. A person who creates such problems is known as a composer. There is a good deal of specialized jargon used in connection with chess problems; see glossary of chess problems for a list.",
+            "William Kidd\nWilliam Kidd, also \"Captain William Kidd\" or simply \"Captain Kidd\" (c.1654 \u2013 23 May 1701) was a Scottish sailor who was tried and executed for piracy after returning from a voyage to the Indian Ocean. Some modern historians deem his piratical reputation unjust."
+        ],
+        "thoughts": [
+            "The 'Mary Poppins' series by P.L. Travers includes the following books:\n1. Mary Poppins (1934)\n2. Mary Poppins Comes Back (1935)\n3. Mary Poppins Opens the Door (1943)\n4. Mary Poppins in the Park (1952)\n5. Mary Poppins from A to Z (1962)\n6. Mary Poppins in the Kitchen (1975)\n7. Mary Poppins in Cherry Tree Lane (1982)",
+            "The order of the books in the Mary Poppins series is as follows:\n1. Mary Poppins (1934)\n2. Mary Poppins Comes Back (1935)\n3. Mary Poppins Opens the Door (1943)\n4. Mary Poppins in the Park (1952)\n5. Mary Poppins from A to Z (1962)\n6. Mary Poppins in the Kitchen (1975)\n7. Mary Poppins in Cherry Tree Lane (1982)",
+            "The third book in the Mary Poppins series is \"Mary Poppins Opens the Door\" (1943).",
+            "The main character featured in the third book of the \"Mary Poppins\" series is Mary Poppins herself. Mary Poppins is a magical English nanny who arrives at the Banks home and teaches the children valuable lessons with a magical touch. She is the eponymous protagonist of the series and is known for her unique brand of lifestyle and her ability to improve the dynamics of the families she visits.",
+            "Based on the order of the books in the Mary Poppins series, the last novel in the series is \"Mary Poppins in Cherry Tree Lane\" (1982).",
+            "The main character featured in the last novel in the \"Mary Poppins\" series is Mary Poppins herself. She is a magical English nanny who arrives at the Banks home and teaches the children valuable lessons with a magical touch. Mary Poppins is known for her unique accent and vocabulary, and she is the eponymous protagonist of the series.",
+            "The type of character featured in both the third book and the last novel of the \"Mary Poppins\" series is Mary Poppins herself. Mary Poppins is a magical English nanny who arrives at the Banks home and teaches the children valuable lessons with a magical touch. She is the eponymous protagonist of the series and is known for her unique brand of lifestyle and her ability to improve the dynamics of the families she visits."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Which type of character is featured by the P.L. Travers's third book and last novel in the \"Mary Poppins\" series?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the P.L. Travers's 'Mary Poppins' books series.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the list of books in the 'Mary Poppins' series.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the third book and the last novel in the 'Mary Poppins' series from the list.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Retrieve information about the characters featured in the identified third book and last novel.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Analyze the character information to determine which type of character is featured.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph starts by identifying the 'Mary Poppins' series written by P.L. Travers. Then, it retrieves the list of books in the series to identify the third book and the last novel. Following this, we gather details about the characters in these specific books. Finally, the reasoning step analyzes this character information to determine the type of character featured in them."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Mary Poppins Opens the Door\nMary Poppins Opens the Door is a British children's fantasy novel by the Australian-British writer P.L. Travers, the third book and last novel in the \"Mary Poppins\" series that features the magical English nanny Mary Poppins. It was published in 1943 by Harcourt, Brace & World, Inc and illustrated by Mary Shepard and Agnes Sims.",
+            "Mary Poppins (disambiguation)\n\"Mary Poppins\" is a series of children's books written by P.L. Travers.",
+            "Chim Chim Cher-ee\n\"Chim Chim Cher-ee\" is a song from \"Mary Poppins\", the 1964 musical motion picture. It was originally sung by Dick Van Dyke and Julie Andrews, and also is featured in the Cameron Mackintosh/Disney \"Mary Poppins\" musical. The song can be heard in the \"Mary Poppins\" scene of The Great Movie Ride at Disney's Hollywood Studios and during the \"Mary Poppins\" segment of \"\" at Disneyland.",
+            "Mary Poppins (film)\nMary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers. The screenplay is by Bill Walsh and Don DaGradi, loosely based on P. L. Travers' book series \"Mary Poppins\". The film, which combines live-action and animation, stars Julie Andrews in the role of Mary Poppins who visits a dysfunctional family in London and employs her unique brand of lifestyle to improve the family's dynamic. Dick Van Dyke, David Tomlinson, and Glynis Johns are featured in supporting roles. The film was shot entirely at the Walt Disney Studios in Burbank, California using painted London background scenes.",
+            "Mary Poppins Returns\nMary Poppins Returns (also known as Mary Poppins 2) is an upcoming American musical fantasy film directed by Rob Marshall and written by David Magee. It is the sequel to the 1964 film \"Mary Poppins\". The film stars Emily Blunt, Lin-Manuel Miranda, Ben Whishaw, Emily Mortimer, Pixie Davies, Joel Dawson, Nathanael Saleh, Julie Walters, Colin Firth, Dick Van Dyke and Meryl Streep. Set 25 years after the 1964 film, it will feature Mary Poppins, the former nanny of Jane and Michael Banks, re-visiting them after a family tragedy. The film is scheduled for release on December 25, 2018, giving it one of the longest gaps between film sequels in history.",
+            "Mary Poppins (song)\n\"Mary Poppins\" is a song from the 2015 stage musical \"Love Birds\" with music and lyrics by Robert J. Sherman. It is sung by \"The Original Quack Pack\", a penguin barbershop quartet who resemble the penguins from the 1964 Walt Disney motion picture, \"Mary Poppins\". In dialogue leading up to the song, the penguins explain that while they did know the same nanny, (Mary Poppins) they are not the same penguins as in the movie. The song expresses their longing for the magical nanny of literary fame.",
+            "Mary Poppins, Goodbye\nMary Poppins, Goodbye (Russian: \u041c\u044d\u0440\u0438 \u041f\u043e\u043f\u043f\u0438\u043d\u0441, \u0434\u043e \u0441\u0432\u0438\u0434\u0430\u043d\u0438\u044f! ; translit.\u00a0\"Meri Poppins, do svidaniya\") is a Soviet 1983 two-part musical miniseries (part 1 \"Lady Perfection\", part 2 \"Week ends on Wednesday\"), directed by Leonid Kvinikhidze. It is loosely based on Mary Poppins stories by P. L. Travers. The TV series were ordered by the Gosteleradio of USSR and produced by Mosfilm. The official television premiere was on January 8, 1984.",
+            "Mary Poppins (character)\nMary Poppins is a fictional character and the eponymous protagonist of P. L. Travers' \"Mary Poppins\" books and all of their adaptations. A magical English nanny, she blows in on the East Wind and arrives at the Banks home at Number Seventeen Cherry Tree Lane, London, where she is given charge of the Banks children and teaches them valuable lessons with a magical touch. Travers gives Poppins the accent and vocabulary of a real London nanny: cockney base notes overlaid with a strangled gentility.",
+            "P. L. Travers\nPamela Lyndon Travers, OBE ( ; born Helen Lyndon Goff; 9 August 1899 \u2013 23 April 1996) was an Australian-born writer who spent most of her career in England. She is best known for the \"Mary Poppins\" series of children's books, which feature the magical nanny Mary Poppins.",
+            "Mary Poppins (musical)\nMary Poppins is a musical with music and lyrics by the Sherman Brothers, with additional music and lyrics by George Stiles and Anthony Drewe, and a script by Julian Fellowes. The musical is based on the similarly titled Mary Poppins children's books by P. L. Travers and the 1964 Disney film, and is a fusion of various elements from the two.",
+            "Mary Shepard\nMary Eleanor Jessie Knox n\u00e9e Shepard (25 December 1909 \u2013 4 September 2000) was an English illustrator of children's books. She is best known for the \"Mary Poppins\" stories written by P. L. Travers (1934 to 1988): \"Mary Shepard: Putting Mary Poppins in the picture\", \"The Times\" of London titled an obituary article. She used her married name Mary Knox outside the publishing industry."
+        ],
+        "thoughts": [
+            "The 'Mary Poppins' book series by P.L. Travers includes the following titles:\n1. Mary Poppins (1934)\n2. Mary Poppins Comes Back (1935)\n3. Mary Poppins Opens the Door (1943)\n4. Mary Poppins in the Park (1952)\n5. Mary Poppins From A to Z (1962)\n6. Mary Poppins in the Kitchen (1975)\n7. Mary Poppins in Cherry Tree Lane (1982)\n\nThese books feature the magical English nanny Mary Poppins and her adventures with the Banks children. The series has also been adapted into a musical, a film, and a Soviet miniseries.",
+            "The 'Mary Poppins' series of children's books written by P.L. Travers includes the following titles:\n1. Mary Poppins\n2. Mary Poppins Comes Back\n3. Mary Poppins Opens the Door",
+            "The third book in the 'Mary Poppins' series is \"Mary Poppins Opens the Door\" and the last novel is \"Mary Poppins in the Park.\"",
+            "The characters featured in the identified third book and last novel, \"Mary Poppins Opens the Door\" by P.L. Travers, include the magical English nanny Mary Poppins, the Banks children, and various other supporting characters. The novel is part of the \"Mary Poppins\" series, which also includes other books such as \"Mary Poppins Comes Back\" and \"Mary Poppins in the Park\". The characters in the series have been adapted into various forms of media, including the 1964 film \"Mary Poppins\" and the upcoming sequel \"Mary Poppins Returns\". Additionally, the character of Mary Poppins has been featured in stage musicals, songs, and even a Soviet television miniseries.",
+            "The type of character featured in the \"Mary Poppins\" series is a magical and whimsical character, specifically a magical English nanny named Mary Poppins. The series also includes supporting characters such as the Banks children and various other magical and fantastical characters."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which type of character is featured by the P.L. Travers's third book and last novel in the \"Mary Poppins\" series?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the list of books in the \"Mary Poppins\" series by P.L. Travers.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the third book in the \"Mary Poppins\" series.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the last novel in the \"Mary Poppins\" series.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Retrieve the type of character featured in the third book of the \"Mary Poppins\" series.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Retrieve the type of character featured in the last novel of the \"Mary Poppins\" series.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Determine if the type of character is the same in both the third book and the last novel.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4",
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "To determine the types of characters featured in the specific books of the \"Mary Poppins\" series by P.L. Travers, the execution graph breaks down the task as follows:\n\n1. First, we retrieve the list of books in the \"Mary Poppins\" series to establish a reference for the third book and the last novel.\n2. Next, two parallel branches of reasoning are created to identify the third book and the last novel in the series. This helps isolate the specific titles needed for subsequent retrieval steps.\n3. For each identified book, we initiate a retrieval and reasoning step to find out the type of character featured in each respective book.\n4. Finally, a reasoning step is employed to compare the types of characters featured in the two books to answer the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Mary Poppins (disambiguation)\n\"Mary Poppins\" is a series of children's books written by P.L. Travers.",
+            "Mary Poppins Opens the Door\nMary Poppins Opens the Door is a British children's fantasy novel by the Australian-British writer P.L. Travers, the third book and last novel in the \"Mary Poppins\" series that features the magical English nanny Mary Poppins. It was published in 1943 by Harcourt, Brace & World, Inc and illustrated by Mary Shepard and Agnes Sims.",
+            "Mary Poppins (character)\nMary Poppins is a fictional character and the eponymous protagonist of P. L. Travers' \"Mary Poppins\" books and all of their adaptations. A magical English nanny, she blows in on the East Wind and arrives at the Banks home at Number Seventeen Cherry Tree Lane, London, where she is given charge of the Banks children and teaches them valuable lessons with a magical touch. Travers gives Poppins the accent and vocabulary of a real London nanny: cockney base notes overlaid with a strangled gentility.",
+            "P. L. Travers\nPamela Lyndon Travers, OBE ( ; born Helen Lyndon Goff; 9 August 1899 \u2013 23 April 1996) was an Australian-born writer who spent most of her career in England. She is best known for the \"Mary Poppins\" series of children's books, which feature the magical nanny Mary Poppins.",
+            "Mary Poppins (musical)\nMary Poppins is a musical with music and lyrics by the Sherman Brothers, with additional music and lyrics by George Stiles and Anthony Drewe, and a script by Julian Fellowes. The musical is based on the similarly titled Mary Poppins children's books by P. L. Travers and the 1964 Disney film, and is a fusion of various elements from the two.",
+            "Saving Mr. Banks\nSaving Mr. Banks is a 2013 period drama film directed by John Lee Hancock from a screenplay written by Kelly Marcel and Sue Smith. Centered on the development of the 1964 film \"Mary Poppins\", the film stars Emma Thompson as author P. L. Travers and Tom Hanks as filmmaker Walt Disney, with supporting performances by Paul Giamatti, Jason Schwartzman, Bradley Whitford, and Colin Farrell. Deriving its title from the father in Travers' story, \"Saving Mr. Banks\" depicts the author's fortnight-long meetings during 1961 in Los Angeles, during which Disney attempts to obtain the screen rights to her novels.",
+            "Mary Shepard\nMary Eleanor Jessie Knox n\u00e9e Shepard (25 December 1909 \u2013 4 September 2000) was an English illustrator of children's books. She is best known for the \"Mary Poppins\" stories written by P. L. Travers (1934 to 1988): \"Mary Shepard: Putting Mary Poppins in the picture\", \"The Times\" of London titled an obituary article. She used her married name Mary Knox outside the publishing industry.",
+            "Mary Poppins (film)\nMary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers. The screenplay is by Bill Walsh and Don DaGradi, loosely based on P. L. Travers' book series \"Mary Poppins\". The film, which combines live-action and animation, stars Julie Andrews in the role of Mary Poppins who visits a dysfunctional family in London and employs her unique brand of lifestyle to improve the family's dynamic. Dick Van Dyke, David Tomlinson, and Glynis Johns are featured in supporting roles. The film was shot entirely at the Walt Disney Studios in Burbank, California using painted London background scenes.",
+            "Mary Poppins, Goodbye\nMary Poppins, Goodbye (Russian: \u041c\u044d\u0440\u0438 \u041f\u043e\u043f\u043f\u0438\u043d\u0441, \u0434\u043e \u0441\u0432\u0438\u0434\u0430\u043d\u0438\u044f! ; translit.\u00a0\"Meri Poppins, do svidaniya\") is a Soviet 1983 two-part musical miniseries (part 1 \"Lady Perfection\", part 2 \"Week ends on Wednesday\"), directed by Leonid Kvinikhidze. It is loosely based on Mary Poppins stories by P. L. Travers. The TV series were ordered by the Gosteleradio of USSR and produced by Mosfilm. The official television premiere was on January 8, 1984.",
+            "Chim Chim Cher-ee\n\"Chim Chim Cher-ee\" is a song from \"Mary Poppins\", the 1964 musical motion picture. It was originally sung by Dick Van Dyke and Julie Andrews, and also is featured in the Cameron Mackintosh/Disney \"Mary Poppins\" musical. The song can be heard in the \"Mary Poppins\" scene of The Great Movie Ride at Disney's Hollywood Studios and during the \"Mary Poppins\" segment of \"\" at Disneyland.",
+            "Mary Poppins Returns\nMary Poppins Returns (also known as Mary Poppins 2) is an upcoming American musical fantasy film directed by Rob Marshall and written by David Magee. It is the sequel to the 1964 film \"Mary Poppins\". The film stars Emily Blunt, Lin-Manuel Miranda, Ben Whishaw, Emily Mortimer, Pixie Davies, Joel Dawson, Nathanael Saleh, Julie Walters, Colin Firth, Dick Van Dyke and Meryl Streep. Set 25 years after the 1964 film, it will feature Mary Poppins, the former nanny of Jane and Michael Banks, re-visiting them after a family tragedy. The film is scheduled for release on December 25, 2018, giving it one of the longest gaps between film sequels in history.",
+            "Mary Poppins (song)\n\"Mary Poppins\" is a song from the 2015 stage musical \"Love Birds\" with music and lyrics by Robert J. Sherman. It is sung by \"The Original Quack Pack\", a penguin barbershop quartet who resemble the penguins from the 1964 Walt Disney motion picture, \"Mary Poppins\". In dialogue leading up to the song, the penguins explain that while they did know the same nanny, (Mary Poppins) they are not the same penguins as in the movie. The song expresses their longing for the magical nanny of literary fame."
+        ],
+        "thoughts": [
+            "The \"Mary Poppins\" series by P.L. Travers includes the following books:\n1. Mary Poppins (1934)\n2. Mary Poppins Comes Back (1935)\n3. Mary Poppins Opens the Door (1943)",
+            "The third book in the \"Mary Poppins\" series is \"Mary Poppins Opens the Door\" (1943).",
+            "The type of character featured in the third book of the \"Mary Poppins\" series is the magical English nanny Mary Poppins.",
+            "The last novel in the \"Mary Poppins\" series is \"Mary Poppins Opens the Door\" (1943).",
+            "The type of character featured in the last novel of the \"Mary Poppins\" series is a magical English nanny named Mary Poppins.",
+            "Based on the results of the upstream tasks, it can be determined that the type of character in both the third book and the last novel of the \"Mary Poppins\" series is the same, which is a magical English nanny named Mary Poppins. Therefore, the type of character is consistent across both the third book and the last novel."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which type of character is featured by the P.L. Travers's third book and last novel in the \"Mary Poppins\" series?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the titles of the books in the Mary Poppins series by P.L. Travers.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Select the third book from the Mary Poppins series identified in Node 1.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Select the last novel from the Mary Poppins series identified in Node 1.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Retrieve detailed information or summaries about the third book of the Mary Poppins series, identified in Node 2.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Retrieve detailed information or summaries about the last novel of the Mary Poppins series, identified in Node 3.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Determine the type of character featured in the third book based on the information retrieved in Node 4.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    },
+                    {
+                        "id": "7",
+                        "instruction": "Determine the type of character featured in the last novel based on the information retrieved in Node 5.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "5"
+                        ]
+                    },
+                    {
+                        "id": "8",
+                        "instruction": "Combine the character types from Nodes 6 and 7 to form the final answer about the character types in both books.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "6",
+                            "7"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "8"
+            },
+            "explanation": "The execution graph starts by retrieving a list of all books in the Mary Poppins series to then identify the third book and the last novel separately. Information about these specific books is then retrieved, and the character types featured in each are determined. Finally, these findings are combined to address the original question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Mary Poppins Opens the Door\nMary Poppins Opens the Door is a British children's fantasy novel by the Australian-British writer P.L. Travers, the third book and last novel in the \"Mary Poppins\" series that features the magical English nanny Mary Poppins. It was published in 1943 by Harcourt, Brace & World, Inc and illustrated by Mary Shepard and Agnes Sims.",
+            "Mary Poppins (disambiguation)\n\"Mary Poppins\" is a series of children's books written by P.L. Travers.",
+            "Mary Poppins (film)\nMary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers. The screenplay is by Bill Walsh and Don DaGradi, loosely based on P. L. Travers' book series \"Mary Poppins\". The film, which combines live-action and animation, stars Julie Andrews in the role of Mary Poppins who visits a dysfunctional family in London and employs her unique brand of lifestyle to improve the family's dynamic. Dick Van Dyke, David Tomlinson, and Glynis Johns are featured in supporting roles. The film was shot entirely at the Walt Disney Studios in Burbank, California using painted London background scenes.",
+            "Mary Poppins, Goodbye\nMary Poppins, Goodbye (Russian: \u041c\u044d\u0440\u0438 \u041f\u043e\u043f\u043f\u0438\u043d\u0441, \u0434\u043e \u0441\u0432\u0438\u0434\u0430\u043d\u0438\u044f! ; translit.\u00a0\"Meri Poppins, do svidaniya\") is a Soviet 1983 two-part musical miniseries (part 1 \"Lady Perfection\", part 2 \"Week ends on Wednesday\"), directed by Leonid Kvinikhidze. It is loosely based on Mary Poppins stories by P. L. Travers. The TV series were ordered by the Gosteleradio of USSR and produced by Mosfilm. The official television premiere was on January 8, 1984.",
+            "Chim Chim Cher-ee\n\"Chim Chim Cher-ee\" is a song from \"Mary Poppins\", the 1964 musical motion picture. It was originally sung by Dick Van Dyke and Julie Andrews, and also is featured in the Cameron Mackintosh/Disney \"Mary Poppins\" musical. The song can be heard in the \"Mary Poppins\" scene of The Great Movie Ride at Disney's Hollywood Studios and during the \"Mary Poppins\" segment of \"\" at Disneyland.",
+            "Mary Poppins (song)\n\"Mary Poppins\" is a song from the 2015 stage musical \"Love Birds\" with music and lyrics by Robert J. Sherman. It is sung by \"The Original Quack Pack\", a penguin barbershop quartet who resemble the penguins from the 1964 Walt Disney motion picture, \"Mary Poppins\". In dialogue leading up to the song, the penguins explain that while they did know the same nanny, (Mary Poppins) they are not the same penguins as in the movie. The song expresses their longing for the magical nanny of literary fame.",
+            "Mary Poppins (musical)\nMary Poppins is a musical with music and lyrics by the Sherman Brothers, with additional music and lyrics by George Stiles and Anthony Drewe, and a script by Julian Fellowes. The musical is based on the similarly titled Mary Poppins children's books by P. L. Travers and the 1964 Disney film, and is a fusion of various elements from the two.",
+            "P. L. Travers\nPamela Lyndon Travers, OBE ( ; born Helen Lyndon Goff; 9 August 1899 \u2013 23 April 1996) was an Australian-born writer who spent most of her career in England. She is best known for the \"Mary Poppins\" series of children's books, which feature the magical nanny Mary Poppins.",
+            "Codename: Kids Next Door\nCodename: Kids Next Door, commonly abbreviated to Kids Next Door or KND, is an American animated television series created by Tom Warburton for Cartoon Network, and the 13th of the network's \"Cartoon Cartoons\". The series centers on the adventures of five children who operate from a high-tech tree house, fighting against adult and teen villains with advanced 2\u00d74 technology. Using their codenames (Numbuh 1, Numbuh 2, Numbuh 3, Numbuh 4, and Numbuh 5), they are Sector V, part of a global organization called the Kids Next Door.",
+            "Mary Poppins Returns\nMary Poppins Returns (also known as Mary Poppins 2) is an upcoming American musical fantasy film directed by Rob Marshall and written by David Magee. It is the sequel to the 1964 film \"Mary Poppins\". The film stars Emily Blunt, Lin-Manuel Miranda, Ben Whishaw, Emily Mortimer, Pixie Davies, Joel Dawson, Nathanael Saleh, Julie Walters, Colin Firth, Dick Van Dyke and Meryl Streep. Set 25 years after the 1964 film, it will feature Mary Poppins, the former nanny of Jane and Michael Banks, re-visiting them after a family tragedy. The film is scheduled for release on December 25, 2018, giving it one of the longest gaps between film sequels in history.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Martemyan Ryutin\nMartemyan Nikitich Ryutin (Russian: \u041c\u0430\u0440\u0442\u0435\u043c\u044c\u044f\u0301\u043d \u041d\u0438\u043a\u0438\u0301\u0442\u0438\u0447 \u0420\u044e\u0301\u0442\u0438\u043d ) (1890\u20131937) was a Russian Marxist revolutionary, and a political functionary of the Russian Communist Party. Ryutin is best remembered as the leader of a pro-peasant political faction organized against Soviet leader Joseph Stalin in the early 1930s and as the primary author of a 200-page oppositional platform. Ryutin was arrested by the Soviet secret police, along with his co-thinkers, in what has come to be known as the Ryutin Affair. He was executed in January 1937 as part of the Yezhovshchina (Great Purge) conducted against political oppositionists and suspected economic \"wreckers\" and spies.",
+            "Operation Dragoon\nOperation Dragoon (initially Operation Anvil) was the code name for the Allied invasion of Southern France on 15August 1944. The operation was initially planned to be executed in conjunction with Operation Overlord, the Allied landing in the Normandy, but the lack of available resources led to a cancellation of the second landing. By July 1944 the landing was reconsidered, as the clogged-up ports in Normandy did not have the capacity to adequately supply the Allied forces. Concurrently, the French High Command pushed for a revival of the operation that would include large numbers of French troops. As a result, the operation was finally approved in July to be executed in August.",
+            "Louise Peete\nLouise Peete (September 20, 1880 \u2013 April 11, 1947) was a convicted American murderer. Peete was first convicted of murdering wealthy mining engineer Jacob C. Denton in 1920 and was sentenced to life in prison. She was paroled in April 1939. In May 1945, she was convicted of murdering her employer, Margaret Logan, and sentenced to death. She was executed in April 1947 making her the second, and one of only four women, to be executed in the California gas chamber.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Mission patch\nA mission patch is a cloth reproduction of a spaceflight mission emblem worn by astronauts and other personnel affiliated with that mission. It is usually executed as an embroidered patch. The term space patch is mostly applied to an emblem designed for a manned space mission. Traditionally, the patch is worn on the space suit that astronauts and cosmonauts wear when launched into space. Mission patches have been adopted by the crew and personnel of many other space ventures, public and private.",
+            "Chess problem\nA chess problem, also called a chess composition, is a puzzle set by somebody using chess pieces on a chess board, that presents the solver with a particular task to be achieved. For instance, a position might be given with the instruction that White is to move first, and checkmate Black in two moves against any possible defense. A person who creates such problems is known as a composer. There is a good deal of specialized jargon used in connection with chess problems; see glossary of chess problems for a list.",
+            "William Kidd\nWilliam Kidd, also \"Captain William Kidd\" or simply \"Captain Kidd\" (c.1654 \u2013 23 May 1701) was a Scottish sailor who was tried and executed for piracy after returning from a voyage to the Indian Ocean. Some modern historians deem his piratical reputation unjust."
+        ],
+        "thoughts": [
+            "The titles of the books in the Mary Poppins series by P.L. Travers are:\n1. Mary Poppins\n2. Mary Poppins Comes Back\n3. Mary Poppins Opens the Door\n4. Mary Poppins in the Park\n5. Mary Poppins from A to Z\n6. Mary Poppins in the Kitchen\n7. Mary Poppins in Cherry Tree Lane\n8. Mary Poppins and the House Next Door",
+            "The third book from the Mary Poppins series is \"Mary Poppins Opens the Door.\"",
+            "Mary Poppins Opens the Door is the third and final novel in the \"Mary Poppins\" series by P.L. Travers. It was published in 1943 and features the magical English nanny Mary Poppins. The book is a children's fantasy novel and is illustrated by Mary Shepard and Agnes Sims. The story continues the adventures of Mary Poppins and the children she cares for, and is a beloved addition to the series.",
+            "The type of character featured in the third book, \"Mary Poppins Opens the Door,\" is a magical English nanny named Mary Poppins.",
+            "The last novel in the Mary Poppins series is \"Mary Poppins and the House Next Door.\"",
+            "Mary Poppins Opens the Door is the last novel in the Mary Poppins series, written by P.L. Travers and published in 1943. The novel features the magical English nanny Mary Poppins and is illustrated by Mary Shepard and Agnes Sims. The story follows the adventures of Mary Poppins and the children she cares for, and is a beloved classic in children's literature.",
+            "The type of character featured in the last novel, \"Mary Poppins Opens the Door,\" is a magical English nanny named Mary Poppins.",
+            "The character type featured in both books, \"Mary Poppins\" and \"Mary Poppins Opens the Door,\" is a magical English nanny named Mary Poppins."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which type of character is featured by the P.L. Travers's third book and last novel in the \"Mary Poppins\" series?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the titles and order of the books in the 'Mary Poppins' series by P.L. Travers.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the title of the third book in the 'Mary Poppins' series by P.L. Travers.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the title of the last novel in the 'Mary Poppins' series by P.L. Travers.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Retrieve information about the type of characters featured in the third book of the 'Mary Poppins' series.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Retrieve information about the type of characters featured in the last novel of the 'Mary Poppins' series.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Compare the character types from both the third book and the last novel to find any common character type.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4",
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "The execution graph first establishes the sequence of books in the 'Mary Poppins' series, identifying both the third book and the last novel. The graph then retrieves specific details about the characters featured in each of these books. Finally, the graph compares the information to identify which type of character is common to both the third book and the last novel, thus answering the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Mary Poppins Opens the Door\nMary Poppins Opens the Door is a British children's fantasy novel by the Australian-British writer P.L. Travers, the third book and last novel in the \"Mary Poppins\" series that features the magical English nanny Mary Poppins. It was published in 1943 by Harcourt, Brace & World, Inc and illustrated by Mary Shepard and Agnes Sims.",
+            "Mary Poppins (disambiguation)\n\"Mary Poppins\" is a series of children's books written by P.L. Travers.",
+            "Mary Poppins (film)\nMary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers. The screenplay is by Bill Walsh and Don DaGradi, loosely based on P. L. Travers' book series \"Mary Poppins\". The film, which combines live-action and animation, stars Julie Andrews in the role of Mary Poppins who visits a dysfunctional family in London and employs her unique brand of lifestyle to improve the family's dynamic. Dick Van Dyke, David Tomlinson, and Glynis Johns are featured in supporting roles. The film was shot entirely at the Walt Disney Studios in Burbank, California using painted London background scenes.",
+            "P. L. Travers\nPamela Lyndon Travers, OBE ( ; born Helen Lyndon Goff; 9 August 1899 \u2013 23 April 1996) was an Australian-born writer who spent most of her career in England. She is best known for the \"Mary Poppins\" series of children's books, which feature the magical nanny Mary Poppins.",
+            "Mary Poppins, Goodbye\nMary Poppins, Goodbye (Russian: \u041c\u044d\u0440\u0438 \u041f\u043e\u043f\u043f\u0438\u043d\u0441, \u0434\u043e \u0441\u0432\u0438\u0434\u0430\u043d\u0438\u044f! ; translit.\u00a0\"Meri Poppins, do svidaniya\") is a Soviet 1983 two-part musical miniseries (part 1 \"Lady Perfection\", part 2 \"Week ends on Wednesday\"), directed by Leonid Kvinikhidze. It is loosely based on Mary Poppins stories by P. L. Travers. The TV series were ordered by the Gosteleradio of USSR and produced by Mosfilm. The official television premiere was on January 8, 1984.",
+            "Mary Poppins (character)\nMary Poppins is a fictional character and the eponymous protagonist of P. L. Travers' \"Mary Poppins\" books and all of their adaptations. A magical English nanny, she blows in on the East Wind and arrives at the Banks home at Number Seventeen Cherry Tree Lane, London, where she is given charge of the Banks children and teaches them valuable lessons with a magical touch. Travers gives Poppins the accent and vocabulary of a real London nanny: cockney base notes overlaid with a strangled gentility.",
+            "Mary Poppins (musical)\nMary Poppins is a musical with music and lyrics by the Sherman Brothers, with additional music and lyrics by George Stiles and Anthony Drewe, and a script by Julian Fellowes. The musical is based on the similarly titled Mary Poppins children's books by P. L. Travers and the 1964 Disney film, and is a fusion of various elements from the two.",
+            "Mary Shepard\nMary Eleanor Jessie Knox n\u00e9e Shepard (25 December 1909 \u2013 4 September 2000) was an English illustrator of children's books. She is best known for the \"Mary Poppins\" stories written by P. L. Travers (1934 to 1988): \"Mary Shepard: Putting Mary Poppins in the picture\", \"The Times\" of London titled an obituary article. She used her married name Mary Knox outside the publishing industry.",
+            "Cherry Tree Lane\nCherry Tree Lane is a 2010 British urban dramatic real-time horror-thriller film, written and directed by Paul Andrew Williams."
+        ],
+        "thoughts": [
+            "1. Mary Poppins (1934)\n2. Mary Poppins Comes Back (1935)\n3. Mary Poppins Opens the Door (1943)\n4. Mary Poppins in the Park (1952)\n5. Mary Poppins From A to Z (1962)\n6. Mary Poppins in the Kitchen (1975)\n7. Mary Poppins in Cherry Tree Lane (1982)",
+            "The title of the third book in the 'Mary Poppins' series by P.L. Travers is \"Mary Poppins Opens the Door\" (1943).",
+            "The third book in the \"Mary Poppins\" series, titled \"Mary Poppins Opens the Door,\" features the magical English nanny Mary Poppins as the protagonist. The book also includes other characters such as the Banks children and various supporting characters who interact with Mary Poppins as she uses her unique brand of magic to improve their lives. The book is illustrated by Mary Shepard and Agnes Sims.",
+            "The title of the last novel in the 'Mary Poppins' series by P.L. Travers is \"Mary Poppins in Cherry Tree Lane\" (1982).",
+            "The last novel in the \"Mary Poppins\" series, titled \"Mary Poppins Opens the Door,\" features the magical English nanny Mary Poppins. In this book, Mary Poppins continues to teach valuable lessons to the Banks children with her magical touch. The novel was published in 1943 and is the third and final book in the series written by P.L. Travers.",
+            "The common character type in both the third book and the last novel of the \"Mary Poppins\" series is the magical English nanny, Mary Poppins. She is the protagonist in both books and continues to use her unique brand of magic to improve the lives of the Banks children and other supporting characters."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Which type of character is featured by the P.L. Travers's third book and last novel in the \"Mary Poppins\" series?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the third book in the 'Mary Poppins' series by P.L. Travers.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the last novel in the 'Mary Poppins' series by P.L. Travers.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve and list the characters featured in the third book of the 'Mary Poppins' series.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Retrieve and list the characters featured in the last novel of the 'Mary Poppins' series.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Analyze and determine the type of characters featured in the third book and last novel in the series. Identify the type of character that is common between the two.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is designed to first identify the specific books referenced in the query (the third book and the last novel in the series). Once these books are identified, the graph retrieves the characters from each book separately. Finally, it analyzes these retrieved characters to determine common types of characters featured in both the third and last books of the series. This structure allows the task to be broken down into manageable retrieval and reasoning steps, ensuring a comprehensive answer to the question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Mary Poppins Opens the Door\nMary Poppins Opens the Door is a British children's fantasy novel by the Australian-British writer P.L. Travers, the third book and last novel in the \"Mary Poppins\" series that features the magical English nanny Mary Poppins. It was published in 1943 by Harcourt, Brace & World, Inc and illustrated by Mary Shepard and Agnes Sims.",
+            "Mary Poppins (disambiguation)\n\"Mary Poppins\" is a series of children's books written by P.L. Travers.",
+            "Mary Poppins (film)\nMary Poppins is a 1964 American musical-fantasy film directed by Robert Stevenson and produced by Walt Disney, with songs written and composed by the Sherman Brothers. The screenplay is by Bill Walsh and Don DaGradi, loosely based on P. L. Travers' book series \"Mary Poppins\". The film, which combines live-action and animation, stars Julie Andrews in the role of Mary Poppins who visits a dysfunctional family in London and employs her unique brand of lifestyle to improve the family's dynamic. Dick Van Dyke, David Tomlinson, and Glynis Johns are featured in supporting roles. The film was shot entirely at the Walt Disney Studios in Burbank, California using painted London background scenes.",
+            "P. L. Travers\nPamela Lyndon Travers, OBE ( ; born Helen Lyndon Goff; 9 August 1899 \u2013 23 April 1996) was an Australian-born writer who spent most of her career in England. She is best known for the \"Mary Poppins\" series of children's books, which feature the magical nanny Mary Poppins.",
+            "Mary Poppins, Goodbye\nMary Poppins, Goodbye (Russian: \u041c\u044d\u0440\u0438 \u041f\u043e\u043f\u043f\u0438\u043d\u0441, \u0434\u043e \u0441\u0432\u0438\u0434\u0430\u043d\u0438\u044f! ; translit.\u00a0\"Meri Poppins, do svidaniya\") is a Soviet 1983 two-part musical miniseries (part 1 \"Lady Perfection\", part 2 \"Week ends on Wednesday\"), directed by Leonid Kvinikhidze. It is loosely based on Mary Poppins stories by P. L. Travers. The TV series were ordered by the Gosteleradio of USSR and produced by Mosfilm. The official television premiere was on January 8, 1984.",
+            "Mary Poppins (character)\nMary Poppins is a fictional character and the eponymous protagonist of P. L. Travers' \"Mary Poppins\" books and all of their adaptations. A magical English nanny, she blows in on the East Wind and arrives at the Banks home at Number Seventeen Cherry Tree Lane, London, where she is given charge of the Banks children and teaches them valuable lessons with a magical touch. Travers gives Poppins the accent and vocabulary of a real London nanny: cockney base notes overlaid with a strangled gentility.",
+            "Mary Poppins (musical)\nMary Poppins is a musical with music and lyrics by the Sherman Brothers, with additional music and lyrics by George Stiles and Anthony Drewe, and a script by Julian Fellowes. The musical is based on the similarly titled Mary Poppins children's books by P. L. Travers and the 1964 Disney film, and is a fusion of various elements from the two.",
+            "Mary Shepard\nMary Eleanor Jessie Knox n\u00e9e Shepard (25 December 1909 \u2013 4 September 2000) was an English illustrator of children's books. She is best known for the \"Mary Poppins\" stories written by P. L. Travers (1934 to 1988): \"Mary Shepard: Putting Mary Poppins in the picture\", \"The Times\" of London titled an obituary article. She used her married name Mary Knox outside the publishing industry.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "See Yourself\n\"See Yourself\" is a song by English musician George Harrison, released on his 1976 album \"Thirty Three & 1/3\". Harrison began writing the song in 1967, while he was a member of the Beatles, in response to the public outcry surrounding bandmate Paul McCartney's admission that he had taken the hallucinogenic drug LSD. McCartney's announcement created a reaction in the press similar to that caused in 1966 by John Lennon's statement that the Beatles were more popular than Christianity. In its finished form, the song's lyrics advocate self-awareness and consideration for the consequences of one's actions. Musically, the composition contains unusual shifts in time signature from standard 4/4 to 9/8, while the songwords reflect the era of its genesis by recalling themes first espoused in the Beatles tracks \"Within You Without You\" and \"All You Need Is Love\"."
+        ],
+        "thoughts": [
+            "The third book in the 'Mary Poppins' series by P.L. Travers is \"Mary Poppins Opens the Door.\"",
+            "The characters featured in the third book of the 'Mary Poppins' series, \"Mary Poppins Opens the Door,\" include:\n\n1. Mary Poppins - the magical English nanny\n2. The Banks children - the children under Mary Poppins' care\n3. Other supporting characters that may be introduced in the book but are not specifically mentioned in the provided information.",
+            "The last novel in the 'Mary Poppins' series by P.L. Travers is \"Mary Poppins and the House Next Door\".",
+            "The characters featured in the last novel of the 'Mary Poppins' series, \"Mary Poppins Opens the Door,\" include:\n\n1. Mary Poppins - the magical English nanny\n2. The Banks children - the children under Mary Poppins' care\n3. Other supporting characters that may be specific to the plot of the novel",
+            "The type of characters featured in both the third book and the last novel in the 'Mary Poppins' series are consistent. They include Mary Poppins, the magical English nanny, and the Banks children, who are under her care. These characters are common between the two books and are central to the series, showcasing the enduring and consistent nature of the main characters throughout the series."
+        ],
+        "is_best": false
+    }
+]

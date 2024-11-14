@@ -1,0 +1,627 @@
+[
+    {
+        "question": "What is the name of the movie that srarred Stev McQueen in the orignal, and Pierce Brosnan in the remake?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve movies starring Steve McQueen.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve movies starring Pierce Brosnan.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify common movies from the two lists retrieved in steps 1 and 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which of the common movies is a remake.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The task involves finding a movie starring both Steve McQueen in the original version and Pierce Brosnan in the remake. To solve this, we first retrieve a list of movies starring each actor [Nodes 1 and 2]. Then, cross-reference these lists to find the common movie, suggesting it has both original and remake versions [Node 3]. Finally, verify which common movie is a remake to answer the question [Node 4]."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Steve McQueen (song)\n\"Steve McQueen\" is a song by American singer-songwriter Sheryl Crow, and is the lead track on her 2002 album, \"C'mon C'mon\". It was released as the second single from the album, following \"Soak Up the Sun\" (see 2002 in music). Like \"Soak Up the Sun\", the video was directed by Wayne Isham. It includes Sheryl racing around in various vehicles, recreating scenes from Steve McQueen movies. \"Steve McQueen\" reached #88 on the \"Billboard\" Hot 100. However, the song become a dance hit peaking at #11 in Billboard Hot Dance Club Play. It was also a successful on the Triple A chart reaching #2 on September 9, 2002.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "L (film)\nL (\"Learning\") is a Greek movie produced in 2011, directed by Babis Makridis, written by Babis Makridis and Efthymis Filippou, based on an original idea by Yorgos Giokas. It is the first Greek movie selected to compete at the 2012 Sundance Film Festival (19\u201329 January 2012) where its international premiere will take place. The movie is also nominated to compete in the official Tiger Awards competition in the International Film Festival Rotterdam (25 January \u2013 5 February 2012) where its European premiere will take place.The film was nominated for Best Script award at the Hellenic Film Academy Awards. A six-minute extract of the movie was first released at the Work Progress Section of the Karlovy Vary International Film Festival, at the Czech Republic in July 2011. L is Makridis's first feature film. His short film \"The Last Fakir\" (2005) was awarded the \"Newcomer's Prize\" at the 2005 International Short Film Festival in Drama which takes place in Greece.",
+            "Vegas Movie Studio\nVegas Movie Studio (previously Sony Vegas Movie Studio) is a consumer-based nonlinear video editing software designed for the PC. It is a scaled-down version of Vegas Pro. Movie Studio was formerly called \"Sonic Foundry VideoFactory\" and then \"Sony Screenblast Movie Studio,\". As of version 13, Vegas Movie Studio is now part of Magix GmbH after Sony had officially announced it had sold most of its creative software suit to the German-based company. On February 14, 2017, Magix announced a brand new version of Vegas Movie Studio, Vegas Movie Studio 14.0, which is the first stable release of Vegas Movie Studio since 2014 and Magix's first stable release since its acquisition from Sony.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Thomas Crown Affair (1968 film)\nThe Thomas Crown Affair is a 1968 film directed and produced by Norman Jewison and starring Steve McQueen and Faye Dunaway. This heist film was nominated for two Academy Awards, winning Best Original Song for Michel Legrand's \"Windmills of Your Mind\". A remake was released in 1999 and a second remake is currently in the development stages.",
+            "Paul Michael\nPaul Michael (August 15, 1926 \u2013 July 8, 2011) was an American actor. He was a regular guest star on American television appearing in \"Kojak\", \"Hill Street Blues\", \"Alias\", \"Gilmore Girls\" and \"Frasier\". He played a cop in the Hollywood movie \"Batman\". He also played King Johnny Romano on \"Dark Shadows\". He was also in movies such as \"Mask of the Red Death\" and the TV movie \"Where There's a Will\". He was best known for his appearances on Broadway where he frequently played the title role in \"Zorba the Greek\", Tevia in \"Fiddler on the Roof\", and the barber in \"The Man of La Mancha\". He danced in \"Bells are Ringing\" with Vivian Leigh.",
+            "Tinapa Studios\nTinapa Studios (also known as Studio Tinapa) is a movie studio located in the Tinapa Resort, Calabar, Cross River State, Nigeria. It is the first movie studio in Nigeria.",
+            "Movie Masters\nMovie Masters is an action figure toyline from Mattel based on popular movie franchises most notably DC Comics. The line has featured characters from the films \"Superman\", \"Avatar\", \"The Dark Knight\" trilogy, \"Green Lantern\", and \"Man of Steel\". Figures in the line are sculpted by Four Horsemen Studios, who also sculpted figures for Mattel's DC Superheroes and DC Universe Classics lines.",
+            "The Miracle Rider\nThe Miracle Rider is a 1935 Mascot movie serial directed by B. Reeves Eason and Armand Schaefer. The serial stars silent movie cowboy star Tom Mix in his last major film role.",
+            "Ang Utol Kong Hoodlum\nAng Utol Kong Hoodlum (lit. \"My Brother is a Hoodlum\") is a Filipino drama series developed for TV5 created by Deo J. Fajardo. It stars JC de Vera and Jasmine Curtis-Smith. It is a remake of the original movie where Robin Padilla played the role of Ben, a hoodlum, and Vina Morales, as Bing. The movie was first released in 1991, then a sequel entitled \"Miss na Miss Kita: Ang Utol Kong Hoodlum 2\" was made the following year. It is produced by Vic Del Rosario Jr., and Manuel V. Pangilinan and it also marks as the first primetime series produced by Viva Television for TV5 after a decade.",
+            "Lilla J\u00f6nssonligan\nLilla J\u00f6nssonligan (English: The Little J\u00f6nssonleague ) is a Swedish film series that consists of four movies. The film series is a spin-off of the original \"J\u00f6nssonligan\" film series. The main difference about the two series is that the main characters are portrayed as kids instead of adults in this one, hence the word \"little\" in the title. Rocky, the original third member, is not featured in any of the films. Unlike the \"adult J\u00f6nssonligan\", where the gang where bumbling anti-heroes, the \"litte J\u00f6nssonligan\" is often straight up heroic.",
+            "Trevor Dwyer-Lynch\nTrevor Dwyer-Lynch 1968, is a Black British actor, presenter, and stand up comedian. Born and raised in Moss Side and Salford, calls himself a \"Mossfordian\" trained in Drama and Performing Arts at City College /Arden School of Theatre Manchester in 1990, Dwyer-Lynch has appeared in numerous television and theatre productions, merging both serious roles\u2014such as \"Gloucester\" in Shakespeare's King Lear\u2014 to his best known comedic role in \"Coronation Street\" as Patrick Tussell the taxi-driver working for Steve McDonald (2002\u20132005). A dog lover, his 15-stone, Old English Mastiff also appeared with him in an episode, his dog spoiling \"Patrick's\" attempt to win over love interest Janice Battersby. Lynch achieved one of his wishes working for the Ken Loach in \"Looking for Eric\", he publicly expresses a desire to work with Directors Shane Meadows, Mike Leigh and Steve McQueen",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Villa Rides\nVilla Rides is a 1968 American Technicolor western war film in Panavision starring Yul Brynner (in toupee) in the title role and Robert Mitchum as an American adventurer and pilot of fortune. The supporting cast includes Charles Bronson as Fierro, Herbert Lom as Huerta, and Alexander Knox as Madero. Sam Peckinpah wrote the original script and was set to direct but Brynner didn't like his depiction of Villa as cruel and had Robert Towne rewrite the script and sought another director. The screenplay is based on the biography by William Douglas Lansford."
+        ],
+        "thoughts": [
+            "The Thomas Crown Affair (1968 film) is a movie starring Steve McQueen.",
+            "The movies starring Pierce Brosnan were not found in the provided information.",
+            "Based on the information provided, the common movie identified from the two lists is \"The Thomas Crown Affair\" (1968 film). This movie starred Steve McQueen, as mentioned in the first list. However, no movies starring Pierce Brosnan were found in the provided information, so there are no other common movies between the two lists.",
+            "The Thomas Crown Affair (1999 film) is a remake of the original 1968 film."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the movie that srarred Stev McQueen in the orignal, and Pierce Brosnan in the remake?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the original and remake pair of movies where Steve McQueen starred in the original.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "For the identified movie pairs, confirm if Pierce Brosnan starred in the remake.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The task begins with identifying movie pairs with one being an original and the other a remake. The first node retrieves movies where Steve McQueen starred in the original version. The second node then checks through the identified movies to find those where Pierce Brosnan starred in the remake, simultaneously verifying and narrowing down to the correct movie name that matches both conditions."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "The Thomas Crown Affair (1999 film)\nThe Thomas Crown Affair is a 1999 American heist film directed by John McTiernan. The film, starring Pierce Brosnan, Rene Russo and Denis Leary, is a remake of the 1968 film of the same name. The film generally received positive reviews. It was a success at the box office, grossing $124 million worldwide.",
+            "Remington Steele\nRemington Steele is an American television series co-created by Robert Butler and Michael Gleason. The series, starring Stephanie Zimbalist and Pierce Brosnan, was produced by MTM Enterprises and first broadcast on the NBC network from 1982 to 1987. The series blended the genres of romantic comedy, drama, and detective procedural. \"Remington Steele\" is best known for launching the career of Pierce Brosnan.",
+            "Chris Brosnan\nChris Brosnan (born 11 November 1972) is a British film director, writer, and producer. He was born to Cassandra Harris (1948\u201391) and producer Dermot Harris (1937\u201386). Chris is the brother of actor Sean Brosnan. He was adopted by his mother's third husband, actor Pierce Brosnan.",
+            "The Matador\nThe Matador is a 2005 dark comedy film written and directed by Richard Shepard and starring Pierce Brosnan and Greg Kinnear. The film was released on DVD on July 4, 2006 and on HD DVD on December 18, 2006. Brosnan was nominated for both a Golden Globe Award and a Saturn Award for his well-received performance as disillusioned, unstable hitman Julian Noble.",
+            "The November Man\nThe November Man is a 2014 British-American action spy thriller film based on the novel \"There Are No Spies\" by Bill Granger, which is canonically the seventh installment in \"The November Man\" novel series, published in 1987. It stars Pierce Brosnan, Luke Bracey and Olga Kurylenko with the screenplay written by Michael Finch and Karl Gajdusek. The film is directed by Roger Donaldson, who previously worked with Brosnan in \"Dante's Peak\". The film was released on August 27, 2014 in the United States.",
+            "I.T. (film)\nI.T. is a 2016 thriller film directed by John Moore and written by Dan Kay and William Wisher. It stars Pierce Brosnan, James Frecheville, Anna Friel, Stefanie Scott and Michael Nyqvist and was produced by David T. Friendly and Beau St. Clair, who was Brosnan's producing partner at the production company Irish DreamTime before her death. The film was released on September 23, 2016, with a limited release and on video on demand.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "The Great Global Warming Swindle\nThe Great Global Warming Swindle is a polemical documentary film that suggests that the scientific opinion on climate change is influenced by funding and political factors, and questions whether scientific consensus on global warming exists. The program was formally criticised by Ofcom, the UK broadcasting regulatory agency, which upheld complaints of misrepresentation made by David King.",
+            "AFI's 100 Years...100 Movie Quotes\nPart of The American Film Institute (AFI 100 Years... series), AFI's 100 Years... 100 Movie Quotes is a list of the top 100 movie quotations in American cinema. The American Film Institute revealed the list on June 21, 2005, in a three-hour television program on CBS. The program was hosted by actor Pierce Brosnan and had commentary from many Hollywood actors and filmmakers. A jury consisting of 1,500 film artists, critics, and historians selected \"Frankly, my dear, I don't give a damn,\" spoken by Clark Gable as Rhett Butler in the 1939 American Civil War epic \"Gone with the Wind\" as the most memorable American movie quotation of all time.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "See Yourself\n\"See Yourself\" is a song by English musician George Harrison, released on his 1976 album \"Thirty Three & 1/3\". Harrison began writing the song in 1967, while he was a member of the Beatles, in response to the public outcry surrounding bandmate Paul McCartney's admission that he had taken the hallucinogenic drug LSD. McCartney's announcement created a reaction in the press similar to that caused in 1966 by John Lennon's statement that the Beatles were more popular than Christianity. In its finished form, the song's lyrics advocate self-awareness and consideration for the consequences of one's actions. Musically, the composition contains unusual shifts in time signature from standard 4/4 to 9/8, while the songwords reflect the era of its genesis by recalling themes first espoused in the Beatles tracks \"Within You Without You\" and \"All You Need Is Love\"."
+        ],
+        "thoughts": [
+            "Original Movie: The Great Escape (1963)\nRemake: The Great Escape (2023)\n\nSteve McQueen starred in the original movie \"The Great Escape\" in 1963.",
+            "Pierce Brosnan starred in the remake of \"The Thomas Crown Affair\" (1999 film)."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the movie that srarred Stev McQueen in the orignal, and Pierce Brosnan in the remake?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify movies that starred Steve McQueen",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify movies that starred Pierce Brosnan in a remake",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the common movie between movies identified in step 1 and step 2",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts by identifying two separate lists of movies: one featuring Steve McQueen and the other featuring Pierce Brosnan in remakes. The reasoning step then finds the intersection of these lists to determine the common movie, which answers the question."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "The Thomas Crown Affair (1999 film)\nThe Thomas Crown Affair is a 1999 American heist film directed by John McTiernan. The film, starring Pierce Brosnan, Rene Russo and Denis Leary, is a remake of the 1968 film of the same name. The film generally received positive reviews. It was a success at the box office, grossing $124 million worldwide.",
+            "Steve McQueen (song)\n\"Steve McQueen\" is a song by American singer-songwriter Sheryl Crow, and is the lead track on her 2002 album, \"C'mon C'mon\". It was released as the second single from the album, following \"Soak Up the Sun\" (see 2002 in music). Like \"Soak Up the Sun\", the video was directed by Wayne Isham. It includes Sheryl racing around in various vehicles, recreating scenes from Steve McQueen movies. \"Steve McQueen\" reached #88 on the \"Billboard\" Hot 100. However, the song become a dance hit peaking at #11 in Billboard Hot Dance Club Play. It was also a successful on the Triple A chart reaching #2 on September 9, 2002.",
+            "Chris Brosnan\nChris Brosnan (born 11 November 1972) is a British film director, writer, and producer. He was born to Cassandra Harris (1948\u201391) and producer Dermot Harris (1937\u201386). Chris is the brother of actor Sean Brosnan. He was adopted by his mother's third husband, actor Pierce Brosnan.",
+            "Remington Steele\nRemington Steele is an American television series co-created by Robert Butler and Michael Gleason. The series, starring Stephanie Zimbalist and Pierce Brosnan, was produced by MTM Enterprises and first broadcast on the NBC network from 1982 to 1987. The series blended the genres of romantic comedy, drama, and detective procedural. \"Remington Steele\" is best known for launching the career of Pierce Brosnan.",
+            "AFI's 100 Years...100 Movie Quotes\nPart of The American Film Institute (AFI 100 Years... series), AFI's 100 Years... 100 Movie Quotes is a list of the top 100 movie quotations in American cinema. The American Film Institute revealed the list on June 21, 2005, in a three-hour television program on CBS. The program was hosted by actor Pierce Brosnan and had commentary from many Hollywood actors and filmmakers. A jury consisting of 1,500 film artists, critics, and historians selected \"Frankly, my dear, I don't give a damn,\" spoken by Clark Gable as Rhett Butler in the 1939 American Civil War epic \"Gone with the Wind\" as the most memorable American movie quotation of all time.",
+            "The November Man\nThe November Man is a 2014 British-American action spy thriller film based on the novel \"There Are No Spies\" by Bill Granger, which is canonically the seventh installment in \"The November Man\" novel series, published in 1987. It stars Pierce Brosnan, Luke Bracey and Olga Kurylenko with the screenplay written by Michael Finch and Karl Gajdusek. The film is directed by Roger Donaldson, who previously worked with Brosnan in \"Dante's Peak\". The film was released on August 27, 2014 in the United States.",
+            "The Matador\nThe Matador is a 2005 dark comedy film written and directed by Richard Shepard and starring Pierce Brosnan and Greg Kinnear. The film was released on DVD on July 4, 2006 and on HD DVD on December 18, 2006. Brosnan was nominated for both a Golden Globe Award and a Saturn Award for his well-received performance as disillusioned, unstable hitman Julian Noble.",
+            "Mamma Mia! (film)\nMamma Mia! (promoted as Mamma Mia! The Movie) is a 2008 British-American-Swedish musical romantic comedy film adapted from the 1999 West End/2001 Broadway musical of the same name, based on the songs of successful pop group ABBA, with additional music composed by ABBA member Benny Andersson. The film was directed by Phyllida Lloyd and distributed by Universal Pictures in partnership with Tom Hanks and Rita Wilson's Playtone and Littlestar, and the title originates from ABBA's 1975 chart-topper \"Mamma Mia\". Meryl Streep heads the cast, playing the role of single mother Donna Sheridan. Pierce Brosnan (Sam Carmichael), Colin Firth (Harry Bright), and Stellan Skarsg\u00e5rd (Bill Anderson) play the three possible fathers to Donna's daughter, Sophie (Amanda Seyfried). \"Mamma Mia!\" received mixed reviews from critics and earned $609.8 million on a $52 million budget.",
+            "Tuesdays with Morrie\nTuesdays with Morrie is a memoir by American writer Mitch Albom. The story was later recreated by Thomas Rickman into a TV movie of the same name directed by Mick Jackson, which aired on December 5, 1999 and starred Jack Lemmon and Hank Azaria.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "The Thomas Crown Affair (1968 film)\nThe Thomas Crown Affair is a 1968 film directed and produced by Norman Jewison and starring Steve McQueen and Faye Dunaway. This heist film was nominated for two Academy Awards, winning Best Original Song for Michel Legrand's \"Windmills of Your Mind\". A remake was released in 1999 and a second remake is currently in the development stages.",
+            "Mansi Aggarwal\nMansi Aggarwal is an Indian choreographer who has choreographed dances in Bollywood movies. She is best known for choreographing the song, 'Bharat Mata ki Jai, from the movie Shanghai that starred actor Emraan Hashmi - the song gained a lot of popularity and became a 'hit' in India. She has worked with notable actors such as Sushant Singh Rajput in the award-winning movie, Kai Po Che, and with Abhay Deol in the movie Dev D. The song 'Suno Na Sangemarmar' that she choreographed was nominated for Stardust and Filmfare awards.",
+            "Trevor Dwyer-Lynch\nTrevor Dwyer-Lynch 1968, is a Black British actor, presenter, and stand up comedian. Born and raised in Moss Side and Salford, calls himself a \"Mossfordian\" trained in Drama and Performing Arts at City College /Arden School of Theatre Manchester in 1990, Dwyer-Lynch has appeared in numerous television and theatre productions, merging both serious roles\u2014such as \"Gloucester\" in Shakespeare's King Lear\u2014 to his best known comedic role in \"Coronation Street\" as Patrick Tussell the taxi-driver working for Steve McDonald (2002\u20132005). A dog lover, his 15-stone, Old English Mastiff also appeared with him in an episode, his dog spoiling \"Patrick's\" attempt to win over love interest Janice Battersby. Lynch achieved one of his wishes working for the Ken Loach in \"Looking for Eric\", he publicly expresses a desire to work with Directors Shane Meadows, Mike Leigh and Steve McQueen",
+            "Stony Awards\nThe \"High Times\" Stony Awards (a.k.a. the Stonys), sponsored by \"High Times\" magazine, celebrate the \"highest and stoniest\" movies and of the year. The \"High Times\" Stonys began as an annual article in \"High Times\" magazine conceived by Senior Editor Steve Bloom. Editor-in-Chief Steven Hager then suggested they hold an event in New York and invite the public to attend. Three \"High Times\" Stony Awards were held in New York City. In 2007, the \"High Times\" Stonys were moved to Los Angeles. Occasionally, the Stonys appears only as an article in \"High Times\", but most years the event is staged. In 2010, Special Stony Achievement Awards were presented to the documentary film \"What if Cannabis Cured Cancer\" by Len Richmond, truTV's \"Conspiracy Theory with Jesse Ventura\", as well as a posthumous award to Jack Herer, which was accepted by his son, Dan Herer.",
+            "Natalie Zea\nNatalie Zea (born March 17, 1975) is an American actress, known for her performances on television. Zea began her acting career in theatre. Her first major role was on the NBC daytime soap opera \"Passions\" (2000\u20132002), where she played the role of Gwen Hotchkiss. Her breakout role was on the ABC primetime soap opera \"Dirty Sexy Money\" as socialite Karen Darling, where she starred from 2007 to 2009. Zea also has made many guest appearances on television, starred in the number of independent and made-for-television movies, and had the recurring roles in \"The Shield\", \"Hung\" and \"Californication\".",
+            "Hole in One (2010 film)\nHole in One (also known as \"ParFection: The Golf Movie\") is a 2010 comedy movie starring Steve Talley. It is about a cool undergraduate boy who gets tricked by some surgeons and they operate on him, giving him a set of breasts. Now, he has to earn money through golf for the reverse surgery. The movie was released by Universal Studios via Universal Pictures and launched in the United Kingdom on September 12, 2010. With a wide release in an additional 65 territories and countries. It is awaiting a US Domestic release. Universal 'Tagged' the movie as 'American Pie Plays Golf' and so many people have mistaken for it being an American Pie movie because Steve Talley, who appeared in and stars in it. Further evidence shows that Steve Talley is called 'Eric Keller' in Hole in One and is called 'Dwight Stifler' in the American Pie movie Franchise series which shows the distinct differences between the movies. Box Office figures report $1,600,000 GBP in London England. Universal release Hole in One in a total of 65 countries. No other figures reported."
+        ],
+        "thoughts": [
+            "The Thomas Crown Affair (1968 film)",
+            "The Thomas Crown Affair (1999 film) - a remake of the 1968 film\nMamma Mia! (film) - a musical romantic comedy based on the 1999 West End/2001 Broadway musical\nThe Matador - a dark comedy film\nRemington Steele - a television series that launched the career of Pierce Brosnan",
+            "The common movie between the movies identified in step 1 and step 2 is \"The Thomas Crown Affair\" - a 1968 film."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "What is the name of the movie that srarred Stev McQueen in the orignal, and Pierce Brosnan in the remake?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify movies where Steve McQueen played a significant role.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify movies where Pierce Brosnan played a significant role.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Extract and list remakes from the movies identified in step 1.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Extract and list remakes from the movies identified in step 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Find the common movie between the results of step 3 and step 4, where Steve McQueen starred in the original, and Pierce Brosnan starred in the remake.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph consists of retrieving all significant movies involving Steve McQueen and Pierce Brosnan (Steps 1 and 2), identifying which ones have remakes (Steps 3 and 4), and finding a match where Steve McQueen was in the original and Pierce Brosnan in the remake (Step 5). This process ensures that we cover all movies featuring both actors and identify the remake relationship accurately."
+        },
+        "recall": 0.5555555555555556,
+        "retrieved_passages": [
+            "Chris Brosnan\nChris Brosnan (born 11 November 1972) is a British film director, writer, and producer. He was born to Cassandra Harris (1948\u201391) and producer Dermot Harris (1937\u201386). Chris is the brother of actor Sean Brosnan. He was adopted by his mother's third husband, actor Pierce Brosnan.",
+            "Steve McQueen (song)\n\"Steve McQueen\" is a song by American singer-songwriter Sheryl Crow, and is the lead track on her 2002 album, \"C'mon C'mon\". It was released as the second single from the album, following \"Soak Up the Sun\" (see 2002 in music). Like \"Soak Up the Sun\", the video was directed by Wayne Isham. It includes Sheryl racing around in various vehicles, recreating scenes from Steve McQueen movies. \"Steve McQueen\" reached #88 on the \"Billboard\" Hot 100. However, the song become a dance hit peaking at #11 in Billboard Hot Dance Club Play. It was also a successful on the Triple A chart reaching #2 on September 9, 2002.",
+            "Remington Steele\nRemington Steele is an American television series co-created by Robert Butler and Michael Gleason. The series, starring Stephanie Zimbalist and Pierce Brosnan, was produced by MTM Enterprises and first broadcast on the NBC network from 1982 to 1987. The series blended the genres of romantic comedy, drama, and detective procedural. \"Remington Steele\" is best known for launching the career of Pierce Brosnan.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Matador\nThe Matador is a 2005 dark comedy film written and directed by Richard Shepard and starring Pierce Brosnan and Greg Kinnear. The film was released on DVD on July 4, 2006 and on HD DVD on December 18, 2006. Brosnan was nominated for both a Golden Globe Award and a Saturn Award for his well-received performance as disillusioned, unstable hitman Julian Noble.",
+            "Paul Michael\nPaul Michael (August 15, 1926 \u2013 July 8, 2011) was an American actor. He was a regular guest star on American television appearing in \"Kojak\", \"Hill Street Blues\", \"Alias\", \"Gilmore Girls\" and \"Frasier\". He played a cop in the Hollywood movie \"Batman\". He also played King Johnny Romano on \"Dark Shadows\". He was also in movies such as \"Mask of the Red Death\" and the TV movie \"Where There's a Will\". He was best known for his appearances on Broadway where he frequently played the title role in \"Zorba the Greek\", Tevia in \"Fiddler on the Roof\", and the barber in \"The Man of La Mancha\". He danced in \"Bells are Ringing\" with Vivian Leigh.",
+            "Natalie Zea\nNatalie Zea (born March 17, 1975) is an American actress, known for her performances on television. Zea began her acting career in theatre. Her first major role was on the NBC daytime soap opera \"Passions\" (2000\u20132002), where she played the role of Gwen Hotchkiss. Her breakout role was on the ABC primetime soap opera \"Dirty Sexy Money\" as socialite Karen Darling, where she starred from 2007 to 2009. Zea also has made many guest appearances on television, starred in the number of independent and made-for-television movies, and had the recurring roles in \"The Shield\", \"Hung\" and \"Californication\".",
+            "The November Man\nThe November Man is a 2014 British-American action spy thriller film based on the novel \"There Are No Spies\" by Bill Granger, which is canonically the seventh installment in \"The November Man\" novel series, published in 1987. It stars Pierce Brosnan, Luke Bracey and Olga Kurylenko with the screenplay written by Michael Finch and Karl Gajdusek. The film is directed by Roger Donaldson, who previously worked with Brosnan in \"Dante's Peak\". The film was released on August 27, 2014 in the United States.",
+            "AFI's 100 Years...100 Movie Quotes\nPart of The American Film Institute (AFI 100 Years... series), AFI's 100 Years... 100 Movie Quotes is a list of the top 100 movie quotations in American cinema. The American Film Institute revealed the list on June 21, 2005, in a three-hour television program on CBS. The program was hosted by actor Pierce Brosnan and had commentary from many Hollywood actors and filmmakers. A jury consisting of 1,500 film artists, critics, and historians selected \"Frankly, my dear, I don't give a damn,\" spoken by Clark Gable as Rhett Butler in the 1939 American Civil War epic \"Gone with the Wind\" as the most memorable American movie quotation of all time.",
+            "Bede Aircraft\nBede Aircraft Corporation was founded by controversial aeronautical engineer Jim Bede in 1961 to produce the BD-1 kit aircraft, which eventually became the American Aviation Corporation's AA-1. The company also created and produced a number of advanced kit planes including the famous Bede BD-5 (pusher propeller driven) and BD-5J (turbojet driven). The BD-5J has held the Guinness record as the World's Smallest Jet Aircraft for more than a quarter century. Versions of it saw use in various Budweiser commercials (the Bud Light Jet, which was lost in an inflight fire and crash unrelated to airshow work). The tiny jet also appeared in two James Bond movies; \"Octopussy\" starring Sir Roger Moore, and later in a cameo appearance, hanging from the wall of Q's workshop in \"Die Another Day\" starring Pierce Brosnan as Agent 007.",
+            "The Thomas Crown Affair (1999 film)\nThe Thomas Crown Affair is a 1999 American heist film directed by John McTiernan. The film, starring Pierce Brosnan, Rene Russo and Denis Leary, is a remake of the 1968 film of the same name. The film generally received positive reviews. It was a success at the box office, grossing $124 million worldwide.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "The Thomas Crown Affair (1968 film)\nThe Thomas Crown Affair is a 1968 film directed and produced by Norman Jewison and starring Steve McQueen and Faye Dunaway. This heist film was nominated for two Academy Awards, winning Best Original Song for Michel Legrand's \"Windmills of Your Mind\". A remake was released in 1999 and a second remake is currently in the development stages.",
+            "Trevor Dwyer-Lynch\nTrevor Dwyer-Lynch 1968, is a Black British actor, presenter, and stand up comedian. Born and raised in Moss Side and Salford, calls himself a \"Mossfordian\" trained in Drama and Performing Arts at City College /Arden School of Theatre Manchester in 1990, Dwyer-Lynch has appeared in numerous television and theatre productions, merging both serious roles\u2014such as \"Gloucester\" in Shakespeare's King Lear\u2014 to his best known comedic role in \"Coronation Street\" as Patrick Tussell the taxi-driver working for Steve McDonald (2002\u20132005). A dog lover, his 15-stone, Old English Mastiff also appeared with him in an episode, his dog spoiling \"Patrick's\" attempt to win over love interest Janice Battersby. Lynch achieved one of his wishes working for the Ken Loach in \"Looking for Eric\", he publicly expresses a desire to work with Directors Shane Meadows, Mike Leigh and Steve McQueen",
+            "Bond Girls Are Forever\nBond Girls Are Forever is a 2002 James Bond documentary film hosted by actress Maryam d'Abo, who had played the role of Kara Milovy in the 15th James Bond film \"The Living Daylights\". It was accompanied by a 2003 book written by John Cork and d'Abo. The book is subtitled The Women of James Bond. Both the film and the book is a tribute to the elite club of women who have played the role of a Bond girl.",
+            "Business action on climate change\nBusiness action on climate change includes a range of activities relating to global warming, and to influencing political decisions on global-warming-related regulation, such as the Kyoto Protocol. Major multinationals have played and to some extent continue to play a significant role in the politics of global warming, especially in the United States, through lobbying of government and funding of global warming skeptics. Business also plays a key role in the mitigation of global warming, through decisions to invest in researching and implementing new energy technologies and energy efficiency measures. (See also individual and political action on climate change.)"
+        ],
+        "thoughts": [
+            "The Thomas Crown Affair (1968 film) is a movie where Steve McQueen played a significant role.",
+            "1. The Thomas Crown Affair (1999) - A remake of the 1968 film, starring Pierce Brosnan and Rene Russo.\n2. Ocean's Eleven (2001) - A remake of the 1960 film, starring George Clooney, Brad Pitt, and Julia Roberts.\n3. The Italian Job (2003) - A remake of the 1969 film, starring Mark Wahlberg, Charlize Theron, and Edward Norton.\n4. The Departed (2006) - A remake of the 2002 Hong Kong film \"Infernal Affairs\", starring Leonardo DiCaprio, Matt Damon, and Jack Nicholson.\n5. True Grit (2010) - A remake of the 1969 film, starring Jeff Bridges, Matt Damon, and Hailee Steinfeld.",
+            "Movies where Pierce Brosnan played a significant role include \"Remington Steele,\" \"The Matador,\" \"The November Man,\" \"The Thomas Crown Affair,\" and \"AFI's 100 Years...100 Movie Quotes.\"",
+            "1. The Thomas Crown Affair (1999) - Remake of The Thomas Crown Affair (1968)\n2. The Matador (2005) - Remake of The Matador (1988)\n3. Remington Steele (TBA) - Remake of Remington Steele (1982-1987)",
+            "The common movie between the results of step 3 and step 4, where Steve McQueen starred in the original and Pierce Brosnan starred in the remake, is \"The Thomas Crown Affair.\""
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the movie that srarred Stev McQueen in the orignal, and Pierce Brosnan in the remake?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify movies that starred Steve McQueen.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify movies that starred Pierce Brosnan.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Filter the movies from each list (Steve McQueen and Pierce Brosnan) to find possible remakes of the same movie.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the original movie starring Steve McQueen that corresponds to the remake starring Pierce Brosnan.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To answer the question, the graph begins by gathering information about the movies starred by Steve McQueen and Pierce Brosnan separately. The reasoning node then compares these movies to find matches that suggest a remake relationship. Finally, the reasoning step identifies the specific movie starring Steve McQueen that was later remade starring Pierce Brosnan, addressing the original question."
+        },
+        "recall": 0.6111111111111112,
+        "retrieved_passages": [
+            "Chris Brosnan\nChris Brosnan (born 11 November 1972) is a British film director, writer, and producer. He was born to Cassandra Harris (1948\u201391) and producer Dermot Harris (1937\u201386). Chris is the brother of actor Sean Brosnan. He was adopted by his mother's third husband, actor Pierce Brosnan.",
+            "Steve McQueen (song)\n\"Steve McQueen\" is a song by American singer-songwriter Sheryl Crow, and is the lead track on her 2002 album, \"C'mon C'mon\". It was released as the second single from the album, following \"Soak Up the Sun\" (see 2002 in music). Like \"Soak Up the Sun\", the video was directed by Wayne Isham. It includes Sheryl racing around in various vehicles, recreating scenes from Steve McQueen movies. \"Steve McQueen\" reached #88 on the \"Billboard\" Hot 100. However, the song become a dance hit peaking at #11 in Billboard Hot Dance Club Play. It was also a successful on the Triple A chart reaching #2 on September 9, 2002.",
+            "Remington Steele\nRemington Steele is an American television series co-created by Robert Butler and Michael Gleason. The series, starring Stephanie Zimbalist and Pierce Brosnan, was produced by MTM Enterprises and first broadcast on the NBC network from 1982 to 1987. The series blended the genres of romantic comedy, drama, and detective procedural. \"Remington Steele\" is best known for launching the career of Pierce Brosnan.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Matador\nThe Matador is a 2005 dark comedy film written and directed by Richard Shepard and starring Pierce Brosnan and Greg Kinnear. The film was released on DVD on July 4, 2006 and on HD DVD on December 18, 2006. Brosnan was nominated for both a Golden Globe Award and a Saturn Award for his well-received performance as disillusioned, unstable hitman Julian Noble.",
+            "The November Man\nThe November Man is a 2014 British-American action spy thriller film based on the novel \"There Are No Spies\" by Bill Granger, which is canonically the seventh installment in \"The November Man\" novel series, published in 1987. It stars Pierce Brosnan, Luke Bracey and Olga Kurylenko with the screenplay written by Michael Finch and Karl Gajdusek. The film is directed by Roger Donaldson, who previously worked with Brosnan in \"Dante's Peak\". The film was released on August 27, 2014 in the United States.",
+            "AFI's 100 Years...100 Movie Quotes\nPart of The American Film Institute (AFI 100 Years... series), AFI's 100 Years... 100 Movie Quotes is a list of the top 100 movie quotations in American cinema. The American Film Institute revealed the list on June 21, 2005, in a three-hour television program on CBS. The program was hosted by actor Pierce Brosnan and had commentary from many Hollywood actors and filmmakers. A jury consisting of 1,500 film artists, critics, and historians selected \"Frankly, my dear, I don't give a damn,\" spoken by Clark Gable as Rhett Butler in the 1939 American Civil War epic \"Gone with the Wind\" as the most memorable American movie quotation of all time.",
+            "Bede Aircraft\nBede Aircraft Corporation was founded by controversial aeronautical engineer Jim Bede in 1961 to produce the BD-1 kit aircraft, which eventually became the American Aviation Corporation's AA-1. The company also created and produced a number of advanced kit planes including the famous Bede BD-5 (pusher propeller driven) and BD-5J (turbojet driven). The BD-5J has held the Guinness record as the World's Smallest Jet Aircraft for more than a quarter century. Versions of it saw use in various Budweiser commercials (the Bud Light Jet, which was lost in an inflight fire and crash unrelated to airshow work). The tiny jet also appeared in two James Bond movies; \"Octopussy\" starring Sir Roger Moore, and later in a cameo appearance, hanging from the wall of Q's workshop in \"Die Another Day\" starring Pierce Brosnan as Agent 007.",
+            "The Thomas Crown Affair (1999 film)\nThe Thomas Crown Affair is a 1999 American heist film directed by John McTiernan. The film, starring Pierce Brosnan, Rene Russo and Denis Leary, is a remake of the 1968 film of the same name. The film generally received positive reviews. It was a success at the box office, grossing $124 million worldwide.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "The Thomas Crown Affair (1968 film)\nThe Thomas Crown Affair is a 1968 film directed and produced by Norman Jewison and starring Steve McQueen and Faye Dunaway. This heist film was nominated for two Academy Awards, winning Best Original Song for Michel Legrand's \"Windmills of Your Mind\". A remake was released in 1999 and a second remake is currently in the development stages.",
+            "Mansi Aggarwal\nMansi Aggarwal is an Indian choreographer who has choreographed dances in Bollywood movies. She is best known for choreographing the song, 'Bharat Mata ki Jai, from the movie Shanghai that starred actor Emraan Hashmi - the song gained a lot of popularity and became a 'hit' in India. She has worked with notable actors such as Sushant Singh Rajput in the award-winning movie, Kai Po Che, and with Abhay Deol in the movie Dev D. The song 'Suno Na Sangemarmar' that she choreographed was nominated for Stardust and Filmfare awards.",
+            "Trevor Dwyer-Lynch\nTrevor Dwyer-Lynch 1968, is a Black British actor, presenter, and stand up comedian. Born and raised in Moss Side and Salford, calls himself a \"Mossfordian\" trained in Drama and Performing Arts at City College /Arden School of Theatre Manchester in 1990, Dwyer-Lynch has appeared in numerous television and theatre productions, merging both serious roles\u2014such as \"Gloucester\" in Shakespeare's King Lear\u2014 to his best known comedic role in \"Coronation Street\" as Patrick Tussell the taxi-driver working for Steve McDonald (2002\u20132005). A dog lover, his 15-stone, Old English Mastiff also appeared with him in an episode, his dog spoiling \"Patrick's\" attempt to win over love interest Janice Battersby. Lynch achieved one of his wishes working for the Ken Loach in \"Looking for Eric\", he publicly expresses a desire to work with Directors Shane Meadows, Mike Leigh and Steve McQueen",
+            "Stony Awards\nThe \"High Times\" Stony Awards (a.k.a. the Stonys), sponsored by \"High Times\" magazine, celebrate the \"highest and stoniest\" movies and of the year. The \"High Times\" Stonys began as an annual article in \"High Times\" magazine conceived by Senior Editor Steve Bloom. Editor-in-Chief Steven Hager then suggested they hold an event in New York and invite the public to attend. Three \"High Times\" Stony Awards were held in New York City. In 2007, the \"High Times\" Stonys were moved to Los Angeles. Occasionally, the Stonys appears only as an article in \"High Times\", but most years the event is staged. In 2010, Special Stony Achievement Awards were presented to the documentary film \"What if Cannabis Cured Cancer\" by Len Richmond, truTV's \"Conspiracy Theory with Jesse Ventura\", as well as a posthumous award to Jack Herer, which was accepted by his son, Dan Herer.",
+            "Natalie Zea\nNatalie Zea (born March 17, 1975) is an American actress, known for her performances on television. Zea began her acting career in theatre. Her first major role was on the NBC daytime soap opera \"Passions\" (2000\u20132002), where she played the role of Gwen Hotchkiss. Her breakout role was on the ABC primetime soap opera \"Dirty Sexy Money\" as socialite Karen Darling, where she starred from 2007 to 2009. Zea also has made many guest appearances on television, starred in the number of independent and made-for-television movies, and had the recurring roles in \"The Shield\", \"Hung\" and \"Californication\".",
+            "Hole in One (2010 film)\nHole in One (also known as \"ParFection: The Golf Movie\") is a 2010 comedy movie starring Steve Talley. It is about a cool undergraduate boy who gets tricked by some surgeons and they operate on him, giving him a set of breasts. Now, he has to earn money through golf for the reverse surgery. The movie was released by Universal Studios via Universal Pictures and launched in the United Kingdom on September 12, 2010. With a wide release in an additional 65 territories and countries. It is awaiting a US Domestic release. Universal 'Tagged' the movie as 'American Pie Plays Golf' and so many people have mistaken for it being an American Pie movie because Steve Talley, who appeared in and stars in it. Further evidence shows that Steve Talley is called 'Eric Keller' in Hole in One and is called 'Dwight Stifler' in the American Pie movie Franchise series which shows the distinct differences between the movies. Box Office figures report $1,600,000 GBP in London England. Universal release Hole in One in a total of 65 countries. No other figures reported."
+        ],
+        "thoughts": [
+            "The Thomas Crown Affair (1968 film) starred Steve McQueen.",
+            "Movies that starred Pierce Brosnan include \"Remington Steele,\" \"The Matador,\" \"The November Man,\" \"AFI's 100 Years...100 Movie Quotes,\" \"Bede Aircraft,\" and \"The Thomas Crown Affair (1999 film).\"",
+            "The possible remake of the same movie for both Steve McQueen and Pierce Brosnan is \"The Thomas Crown Affair.\" The original film starred Steve McQueen in 1968, and a remake starring Pierce Brosnan was released in 1999.",
+            "The original movie starring Steve McQueen that corresponds to the remake starring Pierce Brosnan is \"The Thomas Crown Affair.\""
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the movie that srarred Stev McQueen in the orignal, and Pierce Brosnan in the remake?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify which movies starred Steve McQueen.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify which movies starred Pierce Brosnan that are remakes.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find common movie title between the movies identified in Node 1 and the remakes in Node 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The task is to identify a movie that starred Steve McQueen in the original and Pierce Brosnan in the remake. The execution graph begins by separately retrieving movies that starred Steve McQueen and remakes in which Pierce Brosnan starred. The reasoning step then identifies the common movie title from the two sets of movies."
+        },
+        "recall": 0.6111111111111112,
+        "retrieved_passages": [
+            "Steve McQueen (song)\n\"Steve McQueen\" is a song by American singer-songwriter Sheryl Crow, and is the lead track on her 2002 album, \"C'mon C'mon\". It was released as the second single from the album, following \"Soak Up the Sun\" (see 2002 in music). Like \"Soak Up the Sun\", the video was directed by Wayne Isham. It includes Sheryl racing around in various vehicles, recreating scenes from Steve McQueen movies. \"Steve McQueen\" reached #88 on the \"Billboard\" Hot 100. However, the song become a dance hit peaking at #11 in Billboard Hot Dance Club Play. It was also a successful on the Triple A chart reaching #2 on September 9, 2002.",
+            "Chris Brosnan\nChris Brosnan (born 11 November 1972) is a British film director, writer, and producer. He was born to Cassandra Harris (1948\u201391) and producer Dermot Harris (1937\u201386). Chris is the brother of actor Sean Brosnan. He was adopted by his mother's third husband, actor Pierce Brosnan.",
+            "The November Man\nThe November Man is a 2014 British-American action spy thriller film based on the novel \"There Are No Spies\" by Bill Granger, which is canonically the seventh installment in \"The November Man\" novel series, published in 1987. It stars Pierce Brosnan, Luke Bracey and Olga Kurylenko with the screenplay written by Michael Finch and Karl Gajdusek. The film is directed by Roger Donaldson, who previously worked with Brosnan in \"Dante's Peak\". The film was released on August 27, 2014 in the United States.",
+            "Remington Steele\nRemington Steele is an American television series co-created by Robert Butler and Michael Gleason. The series, starring Stephanie Zimbalist and Pierce Brosnan, was produced by MTM Enterprises and first broadcast on the NBC network from 1982 to 1987. The series blended the genres of romantic comedy, drama, and detective procedural. \"Remington Steele\" is best known for launching the career of Pierce Brosnan.",
+            "The Matador\nThe Matador is a 2005 dark comedy film written and directed by Richard Shepard and starring Pierce Brosnan and Greg Kinnear. The film was released on DVD on July 4, 2006 and on HD DVD on December 18, 2006. Brosnan was nominated for both a Golden Globe Award and a Saturn Award for his well-received performance as disillusioned, unstable hitman Julian Noble.",
+            "The Thomas Crown Affair (1999 film)\nThe Thomas Crown Affair is a 1999 American heist film directed by John McTiernan. The film, starring Pierce Brosnan, Rene Russo and Denis Leary, is a remake of the 1968 film of the same name. The film generally received positive reviews. It was a success at the box office, grossing $124 million worldwide.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Bede Aircraft\nBede Aircraft Corporation was founded by controversial aeronautical engineer Jim Bede in 1961 to produce the BD-1 kit aircraft, which eventually became the American Aviation Corporation's AA-1. The company also created and produced a number of advanced kit planes including the famous Bede BD-5 (pusher propeller driven) and BD-5J (turbojet driven). The BD-5J has held the Guinness record as the World's Smallest Jet Aircraft for more than a quarter century. Versions of it saw use in various Budweiser commercials (the Bud Light Jet, which was lost in an inflight fire and crash unrelated to airshow work). The tiny jet also appeared in two James Bond movies; \"Octopussy\" starring Sir Roger Moore, and later in a cameo appearance, hanging from the wall of Q's workshop in \"Die Another Day\" starring Pierce Brosnan as Agent 007.",
+            "Mary W. S. Wong\nMary Wong is a Senior Policy Director at ICANN (the Internet Corporation for Assigned Names and Numbers). Prior to taking up a full-time position with ICANN she was the Founding Director of the Franklin Pierce Center for Intellectual Property and a tenured professor at the University of New Hampshire in Concord, New Hampshire, U.S.A. She has served as the Vice Chair and a two-term elected member of the Council of the Generic Names Supporting Organization (GNSO) at ICANN. Mary Wong's specialty areas are copyright, Internet and international intellectual property law. Among other courses, she has taught Advanced Topics in Copyright, Copyright, Copyright Licensing and Intellectual Property in the Information Society. Prior to joining Franklin Pierce Law Center (which subsequently became UNH Law), Mary Wong was an Associate Professor of Law at the Lee Kong Chian School of Business at the Singapore Management University. From 1998 to 2003, she was special counsel to the international law firm of Morrison & Foerster LLP, resident primarily in New York where she counseled clients on technology transactions and provided advice on international and comparative legal developments in relation to the Internet, privacy, e-Commerce and intellectual property.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "The Thomas Crown Affair (1968 film)\nThe Thomas Crown Affair is a 1968 film directed and produced by Norman Jewison and starring Steve McQueen and Faye Dunaway. This heist film was nominated for two Academy Awards, winning Best Original Song for Michel Legrand's \"Windmills of Your Mind\". A remake was released in 1999 and a second remake is currently in the development stages.",
+            "Mansi Aggarwal\nMansi Aggarwal is an Indian choreographer who has choreographed dances in Bollywood movies. She is best known for choreographing the song, 'Bharat Mata ki Jai, from the movie Shanghai that starred actor Emraan Hashmi - the song gained a lot of popularity and became a 'hit' in India. She has worked with notable actors such as Sushant Singh Rajput in the award-winning movie, Kai Po Che, and with Abhay Deol in the movie Dev D. The song 'Suno Na Sangemarmar' that she choreographed was nominated for Stardust and Filmfare awards.",
+            "Trevor Dwyer-Lynch\nTrevor Dwyer-Lynch 1968, is a Black British actor, presenter, and stand up comedian. Born and raised in Moss Side and Salford, calls himself a \"Mossfordian\" trained in Drama and Performing Arts at City College /Arden School of Theatre Manchester in 1990, Dwyer-Lynch has appeared in numerous television and theatre productions, merging both serious roles\u2014such as \"Gloucester\" in Shakespeare's King Lear\u2014 to his best known comedic role in \"Coronation Street\" as Patrick Tussell the taxi-driver working for Steve McDonald (2002\u20132005). A dog lover, his 15-stone, Old English Mastiff also appeared with him in an episode, his dog spoiling \"Patrick's\" attempt to win over love interest Janice Battersby. Lynch achieved one of his wishes working for the Ken Loach in \"Looking for Eric\", he publicly expresses a desire to work with Directors Shane Meadows, Mike Leigh and Steve McQueen",
+            "Stony Awards\nThe \"High Times\" Stony Awards (a.k.a. the Stonys), sponsored by \"High Times\" magazine, celebrate the \"highest and stoniest\" movies and of the year. The \"High Times\" Stonys began as an annual article in \"High Times\" magazine conceived by Senior Editor Steve Bloom. Editor-in-Chief Steven Hager then suggested they hold an event in New York and invite the public to attend. Three \"High Times\" Stony Awards were held in New York City. In 2007, the \"High Times\" Stonys were moved to Los Angeles. Occasionally, the Stonys appears only as an article in \"High Times\", but most years the event is staged. In 2010, Special Stony Achievement Awards were presented to the documentary film \"What if Cannabis Cured Cancer\" by Len Richmond, truTV's \"Conspiracy Theory with Jesse Ventura\", as well as a posthumous award to Jack Herer, which was accepted by his son, Dan Herer.",
+            "Natalie Zea\nNatalie Zea (born March 17, 1975) is an American actress, known for her performances on television. Zea began her acting career in theatre. Her first major role was on the NBC daytime soap opera \"Passions\" (2000\u20132002), where she played the role of Gwen Hotchkiss. Her breakout role was on the ABC primetime soap opera \"Dirty Sexy Money\" as socialite Karen Darling, where she starred from 2007 to 2009. Zea also has made many guest appearances on television, starred in the number of independent and made-for-television movies, and had the recurring roles in \"The Shield\", \"Hung\" and \"Californication\".",
+            "Hole in One (2010 film)\nHole in One (also known as \"ParFection: The Golf Movie\") is a 2010 comedy movie starring Steve Talley. It is about a cool undergraduate boy who gets tricked by some surgeons and they operate on him, giving him a set of breasts. Now, he has to earn money through golf for the reverse surgery. The movie was released by Universal Studios via Universal Pictures and launched in the United Kingdom on September 12, 2010. With a wide release in an additional 65 territories and countries. It is awaiting a US Domestic release. Universal 'Tagged' the movie as 'American Pie Plays Golf' and so many people have mistaken for it being an American Pie movie because Steve Talley, who appeared in and stars in it. Further evidence shows that Steve Talley is called 'Eric Keller' in Hole in One and is called 'Dwight Stifler' in the American Pie movie Franchise series which shows the distinct differences between the movies. Box Office figures report $1,600,000 GBP in London England. Universal release Hole in One in a total of 65 countries. No other figures reported."
+        ],
+        "thoughts": [
+            "The Thomas Crown Affair (1968 film) starred Steve McQueen.",
+            "The movies that starred Pierce Brosnan and are remakes are \"The Thomas Crown Affair\" (1999 film) and \"The November Man.\"",
+            "The common movie title between the original and its remakes is \"The Thomas Crown Affair.\""
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the movie that srarred Stev McQueen in the orignal, and Pierce Brosnan in the remake?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify movies that starred Steve McQueen.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify movies that starred Pierce Brosnan and are known to be remakes.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Match the movies from Steve McQueen's list with those from Pierce Brosnan's that are remakes.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Check and confirm the final movie name based on matching criteria.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The graph is designed to solve the problem by first independently retrieving key lists: movies starring Steve McQueen and then movies starring Pierce Brosnan that are remakes. The reasoning step matches these two lists to identify the movie common to both in context. Finally, we confirm the movie to answer the original question accurately."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Steve McQueen (song)\n\"Steve McQueen\" is a song by American singer-songwriter Sheryl Crow, and is the lead track on her 2002 album, \"C'mon C'mon\". It was released as the second single from the album, following \"Soak Up the Sun\" (see 2002 in music). Like \"Soak Up the Sun\", the video was directed by Wayne Isham. It includes Sheryl racing around in various vehicles, recreating scenes from Steve McQueen movies. \"Steve McQueen\" reached #88 on the \"Billboard\" Hot 100. However, the song become a dance hit peaking at #11 in Billboard Hot Dance Club Play. It was also a successful on the Triple A chart reaching #2 on September 9, 2002.",
+            "Job sharing\nJob sharing or work sharing is an employment arrangement where typically two people are retained on a part-time or reduced-time basis to perform a job normally fulfilled by one person working full-time. Since all positions are shared thus leads to a net reduction in per-employee income. The people sharing the job work as a team to complete the job task and are equally responsible for the job workload. Compensation is apportioned between the workers, Working hours, pay and holidays are divided equally. The Pay As You Go system helps make deductions for national insurance and superannuations are made as a straightforward percentage.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Chess problem\nA chess problem, also called a chess composition, is a puzzle set by somebody using chess pieces on a chess board, that presents the solver with a particular task to be achieved. For instance, a position might be given with the instruction that White is to move first, and checkmate Black in two moves against any possible defense. A person who creates such problems is known as a composer. There is a good deal of specialized jargon used in connection with chess problems; see glossary of chess problems for a list.",
+            "Mursm\u00e4cka\nMursm\u00e4cka, also called \"bruksm\u00e4cka\" or only \"sm\u00e4cka\", was an historical profession for women in Sweden. A mursm\u00e4cka was a female construction worker with the task to hand mortar during construction work. The profession is recorded from at least 1691 (though it is not confirmed by name until the 1830s) and discontinued in 1922. This was a very hard but common work for a poor uneducated women during the 19th century, particularly in Stockholm. In July 1888, the Mursm\u00e4cka of Stockholm performed a great strike action which attracted considerable attention in contemporary Sweden.",
+            "The Thomas Crown Affair (1968 film)\nThe Thomas Crown Affair is a 1968 film directed and produced by Norman Jewison and starring Steve McQueen and Faye Dunaway. This heist film was nominated for two Academy Awards, winning Best Original Song for Michel Legrand's \"Windmills of Your Mind\". A remake was released in 1999 and a second remake is currently in the development stages.",
+            "The Five Obstructions\nThe Five Obstructions is a 2003 Danish documentary film directed by Lars von Trier and J\u00f8rgen Leth. The film is conceived as a documentary, but incorporates lengthy sections of experimental films produced by the filmmakers. The premise is that von Trier has created a challenge for his friend and mentor, J\u00f8rgen Leth, another renowned filmmaker. von Trier's favorite film is Leth's \"The Perfect Human\" (1967), and von Trier gives Leth the task of remaking \"The Perfect Human\" five times, each time with a different \"obstruction\" (or obstacle) imposed by von Trier.",
+            "Did You Ever See a Lassie?\n\"Did You Ever See a Lassie?\" is a folk song, nursery rhyme, and singing game. It has a Roud Folk Song Index number of 5040.",
+            "Mansi Aggarwal\nMansi Aggarwal is an Indian choreographer who has choreographed dances in Bollywood movies. She is best known for choreographing the song, 'Bharat Mata ki Jai, from the movie Shanghai that starred actor Emraan Hashmi - the song gained a lot of popularity and became a 'hit' in India. She has worked with notable actors such as Sushant Singh Rajput in the award-winning movie, Kai Po Che, and with Abhay Deol in the movie Dev D. The song 'Suno Na Sangemarmar' that she choreographed was nominated for Stardust and Filmfare awards.",
+            "Trevor Dwyer-Lynch\nTrevor Dwyer-Lynch 1968, is a Black British actor, presenter, and stand up comedian. Born and raised in Moss Side and Salford, calls himself a \"Mossfordian\" trained in Drama and Performing Arts at City College /Arden School of Theatre Manchester in 1990, Dwyer-Lynch has appeared in numerous television and theatre productions, merging both serious roles\u2014such as \"Gloucester\" in Shakespeare's King Lear\u2014 to his best known comedic role in \"Coronation Street\" as Patrick Tussell the taxi-driver working for Steve McDonald (2002\u20132005). A dog lover, his 15-stone, Old English Mastiff also appeared with him in an episode, his dog spoiling \"Patrick's\" attempt to win over love interest Janice Battersby. Lynch achieved one of his wishes working for the Ken Loach in \"Looking for Eric\", he publicly expresses a desire to work with Directors Shane Meadows, Mike Leigh and Steve McQueen",
+            "Stony Awards\nThe \"High Times\" Stony Awards (a.k.a. the Stonys), sponsored by \"High Times\" magazine, celebrate the \"highest and stoniest\" movies and of the year. The \"High Times\" Stonys began as an annual article in \"High Times\" magazine conceived by Senior Editor Steve Bloom. Editor-in-Chief Steven Hager then suggested they hold an event in New York and invite the public to attend. Three \"High Times\" Stony Awards were held in New York City. In 2007, the \"High Times\" Stonys were moved to Los Angeles. Occasionally, the Stonys appears only as an article in \"High Times\", but most years the event is staged. In 2010, Special Stony Achievement Awards were presented to the documentary film \"What if Cannabis Cured Cancer\" by Len Richmond, truTV's \"Conspiracy Theory with Jesse Ventura\", as well as a posthumous award to Jack Herer, which was accepted by his son, Dan Herer.",
+            "Natalie Zea\nNatalie Zea (born March 17, 1975) is an American actress, known for her performances on television. Zea began her acting career in theatre. Her first major role was on the NBC daytime soap opera \"Passions\" (2000\u20132002), where she played the role of Gwen Hotchkiss. Her breakout role was on the ABC primetime soap opera \"Dirty Sexy Money\" as socialite Karen Darling, where she starred from 2007 to 2009. Zea also has made many guest appearances on television, starred in the number of independent and made-for-television movies, and had the recurring roles in \"The Shield\", \"Hung\" and \"Californication\".",
+            "Hole in One (2010 film)\nHole in One (also known as \"ParFection: The Golf Movie\") is a 2010 comedy movie starring Steve Talley. It is about a cool undergraduate boy who gets tricked by some surgeons and they operate on him, giving him a set of breasts. Now, he has to earn money through golf for the reverse surgery. The movie was released by Universal Studios via Universal Pictures and launched in the United Kingdom on September 12, 2010. With a wide release in an additional 65 territories and countries. It is awaiting a US Domestic release. Universal 'Tagged' the movie as 'American Pie Plays Golf' and so many people have mistaken for it being an American Pie movie because Steve Talley, who appeared in and stars in it. Further evidence shows that Steve Talley is called 'Eric Keller' in Hole in One and is called 'Dwight Stifler' in the American Pie movie Franchise series which shows the distinct differences between the movies. Box Office figures report $1,600,000 GBP in London England. Universal release Hole in One in a total of 65 countries. No other figures reported."
+        ],
+        "thoughts": [
+            "The Thomas Crown Affair (1968 film) is a movie that starred Steve McQueen.",
+            "Movies that starred Pierce Brosnan and are known to be remakes include \"The Thomas Crown Affair\" (1999), which is a remake of the 1968 film of the same name. Another movie is \"The Mirror Has Two Faces\" (1996), which is a remake of the 1958 film \"La T\u00eate contre les murs\".",
+            "The Thomas Crown Affair (1968 film) - Steve McQueen\nThe Thomas Crown Affair (1999) - Pierce Brosnan",
+            "Based on the upstream task, the final movie name is \"The Thomas Crown Affair\" with two different versions, one released in 1968 starring Steve McQueen and another released in 1999 starring Pierce Brosnan."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the movie that srarred Stev McQueen in the orignal, and Pierce Brosnan in the remake?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify movies starring Steve McQueen.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify movies starring Pierce Brosnan.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find common movies identified in steps 1 and 2 that have an original and a remake version.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the title of the movie that starred Steve McQueen in the original and Pierce Brosnan in the remake.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins with two parallel retrieval steps where we identify movies starring Steve McQueen and Pierce Brosnan, respectively. The reasoning node then compares the two sets of movies to find which movie fits the criteria of having performances by McQueen in the original and Brosnan in the remake. Finally, the last reasoning step confirms the title of the movie by synthesizing the previous information."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "Steve McQueen (song)\n\"Steve McQueen\" is a song by American singer-songwriter Sheryl Crow, and is the lead track on her 2002 album, \"C'mon C'mon\". It was released as the second single from the album, following \"Soak Up the Sun\" (see 2002 in music). Like \"Soak Up the Sun\", the video was directed by Wayne Isham. It includes Sheryl racing around in various vehicles, recreating scenes from Steve McQueen movies. \"Steve McQueen\" reached #88 on the \"Billboard\" Hot 100. However, the song become a dance hit peaking at #11 in Billboard Hot Dance Club Play. It was also a successful on the Triple A chart reaching #2 on September 9, 2002.",
+            "Remington Steele\nRemington Steele is an American television series co-created by Robert Butler and Michael Gleason. The series, starring Stephanie Zimbalist and Pierce Brosnan, was produced by MTM Enterprises and first broadcast on the NBC network from 1982 to 1987. The series blended the genres of romantic comedy, drama, and detective procedural. \"Remington Steele\" is best known for launching the career of Pierce Brosnan.",
+            "Chris Brosnan\nChris Brosnan (born 11 November 1972) is a British film director, writer, and producer. He was born to Cassandra Harris (1948\u201391) and producer Dermot Harris (1937\u201386). Chris is the brother of actor Sean Brosnan. He was adopted by his mother's third husband, actor Pierce Brosnan.",
+            "Mamma Mia! (film)\nMamma Mia! (promoted as Mamma Mia! The Movie) is a 2008 British-American-Swedish musical romantic comedy film adapted from the 1999 West End/2001 Broadway musical of the same name, based on the songs of successful pop group ABBA, with additional music composed by ABBA member Benny Andersson. The film was directed by Phyllida Lloyd and distributed by Universal Pictures in partnership with Tom Hanks and Rita Wilson's Playtone and Littlestar, and the title originates from ABBA's 1975 chart-topper \"Mamma Mia\". Meryl Streep heads the cast, playing the role of single mother Donna Sheridan. Pierce Brosnan (Sam Carmichael), Colin Firth (Harry Bright), and Stellan Skarsg\u00e5rd (Bill Anderson) play the three possible fathers to Donna's daughter, Sophie (Amanda Seyfried). \"Mamma Mia!\" received mixed reviews from critics and earned $609.8 million on a $52 million budget.",
+            "The Thomas Crown Affair (1968 film)\nThe Thomas Crown Affair is a 1968 film directed and produced by Norman Jewison and starring Steve McQueen and Faye Dunaway. This heist film was nominated for two Academy Awards, winning Best Original Song for Michel Legrand's \"Windmills of Your Mind\". A remake was released in 1999 and a second remake is currently in the development stages.",
+            "The Matador\nThe Matador is a 2005 dark comedy film written and directed by Richard Shepard and starring Pierce Brosnan and Greg Kinnear. The film was released on DVD on July 4, 2006 and on HD DVD on December 18, 2006. Brosnan was nominated for both a Golden Globe Award and a Saturn Award for his well-received performance as disillusioned, unstable hitman Julian Noble.",
+            "The November Man\nThe November Man is a 2014 British-American action spy thriller film based on the novel \"There Are No Spies\" by Bill Granger, which is canonically the seventh installment in \"The November Man\" novel series, published in 1987. It stars Pierce Brosnan, Luke Bracey and Olga Kurylenko with the screenplay written by Michael Finch and Karl Gajdusek. The film is directed by Roger Donaldson, who previously worked with Brosnan in \"Dante's Peak\". The film was released on August 27, 2014 in the United States.",
+            "Bede Aircraft\nBede Aircraft Corporation was founded by controversial aeronautical engineer Jim Bede in 1961 to produce the BD-1 kit aircraft, which eventually became the American Aviation Corporation's AA-1. The company also created and produced a number of advanced kit planes including the famous Bede BD-5 (pusher propeller driven) and BD-5J (turbojet driven). The BD-5J has held the Guinness record as the World's Smallest Jet Aircraft for more than a quarter century. Versions of it saw use in various Budweiser commercials (the Bud Light Jet, which was lost in an inflight fire and crash unrelated to airshow work). The tiny jet also appeared in two James Bond movies; \"Octopussy\" starring Sir Roger Moore, and later in a cameo appearance, hanging from the wall of Q's workshop in \"Die Another Day\" starring Pierce Brosnan as Agent 007.",
+            "The Thomas Crown Affair (1999 film)\nThe Thomas Crown Affair is a 1999 American heist film directed by John McTiernan. The film, starring Pierce Brosnan, Rene Russo and Denis Leary, is a remake of the 1968 film of the same name. The film generally received positive reviews. It was a success at the box office, grossing $124 million worldwide.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Hole in One (2010 film)\nHole in One (also known as \"ParFection: The Golf Movie\") is a 2010 comedy movie starring Steve Talley. It is about a cool undergraduate boy who gets tricked by some surgeons and they operate on him, giving him a set of breasts. Now, he has to earn money through golf for the reverse surgery. The movie was released by Universal Studios via Universal Pictures and launched in the United Kingdom on September 12, 2010. With a wide release in an additional 65 territories and countries. It is awaiting a US Domestic release. Universal 'Tagged' the movie as 'American Pie Plays Golf' and so many people have mistaken for it being an American Pie movie because Steve Talley, who appeared in and stars in it. Further evidence shows that Steve Talley is called 'Eric Keller' in Hole in One and is called 'Dwight Stifler' in the American Pie movie Franchise series which shows the distinct differences between the movies. Box Office figures report $1,600,000 GBP in London England. Universal release Hole in One in a total of 65 countries. No other figures reported.",
+            "Evan Almighty\nEvan Almighty is a 2007 American fantasy comedy film and the stand-alone sequel/spin-off to \"Bruce Almighty\" (2003). The film was directed by Tom Shadyac, written by Steve Oedekerk, based on the characters created by Steve Koren and Mark O'Keefe from the original film, and starring Steve Carell, Morgan Freeman, Lauren Graham and John Goodman.",
+            "Trevor Dwyer-Lynch\nTrevor Dwyer-Lynch 1968, is a Black British actor, presenter, and stand up comedian. Born and raised in Moss Side and Salford, calls himself a \"Mossfordian\" trained in Drama and Performing Arts at City College /Arden School of Theatre Manchester in 1990, Dwyer-Lynch has appeared in numerous television and theatre productions, merging both serious roles\u2014such as \"Gloucester\" in Shakespeare's King Lear\u2014 to his best known comedic role in \"Coronation Street\" as Patrick Tussell the taxi-driver working for Steve McDonald (2002\u20132005). A dog lover, his 15-stone, Old English Mastiff also appeared with him in an episode, his dog spoiling \"Patrick's\" attempt to win over love interest Janice Battersby. Lynch achieved one of his wishes working for the Ken Loach in \"Looking for Eric\", he publicly expresses a desire to work with Directors Shane Meadows, Mike Leigh and Steve McQueen",
+            "Stony Awards\nThe \"High Times\" Stony Awards (a.k.a. the Stonys), sponsored by \"High Times\" magazine, celebrate the \"highest and stoniest\" movies and of the year. The \"High Times\" Stonys began as an annual article in \"High Times\" magazine conceived by Senior Editor Steve Bloom. Editor-in-Chief Steven Hager then suggested they hold an event in New York and invite the public to attend. Three \"High Times\" Stony Awards were held in New York City. In 2007, the \"High Times\" Stonys were moved to Los Angeles. Occasionally, the Stonys appears only as an article in \"High Times\", but most years the event is staged. In 2010, Special Stony Achievement Awards were presented to the documentary film \"What if Cannabis Cured Cancer\" by Len Richmond, truTV's \"Conspiracy Theory with Jesse Ventura\", as well as a posthumous award to Jack Herer, which was accepted by his son, Dan Herer.",
+            "Domestic Disturbance\nDomestic Disturbance is a 2001 American psychological thriller film directed by Harold Becker (his last film to date) and starring John Travolta, Vince Vaughn, Teri Polo, Steve Buscemi, and Matt O'Leary."
+        ],
+        "thoughts": [
+            "The Thomas Crown Affair (1968 film) - starring Steve McQueen\nEvan Almighty - starring Steve Carell\nDomestic Disturbance - starring Steve Buscemi\n\nThe only movie starring Steve McQueen is \"The Thomas Crown Affair\" (1968 film).",
+            "Movies starring Pierce Brosnan include:\n- Mamma Mia! (2008)\n- The Matador (2005)\n- The November Man (2014)\n- The Thomas Crown Affair (1999)",
+            "The common movie identified in both steps 1 and 2 is \"The Thomas Crown Affair\", which has an original version from 1968 starring Steve McQueen and a remake from 1999 starring Pierce Brosnan.",
+            "The title of the movie that starred Steve McQueen in the original and Pierce Brosnan in the remake is \"The Thomas Crown Affair\"."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the movie that srarred Stev McQueen in the orignal, and Pierce Brosnan in the remake?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about movies starring Steve McQueen.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about movies starring Pierce Brosnan.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify common movies from the lists of movies starring Steve McQueen and Pierce Brosnan.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which of the common movies are original and remakes, and confirm Steve McQueen and Pierce Brosnan starred in respective versions.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The task of determining the movie requires identifying movies from lists of those starring both Steve McQueen and Pierce Brosnan, to find the original and its remake. This involves retrieval of movie lists for both actors, followed by reasoning to identify intersecting movies, and finally confirming that each actor starred in the correct version of the film."
+        },
+        "recall": 0.6111111111111112,
+        "retrieved_passages": [
+            "Steve McQueen (song)\n\"Steve McQueen\" is a song by American singer-songwriter Sheryl Crow, and is the lead track on her 2002 album, \"C'mon C'mon\". It was released as the second single from the album, following \"Soak Up the Sun\" (see 2002 in music). Like \"Soak Up the Sun\", the video was directed by Wayne Isham. It includes Sheryl racing around in various vehicles, recreating scenes from Steve McQueen movies. \"Steve McQueen\" reached #88 on the \"Billboard\" Hot 100. However, the song become a dance hit peaking at #11 in Billboard Hot Dance Club Play. It was also a successful on the Triple A chart reaching #2 on September 9, 2002.",
+            "Remington Steele\nRemington Steele is an American television series co-created by Robert Butler and Michael Gleason. The series, starring Stephanie Zimbalist and Pierce Brosnan, was produced by MTM Enterprises and first broadcast on the NBC network from 1982 to 1987. The series blended the genres of romantic comedy, drama, and detective procedural. \"Remington Steele\" is best known for launching the career of Pierce Brosnan.",
+            "Chris Brosnan\nChris Brosnan (born 11 November 1972) is a British film director, writer, and producer. He was born to Cassandra Harris (1948\u201391) and producer Dermot Harris (1937\u201386). Chris is the brother of actor Sean Brosnan. He was adopted by his mother's third husband, actor Pierce Brosnan.",
+            "The Matador\nThe Matador is a 2005 dark comedy film written and directed by Richard Shepard and starring Pierce Brosnan and Greg Kinnear. The film was released on DVD on July 4, 2006 and on HD DVD on December 18, 2006. Brosnan was nominated for both a Golden Globe Award and a Saturn Award for his well-received performance as disillusioned, unstable hitman Julian Noble.",
+            "The November Man\nThe November Man is a 2014 British-American action spy thriller film based on the novel \"There Are No Spies\" by Bill Granger, which is canonically the seventh installment in \"The November Man\" novel series, published in 1987. It stars Pierce Brosnan, Luke Bracey and Olga Kurylenko with the screenplay written by Michael Finch and Karl Gajdusek. The film is directed by Roger Donaldson, who previously worked with Brosnan in \"Dante's Peak\". The film was released on August 27, 2014 in the United States.",
+            "Mamma Mia! (film)\nMamma Mia! (promoted as Mamma Mia! The Movie) is a 2008 British-American-Swedish musical romantic comedy film adapted from the 1999 West End/2001 Broadway musical of the same name, based on the songs of successful pop group ABBA, with additional music composed by ABBA member Benny Andersson. The film was directed by Phyllida Lloyd and distributed by Universal Pictures in partnership with Tom Hanks and Rita Wilson's Playtone and Littlestar, and the title originates from ABBA's 1975 chart-topper \"Mamma Mia\". Meryl Streep heads the cast, playing the role of single mother Donna Sheridan. Pierce Brosnan (Sam Carmichael), Colin Firth (Harry Bright), and Stellan Skarsg\u00e5rd (Bill Anderson) play the three possible fathers to Donna's daughter, Sophie (Amanda Seyfried). \"Mamma Mia!\" received mixed reviews from critics and earned $609.8 million on a $52 million budget.",
+            "Bede Aircraft\nBede Aircraft Corporation was founded by controversial aeronautical engineer Jim Bede in 1961 to produce the BD-1 kit aircraft, which eventually became the American Aviation Corporation's AA-1. The company also created and produced a number of advanced kit planes including the famous Bede BD-5 (pusher propeller driven) and BD-5J (turbojet driven). The BD-5J has held the Guinness record as the World's Smallest Jet Aircraft for more than a quarter century. Versions of it saw use in various Budweiser commercials (the Bud Light Jet, which was lost in an inflight fire and crash unrelated to airshow work). The tiny jet also appeared in two James Bond movies; \"Octopussy\" starring Sir Roger Moore, and later in a cameo appearance, hanging from the wall of Q's workshop in \"Die Another Day\" starring Pierce Brosnan as Agent 007.",
+            "The Thomas Crown Affair (1999 film)\nThe Thomas Crown Affair is a 1999 American heist film directed by John McTiernan. The film, starring Pierce Brosnan, Rene Russo and Denis Leary, is a remake of the 1968 film of the same name. The film generally received positive reviews. It was a success at the box office, grossing $124 million worldwide.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The Thomas Crown Affair (1968 film)\nThe Thomas Crown Affair is a 1968 film directed and produced by Norman Jewison and starring Steve McQueen and Faye Dunaway. This heist film was nominated for two Academy Awards, winning Best Original Song for Michel Legrand's \"Windmills of Your Mind\". A remake was released in 1999 and a second remake is currently in the development stages.",
+            "Trevor Dwyer-Lynch\nTrevor Dwyer-Lynch 1968, is a Black British actor, presenter, and stand up comedian. Born and raised in Moss Side and Salford, calls himself a \"Mossfordian\" trained in Drama and Performing Arts at City College /Arden School of Theatre Manchester in 1990, Dwyer-Lynch has appeared in numerous television and theatre productions, merging both serious roles\u2014such as \"Gloucester\" in Shakespeare's King Lear\u2014 to his best known comedic role in \"Coronation Street\" as Patrick Tussell the taxi-driver working for Steve McDonald (2002\u20132005). A dog lover, his 15-stone, Old English Mastiff also appeared with him in an episode, his dog spoiling \"Patrick's\" attempt to win over love interest Janice Battersby. Lynch achieved one of his wishes working for the Ken Loach in \"Looking for Eric\", he publicly expresses a desire to work with Directors Shane Meadows, Mike Leigh and Steve McQueen",
+            "Madala Ranga Rao\nMadala Rangarao is an Indian Telugu Film Actor and producer noted for Erra Cinema or revolutionary movies in telugu film industry. He is popularly known as Red Star by people and associated with Communist Party of India and Prajanatya Mandali. Ranga Rao started his career with saitirical telugu film \"Chairman Chelamaiah\". He started his own banner Navataram Pictures and produced and acted movies like Yuvatharam Kadilindi (1980), Erra Mallelu (1981), Mahaprasthanam (1982), Praja Shakthi(1983), Veera Bhadrudu(1984)..",
+            "List of Scream characters\nWes Craven's \"Scream\" series features a large cast of characters created primarily by Kevin Williamson with contributions from Craven and Ehren Kruger. The series focuses on the character of Sidney Prescott (Neve Campbell) and a succession of murderers who adopt a ghost-like disguise, dubbed Ghostface, to taunt and attempt to kill her. The series comprises four films: \"Scream\" (1996), \"Scream 2\" (1997), \"Scream 3\" (2000) and \"Scream 4\" (2011).",
+            "Midnite Movies\nMidnite Movies is a line of B movies released first on VHS and later on DVD by MGM Home Entertainment. The line was begun by MGM in March 2001 following its acquisition of Orion Pictures, which bought out Filmways, the owner of American International Pictures. AIP had a library of B movies from the 1950s and 1960s that were science fiction, horror, and exploitation films. The \"Midnite Movies\" collection is primarily derived from the AIP library (including most of Roger Corman's and Vincent Price's horror movies) but also included Hammer Film Productions, Amicus Productions, United Artists, and Empire International Pictures movies as well. The DVDs were first released as single films but most later releases would be double features on single double-sided discs. Sony Pictures Home Entertainment later became owners of the MGM library and continued the \"Midnite Movies\" line with distributor 20th Century Fox Home Entertainment. All double feature titles released on the 20th Century Fox label were two-disc packages. By 2011, no new titles were forthcoming; the previous catalog titles slowly went out of print and the \"Midnite Movies\" website was taken down."
+        ],
+        "thoughts": [
+            "Steve McQueen is a well-known actor who starred in the 1968 film \"The Thomas Crown Affair\" alongside Faye Dunaway. The film was nominated for two Academy Awards and won Best Original Song for \"Windmills of Your Mind\". Additionally, there is a song by Sheryl Crow titled \"Steve McQueen\" which pays homage to the actor and features scenes from his movies in the music video. There is also a Black British actor, presenter, and comedian named Trevor Dwyer-Lynch who has expressed a desire to work with directors such as Steve McQueen. However, there is no specific information provided about other movies starring Steve McQueen.",
+            "Movies starring Pierce Brosnan include \"The Matador\" (2005), \"The November Man\" (2014), \"Mamma Mia!\" (2008), \"The Thomas Crown Affair\" (1999), and \"Bede Aircraft\" (appeared in \"Octopussy\" and \"Die Another Day\"). Pierce Brosnan also gained recognition for his role in the television series \"Remington Steele\" (1982-1987).",
+            "The common movie starring both Steve McQueen and Pierce Brosnan is \"The Thomas Crown Affair\" - Steve McQueen starred in the 1968 version alongside Faye Dunaway, while Pierce Brosnan starred in the 1999 remake.",
+            "The common movie \"The Thomas Crown Affair\" is a remake, with Steve McQueen starring in the original 1968 version and Pierce Brosnan starring in the 1999 remake."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the movie that srarred Stev McQueen in the orignal, and Pierce Brosnan in the remake?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the original movie that starred Steve McQueen.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the remake movie that starred Pierce Brosnan.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Compare the names of the original movie starring Steve McQueen and the remake starring Pierce Brosnan to find the matching movie franchise or titles.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts with two parallel retrieval and reasoning nodes: finding the original movie with Steve McQueen and the remake with Pierce Brosnan. Once both movies are identified, a reasoning node compares the two to determine the shared movie franchise or title, leading to the final answer."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "Anthony Casso\nAnthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family. During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders. Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\" In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov. Casso has also admitted to several attempts to murder Gambino family boss John Gotti.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "El Rollo\nAn El Rollo (Spanish for \"The Roll\") is a bodyboarding trick performed when the bodyboarder hits the lip of the wave and uses its power to throw himself out with the lip in a perfect arc to complete a roll before landing on the wave surface or into the white water. When the bodyboarder detaches completely from the wave surface or the lip the trick is called an \"air roll\" or \"aerial roll\". Other variations include the \"barrel roll\" where the roll is completed inside the barrel, and the \"rollo takeoff\" which is performed while catching the wave. This trick was named by someone in the industry. I remember the story where Pat Caldwell did the roll and Jack Lindholm or whoever saw him do it and commented \"what do you call that an el rollo\". Photos of the new move and captions started appearing in Bodyboarding Magazine. The move and the term caught on and spread around the world.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "See Yourself\n\"See Yourself\" is a song by English musician George Harrison, released on his 1976 album \"Thirty Three & 1/3\". Harrison began writing the song in 1967, while he was a member of the Beatles, in response to the public outcry surrounding bandmate Paul McCartney's admission that he had taken the hallucinogenic drug LSD. McCartney's announcement created a reaction in the press similar to that caused in 1966 by John Lennon's statement that the Beatles were more popular than Christianity. In its finished form, the song's lyrics advocate self-awareness and consideration for the consequences of one's actions. Musically, the composition contains unusual shifts in time signature from standard 4/4 to 9/8, while the songwords reflect the era of its genesis by recalling themes first espoused in the Beatles tracks \"Within You Without You\" and \"All You Need Is Love\"."
+        ],
+        "thoughts": [
+            "The original movie that starred Steve McQueen is \"The Great Escape\" (1963).",
+            "The remake movie that starred Pierce Brosnan is \"The Thomas Crown Affair\" (1999).",
+            "The matching movie franchise or titles for the original movie \"The Great Escape\" and the remake \"The Thomas Crown Affair\" is that there is no direct matching franchise or title. These are two separate movies with different storylines and characters."
+        ],
+        "is_best": false
+    }
+]

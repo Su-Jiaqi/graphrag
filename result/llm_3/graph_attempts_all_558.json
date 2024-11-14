@@ -1,0 +1,757 @@
+[
+    {
+        "question": "Are Milk Lake, Taiwan and Larnaca Salt Lake both located in Asia?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the location information of Milk Lake, Taiwan.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the continent on which Taiwan is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the location information of Larnaca Salt Lake.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Retrieve the continent on which Cyprus is located, where Larnaca Salt Lake is situated.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Verify that Milk Lake is in Taiwan and that Taiwan is located in Asia.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Verify that Larnaca Salt Lake is in Cyprus and determine if Cyprus is located in Asia.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    },
+                    {
+                        "id": "7",
+                        "instruction": "Determine if both Milk Lake, Taiwan and Larnaca Salt Lake are located in Asia based on previous verifications.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "5",
+                            "6"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "7"
+            },
+            "explanation": "The graph first retrieves the specific location of both Milk Lake, Taiwan and Larnaca Salt Lake. Separate nodes determine the continents on which Taiwan and Cyprus are located. Subsequent reasoning nodes verify and cross-check these retrievals to determine if both locations are in Asia. The final node combines these verifications to answer the original question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Larnaca Salt Lake\nLarnaca Salt Lake (Greek: \u0391\u03bb\u03c5\u03ba\u03ae \u039b\u03ac\u03c1\u03bd\u03b1\u03ba\u03b1\u03c2 , Turkish: \"Larnaka Tuz G\u00f6l\u00fc\" ) is a complex network of four salt lakes (3 of them interconnected) of different sizes to the west of the city of Larnaca. The largest is lake \"Aliki\", followed by lake \"Orphani\", lake \"Soros\" and lake \"Spiro\". They form the second largest salt lake in Cyprus after the Limassol Salt Lake. The total surface area of the lakes adds up to 2.2 km and being just off the road leading to Larnaca International Airport is one of the most distinctive landmarks of the area. It is considered one of the most important wetlands of Cyprus and it has been declared a Ramsar site, Natura 2000 site, Special Protected Area under the Barcelona Convention and an Important Bird Area (IBA). It is surrounded by halophytic scrubland and on its bank lies the Hala Sultan Tekke, one of the holiest of shrines within Ottoman Islam. It houses the tomb of Umm Haram, Muhammad's 'wet-nurse'.",
+            "Hala Sultan Tekke\nHala Sultan Tekke or the Mosque of Umm Haram (Turkish: \"Hala Sultan Tekkesi\" ; Greek: \u03a4\u03b5\u03ba\u03ad\u03c2 \u03a7\u03b1\u03bb\u03ac \u03a3\u03bf\u03c5\u03bb\u03c4\u03ac\u03bd\u03b1\u03c2 ) is a Muslim shrine on the west bank of Larnaca Salt Lake, near Larnaca, Cyprus. Umm Haram (Turkish: \"Hala Sultan\" ) was the wife of Ubada bin al-Samit, a companion of the Prophet Muhammed.",
+            "Milk Lake, Taiwan\nThe Milk Lake () is a lake in Shilin District, Taipei, Taiwan. The lake is part of Yangmingshan National Park.",
+            "Salt Lake City Air Route Traffic Control Center\nSalt Lake City Air Route Traffic Control Center (ZLC) (radio communications \"Salt Lake Center\") is one of 22 FAA Area Control Centers in the United States. It is located in Salt Lake City, Utah, adjacent to Salt Lake City International Airport. It was opened in 1939 and was originally located on the third floor of the old Salt Lake City International Airport terminal. The Salt Lake Center (ZLC) covers one of the largest geographical areas of any other control center, totaling approximately 350,000 squares miles.",
+            "Salt Lake City International Airport\nSalt Lake City International Airport (IATA: SLC, ICAO: KSLC, FAA LID: SLC) is a civil-military airport located about 4 miles west of Downtown Salt Lake City, Utah in the United States. The airport is the closest commercial airport for more than 2.5 million people and is within a 30-minute drive of nearly 1.3 million jobs.",
+            "Milk Lake Glacier\nMilk Lake Glacier is located in the Glacier Peak Wilderness in the U.S. state of Washington. The glacier is within Mount Baker-Snoqualmie National Forest and a little over 3 mi northwest of Glacier Peak. Milk Lake Glacier disappeared sometime between 1984 and 1997 and by 2005, Milk Lake was situated where the glacier had once been.",
+            "Arena (UTA station)\nArena is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line has service from the Salt Lake City International Airport and to West Valley City via Downtown Salt Lake City.",
+            "Temple Square (UTA station)\nTemple Square is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "City Center (UTA station)\nCity Center is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "Salt Lake City Intermodal Hub\nThe Salt Lake City Intermodal Hub (also known as Salt Lake Central on Utah Transit Authority [UTA] routes and SLC by Amtrak) is a multi-modal transportation hub in Salt Lake City, Utah, United States served by the Blue Line of UTA's TRAX light rail system that operates in Salt Lake County and by the \"FrontRunner\", UTA's commuter rail train that operates along the Wasatch Front with service from Pleasant View in northern Weber County through Ogden, Davis County, Salt Lake City, and Salt Lake County to Provo in central Utah County. Service at the intermodal hub is also provided by Amtrak (with the \"California Zephyr\"), Greyhound Lines, and U Car Share, as well as UTA local bus service.",
+            "Green Line (TRAX)\nThe Green Line is a light rail line on the Utah Transit Authority's (UTA) TRAX system in Salt Lake City, Utah, in the United States, operated by the Utah Transit Authority (UTA). It opened on August 7, 2011, and runs between Airport Station at the Salt Lake City International Airport and West Valley Central Station in West Valley City (via Downtown Salt Lake City) serving a total of eighteen stations: thirteen in Salt Lake City, one in South Salt Lake, and four in West Valley City.",
+            "Courthouse (UTA station)\nCourthouse is a light rail station in Downtown Salt Lake City, Utah, United States serviced by all three lines of Utah Transit Authority's TRAX light rail system. The Blue Line provides service from Downtown Salt Lake City to Draper. The Red Line provides service from the University of Utah to the Daybreak Community of South Jordan. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "State Street (Salt Lake County)\nState Street is a wide 17.3 mi street in Salt Lake County, Utah leading almost straight south from the steps of the Utah State Capitol Building, through Salt Lake City (including Downtown Salt Lake City), South Salt Lake, western Millcreek Township, Murray (including the Murray Downtown Historic District), eastern Midvale, Sandy (including the Sandy Historic District and Downtown Sandy), and northwestern Draper. Because it follows the most direct route from downtown Salt Lake City to the Point of the Mountain pass to Utah County, it was the undisputed main road south from Salt Lake City until Interstate 15 was built to the west (but closely paralleling it). It retains the US Highway 89 designation for all but the northernmost seven blocks (which are part of State Route 186 instead) despite I-15's proximity. Due to its history as a route for long-distance travel, travel within the Wasatch Front region, and travel between the cities along the east side of the Jordan River, it has attracted a wide variety of retail and service businesses along its entire length, creating a nearly continuous commercial axis for the Salt Lake Valley.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Lake Ercina\nLake Ercina is a small highland lake in Asturias, Spain. It is located in the Picos de Europa, in the Cantabrian Mountains. Situated next to Lake Enol, together, they forms the group known as Lakes of Covadonga within the Picos de Europa National Park. Lake Ercina is smaller than Lake Enol. It is situated at an altitude of 1108 m and its maximum depth is just over 2 m . The eutrophic lake, covers approximately eight hectares. Its characteristics are tied to its glacier origin and geographic location.",
+            "Wild Horse Lake (Oklahoma)\nWild Horse Lake is a playa lake located in Texas County, Oklahoma. The lake was the location of the infamous Hay Meadow Massacre (July 1888) in which one faction in the county seat fight in Stevens County, Kansas, killed four members of the opposing faction. Since the killings took place in what was then No Man's Land, no court had jurisdiction over the crime. The lake was also the subject of Oklahoma case law in reference to water appropriations\u2014Depuy V. Hoeme (1980 OK 26, 611 P.2d 228).",
+            "John Chiang (Taiwan)\nJohn Chiang or Chiang Hsiao-yen (; born March 1, 1942), formerly surnamed Chang (), is a Kuomintang politician in Taiwan. He is the grandson of Chiang Kai-shek, former leader of the Republic of China.",
+            "Tatung F.C.\nTatung Football Club () is a Taiwanese semi-professional football club based in Taipei, Taiwan. The club, affiliated with the Tatung electronics company, was founded in 1969 by a group of Tatung employees favoring football activities. It is the oldest and the only (semi-professional) football club owned by private enterprise in Taiwan. Many of the players work for the company in the daytime and train in the evening.",
+            "National Churchill Museum\nThe National Churchill Museum (formerly the Winston Churchill Memorial and Library), located on the Westminster College campus in Fulton, Missouri, United States, commemorates the life and times of Sir Winston Churchill. In 1946, Winston Churchill delivered his famous in the Westminster Historic Gymnasium. In it was the line: \"From Stettin in the Baltic to Trieste in the Adriatic an iron curtain has descended across the Continent.\" This sentence caused the oration to become known as the \"Iron Curtain\" speech. \"Sinews of Peace\" heralded the beginning of the Cold War.",
+            "Mage Gauntlet\nMage Gauntlet is an iOS game developed by Rocketcat Games and released on October 20, 2011. In this game you follow the main character named Lexi, in an adventure around the continent in search of a way to defeat the demon Lord Hurgoroth, and prevent him from taking over the world.",
+            "Milk and Honey (album)\nMilk and Honey is an album by John Lennon and Yoko Ono released in 1984. Following the compilation \"The John Lennon Collection\", it is Lennon's eighth and final studio album, and the first posthumous release of new Lennon music, having been recorded in the last months of his life during and following the sessions for their 1980 album \"Double Fantasy\". It was assembled by Yoko Ono in association with the Geffen label.",
+            "What Now (song)\n\"What Now\" is a song recorded by Barbadian singer Rihanna for her seventh studio album, \"Unapologetic\" (2012). It was written by Olivia Waithe, Parker Ighile and Nathan Cassells alongside Rihanna, with production handled by Ighile and Cassells. A remix collection was released exclusively to Beatport on August 29, 2013 and later via iTunes, Amazon, and Google Play on September 17, 2013. The single was serviced to US rhythmic radio on September 24, 2013, before impacting mainstream radio on October 1, 2013 as the fifth international single and sixth overall from \"Unapologetic\". Another remix collection was released to Beatport on October 29, 2013. The song is a mid-tempo piano ballad which incorporates sounds which resemble \"sonic bombs\" during the chorus and \"crashing\" drums.",
+            "Sault Tribe of Chippewa Indians\nThe Sault Ste. Marie Tribe of Chippewa Indians (pronounced \"Soo Saint Marie\"), commonly shortened to Sault Tribe of Chippewa Indians or the more colloquial Soo Tribe, is a federally recognized Native American tribe in what is now known as Michigan's Upper Peninsula. The tribal headquarters is located within the major city in the region, Sault Ste. Marie on the St. Marys River."
+        ],
+        "thoughts": [
+            "Milk Lake is located in Shilin District, Taipei, Taiwan, and is part of Yangmingshan National Park.",
+            "Taiwan is located on the continent of Asia.",
+            "Based on the results of the upstream tasks, it can be verified that Milk Lake is indeed located in Taiwan, specifically in the Shilin District of Taipei. Additionally, Taiwan is located in Asia, as confirmed by the second upstream task. Therefore, Milk Lake is in Taiwan, which is located in Asia.",
+            "Larnaca Salt Lake is located to the west of the city of Larnaca in Cyprus. It is just off the road leading to Larnaca International Airport and is considered one of the most distinctive landmarks of the area. It is surrounded by halophytic scrubland and on its bank lies the Hala Sultan Tekke, one of the holiest of shrines within Ottoman Islam.",
+            "Cyprus is located on the continent of Europe. Larnaca Salt Lake is situated in Cyprus, which is part of the European continent.",
+            "Based on the information from upstream tasks 3 and 4, it can be verified that Larnaca Salt Lake is indeed located in Cyprus. Additionally, Cyprus is located in the continent of Europe, not in Asia.",
+            "Milk Lake, Taiwan is located in Asia, as Taiwan is located in Asia. However, Larnaca Salt Lake is not located in Asia, as it is located in Cyprus, which is in Europe. Therefore, only Milk Lake, Taiwan is located in Asia."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Milk Lake, Taiwan and Larnaca Salt Lake both located in Asia?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Locate Milk Lake on a map and identify its continent.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Locate Larnaca Salt Lake on a map and identify its continent.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Milk Lake is located in Asia based on its geographic location.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Larnaca Salt Lake is located in Asia based on its geographic location.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Conclude if both Milk Lake and Larnaca Salt Lake are located in Asia based on their individual continent analysis.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph starts by retrieving the geographic locations of both Milk Lake and Larnaca Salt Lake. It then determines the continent for each location. Finally, the process concludes by synthesizing this information to determine if both lakes are located in Asia."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Larnaca Salt Lake\nLarnaca Salt Lake (Greek: \u0391\u03bb\u03c5\u03ba\u03ae \u039b\u03ac\u03c1\u03bd\u03b1\u03ba\u03b1\u03c2 , Turkish: \"Larnaka Tuz G\u00f6l\u00fc\" ) is a complex network of four salt lakes (3 of them interconnected) of different sizes to the west of the city of Larnaca. The largest is lake \"Aliki\", followed by lake \"Orphani\", lake \"Soros\" and lake \"Spiro\". They form the second largest salt lake in Cyprus after the Limassol Salt Lake. The total surface area of the lakes adds up to 2.2 km and being just off the road leading to Larnaca International Airport is one of the most distinctive landmarks of the area. It is considered one of the most important wetlands of Cyprus and it has been declared a Ramsar site, Natura 2000 site, Special Protected Area under the Barcelona Convention and an Important Bird Area (IBA). It is surrounded by halophytic scrubland and on its bank lies the Hala Sultan Tekke, one of the holiest of shrines within Ottoman Islam. It houses the tomb of Umm Haram, Muhammad's 'wet-nurse'.",
+            "Hala Sultan Tekke\nHala Sultan Tekke or the Mosque of Umm Haram (Turkish: \"Hala Sultan Tekkesi\" ; Greek: \u03a4\u03b5\u03ba\u03ad\u03c2 \u03a7\u03b1\u03bb\u03ac \u03a3\u03bf\u03c5\u03bb\u03c4\u03ac\u03bd\u03b1\u03c2 ) is a Muslim shrine on the west bank of Larnaca Salt Lake, near Larnaca, Cyprus. Umm Haram (Turkish: \"Hala Sultan\" ) was the wife of Ubada bin al-Samit, a companion of the Prophet Muhammed.",
+            "Milk Lake Glacier\nMilk Lake Glacier is located in the Glacier Peak Wilderness in the U.S. state of Washington. The glacier is within Mount Baker-Snoqualmie National Forest and a little over 3 mi northwest of Glacier Peak. Milk Lake Glacier disappeared sometime between 1984 and 1997 and by 2005, Milk Lake was situated where the glacier had once been.",
+            "Milk Lake, Taiwan\nThe Milk Lake () is a lake in Shilin District, Taipei, Taiwan. The lake is part of Yangmingshan National Park.",
+            "Salt Lake City Air Route Traffic Control Center\nSalt Lake City Air Route Traffic Control Center (ZLC) (radio communications \"Salt Lake Center\") is one of 22 FAA Area Control Centers in the United States. It is located in Salt Lake City, Utah, adjacent to Salt Lake City International Airport. It was opened in 1939 and was originally located on the third floor of the old Salt Lake City International Airport terminal. The Salt Lake Center (ZLC) covers one of the largest geographical areas of any other control center, totaling approximately 350,000 squares miles.",
+            "Arena (UTA station)\nArena is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line has service from the Salt Lake City International Airport and to West Valley City via Downtown Salt Lake City.",
+            "Temple Square (UTA station)\nTemple Square is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "City Center (UTA station)\nCity Center is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "Salt Lake City Intermodal Hub\nThe Salt Lake City Intermodal Hub (also known as Salt Lake Central on Utah Transit Authority [UTA] routes and SLC by Amtrak) is a multi-modal transportation hub in Salt Lake City, Utah, United States served by the Blue Line of UTA's TRAX light rail system that operates in Salt Lake County and by the \"FrontRunner\", UTA's commuter rail train that operates along the Wasatch Front with service from Pleasant View in northern Weber County through Ogden, Davis County, Salt Lake City, and Salt Lake County to Provo in central Utah County. Service at the intermodal hub is also provided by Amtrak (with the \"California Zephyr\"), Greyhound Lines, and U Car Share, as well as UTA local bus service.",
+            "Green Line (TRAX)\nThe Green Line is a light rail line on the Utah Transit Authority's (UTA) TRAX system in Salt Lake City, Utah, in the United States, operated by the Utah Transit Authority (UTA). It opened on August 7, 2011, and runs between Airport Station at the Salt Lake City International Airport and West Valley Central Station in West Valley City (via Downtown Salt Lake City) serving a total of eighteen stations: thirteen in Salt Lake City, one in South Salt Lake, and four in West Valley City.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "Wild Horse Lake (Oklahoma)\nWild Horse Lake is a playa lake located in Texas County, Oklahoma. The lake was the location of the infamous Hay Meadow Massacre (July 1888) in which one faction in the county seat fight in Stevens County, Kansas, killed four members of the opposing faction. Since the killings took place in what was then No Man's Land, no court had jurisdiction over the crime. The lake was also the subject of Oklahoma case law in reference to water appropriations\u2014Depuy V. Hoeme (1980 OK 26, 611 P.2d 228).",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Shall We Gather at the River (Falling Skies)\n\"Shall We Gather at the River\" is the second episode of the second season of the American television drama series \"Falling Skies\", and the 12th overall episode of the series. It originally aired on TNT in the United States on June 17, 2012 as a two-hour season premiere with the first episode of the season. It was written by Bradley Thompson & David Weddle and directed by Greg Beeman.",
+            "Operation Dragoon\nOperation Dragoon (initially Operation Anvil) was the code name for the Allied invasion of Southern France on 15August 1944. The operation was initially planned to be executed in conjunction with Operation Overlord, the Allied landing in the Normandy, but the lack of available resources led to a cancellation of the second landing. By July 1944 the landing was reconsidered, as the clogged-up ports in Normandy did not have the capacity to adequately supply the Allied forces. Concurrently, the French High Command pushed for a revival of the operation that would include large numbers of French troops. As a result, the operation was finally approved in July to be executed in August."
+        ],
+        "thoughts": [
+            "Milk Lake Glacier is located in the U.S. state of Washington, making it part of the continent of North America.",
+            "Milk Lake is not located in Asia. It is located in the U.S. state of Washington, making it part of the continent of North America.",
+            "Larnaca Salt Lake is located in the country of Cyprus, which is part of the continent of Europe.",
+            "Larnaca Salt Lake is not located in Asia, it is located in the country of Cyprus, which is part of the continent of Europe. Therefore, Larnaca Salt Lake is not located in Asia based on its geographic location.",
+            "Based on the individual continent analysis, both Milk Lake and Larnaca Salt Lake are not located in Asia. Milk Lake is located in North America, specifically in the U.S. state of Washington, while Larnaca Salt Lake is located in Europe, specifically in the country of Cyprus. Therefore, neither of the lakes are located in Asia."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Milk Lake, Taiwan and Larnaca Salt Lake both located in Asia?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the continent where Milk Lake, Taiwan is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the continent where Larnaca Salt Lake is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Milk Lake, Taiwan is located in Asia.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Larnaca Salt Lake is located in Asia.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Verify if both Milk Lake, Taiwan and Larnaca Salt Lake are located in Asia based on previous results.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph breaks down the question into two main retrieval tasks: one for Milk Lake, Taiwan and another for Larnaca Salt Lake to determine their respective locations. The reasoning process involves checking if each location is in Asia. Finally, we synthesize the results to determine if both are in Asia."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Milk Lake, Taiwan\nThe Milk Lake () is a lake in Shilin District, Taipei, Taiwan. The lake is part of Yangmingshan National Park.",
+            "Larnaca Salt Lake\nLarnaca Salt Lake (Greek: \u0391\u03bb\u03c5\u03ba\u03ae \u039b\u03ac\u03c1\u03bd\u03b1\u03ba\u03b1\u03c2 , Turkish: \"Larnaka Tuz G\u00f6l\u00fc\" ) is a complex network of four salt lakes (3 of them interconnected) of different sizes to the west of the city of Larnaca. The largest is lake \"Aliki\", followed by lake \"Orphani\", lake \"Soros\" and lake \"Spiro\". They form the second largest salt lake in Cyprus after the Limassol Salt Lake. The total surface area of the lakes adds up to 2.2 km and being just off the road leading to Larnaca International Airport is one of the most distinctive landmarks of the area. It is considered one of the most important wetlands of Cyprus and it has been declared a Ramsar site, Natura 2000 site, Special Protected Area under the Barcelona Convention and an Important Bird Area (IBA). It is surrounded by halophytic scrubland and on its bank lies the Hala Sultan Tekke, one of the holiest of shrines within Ottoman Islam. It houses the tomb of Umm Haram, Muhammad's 'wet-nurse'.",
+            "Milk Lake Glacier\nMilk Lake Glacier is located in the Glacier Peak Wilderness in the U.S. state of Washington. The glacier is within Mount Baker-Snoqualmie National Forest and a little over 3 mi northwest of Glacier Peak. Milk Lake Glacier disappeared sometime between 1984 and 1997 and by 2005, Milk Lake was situated where the glacier had once been.",
+            "Hala Sultan Tekke\nHala Sultan Tekke or the Mosque of Umm Haram (Turkish: \"Hala Sultan Tekkesi\" ; Greek: \u03a4\u03b5\u03ba\u03ad\u03c2 \u03a7\u03b1\u03bb\u03ac \u03a3\u03bf\u03c5\u03bb\u03c4\u03ac\u03bd\u03b1\u03c2 ) is a Muslim shrine on the west bank of Larnaca Salt Lake, near Larnaca, Cyprus. Umm Haram (Turkish: \"Hala Sultan\" ) was the wife of Ubada bin al-Samit, a companion of the Prophet Muhammed.",
+            "Salt Lake City Air Route Traffic Control Center\nSalt Lake City Air Route Traffic Control Center (ZLC) (radio communications \"Salt Lake Center\") is one of 22 FAA Area Control Centers in the United States. It is located in Salt Lake City, Utah, adjacent to Salt Lake City International Airport. It was opened in 1939 and was originally located on the third floor of the old Salt Lake City International Airport terminal. The Salt Lake Center (ZLC) covers one of the largest geographical areas of any other control center, totaling approximately 350,000 squares miles.",
+            "Salt Lake City International Airport\nSalt Lake City International Airport (IATA: SLC, ICAO: KSLC, FAA LID: SLC) is a civil-military airport located about 4 miles west of Downtown Salt Lake City, Utah in the United States. The airport is the closest commercial airport for more than 2.5 million people and is within a 30-minute drive of nearly 1.3 million jobs.",
+            "Arena (UTA station)\nArena is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line has service from the Salt Lake City International Airport and to West Valley City via Downtown Salt Lake City.",
+            "Salt Lake City Intermodal Hub\nThe Salt Lake City Intermodal Hub (also known as Salt Lake Central on Utah Transit Authority [UTA] routes and SLC by Amtrak) is a multi-modal transportation hub in Salt Lake City, Utah, United States served by the Blue Line of UTA's TRAX light rail system that operates in Salt Lake County and by the \"FrontRunner\", UTA's commuter rail train that operates along the Wasatch Front with service from Pleasant View in northern Weber County through Ogden, Davis County, Salt Lake City, and Salt Lake County to Provo in central Utah County. Service at the intermodal hub is also provided by Amtrak (with the \"California Zephyr\"), Greyhound Lines, and U Car Share, as well as UTA local bus service.",
+            "Temple Square (UTA station)\nTemple Square is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "City Center (UTA station)\nCity Center is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Korova (Liverpool)\nKorova is a bar, music venue and restaurant located on Hope Street, Liverpool, England. Before moving to its current premises, it was located on Fleet Street close to Concert Square. Its name references the Korova Milk Bar from \"A Clockwork Orange\".",
+            "Flathead Valley\nThe Flathead Valley, located in Northwestern Montana, is a region of the U.S. state of Montana. It includes Flathead County, and part of Lake County. Notable towns include Bigfork, Kalispell, Columbia Falls, Polson, and Whitefish. The geography of the Flathead roughly corresponds to the valley where Flathead Lake is located. In addition to the lake, the area's proximity to attractions such as Glacier National Park and Whitefish Mountain Resort have made the area a major resort destination. Many outdoor activities can be pursued there such as hiking, backpacking, rafting, canoeing, skiing, hunting, and some of the best trout fishing in the world. The Flathead Valley is also home to a portion of the Flathead Indian Reservation.",
+            "Lake Wallace\nLake Wallace is a freshwater lake located in Edenhope in the Western District of Victoria, Australia. The lake is named after William Wallace.",
+            "Damnation\nDamnation (from Latin \"damnatis\") is the concept of divine punishment and torment in an afterlife for actions that were committed on Earth. In Ancient Egyptian religious tradition, citizens would recite the 42 negative confessions of Maat as their heart was weighed against the feather of truth. If the citizen's heart was heavier than a feather they would face torment in a lake of fire. Zoroastrianism developed an eschatological concept of a Last Judgment called Frashokereti where the dead will be raised and the righteous wade though a river of milk while the wicked will be burned in a river of molten metal. Abrahamic religions such as Christianity have similar concepts of believers facing judgement on a last day to determine if they will spend eternity in Gehenna or heaven for their sin . A damned human \"in damnation\" is said to be either in Hell, or living in a state wherein they are divorced from Heaven and/or in a state of disgrace from God's favor. In traditional Abrahamic demonology, the Devil rules Hell, where he and his demons punish the damned.",
+            "Commanda Lake\nCommanda Lake (or Lake Commanda) is a lake in central Ontario, Canada. Located on the border between Patterson Township and Pringle Township, in the Almaguin Highlands region of the District of Parry Sound, it is fed by Gee Creek, Commanda Creek and Beaudry Creek and is drained by the Restoule River. The Lake is shaped like the number \"3\", its middle spur is called Deep Bay. The lake is home to one permanent island, located off a point in its east. This is a mud bottom lake and its water is \"tea coloured.\" On the north shore of the lake is the community of Restoule, but cottages line many of the shore lines. Lots of crown land also surrounds the lake shore making it a very peaceful lake for people of all ages to enjoy. This lake has one public boat launch towards the southern end of the lake accessible on Commanda Lake Road. The lake is located at an altitude of 222\u00a0m (729\u00a0ft) above sea level. The lake is home to the Northern pike, Walleye, Smallmouth bass and Largemouth bass species of fish. Ice gets thick in the winter making this lake an all year round fishing lake."
+        ],
+        "thoughts": [
+            "Milk Lake, Taiwan is located on the continent of Asia.",
+            "Milk Lake, Taiwan is indeed located in Asia. Taiwan is an island nation located in East Asia, and therefore Milk Lake, being located within Taiwan, is also situated in the continent of Asia.",
+            "Larnaca Salt Lake is located on the island of Cyprus, which is part of the continent of Europe.",
+            "Larnaca Salt Lake is not located in Asia. It is located on the island of Cyprus, which is part of the continent of Europe.",
+            "Based on the previous results, Milk Lake, Taiwan is located in Asia, while Larnaca Salt Lake is not located in Asia. Therefore, Milk Lake, Taiwan is in Asia, but Larnaca Salt Lake is not."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Are Milk Lake, Taiwan and Larnaca Salt Lake both located in Asia?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve geographic location of Milk Lake in Taiwan.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve geographic location of Larnaca Salt Lake.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Milk Lake in Taiwan is located in Asia.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Larnaca Salt Lake is located in Asia.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine findings to determine if both Milk Lake, Taiwan and Larnaca Salt Lake are located in Asia.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the task of determining whether Milk Lake, Taiwan and Larnaca Salt Lake are in Asia. It involves retrieval steps to get the locations of both, followed by reasoning steps to verify their continental locations, and finally combines the results to answer the original question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Milk Lake, Taiwan\nThe Milk Lake () is a lake in Shilin District, Taipei, Taiwan. The lake is part of Yangmingshan National Park.",
+            "Larnaca Salt Lake\nLarnaca Salt Lake (Greek: \u0391\u03bb\u03c5\u03ba\u03ae \u039b\u03ac\u03c1\u03bd\u03b1\u03ba\u03b1\u03c2 , Turkish: \"Larnaka Tuz G\u00f6l\u00fc\" ) is a complex network of four salt lakes (3 of them interconnected) of different sizes to the west of the city of Larnaca. The largest is lake \"Aliki\", followed by lake \"Orphani\", lake \"Soros\" and lake \"Spiro\". They form the second largest salt lake in Cyprus after the Limassol Salt Lake. The total surface area of the lakes adds up to 2.2 km and being just off the road leading to Larnaca International Airport is one of the most distinctive landmarks of the area. It is considered one of the most important wetlands of Cyprus and it has been declared a Ramsar site, Natura 2000 site, Special Protected Area under the Barcelona Convention and an Important Bird Area (IBA). It is surrounded by halophytic scrubland and on its bank lies the Hala Sultan Tekke, one of the holiest of shrines within Ottoman Islam. It houses the tomb of Umm Haram, Muhammad's 'wet-nurse'.",
+            "Hala Sultan Tekke\nHala Sultan Tekke or the Mosque of Umm Haram (Turkish: \"Hala Sultan Tekkesi\" ; Greek: \u03a4\u03b5\u03ba\u03ad\u03c2 \u03a7\u03b1\u03bb\u03ac \u03a3\u03bf\u03c5\u03bb\u03c4\u03ac\u03bd\u03b1\u03c2 ) is a Muslim shrine on the west bank of Larnaca Salt Lake, near Larnaca, Cyprus. Umm Haram (Turkish: \"Hala Sultan\" ) was the wife of Ubada bin al-Samit, a companion of the Prophet Muhammed.",
+            "Milk Lake Glacier\nMilk Lake Glacier is located in the Glacier Peak Wilderness in the U.S. state of Washington. The glacier is within Mount Baker-Snoqualmie National Forest and a little over 3 mi northwest of Glacier Peak. Milk Lake Glacier disappeared sometime between 1984 and 1997 and by 2005, Milk Lake was situated where the glacier had once been.",
+            "Lake Ercina\nLake Ercina is a small highland lake in Asturias, Spain. It is located in the Picos de Europa, in the Cantabrian Mountains. Situated next to Lake Enol, together, they forms the group known as Lakes of Covadonga within the Picos de Europa National Park. Lake Ercina is smaller than Lake Enol. It is situated at an altitude of 1108 m and its maximum depth is just over 2 m . The eutrophic lake, covers approximately eight hectares. Its characteristics are tied to its glacier origin and geographic location.",
+            "Salt Lake City Air Route Traffic Control Center\nSalt Lake City Air Route Traffic Control Center (ZLC) (radio communications \"Salt Lake Center\") is one of 22 FAA Area Control Centers in the United States. It is located in Salt Lake City, Utah, adjacent to Salt Lake City International Airport. It was opened in 1939 and was originally located on the third floor of the old Salt Lake City International Airport terminal. The Salt Lake Center (ZLC) covers one of the largest geographical areas of any other control center, totaling approximately 350,000 squares miles.",
+            "Arena (UTA station)\nArena is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line has service from the Salt Lake City International Airport and to West Valley City via Downtown Salt Lake City.",
+            "Temple Square (UTA station)\nTemple Square is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "City Center (UTA station)\nCity Center is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "Salt Lake City Intermodal Hub\nThe Salt Lake City Intermodal Hub (also known as Salt Lake Central on Utah Transit Authority [UTA] routes and SLC by Amtrak) is a multi-modal transportation hub in Salt Lake City, Utah, United States served by the Blue Line of UTA's TRAX light rail system that operates in Salt Lake County and by the \"FrontRunner\", UTA's commuter rail train that operates along the Wasatch Front with service from Pleasant View in northern Weber County through Ogden, Davis County, Salt Lake City, and Salt Lake County to Provo in central Utah County. Service at the intermodal hub is also provided by Amtrak (with the \"California Zephyr\"), Greyhound Lines, and U Car Share, as well as UTA local bus service.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Geosocial networking\nGeosocial networking is a type of social networking in which geographic services and capabilities such as geocoding and geotagging are used to enable additional social dynamics. User-submitted location data or geolocation techniques can allow social networks to connect and coordinate users with local people or events that match their interests. Geolocation on web-based social network services can be IP-based or use hotspot trilateration. For mobile social networks, texted location information or mobile phone tracking can enable location-based services to enrich social networking.",
+            "Crab trap\nCrab traps are used to bait, lure, and catch crabs for commercial or recreational use. Crabbing or crab fishing is the recreational hobby and commercial occupation of fishing for crabs. Different types of traps are used depending on the type of crab being fished for, geographic location, and personal preference.",
+            "Wild Horse Lake (Oklahoma)\nWild Horse Lake is a playa lake located in Texas County, Oklahoma. The lake was the location of the infamous Hay Meadow Massacre (July 1888) in which one faction in the county seat fight in Stevens County, Kansas, killed four members of the opposing faction. Since the killings took place in what was then No Man's Land, no court had jurisdiction over the crime. The lake was also the subject of Oklahoma case law in reference to water appropriations\u2014Depuy V. Hoeme (1980 OK 26, 611 P.2d 228).",
+            "John Chiang (Taiwan)\nJohn Chiang or Chiang Hsiao-yen (; born March 1, 1942), formerly surnamed Chang (), is a Kuomintang politician in Taiwan. He is the grandson of Chiang Kai-shek, former leader of the Republic of China."
+        ],
+        "thoughts": [
+            "Milk Lake is located in Shilin District, Taipei, Taiwan, and is part of Yangmingshan National Park.",
+            "Yes, Milk Lake in Taiwan is located in Asia. Taiwan is an island nation located in East Asia, so Milk Lake is indeed located in Asia.",
+            "The geographic location of Larnaca Salt Lake is to the west of the city of Larnaca in Cyprus. It is just off the road leading to Larnaca International Airport and is considered one of the most important wetlands of Cyprus. The lake is surrounded by halophytic scrubland and is a distinctive landmark in the area.",
+            "No, Larnaca Salt Lake is not located in Asia. It is located in Cyprus, which is an island country in the Eastern Mediterranean and is considered to be part of Europe.",
+            "Based on the findings, Milk Lake in Taiwan is located in Asia, while Larnaca Salt Lake is not located in Asia, as it is situated in Cyprus, which is considered to be part of Europe. Therefore, only Milk Lake in Taiwan is located in Asia."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Milk Lake, Taiwan and Larnaca Salt Lake both located in Asia?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the continent where Milk Lake, Taiwan is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the continent where Larnaca Salt Lake is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Milk Lake, Taiwan is in Asia based on the retrieved continent information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Larnaca Salt Lake is in Asia based on the retrieved continent information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to check if both Milk Lake, Taiwan and Larnaca Salt Lake are located in Asia.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph starts by identifying the locations of Milk Lake, Taiwan (Node 1) and Larnaca Salt Lake (Node 2) in terms of continents. Each retrieval node seeks to determine the continent each location belongs to. Then, reasoning nodes (Node 3 and Node 4) check if each of these locations is in Asia. Finally, the reasoning node (Node 5) combines these results to determine if both locations are in Asia, thus answering the question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Milk Lake, Taiwan\nThe Milk Lake () is a lake in Shilin District, Taipei, Taiwan. The lake is part of Yangmingshan National Park.",
+            "Larnaca Salt Lake\nLarnaca Salt Lake (Greek: \u0391\u03bb\u03c5\u03ba\u03ae \u039b\u03ac\u03c1\u03bd\u03b1\u03ba\u03b1\u03c2 , Turkish: \"Larnaka Tuz G\u00f6l\u00fc\" ) is a complex network of four salt lakes (3 of them interconnected) of different sizes to the west of the city of Larnaca. The largest is lake \"Aliki\", followed by lake \"Orphani\", lake \"Soros\" and lake \"Spiro\". They form the second largest salt lake in Cyprus after the Limassol Salt Lake. The total surface area of the lakes adds up to 2.2 km and being just off the road leading to Larnaca International Airport is one of the most distinctive landmarks of the area. It is considered one of the most important wetlands of Cyprus and it has been declared a Ramsar site, Natura 2000 site, Special Protected Area under the Barcelona Convention and an Important Bird Area (IBA). It is surrounded by halophytic scrubland and on its bank lies the Hala Sultan Tekke, one of the holiest of shrines within Ottoman Islam. It houses the tomb of Umm Haram, Muhammad's 'wet-nurse'.",
+            "Milk Lake Glacier\nMilk Lake Glacier is located in the Glacier Peak Wilderness in the U.S. state of Washington. The glacier is within Mount Baker-Snoqualmie National Forest and a little over 3 mi northwest of Glacier Peak. Milk Lake Glacier disappeared sometime between 1984 and 1997 and by 2005, Milk Lake was situated where the glacier had once been.",
+            "Hala Sultan Tekke\nHala Sultan Tekke or the Mosque of Umm Haram (Turkish: \"Hala Sultan Tekkesi\" ; Greek: \u03a4\u03b5\u03ba\u03ad\u03c2 \u03a7\u03b1\u03bb\u03ac \u03a3\u03bf\u03c5\u03bb\u03c4\u03ac\u03bd\u03b1\u03c2 ) is a Muslim shrine on the west bank of Larnaca Salt Lake, near Larnaca, Cyprus. Umm Haram (Turkish: \"Hala Sultan\" ) was the wife of Ubada bin al-Samit, a companion of the Prophet Muhammed.",
+            "Salt Lake City Air Route Traffic Control Center\nSalt Lake City Air Route Traffic Control Center (ZLC) (radio communications \"Salt Lake Center\") is one of 22 FAA Area Control Centers in the United States. It is located in Salt Lake City, Utah, adjacent to Salt Lake City International Airport. It was opened in 1939 and was originally located on the third floor of the old Salt Lake City International Airport terminal. The Salt Lake Center (ZLC) covers one of the largest geographical areas of any other control center, totaling approximately 350,000 squares miles.",
+            "Salt Lake City International Airport\nSalt Lake City International Airport (IATA: SLC, ICAO: KSLC, FAA LID: SLC) is a civil-military airport located about 4 miles west of Downtown Salt Lake City, Utah in the United States. The airport is the closest commercial airport for more than 2.5 million people and is within a 30-minute drive of nearly 1.3 million jobs.",
+            "Arena (UTA station)\nArena is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line has service from the Salt Lake City International Airport and to West Valley City via Downtown Salt Lake City.",
+            "Salt Lake City Intermodal Hub\nThe Salt Lake City Intermodal Hub (also known as Salt Lake Central on Utah Transit Authority [UTA] routes and SLC by Amtrak) is a multi-modal transportation hub in Salt Lake City, Utah, United States served by the Blue Line of UTA's TRAX light rail system that operates in Salt Lake County and by the \"FrontRunner\", UTA's commuter rail train that operates along the Wasatch Front with service from Pleasant View in northern Weber County through Ogden, Davis County, Salt Lake City, and Salt Lake County to Provo in central Utah County. Service at the intermodal hub is also provided by Amtrak (with the \"California Zephyr\"), Greyhound Lines, and U Car Share, as well as UTA local bus service.",
+            "Temple Square (UTA station)\nTemple Square is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "City Center (UTA station)\nCity Center is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Korova (Liverpool)\nKorova is a bar, music venue and restaurant located on Hope Street, Liverpool, England. Before moving to its current premises, it was located on Fleet Street close to Concert Square. Its name references the Korova Milk Bar from \"A Clockwork Orange\".",
+            "Flathead Valley\nThe Flathead Valley, located in Northwestern Montana, is a region of the U.S. state of Montana. It includes Flathead County, and part of Lake County. Notable towns include Bigfork, Kalispell, Columbia Falls, Polson, and Whitefish. The geography of the Flathead roughly corresponds to the valley where Flathead Lake is located. In addition to the lake, the area's proximity to attractions such as Glacier National Park and Whitefish Mountain Resort have made the area a major resort destination. Many outdoor activities can be pursued there such as hiking, backpacking, rafting, canoeing, skiing, hunting, and some of the best trout fishing in the world. The Flathead Valley is also home to a portion of the Flathead Indian Reservation.",
+            "Lake Wallace\nLake Wallace is a freshwater lake located in Edenhope in the Western District of Victoria, Australia. The lake is named after William Wallace.",
+            "Damnation\nDamnation (from Latin \"damnatis\") is the concept of divine punishment and torment in an afterlife for actions that were committed on Earth. In Ancient Egyptian religious tradition, citizens would recite the 42 negative confessions of Maat as their heart was weighed against the feather of truth. If the citizen's heart was heavier than a feather they would face torment in a lake of fire. Zoroastrianism developed an eschatological concept of a Last Judgment called Frashokereti where the dead will be raised and the righteous wade though a river of milk while the wicked will be burned in a river of molten metal. Abrahamic religions such as Christianity have similar concepts of believers facing judgement on a last day to determine if they will spend eternity in Gehenna or heaven for their sin . A damned human \"in damnation\" is said to be either in Hell, or living in a state wherein they are divorced from Heaven and/or in a state of disgrace from God's favor. In traditional Abrahamic demonology, the Devil rules Hell, where he and his demons punish the damned.",
+            "Commanda Lake\nCommanda Lake (or Lake Commanda) is a lake in central Ontario, Canada. Located on the border between Patterson Township and Pringle Township, in the Almaguin Highlands region of the District of Parry Sound, it is fed by Gee Creek, Commanda Creek and Beaudry Creek and is drained by the Restoule River. The Lake is shaped like the number \"3\", its middle spur is called Deep Bay. The lake is home to one permanent island, located off a point in its east. This is a mud bottom lake and its water is \"tea coloured.\" On the north shore of the lake is the community of Restoule, but cottages line many of the shore lines. Lots of crown land also surrounds the lake shore making it a very peaceful lake for people of all ages to enjoy. This lake has one public boat launch towards the southern end of the lake accessible on Commanda Lake Road. The lake is located at an altitude of 222\u00a0m (729\u00a0ft) above sea level. The lake is home to the Northern pike, Walleye, Smallmouth bass and Largemouth bass species of fish. Ice gets thick in the winter making this lake an all year round fishing lake."
+        ],
+        "thoughts": [
+            "Milk Lake, Taiwan is located on the continent of Asia.",
+            "Milk Lake, Taiwan is indeed located in Asia based on the retrieved continent information.",
+            "Larnaca Salt Lake is located on the island of Cyprus, which is part of the continent of Europe.",
+            "Larnaca Salt Lake is not in Asia, as it is located on the island of Cyprus, which is part of the continent of Europe.",
+            "Based on the combined results, Milk Lake, Taiwan is located in Asia, while Larnaca Salt Lake is not located in Asia. Therefore, only Milk Lake, Taiwan is located in Asia."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Milk Lake, Taiwan and Larnaca Salt Lake both located in Asia?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the geographical location of Milk Lake, Taiwan.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the geographical location of Larnaca Salt Lake.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Milk Lake, Taiwan is in Asia based on its geographical location.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Larnaca Salt Lake is in Asia based on its geographical location.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Conclude whether both Milk Lake, Taiwan and Larnaca Salt Lake are located in Asia based on the previous analyses.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph starts by retrieving the geographical locations of both Milk Lake, Taiwan (Node 1) and Larnaca Salt Lake (Node 2). Once the locations are identified, separate reasoning nodes (Node 3 and Node 4) determine whether each lake is located in Asia. Finally, Node 5 synthesizes these conclusions to answer whether both lakes are in Asia."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Milk Lake, Taiwan\nThe Milk Lake () is a lake in Shilin District, Taipei, Taiwan. The lake is part of Yangmingshan National Park.",
+            "Larnaca Salt Lake\nLarnaca Salt Lake (Greek: \u0391\u03bb\u03c5\u03ba\u03ae \u039b\u03ac\u03c1\u03bd\u03b1\u03ba\u03b1\u03c2 , Turkish: \"Larnaka Tuz G\u00f6l\u00fc\" ) is a complex network of four salt lakes (3 of them interconnected) of different sizes to the west of the city of Larnaca. The largest is lake \"Aliki\", followed by lake \"Orphani\", lake \"Soros\" and lake \"Spiro\". They form the second largest salt lake in Cyprus after the Limassol Salt Lake. The total surface area of the lakes adds up to 2.2 km and being just off the road leading to Larnaca International Airport is one of the most distinctive landmarks of the area. It is considered one of the most important wetlands of Cyprus and it has been declared a Ramsar site, Natura 2000 site, Special Protected Area under the Barcelona Convention and an Important Bird Area (IBA). It is surrounded by halophytic scrubland and on its bank lies the Hala Sultan Tekke, one of the holiest of shrines within Ottoman Islam. It houses the tomb of Umm Haram, Muhammad's 'wet-nurse'.",
+            "Salt Lake City Air Route Traffic Control Center\nSalt Lake City Air Route Traffic Control Center (ZLC) (radio communications \"Salt Lake Center\") is one of 22 FAA Area Control Centers in the United States. It is located in Salt Lake City, Utah, adjacent to Salt Lake City International Airport. It was opened in 1939 and was originally located on the third floor of the old Salt Lake City International Airport terminal. The Salt Lake Center (ZLC) covers one of the largest geographical areas of any other control center, totaling approximately 350,000 squares miles.",
+            "Hala Sultan Tekke\nHala Sultan Tekke or the Mosque of Umm Haram (Turkish: \"Hala Sultan Tekkesi\" ; Greek: \u03a4\u03b5\u03ba\u03ad\u03c2 \u03a7\u03b1\u03bb\u03ac \u03a3\u03bf\u03c5\u03bb\u03c4\u03ac\u03bd\u03b1\u03c2 ) is a Muslim shrine on the west bank of Larnaca Salt Lake, near Larnaca, Cyprus. Umm Haram (Turkish: \"Hala Sultan\" ) was the wife of Ubada bin al-Samit, a companion of the Prophet Muhammed.",
+            "Milk Lake Glacier\nMilk Lake Glacier is located in the Glacier Peak Wilderness in the U.S. state of Washington. The glacier is within Mount Baker-Snoqualmie National Forest and a little over 3 mi northwest of Glacier Peak. Milk Lake Glacier disappeared sometime between 1984 and 1997 and by 2005, Milk Lake was situated where the glacier had once been.",
+            "Arena (UTA station)\nArena is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line has service from the Salt Lake City International Airport and to West Valley City via Downtown Salt Lake City.",
+            "Temple Square (UTA station)\nTemple Square is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "City Center (UTA station)\nCity Center is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "Salt Lake City Intermodal Hub\nThe Salt Lake City Intermodal Hub (also known as Salt Lake Central on Utah Transit Authority [UTA] routes and SLC by Amtrak) is a multi-modal transportation hub in Salt Lake City, Utah, United States served by the Blue Line of UTA's TRAX light rail system that operates in Salt Lake County and by the \"FrontRunner\", UTA's commuter rail train that operates along the Wasatch Front with service from Pleasant View in northern Weber County through Ogden, Davis County, Salt Lake City, and Salt Lake County to Provo in central Utah County. Service at the intermodal hub is also provided by Amtrak (with the \"California Zephyr\"), Greyhound Lines, and U Car Share, as well as UTA local bus service.",
+            "Green Line (TRAX)\nThe Green Line is a light rail line on the Utah Transit Authority's (UTA) TRAX system in Salt Lake City, Utah, in the United States, operated by the Utah Transit Authority (UTA). It opened on August 7, 2011, and runs between Airport Station at the Salt Lake City International Airport and West Valley Central Station in West Valley City (via Downtown Salt Lake City) serving a total of eighteen stations: thirteen in Salt Lake City, one in South Salt Lake, and four in West Valley City.",
+            "Wild Horse Lake (Oklahoma)\nWild Horse Lake is a playa lake located in Texas County, Oklahoma. The lake was the location of the infamous Hay Meadow Massacre (July 1888) in which one faction in the county seat fight in Stevens County, Kansas, killed four members of the opposing faction. Since the killings took place in what was then No Man's Land, no court had jurisdiction over the crime. The lake was also the subject of Oklahoma case law in reference to water appropriations\u2014Depuy V. Hoeme (1980 OK 26, 611 P.2d 228).",
+            "Lake Ercina\nLake Ercina is a small highland lake in Asturias, Spain. It is located in the Picos de Europa, in the Cantabrian Mountains. Situated next to Lake Enol, together, they forms the group known as Lakes of Covadonga within the Picos de Europa National Park. Lake Ercina is smaller than Lake Enol. It is situated at an altitude of 1108 m and its maximum depth is just over 2 m . The eutrophic lake, covers approximately eight hectares. Its characteristics are tied to its glacier origin and geographic location.",
+            "John Chiang (Taiwan)\nJohn Chiang or Chiang Hsiao-yen (; born March 1, 1942), formerly surnamed Chang (), is a Kuomintang politician in Taiwan. He is the grandson of Chiang Kai-shek, former leader of the Republic of China.",
+            "Drangiana\nDrangiana or Zarangiana (Greek: \u0394\u03c1\u03b1\u03b3\u03b3\u03b9\u03b1\u03bd\u03ae , \"Drangian\u0113\"; also attested in Old Western Iranian as \"Zranka\" was a historical region and administrative division of the Achaemenid Empire. This region comprises territory around Hamun Lake, wetlands in endorheic Sistan Basin on the Iran-Afghan border, and its primary watershed Helmand river in what is nowadays southwestern region of Afghanistan.",
+            "Tatung F.C.\nTatung Football Club () is a Taiwanese semi-professional football club based in Taipei, Taiwan. The club, affiliated with the Tatung electronics company, was founded in 1969 by a group of Tatung employees favoring football activities. It is the oldest and the only (semi-professional) football club owned by private enterprise in Taiwan. Many of the players work for the company in the daytime and train in the evening."
+        ],
+        "thoughts": [
+            "Milk Lake is located in Shilin District, Taipei, Taiwan, and is part of the Yangmingshan National Park.",
+            "Yes, Milk Lake is in Asia, specifically in Taiwan, which is located in East Asia. Therefore, Milk Lake is in Asia based on its geographical location.",
+            "Larnaca Salt Lake is located to the west of the city of Larnaca in Cyprus. It is surrounded by halophytic scrubland and is home to the Hala Sultan Tekke, a Muslim shrine. The lake is considered one of the most important wetlands in Cyprus and has been declared a Ramsar site, Natura 2000 site, Special Protected Area under the Barcelona Convention, and an Important Bird Area.",
+            "Larnaca Salt Lake is not in Asia, as it is located in Cyprus, which is an island country in the Eastern Mediterranean and is considered to be part of Europe. Therefore, Larnaca Salt Lake is not in Asia based on its geographical location.",
+            "Based on the previous analyses, Milk Lake in Taiwan is located in Asia, specifically in East Asia. However, Larnaca Salt Lake is located in Cyprus, which is considered to be part of Europe. Therefore, both Milk Lake, Taiwan and Larnaca Salt Lake are not located in the same continent, with Milk Lake being in Asia and Larnaca Salt Lake being in Europe."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Milk Lake, Taiwan and Larnaca Salt Lake both located in Asia?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine the location of Milk Lake in Taiwan.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine if Milk Lake is in Asia based on its location in Taiwan.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the location of Larnaca Salt Lake.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Larnaca Salt Lake is in Asia based on its location information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Combine the results to determine if both Milk Lake and Larnaca Salt Lake are located in Asia.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph involves two main tasks: determining whether Milk Lake and Larnaca Salt Lake are both located in Asia. This requires separate retrieval and reasoning processes for each location. For Milk Lake, we first confirm its location in Taiwan and reason that since Taiwan is in Asia, Milk Lake is in Asia. For Larnaca Salt Lake, we similarly retrieve its location and determine its continent. Finally, we combine these results to answer the question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Milk Lake, Taiwan\nThe Milk Lake () is a lake in Shilin District, Taipei, Taiwan. The lake is part of Yangmingshan National Park.",
+            "Larnaca Salt Lake\nLarnaca Salt Lake (Greek: \u0391\u03bb\u03c5\u03ba\u03ae \u039b\u03ac\u03c1\u03bd\u03b1\u03ba\u03b1\u03c2 , Turkish: \"Larnaka Tuz G\u00f6l\u00fc\" ) is a complex network of four salt lakes (3 of them interconnected) of different sizes to the west of the city of Larnaca. The largest is lake \"Aliki\", followed by lake \"Orphani\", lake \"Soros\" and lake \"Spiro\". They form the second largest salt lake in Cyprus after the Limassol Salt Lake. The total surface area of the lakes adds up to 2.2 km and being just off the road leading to Larnaca International Airport is one of the most distinctive landmarks of the area. It is considered one of the most important wetlands of Cyprus and it has been declared a Ramsar site, Natura 2000 site, Special Protected Area under the Barcelona Convention and an Important Bird Area (IBA). It is surrounded by halophytic scrubland and on its bank lies the Hala Sultan Tekke, one of the holiest of shrines within Ottoman Islam. It houses the tomb of Umm Haram, Muhammad's 'wet-nurse'.",
+            "Hala Sultan Tekke\nHala Sultan Tekke or the Mosque of Umm Haram (Turkish: \"Hala Sultan Tekkesi\" ; Greek: \u03a4\u03b5\u03ba\u03ad\u03c2 \u03a7\u03b1\u03bb\u03ac \u03a3\u03bf\u03c5\u03bb\u03c4\u03ac\u03bd\u03b1\u03c2 ) is a Muslim shrine on the west bank of Larnaca Salt Lake, near Larnaca, Cyprus. Umm Haram (Turkish: \"Hala Sultan\" ) was the wife of Ubada bin al-Samit, a companion of the Prophet Muhammed.",
+            "Milk Lake Glacier\nMilk Lake Glacier is located in the Glacier Peak Wilderness in the U.S. state of Washington. The glacier is within Mount Baker-Snoqualmie National Forest and a little over 3 mi northwest of Glacier Peak. Milk Lake Glacier disappeared sometime between 1984 and 1997 and by 2005, Milk Lake was situated where the glacier had once been.",
+            "Salt Lake City Air Route Traffic Control Center\nSalt Lake City Air Route Traffic Control Center (ZLC) (radio communications \"Salt Lake Center\") is one of 22 FAA Area Control Centers in the United States. It is located in Salt Lake City, Utah, adjacent to Salt Lake City International Airport. It was opened in 1939 and was originally located on the third floor of the old Salt Lake City International Airport terminal. The Salt Lake Center (ZLC) covers one of the largest geographical areas of any other control center, totaling approximately 350,000 squares miles.",
+            "Arena (UTA station)\nArena is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line has service from the Salt Lake City International Airport and to West Valley City via Downtown Salt Lake City.",
+            "Temple Square (UTA station)\nTemple Square is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "City Center (UTA station)\nCity Center is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "Salt Lake City Intermodal Hub\nThe Salt Lake City Intermodal Hub (also known as Salt Lake Central on Utah Transit Authority [UTA] routes and SLC by Amtrak) is a multi-modal transportation hub in Salt Lake City, Utah, United States served by the Blue Line of UTA's TRAX light rail system that operates in Salt Lake County and by the \"FrontRunner\", UTA's commuter rail train that operates along the Wasatch Front with service from Pleasant View in northern Weber County through Ogden, Davis County, Salt Lake City, and Salt Lake County to Provo in central Utah County. Service at the intermodal hub is also provided by Amtrak (with the \"California Zephyr\"), Greyhound Lines, and U Car Share, as well as UTA local bus service.",
+            "Green Line (TRAX)\nThe Green Line is a light rail line on the Utah Transit Authority's (UTA) TRAX system in Salt Lake City, Utah, in the United States, operated by the Utah Transit Authority (UTA). It opened on August 7, 2011, and runs between Airport Station at the Salt Lake City International Airport and West Valley Central Station in West Valley City (via Downtown Salt Lake City) serving a total of eighteen stations: thirteen in Salt Lake City, one in South Salt Lake, and four in West Valley City.",
+            "Lake Ercina\nLake Ercina is a small highland lake in Asturias, Spain. It is located in the Picos de Europa, in the Cantabrian Mountains. Situated next to Lake Enol, together, they forms the group known as Lakes of Covadonga within the Picos de Europa National Park. Lake Ercina is smaller than Lake Enol. It is situated at an altitude of 1108 m and its maximum depth is just over 2 m . The eutrophic lake, covers approximately eight hectares. Its characteristics are tied to its glacier origin and geographic location.",
+            "Wild Horse Lake (Oklahoma)\nWild Horse Lake is a playa lake located in Texas County, Oklahoma. The lake was the location of the infamous Hay Meadow Massacre (July 1888) in which one faction in the county seat fight in Stevens County, Kansas, killed four members of the opposing faction. Since the killings took place in what was then No Man's Land, no court had jurisdiction over the crime. The lake was also the subject of Oklahoma case law in reference to water appropriations\u2014Depuy V. Hoeme (1980 OK 26, 611 P.2d 228).",
+            "John Chiang (Taiwan)\nJohn Chiang or Chiang Hsiao-yen (; born March 1, 1942), formerly surnamed Chang (), is a Kuomintang politician in Taiwan. He is the grandson of Chiang Kai-shek, former leader of the Republic of China.",
+            "Tatung F.C.\nTatung Football Club () is a Taiwanese semi-professional football club based in Taipei, Taiwan. The club, affiliated with the Tatung electronics company, was founded in 1969 by a group of Tatung employees favoring football activities. It is the oldest and the only (semi-professional) football club owned by private enterprise in Taiwan. Many of the players work for the company in the daytime and train in the evening.",
+            "Milk and Honey (album)\nMilk and Honey is an album by John Lennon and Yoko Ono released in 1984. Following the compilation \"The John Lennon Collection\", it is Lennon's eighth and final studio album, and the first posthumous release of new Lennon music, having been recorded in the last months of his life during and following the sessions for their 1980 album \"Double Fantasy\". It was assembled by Yoko Ono in association with the Geffen label.",
+            "Malone Springs\nMalone Springs is a watershed within the Fremont-Winema National Forest in Klamath County, Oregon, United States. It is 25 miles northwest of Klamath Falls on mile point 270 43.58 of Oregon Route 140. It provides access to a multi-mile canoe route (and loop) along the westernmost edge of the Upper Klamath National Wildlife Refuge. Malone Springs' location allows for close encounters with the teeming marsh of Upper Klamath Lake and outstanding views of old growth, mixed conifer forest on neighboring Pelican Butte immediately to the west."
+        ],
+        "thoughts": [
+            "Milk Lake is located in Shilin District, Taipei, Taiwan, and is part of the Yangmingshan National Park.",
+            "Based on the information provided, Milk Lake is located in Taiwan, which is in Asia. Therefore, Milk Lake is in Asia.",
+            "Larnaca Salt Lake is located to the west of the city of Larnaca in Cyprus. It is just off the road leading to Larnaca International Airport and is considered one of the most important wetlands of Cyprus. It is also a distinctive landmark of the area and is surrounded by halophytic scrubland. The Hala Sultan Tekke, a Muslim shrine, is located on the west bank of the lake.",
+            "Based on the location information provided, Larnaca Salt Lake is not in Asia. It is located in Cyprus, which is an island country in the Eastern Mediterranean and is considered to be part of Europe. Therefore, Larnaca Salt Lake is not in Asia.",
+            "Based on the combined results, Milk Lake is located in Asia, while Larnaca Salt Lake is not located in Asia. Therefore, only Milk Lake is located in Asia."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Milk Lake, Taiwan and Larnaca Salt Lake both located in Asia?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the location of Milk Lake, Taiwan.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the location of Larnaca Salt Lake.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Milk Lake, located in Taiwan, is in Asia by confirming that Taiwan is part of Asia.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Larnaca Salt Lake is in Asia by identifying the continent associated with its location.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Synthesize the information from both locations to answer if both are located in Asia.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The task of determining if both Milk Lake in Taiwan and Larnaca Salt Lake are in Asia can be broken down into separate retrieval and reasoning steps. Nodes 1 and 2 gather the precise locations of the two sites. Nodes 3 and 4 then independently verify if each site is in Asia. Finally, Node 5 synthesizes this information to provide a conclusive answer."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Milk Lake, Taiwan\nThe Milk Lake () is a lake in Shilin District, Taipei, Taiwan. The lake is part of Yangmingshan National Park.",
+            "Larnaca Salt Lake\nLarnaca Salt Lake (Greek: \u0391\u03bb\u03c5\u03ba\u03ae \u039b\u03ac\u03c1\u03bd\u03b1\u03ba\u03b1\u03c2 , Turkish: \"Larnaka Tuz G\u00f6l\u00fc\" ) is a complex network of four salt lakes (3 of them interconnected) of different sizes to the west of the city of Larnaca. The largest is lake \"Aliki\", followed by lake \"Orphani\", lake \"Soros\" and lake \"Spiro\". They form the second largest salt lake in Cyprus after the Limassol Salt Lake. The total surface area of the lakes adds up to 2.2 km and being just off the road leading to Larnaca International Airport is one of the most distinctive landmarks of the area. It is considered one of the most important wetlands of Cyprus and it has been declared a Ramsar site, Natura 2000 site, Special Protected Area under the Barcelona Convention and an Important Bird Area (IBA). It is surrounded by halophytic scrubland and on its bank lies the Hala Sultan Tekke, one of the holiest of shrines within Ottoman Islam. It houses the tomb of Umm Haram, Muhammad's 'wet-nurse'.",
+            "Hala Sultan Tekke\nHala Sultan Tekke or the Mosque of Umm Haram (Turkish: \"Hala Sultan Tekkesi\" ; Greek: \u03a4\u03b5\u03ba\u03ad\u03c2 \u03a7\u03b1\u03bb\u03ac \u03a3\u03bf\u03c5\u03bb\u03c4\u03ac\u03bd\u03b1\u03c2 ) is a Muslim shrine on the west bank of Larnaca Salt Lake, near Larnaca, Cyprus. Umm Haram (Turkish: \"Hala Sultan\" ) was the wife of Ubada bin al-Samit, a companion of the Prophet Muhammed.",
+            "Milk Lake Glacier\nMilk Lake Glacier is located in the Glacier Peak Wilderness in the U.S. state of Washington. The glacier is within Mount Baker-Snoqualmie National Forest and a little over 3 mi northwest of Glacier Peak. Milk Lake Glacier disappeared sometime between 1984 and 1997 and by 2005, Milk Lake was situated where the glacier had once been.",
+            "Salt Lake City Air Route Traffic Control Center\nSalt Lake City Air Route Traffic Control Center (ZLC) (radio communications \"Salt Lake Center\") is one of 22 FAA Area Control Centers in the United States. It is located in Salt Lake City, Utah, adjacent to Salt Lake City International Airport. It was opened in 1939 and was originally located on the third floor of the old Salt Lake City International Airport terminal. The Salt Lake Center (ZLC) covers one of the largest geographical areas of any other control center, totaling approximately 350,000 squares miles.",
+            "Arena (UTA station)\nArena is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line has service from the Salt Lake City International Airport and to West Valley City via Downtown Salt Lake City.",
+            "Temple Square (UTA station)\nTemple Square is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "City Center (UTA station)\nCity Center is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "Salt Lake City Intermodal Hub\nThe Salt Lake City Intermodal Hub (also known as Salt Lake Central on Utah Transit Authority [UTA] routes and SLC by Amtrak) is a multi-modal transportation hub in Salt Lake City, Utah, United States served by the Blue Line of UTA's TRAX light rail system that operates in Salt Lake County and by the \"FrontRunner\", UTA's commuter rail train that operates along the Wasatch Front with service from Pleasant View in northern Weber County through Ogden, Davis County, Salt Lake City, and Salt Lake County to Provo in central Utah County. Service at the intermodal hub is also provided by Amtrak (with the \"California Zephyr\"), Greyhound Lines, and U Car Share, as well as UTA local bus service.",
+            "Green Line (TRAX)\nThe Green Line is a light rail line on the Utah Transit Authority's (UTA) TRAX system in Salt Lake City, Utah, in the United States, operated by the Utah Transit Authority (UTA). It opened on August 7, 2011, and runs between Airport Station at the Salt Lake City International Airport and West Valley Central Station in West Valley City (via Downtown Salt Lake City) serving a total of eighteen stations: thirteen in Salt Lake City, one in South Salt Lake, and four in West Valley City.",
+            "Wild Horse Lake (Oklahoma)\nWild Horse Lake is a playa lake located in Texas County, Oklahoma. The lake was the location of the infamous Hay Meadow Massacre (July 1888) in which one faction in the county seat fight in Stevens County, Kansas, killed four members of the opposing faction. Since the killings took place in what was then No Man's Land, no court had jurisdiction over the crime. The lake was also the subject of Oklahoma case law in reference to water appropriations\u2014Depuy V. Hoeme (1980 OK 26, 611 P.2d 228).",
+            "Lake Ercina\nLake Ercina is a small highland lake in Asturias, Spain. It is located in the Picos de Europa, in the Cantabrian Mountains. Situated next to Lake Enol, together, they forms the group known as Lakes of Covadonga within the Picos de Europa National Park. Lake Ercina is smaller than Lake Enol. It is situated at an altitude of 1108 m and its maximum depth is just over 2 m . The eutrophic lake, covers approximately eight hectares. Its characteristics are tied to its glacier origin and geographic location.",
+            "John Chiang (Taiwan)\nJohn Chiang or Chiang Hsiao-yen (; born March 1, 1942), formerly surnamed Chang (), is a Kuomintang politician in Taiwan. He is the grandson of Chiang Kai-shek, former leader of the Republic of China.",
+            "Drangiana\nDrangiana or Zarangiana (Greek: \u0394\u03c1\u03b1\u03b3\u03b3\u03b9\u03b1\u03bd\u03ae , \"Drangian\u0113\"; also attested in Old Western Iranian as \"Zranka\" was a historical region and administrative division of the Achaemenid Empire. This region comprises territory around Hamun Lake, wetlands in endorheic Sistan Basin on the Iran-Afghan border, and its primary watershed Helmand river in what is nowadays southwestern region of Afghanistan.",
+            "Tatung F.C.\nTatung Football Club () is a Taiwanese semi-professional football club based in Taipei, Taiwan. The club, affiliated with the Tatung electronics company, was founded in 1969 by a group of Tatung employees favoring football activities. It is the oldest and the only (semi-professional) football club owned by private enterprise in Taiwan. Many of the players work for the company in the daytime and train in the evening.",
+            "Milk and Honey (album)\nMilk and Honey is an album by John Lennon and Yoko Ono released in 1984. Following the compilation \"The John Lennon Collection\", it is Lennon's eighth and final studio album, and the first posthumous release of new Lennon music, having been recorded in the last months of his life during and following the sessions for their 1980 album \"Double Fantasy\". It was assembled by Yoko Ono in association with the Geffen label."
+        ],
+        "thoughts": [
+            "Milk Lake is located in Shilin District, Taipei, Taiwan, and is part of Yangmingshan National Park.",
+            "Taiwan is indeed part of Asia. Therefore, Milk Lake, located in Taiwan, is also in Asia.",
+            "The location of Larnaca Salt Lake is to the west of the city of Larnaca in Cyprus. It is just off the road leading to Larnaca International Airport and is one of the most distinctive landmarks of the area.",
+            "Larnaca Salt Lake is located in Cyprus, which is an island country in the Eastern Mediterranean and is geographically considered to be part of the continent of Asia. Therefore, Larnaca Salt Lake is in Asia.",
+            "Both Milk Lake in Taiwan and Larnaca Salt Lake in Cyprus are located in Asia. Taiwan is geographically considered to be part of Asia, and Cyprus, where Larnaca Salt Lake is located, is also geographically considered to be part of the continent of Asia. Therefore, both locations are indeed in Asia."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Milk Lake, Taiwan and Larnaca Salt Lake both located in Asia?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the location of Milk Lake in Taiwan, including its continent.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the location of Larnaca Salt Lake, including its continent.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if Milk Lake is located in Asia based on its retrieved location.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine if Larnaca Salt Lake is located in Asia based on its retrieved location.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Analyze the results to conclude whether both Milk Lake in Taiwan and Larnaca Salt Lake are located in Asia.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph begins by retrieving the locations of both Milk Lake and Larnaca Salt Lake, focusing on the continents where they are located (Asia for Yes/No assessment). The reasoning nodes are then responsible for interpreting whether each lake falls within Asia based on the geographical information retrieved. The final node synthesizes these reasoned results to answer if both lakes are located in Asia."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "I Told You So (Karmin song)\n\"I Told You So\" is a song by American recording duo Karmin, taken from their debut EP \"Hello\". It was written by band members Amy Heidemann and Nick Noonan, as well as Elite and producer John \"Jon Jon Traxx\" Webb, Jr. The song features a primary hip hop influence, as well as elements of rock, electronica and ska. The song debuted live on \"Saturday Night Live\" on February 11, 2012. Heidemann and Noonan first performed a live acoustic snippet of the song on Elvis Duran and the Morning Show prior to their SNL appearance. \"I Told You So\" is said to pay homage to Chris Brown's \"Look at Me Now\", a song they covered on YouTube that brought them to fame.",
+            "Anything's Wild\nAnything's Wild is a video poker game that allows the player to select any card (by rank) to act as the \"wild card\". The game is a variation of Deuces Wild and is based on five card draw where the player is dealt a five card hand. The player can then choose which cards to keep or discard and is dealt new cards accordingly. The payoff is based on the value of the hand. The \"wild card\" is announced before the hand is dealt and can be substituted for any card in the deck according to what is most beneficial to the player's hand. Since the game uses a standard deck, there are always four \"wild cards\" in play. This allows the player greater flexibility in building a winning hand.",
+            "I Love to Laugh\n\"I Love to Laugh\", also called \"We Love to Laugh\", is a song from Walt Disney's film \"Mary Poppins\". It was composed by Richard M. Sherman and Robert B. Sherman. The song is sung in the film by \"Uncle Albert\" (Ed Wynn), and \"Bert\" (Dick Van Dyke) as they levitate uncontrollably toward the ceiling, eventually joined by Mary Poppins (Julie Andrews) herself. The premise of the scene, that laughter and happiness cause Uncle Albert (and like-minded visitors) to float into the air, can be seen as a metaphor for the way laughter can \"lighten\" a mood. (Compare Peter Pan's flight power, which is also powered by happy thoughts.) Conversely, thinking of something sad literally brings Albert and his visitors \"down to earth\" again. The song states a case strongly in favor of laughter, even if Mary Poppins appears to disapprove of Uncle Albert's behavior, especially since it not only complicates the task of getting Albert down, but the infectious mood sends Bert and the Banks children into the air as well.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Ulterior Emotions\nUlterior Emotions was an album released in 2002 by Budweiser as part of their \"Bud Light Institute\" advertising campaign. The album was a giveaway available to purchase on their website. Also, for a time, you could download the song \"You're Beautiful (Can I Go Up North This Weekend?)\" on their website for free. Lyrics were included with the album."
+        ],
+        "thoughts": [
+            "Milk Lake is located in Taiwan, which is a country in the continent of Asia.",
+            "Yes, Milk Lake is located in Asia, specifically in Taiwan.",
+            "Larnaca Salt Lake is located in Larnaca, Cyprus, which is part of the continent of Europe.",
+            "Larnaca Salt Lake is located in Larnaca, Cyprus, which is part of the continent of Europe. Therefore, Larnaca Salt Lake is not located in Asia.",
+            "Based on the analysis of the results, it can be concluded that Milk Lake in Taiwan is located in Asia, while Larnaca Salt Lake is not located in Asia, as it is situated in Larnaca, Cyprus, which is part of the continent of Europe. Therefore, only Milk Lake in Taiwan is located in Asia."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Are Milk Lake, Taiwan and Larnaca Salt Lake both located in Asia?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the continent location of Milk Lake, Taiwan.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the continent location of Larnaca Salt Lake.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if both Milk Lake, Taiwan and Larnaca Salt Lake are located in Asia based on their identified continent locations.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph first breaks down the task of determining if both Milk Lake, Taiwan and Larnaca Salt Lake are located in Asia by individually identifying the continent of each location. The first node retrieves and reasons about the location of Milk Lake, Taiwan, while the second node does the same for Larnaca Salt Lake. Finally, the reasoning node synthesizes this information to conclude whether both lakes are in Asia."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Milk Lake, Taiwan\nThe Milk Lake () is a lake in Shilin District, Taipei, Taiwan. The lake is part of Yangmingshan National Park.",
+            "Larnaca Salt Lake\nLarnaca Salt Lake (Greek: \u0391\u03bb\u03c5\u03ba\u03ae \u039b\u03ac\u03c1\u03bd\u03b1\u03ba\u03b1\u03c2 , Turkish: \"Larnaka Tuz G\u00f6l\u00fc\" ) is a complex network of four salt lakes (3 of them interconnected) of different sizes to the west of the city of Larnaca. The largest is lake \"Aliki\", followed by lake \"Orphani\", lake \"Soros\" and lake \"Spiro\". They form the second largest salt lake in Cyprus after the Limassol Salt Lake. The total surface area of the lakes adds up to 2.2 km and being just off the road leading to Larnaca International Airport is one of the most distinctive landmarks of the area. It is considered one of the most important wetlands of Cyprus and it has been declared a Ramsar site, Natura 2000 site, Special Protected Area under the Barcelona Convention and an Important Bird Area (IBA). It is surrounded by halophytic scrubland and on its bank lies the Hala Sultan Tekke, one of the holiest of shrines within Ottoman Islam. It houses the tomb of Umm Haram, Muhammad's 'wet-nurse'.",
+            "Hala Sultan Tekke\nHala Sultan Tekke or the Mosque of Umm Haram (Turkish: \"Hala Sultan Tekkesi\" ; Greek: \u03a4\u03b5\u03ba\u03ad\u03c2 \u03a7\u03b1\u03bb\u03ac \u03a3\u03bf\u03c5\u03bb\u03c4\u03ac\u03bd\u03b1\u03c2 ) is a Muslim shrine on the west bank of Larnaca Salt Lake, near Larnaca, Cyprus. Umm Haram (Turkish: \"Hala Sultan\" ) was the wife of Ubada bin al-Samit, a companion of the Prophet Muhammed.",
+            "Milk Lake Glacier\nMilk Lake Glacier is located in the Glacier Peak Wilderness in the U.S. state of Washington. The glacier is within Mount Baker-Snoqualmie National Forest and a little over 3 mi northwest of Glacier Peak. Milk Lake Glacier disappeared sometime between 1984 and 1997 and by 2005, Milk Lake was situated where the glacier had once been.",
+            "Salt Lake City Air Route Traffic Control Center\nSalt Lake City Air Route Traffic Control Center (ZLC) (radio communications \"Salt Lake Center\") is one of 22 FAA Area Control Centers in the United States. It is located in Salt Lake City, Utah, adjacent to Salt Lake City International Airport. It was opened in 1939 and was originally located on the third floor of the old Salt Lake City International Airport terminal. The Salt Lake Center (ZLC) covers one of the largest geographical areas of any other control center, totaling approximately 350,000 squares miles.",
+            "Arena (UTA station)\nArena is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line has service from the Salt Lake City International Airport and to West Valley City via Downtown Salt Lake City.",
+            "Temple Square (UTA station)\nTemple Square is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "City Center (UTA station)\nCity Center is a light rail station in Downtown Salt Lake City, Utah, in the United States, served by the Blue Line and Green Line of the Utah Transit Authority's (UTA) TRAX system. The Blue Line has service from the Salt Lake Intermodal Hub in Downtown Salt Lake City to Draper. The Green Line provides service from the Salt Lake City International Airport to West Valley City (via Downtown Salt Lake City).",
+            "Salt Lake City Intermodal Hub\nThe Salt Lake City Intermodal Hub (also known as Salt Lake Central on Utah Transit Authority [UTA] routes and SLC by Amtrak) is a multi-modal transportation hub in Salt Lake City, Utah, United States served by the Blue Line of UTA's TRAX light rail system that operates in Salt Lake County and by the \"FrontRunner\", UTA's commuter rail train that operates along the Wasatch Front with service from Pleasant View in northern Weber County through Ogden, Davis County, Salt Lake City, and Salt Lake County to Provo in central Utah County. Service at the intermodal hub is also provided by Amtrak (with the \"California Zephyr\"), Greyhound Lines, and U Car Share, as well as UTA local bus service.",
+            "Green Line (TRAX)\nThe Green Line is a light rail line on the Utah Transit Authority's (UTA) TRAX system in Salt Lake City, Utah, in the United States, operated by the Utah Transit Authority (UTA). It opened on August 7, 2011, and runs between Airport Station at the Salt Lake City International Airport and West Valley Central Station in West Valley City (via Downtown Salt Lake City) serving a total of eighteen stations: thirteen in Salt Lake City, one in South Salt Lake, and four in West Valley City.",
+            "Wild Horse Lake (Oklahoma)\nWild Horse Lake is a playa lake located in Texas County, Oklahoma. The lake was the location of the infamous Hay Meadow Massacre (July 1888) in which one faction in the county seat fight in Stevens County, Kansas, killed four members of the opposing faction. Since the killings took place in what was then No Man's Land, no court had jurisdiction over the crime. The lake was also the subject of Oklahoma case law in reference to water appropriations\u2014Depuy V. Hoeme (1980 OK 26, 611 P.2d 228).",
+            "Lake Ercina\nLake Ercina is a small highland lake in Asturias, Spain. It is located in the Picos de Europa, in the Cantabrian Mountains. Situated next to Lake Enol, together, they forms the group known as Lakes of Covadonga within the Picos de Europa National Park. Lake Ercina is smaller than Lake Enol. It is situated at an altitude of 1108 m and its maximum depth is just over 2 m . The eutrophic lake, covers approximately eight hectares. Its characteristics are tied to its glacier origin and geographic location.",
+            "John Chiang (Taiwan)\nJohn Chiang or Chiang Hsiao-yen (; born March 1, 1942), formerly surnamed Chang (), is a Kuomintang politician in Taiwan. He is the grandson of Chiang Kai-shek, former leader of the Republic of China.",
+            "Drangiana\nDrangiana or Zarangiana (Greek: \u0394\u03c1\u03b1\u03b3\u03b3\u03b9\u03b1\u03bd\u03ae , \"Drangian\u0113\"; also attested in Old Western Iranian as \"Zranka\" was a historical region and administrative division of the Achaemenid Empire. This region comprises territory around Hamun Lake, wetlands in endorheic Sistan Basin on the Iran-Afghan border, and its primary watershed Helmand river in what is nowadays southwestern region of Afghanistan.",
+            "Tatung F.C.\nTatung Football Club () is a Taiwanese semi-professional football club based in Taipei, Taiwan. The club, affiliated with the Tatung electronics company, was founded in 1969 by a group of Tatung employees favoring football activities. It is the oldest and the only (semi-professional) football club owned by private enterprise in Taiwan. Many of the players work for the company in the daytime and train in the evening.",
+            "Milk and Honey (album)\nMilk and Honey is an album by John Lennon and Yoko Ono released in 1984. Following the compilation \"The John Lennon Collection\", it is Lennon's eighth and final studio album, and the first posthumous release of new Lennon music, having been recorded in the last months of his life during and following the sessions for their 1980 album \"Double Fantasy\". It was assembled by Yoko Ono in association with the Geffen label."
+        ],
+        "thoughts": [
+            "Milk Lake is located in Shilin District, Taipei, Taiwan, which is part of the continent of Asia.",
+            "Larnaca Salt Lake is located in the continent of Europe, specifically in the country of Cyprus.",
+            "Milk Lake, Taiwan is located in Asia, while Larnaca Salt Lake is located in Europe. Therefore, both Milk Lake, Taiwan and Larnaca Salt Lake are not located in the same continent, as Milk Lake is in Asia and Larnaca Salt Lake is in Europe."
+        ],
+        "is_best": false
+    }
+]

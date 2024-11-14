@@ -1,0 +1,547 @@
+[
+    {
+        "question": "Graham Linehan was the creator of the Ash Atalla-produced sitcom for what UK channel?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the sitcom created by Graham Linehan that was produced by Ash Atalla.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which UK channel aired the identified sitcom.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The task is to identify the sitcom created by Graham Linehan that was produced by Ash Atalla, then determine the UK channel it aired on. First, we retrieve and reason out the specific sitcom based on both Linehan's creation and Atalla's production. Then, using this information, we identify which UK channel aired the sitcom."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "The IT Crowd\nThe IT Crowd is a British sitcom by Channel 4, written by Graham Linehan, produced by Ash Atalla and starring Chris O'Dowd, Richard Ayoade, Katherine Parkinson, and Matt Berry.",
+            "Big Train\nBig Train is a surreal British television comedy sketch show created by Arthur Mathews and Graham Linehan, writers of the sitcom \"Father Ted\". The first series was broadcast on BBC Two in 1998, while the second, in which Linehan was not involved, aired in 2002.",
+            "Black Books\nBlack Books is a British sitcom created by Dylan Moran and Graham Linehan and broadcast on Channel 4 from 2000 to 2004. Starring Moran, Bill Bailey and Tamsin Greig, the series is set in the eponymous London bookshop and follows the lives of its owner Bernard Black (Moran), his assistant Manny Bianco (Bailey) and their friend Fran Katzenjammer (Greig). The series was produced by Big Talk Productions, in association with Channel 4.",
+            "List of The IT Crowd episodes\n\"The IT Crowd\" ( or ) is a Channel 4 sitcom written and directed by Graham Linehan and starring Richard Ayoade, Chris O'Dowd and Katherine Parkinson.",
+            "List of The IT Crowd characters\nThe following is a list of fictional characters from the Graham Linehan British Channel 4 sitcom \"The IT Crowd\".",
+            "List of Black Books episodes\n\"Black Books\", an English sitcom television series created by Dylan Moran and Graham Linehan, premiered on 29 September 2000 on Channel 4 in the United Kingdom and Ireland, and ended on 15 April 2004. The show spans 18 episodes over three series. The original 45 minute pilot, recorded in 1998, has not been broadcast and all other episodes were approximately 25 minutes long. Moran and Linehan decided to end the show in its third series. Moran has stated that there will be no more episodes and \"The Times\" reported the series has been \"killed off\".",
+            "Paris (1994 TV series)\nParis is a British sitcom produced by Talkback Productions for Channel 4. It was written jointly by Irish writers Arthur Mathews and Graham Linehan, best known for their later sitcom Father Ted. The show only lasted one series consisting of six episodes in October and November 1994. It featured the escapades of French artist Alain Degout living in 1920s Paris, who wants to be famous, but his work gets him nowhere. Unlike BBC sitcom 'Allo 'Allo, which was also set in France, featuring characters speaking in French accents, the characters of Paris spoke in an English accent.",
+            "Hello Friend\nHello Friend, sometimes written as Hello, Friend, is a short comedy horror film directed by Graham Linehan and written by Linehan and Robert Popper. The film was Linehan's directorial debut. The film stars Martin Savage as a man, John Ward, but credited as the \"Subject\", who buys some new internet software for his computer, which begins to take over his life. The film was produced by The Film Council, Film4 Productions and Shine Limited.",
+            "Password (UK game show)\nPassword was a British panel game show based on the US version of the same name. It was originally aired on ITV produced by ATV from 12 March to 10 September 1963 hosted by Shaw Taylor, then it aired on BBC2 from 24 March to 28 April 1973 hosted by Brian Redhead before moving to its flagship channel BBC1 from 7 January 1974 to 1976 first hosted by Eleanor Summerfield then by Esther Rantzen, it was then aired on Channel 4 produced by Thames in association with Talbot Television and Goodson-Todman Productions from 6 November 1982 to 14 May 1983 hosted by Tom O'Connor and then finally aired back on ITV produced by Ulster from 22 July 1987 to 5 August 1988 hosted by Gordon Burns.",
+            "The Michael J. Fox Show\nThe Michael J. Fox Show was an American television sitcom starring Michael J. Fox. The series aired on NBC in the United States from September 26, 2013, to January 23, 2014, as part of the 2013\u201314 American television season. Fox made his regular return to television for the first time since he was on ABC's \"Spin City\". It was his second NBC series, as he appeared on that network's sitcom \"Family Ties\" from 1982 to 1989 as Alex P. Keaton.",
+            "A*mazing\nA*mazing was an Australian children's television game show that aired between 16 May 1994 until 1998 on the Seven Network. It was famous for a relatively large and elaborate maze/obstacle course that was part of the show's studio set. \"A*mazing\" was hosted by James Sherry for the entire run of the series. A*mazing was produced at Channel 7 Brisbane from 1994\u20131996 and then at Channel 7 Perth from 1997\u20131998.",
+            "Martin (TV series)\nMartin is an American sitcom that aired for five seasons on Fox from August 27, 1992 to May 1, 1997. Reflecting the rising popularity of the Fox network throughout the 1990s, \"Martin\" was one of the network's highest-rated shows during the sitcom's run."
+        ],
+        "thoughts": [
+            "The sitcom created by Graham Linehan and produced by Ash Atalla is \"The IT Crowd.\"",
+            "The IT Crowd was aired on Channel 4."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Graham Linehan was the creator of the Ash Atalla-produced sitcom for what UK channel?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information on the sitcoms produced by Ash Atalla.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which of these sitcoms was created by Graham Linehan.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about the UK channel that aired the Graham Linehan-created sitcom.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "To find the channel that aired the Ash Atalla-produced sitcom created by Graham Linehan, the execution graph starts with retrieving sitcoms produced by Ash Atalla (Node 1). With this list, we determine which sitcom was created by Graham Linehan (Node 2), and finally, retrieve the UK channel that aired that particular sitcom (Node 3). Each node logically builds on the information from the previous one, allowing for the final answer to be reached."
+        },
+        "recall": 0.7222222222222222,
+        "retrieved_passages": [
+            "List of The IT Crowd characters\nThe following is a list of fictional characters from the Graham Linehan British Channel 4 sitcom \"The IT Crowd\".",
+            "List of The IT Crowd episodes\n\"The IT Crowd\" ( or ) is a Channel 4 sitcom written and directed by Graham Linehan and starring Richard Ayoade, Chris O'Dowd and Katherine Parkinson.",
+            "The IT Crowd\nThe IT Crowd is a British sitcom by Channel 4, written by Graham Linehan, produced by Ash Atalla and starring Chris O'Dowd, Richard Ayoade, Katherine Parkinson, and Matt Berry.",
+            "Big Train\nBig Train is a surreal British television comedy sketch show created by Arthur Mathews and Graham Linehan, writers of the sitcom \"Father Ted\". The first series was broadcast on BBC Two in 1998, while the second, in which Linehan was not involved, aired in 2002.",
+            "Black Books\nBlack Books is a British sitcom created by Dylan Moran and Graham Linehan and broadcast on Channel 4 from 2000 to 2004. Starring Moran, Bill Bailey and Tamsin Greig, the series is set in the eponymous London bookshop and follows the lives of its owner Bernard Black (Moran), his assistant Manny Bianco (Bailey) and their friend Fran Katzenjammer (Greig). The series was produced by Big Talk Productions, in association with Channel 4.",
+            "List of Black Books episodes\n\"Black Books\", an English sitcom television series created by Dylan Moran and Graham Linehan, premiered on 29 September 2000 on Channel 4 in the United Kingdom and Ireland, and ended on 15 April 2004. The show spans 18 episodes over three series. The original 45 minute pilot, recorded in 1998, has not been broadcast and all other episodes were approximately 25 minutes long. Moran and Linehan decided to end the show in its third series. Moran has stated that there will be no more episodes and \"The Times\" reported the series has been \"killed off\".",
+            "Graham Linehan\nGraham Linehan ( ; born 22 May 1968) is an Irish television comedy writer and director who, often in partnership with Arthur Mathews, has written or co-written a number of popular television comedies. He is most noted for the sitcoms \"Father Ted\", \"Black Books\" and \"The IT Crowd\". Amongst others, he has also worked on \"Big Train\", \"Count Arthur Strong\", \"Brass Eye\" and \"The Fast Show\".",
+            "Paris (1994 TV series)\nParis is a British sitcom produced by Talkback Productions for Channel 4. It was written jointly by Irish writers Arthur Mathews and Graham Linehan, best known for their later sitcom Father Ted. The show only lasted one series consisting of six episodes in October and November 1994. It featured the escapades of French artist Alain Degout living in 1920s Paris, who wants to be famous, but his work gets him nowhere. Unlike BBC sitcom 'Allo 'Allo, which was also set in France, featuring characters speaking in French accents, the characters of Paris spoke in an English accent.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Please Take Care of My Refrigerator\nPlease Take Care of My Refrigerator () is a 2014 South Korean cooking-variety program starring by many chefs and celebrity guests. It airs on JTBC on Mondays at 21:30 (KST) beginning November 17, 2014.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Dick Smith Foods\nDick Smith Foods is a food brand created by Australian entrepreneur Dick Smith to provide Australian owned and produced alternatives to products from foreign-owned food companies.",
+            "Never Let Me Go (Johnny Ace song)\n\"Never Let Me Go\" is a blues ballad song by American R&B/blues singer Johnny Ace, written by Joseph Scott and released in 1954 under Duke Records. The song is featured on the albums \"My Songs\" and \"Memorial\". \"Never Let Me Go\" was one of his eighth consecutive top ten R&B hits in a row, including \"My Song\", \"Cross My Heart,\" \"Please Forgive Me,\" \"The Clock,\" \"Pledging My Love,\" \"Saving My Love for You,\" and \"Anymore\". The song was R&B hit and peaked to No. 9 in October 1954 on \"Billboards\" Rhythm & Blues Records chart."
+        ],
+        "thoughts": [
+            "Ash Atalla has produced the British sitcom \"The IT Crowd\" by Channel 4, written by Graham Linehan and starring Chris O'Dowd, Richard Ayoade, Katherine Parkinson, and Matt Berry.",
+            "The sitcom \"The IT Crowd\" was created by Graham Linehan.",
+            "The UK channel that aired the Graham Linehan-created sitcom \"The IT Crowd\" is Channel 4."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Graham Linehan was the creator of the Ash Atalla-produced sitcom for what UK channel?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the sitcom that was created by Graham Linehan and produced by Ash Atalla.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the UK channel that broadcast the sitcom identified in Node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph breaks down the question into two main steps. The first step (Node 1) is to identify the specific sitcom that was both created by Graham Linehan and produced by Ash Atalla. Once the sitcom is identified, the second step (Node 2) is to determine which UK channel broadcast this sitcom. The steps are sequential as the channel identification depends on knowing the sitcom in question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "The IT Crowd\nThe IT Crowd is a British sitcom by Channel 4, written by Graham Linehan, produced by Ash Atalla and starring Chris O'Dowd, Richard Ayoade, Katherine Parkinson, and Matt Berry.",
+            "Big Train\nBig Train is a surreal British television comedy sketch show created by Arthur Mathews and Graham Linehan, writers of the sitcom \"Father Ted\". The first series was broadcast on BBC Two in 1998, while the second, in which Linehan was not involved, aired in 2002.",
+            "Black Books\nBlack Books is a British sitcom created by Dylan Moran and Graham Linehan and broadcast on Channel 4 from 2000 to 2004. Starring Moran, Bill Bailey and Tamsin Greig, the series is set in the eponymous London bookshop and follows the lives of its owner Bernard Black (Moran), his assistant Manny Bianco (Bailey) and their friend Fran Katzenjammer (Greig). The series was produced by Big Talk Productions, in association with Channel 4.",
+            "List of The IT Crowd episodes\n\"The IT Crowd\" ( or ) is a Channel 4 sitcom written and directed by Graham Linehan and starring Richard Ayoade, Chris O'Dowd and Katherine Parkinson.",
+            "List of The IT Crowd characters\nThe following is a list of fictional characters from the Graham Linehan British Channel 4 sitcom \"The IT Crowd\".",
+            "Paris (1994 TV series)\nParis is a British sitcom produced by Talkback Productions for Channel 4. It was written jointly by Irish writers Arthur Mathews and Graham Linehan, best known for their later sitcom Father Ted. The show only lasted one series consisting of six episodes in October and November 1994. It featured the escapades of French artist Alain Degout living in 1920s Paris, who wants to be famous, but his work gets him nowhere. Unlike BBC sitcom 'Allo 'Allo, which was also set in France, featuring characters speaking in French accents, the characters of Paris spoke in an English accent.",
+            "List of Black Books episodes\n\"Black Books\", an English sitcom television series created by Dylan Moran and Graham Linehan, premiered on 29 September 2000 on Channel 4 in the United Kingdom and Ireland, and ended on 15 April 2004. The show spans 18 episodes over three series. The original 45 minute pilot, recorded in 1998, has not been broadcast and all other episodes were approximately 25 minutes long. Moran and Linehan decided to end the show in its third series. Moran has stated that there will be no more episodes and \"The Times\" reported the series has been \"killed off\".",
+            "Hello Friend\nHello Friend, sometimes written as Hello, Friend, is a short comedy horror film directed by Graham Linehan and written by Linehan and Robert Popper. The film was Linehan's directorial debut. The film stars Martin Savage as a man, John Ward, but credited as the \"Subject\", who buys some new internet software for his computer, which begins to take over his life. The film was produced by The Film Council, Film4 Productions and Shine Limited.",
+            "First Life (TV series)\nFirst Life is a 2010 British nature documentary series written and presented by David Attenborough, also known by the expanded titles David Attenborough's First Life (UK) and First Life with David Attenborough (USA). It was first broadcast in the USA as a two-hour special on the Discovery Channel on 24 October 2010. In the United Kingdom it was broadcast as a two-part series on BBC Two on 5 November 2010. \"First Life\" sees Attenborough tackle the subject of the origin of life on Earth. He investigates the evidence from the earliest fossils, which suggest that complex animals first appeared in the oceans around 540 million years ago, an event known as the Cambrian Explosion. Trace fossils of multicellular organisms from an even earlier period, the Ediacaran biota, are also examined. Attenborough travels to Canada, Morocco and Australia, using some of the latest fossil discoveries and their nearest equivalents amongst living species to reveal what life may have been like at that time. Visual effects and computer animation are used to reconstruct and animate the extinct life forms.",
+            "Kunoichi (TV series)\nKunoichi (\u30af\u30ce\u30a4\u30c1; stylized as KUNOICHI in Japan) is a women's obstacle course competition held in Japan and broadcast on the Tokyo Broadcasting System. It is a spin-off of \"Sasuke\", another obstacle course series. \"Kunoichi\" is different from \"Sasuke\" in that the competitors are exclusively female. It is also broadcast as Women of Ninja Warrior on the American G4 channel. KUNOICHI has been renewed for a 9th tournament after an 8-year hiatus for 2017. It was taped on January 26, 2017, took place at the Makuhari Messe Convention Hall, unlike past tournaments taking place at Midoriyama Studio City."
+        ],
+        "thoughts": [
+            "The sitcom created by Graham Linehan and produced by Ash Atalla is \"The IT Crowd.\"",
+            "The UK channel that broadcast the sitcom \"The IT Crowd\" is Channel 4."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Graham Linehan was the creator of the Ash Atalla-produced sitcom for what UK channel?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the sitcoms produced by Ash Atalla.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which of the sitcoms identified in Node 1 were created by Graham Linehan.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the UK channel that aired the sitcoms found in Node 2.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the problem of identifying the UK channel that aired a specific sitcom created by Graham Linehan and produced by Ash Atalla. First, we identify all sitcoms produced by Ash Atalla (Node 1). Next, we filter these to find which one was created by Graham Linehan (Node 2). Finally, we find the UK channel that aired the sitcom identified in the previous step (Node 3). The reasoning and retrieval are explicitly separated to ensure that the task is completed step-by-step, allowing for clarity and manageability."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "The IT Crowd\nThe IT Crowd is a British sitcom by Channel 4, written by Graham Linehan, produced by Ash Atalla and starring Chris O'Dowd, Richard Ayoade, Katherine Parkinson, and Matt Berry.",
+            "List of The IT Crowd characters\nThe following is a list of fictional characters from the Graham Linehan British Channel 4 sitcom \"The IT Crowd\".",
+            "List of The IT Crowd episodes\n\"The IT Crowd\" ( or ) is a Channel 4 sitcom written and directed by Graham Linehan and starring Richard Ayoade, Chris O'Dowd and Katherine Parkinson.",
+            "Password (UK game show)\nPassword was a British panel game show based on the US version of the same name. It was originally aired on ITV produced by ATV from 12 March to 10 September 1963 hosted by Shaw Taylor, then it aired on BBC2 from 24 March to 28 April 1973 hosted by Brian Redhead before moving to its flagship channel BBC1 from 7 January 1974 to 1976 first hosted by Eleanor Summerfield then by Esther Rantzen, it was then aired on Channel 4 produced by Thames in association with Talbot Television and Goodson-Todman Productions from 6 November 1982 to 14 May 1983 hosted by Tom O'Connor and then finally aired back on ITV produced by Ulster from 22 July 1987 to 5 August 1988 hosted by Gordon Burns.",
+            "The Michael J. Fox Show\nThe Michael J. Fox Show was an American television sitcom starring Michael J. Fox. The series aired on NBC in the United States from September 26, 2013, to January 23, 2014, as part of the 2013\u201314 American television season. Fox made his regular return to television for the first time since he was on ABC's \"Spin City\". It was his second NBC series, as he appeared on that network's sitcom \"Family Ties\" from 1982 to 1989 as Alex P. Keaton.",
+            "A*mazing\nA*mazing was an Australian children's television game show that aired between 16 May 1994 until 1998 on the Seven Network. It was famous for a relatively large and elaborate maze/obstacle course that was part of the show's studio set. \"A*mazing\" was hosted by James Sherry for the entire run of the series. A*mazing was produced at Channel 7 Brisbane from 1994\u20131996 and then at Channel 7 Perth from 1997\u20131998.",
+            "Paris (1994 TV series)\nParis is a British sitcom produced by Talkback Productions for Channel 4. It was written jointly by Irish writers Arthur Mathews and Graham Linehan, best known for their later sitcom Father Ted. The show only lasted one series consisting of six episodes in October and November 1994. It featured the escapades of French artist Alain Degout living in 1920s Paris, who wants to be famous, but his work gets him nowhere. Unlike BBC sitcom 'Allo 'Allo, which was also set in France, featuring characters speaking in French accents, the characters of Paris spoke in an English accent.",
+            "Martin (TV series)\nMartin is an American sitcom that aired for five seasons on Fox from August 27, 1992 to May 1, 1997. Reflecting the rising popularity of the Fox network throughout the 1990s, \"Martin\" was one of the network's highest-rated shows during the sitcom's run.",
+            "Ash Baron-Cohen\nAshley Baron-Cohen (born in London) is an independent English filmmaker also known as simply Ash. He has a bachelor's degree in experimental psychology from University of Sussex, and trained as a filmmaker at the Pasadena Art Center. He currently resides in Los Angeles.",
+            "Watch What Happens Live with Andy Cohen\nWatch What Happens Live with Andy Cohen (previously named Watch What Happens Live until December 19, 2016) is an American pop culture-based late-night talk show hosted by Andy Cohen that premiered on July 16, 2009. It features Bravo's own reality programming in the manner of an aftershow, and celebrities' recent news. The show is produced live from New York City, making possible interaction with viewers by phone and social media. In November 2013, Bravo renewed \"Watch What Happens: Live\" for two additional seasons. On March 2, 2016, the show aired its 1000th episode.",
+            "List of Disney animated shorts\nThis is a list of animated short films produced by Walt Disney and Walt Disney Animation Studios from 1921 to the present. This includes films produced at the Laugh-O-Gram Studio which Disney founded in 1921 as well as the animation studio now owned by The Walt Disney Company, previously called the Disney Brothers Cartoon Studio (1923), The Walt Disney Studio (1926), Walt Disney Productions (1929), and Walt Disney Feature Animation (1986).",
+            "Polam Pol\nPolam Pol features songs sung by Farhad Bhiwandiwala, Nakash Aziz, Palak Muchhal, Shree Dayal, Ash King. Music and Background Score for the film is composed by Paresh-Bhavesh. The soundtrack was launched on 19 January.",
+            "James Brolin\nJames Brolin ( ; born Craig Kenneth Bruderlin, July 18, 1940) is an American actor, producer, and director, best known for his roles in film and television, including sitcoms and soap operas. He is the father of actor Josh Brolin and husband of singer/actress Barbra Streisand.",
+            "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+            "List of DC Extended Universe cast members\nThe DC Extended Universe is a media franchise and shared fictional universe that is the setting of superhero films independently produced by Warner Bros., based on characters that appear in DC Comics publications."
+        ],
+        "thoughts": [
+            "The sitcoms produced by Ash Atalla are \"The IT Crowd.\"",
+            "The sitcom \"The IT Crowd\" was created by Graham Linehan. Therefore, the sitcom created by Graham Linehan is \"The IT Crowd.\"",
+            "The UK channel that aired the sitcom \"The IT Crowd\" is Channel 4."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Graham Linehan was the creator of the Ash Atalla-produced sitcom for what UK channel?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the sitcom created by Graham Linehan and produced by Ash Atalla.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the UK channel that aired the sitcom identified in node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph starts with identifying the sitcom that Graham Linehan created and Ash Atalla produced. Once the specific sitcom is identified, the next step is to find out which UK channel aired this sitcom. This two-step process ensures we gather sufficient information about the sitcom before determining its broadcasting channel."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "The IT Crowd\nThe IT Crowd is a British sitcom by Channel 4, written by Graham Linehan, produced by Ash Atalla and starring Chris O'Dowd, Richard Ayoade, Katherine Parkinson, and Matt Berry.",
+            "Big Train\nBig Train is a surreal British television comedy sketch show created by Arthur Mathews and Graham Linehan, writers of the sitcom \"Father Ted\". The first series was broadcast on BBC Two in 1998, while the second, in which Linehan was not involved, aired in 2002.",
+            "Black Books\nBlack Books is a British sitcom created by Dylan Moran and Graham Linehan and broadcast on Channel 4 from 2000 to 2004. Starring Moran, Bill Bailey and Tamsin Greig, the series is set in the eponymous London bookshop and follows the lives of its owner Bernard Black (Moran), his assistant Manny Bianco (Bailey) and their friend Fran Katzenjammer (Greig). The series was produced by Big Talk Productions, in association with Channel 4.",
+            "List of The IT Crowd episodes\n\"The IT Crowd\" ( or ) is a Channel 4 sitcom written and directed by Graham Linehan and starring Richard Ayoade, Chris O'Dowd and Katherine Parkinson.",
+            "List of The IT Crowd characters\nThe following is a list of fictional characters from the Graham Linehan British Channel 4 sitcom \"The IT Crowd\".",
+            "Paris (1994 TV series)\nParis is a British sitcom produced by Talkback Productions for Channel 4. It was written jointly by Irish writers Arthur Mathews and Graham Linehan, best known for their later sitcom Father Ted. The show only lasted one series consisting of six episodes in October and November 1994. It featured the escapades of French artist Alain Degout living in 1920s Paris, who wants to be famous, but his work gets him nowhere. Unlike BBC sitcom 'Allo 'Allo, which was also set in France, featuring characters speaking in French accents, the characters of Paris spoke in an English accent.",
+            "List of Black Books episodes\n\"Black Books\", an English sitcom television series created by Dylan Moran and Graham Linehan, premiered on 29 September 2000 on Channel 4 in the United Kingdom and Ireland, and ended on 15 April 2004. The show spans 18 episodes over three series. The original 45 minute pilot, recorded in 1998, has not been broadcast and all other episodes were approximately 25 minutes long. Moran and Linehan decided to end the show in its third series. Moran has stated that there will be no more episodes and \"The Times\" reported the series has been \"killed off\".",
+            "Hello Friend\nHello Friend, sometimes written as Hello, Friend, is a short comedy horror film directed by Graham Linehan and written by Linehan and Robert Popper. The film was Linehan's directorial debut. The film stars Martin Savage as a man, John Ward, but credited as the \"Subject\", who buys some new internet software for his computer, which begins to take over his life. The film was produced by The Film Council, Film4 Productions and Shine Limited.",
+            "Password (UK game show)\nPassword was a British panel game show based on the US version of the same name. It was originally aired on ITV produced by ATV from 12 March to 10 September 1963 hosted by Shaw Taylor, then it aired on BBC2 from 24 March to 28 April 1973 hosted by Brian Redhead before moving to its flagship channel BBC1 from 7 January 1974 to 1976 first hosted by Eleanor Summerfield then by Esther Rantzen, it was then aired on Channel 4 produced by Thames in association with Talbot Television and Goodson-Todman Productions from 6 November 1982 to 14 May 1983 hosted by Tom O'Connor and then finally aired back on ITV produced by Ulster from 22 July 1987 to 5 August 1988 hosted by Gordon Burns.",
+            "The Michael J. Fox Show\nThe Michael J. Fox Show was an American television sitcom starring Michael J. Fox. The series aired on NBC in the United States from September 26, 2013, to January 23, 2014, as part of the 2013\u201314 American television season. Fox made his regular return to television for the first time since he was on ABC's \"Spin City\". It was his second NBC series, as he appeared on that network's sitcom \"Family Ties\" from 1982 to 1989 as Alex P. Keaton.",
+            "A*mazing\nA*mazing was an Australian children's television game show that aired between 16 May 1994 until 1998 on the Seven Network. It was famous for a relatively large and elaborate maze/obstacle course that was part of the show's studio set. \"A*mazing\" was hosted by James Sherry for the entire run of the series. A*mazing was produced at Channel 7 Brisbane from 1994\u20131996 and then at Channel 7 Perth from 1997\u20131998.",
+            "Martin (TV series)\nMartin is an American sitcom that aired for five seasons on Fox from August 27, 1992 to May 1, 1997. Reflecting the rising popularity of the Fox network throughout the 1990s, \"Martin\" was one of the network's highest-rated shows during the sitcom's run."
+        ],
+        "thoughts": [
+            "The sitcom created by Graham Linehan and produced by Ash Atalla is \"The IT Crowd.\"",
+            "The UK channel that aired the sitcom \"The IT Crowd\" is Channel 4."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Graham Linehan was the creator of the Ash Atalla-produced sitcom for what UK channel?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the sitcom created by Graham Linehan and produced by Ash Atalla.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the UK channel that broadcasted the identified sitcom.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The task is to find out the UK channel that aired a specific sitcom. First, we need to identify the sitcom created by Graham Linehan and produced by Ash Atalla. Once we have the name of the sitcom, we can proceed to find the UK channel that aired it. Therefore, the task is broken down into two main steps: identifying the sitcom and then retrieving the channel information, with the second step dependent on the first."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "The IT Crowd\nThe IT Crowd is a British sitcom by Channel 4, written by Graham Linehan, produced by Ash Atalla and starring Chris O'Dowd, Richard Ayoade, Katherine Parkinson, and Matt Berry.",
+            "Big Train\nBig Train is a surreal British television comedy sketch show created by Arthur Mathews and Graham Linehan, writers of the sitcom \"Father Ted\". The first series was broadcast on BBC Two in 1998, while the second, in which Linehan was not involved, aired in 2002.",
+            "Black Books\nBlack Books is a British sitcom created by Dylan Moran and Graham Linehan and broadcast on Channel 4 from 2000 to 2004. Starring Moran, Bill Bailey and Tamsin Greig, the series is set in the eponymous London bookshop and follows the lives of its owner Bernard Black (Moran), his assistant Manny Bianco (Bailey) and their friend Fran Katzenjammer (Greig). The series was produced by Big Talk Productions, in association with Channel 4.",
+            "List of The IT Crowd episodes\n\"The IT Crowd\" ( or ) is a Channel 4 sitcom written and directed by Graham Linehan and starring Richard Ayoade, Chris O'Dowd and Katherine Parkinson.",
+            "List of The IT Crowd characters\nThe following is a list of fictional characters from the Graham Linehan British Channel 4 sitcom \"The IT Crowd\".",
+            "Paris (1994 TV series)\nParis is a British sitcom produced by Talkback Productions for Channel 4. It was written jointly by Irish writers Arthur Mathews and Graham Linehan, best known for their later sitcom Father Ted. The show only lasted one series consisting of six episodes in October and November 1994. It featured the escapades of French artist Alain Degout living in 1920s Paris, who wants to be famous, but his work gets him nowhere. Unlike BBC sitcom 'Allo 'Allo, which was also set in France, featuring characters speaking in French accents, the characters of Paris spoke in an English accent.",
+            "List of Black Books episodes\n\"Black Books\", an English sitcom television series created by Dylan Moran and Graham Linehan, premiered on 29 September 2000 on Channel 4 in the United Kingdom and Ireland, and ended on 15 April 2004. The show spans 18 episodes over three series. The original 45 minute pilot, recorded in 1998, has not been broadcast and all other episodes were approximately 25 minutes long. Moran and Linehan decided to end the show in its third series. Moran has stated that there will be no more episodes and \"The Times\" reported the series has been \"killed off\".",
+            "Hello Friend\nHello Friend, sometimes written as Hello, Friend, is a short comedy horror film directed by Graham Linehan and written by Linehan and Robert Popper. The film was Linehan's directorial debut. The film stars Martin Savage as a man, John Ward, but credited as the \"Subject\", who buys some new internet software for his computer, which begins to take over his life. The film was produced by The Film Council, Film4 Productions and Shine Limited.",
+            "Gold (UK TV channel)\nGold (stylised as GOLD) is a British classic comedy channel from the UKTV network, broadcasting to the United Kingdom and Ireland. It launched on 1 November 1992 as UK Gold, before, in 2008, it was split into current flagship channel Gold and miscellaneous channel, Watch, with comedy based programming now airing on Gold, non-crime drama and entertainment programming airing on Watch, and quiz shows and more high-brow comedy airing on Dave. The channel is currently available as subscription-only on Sky, Virgin Media, TalkTalk TV, BT TV, and TVPlayer (When subscribed to TVPlayer Plus). It shows repeats of classic programming from the BBC and other broadcasters. The channel's main rival is the ITV plc owned ITV3, which mainly airs the archive ITV programmes, and has a higher audience share than Gold. Another rival is More4 which also has a higher audience share than Gold. This is because they are free-to-air channels whereas Gold is a pay TV channel. On 1st December 2015 - 4th January 2016, Gold was temporarily rebranded as Christmas Gold. This was repeated again from 12 November 2016 to 4 January 2017.",
+            "Speed 3\n\"Speed 3\" is the third episode of the third series of the Channel 4 sitcom \"Father Ted\" and the 20th episode overall. The episode parodies the action-thriller film \"Speed\" and the sequel \"\". \"Speed 3\" was written after the show's writers Graham Linehan and Arthur Mathews asked themselves: \"How can we make a worse sequel than \"Speed 2\"?\" This episode was voted the fans' favourite episode on Channel 4's \"Father Ted Night.\"",
+            "Aimee Carrero\nAimee Carrero (born July 15, 1988) is an American actress. She is known for her role as Angie on the Cartoon Network live-action series \"Level Up\". Since 2014, she has starred as Sofia Rodriguez on the Freeform sitcom \"Young & Hungry\", and provides the voice of Princess Elena on the Disney Channel animated series \"Elena of Avalor\"."
+        ],
+        "thoughts": [
+            "The sitcom created by Graham Linehan and produced by Ash Atalla is \"The IT Crowd.\"",
+            "The UK channel that broadcasted the sitcom \"The IT Crowd\" is Channel 4."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Graham Linehan was the creator of the Ash Atalla-produced sitcom for what UK channel?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Determine who Graham Linehan is and list the sitcoms he has created.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which sitcoms have been produced by Ash Atalla.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the sitcom(s) that are common between those created by Graham Linehan and produced by Ash Atalla.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Find out which UK channel aired the sitcom(s) identified in the previous step.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph starts by identifying the works of Graham Linehan and Ash Atalla separately. Once we have the list of sitcoms created by Linehan and produced by Atalla, we find the common sitcom(s) that are associated with both individuals. Finally, we determine the UK channel that aired the identified sitcom(s), which answers the original question."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "List of The IT Crowd characters\nThe following is a list of fictional characters from the Graham Linehan British Channel 4 sitcom \"The IT Crowd\".",
+            "The IT Crowd\nThe IT Crowd is a British sitcom by Channel 4, written by Graham Linehan, produced by Ash Atalla and starring Chris O'Dowd, Richard Ayoade, Katherine Parkinson, and Matt Berry.",
+            "List of The IT Crowd episodes\n\"The IT Crowd\" ( or ) is a Channel 4 sitcom written and directed by Graham Linehan and starring Richard Ayoade, Chris O'Dowd and Katherine Parkinson.",
+            "Password (UK game show)\nPassword was a British panel game show based on the US version of the same name. It was originally aired on ITV produced by ATV from 12 March to 10 September 1963 hosted by Shaw Taylor, then it aired on BBC2 from 24 March to 28 April 1973 hosted by Brian Redhead before moving to its flagship channel BBC1 from 7 January 1974 to 1976 first hosted by Eleanor Summerfield then by Esther Rantzen, it was then aired on Channel 4 produced by Thames in association with Talbot Television and Goodson-Todman Productions from 6 November 1982 to 14 May 1983 hosted by Tom O'Connor and then finally aired back on ITV produced by Ulster from 22 July 1987 to 5 August 1988 hosted by Gordon Burns.",
+            "Jagger/Richards\nThe songwriting partnership of Mick Jagger and Keith Richards, known as Jagger/Richards (and occasionally Richards/Jagger), is a musical collaboration whose output has produced the majority of the catalogue of the Rolling Stones. It is one of the most successful songwriting partnerships in history. Jagger and Richards adopted the nickname \"The Glimmer Twins\" after a vacation cruise they took to Brazil in December 1968/January 1969 with their then-girlfriends, Marianne Faithfull and Anita Pallenberg. An older English couple on the ship kept asking Richards and Jagger who they were. When they refused to reveal their identities, the woman reportedly kept asking, \"just give us a glimmer\" (as in \"give us a hint about who you are\"), which amused Jagger and Richards. In addition to Jagger and Richards's songwriting partnership, they have also produced or co-produced numerous Rolling Stones albums under the pseudonym The Glimmer Twins, after that experience together.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Paris (1994 TV series)\nParis is a British sitcom produced by Talkback Productions for Channel 4. It was written jointly by Irish writers Arthur Mathews and Graham Linehan, best known for their later sitcom Father Ted. The show only lasted one series consisting of six episodes in October and November 1994. It featured the escapades of French artist Alain Degout living in 1920s Paris, who wants to be famous, but his work gets him nowhere. Unlike BBC sitcom 'Allo 'Allo, which was also set in France, featuring characters speaking in French accents, the characters of Paris spoke in an English accent.",
+            "Kid Marine\nKid Marine is 3rd album by Robert Pollard, released in 1999. It is the first release of Robert Pollard's Fading Captain Series. Pollard has stated that the album is about Jeff \"Kid Marine\" Davis, the person pictured on the cover . Robert told Mojo magazine, \"My personal favorite, a weird record, almost a concept album, about the typical Ohio male and what he does - drink, watch television, eat pizza. It got mixed reviews, there are people who hate it and others who think it's our best record and I'm on their side. I just love the songs. It feels like one piece, like it all fits together. I like the cover and I like the",
+            "Ovambo people\nThe Ovambo people, also called Aawambo, Ambo, Aawambo (Ndonga) or Ovawambo (Kwanyama), are a Southern African tribal ethnic group. They are the largest ethnic group of Namibia, found in its northern regions and more often called Ovambo. They are also found in southern Angolan province of Cunene where the name Ambo is more common. The Ovambo consist of a number of kindred Bantu ethnic tribes who inhabit what was formerly called Owamboland. Accounting for about fifty percent of the Namibian population, the Ovambo are its largest ethnic group. In Angola, they are a minority, accounting for about two percent of the total Angolan population.",
+            "Gold (UK TV channel)\nGold (stylised as GOLD) is a British classic comedy channel from the UKTV network, broadcasting to the United Kingdom and Ireland. It launched on 1 November 1992 as UK Gold, before, in 2008, it was split into current flagship channel Gold and miscellaneous channel, Watch, with comedy based programming now airing on Gold, non-crime drama and entertainment programming airing on Watch, and quiz shows and more high-brow comedy airing on Dave. The channel is currently available as subscription-only on Sky, Virgin Media, TalkTalk TV, BT TV, and TVPlayer (When subscribed to TVPlayer Plus). It shows repeats of classic programming from the BBC and other broadcasters. The channel's main rival is the ITV plc owned ITV3, which mainly airs the archive ITV programmes, and has a higher audience share than Gold. Another rival is More4 which also has a higher audience share than Gold. This is because they are free-to-air channels whereas Gold is a pay TV channel. On 1st December 2015 - 4th January 2016, Gold was temporarily rebranded as Christmas Gold. This was repeated again from 12 November 2016 to 4 January 2017.",
+            "Garrett Morris\nGarrett Morris (born February 1, 1937) is an American comedian and actor. He was part of the original cast of the sketch comedy program \"Saturday Night Live\", appearing from 1975 to 1980. Morris also had a long-running role as Junior \"Uncle Junior\" King on the sitcom \"The Jamie Foxx Show\", which aired from 1996\u20132001. Morris had a starring role as Earl Washington on the CBS sitcom \"2 Broke Girls\", from 2011-2017. He was also in the sitcom \"Martin\" as Stan Winters from 1992-1995.",
+            "The Paul Hogan Show\nThe Paul Hogan Show is a popular Australian comedy show which aired on Australian television from 1973 until 1984. It made a star of Paul Hogan, who later appeared in \"\"Crocodile\" Dundee.\" Hogan's friend (and producer of \"Crocodile Dundee\") John Cornell also appeared in the show, playing Hogan's dim flatmate Strop. The show also aired on the New York Tri-State area television WWOR channel 9, in the early 1980s.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "Job sharing\nJob sharing or work sharing is an employment arrangement where typically two people are retained on a part-time or reduced-time basis to perform a job normally fulfilled by one person working full-time. Since all positions are shared thus leads to a net reduction in per-employee income. The people sharing the job work as a team to complete the job task and are equally responsible for the job workload. Compensation is apportioned between the workers, Working hours, pay and holidays are divided equally. The Pay As You Go system helps make deductions for national insurance and superannuations are made as a straightforward percentage.",
+            "Nemegtomaia\nNemegtomaia is a genus of oviraptorid dinosaur from what is now Mongolia that lived in the Late Cretaceous Period, about 70million years ago. The first specimen was found in 1996, and became the basis of the new genus and species N. barsboldi in 2004. The original genus name was \"Nemegtia\", but this was changed to \"Nemegtomaia\" in 2005, as the former name was preoccupied. The first part of the generic name refers to the Nemegt Basin, where the animal was found, and the second part means \"good mother\", in reference to the fact that oviraptorids are known to have brooded their eggs. The specific name honours the palaeontologist Rinchen Barsbold. Two more specimens were found in 2007, one of which was found on top of a nest with eggs, but the dinosaur had received its genus name before it was found associated with eggs.",
+            "Haven't You Heard? I'm Sakamoto\nHaven't You Heard? I'm Sakamoto (\u5742\u672c\u3067\u3059\u304c? , Sakamoto desu ga? , lit. \"I'm Sakamoto, You Know?\") is a Japanese manga series written and illustrated by Nami Sano. The manga follows a high school student named Sakamoto, who has a reputation for being the \"coolest\" person among the entire student body. The series has been licensed for an English release by Seven Seas Entertainment. An anime television adaptation by Studio Deen aired between April 8, 2016 and July 1, 2016.",
+            "Ash Baron-Cohen\nAshley Baron-Cohen (born in London) is an independent English filmmaker also known as simply Ash. He has a bachelor's degree in experimental psychology from University of Sussex, and trained as a filmmaker at the Pasadena Art Center. He currently resides in Los Angeles.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "Watch What Happens Live with Andy Cohen\nWatch What Happens Live with Andy Cohen (previously named Watch What Happens Live until December 19, 2016) is an American pop culture-based late-night talk show hosted by Andy Cohen that premiered on July 16, 2009. It features Bravo's own reality programming in the manner of an aftershow, and celebrities' recent news. The show is produced live from New York City, making possible interaction with viewers by phone and social media. In November 2013, Bravo renewed \"Watch What Happens: Live\" for two additional seasons. On March 2, 2016, the show aired its 1000th episode.",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "Polam Pol\nPolam Pol features songs sung by Farhad Bhiwandiwala, Nakash Aziz, Palak Muchhal, Shree Dayal, Ash King. Music and Background Score for the film is composed by Paresh-Bhavesh. The soundtrack was launched on 19 January.",
+            "The Celebrity Apprentice\nThe Celebrity Apprentice is an American television reality competition series. It is a variation of \"The Apprentice\" series which was hosted by Arnold Schwarzenegger in 2017 and was originally hosted by Donald Trump. Like its precursor, the show's opening theme song is \"For the Love of Money\" by The O'Jays. Unlike its precursor, however, \"Celebrity Apprentice\" consists of celebrities as competing apprentices rather than unknowns. Some of the celebrities are relatively current while others tend to be those who have been out of the public eye for some time. All of them are competing to win money for a charitable organization of their choice. The celebrities come from a wide variety of different fields in the media: sitcoms, professional sports, music industry, reality television, radio, and other backgrounds."
+        ],
+        "thoughts": [
+            "Graham Linehan is an Irish television comedy writer and director. He is best known for creating the following sitcoms:\n1. Father Ted\n2. The IT Crowd\n3. Black Books",
+            "The sitcoms produced by Ash Atalla are \"The IT Crowd.\"",
+            "The sitcom that is common between those created by Graham Linehan and produced by Ash Atalla is \"The IT Crowd.\"",
+            "The UK channel that aired the sitcom \"The IT Crowd\" is Channel 4."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Graham Linehan was the creator of the Ash Atalla-produced sitcom for what UK channel?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify any sitcom produced by Ash Atalla.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which sitcom was created by Graham Linehan from the list of sitcoms produced by Ash Atalla.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about the UK channel that broadcasts the sitcom created by Graham Linehan and produced by Ash Atalla.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts by identifying all sitcoms produced by Ash Atalla, as the question relates to a specific sitcom that involved both Graham Linehan and Ash Atalla. Once we have the list of sitcoms, the next step is to find which of these was created by Graham Linehan. The final step is to determine which UK channel broadcasted this particular sitcom."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "The IT Crowd\nThe IT Crowd is a British sitcom by Channel 4, written by Graham Linehan, produced by Ash Atalla and starring Chris O'Dowd, Richard Ayoade, Katherine Parkinson, and Matt Berry.",
+            "List of The IT Crowd episodes\n\"The IT Crowd\" ( or ) is a Channel 4 sitcom written and directed by Graham Linehan and starring Richard Ayoade, Chris O'Dowd and Katherine Parkinson.",
+            "List of The IT Crowd characters\nThe following is a list of fictional characters from the Graham Linehan British Channel 4 sitcom \"The IT Crowd\".",
+            "Black Books\nBlack Books is a British sitcom created by Dylan Moran and Graham Linehan and broadcast on Channel 4 from 2000 to 2004. Starring Moran, Bill Bailey and Tamsin Greig, the series is set in the eponymous London bookshop and follows the lives of its owner Bernard Black (Moran), his assistant Manny Bianco (Bailey) and their friend Fran Katzenjammer (Greig). The series was produced by Big Talk Productions, in association with Channel 4.",
+            "Paris (1994 TV series)\nParis is a British sitcom produced by Talkback Productions for Channel 4. It was written jointly by Irish writers Arthur Mathews and Graham Linehan, best known for their later sitcom Father Ted. The show only lasted one series consisting of six episodes in October and November 1994. It featured the escapades of French artist Alain Degout living in 1920s Paris, who wants to be famous, but his work gets him nowhere. Unlike BBC sitcom 'Allo 'Allo, which was also set in France, featuring characters speaking in French accents, the characters of Paris spoke in an English accent.",
+            "List of Black Books episodes\n\"Black Books\", an English sitcom television series created by Dylan Moran and Graham Linehan, premiered on 29 September 2000 on Channel 4 in the United Kingdom and Ireland, and ended on 15 April 2004. The show spans 18 episodes over three series. The original 45 minute pilot, recorded in 1998, has not been broadcast and all other episodes were approximately 25 minutes long. Moran and Linehan decided to end the show in its third series. Moran has stated that there will be no more episodes and \"The Times\" reported the series has been \"killed off\".",
+            "Big Train\nBig Train is a surreal British television comedy sketch show created by Arthur Mathews and Graham Linehan, writers of the sitcom \"Father Ted\". The first series was broadcast on BBC Two in 1998, while the second, in which Linehan was not involved, aired in 2002.",
+            "Graham Linehan\nGraham Linehan ( ; born 22 May 1968) is an Irish television comedy writer and director who, often in partnership with Arthur Mathews, has written or co-written a number of popular television comedies. He is most noted for the sitcoms \"Father Ted\", \"Black Books\" and \"The IT Crowd\". Amongst others, he has also worked on \"Big Train\", \"Count Arthur Strong\", \"Brass Eye\" and \"The Fast Show\".",
+            "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Ash Baron-Cohen\nAshley Baron-Cohen (born in London) is an independent English filmmaker also known as simply Ash. He has a bachelor's degree in experimental psychology from University of Sussex, and trained as a filmmaker at the Pasadena Art Center. He currently resides in Los Angeles.",
+            "Daniel Palladino\nDaniel Palladino is one of the producers of the American animated sitcom \"Family Guy\". Palladino is also a former producer, writer, and director for the American dramedy \"Gilmore Girls, \"he executive produced \"The Return of Jezebel James\", and was a consulting producer, writer, and director for the sitcom \"Bunheads.\" He is married to television writer and producer Amy Sherman-Palladino, the creator of \"Gilmore Girls, The Return of Jezebel James\", and \"Bunheads\".",
+            "List of Young &amp; Hungry episodes\n\"Young & Hungry\" is an American sitcom created by David Holden, and executively produced by Ashley Tisdale. The multi-camera series stars Emily Osment, Jonathan Sadowski, Aimee Carrero, Kym Whitley and Rex Lee, with the series premiering on Freeform (then known as ABC Family) on June 25, 2014.",
+            "List of American Housewife episodes\n\"American Housewife\" is an American sitcom television series that debuted on October 11, 2016 on ABC. Created and written by Sarah Dunn and co-executive produced with Aaron Kaplan, Kenny Schwartz, Rick Wiener, and Ruben Fleischer, the Kapital Entertainment\u2013ABC Studios co-production."
+        ],
+        "thoughts": [
+            "The sitcom produced by Ash Atalla is \"The IT Crowd.\"",
+            "The sitcom created by Graham Linehan from the list of sitcoms produced by Ash Atalla is \"The IT Crowd.\"",
+            "The UK channel that broadcasts the sitcom \"The IT Crowd\" created by Graham Linehan and produced by Ash Atalla is Channel 4. The show stars Chris O'Dowd, Richard Ayoade, Katherine Parkinson, and Matt Berry."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Graham Linehan was the creator of the Ash Atalla-produced sitcom for what UK channel?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the sitcoms created by Graham Linehan.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the sitcoms produced by Ash Atalla.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the common sitcoms that were both created by Graham Linehan and produced by Ash Atalla.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the UK channel that aired the sitcom found in Node 3.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The task requires determining the UK channel for a sitcom both created by Graham Linehan and produced by Ash Atalla. First, we identify the sitcoms associated with each individual independently. In the next step, we find the intersection of these sitcoms to identify the specific sitcom relevant to both individuals. Finally, we retrieve the UK channel that aired this sitcom."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Graham Linehan\nGraham Linehan ( ; born 22 May 1968) is an Irish television comedy writer and director who, often in partnership with Arthur Mathews, has written or co-written a number of popular television comedies. He is most noted for the sitcoms \"Father Ted\", \"Black Books\" and \"The IT Crowd\". Amongst others, he has also worked on \"Big Train\", \"Count Arthur Strong\", \"Brass Eye\" and \"The Fast Show\".",
+            "The IT Crowd\nThe IT Crowd is a British sitcom by Channel 4, written by Graham Linehan, produced by Ash Atalla and starring Chris O'Dowd, Richard Ayoade, Katherine Parkinson, and Matt Berry.",
+            "List of The IT Crowd characters\nThe following is a list of fictional characters from the Graham Linehan British Channel 4 sitcom \"The IT Crowd\".",
+            "List of The IT Crowd episodes\n\"The IT Crowd\" ( or ) is a Channel 4 sitcom written and directed by Graham Linehan and starring Richard Ayoade, Chris O'Dowd and Katherine Parkinson.",
+            "Big Train\nBig Train is a surreal British television comedy sketch show created by Arthur Mathews and Graham Linehan, writers of the sitcom \"Father Ted\". The first series was broadcast on BBC Two in 1998, while the second, in which Linehan was not involved, aired in 2002.",
+            "List of Black Books episodes\n\"Black Books\", an English sitcom television series created by Dylan Moran and Graham Linehan, premiered on 29 September 2000 on Channel 4 in the United Kingdom and Ireland, and ended on 15 April 2004. The show spans 18 episodes over three series. The original 45 minute pilot, recorded in 1998, has not been broadcast and all other episodes were approximately 25 minutes long. Moran and Linehan decided to end the show in its third series. Moran has stated that there will be no more episodes and \"The Times\" reported the series has been \"killed off\".",
+            "Black Books\nBlack Books is a British sitcom created by Dylan Moran and Graham Linehan and broadcast on Channel 4 from 2000 to 2004. Starring Moran, Bill Bailey and Tamsin Greig, the series is set in the eponymous London bookshop and follows the lives of its owner Bernard Black (Moran), his assistant Manny Bianco (Bailey) and their friend Fran Katzenjammer (Greig). The series was produced by Big Talk Productions, in association with Channel 4.",
+            "Hello Friend\nHello Friend, sometimes written as Hello, Friend, is a short comedy horror film directed by Graham Linehan and written by Linehan and Robert Popper. The film was Linehan's directorial debut. The film stars Martin Savage as a man, John Ward, but credited as the \"Subject\", who buys some new internet software for his computer, which begins to take over his life. The film was produced by The Film Council, Film4 Productions and Shine Limited.",
+            "Password (UK game show)\nPassword was a British panel game show based on the US version of the same name. It was originally aired on ITV produced by ATV from 12 March to 10 September 1963 hosted by Shaw Taylor, then it aired on BBC2 from 24 March to 28 April 1973 hosted by Brian Redhead before moving to its flagship channel BBC1 from 7 January 1974 to 1976 first hosted by Eleanor Summerfield then by Esther Rantzen, it was then aired on Channel 4 produced by Thames in association with Talbot Television and Goodson-Todman Productions from 6 November 1982 to 14 May 1983 hosted by Tom O'Connor and then finally aired back on ITV produced by Ulster from 22 July 1987 to 5 August 1988 hosted by Gordon Burns.",
+            "The Michael J. Fox Show\nThe Michael J. Fox Show was an American television sitcom starring Michael J. Fox. The series aired on NBC in the United States from September 26, 2013, to January 23, 2014, as part of the 2013\u201314 American television season. Fox made his regular return to television for the first time since he was on ABC's \"Spin City\". It was his second NBC series, as he appeared on that network's sitcom \"Family Ties\" from 1982 to 1989 as Alex P. Keaton.",
+            "A*mazing\nA*mazing was an Australian children's television game show that aired between 16 May 1994 until 1998 on the Seven Network. It was famous for a relatively large and elaborate maze/obstacle course that was part of the show's studio set. \"A*mazing\" was hosted by James Sherry for the entire run of the series. A*mazing was produced at Channel 7 Brisbane from 1994\u20131996 and then at Channel 7 Perth from 1997\u20131998.",
+            "Paris (1994 TV series)\nParis is a British sitcom produced by Talkback Productions for Channel 4. It was written jointly by Irish writers Arthur Mathews and Graham Linehan, best known for their later sitcom Father Ted. The show only lasted one series consisting of six episodes in October and November 1994. It featured the escapades of French artist Alain Degout living in 1920s Paris, who wants to be famous, but his work gets him nowhere. Unlike BBC sitcom 'Allo 'Allo, which was also set in France, featuring characters speaking in French accents, the characters of Paris spoke in an English accent.",
+            "Martin (TV series)\nMartin is an American sitcom that aired for five seasons on Fox from August 27, 1992 to May 1, 1997. Reflecting the rising popularity of the Fox network throughout the 1990s, \"Martin\" was one of the network's highest-rated shows during the sitcom's run.",
+            "Ash Baron-Cohen\nAshley Baron-Cohen (born in London) is an independent English filmmaker also known as simply Ash. He has a bachelor's degree in experimental psychology from University of Sussex, and trained as a filmmaker at the Pasadena Art Center. He currently resides in Los Angeles.",
+            "Watch What Happens Live with Andy Cohen\nWatch What Happens Live with Andy Cohen (previously named Watch What Happens Live until December 19, 2016) is an American pop culture-based late-night talk show hosted by Andy Cohen that premiered on July 16, 2009. It features Bravo's own reality programming in the manner of an aftershow, and celebrities' recent news. The show is produced live from New York City, making possible interaction with viewers by phone and social media. In November 2013, Bravo renewed \"Watch What Happens: Live\" for two additional seasons. On March 2, 2016, the show aired its 1000th episode.",
+            "List of Disney animated shorts\nThis is a list of animated short films produced by Walt Disney and Walt Disney Animation Studios from 1921 to the present. This includes films produced at the Laugh-O-Gram Studio which Disney founded in 1921 as well as the animation studio now owned by The Walt Disney Company, previously called the Disney Brothers Cartoon Studio (1923), The Walt Disney Studio (1926), Walt Disney Productions (1929), and Walt Disney Feature Animation (1986).",
+            "Polam Pol\nPolam Pol features songs sung by Farhad Bhiwandiwala, Nakash Aziz, Palak Muchhal, Shree Dayal, Ash King. Music and Background Score for the film is composed by Paresh-Bhavesh. The soundtrack was launched on 19 January.",
+            "James Brolin\nJames Brolin ( ; born Craig Kenneth Bruderlin, July 18, 1940) is an American actor, producer, and director, best known for his roles in film and television, including sitcoms and soap operas. He is the father of actor Josh Brolin and husband of singer/actress Barbra Streisand.",
+            "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+            "List of DC Extended Universe cast members\nThe DC Extended Universe is a media franchise and shared fictional universe that is the setting of superhero films independently produced by Warner Bros., based on characters that appear in DC Comics publications."
+        ],
+        "thoughts": [
+            "Sitcoms created by Graham Linehan include:\n1. Father Ted\n2. Black Books\n3. The IT Crowd",
+            "The sitcoms produced by Ash Atalla are \"The IT Crowd.\"",
+            "The common sitcoms that were both created by Graham Linehan and produced by Ash Atalla is \"The IT Crowd.\"",
+            "The UK channel that aired the sitcom \"The IT Crowd\" is Channel 4."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Graham Linehan was the creator of the Ash Atalla-produced sitcom for what UK channel?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the sitcom created by Graham Linehan and produced by Ash Atalla.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the UK channel that aired the sitcom identified in step 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph is broken into two main steps. First, identify the sitcom created by Graham Linehan and produced by Ash Atalla. With this information, the second step is to find out which UK channel aired the identified sitcom. This breakdown ensures that each piece of information is gathered sequentially, allowing for accurate retrieval of the TV channel."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "The IT Crowd\nThe IT Crowd is a British sitcom by Channel 4, written by Graham Linehan, produced by Ash Atalla and starring Chris O'Dowd, Richard Ayoade, Katherine Parkinson, and Matt Berry.",
+            "Big Train\nBig Train is a surreal British television comedy sketch show created by Arthur Mathews and Graham Linehan, writers of the sitcom \"Father Ted\". The first series was broadcast on BBC Two in 1998, while the second, in which Linehan was not involved, aired in 2002.",
+            "Black Books\nBlack Books is a British sitcom created by Dylan Moran and Graham Linehan and broadcast on Channel 4 from 2000 to 2004. Starring Moran, Bill Bailey and Tamsin Greig, the series is set in the eponymous London bookshop and follows the lives of its owner Bernard Black (Moran), his assistant Manny Bianco (Bailey) and their friend Fran Katzenjammer (Greig). The series was produced by Big Talk Productions, in association with Channel 4.",
+            "List of The IT Crowd episodes\n\"The IT Crowd\" ( or ) is a Channel 4 sitcom written and directed by Graham Linehan and starring Richard Ayoade, Chris O'Dowd and Katherine Parkinson.",
+            "List of The IT Crowd characters\nThe following is a list of fictional characters from the Graham Linehan British Channel 4 sitcom \"The IT Crowd\".",
+            "Paris (1994 TV series)\nParis is a British sitcom produced by Talkback Productions for Channel 4. It was written jointly by Irish writers Arthur Mathews and Graham Linehan, best known for their later sitcom Father Ted. The show only lasted one series consisting of six episodes in October and November 1994. It featured the escapades of French artist Alain Degout living in 1920s Paris, who wants to be famous, but his work gets him nowhere. Unlike BBC sitcom 'Allo 'Allo, which was also set in France, featuring characters speaking in French accents, the characters of Paris spoke in an English accent.",
+            "List of Black Books episodes\n\"Black Books\", an English sitcom television series created by Dylan Moran and Graham Linehan, premiered on 29 September 2000 on Channel 4 in the United Kingdom and Ireland, and ended on 15 April 2004. The show spans 18 episodes over three series. The original 45 minute pilot, recorded in 1998, has not been broadcast and all other episodes were approximately 25 minutes long. Moran and Linehan decided to end the show in its third series. Moran has stated that there will be no more episodes and \"The Times\" reported the series has been \"killed off\".",
+            "Hello Friend\nHello Friend, sometimes written as Hello, Friend, is a short comedy horror film directed by Graham Linehan and written by Linehan and Robert Popper. The film was Linehan's directorial debut. The film stars Martin Savage as a man, John Ward, but credited as the \"Subject\", who buys some new internet software for his computer, which begins to take over his life. The film was produced by The Film Council, Film4 Productions and Shine Limited.",
+            "Password (UK game show)\nPassword was a British panel game show based on the US version of the same name. It was originally aired on ITV produced by ATV from 12 March to 10 September 1963 hosted by Shaw Taylor, then it aired on BBC2 from 24 March to 28 April 1973 hosted by Brian Redhead before moving to its flagship channel BBC1 from 7 January 1974 to 1976 first hosted by Eleanor Summerfield then by Esther Rantzen, it was then aired on Channel 4 produced by Thames in association with Talbot Television and Goodson-Todman Productions from 6 November 1982 to 14 May 1983 hosted by Tom O'Connor and then finally aired back on ITV produced by Ulster from 22 July 1987 to 5 August 1988 hosted by Gordon Burns.",
+            "The Michael J. Fox Show\nThe Michael J. Fox Show was an American television sitcom starring Michael J. Fox. The series aired on NBC in the United States from September 26, 2013, to January 23, 2014, as part of the 2013\u201314 American television season. Fox made his regular return to television for the first time since he was on ABC's \"Spin City\". It was his second NBC series, as he appeared on that network's sitcom \"Family Ties\" from 1982 to 1989 as Alex P. Keaton.",
+            "A*mazing\nA*mazing was an Australian children's television game show that aired between 16 May 1994 until 1998 on the Seven Network. It was famous for a relatively large and elaborate maze/obstacle course that was part of the show's studio set. \"A*mazing\" was hosted by James Sherry for the entire run of the series. A*mazing was produced at Channel 7 Brisbane from 1994\u20131996 and then at Channel 7 Perth from 1997\u20131998.",
+            "Martin (TV series)\nMartin is an American sitcom that aired for five seasons on Fox from August 27, 1992 to May 1, 1997. Reflecting the rising popularity of the Fox network throughout the 1990s, \"Martin\" was one of the network's highest-rated shows during the sitcom's run."
+        ],
+        "thoughts": [
+            "The sitcom created by Graham Linehan and produced by Ash Atalla is \"The IT Crowd.\"",
+            "The UK channel that aired the sitcom \"The IT Crowd\" is Channel 4."
+        ],
+        "is_best": false
+    }
+]

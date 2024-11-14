@@ -1,0 +1,792 @@
+[
+    {
+        "attempt": 1,
+        "question": "Which composer was also a teacher, Philip Glass or Franz Schreker? ",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve profession information for Philip Glass.",
+                "output": "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, and Tweedledum and Tweedledee, are not relevant to Philip Glass' profession as a composer.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve profession information for Franz Schreker.",
+                "output": "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with the works of Richard Wagner, Alban Berg, and Richard Strauss. Schreker's impact as a composer and teacher is evident in the careers of his students, such as Alexander Lipsky, who became an influential teacher and composer himself.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Philip Glass was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, there is no indication that Philip Glass was a teacher. He is primarily known for his career as a composer and his significant contributions to the music industry.",
+                "upstream": [
+                    [
+                        "1",
+                        "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, and Tweedledum and Tweedledee, are not relevant to Philip Glass' profession as a composer."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Franz Schreker was a teacher based on the retrieved information about his professions.",
+                "output": "Yes, Franz Schreker was a teacher based on the information retrieved about his professions. He had a significant influence on other composers and had students who went on to have successful careers in music, indicating that he was indeed a teacher.",
+                "upstream": [
+                    [
+                        "2",
+                        "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with the works of Richard Wagner, Alban Berg, and Richard Strauss. Schreker's impact as a composer and teacher is evident in the careers of his students, such as Alexander Lipsky, who became an influential teacher and composer himself."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the teaching status of Philip Glass and Franz Schreker to determine which one was a teacher.",
+                "output": "Based on the comparison of their teaching status, it can be determined that Franz Schreker was a teacher, while there is no indication that Philip Glass held a teaching position.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, there is no indication that Philip Glass was a teacher. He is primarily known for his career as a composer and his significant contributions to the music industry."
+                    ],
+                    [
+                        "4",
+                        "Yes, Franz Schreker was a teacher based on the information retrieved about his professions. He had a significant influence on other composers and had students who went on to have successful careers in music, indicating that he was indeed a teacher."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Franz Schreker\nFranz Schreker (originally \"Schrecker\"; 23 March 1878, Monaco \u2013 21 March 1934, Berlin) was an Austrian composer, conductor, teacher and administrator. Primarily a composer of operas, Schreker developed a style characterized by aesthetic plurality (a mixture of Romanticism, Naturalism, Symbolism, Impressionism, Expressionism and Neue Sachlichkeit), timbral experimentation, strategies of extended tonality and conception of total music theatre into the narrative of 20th-century music.",
+            "Philip Glass\nPhilip Morris Glass (born January 31, 1937) is an American composer. He is widely regarded as one of the most influential musicians of the late 20th century.",
+            "Irrelohe\nIrrelohe is an opera in three acts by the Austrian composer Franz Schreker, libretto by the composer.",
+            "Tara Hugo Sings Philip Glass\nTara Hugo sings Philip Glass is a 2012 album by mezzo-soprano and actress Tara Hugo of songs of composer Philip Glass. The recording project was initiated by Glass himself who asked collaborator and producer Kurt Munkacsi to present pieces that Glass had composed for larger music ensembles as a song recital for small ensemble. The recital album includes songs Glass had composed with or for singers Leonard Cohen (Book of Longing), Natalie Merchant, Mick Jagger and poet Allen Ginsberg. The album also includes new arrangements by Trevor Gureckis of Glass instrumental music set to new lyrics written by Tara Hugo.",
+            "Der Schatzgr\u00e4ber\nDer Schatzgr\u00e4ber (\"The Treasure Hunter\") is an opera in four acts, with a prologue and an epilogue, by Franz Schreker, libretto by the composer.",
+            "Die Gezeichneten\nDie Gezeichneten (\"The Branded\" or \"The Stigmatized\") is an opera in three acts by Franz Schreker with a German-language libretto by the composer.",
+            "Anne Schwanewilms\nAnne Schwanewilms (born 1967, in Gelsenkirchen) is a German lyric soprano. She studied gardening before training in Cologne as a singer with the German bass Hans Sotin. She is particularly associated with performing the works of Richard Wagner, Franz Schreker, Alban Berg, and Richard Strauss. She sang the lead role of Carlotta in Franz Schreker's \"Die Gezeichneten\" at the Salzburg Festival in 2005, recorded and subsequently published on DVD by Opus Arte.",
+            "Marij Kogoj\nMarij (Julij) Kogoj (Trieste, 20 September 1892 \u2013 Ljubljana, 25 February 1956) was a Slovenian composer. He was a pupil of Schoenberg and Franz Schreker, and immensely popular during the 1920s, culminating with his opera \"\u010crne maske\" (Black masks). His career ended in 1932, when he was institutionalized for schizophrenia. He remained there until his death in 1956.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Alexander Lipsky\nAlexander Lipsky was an influential teacher as well as composer and arranger born in Warsaw, Poland in 1900. He attended Columbia University and studied composition and theory with Daniel Gregory Mason, Frank Ward and Franz Schreker. He was a student of piano under the tutelage of Leonid Kreutzer. In 1921, he was awarded the Clarence Barker Fellowship at Columbia through which he studied in Berlin from 1922-1924. Up through the 1940s, he composed concertos, songs, sonatas and pieces for piano. He also became a highly regarded teacher of music with notable students such as Carol Klooster-Moore and Matthew Harre. He died in 1985.",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Hurricane glass\nA Hurricane glass is a form of drinking glass which typically will contain 20 fluid ounces (600 ml). It is used to serve mixed drinks, particularly the Hurricane from which it is named originating at Pat O'Brien's Bar in New Orleans. Other drinks served in this glass include the Singapore Sling, June bug, Pi\u00f1a colada and Blue Hawaii. It is shaped similarly to a vase or a hurricane lamp and is typically taller and wider than a highball glass.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 2,
+        "question": "Which composer was also a teacher, Philip Glass or Franz Schreker? ",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve profession information for Philip Glass.",
+                "output": "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, and Tweedledum and Tweedledee, are not relevant to Philip Glass' profession as a composer.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve profession information for Franz Schreker.",
+                "output": "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with performers like Anne Schwanewilms, who has sung lead roles in his operas. Schreker also had an impact as a teacher, with Alexander Lipsky being one of his notable students.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Philip Glass was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, there is no indication that Philip Glass was a teacher. He is primarily known for his work as a composer and his significant contributions to the music industry.",
+                "upstream": [
+                    [
+                        "1",
+                        "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, and Tweedledum and Tweedledee, are not relevant to Philip Glass' profession as a composer."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Franz Schreker was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had notable students and had a significant influence on other composers.",
+                "upstream": [
+                    [
+                        "2",
+                        "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with performers like Anne Schwanewilms, who has sung lead roles in his operas. Schreker also had an impact as a teacher, with Alexander Lipsky being one of his notable students."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the teaching status of Philip Glass and Franz Schreker to determine which one was a teacher.",
+                "output": "Based on the comparison of the teaching status of Philip Glass and Franz Schreker, it can be determined that Franz Schreker was a teacher, while there is no indication that Philip Glass held a teaching position. This is supported by the fact that Franz Schreker had notable students and a significant influence on other composers, while Philip Glass is primarily known for his work as a composer and his contributions to the music industry.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, there is no indication that Philip Glass was a teacher. He is primarily known for his work as a composer and his significant contributions to the music industry."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had notable students and had a significant influence on other composers."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Franz Schreker\nFranz Schreker (originally \"Schrecker\"; 23 March 1878, Monaco \u2013 21 March 1934, Berlin) was an Austrian composer, conductor, teacher and administrator. Primarily a composer of operas, Schreker developed a style characterized by aesthetic plurality (a mixture of Romanticism, Naturalism, Symbolism, Impressionism, Expressionism and Neue Sachlichkeit), timbral experimentation, strategies of extended tonality and conception of total music theatre into the narrative of 20th-century music.",
+            "Philip Glass\nPhilip Morris Glass (born January 31, 1937) is an American composer. He is widely regarded as one of the most influential musicians of the late 20th century.",
+            "Irrelohe\nIrrelohe is an opera in three acts by the Austrian composer Franz Schreker, libretto by the composer.",
+            "Tara Hugo Sings Philip Glass\nTara Hugo sings Philip Glass is a 2012 album by mezzo-soprano and actress Tara Hugo of songs of composer Philip Glass. The recording project was initiated by Glass himself who asked collaborator and producer Kurt Munkacsi to present pieces that Glass had composed for larger music ensembles as a song recital for small ensemble. The recital album includes songs Glass had composed with or for singers Leonard Cohen (Book of Longing), Natalie Merchant, Mick Jagger and poet Allen Ginsberg. The album also includes new arrangements by Trevor Gureckis of Glass instrumental music set to new lyrics written by Tara Hugo.",
+            "Der Schatzgr\u00e4ber\nDer Schatzgr\u00e4ber (\"The Treasure Hunter\") is an opera in four acts, with a prologue and an epilogue, by Franz Schreker, libretto by the composer.",
+            "Die Gezeichneten\nDie Gezeichneten (\"The Branded\" or \"The Stigmatized\") is an opera in three acts by Franz Schreker with a German-language libretto by the composer.",
+            "Anne Schwanewilms\nAnne Schwanewilms (born 1967, in Gelsenkirchen) is a German lyric soprano. She studied gardening before training in Cologne as a singer with the German bass Hans Sotin. She is particularly associated with performing the works of Richard Wagner, Franz Schreker, Alban Berg, and Richard Strauss. She sang the lead role of Carlotta in Franz Schreker's \"Die Gezeichneten\" at the Salzburg Festival in 2005, recorded and subsequently published on DVD by Opus Arte.",
+            "Marij Kogoj\nMarij (Julij) Kogoj (Trieste, 20 September 1892 \u2013 Ljubljana, 25 February 1956) was a Slovenian composer. He was a pupil of Schoenberg and Franz Schreker, and immensely popular during the 1920s, culminating with his opera \"\u010crne maske\" (Black masks). His career ended in 1932, when he was institutionalized for schizophrenia. He remained there until his death in 1956.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Alexander Lipsky\nAlexander Lipsky was an influential teacher as well as composer and arranger born in Warsaw, Poland in 1900. He attended Columbia University and studied composition and theory with Daniel Gregory Mason, Frank Ward and Franz Schreker. He was a student of piano under the tutelage of Leonid Kreutzer. In 1921, he was awarded the Clarence Barker Fellowship at Columbia through which he studied in Berlin from 1922-1924. Up through the 1940s, he composed concertos, songs, sonatas and pieces for piano. He also became a highly regarded teacher of music with notable students such as Carol Klooster-Moore and Matthew Harre. He died in 1985.",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Hurricane glass\nA Hurricane glass is a form of drinking glass which typically will contain 20 fluid ounces (600 ml). It is used to serve mixed drinks, particularly the Hurricane from which it is named originating at Pat O'Brien's Bar in New Orleans. Other drinks served in this glass include the Singapore Sling, June bug, Pi\u00f1a colada and Blue Hawaii. It is shaped similarly to a vase or a hurricane lamp and is typically taller and wider than a highball glass.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 3,
+        "question": "Which composer was also a teacher, Philip Glass or Franz Schreker? ",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve profession information for Philip Glass.",
+                "output": "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, Tweedledum and Tweedledee, and bullying in the medical profession, are not directly related to Philip Glass and his profession as a composer.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve profession information for Franz Schreker.",
+                "output": "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with the works of Richard Wagner, Alban Berg, and Richard Strauss. Schreker's impact extended to his students, including Alexander Lipsky, who became an influential teacher and composer.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Philip Glass was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, there is no indication that Philip Glass was a teacher. He is primarily known for his career as a composer and his significant contributions to the music industry.",
+                "upstream": [
+                    [
+                        "1",
+                        "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, Tweedledum and Tweedledee, and bullying in the medical profession, are not directly related to Philip Glass and his profession as a composer."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Franz Schreker was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had a significant influence on other composers and had students who went on to become influential teachers and composers themselves.",
+                "upstream": [
+                    [
+                        "2",
+                        "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with the works of Richard Wagner, Alban Berg, and Richard Strauss. Schreker's impact extended to his students, including Alexander Lipsky, who became an influential teacher and composer."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the teaching status of Philip Glass and Franz Schreker to determine which one was a teacher.",
+                "output": "Based on the comparison of the teaching status of Philip Glass and Franz Schreker, it can be determined that Franz Schreker was a teacher, while there is no indication that Philip Glass held a teaching position.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, there is no indication that Philip Glass was a teacher. He is primarily known for his career as a composer and his significant contributions to the music industry."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had a significant influence on other composers and had students who went on to become influential teachers and composers themselves."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Franz Schreker\nFranz Schreker (originally \"Schrecker\"; 23 March 1878, Monaco \u2013 21 March 1934, Berlin) was an Austrian composer, conductor, teacher and administrator. Primarily a composer of operas, Schreker developed a style characterized by aesthetic plurality (a mixture of Romanticism, Naturalism, Symbolism, Impressionism, Expressionism and Neue Sachlichkeit), timbral experimentation, strategies of extended tonality and conception of total music theatre into the narrative of 20th-century music.",
+            "Philip Glass\nPhilip Morris Glass (born January 31, 1937) is an American composer. He is widely regarded as one of the most influential musicians of the late 20th century.",
+            "Irrelohe\nIrrelohe is an opera in three acts by the Austrian composer Franz Schreker, libretto by the composer.",
+            "Tara Hugo Sings Philip Glass\nTara Hugo sings Philip Glass is a 2012 album by mezzo-soprano and actress Tara Hugo of songs of composer Philip Glass. The recording project was initiated by Glass himself who asked collaborator and producer Kurt Munkacsi to present pieces that Glass had composed for larger music ensembles as a song recital for small ensemble. The recital album includes songs Glass had composed with or for singers Leonard Cohen (Book of Longing), Natalie Merchant, Mick Jagger and poet Allen Ginsberg. The album also includes new arrangements by Trevor Gureckis of Glass instrumental music set to new lyrics written by Tara Hugo.",
+            "Der Schatzgr\u00e4ber\nDer Schatzgr\u00e4ber (\"The Treasure Hunter\") is an opera in four acts, with a prologue and an epilogue, by Franz Schreker, libretto by the composer.",
+            "Die Gezeichneten\nDie Gezeichneten (\"The Branded\" or \"The Stigmatized\") is an opera in three acts by Franz Schreker with a German-language libretto by the composer.",
+            "Anne Schwanewilms\nAnne Schwanewilms (born 1967, in Gelsenkirchen) is a German lyric soprano. She studied gardening before training in Cologne as a singer with the German bass Hans Sotin. She is particularly associated with performing the works of Richard Wagner, Franz Schreker, Alban Berg, and Richard Strauss. She sang the lead role of Carlotta in Franz Schreker's \"Die Gezeichneten\" at the Salzburg Festival in 2005, recorded and subsequently published on DVD by Opus Arte.",
+            "Marij Kogoj\nMarij (Julij) Kogoj (Trieste, 20 September 1892 \u2013 Ljubljana, 25 February 1956) was a Slovenian composer. He was a pupil of Schoenberg and Franz Schreker, and immensely popular during the 1920s, culminating with his opera \"\u010crne maske\" (Black masks). His career ended in 1932, when he was institutionalized for schizophrenia. He remained there until his death in 1956.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Alexander Lipsky\nAlexander Lipsky was an influential teacher as well as composer and arranger born in Warsaw, Poland in 1900. He attended Columbia University and studied composition and theory with Daniel Gregory Mason, Frank Ward and Franz Schreker. He was a student of piano under the tutelage of Leonid Kreutzer. In 1921, he was awarded the Clarence Barker Fellowship at Columbia through which he studied in Berlin from 1922-1924. Up through the 1940s, he composed concertos, songs, sonatas and pieces for piano. He also became a highly regarded teacher of music with notable students such as Carol Klooster-Moore and Matthew Harre. He died in 1985.",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Hurricane glass\nA Hurricane glass is a form of drinking glass which typically will contain 20 fluid ounces (600 ml). It is used to serve mixed drinks, particularly the Hurricane from which it is named originating at Pat O'Brien's Bar in New Orleans. Other drinks served in this glass include the Singapore Sling, June bug, Pi\u00f1a colada and Blue Hawaii. It is shaped similarly to a vase or a hurricane lamp and is typically taller and wider than a highball glass.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 4,
+        "question": "Which composer was also a teacher, Philip Glass or Franz Schreker? ",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve profession information for Philip Glass.",
+                "output": "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, and Tweedledum and Tweedledee, are not relevant to Philip Glass' profession as a composer.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve profession information for Franz Schreker.",
+                "output": "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with performers like Anne Schwanewilms, a German lyric soprano, who has sung lead roles in his operas. Schreker also had an impact as a teacher, with Alexander Lipsky being one of his notable students.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Philip Glass was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, there is no indication that Philip Glass was a teacher. He is primarily known for his work as a composer and his significant contributions to the music industry.",
+                "upstream": [
+                    [
+                        "1",
+                        "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, and Tweedledum and Tweedledee, are not relevant to Philip Glass' profession as a composer."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Franz Schreker was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had notable students and had a significant influence on other composers.",
+                "upstream": [
+                    [
+                        "2",
+                        "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with performers like Anne Schwanewilms, a German lyric soprano, who has sung lead roles in his operas. Schreker also had an impact as a teacher, with Alexander Lipsky being one of his notable students."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the teaching status of Philip Glass and Franz Schreker to determine which one was a teacher.",
+                "output": "Based on the comparison of the teaching status of Philip Glass and Franz Schreker, it can be determined that Franz Schreker was a teacher, while there is no indication that Philip Glass held a teaching position. This is supported by the fact that Franz Schreker had notable students and a significant influence on other composers, while Philip Glass is primarily known for his work as a composer and his contributions to the music industry.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, there is no indication that Philip Glass was a teacher. He is primarily known for his work as a composer and his significant contributions to the music industry."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had notable students and had a significant influence on other composers."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Franz Schreker\nFranz Schreker (originally \"Schrecker\"; 23 March 1878, Monaco \u2013 21 March 1934, Berlin) was an Austrian composer, conductor, teacher and administrator. Primarily a composer of operas, Schreker developed a style characterized by aesthetic plurality (a mixture of Romanticism, Naturalism, Symbolism, Impressionism, Expressionism and Neue Sachlichkeit), timbral experimentation, strategies of extended tonality and conception of total music theatre into the narrative of 20th-century music.",
+            "Philip Glass\nPhilip Morris Glass (born January 31, 1937) is an American composer. He is widely regarded as one of the most influential musicians of the late 20th century.",
+            "Irrelohe\nIrrelohe is an opera in three acts by the Austrian composer Franz Schreker, libretto by the composer.",
+            "Tara Hugo Sings Philip Glass\nTara Hugo sings Philip Glass is a 2012 album by mezzo-soprano and actress Tara Hugo of songs of composer Philip Glass. The recording project was initiated by Glass himself who asked collaborator and producer Kurt Munkacsi to present pieces that Glass had composed for larger music ensembles as a song recital for small ensemble. The recital album includes songs Glass had composed with or for singers Leonard Cohen (Book of Longing), Natalie Merchant, Mick Jagger and poet Allen Ginsberg. The album also includes new arrangements by Trevor Gureckis of Glass instrumental music set to new lyrics written by Tara Hugo.",
+            "Der Schatzgr\u00e4ber\nDer Schatzgr\u00e4ber (\"The Treasure Hunter\") is an opera in four acts, with a prologue and an epilogue, by Franz Schreker, libretto by the composer.",
+            "Die Gezeichneten\nDie Gezeichneten (\"The Branded\" or \"The Stigmatized\") is an opera in three acts by Franz Schreker with a German-language libretto by the composer.",
+            "Anne Schwanewilms\nAnne Schwanewilms (born 1967, in Gelsenkirchen) is a German lyric soprano. She studied gardening before training in Cologne as a singer with the German bass Hans Sotin. She is particularly associated with performing the works of Richard Wagner, Franz Schreker, Alban Berg, and Richard Strauss. She sang the lead role of Carlotta in Franz Schreker's \"Die Gezeichneten\" at the Salzburg Festival in 2005, recorded and subsequently published on DVD by Opus Arte.",
+            "Marij Kogoj\nMarij (Julij) Kogoj (Trieste, 20 September 1892 \u2013 Ljubljana, 25 February 1956) was a Slovenian composer. He was a pupil of Schoenberg and Franz Schreker, and immensely popular during the 1920s, culminating with his opera \"\u010crne maske\" (Black masks). His career ended in 1932, when he was institutionalized for schizophrenia. He remained there until his death in 1956.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Alexander Lipsky\nAlexander Lipsky was an influential teacher as well as composer and arranger born in Warsaw, Poland in 1900. He attended Columbia University and studied composition and theory with Daniel Gregory Mason, Frank Ward and Franz Schreker. He was a student of piano under the tutelage of Leonid Kreutzer. In 1921, he was awarded the Clarence Barker Fellowship at Columbia through which he studied in Berlin from 1922-1924. Up through the 1940s, he composed concertos, songs, sonatas and pieces for piano. He also became a highly regarded teacher of music with notable students such as Carol Klooster-Moore and Matthew Harre. He died in 1985.",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Hurricane glass\nA Hurricane glass is a form of drinking glass which typically will contain 20 fluid ounces (600 ml). It is used to serve mixed drinks, particularly the Hurricane from which it is named originating at Pat O'Brien's Bar in New Orleans. Other drinks served in this glass include the Singapore Sling, June bug, Pi\u00f1a colada and Blue Hawaii. It is shaped similarly to a vase or a hurricane lamp and is typically taller and wider than a highball glass.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 5,
+        "question": "Which composer was also a teacher, Philip Glass or Franz Schreker? ",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve profession information for Philip Glass.",
+                "output": "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, Tweedledum and Tweedledee, and bullying in the medical profession, are not directly related to Philip Glass and his profession as a composer.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve profession information for Franz Schreker.",
+                "output": "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with the works of Richard Wagner, Alban Berg, and Richard Strauss. Schreker's impact as a composer and teacher is evident in the careers of his students, such as Alexander Lipsky, who became an influential composer, arranger, and teacher himself.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Philip Glass was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, there is no indication that Philip Glass was a teacher. His profession as a composer and his significant contributions to the music industry suggest that he was primarily focused on his career in music rather than teaching.",
+                "upstream": [
+                    [
+                        "1",
+                        "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, Tweedledum and Tweedledee, and bullying in the medical profession, are not directly related to Philip Glass and his profession as a composer."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Franz Schreker was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had a significant influence on other composers and had students who went on to have successful careers in music.",
+                "upstream": [
+                    [
+                        "2",
+                        "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with the works of Richard Wagner, Alban Berg, and Richard Strauss. Schreker's impact as a composer and teacher is evident in the careers of his students, such as Alexander Lipsky, who became an influential composer, arranger, and teacher himself."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the teaching status of Philip Glass and Franz Schreker to determine which one was a teacher.",
+                "output": "Based on the comparison of the teaching status of Philip Glass and Franz Schreker, it can be determined that Franz Schreker was a teacher, while there is no indication that Philip Glass held a teaching position. This is supported by the fact that Franz Schreker had a significant influence on other composers and had students who went on to have successful careers in music, while Philip Glass was primarily focused on his career as a composer and his significant contributions to the music industry.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, there is no indication that Philip Glass was a teacher. His profession as a composer and his significant contributions to the music industry suggest that he was primarily focused on his career in music rather than teaching."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had a significant influence on other composers and had students who went on to have successful careers in music."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Franz Schreker\nFranz Schreker (originally \"Schrecker\"; 23 March 1878, Monaco \u2013 21 March 1934, Berlin) was an Austrian composer, conductor, teacher and administrator. Primarily a composer of operas, Schreker developed a style characterized by aesthetic plurality (a mixture of Romanticism, Naturalism, Symbolism, Impressionism, Expressionism and Neue Sachlichkeit), timbral experimentation, strategies of extended tonality and conception of total music theatre into the narrative of 20th-century music.",
+            "Philip Glass\nPhilip Morris Glass (born January 31, 1937) is an American composer. He is widely regarded as one of the most influential musicians of the late 20th century.",
+            "Irrelohe\nIrrelohe is an opera in three acts by the Austrian composer Franz Schreker, libretto by the composer.",
+            "Tara Hugo Sings Philip Glass\nTara Hugo sings Philip Glass is a 2012 album by mezzo-soprano and actress Tara Hugo of songs of composer Philip Glass. The recording project was initiated by Glass himself who asked collaborator and producer Kurt Munkacsi to present pieces that Glass had composed for larger music ensembles as a song recital for small ensemble. The recital album includes songs Glass had composed with or for singers Leonard Cohen (Book of Longing), Natalie Merchant, Mick Jagger and poet Allen Ginsberg. The album also includes new arrangements by Trevor Gureckis of Glass instrumental music set to new lyrics written by Tara Hugo.",
+            "Der Schatzgr\u00e4ber\nDer Schatzgr\u00e4ber (\"The Treasure Hunter\") is an opera in four acts, with a prologue and an epilogue, by Franz Schreker, libretto by the composer.",
+            "Die Gezeichneten\nDie Gezeichneten (\"The Branded\" or \"The Stigmatized\") is an opera in three acts by Franz Schreker with a German-language libretto by the composer.",
+            "Anne Schwanewilms\nAnne Schwanewilms (born 1967, in Gelsenkirchen) is a German lyric soprano. She studied gardening before training in Cologne as a singer with the German bass Hans Sotin. She is particularly associated with performing the works of Richard Wagner, Franz Schreker, Alban Berg, and Richard Strauss. She sang the lead role of Carlotta in Franz Schreker's \"Die Gezeichneten\" at the Salzburg Festival in 2005, recorded and subsequently published on DVD by Opus Arte.",
+            "Marij Kogoj\nMarij (Julij) Kogoj (Trieste, 20 September 1892 \u2013 Ljubljana, 25 February 1956) was a Slovenian composer. He was a pupil of Schoenberg and Franz Schreker, and immensely popular during the 1920s, culminating with his opera \"\u010crne maske\" (Black masks). His career ended in 1932, when he was institutionalized for schizophrenia. He remained there until his death in 1956.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Alexander Lipsky\nAlexander Lipsky was an influential teacher as well as composer and arranger born in Warsaw, Poland in 1900. He attended Columbia University and studied composition and theory with Daniel Gregory Mason, Frank Ward and Franz Schreker. He was a student of piano under the tutelage of Leonid Kreutzer. In 1921, he was awarded the Clarence Barker Fellowship at Columbia through which he studied in Berlin from 1922-1924. Up through the 1940s, he composed concertos, songs, sonatas and pieces for piano. He also became a highly regarded teacher of music with notable students such as Carol Klooster-Moore and Matthew Harre. He died in 1985.",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Hurricane glass\nA Hurricane glass is a form of drinking glass which typically will contain 20 fluid ounces (600 ml). It is used to serve mixed drinks, particularly the Hurricane from which it is named originating at Pat O'Brien's Bar in New Orleans. Other drinks served in this glass include the Singapore Sling, June bug, Pi\u00f1a colada and Blue Hawaii. It is shaped similarly to a vase or a hurricane lamp and is typically taller and wider than a highball glass.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 6,
+        "question": "Which composer was also a teacher, Philip Glass or Franz Schreker? ",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve profession information for Philip Glass.",
+                "output": "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, Tweedledum and Tweedledee, and bullying in the medical profession, are not directly related to Philip Glass and his profession as a composer.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve profession information for Franz Schreker.",
+                "output": "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with the works of Richard Wagner, Alban Berg, and Richard Strauss. Schreker's impact as a composer and teacher is evident in the careers of his students, such as Alexander Lipsky, who became an influential composer, arranger, and teacher himself.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Philip Glass was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, there is no indication that Philip Glass was a teacher. He is primarily known for his work as a composer and his significant contributions to the music industry.",
+                "upstream": [
+                    [
+                        "1",
+                        "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, Tweedledum and Tweedledee, and bullying in the medical profession, are not directly related to Philip Glass and his profession as a composer."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Franz Schreker was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had a significant influence on other composers and had students who went on to have successful careers in music.",
+                "upstream": [
+                    [
+                        "2",
+                        "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with the works of Richard Wagner, Alban Berg, and Richard Strauss. Schreker's impact as a composer and teacher is evident in the careers of his students, such as Alexander Lipsky, who became an influential composer, arranger, and teacher himself."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the teaching status of Philip Glass and Franz Schreker to determine which one was a teacher.",
+                "output": "Based on the comparison of their teaching status, it can be determined that Franz Schreker was a teacher, while there is no indication that Philip Glass held a teaching position.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, there is no indication that Philip Glass was a teacher. He is primarily known for his work as a composer and his significant contributions to the music industry."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had a significant influence on other composers and had students who went on to have successful careers in music."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Franz Schreker\nFranz Schreker (originally \"Schrecker\"; 23 March 1878, Monaco \u2013 21 March 1934, Berlin) was an Austrian composer, conductor, teacher and administrator. Primarily a composer of operas, Schreker developed a style characterized by aesthetic plurality (a mixture of Romanticism, Naturalism, Symbolism, Impressionism, Expressionism and Neue Sachlichkeit), timbral experimentation, strategies of extended tonality and conception of total music theatre into the narrative of 20th-century music.",
+            "Philip Glass\nPhilip Morris Glass (born January 31, 1937) is an American composer. He is widely regarded as one of the most influential musicians of the late 20th century.",
+            "Irrelohe\nIrrelohe is an opera in three acts by the Austrian composer Franz Schreker, libretto by the composer.",
+            "Tara Hugo Sings Philip Glass\nTara Hugo sings Philip Glass is a 2012 album by mezzo-soprano and actress Tara Hugo of songs of composer Philip Glass. The recording project was initiated by Glass himself who asked collaborator and producer Kurt Munkacsi to present pieces that Glass had composed for larger music ensembles as a song recital for small ensemble. The recital album includes songs Glass had composed with or for singers Leonard Cohen (Book of Longing), Natalie Merchant, Mick Jagger and poet Allen Ginsberg. The album also includes new arrangements by Trevor Gureckis of Glass instrumental music set to new lyrics written by Tara Hugo.",
+            "Der Schatzgr\u00e4ber\nDer Schatzgr\u00e4ber (\"The Treasure Hunter\") is an opera in four acts, with a prologue and an epilogue, by Franz Schreker, libretto by the composer.",
+            "Die Gezeichneten\nDie Gezeichneten (\"The Branded\" or \"The Stigmatized\") is an opera in three acts by Franz Schreker with a German-language libretto by the composer.",
+            "Anne Schwanewilms\nAnne Schwanewilms (born 1967, in Gelsenkirchen) is a German lyric soprano. She studied gardening before training in Cologne as a singer with the German bass Hans Sotin. She is particularly associated with performing the works of Richard Wagner, Franz Schreker, Alban Berg, and Richard Strauss. She sang the lead role of Carlotta in Franz Schreker's \"Die Gezeichneten\" at the Salzburg Festival in 2005, recorded and subsequently published on DVD by Opus Arte.",
+            "Marij Kogoj\nMarij (Julij) Kogoj (Trieste, 20 September 1892 \u2013 Ljubljana, 25 February 1956) was a Slovenian composer. He was a pupil of Schoenberg and Franz Schreker, and immensely popular during the 1920s, culminating with his opera \"\u010crne maske\" (Black masks). His career ended in 1932, when he was institutionalized for schizophrenia. He remained there until his death in 1956.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Alexander Lipsky\nAlexander Lipsky was an influential teacher as well as composer and arranger born in Warsaw, Poland in 1900. He attended Columbia University and studied composition and theory with Daniel Gregory Mason, Frank Ward and Franz Schreker. He was a student of piano under the tutelage of Leonid Kreutzer. In 1921, he was awarded the Clarence Barker Fellowship at Columbia through which he studied in Berlin from 1922-1924. Up through the 1940s, he composed concertos, songs, sonatas and pieces for piano. He also became a highly regarded teacher of music with notable students such as Carol Klooster-Moore and Matthew Harre. He died in 1985.",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Hurricane glass\nA Hurricane glass is a form of drinking glass which typically will contain 20 fluid ounces (600 ml). It is used to serve mixed drinks, particularly the Hurricane from which it is named originating at Pat O'Brien's Bar in New Orleans. Other drinks served in this glass include the Singapore Sling, June bug, Pi\u00f1a colada and Blue Hawaii. It is shaped similarly to a vase or a hurricane lamp and is typically taller and wider than a highball glass.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 7,
+        "question": "Which composer was also a teacher, Philip Glass or Franz Schreker? ",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve profession information for Philip Glass.",
+                "output": "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, and Tweedledum and Tweedledee, are not relevant to Philip Glass' profession as a composer.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve profession information for Franz Schreker.",
+                "output": "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he was associated with performers like Anne Schwanewilms, who sang the lead role in his opera \"Die Gezeichneten\" at the Salzburg Festival in 2005. Schreker also had an impact as a teacher, as seen in the case of Alexander Lipsky, who studied composition and theory with him.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Philip Glass was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, there is no indication that Philip Glass was a teacher. He is primarily known for his work as a composer and his significant contributions to the music industry.",
+                "upstream": [
+                    [
+                        "1",
+                        "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, and Tweedledum and Tweedledee, are not relevant to Philip Glass' profession as a composer."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Franz Schreker was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had a significant influence on other composers and had students who studied composition and theory with him.",
+                "upstream": [
+                    [
+                        "2",
+                        "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he was associated with performers like Anne Schwanewilms, who sang the lead role in his opera \"Die Gezeichneten\" at the Salzburg Festival in 2005. Schreker also had an impact as a teacher, as seen in the case of Alexander Lipsky, who studied composition and theory with him."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the teaching status of Philip Glass and Franz Schreker to determine which one was a teacher.",
+                "output": "Based on the comparison of their teaching status, it can be determined that Franz Schreker was a teacher, while there is no indication that Philip Glass held a teaching position.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, there is no indication that Philip Glass was a teacher. He is primarily known for his work as a composer and his significant contributions to the music industry."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had a significant influence on other composers and had students who studied composition and theory with him."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Franz Schreker\nFranz Schreker (originally \"Schrecker\"; 23 March 1878, Monaco \u2013 21 March 1934, Berlin) was an Austrian composer, conductor, teacher and administrator. Primarily a composer of operas, Schreker developed a style characterized by aesthetic plurality (a mixture of Romanticism, Naturalism, Symbolism, Impressionism, Expressionism and Neue Sachlichkeit), timbral experimentation, strategies of extended tonality and conception of total music theatre into the narrative of 20th-century music.",
+            "Philip Glass\nPhilip Morris Glass (born January 31, 1937) is an American composer. He is widely regarded as one of the most influential musicians of the late 20th century.",
+            "Irrelohe\nIrrelohe is an opera in three acts by the Austrian composer Franz Schreker, libretto by the composer.",
+            "Tara Hugo Sings Philip Glass\nTara Hugo sings Philip Glass is a 2012 album by mezzo-soprano and actress Tara Hugo of songs of composer Philip Glass. The recording project was initiated by Glass himself who asked collaborator and producer Kurt Munkacsi to present pieces that Glass had composed for larger music ensembles as a song recital for small ensemble. The recital album includes songs Glass had composed with or for singers Leonard Cohen (Book of Longing), Natalie Merchant, Mick Jagger and poet Allen Ginsberg. The album also includes new arrangements by Trevor Gureckis of Glass instrumental music set to new lyrics written by Tara Hugo.",
+            "Der Schatzgr\u00e4ber\nDer Schatzgr\u00e4ber (\"The Treasure Hunter\") is an opera in four acts, with a prologue and an epilogue, by Franz Schreker, libretto by the composer.",
+            "Die Gezeichneten\nDie Gezeichneten (\"The Branded\" or \"The Stigmatized\") is an opera in three acts by Franz Schreker with a German-language libretto by the composer.",
+            "Anne Schwanewilms\nAnne Schwanewilms (born 1967, in Gelsenkirchen) is a German lyric soprano. She studied gardening before training in Cologne as a singer with the German bass Hans Sotin. She is particularly associated with performing the works of Richard Wagner, Franz Schreker, Alban Berg, and Richard Strauss. She sang the lead role of Carlotta in Franz Schreker's \"Die Gezeichneten\" at the Salzburg Festival in 2005, recorded and subsequently published on DVD by Opus Arte.",
+            "Marij Kogoj\nMarij (Julij) Kogoj (Trieste, 20 September 1892 \u2013 Ljubljana, 25 February 1956) was a Slovenian composer. He was a pupil of Schoenberg and Franz Schreker, and immensely popular during the 1920s, culminating with his opera \"\u010crne maske\" (Black masks). His career ended in 1932, when he was institutionalized for schizophrenia. He remained there until his death in 1956.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Alexander Lipsky\nAlexander Lipsky was an influential teacher as well as composer and arranger born in Warsaw, Poland in 1900. He attended Columbia University and studied composition and theory with Daniel Gregory Mason, Frank Ward and Franz Schreker. He was a student of piano under the tutelage of Leonid Kreutzer. In 1921, he was awarded the Clarence Barker Fellowship at Columbia through which he studied in Berlin from 1922-1924. Up through the 1940s, he composed concertos, songs, sonatas and pieces for piano. He also became a highly regarded teacher of music with notable students such as Carol Klooster-Moore and Matthew Harre. He died in 1985.",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Hurricane glass\nA Hurricane glass is a form of drinking glass which typically will contain 20 fluid ounces (600 ml). It is used to serve mixed drinks, particularly the Hurricane from which it is named originating at Pat O'Brien's Bar in New Orleans. Other drinks served in this glass include the Singapore Sling, June bug, Pi\u00f1a colada and Blue Hawaii. It is shaped similarly to a vase or a hurricane lamp and is typically taller and wider than a highball glass.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 8,
+        "question": "Which composer was also a teacher, Philip Glass or Franz Schreker? ",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve profession information for Philip Glass.",
+                "output": "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, Tweedledum and Tweedledee, and bullying in the medical profession, are not directly related to Philip Glass and his profession as a composer.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve profession information for Franz Schreker.",
+                "output": "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with the works of Richard Wagner, Alban Berg, and Richard Strauss. Schreker's impact as a composer and teacher is evident in the careers of his students, such as Alexander Lipsky, who became an influential composer, arranger, and teacher himself.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Philip Glass was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, there is no indication that Philip Glass was a teacher. He is primarily known for his work as a composer and his significant contributions to the music industry.",
+                "upstream": [
+                    [
+                        "1",
+                        "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, Tweedledum and Tweedledee, and bullying in the medical profession, are not directly related to Philip Glass and his profession as a composer."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Franz Schreker was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had a significant influence on other composers and had students who went on to have successful careers in music.",
+                "upstream": [
+                    [
+                        "2",
+                        "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with the works of Richard Wagner, Alban Berg, and Richard Strauss. Schreker's impact as a composer and teacher is evident in the careers of his students, such as Alexander Lipsky, who became an influential composer, arranger, and teacher himself."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the teaching status of Philip Glass and Franz Schreker to determine which one was a teacher.",
+                "output": "Based on the comparison of their teaching status, it can be determined that Franz Schreker was a teacher, while there is no indication that Philip Glass held a teaching position.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, there is no indication that Philip Glass was a teacher. He is primarily known for his work as a composer and his significant contributions to the music industry."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had a significant influence on other composers and had students who went on to have successful careers in music."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Franz Schreker\nFranz Schreker (originally \"Schrecker\"; 23 March 1878, Monaco \u2013 21 March 1934, Berlin) was an Austrian composer, conductor, teacher and administrator. Primarily a composer of operas, Schreker developed a style characterized by aesthetic plurality (a mixture of Romanticism, Naturalism, Symbolism, Impressionism, Expressionism and Neue Sachlichkeit), timbral experimentation, strategies of extended tonality and conception of total music theatre into the narrative of 20th-century music.",
+            "Philip Glass\nPhilip Morris Glass (born January 31, 1937) is an American composer. He is widely regarded as one of the most influential musicians of the late 20th century.",
+            "Irrelohe\nIrrelohe is an opera in three acts by the Austrian composer Franz Schreker, libretto by the composer.",
+            "Tara Hugo Sings Philip Glass\nTara Hugo sings Philip Glass is a 2012 album by mezzo-soprano and actress Tara Hugo of songs of composer Philip Glass. The recording project was initiated by Glass himself who asked collaborator and producer Kurt Munkacsi to present pieces that Glass had composed for larger music ensembles as a song recital for small ensemble. The recital album includes songs Glass had composed with or for singers Leonard Cohen (Book of Longing), Natalie Merchant, Mick Jagger and poet Allen Ginsberg. The album also includes new arrangements by Trevor Gureckis of Glass instrumental music set to new lyrics written by Tara Hugo.",
+            "Der Schatzgr\u00e4ber\nDer Schatzgr\u00e4ber (\"The Treasure Hunter\") is an opera in four acts, with a prologue and an epilogue, by Franz Schreker, libretto by the composer.",
+            "Die Gezeichneten\nDie Gezeichneten (\"The Branded\" or \"The Stigmatized\") is an opera in three acts by Franz Schreker with a German-language libretto by the composer.",
+            "Anne Schwanewilms\nAnne Schwanewilms (born 1967, in Gelsenkirchen) is a German lyric soprano. She studied gardening before training in Cologne as a singer with the German bass Hans Sotin. She is particularly associated with performing the works of Richard Wagner, Franz Schreker, Alban Berg, and Richard Strauss. She sang the lead role of Carlotta in Franz Schreker's \"Die Gezeichneten\" at the Salzburg Festival in 2005, recorded and subsequently published on DVD by Opus Arte.",
+            "Marij Kogoj\nMarij (Julij) Kogoj (Trieste, 20 September 1892 \u2013 Ljubljana, 25 February 1956) was a Slovenian composer. He was a pupil of Schoenberg and Franz Schreker, and immensely popular during the 1920s, culminating with his opera \"\u010crne maske\" (Black masks). His career ended in 1932, when he was institutionalized for schizophrenia. He remained there until his death in 1956.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Alexander Lipsky\nAlexander Lipsky was an influential teacher as well as composer and arranger born in Warsaw, Poland in 1900. He attended Columbia University and studied composition and theory with Daniel Gregory Mason, Frank Ward and Franz Schreker. He was a student of piano under the tutelage of Leonid Kreutzer. In 1921, he was awarded the Clarence Barker Fellowship at Columbia through which he studied in Berlin from 1922-1924. Up through the 1940s, he composed concertos, songs, sonatas and pieces for piano. He also became a highly regarded teacher of music with notable students such as Carol Klooster-Moore and Matthew Harre. He died in 1985.",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Hurricane glass\nA Hurricane glass is a form of drinking glass which typically will contain 20 fluid ounces (600 ml). It is used to serve mixed drinks, particularly the Hurricane from which it is named originating at Pat O'Brien's Bar in New Orleans. Other drinks served in this glass include the Singapore Sling, June bug, Pi\u00f1a colada and Blue Hawaii. It is shaped similarly to a vase or a hurricane lamp and is typically taller and wider than a highball glass.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 9,
+        "question": "Which composer was also a teacher, Philip Glass or Franz Schreker? ",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve profession information for Philip Glass.",
+                "output": "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, and Tweedledum and Tweedledee, are not relevant to Philip Glass and his profession as a composer.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve profession information for Franz Schreker.",
+                "output": "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with the works of Richard Wagner, Alban Berg, and Richard Strauss. Schreker's impact as a composer and teacher is evident in the careers of his students, such as Alexander Lipsky, who became an influential teacher and composer himself.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Philip Glass was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, there is no indication that Philip Glass was a teacher. He is primarily known for his work as a composer and his significant contributions to the music industry.",
+                "upstream": [
+                    [
+                        "1",
+                        "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, and Tweedledum and Tweedledee, are not relevant to Philip Glass and his profession as a composer."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Franz Schreker was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had a significant influence on other composers and had pupils who went on to have successful careers in music.",
+                "upstream": [
+                    [
+                        "2",
+                        "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with the works of Richard Wagner, Alban Berg, and Richard Strauss. Schreker's impact as a composer and teacher is evident in the careers of his students, such as Alexander Lipsky, who became an influential teacher and composer himself."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the teaching status of Philip Glass and Franz Schreker to determine which one was a teacher.",
+                "output": "Based on the comparison of teaching status, it can be determined that Franz Schreker was a teacher, while there is no indication that Philip Glass held a teaching position.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, there is no indication that Philip Glass was a teacher. He is primarily known for his work as a composer and his significant contributions to the music industry."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had a significant influence on other composers and had pupils who went on to have successful careers in music."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Franz Schreker\nFranz Schreker (originally \"Schrecker\"; 23 March 1878, Monaco \u2013 21 March 1934, Berlin) was an Austrian composer, conductor, teacher and administrator. Primarily a composer of operas, Schreker developed a style characterized by aesthetic plurality (a mixture of Romanticism, Naturalism, Symbolism, Impressionism, Expressionism and Neue Sachlichkeit), timbral experimentation, strategies of extended tonality and conception of total music theatre into the narrative of 20th-century music.",
+            "Philip Glass\nPhilip Morris Glass (born January 31, 1937) is an American composer. He is widely regarded as one of the most influential musicians of the late 20th century.",
+            "Irrelohe\nIrrelohe is an opera in three acts by the Austrian composer Franz Schreker, libretto by the composer.",
+            "Tara Hugo Sings Philip Glass\nTara Hugo sings Philip Glass is a 2012 album by mezzo-soprano and actress Tara Hugo of songs of composer Philip Glass. The recording project was initiated by Glass himself who asked collaborator and producer Kurt Munkacsi to present pieces that Glass had composed for larger music ensembles as a song recital for small ensemble. The recital album includes songs Glass had composed with or for singers Leonard Cohen (Book of Longing), Natalie Merchant, Mick Jagger and poet Allen Ginsberg. The album also includes new arrangements by Trevor Gureckis of Glass instrumental music set to new lyrics written by Tara Hugo.",
+            "Der Schatzgr\u00e4ber\nDer Schatzgr\u00e4ber (\"The Treasure Hunter\") is an opera in four acts, with a prologue and an epilogue, by Franz Schreker, libretto by the composer.",
+            "Die Gezeichneten\nDie Gezeichneten (\"The Branded\" or \"The Stigmatized\") is an opera in three acts by Franz Schreker with a German-language libretto by the composer.",
+            "Anne Schwanewilms\nAnne Schwanewilms (born 1967, in Gelsenkirchen) is a German lyric soprano. She studied gardening before training in Cologne as a singer with the German bass Hans Sotin. She is particularly associated with performing the works of Richard Wagner, Franz Schreker, Alban Berg, and Richard Strauss. She sang the lead role of Carlotta in Franz Schreker's \"Die Gezeichneten\" at the Salzburg Festival in 2005, recorded and subsequently published on DVD by Opus Arte.",
+            "Marij Kogoj\nMarij (Julij) Kogoj (Trieste, 20 September 1892 \u2013 Ljubljana, 25 February 1956) was a Slovenian composer. He was a pupil of Schoenberg and Franz Schreker, and immensely popular during the 1920s, culminating with his opera \"\u010crne maske\" (Black masks). His career ended in 1932, when he was institutionalized for schizophrenia. He remained there until his death in 1956.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Alexander Lipsky\nAlexander Lipsky was an influential teacher as well as composer and arranger born in Warsaw, Poland in 1900. He attended Columbia University and studied composition and theory with Daniel Gregory Mason, Frank Ward and Franz Schreker. He was a student of piano under the tutelage of Leonid Kreutzer. In 1921, he was awarded the Clarence Barker Fellowship at Columbia through which he studied in Berlin from 1922-1924. Up through the 1940s, he composed concertos, songs, sonatas and pieces for piano. He also became a highly regarded teacher of music with notable students such as Carol Klooster-Moore and Matthew Harre. He died in 1985.",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Hurricane glass\nA Hurricane glass is a form of drinking glass which typically will contain 20 fluid ounces (600 ml). It is used to serve mixed drinks, particularly the Hurricane from which it is named originating at Pat O'Brien's Bar in New Orleans. Other drinks served in this glass include the Singapore Sling, June bug, Pi\u00f1a colada and Blue Hawaii. It is shaped similarly to a vase or a hurricane lamp and is typically taller and wider than a highball glass.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 10,
+        "question": "Which composer was also a teacher, Philip Glass or Franz Schreker? ",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve profession information for Philip Glass.",
+                "output": "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, Tweedledum and Tweedledee, and bullying in the medical profession, are not directly related to Philip Glass and his profession as a composer.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve profession information for Franz Schreker.",
+                "output": "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with the works of Richard Wagner, Alban Berg, and Richard Strauss. Schreker's influence extended to influential teachers and composers like Alexander Lipsky, who studied under him and became a highly regarded music teacher and composer.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Philip Glass was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, there is no indication that Philip Glass was a teacher. His profession as a composer and his significant contributions to the music industry suggest that he was primarily focused on his career in music rather than teaching.",
+                "upstream": [
+                    [
+                        "1",
+                        "Philip Glass is an American composer, widely regarded as one of the most influential musicians of the late 20th century. He has composed music for larger ensembles as well as songs for singers such as Leonard Cohen, Natalie Merchant, and Mick Jagger. Glass is known for his significant contributions to the music industry.\n\nIt is important to note that the other information provided, such as the Legal Profession Admission Board, Hurricane glass, Caesar cocktail, Tweedledum and Tweedledee, and bullying in the medical profession, are not directly related to Philip Glass and his profession as a composer."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Franz Schreker was a teacher based on the retrieved information about his professions.",
+                "output": "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had a significant influence on other composers and had pupils who went on to become influential teachers and composers themselves.",
+                "upstream": [
+                    [
+                        "2",
+                        "Franz Schreker was an Austrian composer, conductor, teacher, and administrator, primarily known for his operas. He developed a style characterized by aesthetic plurality, timbral experimentation, and extended tonality. Some of his notable operas include \"Irrelohe,\" \"Der Schatzgr\u00e4ber,\" and \"Die Gezeichneten.\" He also had a significant influence on other composers, such as Marij Kogoj, who was his pupil. Additionally, he has been associated with the works of Richard Wagner, Alban Berg, and Richard Strauss. Schreker's influence extended to influential teachers and composers like Alexander Lipsky, who studied under him and became a highly regarded music teacher and composer."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the teaching status of Philip Glass and Franz Schreker to determine which one was a teacher.",
+                "output": "Based on the comparison of the teaching status of Philip Glass and Franz Schreker, it can be determined that Franz Schreker was a teacher, while there is no indication that Philip Glass held a teaching position.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, there is no indication that Philip Glass was a teacher. His profession as a composer and his significant contributions to the music industry suggest that he was primarily focused on his career in music rather than teaching."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Franz Schreker was indeed a teacher, as he had a significant influence on other composers and had pupils who went on to become influential teachers and composers themselves."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Franz Schreker\nFranz Schreker (originally \"Schrecker\"; 23 March 1878, Monaco \u2013 21 March 1934, Berlin) was an Austrian composer, conductor, teacher and administrator. Primarily a composer of operas, Schreker developed a style characterized by aesthetic plurality (a mixture of Romanticism, Naturalism, Symbolism, Impressionism, Expressionism and Neue Sachlichkeit), timbral experimentation, strategies of extended tonality and conception of total music theatre into the narrative of 20th-century music.",
+            "Philip Glass\nPhilip Morris Glass (born January 31, 1937) is an American composer. He is widely regarded as one of the most influential musicians of the late 20th century.",
+            "Irrelohe\nIrrelohe is an opera in three acts by the Austrian composer Franz Schreker, libretto by the composer.",
+            "Tara Hugo Sings Philip Glass\nTara Hugo sings Philip Glass is a 2012 album by mezzo-soprano and actress Tara Hugo of songs of composer Philip Glass. The recording project was initiated by Glass himself who asked collaborator and producer Kurt Munkacsi to present pieces that Glass had composed for larger music ensembles as a song recital for small ensemble. The recital album includes songs Glass had composed with or for singers Leonard Cohen (Book of Longing), Natalie Merchant, Mick Jagger and poet Allen Ginsberg. The album also includes new arrangements by Trevor Gureckis of Glass instrumental music set to new lyrics written by Tara Hugo.",
+            "Der Schatzgr\u00e4ber\nDer Schatzgr\u00e4ber (\"The Treasure Hunter\") is an opera in four acts, with a prologue and an epilogue, by Franz Schreker, libretto by the composer.",
+            "Die Gezeichneten\nDie Gezeichneten (\"The Branded\" or \"The Stigmatized\") is an opera in three acts by Franz Schreker with a German-language libretto by the composer.",
+            "Anne Schwanewilms\nAnne Schwanewilms (born 1967, in Gelsenkirchen) is a German lyric soprano. She studied gardening before training in Cologne as a singer with the German bass Hans Sotin. She is particularly associated with performing the works of Richard Wagner, Franz Schreker, Alban Berg, and Richard Strauss. She sang the lead role of Carlotta in Franz Schreker's \"Die Gezeichneten\" at the Salzburg Festival in 2005, recorded and subsequently published on DVD by Opus Arte.",
+            "Marij Kogoj\nMarij (Julij) Kogoj (Trieste, 20 September 1892 \u2013 Ljubljana, 25 February 1956) was a Slovenian composer. He was a pupil of Schoenberg and Franz Schreker, and immensely popular during the 1920s, culminating with his opera \"\u010crne maske\" (Black masks). His career ended in 1932, when he was institutionalized for schizophrenia. He remained there until his death in 1956.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Through the Looking-Glass\nThrough the Looking-Glass, and What Alice Found There (1871) is a novel by Lewis Carroll (Charles Lutwidge Dodgson), the sequel to \"Alice's Adventures in Wonderland\" (1865). Set some six months later than the earlier book, Alice again enters a fantastical world, this time by climbing through a mirror into the world that she can see beyond it. \"Through the Looking-Glass\" includes such celebrated verses as \"Jabberwocky\" and \"The Walrus and the Carpenter\", and the episode involving Tweedledum and Tweedledee. The mirror which inspired Carroll remains displayed in Charlton Kings.",
+            "Alexander Lipsky\nAlexander Lipsky was an influential teacher as well as composer and arranger born in Warsaw, Poland in 1900. He attended Columbia University and studied composition and theory with Daniel Gregory Mason, Frank Ward and Franz Schreker. He was a student of piano under the tutelage of Leonid Kreutzer. In 1921, he was awarded the Clarence Barker Fellowship at Columbia through which he studied in Berlin from 1922-1924. Up through the 1940s, he composed concertos, songs, sonatas and pieces for piano. He also became a highly regarded teacher of music with notable students such as Carol Klooster-Moore and Matthew Harre. He died in 1985.",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Hurricane glass\nA Hurricane glass is a form of drinking glass which typically will contain 20 fluid ounces (600 ml). It is used to serve mixed drinks, particularly the Hurricane from which it is named originating at Pat O'Brien's Bar in New Orleans. Other drinks served in this glass include the Singapore Sling, June bug, Pi\u00f1a colada and Blue Hawaii. It is shaped similarly to a vase or a hurricane lamp and is typically taller and wider than a highball glass.",
+            "Caesar (cocktail)\nA Caesar is a cocktail created and primarily consumed in Canada. It typically contains vodka, a caesar mix (a blend of tomato juice and clam broth), hot sauce, and Worcestershire sauce, and is served with ice in a large, celery salt-rimmed glass, typically garnished with a stalk of celery and wedge of lime. What distinguishes it from a Bloody Mary is the inclusion of clam broth. The cocktail may also be contrasted with the Michelada, which has similar flavouring ingredients but uses beer instead of vodka.",
+            "Tweedledum and Tweedledee\nTweedledum and Tweedledee are fictional characters in an English nursery rhyme and in Lewis Carroll's \"Through the Looking-Glass, and What Alice Found There\". Their names may have originally come from an epigram written by poet John Byrom . The nursery rhyme has a Roud Folk Song Index number of 19800. The names have since become synonymous in western popular culture slang for any two people who look and act in identical ways, generally in a derogatory context.",
+            "Bullying in medicine\nBullying in the medical profession is common, particularly of student or trainee physicians. It is thought that this is at least in part an outcome of conservative traditional hierarchical structures and teaching methods in the medical profession which may result in a bullying cycle."
+        ],
+        "recall": 0.9444444444444444
+    }
+]

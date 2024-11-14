@@ -1,0 +1,675 @@
+[
+    {
+        "question": "Wind was directed by which American actress born on March 26, 1960?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the film titled 'Wind'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information about the director of the film identified as 'Wind'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the American actress born on March 26, 1960.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Ensure that the director of the film 'Wind' is an American actress born on March 26, 1960.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Conclude with the name of the American actress born on March 26, 1960, who directed 'Wind'. If no such person exists, state 'No such actress exists'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph begins by identifying the film titled 'Wind'. Next, it retrieves information about the director of the film. In parallel, it also identifies American actresses born on March 26, 1960. Afterwards, it checks if the director is the identified actress, and finally concludes with the name of the actress if she exists or states that no such actress exists."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Jennifer Grey\nJennifer Grey (born March 26, 1960) is an American actress. She is known for her roles in the 1980s films \"Ferris Bueller's Day Off\" (1986) and \"Dirty Dancing\" (1987), for which Grey earned a Golden Globe Award nomination. She is also known for her 2010 victory in season eleven of \"Dancing with the Stars\". Grey is the daughter of Academy Award\u2013winning actor Joel Grey and former actress/singer Jo Wilder, Grey currently stars in the Amazon Studios comedy series \"Red Oaks\".",
+            "Terri Nunn\nTerri Kathleen Nunn (born June 26, 1961), is an American singer and actress. She is best known as the lead vocalist of the new wave/synthpop band Berlin.",
+            "Amy Smart\nAmy Lysle Smart (born March 26, 1976) is an American actress and former fashion model. Smart began her career modeling in Italy and subsequently enrolled in acting school. Her first role in film was in director Martin Kunert's film \"Campfire Tales.\" She has since appeared in numerous films, including \"Varsity Blues\" (1999), \"Road Trip\" (2000), \"Rat Race\" (2001), \"The Butterfly Effect\" (2004), \"Just Friends\" (2005), \"Mirrors\" (2008), and Tyler Perry's \"The Single Moms Club\" (2014).",
+            "Verree Teasdale\nVerree Teasdale (March 15, 1903 \u2013 February 17, 1987) was an American actress born in Spokane, Washington.",
+            "Laraine Newman\nLaraine Newman (born March 2, 1952) is an American comedian, actress, voice artist, and writer who was part of the original cast of NBC's \"Saturday Night Live\".",
+            "Kellyn Plasschaert\nKellyn Lillian Plasschaert (November 26, 1958\u2013April 30, 2009) was an American actress born in Los Angeles, California and the daughter of Alex Edward Plasschaert, a stuntman and choreographer. She was the hostess of the children's television series \"Mousercise\". Her residence was in Canyon Country, California. Kellyn died from cancer on April 30, 2009. She was cremated.",
+            "Taylor Momsen\nTaylor Michel Momsen (born July 26, 1993) is an American singer, songwriter, former actress, and model. She is known for being the lead singer and frontwoman of the American rock band The Pretty Reckless. She is also known for portraying the character of Jenny Humphrey on the CW teen drama series \"Gossip Girl\" (2007\u20132012) and Cindy Lou Who in the film \"Dr. Seuss' How the Grinch Stole Christmas\" (2000).",
+            "A Burning Passion: The Margaret Mitchell Story\nA Burning Passion: The Margaret Mitchell Story is a 1994 biographical television film directed by Larry Peerce. The film is about the Pulitzer Prize-winning novel writer Margaret Mitchell, who landed to fame when she wrote \"Gone with the Wind\".",
+            "Barbara Niven\nBarbara Niven (born February 26, 1953) is an American actress and producer, best known for her performances in Lifetime movies and television roles in \"\", \"One Life to Live\", and \"Cedar Cove\". Niven also had the leading role in the independent film \"A Perfect Ending\" (2012).",
+            "Wind (film)\nWind is a 1992 film. The movie was directed by Carroll Ballard and starred Matthew Modine, Jennifer Grey and Cliff Robertson.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "Stanley Kubrick's Boxes\nStanley Kubrick's Boxes is a 2008 documentary film directed by Jon Ronson about the film director Stanley Kubrick. Ronson's intent was not to create a biography of the filmmaker but rather to understand Kubrick by studying the director's vast personal collection of memorabilia related to his feature films. The documentary came about in 1998 when Ronson received a request from Kubrick's estate for a copy of a documentary Ronson made about the Holocaust (Ronson was unaware that it was Kubrick who was asking for the film until months later). A year later, as Ronson was making plans to conduct a rare interview with the director, Kubrick suddenly died after completing work on his final film \"Eyes Wide Shut\". To his surprise, Ronson was invited to Kubrick's house by his widow. When he arrived, he found that half the house was filled by more than one thousand boxes containing snap shots, newspaper clippings, film out-takes, notes, and fan letters which the director used for research towards each of his films.",
+            "Dance with the Wind\nDance with the Wind (Korean: \ubc14\ub78c\uc758 \uc804\uc124 ; \"Baramui jeonseol\") is a 2004 South Korean film starring Lee Sung-jae and Park Sol-mi, and is the directorial debut of Park Jung-woo. The story is adapted from a 1999 book by novelist Ji Seong-sa.",
+            "Marrying the Mafia II\nMarrying the Mafia II is a 2005 South Korean film, the sequel to \"Marrying the Mafia\" (2002). It was the most successful comedy film in South Korea the year of its release; its over 5 million tickets sold represented more than 10% of the population and contributed to the third straight year that more tickets were sold for local than for Hollywood films.",
+            "Joseph Mitchell (Mitchell Estate director)\nJoseph Mitchell (born February 27, 1935) is known for being one of the two nephews of Margaret Mitchell, author of \"Gone with the Wind\", and the last family member to control the Mitchell Estate.",
+            "Anushka Shetty filmography\nAnushka Shetty is an Indian actress who appears in Telugu and Tamil films. She made her acting debut in Puri Jagannadh's 2005 Telugu film \"Super\", and appeared in \"Mahanandi\", released later the same year. The following year, she had four releases, the first being S. S. Rajamouli's \"Vikramarkudu\", which helped her gain recognition, followed by \"Astram\" (a remake of the 1999 Hindi film \"Sarfarosh\"), the Sundar C.-directed \"Rendu\", (which marked her debut in Tamil cinema), and a special appearance in AR Murugadoss' Telugu film \"Stalin\". She had two releases in 2007: \"Lakshyam\" and \"Don\". In 2008, she appeared in six films, including \"Okka Magaadu\", \"Swagatam\" and \"Souryam\". In 2009, Shetty played two roles in the fantasy \"Arundhati\". She went on to win the Nandi Special Jury Award and the Filmfare Best Telugu Actress Award for this film. Her next release that year was \"Billa\", a Telugu remake of the 2007 Tamil film of the same name. Her final release in 2009 was her second Tamil feature film, the masala film \"Vettaikaaran\", where she appeared as a medical student.",
+            "The Kingkiller Chronicle\nThe Kingkiller Chronicle is a fantasy series by Patrick Rothfuss, telling the autobiography of Kvothe, an adventurer and famous musician. The first two books, \"The Name of the Wind\" and \"The Wise Man's Fear\", were released in 2007 and 2011, respectively. A third is planned to fill out a trilogy, but a release date has not been announced.",
+            "Hits (compilation series)\nHits is a compilation album series that ran in the United Kingdom for over twenty years from 1984 until 2006. It was compiled as a joint venture, variously between the compilation arms of the Sony BMG and Warner Music groups to rival the \"Now That's What I Call Music\" series that had launched a year earlier in 1983, compiled by rival companies EMI and Virgin. Initially, the \"Hits\" brand was arguably as popular as its main rival, with volume one through to volume eight all achieving at least a platinum BPI award, with several of the early albums going multi-platinum. The standard release rate of \"The Hits Album\" was two volumes per year compared with three volumes of the \"Now\" albums.",
+            "Beatles Arias\nBeatles Arias is a 1967 LP recorded by American-born mezzo-soprano Cathy Berberian. The original album consists of twelve of Berberian's distinctive operatic-style cover versions of songs by The Beatles, scored for a small chamber ensemble, consisting of a string quartet or wind quintet with harpsichord or organ. The chamber arrangements were by Paul Boyer, and featured Guy Boyer on harpsichord and organ, with an unnamed French string quartet and a wind quintet. Berberian was inspired to create this album while singing along to her 13-year-old daughter's Beatles records.",
+            "Alain Resnais\nAlain Resnais (] ; 3 June 19221 March 2014) was a French film director and screenwriter whose career extended over more than six decades. After training as a film editor in the mid-1940s, he went on to direct a number of short films which included \"Night and Fog\" (1955), an influential documentary about the Nazi concentration camps."
+        ],
+        "thoughts": [
+            "The film titled 'Wind' is a 1992 movie directed by Carroll Ballard and starring Matthew Modine, Jennifer Grey, and Cliff Robertson.",
+            "The director of the film \"Wind\" is Carroll Ballard.",
+            "The American actress born on March 26, 1960 is Jennifer Grey.",
+            "The director of the film \"Wind\" is Carroll Ballard, not an American actress born on March 26, 1960. Therefore, the given instruction cannot be fulfilled.",
+            "No such actress exists."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Wind was directed by which American actress born on March 26, 1960?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information on films directed by any person associated with the name 'Wind'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the name of the American actress born on March 26, 1960.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the birth date and nationality of any director from the information found in Node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which director from Node 1 matches the birth date and nationality criteria from Node 2 and Node 3 (American actress born on March 26, 1960).",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph is designed to first identify films directed by individuals associated with 'Wind', then find out if any match the specific date of birth and nationality requirements. The nodes retrieve respective information about directors and an American actress based on the data available and perform reasoning to check which actress matches the criteria of being born on March 26, 1960, and has directed 'Wind'."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "2002\u201303 Serie A\nIn the 2002\u201303 season, the Serie A, the major football Italian professional league, was composed by 18 teams, for the 15th consecutive time from season 1988\u201389.",
+            "Joshua D. Zimmerman\nJoshua D. Zimmerman (born 1966) is Professor of History at Yeshiva University, where he holds the Eli and Diana Zborowski Professorial Chair in Interdisciplinary Holocaust Studies. He is the author of \"The Polish Underground and the Jews, 1939-1945\" by Cambridge University Press (2015, hardback) and of \"Contested Memories. Poles and Jews during the Holocaust and Its Aftermath\" by Rutgers University Press (2003, hardcover) as well as \"Poles, Jews and the Politics of Nationality: The Jewish Labor Bund and the Polish Socialist Party in Late Czarist Russia, 1892\u20131914.\"<ref name=\"yu.edu/faculty\"> </ref> Zimmerman graduated from the University of California at Santa Cruz in 1989 with a BA(Hons) in History, and with the M.A. in History from UCLA in 1993. In February 1998 he completed his PhD thesis in Comparative History at Brandeis University, and in the summer 2004 was appointed to the position of Associate Professor of History at Yeshiva University in New York City. Zimmerman is an American author proficient in Yiddish, Polish, Hebrew, Russian, and French.<ref name=\"yu.edu/cv\"> </ref>",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Gilberto Sosa\nGilberto Sosa (born 23 September 1960 in Mexico City) is a retired Mexican boxer who competed in the men's light flyweight division. He represented his native country at the 1979 Pan American Games, where he captured the bronze medal; at the 1979 Latin American Boxing Championship (\"Campeonato Latinoamericano de Boxeo\" ), where he also won the bronze medal, and at 1980 Summer Olympics in Moscow.",
+            "Pottery fracture\nPottery fracture results from stress within a ceramic body due to thermal expansion and contraction, shrinkage, and other forces. Poor drying or uneven compression and alignment of particles can result in low strength. Cracking may appear in greenware as well as each stage of the firing including bisque ware and glazed ware.",
+            "Hogan Wharton\nRobert Glen \"Hogan\" Wharton (December 13, 1935 \u2013 October 8, 2008) was an American football player. He attended the University of Houston where he played college football at the tackle position for the Houston Cougars football team from 1956 to 1958. He was named lineman of the year in the Missouri Valley Conference in 1957, and the following year he was selected by the American Football Coaches Association as a first-team tackle on its 1958 College Football All-America Team. Wharton later played professional football in the newly formed American Football League, playing at the guard position for the Houston Oilers during the first four years of the club's existence from 1960 to 1963, including the 1960 Houston Oilers team that won the first AFL championship. He was cut by the Oilers in September 1964.",
+            "Please Take Care of My Refrigerator\nPlease Take Care of My Refrigerator () is a 2014 South Korean cooking-variety program starring by many chefs and celebrity guests. It airs on JTBC on Mondays at 21:30 (KST) beginning November 17, 2014.",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "SAG Foundation\nThe Screen Actors Guild Foundation is an American organisation that provides assistance and educational programming to the professionals of Screen Actors Guild. It also provides children\u2019s literacy programs to the public. Founded in 1985, it relies solely on support from grants, corporate sponsorships and individuals to maintain its programs.",
+            "Ivory (wrestler)\nLisa Mary Moretti (born November 26, 1961) is an American retired professional wrestler. She is best known for her time with World Wrestling Entertainment (WWE, previously the World Wrestling Federation) between 1999 and 2005 under the ring name Ivory. Moretti began her career and first found national exposure in the independent promotion Gorgeous Ladies of Wrestling (GLOW), where she performed as Tina Ferrari from the mid-to-late-1980s. Moretti debuted in the World Wrestling Federation in 1999 as the manager for D'Lo Brown & Mark Henry. She won the WWE Women's Championship twice, before becoming a part of the villainous Right to Censor, a storyline stable of characters with harshly conservative sociopolitical views.",
+            "Elijah Wood\nElijah Jordan Wood (born January 28, 1981) is an American actor, voice actor, DJ, and producer. He is best known for his high-profile leading role as Frodo Baggins in Peter Jackson's epic film trilogy \"The Lord of the Rings\" (2001\u201303).",
+            "Publication bias\nPublication bias is a type of bias that occurs in published academic research. It occurs when the outcome of an experiment or research study influences the decision whether to publish or otherwise distribute it. Publication bias matters because literature reviews regarding support for a hypothesis can be biased if the original literature is contaminated by publication bias. Publishing only results that show a significant finding disturbs the balance of findings.",
+            "Domitia Lepida the Elder\nDomitia (\"PIR\u00b2\" D 171), more commonly referred to as Domitia the Elder -- in fact no ancient source ever calls her Lepida - (ca. 8 BC-June 59) was the oldest child of Antonia Major and Lucius Domitius Ahenobarbus (consul 16 BC), and the oldest granddaughter to Triumvir Mark Antony by Octavia Minor, a great-niece of the Roman Emperor Augustus, second cousin and sister-in-law to the Emperor Caligula, first cousin to the Emperor Claudius, maternal aunt to the Empress Valeria Messalina, and paternal aunt to Emperor Nero. She had two younger siblings: Domitia Lepida and Cn. Domitius Ahenobarbus (cos. AD 32). The date of her birth is not recorded and can be only estimated as no later than 7 BC, but possibly as much as 10 years earlier, if one would allow a long delay between her birth and those of her two siblings.",
+            "Never Let Me Go (Johnny Ace song)\n\"Never Let Me Go\" is a blues ballad song by American R&B/blues singer Johnny Ace, written by Joseph Scott and released in 1954 under Duke Records. The song is featured on the albums \"My Songs\" and \"Memorial\". \"Never Let Me Go\" was one of his eighth consecutive top ten R&B hits in a row, including \"My Song\", \"Cross My Heart,\" \"Please Forgive Me,\" \"The Clock,\" \"Pledging My Love,\" \"Saving My Love for You,\" and \"Anymore\". The song was R&B hit and peaked to No. 9 in October 1954 on \"Billboards\" Rhythm & Blues Records chart.",
+            "Conjuring (book)\nConjuring is an illustrated book by James Randi. Randi gives a detailed history of conjuring, more commonly known as magic, said to be the world's second oldest profession. It includes detailed portraits of conjurors, including the Harry Blackstone, Sr., Harry Blackstone, Jr., Harry Houdini and his entourage, Howard Thurston, Robert Heller, Joe Berg, and others.",
+            "Rumbold of Mechelen\nSaint Rumbold (or \"Rumold\", \"Romuold\", Latin: \"Rumoldus\" , Dutch: \"Rombout\" , French: \"Rombaut\" ) was an Irish or Scottish Christian missionary, although his true nationality is not known for certain.",
+            "List of Switched at Birth episodes\n\"Switched at Birth\" is an American television drama series which premiered on ABC Family on June 6, 2011. Created by Lizzy Weiss, the series follows two teenage girls who learn that they were switched at birth. On August 17, 2012, ABC Family renewed \"Switched at Birth\" for a second season, which premiered on January 7, 2013. All of the episode titles take their names from pieces of artwork. On July 30, 2013, ABC Family renewed the series for a full 22-episode third season, which premiered in January 2014. The second half of season 3 premiered on June 16, 2014. On August 13, 2014, the series was renewed for a fourth season, which premiered on January 6, 2015. ABC Family, which changed its name to Freeform in January 2016, announced on Wednesday October 21, 2015, that it had renewed the series for a fifth and final season. The fifth season began airing on January 31, 2017, and concluded on April 11, 2017. During the course of the series, episodes of \"Switched at Birth \" aired\u00a0over seasons.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "Switched at Birth (season 3)\nThe third season of ABC Family drama television series \"Switched at Birth\" began on January 13, 2014, and will consist of 22 episodes. The season is produced by ABC Family, Pirates' Cove Entertainment, and Suzy B Productions, with Paul Stupin and series creator Lizzy Weiss serving as executive producers.",
+            "Switched at Birth (TV series)\nSwitched at Birth is an American teen/family drama television series that premiered on ABC\u00a0Family on June 6, 2011, at 9:00\u00a0ET/PT. The one-hour scripted drama is set in the Kansas City metropolitan area, and revolves around two teenagers who were switched at birth and grew up in very different environments: one in an affluent suburb, and the other in working-class areas. According to ABC Family, it is \"the first mainstream television series to have multiple deaf and hard-of-hearing series regulars and scenes shot entirely in American Sign Language (ASL)\"."
+        ],
+        "thoughts": [
+            "Lisa Mary Moretti, also known as Ivory, is the American actress born on March 26, 1960.",
+            "The films directed by individuals associated with the name 'Wind' are \"Can You Ever Forgive Me?\" directed by Marielle Heller and \"My Heidelberg, I Can Not Forget You\" directed by James Bauer.",
+            "The birth date and nationality of director Marielle Heller are not provided in the given information.",
+            "The director from Node 1 that matches the birth date and nationality criteria from Node 2 and Node 3 is not provided in the given information."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Wind was directed by which American actress born on March 26, 1960?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify American actresses born on March 26, 1960.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on films with the word 'Wind' in the title and their directors.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find connections between identified actresses and directors of films titled 'Wind'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which actress identified in Step 1 matches with any director found in Step 2 as directing a movie titled 'Wind'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The task is to find which American actress, born on March 26, 1960, directed a movie with 'Wind' in the title. The execution graph first retrieves actresses based on the birth date, then separately retrieves movies with 'Wind' and their directors. It then reasons to find a match between the actress and a director, eventually identifying the correct actress who directed such a film."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Jean-Jacques Beineix\nJean-Jacques Beineix (] ; born 8 October 1946) is a French film director and generally seen as the best example of what came to be called the \"cin\u00e9ma du look\". Critic Ginette Vincendeau defined the films made by Beineix and others as \"youth-oriented films with high production values...The \"look\" of the \"cin\u00e9ma du look\" refers to the films' high investment in non-naturalistic, self-conscious aesthetics, notably intense colours and lighting effects. Their spectacular (studio based) and technically brilliant \"mise-en-sc\u00e8ne\" is usually put to the service of romantic plots.\" The \"cin\u00e9ma du look\" included the films of Luc Besson and L\u00e9os Carax. Luc Besson, like Beineix, was much maligned by the critical establishment during the 1980s, while Carax was much admired. In late 2006, Beineix published a first volume of his autobiography, \"Les Chantiers de la gloire\" (in French only). The title alluded to the French title of Stanley Kubrick's film, \"Les Sentiers de la gloire\" (\"Paths of Glory\").",
+            "The Four Winds of Love\nThe Four Winds of Love is the overall title for a series of six novels written by Compton Mackenzie, \"The East Wind of Love\" (1937), \"The South Wind of Love\" (1938), \"The West Wind of Love\" (1940), \"West to North\" (1942), \"The North Wind of Love, Book 1\" (1944) and \"The North Wind of Love, Book 2\" (1945), which taken together constitute a major fictional chronicle of the first forty years of the twentieth century. The main protagonist of the hexalogy is the semi-autobiographical character of John Ogilvie.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Kaze no Stigma\nStigma of the Wind or Kaze no Stigma (Japanese: \u98a8\u306e<ruby ><rb>\u8056\u75d5</rb><rp> (</rp><rt >\u30b9\u30c6\u30a3\u30b0\u30de</rt><rp>)</rp></ruby> , Hepburn: Kaze no Sutiguma , lit. \"Stigma of the Wind\") is a Japanese light novel series written by Takahiro Yamato and illustrated by Hanamaru Nanto. After the death of the author on July 20, 2009, the story remains incomplete at twelve chapters. A 24-episode anime adaptation directed by Junichi Sakata and animated by Gonzo aired from April\u2013September 2007. It has been dubbed in English by Animax Asia under the title Stigma of the Wind and by Funimation as Kaze no Stigma.",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Jennifer Grey\nJennifer Grey (born March 26, 1960) is an American actress. She is known for her roles in the 1980s films \"Ferris Bueller's Day Off\" (1986) and \"Dirty Dancing\" (1987), for which Grey earned a Golden Globe Award nomination. She is also known for her 2010 victory in season eleven of \"Dancing with the Stars\". Grey is the daughter of Academy Award\u2013winning actor Joel Grey and former actress/singer Jo Wilder, Grey currently stars in the Amazon Studios comedy series \"Red Oaks\".",
+            "An English Gentleman\n\"An English Gentleman\" is the second single from the album \"The Great Western\" by Manic Street Preachers vocalist/guitarist James Dean Bradfield, released on 25 September 2006 on Columbia Records.\" The title track pays tribute to the late Manics publicist Philip Hall. Also featured on the CD version of the single is a cover Frank Sinatra's \"Summer Wind\", Bradfield's favourite song.",
+            "Lilla J\u00f6nssonligan\nLilla J\u00f6nssonligan (English: The Little J\u00f6nssonleague ) is a Swedish film series that consists of four movies. The film series is a spin-off of the original \"J\u00f6nssonligan\" film series. The main difference about the two series is that the main characters are portrayed as kids instead of adults in this one, hence the word \"little\" in the title. Rocky, the original third member, is not featured in any of the films. Unlike the \"adult J\u00f6nssonligan\", where the gang where bumbling anti-heroes, the \"litte J\u00f6nssonligan\" is often straight up heroic.",
+            "Eugene Webb\nEugene Webb (born 1938) is Professor Emeritus in the University of Washington Henry M. Jackson School of International Studies. Webb holds a Ph.D., in Comparative Literature from Columbia University (1965), an M.A. in English Literature from Columbia University (1962) and also a B.A., in Philosophy from the University of California, Los Angeles (1960). Webb was a member of the faculties of both the Comparative Literature Department and the Henry M. Jackson School of International Studies, where he served as Associate Director and chaired programs in both Comparative Religion and European Studies (1994). Webb was also the founder of those two programs: Comparative Religion in 1974, and European Studies in 1994. He retired from the University of Washington in 2000, where he now has the title Professor Emeritus of International Studies.",
+            "Soad Hosny\nSoad Hosny (Arabic: \u0633\u0639\u0627\u062f \u062d\u0633\u0646\u0649\u200e \u200e \u00a0] : January 26, 1943 \u2013 June 21, 2001) was an Egyptian actress born in Cairo. She was known as the \"Cinderella of Egyptian cinema\" and one of the most influential actresses in the Middle East and the Arab world. She ascended to stardom at the end of the 1950s, performing in more than 83 films between 1959 and 1991. A majority of her films were shot in the 1960s and 1970s. Her final screen appearance was in the 1991 film, \"The Shepherd and the Women\", directed by her ex-husband, Ali Badrakhan.",
+            "Prince Lu\u00eds of Orl\u00e9ans-Braganza (1878\u20131920)\nPrince Lu\u00eds of Orl\u00e9ans-Braganza (26 January 1878 \u2013 26 March 1920), was a claimant to the former throne of the Empire of Brazil. He was born in Brazil, the second son of Prince Gaston, Count of Eu, and Isabel, Princess Imperial of Brazil.",
+            "Joseph Napolitan\nJoseph Napolitan (March 6, 1929 \u2013 December 2, 2013) was an American political consultant, who worked as a general consultant on over 100 political campaigns in the United States, and many others throughout the world. Napolitan served on the 1960 Kennedy for President campaign, was Director of Media for the 1968 Hubert Humphrey campaign, and received the French Legion of Honour in 2005. He died on December 2, 2013 at the age of 84.",
+            "American Spring (Anti-Flag album)\nAmerican Spring is Anti-Flag's ninth studio album. The album was released on May 26, 2015. The album marks the band's first release for Spinefarm Records after releasing their previous two albums on SideOneDummy Records. A lyric music video for the album's first single, \"Fabled World\" was released in March 2015. The second single \"Sky Is Falling\" was released a month later. On May 19, A music video for Brandenburg Gate was released.",
+            "Jon St. Andre\nJon St. Andre (born December 8, 1939 in Ishpeming, Michigan) is an American former ski jumper who competed in the 1960 Winter Olympics.",
+            "Amy Smart\nAmy Lysle Smart (born March 26, 1976) is an American actress and former fashion model. Smart began her career modeling in Italy and subsequently enrolled in acting school. Her first role in film was in director Martin Kunert's film \"Campfire Tales.\" She has since appeared in numerous films, including \"Varsity Blues\" (1999), \"Road Trip\" (2000), \"Rat Race\" (2001), \"The Butterfly Effect\" (2004), \"Just Friends\" (2005), \"Mirrors\" (2008), and Tyler Perry's \"The Single Moms Club\" (2014)."
+        ],
+        "thoughts": [
+            "The American actress born on March 26, 1960 is Jennifer Grey.",
+            "The search did not yield any films with the word 'Wind' in the title and their directors.",
+            "Based on the upstream task, we have identified Jennifer Grey as the American actress born on March 26, 1960. However, we were unable to find any films titled 'Wind' and their directors. Therefore, we are unable to establish any connections between the identified actress and directors of films titled 'Wind'.",
+            "We were unable to find any connections between Jennifer Grey and any directors of films titled 'Wind' as we were unable to find any films with that title and their respective directors."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Wind was directed by which American actress born on March 26, 1960?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the name of the movie 'Wind'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the director of the movie 'Wind'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify American actresses born on March 26, 1960.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Match the director of 'Wind' with the list of American actresses born on March 26, 1960 to determine if any match exists.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To answer the question about which American actress, born on March 26, 1960, directed 'Wind', the execution graph first identifies the name of the movie and its director. Separately, it finds American actresses born on the specified date. In the final step, it checks if the director matches any identified actresses born on that date, thus completing the query."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Wind (film)\nWind is a 1992 film. The movie was directed by Carroll Ballard and starred Matthew Modine, Jennifer Grey and Cliff Robertson.",
+            "Jennifer Grey\nJennifer Grey (born March 26, 1960) is an American actress. She is known for her roles in the 1980s films \"Ferris Bueller's Day Off\" (1986) and \"Dirty Dancing\" (1987), for which Grey earned a Golden Globe Award nomination. She is also known for her 2010 victory in season eleven of \"Dancing with the Stars\". Grey is the daughter of Academy Award\u2013winning actor Joel Grey and former actress/singer Jo Wilder, Grey currently stars in the Amazon Studios comedy series \"Red Oaks\".",
+            "The Name of the Wind\nThe Name of the Wind (The Kingkiller Chronicle: Day One) is a fantasy novel by Patrick Rothfuss, the first book in a series called \"The Kingkiller Chronicle\". It was published in 2007 by DAW Books.",
+            "Soad Hosny\nSoad Hosny (Arabic: \u0633\u0639\u0627\u062f \u062d\u0633\u0646\u0649\u200e \u200e \u00a0] : January 26, 1943 \u2013 June 21, 2001) was an Egyptian actress born in Cairo. She was known as the \"Cinderella of Egyptian cinema\" and one of the most influential actresses in the Middle East and the Arab world. She ascended to stardom at the end of the 1950s, performing in more than 83 films between 1959 and 1991. A majority of her films were shot in the 1960s and 1970s. Her final screen appearance was in the 1991 film, \"The Shepherd and the Women\", directed by her ex-husband, Ali Badrakhan.",
+            "AFI's 100 Years...100 Movie Quotes\nPart of The American Film Institute (AFI 100 Years... series), AFI's 100 Years... 100 Movie Quotes is a list of the top 100 movie quotations in American cinema. The American Film Institute revealed the list on June 21, 2005, in a three-hour television program on CBS. The program was hosted by actor Pierce Brosnan and had commentary from many Hollywood actors and filmmakers. A jury consisting of 1,500 film artists, critics, and historians selected \"Frankly, my dear, I don't give a damn,\" spoken by Clark Gable as Rhett Butler in the 1939 American Civil War epic \"Gone with the Wind\" as the most memorable American movie quotation of all time.",
+            "Prince Lu\u00eds of Orl\u00e9ans-Braganza (1878\u20131920)\nPrince Lu\u00eds of Orl\u00e9ans-Braganza (26 January 1878 \u2013 26 March 1920), was a claimant to the former throne of the Empire of Brazil. He was born in Brazil, the second son of Prince Gaston, Count of Eu, and Isabel, Princess Imperial of Brazil.",
+            "Joseph Mitchell (Mitchell Estate director)\nJoseph Mitchell (born February 27, 1935) is known for being one of the two nephews of Margaret Mitchell, author of \"Gone with the Wind\", and the last family member to control the Mitchell Estate.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Meet Market (film)\nMeet Market is a 2004 film directed by Charlie Loventhal and starring Alan Tudyk, Krista Allen, Elizabeth Berkley, Laurie Holden and Julian McMahon. The movie is a comedy about singles in Los Angeles who attempt to find love in the aisles of a supermarket. The film was released directly to DVD on February 12, 2008.",
+            "Joseph Napolitan\nJoseph Napolitan (March 6, 1929 \u2013 December 2, 2013) was an American political consultant, who worked as a general consultant on over 100 political campaigns in the United States, and many others throughout the world. Napolitan served on the 1960 Kennedy for President campaign, was Director of Media for the 1968 Hubert Humphrey campaign, and received the French Legion of Honour in 2005. He died on December 2, 2013 at the age of 84.",
+            "American Spring (Anti-Flag album)\nAmerican Spring is Anti-Flag's ninth studio album. The album was released on May 26, 2015. The album marks the band's first release for Spinefarm Records after releasing their previous two albums on SideOneDummy Records. A lyric music video for the album's first single, \"Fabled World\" was released in March 2015. The second single \"Sky Is Falling\" was released a month later. On May 19, A music video for Brandenburg Gate was released.",
+            "Jon St. Andre\nJon St. Andre (born December 8, 1939 in Ishpeming, Michigan) is an American former ski jumper who competed in the 1960 Winter Olympics.",
+            "Phoenix (1998 film)\nPhoenix is a 1998 American crime film directed by British director Danny Cannon and starring Ray Liotta. Liotta plays a cop whose gambling debt leaves him indebted to the underworld and desperate to find a way out without compromising his principles.",
+            "Amy Smart\nAmy Lysle Smart (born March 26, 1976) is an American actress and former fashion model. Smart began her career modeling in Italy and subsequently enrolled in acting school. Her first role in film was in director Martin Kunert's film \"Campfire Tales.\" She has since appeared in numerous films, including \"Varsity Blues\" (1999), \"Road Trip\" (2000), \"Rat Race\" (2001), \"The Butterfly Effect\" (2004), \"Just Friends\" (2005), \"Mirrors\" (2008), and Tyler Perry's \"The Single Moms Club\" (2014).",
+            "The Wise Man's Fear\nThe Wise Man's Fear (The Kingkiller Chronicle: Day Two) is a fantasy novel by Patrick Rothfuss and the second volume in The Kingkiller Chronicle. It was released March 1, 2011 by DAW Books. It is the sequel to 2007's \"The Name of the Wind\".",
+            "The Four Winds of Love\nThe Four Winds of Love is the overall title for a series of six novels written by Compton Mackenzie, \"The East Wind of Love\" (1937), \"The South Wind of Love\" (1938), \"The West Wind of Love\" (1940), \"West to North\" (1942), \"The North Wind of Love, Book 1\" (1944) and \"The North Wind of Love, Book 2\" (1945), which taken together constitute a major fictional chronicle of the first forty years of the twentieth century. The main protagonist of the hexalogy is the semi-autobiographical character of John Ogilvie.",
+            "The Kingkiller Chronicle\nThe Kingkiller Chronicle is a fantasy series by Patrick Rothfuss, telling the autobiography of Kvothe, an adventurer and famous musician. The first two books, \"The Name of the Wind\" and \"The Wise Man's Fear\", were released in 2007 and 2011, respectively. A third is planned to fill out a trilogy, but a release date has not been announced.",
+            "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+            "Raymond S. Persi\nRaymond S. Persi is an American animator, director, screenwriter, producer, storyboard artist and voice actor. He has directed many episodes of \"The Simpsons\", including \"Mobile Homer\", \"The Girl Who Slept Too Little\", \"The Monkey Suit\", \"Little Big Girl\", \"24 Minutes\", \"Love, Springfieldian Style\" and the Emmy-award winning \"The Seemingly Never-Ending Story\". Persi went on to work as a sequence director for \"The Simpsons Movie\" (2007).",
+            "A Wind in the Door\nA Wind in the Door is a young adult science fantasy novel by Madeleine L'Engle. It is a companion book to \"A Wrinkle in Time\", and part of the Time Quintet."
+        ],
+        "thoughts": [
+            "The name of the movie \"Wind\" is \"Wind\".",
+            "The director of the movie 'Wind' is Carroll Ballard.",
+            "The American actress born on March 26, 1960 is Jennifer Grey.",
+            "There is no match between the director of 'Wind' (Carroll Ballard) and the list of American actresses born on March 26, 1960."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Wind was directed by which American actress born on March 26, 1960?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify American actresses born on March 26, 1960",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine if any of these actresses directed a film titled 'Wind'",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the director of the film titled 'Wind'",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Verify if the director identified in node 3 matches any of the actresses identified in node 1",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Conclude which American actress born on March 26, 1960 directed 'Wind'",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "To find which American actress born on March 26, 1960 directed 'Wind', the first step is to list actresses born on that date (node 1). Then, for each, determine if they directed 'Wind' (node 2). Simultaneously, identify the director of 'Wind' (node 3) and check if the director matches any actresses from the initial list (node 4). Finally, integrate this information to reach a conclusion in node 5."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Christopher Guest\nChristopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer, musician, director, actor, and comedian who holds dual British and American citizenship. Guest is most widely known in Hollywood for having written, directed and starred in his series of comedy films shot in mock-documentary (mockumentary) style. Many scenes and character backgrounds in Guest's films are written and directed, although actors have no rehearsal time and the ensemble improvise scenes while filming them. The series of films began with \"This Is Spinal Tap\" (directed by Rob Reiner), and continued with \"Waiting for Guffman\", \"Best In Show\", \"A Mighty Wind\", \"For Your Consideration\", and \"Mascots\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Kaze no Stigma\nStigma of the Wind or Kaze no Stigma (Japanese: \u98a8\u306e<ruby ><rb>\u8056\u75d5</rb><rp> (</rp><rt >\u30b9\u30c6\u30a3\u30b0\u30de</rt><rp>)</rp></ruby> , Hepburn: Kaze no Sutiguma , lit. \"Stigma of the Wind\") is a Japanese light novel series written by Takahiro Yamato and illustrated by Hanamaru Nanto. After the death of the author on July 20, 2009, the story remains incomplete at twelve chapters. A 24-episode anime adaptation directed by Junichi Sakata and animated by Gonzo aired from April\u2013September 2007. It has been dubbed in English by Animax Asia under the title Stigma of the Wind and by Funimation as Kaze no Stigma.",
+            "Soad Hosny\nSoad Hosny (Arabic: \u0633\u0639\u0627\u062f \u062d\u0633\u0646\u0649\u200e \u200e \u00a0] : January 26, 1943 \u2013 June 21, 2001) was an Egyptian actress born in Cairo. She was known as the \"Cinderella of Egyptian cinema\" and one of the most influential actresses in the Middle East and the Arab world. She ascended to stardom at the end of the 1950s, performing in more than 83 films between 1959 and 1991. A majority of her films were shot in the 1960s and 1970s. Her final screen appearance was in the 1991 film, \"The Shepherd and the Women\", directed by her ex-husband, Ali Badrakhan.",
+            "Wind (film)\nWind is a 1992 film. The movie was directed by Carroll Ballard and starred Matthew Modine, Jennifer Grey and Cliff Robertson.",
+            "Irma Gramatica\nIrma Gramatica (1870\u20131962) was an Italian stage and film actress. Gramatica appeared in ten films during her career including \"The Materassi Sisters\" (1944). Her sisters Anna Capodaglio and Emma Gramatica were both actresses.",
+            "The Four Winds of Love\nThe Four Winds of Love is the overall title for a series of six novels written by Compton Mackenzie, \"The East Wind of Love\" (1937), \"The South Wind of Love\" (1938), \"The West Wind of Love\" (1940), \"West to North\" (1942), \"The North Wind of Love, Book 1\" (1944) and \"The North Wind of Love, Book 2\" (1945), which taken together constitute a major fictional chronicle of the first forty years of the twentieth century. The main protagonist of the hexalogy is the semi-autobiographical character of John Ogilvie.",
+            "Juli\u00e1n Hern\u00e1ndez (filmmaker)\nJuli\u00e1n Hern\u00e1ndez (born 1972 in Mexico City, Mexico as Juli\u00e1n Hern\u00e1ndez P\u00e9rez) is a Mexican multi-awarded filmmaker. He won twice the Teddy Award at Berlin Film Festival with his movies\" Thousand Clouds of Peace Fence the Sky, Love, Your Being Love Will Never End \" (2003), and \"Raging Sun, Raging Sky (\"2009). He studied at the Centro Universitario de Estudios Cinematogr\u00e1ficos (CUEC), from where he was expelled due to his gay-themed films during a homophobic administration, and was not mentioned as a serious director until he started winning international recognition. He has credited his use of cinematographic language to influences from filmmakers such as Michelangelo Antonioni, Leonardo Favio, Robert Bresson, and Alain Resnais. Hern\u00e1ndez has directed more than 20 awarded short films (both documentaries and fictional), and became a gay-cinema icon for his feature films, including Broken Sky. Along with producer and director , he founded Cooperativa Cinematogr\u00e1fica Morelos. which later became the prestigious production company , producing 29 films over two decades.",
+            "A Burning Passion: The Margaret Mitchell Story\nA Burning Passion: The Margaret Mitchell Story is a 1994 biographical television film directed by Larry Peerce. The film is about the Pulitzer Prize-winning novel writer Margaret Mitchell, who landed to fame when she wrote \"Gone with the Wind\".",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003.",
+            "Andrew Adamson\nAndrew Ralph Adamson, MNZM (born 1 December 1966) is a New Zealand film director, producer and screenwriter based mainly in Los Angeles, where he made the blockbuster animation films, \"Shrek\" and \"Shrek 2\" for which he received an Academy Award nomination. He was director, executive producer, and scriptwriter for the 2005 production of \"\". Shooting took place in New Zealand, primarily in and around Auckland, but also in South Island where much of Peter Jackson's \"The Lord of the Rings\" trilogy was filmed. He also worked on the movies \"Batman Forever\" and \"Batman & Robin\" as a visual effects supervisor.",
+            "Jean-Jacques Beineix\nJean-Jacques Beineix (] ; born 8 October 1946) is a French film director and generally seen as the best example of what came to be called the \"cin\u00e9ma du look\". Critic Ginette Vincendeau defined the films made by Beineix and others as \"youth-oriented films with high production values...The \"look\" of the \"cin\u00e9ma du look\" refers to the films' high investment in non-naturalistic, self-conscious aesthetics, notably intense colours and lighting effects. Their spectacular (studio based) and technically brilliant \"mise-en-sc\u00e8ne\" is usually put to the service of romantic plots.\" The \"cin\u00e9ma du look\" included the films of Luc Besson and L\u00e9os Carax. Luc Besson, like Beineix, was much maligned by the critical establishment during the 1980s, while Carax was much admired. In late 2006, Beineix published a first volume of his autobiography, \"Les Chantiers de la gloire\" (in French only). The title alluded to the French title of Stanley Kubrick's film, \"Les Sentiers de la gloire\" (\"Paths of Glory\").",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Dance with the Wind\nDance with the Wind (Korean: \ubc14\ub78c\uc758 \uc804\uc124 ; \"Baramui jeonseol\") is a 2004 South Korean film starring Lee Sung-jae and Park Sol-mi, and is the directorial debut of Park Jung-woo. The story is adapted from a 1999 book by novelist Ji Seong-sa.",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Mursm\u00e4cka\nMursm\u00e4cka, also called \"bruksm\u00e4cka\" or only \"sm\u00e4cka\", was an historical profession for women in Sweden. A mursm\u00e4cka was a female construction worker with the task to hand mortar during construction work. The profession is recorded from at least 1691 (though it is not confirmed by name until the 1830s) and discontinued in 1922. This was a very hard but common work for a poor uneducated women during the 19th century, particularly in Stockholm. In July 1888, the Mursm\u00e4cka of Stockholm performed a great strike action which attracted considerable attention in contemporary Sweden.",
+            "What the Water Gave Me (song)\n\"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011). The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth. It was released on 23 August 2011 as the first promotional single from \"Ceremonials\". After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website. Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name. During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War."
+        ],
+        "thoughts": [
+            "There are no American actresses born on March 26, 1960.",
+            "None of the actresses mentioned in the information directed a film titled 'Wind'.",
+            "The director of the film \"Wind\" is Christopher Guest.",
+            "Based on the information provided, the director identified in node 3 (Christopher Guest) does not match any of the actresses identified in node 1. Therefore, there is no match between the director and actresses in this context.",
+            "Based on the information provided, it can be concluded that no American actress born on March 26, 1960 directed the film 'Wind'."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Wind was directed by which American actress born on March 26, 1960?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify American actresses born on March 26, 1960.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve notable works directed by each identified actress.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine if any of the works directed by the identified actresses have a title or theme related to 'wind'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Select the correct actress based on the works related to 'wind'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The task is to find out which American actress, born on March 26, 1960, directed a work related to 'wind'. First, we identify actresses with the specific birthdate, then retrieve the works they directed. The next step involves checking if any of these works are related to 'wind'. Finally, synthesize this information to find the correct actress."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Wind (film)\nWind is a 1992 film. The movie was directed by Carroll Ballard and starred Matthew Modine, Jennifer Grey and Cliff Robertson.",
+            "Jennifer Grey\nJennifer Grey (born March 26, 1960) is an American actress. She is known for her roles in the 1980s films \"Ferris Bueller's Day Off\" (1986) and \"Dirty Dancing\" (1987), for which Grey earned a Golden Globe Award nomination. She is also known for her 2010 victory in season eleven of \"Dancing with the Stars\". Grey is the daughter of Academy Award\u2013winning actor Joel Grey and former actress/singer Jo Wilder, Grey currently stars in the Amazon Studios comedy series \"Red Oaks\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Fifty Shades of Grey\nFifty Shades of Grey is a 2011 erotic romance novel by British author E. L. James. It is the first instalment in the \"Fifty Shades\" trilogy that traces the deepening relationship between a college graduate, Anastasia Steele, and a young business magnate, Christian Grey. It is notable for its explicitly erotic scenes featuring elements of sexual practices involving bondage/discipline, dominance/submission, and sadism/masochism (BDSM). Originally self-published as an ebook and a print-on-demand, publishing rights were acquired by Vintage Books in March 2012.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "Soad Hosny\nSoad Hosny (Arabic: \u0633\u0639\u0627\u062f \u062d\u0633\u0646\u0649\u200e \u200e \u00a0] : January 26, 1943 \u2013 June 21, 2001) was an Egyptian actress born in Cairo. She was known as the \"Cinderella of Egyptian cinema\" and one of the most influential actresses in the Middle East and the Arab world. She ascended to stardom at the end of the 1950s, performing in more than 83 films between 1959 and 1991. A majority of her films were shot in the 1960s and 1970s. Her final screen appearance was in the 1991 film, \"The Shepherd and the Women\", directed by her ex-husband, Ali Badrakhan.",
+            "Fifty Shades Freed (film)\nFifty Shades Freed is an upcoming American erotic romantic drama film directed by James Foley and written by Niall Leonard, based on the novel of same name by E. L. James. It is the final film in the \"Fifty Shades\" trilogy, and a sequel to \"Fifty Shades of Grey\" (2015) and \"Fifty Shades Darker\" (2017). The film stars Dakota Johnson and Jamie Dornan as Anastasia Steele and Christian Grey, respectively.",
+            "Prince Lu\u00eds of Orl\u00e9ans-Braganza (1878\u20131920)\nPrince Lu\u00eds of Orl\u00e9ans-Braganza (26 January 1878 \u2013 26 March 1920), was a claimant to the former throne of the Empire of Brazil. He was born in Brazil, the second son of Prince Gaston, Count of Eu, and Isabel, Princess Imperial of Brazil.",
+            "Fifty Shades Darker (film)\nFifty Shades Darker is a 2017 American erotic romantic drama film directed by James Foley and written by Niall Leonard, based on E. L. James's novel of the same name. The second film in the \"Fifty Shades\" film series, it is the sequel to the 2015 film \"Fifty Shades of Grey\". The film stars Dakota Johnson and Jamie Dornan as Anastasia Steele and Christian Grey, respectively, with Eric Johnson, Eloise Mumford, Bella Heathcote, Rita Ora, Luke Grimes, Victor Rasuk, Kim Basinger and Marcia Gay Harden in supporting roles.",
+            "Joseph Napolitan\nJoseph Napolitan (March 6, 1929 \u2013 December 2, 2013) was an American political consultant, who worked as a general consultant on over 100 political campaigns in the United States, and many others throughout the world. Napolitan served on the 1960 Kennedy for President campaign, was Director of Media for the 1968 Hubert Humphrey campaign, and received the French Legion of Honour in 2005. He died on December 2, 2013 at the age of 84.",
+            "American Spring (Anti-Flag album)\nAmerican Spring is Anti-Flag's ninth studio album. The album was released on May 26, 2015. The album marks the band's first release for Spinefarm Records after releasing their previous two albums on SideOneDummy Records. A lyric music video for the album's first single, \"Fabled World\" was released in March 2015. The second single \"Sky Is Falling\" was released a month later. On May 19, A music video for Brandenburg Gate was released.",
+            "Jon St. Andre\nJon St. Andre (born December 8, 1939 in Ishpeming, Michigan) is an American former ski jumper who competed in the 1960 Winter Olympics.",
+            "Robbers' Roost (film)\nRobbers' Roost is a 1955 American Western film directed by Sidney Salkow and written by John O'Dea, Sidney Salkow and Maurice Geraghty. The film stars George Montgomery, Richard Boone, Sylvia Findley, Bruce Bennett, Peter Graves and Tony Romano. It is based on the novel \"Robbers' Roost\" by Zane Grey. The film was released on May 30, 1955, by United Artists.",
+            "Lee Sung-jae\nLee Sung-jae (born August 23, 1970) is a South Korean actor. Among his notable works include the films \"Art Museum by the Zoo\", \"Attack the Gas Station\", \"Barking Dogs Never Bite\", and \"Kick the Moon\", as well as the television series \"Lie\" and \"A Wife's Credentials\".",
+            "Amy Smart\nAmy Lysle Smart (born March 26, 1976) is an American actress and former fashion model. Smart began her career modeling in Italy and subsequently enrolled in acting school. Her first role in film was in director Martin Kunert's film \"Campfire Tales.\" She has since appeared in numerous films, including \"Varsity Blues\" (1999), \"Road Trip\" (2000), \"Rat Race\" (2001), \"The Butterfly Effect\" (2004), \"Just Friends\" (2005), \"Mirrors\" (2008), and Tyler Perry's \"The Single Moms Club\" (2014)."
+        ],
+        "thoughts": [
+            "The American actress born on March 26, 1960 is Jennifer Grey.",
+            "Jennifer Grey:\n- Dirty Dancing (1987)\n- Ferris Bueller's Day Off (1986)\n- Red Oaks (TV series, 2014-2017)\n\nE.L. James:\n- Fifty Shades of Grey (2015)\n- Fifty Shades Darker (2017)\n- Fifty Shades Freed (2018)\n\nSidney Salkow:\n- Robbers' Roost (1955)\n\nLee Sung-jae:\n- Art Museum by the Zoo\n- Attack the Gas Station\n- Barking Dogs Never Bite\n- Kick the Moon\n- Lie (TV series)\n- A Wife's Credentials (TV series)",
+            "None of the works directed by the identified actresses have a title or theme related to 'wind'.",
+            "None of the works directed by the identified actresses have a title or theme related to 'wind'. Therefore, there is no correct actress to select based on works related to 'wind'."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Wind was directed by which American actress born on March 26, 1960?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify American actresses born on March 26, 1960.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve movies directed by the actresses identified in step 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Check if any of the movies retrieved in step 2 has the title 'Wind'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which actress directed the movie titled 'Wind'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The graph starts by identifying actresses born on March 26, 1960, which is crucial for narrowing down the individuals who could have directed the movie 'Wind'. Next, it retrieves movies directed by these actresses to determine if any include the title 'Wind', and finally confirms the director of the movie."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Wind (film)\nWind is a 1992 film. The movie was directed by Carroll Ballard and starred Matthew Modine, Jennifer Grey and Cliff Robertson.",
+            "Jennifer Grey\nJennifer Grey (born March 26, 1960) is an American actress. She is known for her roles in the 1980s films \"Ferris Bueller's Day Off\" (1986) and \"Dirty Dancing\" (1987), for which Grey earned a Golden Globe Award nomination. She is also known for her 2010 victory in season eleven of \"Dancing with the Stars\". Grey is the daughter of Academy Award\u2013winning actor Joel Grey and former actress/singer Jo Wilder, Grey currently stars in the Amazon Studios comedy series \"Red Oaks\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "The SpongeBob SquarePants Movie\nThe SpongeBob SquarePants Movie is a 2004 American live-action/animated comedy film based on the Nickelodeon television series \"SpongeBob SquarePants\". The film was co-written, directed, and co-produced by series creator Stephen Hillenburg and starred the series' cast of Tom Kenny, Bill Fagerbakke, Clancy Brown, Rodger Bumpass and Mr. Lawrence, with guest performances by Scarlett Johansson, Jeffrey Tambor, Alec Baldwin and David Hasselhoff. It was produced by Hillenburg's production company United Plankton Pictures and Nickelodeon Movies, it was distributed by Paramount Pictures and was also the first film in the \"SpongeBob SquarePants\" film series. In the film, Plankton devises a plan to steal King Neptune's crown and send it to Shell City, and SpongeBob and Patrick must retrieve the crown to save Mr. Krabs from King Neptune's wrath and Bikini Bottom from Plankton's plan.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "Soad Hosny\nSoad Hosny (Arabic: \u0633\u0639\u0627\u062f \u062d\u0633\u0646\u0649\u200e \u200e \u00a0] : January 26, 1943 \u2013 June 21, 2001) was an Egyptian actress born in Cairo. She was known as the \"Cinderella of Egyptian cinema\" and one of the most influential actresses in the Middle East and the Arab world. She ascended to stardom at the end of the 1950s, performing in more than 83 films between 1959 and 1991. A majority of her films were shot in the 1960s and 1970s. Her final screen appearance was in the 1991 film, \"The Shepherd and the Women\", directed by her ex-husband, Ali Badrakhan.",
+            "Fifty Shades Freed (film)\nFifty Shades Freed is an upcoming American erotic romantic drama film directed by James Foley and written by Niall Leonard, based on the novel of same name by E. L. James. It is the final film in the \"Fifty Shades\" trilogy, and a sequel to \"Fifty Shades of Grey\" (2015) and \"Fifty Shades Darker\" (2017). The film stars Dakota Johnson and Jamie Dornan as Anastasia Steele and Christian Grey, respectively.",
+            "Prince Lu\u00eds of Orl\u00e9ans-Braganza (1878\u20131920)\nPrince Lu\u00eds of Orl\u00e9ans-Braganza (26 January 1878 \u2013 26 March 1920), was a claimant to the former throne of the Empire of Brazil. He was born in Brazil, the second son of Prince Gaston, Count of Eu, and Isabel, Princess Imperial of Brazil.",
+            "Fifty Shades Darker (film)\nFifty Shades Darker is a 2017 American erotic romantic drama film directed by James Foley and written by Niall Leonard, based on E. L. James's novel of the same name. The second film in the \"Fifty Shades\" film series, it is the sequel to the 2015 film \"Fifty Shades of Grey\". The film stars Dakota Johnson and Jamie Dornan as Anastasia Steele and Christian Grey, respectively, with Eric Johnson, Eloise Mumford, Bella Heathcote, Rita Ora, Luke Grimes, Victor Rasuk, Kim Basinger and Marcia Gay Harden in supporting roles.",
+            "Joseph Napolitan\nJoseph Napolitan (March 6, 1929 \u2013 December 2, 2013) was an American political consultant, who worked as a general consultant on over 100 political campaigns in the United States, and many others throughout the world. Napolitan served on the 1960 Kennedy for President campaign, was Director of Media for the 1968 Hubert Humphrey campaign, and received the French Legion of Honour in 2005. He died on December 2, 2013 at the age of 84.",
+            "American Spring (Anti-Flag album)\nAmerican Spring is Anti-Flag's ninth studio album. The album was released on May 26, 2015. The album marks the band's first release for Spinefarm Records after releasing their previous two albums on SideOneDummy Records. A lyric music video for the album's first single, \"Fabled World\" was released in March 2015. The second single \"Sky Is Falling\" was released a month later. On May 19, A music video for Brandenburg Gate was released.",
+            "Jon St. Andre\nJon St. Andre (born December 8, 1939 in Ishpeming, Michigan) is an American former ski jumper who competed in the 1960 Winter Olympics.",
+            "Robbers' Roost (film)\nRobbers' Roost is a 1955 American Western film directed by Sidney Salkow and written by John O'Dea, Sidney Salkow and Maurice Geraghty. The film stars George Montgomery, Richard Boone, Sylvia Findley, Bruce Bennett, Peter Graves and Tony Romano. It is based on the novel \"Robbers' Roost\" by Zane Grey. The film was released on May 30, 1955, by United Artists.",
+            "Amy Smart\nAmy Lysle Smart (born March 26, 1976) is an American actress and former fashion model. Smart began her career modeling in Italy and subsequently enrolled in acting school. Her first role in film was in director Martin Kunert's film \"Campfire Tales.\" She has since appeared in numerous films, including \"Varsity Blues\" (1999), \"Road Trip\" (2000), \"Rat Race\" (2001), \"The Butterfly Effect\" (2004), \"Just Friends\" (2005), \"Mirrors\" (2008), and Tyler Perry's \"The Single Moms Club\" (2014).",
+            "Fifty Shades (film series)\nFifty Shades is an American film series that consists of three erotic romantic drama films, based on the \" Fifty Shades\" trilogy by English author E. L. James. It is distributed by Universal Studios and stars Dakota Johnson and Jamie Dornan as the lead roles Anastasia Steele and Christian Grey, respectively. Sam Taylor-Johnson directed the first film and initially she was slated to be the director of the sequels as well, however subsequently the second and third films were directed by James Foley."
+        ],
+        "thoughts": [
+            "The American actress born on March 26, 1960 is Jennifer Grey.",
+            "Movies directed by Jennifer Grey:\n- No movies directed by Jennifer Grey were found.\n\nMovies directed by Dakota Johnson:\n- No movies directed by Dakota Johnson were found.\n\nMovies directed by Jamie Dornan:\n- No movies directed by Jamie Dornan were found.\n\nMovies directed by Sam Taylor-Johnson:\n- Fifty Shades of Grey (2015)\n- Fifty Shades Darker (2017)",
+            "None of the movies retrieved in step 2 have the title 'Wind'.",
+            "The movie titled 'Wind' does not appear to be in the list of movies retrieved, so we are unable to determine which actress directed it."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Wind was directed by which American actress born on March 26, 1960?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the full title of works directed by American actresses born on March 26, 1960.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve information on American actresses born on March 26, 1960.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "List works directed by each identified actress.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Match the work titled 'Wind' with the director from the list of works and directors.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins by attempting to directly find the title of works directed by actresses with the specified birth date (node 1), while independently retrieving a list of actresses born on March 26, 1960 (node 2). Once the actresses are identified (node 2), their directorial works are retrieved (node 3). The final step (node 4) matches the work titled 'Wind' with the correct director by collating results from both the direct title lookup (node 1) and the list of directors and their works (nodes 3)."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Wind (film)\nWind is a 1992 film. The movie was directed by Carroll Ballard and starred Matthew Modine, Jennifer Grey and Cliff Robertson.",
+            "Jennifer Grey\nJennifer Grey (born March 26, 1960) is an American actress. She is known for her roles in the 1980s films \"Ferris Bueller's Day Off\" (1986) and \"Dirty Dancing\" (1987), for which Grey earned a Golden Globe Award nomination. She is also known for her 2010 victory in season eleven of \"Dancing with the Stars\". Grey is the daughter of Academy Award\u2013winning actor Joel Grey and former actress/singer Jo Wilder, Grey currently stars in the Amazon Studios comedy series \"Red Oaks\".",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Soad Hosny\nSoad Hosny (Arabic: \u0633\u0639\u0627\u062f \u062d\u0633\u0646\u0649\u200e \u200e \u00a0] : January 26, 1943 \u2013 June 21, 2001) was an Egyptian actress born in Cairo. She was known as the \"Cinderella of Egyptian cinema\" and one of the most influential actresses in the Middle East and the Arab world. She ascended to stardom at the end of the 1950s, performing in more than 83 films between 1959 and 1991. A majority of her films were shot in the 1960s and 1970s. Her final screen appearance was in the 1991 film, \"The Shepherd and the Women\", directed by her ex-husband, Ali Badrakhan.",
+            "Alexander Garvin\nAlexander Garvin (born March 8, 1941) is a noted American urban planner, educator, and author. He is currently in private practice at AGA Public Realm Strategists in New York City and is also an adjunct professor at the Yale School of Architecture, where he has taught since 1967. He is widely known for creating the vision plan of Atlanta's proposed greenbelt park system, the Atlanta BeltLine, serving as planning director for New York City\u2019s 2012 Olympic Games bid, and overseeing efforts to redevelop lower Manhattan after the September 11th attacks as Vice President of Planning, Design, and Development for the Lower Manhattan Development Corporation. Garvin has also written a number of books on the subject of planning including \"The Planning Game: Lessons from Great Cities\" and \"The American City: What Works, What Doesn't\". Garvin has also served in a variety of positions in New York City government including director of comprehensive planning.",
+            "My Bride is a Mermaid\nMy Bride Is a Mermaid (Japanese: \u702c\u6238\u306e\u82b1\u5ac1 , Hepburn: Seto no Hanayome , lit. \"The Inland Sea Bride\") is a Japanese manga series written by Tahiko Kimura. The manga was serialized between the September 2002 and May 2009 issues of \"Monthly Gangan Wing\", and the June and December 2010 issues of \"Monthly Gangan Joker\", both published by Square Enix. In 2004, a drama CD based on the series was released by Frontier Works. A 26-episode anime television series adaptation animated by Gonzo and directed by Seiji Kishi aired in Japan on TV Tokyo between April and September 2007. Two original video animation episodes were released in November 2008 and January 2009. Odex, a Singaporean distributor, released it in English in Singapore as \"Seto No Hana Yome\". The anime was licensed for a North American distribution by Funimation Entertainment and was released in 2010 under the title \"My Bride Is a Mermaid!\".",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Bandwagon (U.S. TV series)\nBandwagon is a half-hour music program featuring traditional dance music, most notably polka, performed in front of a ballroom audience dancing along. The program is produced and broadcast by KEYC-TV in Mankato, Minnesota. The show is currently in its 56th year, making it possibly the longest-running televised music program in the world. The first music show on KEYC aired on November 21, 1960; the title \"Bandwagon\" was added on March 30, 1961.",
+            "Fifty Shades Darker\nFifty Shades Darker is a 2012 erotic romance novel by British author E. L. James. It is the second instalment in the \"Fifty Shades\" trilogy that traces the deepening relationship between a college graduate, Anastasia Steele, and a young business magnate, Christian Grey. The first and third volumes, \"Fifty Shades of Grey\" and \"Fifty Shades Freed\", were published in 2011 and 2012. The novel is published by Vintage Books and reached No. 1 on the \"USA Today\" best seller list.",
+            "Fifty Shades Freed (film)\nFifty Shades Freed is an upcoming American erotic romantic drama film directed by James Foley and written by Niall Leonard, based on the novel of same name by E. L. James. It is the final film in the \"Fifty Shades\" trilogy, and a sequel to \"Fifty Shades of Grey\" (2015) and \"Fifty Shades Darker\" (2017). The film stars Dakota Johnson and Jamie Dornan as Anastasia Steele and Christian Grey, respectively.",
+            "Prince Lu\u00eds of Orl\u00e9ans-Braganza (1878\u20131920)\nPrince Lu\u00eds of Orl\u00e9ans-Braganza (26 January 1878 \u2013 26 March 1920), was a claimant to the former throne of the Empire of Brazil. He was born in Brazil, the second son of Prince Gaston, Count of Eu, and Isabel, Princess Imperial of Brazil.",
+            "Fifty Shades Darker (film)\nFifty Shades Darker is a 2017 American erotic romantic drama film directed by James Foley and written by Niall Leonard, based on E. L. James's novel of the same name. The second film in the \"Fifty Shades\" film series, it is the sequel to the 2015 film \"Fifty Shades of Grey\". The film stars Dakota Johnson and Jamie Dornan as Anastasia Steele and Christian Grey, respectively, with Eric Johnson, Eloise Mumford, Bella Heathcote, Rita Ora, Luke Grimes, Victor Rasuk, Kim Basinger and Marcia Gay Harden in supporting roles.",
+            "Joseph Napolitan\nJoseph Napolitan (March 6, 1929 \u2013 December 2, 2013) was an American political consultant, who worked as a general consultant on over 100 political campaigns in the United States, and many others throughout the world. Napolitan served on the 1960 Kennedy for President campaign, was Director of Media for the 1968 Hubert Humphrey campaign, and received the French Legion of Honour in 2005. He died on December 2, 2013 at the age of 84.",
+            "List of Felicity episodes\n\"Felicity\" is an American drama television series created by J. J. Abrams & Matt Reeves. Abrams and Reeves share executive producer duties with Brian Grazer, Tony Krantz, Jennifer Levin, Ron Howard, John Eisendrath & Laurie McCarthy. It was produced by Touchstone Television (now known as ABC Studios) and Imagine Television. The series first aired on September 29, 1998, and ended on May 22, 2002 after four seasons on The WB.",
+            "American Spring (Anti-Flag album)\nAmerican Spring is Anti-Flag's ninth studio album. The album was released on May 26, 2015. The album marks the band's first release for Spinefarm Records after releasing their previous two albums on SideOneDummy Records. A lyric music video for the album's first single, \"Fabled World\" was released in March 2015. The second single \"Sky Is Falling\" was released a month later. On May 19, A music video for Brandenburg Gate was released.",
+            "Jon St. Andre\nJon St. Andre (born December 8, 1939 in Ishpeming, Michigan) is an American former ski jumper who competed in the 1960 Winter Olympics.",
+            "Robbers' Roost (film)\nRobbers' Roost is a 1955 American Western film directed by Sidney Salkow and written by John O'Dea, Sidney Salkow and Maurice Geraghty. The film stars George Montgomery, Richard Boone, Sylvia Findley, Bruce Bennett, Peter Graves and Tony Romano. It is based on the novel \"Robbers' Roost\" by Zane Grey. The film was released on May 30, 1955, by United Artists.",
+            "Amy Smart\nAmy Lysle Smart (born March 26, 1976) is an American actress and former fashion model. Smart began her career modeling in Italy and subsequently enrolled in acting school. Her first role in film was in director Martin Kunert's film \"Campfire Tales.\" She has since appeared in numerous films, including \"Varsity Blues\" (1999), \"Road Trip\" (2000), \"Rat Race\" (2001), \"The Butterfly Effect\" (2004), \"Just Friends\" (2005), \"Mirrors\" (2008), and Tyler Perry's \"The Single Moms Club\" (2014).",
+            "Fifty Shades (film series)\nFifty Shades is an American film series that consists of three erotic romantic drama films, based on the \" Fifty Shades\" trilogy by English author E. L. James. It is distributed by Universal Studios and stars Dakota Johnson and Jamie Dornan as the lead roles Anastasia Steele and Christian Grey, respectively. Sam Taylor-Johnson directed the first film and initially she was slated to be the director of the sequels as well, however subsequently the second and third films were directed by James Foley."
+        ],
+        "thoughts": [
+            "The full title of works directed by American actresses born on March 26, 1960 is \"Dirty Dancing\" (1987) directed by Jennifer Grey.",
+            "Jennifer Grey is the only American actress born on March 26, 1960. She is known for her roles in the 1980s films \"Ferris Bueller's Day Off\" and \"Dirty Dancing\", as well as her victory in season eleven of \"Dancing with the Stars\". She currently stars in the Amazon Studios comedy series \"Red Oaks\".",
+            "1. Wind (film) - Directed by Carroll Ballard\n2. Fifty Shades Darker (film) - Directed by James Foley\n3. Fifty Shades Freed (film) - Directed by James Foley\n4. Fifty Shades Darker (film) - Directed by James Foley\n5. Fifty Shades (film series) - Directed by Sam Taylor-Johnson (first film) and James Foley (second and third films)\n6. Robbers' Roost (film) - Directed by Sidney Salkow\n7. List of Felicity episodes - TV series created by J. J. Abrams & Matt Reeves",
+            "1. Wind (film) - Directed by Carroll Ballard"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Wind was directed by which American actress born on March 26, 1960?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the list of American actresses born on March 26, 1960.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify if any actress from the retrieved list directed a film called 'Wind'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph begins by first retrieving a list of American actresses born on March 26, 1960. Once this list is obtained, the graph proceeds by examining the filmography of these actresses to check if any of them directed the film 'Wind'."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "Kajraare\nKajraare is a Bollywood film that released on 15 October 2010. The film was directed by Pooja Bhatt and starred Himesh Reshammiya and the Pakistani actress Sara Loren. Reshammiya plays a singer who falls in love with a bar dancer and the film is centred on how they find true love. It is the first Hindi film to be shot in Petra, often called \"the eighth wonder of the world.\"",
+            "Wind (film)\nWind is a 1992 film. The movie was directed by Carroll Ballard and starred Matthew Modine, Jennifer Grey and Cliff Robertson.",
+            "Arrival (film)\nArrival is a 2016 American science fiction film directed by Denis Villeneuve and written by Eric Heisserer, based on the 1998 short story \"Story of Your Life\" by Ted Chiang. It stars Amy Adams, Jeremy Renner, and Forest Whitaker, and follows linguist Louise Banks, who is enlisted by the U.S. Army to help translate communications from one of several extraterrestrial craft that have appeared across the world. She must find out why they have arrived on Earth before tensions lead into war. The film had its world premiere at the Venice Film Festival on September 1, 2016, and was released in the United States on November 11, 2016, in IMAX by Paramount Pictures.",
+            "A Burning Passion: The Margaret Mitchell Story\nA Burning Passion: The Margaret Mitchell Story is a 1994 biographical television film directed by Larry Peerce. The film is about the Pulitzer Prize-winning novel writer Margaret Mitchell, who landed to fame when she wrote \"Gone with the Wind\".",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Meet Market (film)\nMeet Market is a 2004 film directed by Charlie Loventhal and starring Alan Tudyk, Krista Allen, Elizabeth Berkley, Laurie Holden and Julian McMahon. The movie is a comedy about singles in Los Angeles who attempt to find love in the aisles of a supermarket. The film was released directly to DVD on February 12, 2008.",
+            "Winch\nA winch is a mechanical device that is used to pull in (wind up) or let out (wind out) or otherwise adjust the \"tension\" of a rope or wire rope (also called \"cable\" or \"wire cable\"). In its simplest form it consists of a spool and attached hand crank. In larger forms, winches stand at the heart of machines as diverse as tow trucks, steam shovels and elevators. The spool can also be called the winch drum. More elaborate designs have gear assemblies and can be powered by electric, hydraulic, pneumatic or internal combustion drives. Some may include a solenoid brake and/or a mechanical brake or ratchet and pawl device that prevents it from unwinding unless the pawl is retracted.",
+            "2002\u201303 Serie A\nIn the 2002\u201303 season, the Serie A, the major football Italian professional league, was composed by 18 teams, for the 15th consecutive time from season 1988\u201389.",
+            "The Name of the Wind\nThe Name of the Wind (The Kingkiller Chronicle: Day One) is a fantasy novel by Patrick Rothfuss, the first book in a series called \"The Kingkiller Chronicle\". It was published in 2007 by DAW Books.",
+            "Phoenix (1998 film)\nPhoenix is a 1998 American crime film directed by British director Danny Cannon and starring Ray Liotta. Liotta plays a cop whose gambling debt leaves him indebted to the underworld and desperate to find a way out without compromising his principles.",
+            "Joshua D. Zimmerman\nJoshua D. Zimmerman (born 1966) is Professor of History at Yeshiva University, where he holds the Eli and Diana Zborowski Professorial Chair in Interdisciplinary Holocaust Studies. He is the author of \"The Polish Underground and the Jews, 1939-1945\" by Cambridge University Press (2015, hardback) and of \"Contested Memories. Poles and Jews during the Holocaust and Its Aftermath\" by Rutgers University Press (2003, hardcover) as well as \"Poles, Jews and the Politics of Nationality: The Jewish Labor Bund and the Polish Socialist Party in Late Czarist Russia, 1892\u20131914.\"<ref name=\"yu.edu/faculty\"> </ref> Zimmerman graduated from the University of California at Santa Cruz in 1989 with a BA(Hons) in History, and with the M.A. in History from UCLA in 1993. In February 1998 he completed his PhD thesis in Comparative History at Brandeis University, and in the summer 2004 was appointed to the position of Associate Professor of History at Yeshiva University in New York City. Zimmerman is an American author proficient in Yiddish, Polish, Hebrew, Russian, and French.<ref name=\"yu.edu/cv\"> </ref>",
+            "Gilberto Sosa\nGilberto Sosa (born 23 September 1960 in Mexico City) is a retired Mexican boxer who competed in the men's light flyweight division. He represented his native country at the 1979 Pan American Games, where he captured the bronze medal; at the 1979 Latin American Boxing Championship (\"Campeonato Latinoamericano de Boxeo\" ), where he also won the bronze medal, and at 1980 Summer Olympics in Moscow.",
+            "Hogan Wharton\nRobert Glen \"Hogan\" Wharton (December 13, 1935 \u2013 October 8, 2008) was an American football player. He attended the University of Houston where he played college football at the tackle position for the Houston Cougars football team from 1956 to 1958. He was named lineman of the year in the Missouri Valley Conference in 1957, and the following year he was selected by the American Football Coaches Association as a first-team tackle on its 1958 College Football All-America Team. Wharton later played professional football in the newly formed American Football League, playing at the guard position for the Houston Oilers during the first four years of the club's existence from 1960 to 1963, including the 1960 Houston Oilers team that won the first AFL championship. He was cut by the Oilers in September 1964.",
+            "Ivory (wrestler)\nLisa Mary Moretti (born November 26, 1961) is an American retired professional wrestler. She is best known for her time with World Wrestling Entertainment (WWE, previously the World Wrestling Federation) between 1999 and 2005 under the ring name Ivory. Moretti began her career and first found national exposure in the independent promotion Gorgeous Ladies of Wrestling (GLOW), where she performed as Tina Ferrari from the mid-to-late-1980s. Moretti debuted in the World Wrestling Federation in 1999 as the manager for D'Lo Brown & Mark Henry. She won the WWE Women's Championship twice, before becoming a part of the villainous Right to Censor, a storyline stable of characters with harshly conservative sociopolitical views.",
+            "Elijah Wood\nElijah Jordan Wood (born January 28, 1981) is an American actor, voice actor, DJ, and producer. He is best known for his high-profile leading role as Frodo Baggins in Peter Jackson's epic film trilogy \"The Lord of the Rings\" (2001\u201303).",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003."
+        ],
+        "thoughts": [
+            "There are no American actresses born on March 26, 1960 listed in the provided information.",
+            "The actress Pooja Bhatt directed a film called 'Kajraare', not 'Wind'. Therefore, none of the actresses from the retrieved list directed a film called 'Wind'."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Wind was directed by which American actress born on March 26, 1960?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve a list of American actresses born on March 26, 1960.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which of the actresses from the list directed a film called 'Wind'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph is designed to first collect a list of American actresses born on March 26, 1960. After this data is retrieved, a reasoning step checks which actress in this list directed a film titled 'Wind'. This two-step process ensures we accurately find the actress in question by first filtering by birthdate and then by their role as a director."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "2002\u201303 Serie A\nIn the 2002\u201303 season, the Serie A, the major football Italian professional league, was composed by 18 teams, for the 15th consecutive time from season 1988\u201389.",
+            "Joshua D. Zimmerman\nJoshua D. Zimmerman (born 1966) is Professor of History at Yeshiva University, where he holds the Eli and Diana Zborowski Professorial Chair in Interdisciplinary Holocaust Studies. He is the author of \"The Polish Underground and the Jews, 1939-1945\" by Cambridge University Press (2015, hardback) and of \"Contested Memories. Poles and Jews during the Holocaust and Its Aftermath\" by Rutgers University Press (2003, hardcover) as well as \"Poles, Jews and the Politics of Nationality: The Jewish Labor Bund and the Polish Socialist Party in Late Czarist Russia, 1892\u20131914.\"<ref name=\"yu.edu/faculty\"> </ref> Zimmerman graduated from the University of California at Santa Cruz in 1989 with a BA(Hons) in History, and with the M.A. in History from UCLA in 1993. In February 1998 he completed his PhD thesis in Comparative History at Brandeis University, and in the summer 2004 was appointed to the position of Associate Professor of History at Yeshiva University in New York City. Zimmerman is an American author proficient in Yiddish, Polish, Hebrew, Russian, and French.<ref name=\"yu.edu/cv\"> </ref>",
+            "Gilberto Sosa\nGilberto Sosa (born 23 September 1960 in Mexico City) is a retired Mexican boxer who competed in the men's light flyweight division. He represented his native country at the 1979 Pan American Games, where he captured the bronze medal; at the 1979 Latin American Boxing Championship (\"Campeonato Latinoamericano de Boxeo\" ), where he also won the bronze medal, and at 1980 Summer Olympics in Moscow.",
+            "Hogan Wharton\nRobert Glen \"Hogan\" Wharton (December 13, 1935 \u2013 October 8, 2008) was an American football player. He attended the University of Houston where he played college football at the tackle position for the Houston Cougars football team from 1956 to 1958. He was named lineman of the year in the Missouri Valley Conference in 1957, and the following year he was selected by the American Football Coaches Association as a first-team tackle on its 1958 College Football All-America Team. Wharton later played professional football in the newly formed American Football League, playing at the guard position for the Houston Oilers during the first four years of the club's existence from 1960 to 1963, including the 1960 Houston Oilers team that won the first AFL championship. He was cut by the Oilers in September 1964.",
+            "Ivory (wrestler)\nLisa Mary Moretti (born November 26, 1961) is an American retired professional wrestler. She is best known for her time with World Wrestling Entertainment (WWE, previously the World Wrestling Federation) between 1999 and 2005 under the ring name Ivory. Moretti began her career and first found national exposure in the independent promotion Gorgeous Ladies of Wrestling (GLOW), where she performed as Tina Ferrari from the mid-to-late-1980s. Moretti debuted in the World Wrestling Federation in 1999 as the manager for D'Lo Brown & Mark Henry. She won the WWE Women's Championship twice, before becoming a part of the villainous Right to Censor, a storyline stable of characters with harshly conservative sociopolitical views.",
+            "Elijah Wood\nElijah Jordan Wood (born January 28, 1981) is an American actor, voice actor, DJ, and producer. He is best known for his high-profile leading role as Frodo Baggins in Peter Jackson's epic film trilogy \"The Lord of the Rings\" (2001\u201303).",
+            "Miss American Beauty 1963\nThis is the first edition of the Miss American Beauty pageant. The Miss American Beauty pageant was created to select a USA representative to the Miss International. A live pageant was held from 1963 to 1967. After that time, there is no actual documentation that a pageant was actually held for the USA representative. The Miss American Beauty title continued to be used for the USA representative to Miss International until approximately 2003."
+        ],
+        "thoughts": [
+            "There are no American actresses born on March 26, 1960 listed in the provided information.",
+            "The actress who directed a film called 'Wind' is Emma Tammi."
+        ],
+        "is_best": false
+    }
+]

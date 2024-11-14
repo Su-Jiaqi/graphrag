@@ -1,0 +1,509 @@
+[
+    {
+        "question": "Han Chae-young was in the 2009 drama that aired on what network?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the list of dramas that Han Chae-young acted in.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Filter to find dramas from the year 2009 from the list of Han Chae-young's dramas.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the network that aired the 2009 drama(s) Han Chae-young was in.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph breaks down the question by first retrieving all the dramas Han Chae-young has acted in. Then, it filters these to identify which ones were from the year 2009. Finally, it finds out which network aired the drama(s) identified in the second step."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "Boys Over Flowers (TV series)\nBoys Over Flowers () is a 2009 South Korean television series starring Lee Min-ho, Ku Hye-sun, Kim Hyun-joong (of SS501), Kim Bum, Kim Joon (of T-Max) and Kim So-eun. It aired on KBS2 from January 5 to March 31, 2009 on Mondays and Tuesdays at 22:00 for 25 episodes.",
+            "Girlfriends (2009 film)\nGirlfriends () is a 2009 South Korean romantic comedy film starring Kang Hye-jung, Han Chae-young, Huh E-jae and Bae Soo-bin.",
+            "A Man Called God\nA Man Called God (; also known as The Man Almighty) is a 2010 South Korean television series starring Song Il-gook, Han Chae-young, Kim Min-jong, Han Go-eun and Yoo In-young. It aired on MBC from March 6 to May 23, 2010 on Saturdays and Sundays at 21:45 for 24 episodes.",
+            "Only You (2005 TV series)\nOnly You is a Korean television series produced and broadcast by SBS in early 2005. It is the only Korean drama shot in Italy. The city in which has been shot the drama in Italy is Vicenza which is located in the north East part, between Venice and Verona (about 50 km distant from Venice). It features Jo Hyun-jae (whose former agency, , is the program's production company) and Han Chae-young as the main protagonists. It was first aired in South Korea starting 4 June 2005.",
+            "Cain and Abel (TV series)\nCain and Abel () is a 2009 South Korean television series starring So Ji-sub, Shin Hyun-joon, Han Ji-min, and Chae Jung-an. It aired on SBS from February 18 to April 23, 2009 on Wednesdays and Thursdays at 21:55 for 20 episodes.",
+            "The Influence (film)\nThe Influence () is a four-part online film starring Lee Byung-hun and Han Chae-young. The movie, which delves into the realms of mystery and fantasy, takes place over the time period 1907\u20132010.",
+            "Ad Genius Lee Tae-baek\nAd Genius Lee Tae-baek () is a 2013 South Korean television series starring Jin Goo, Park Ha-sun, Jo Hyun-jae and Han Chae-young. Set in the cutthroat field of advertising where creativity and competition coexist, the drama is the success story of underdog Lee Tae-baek who fights his way to becoming the best ad man in the business. It aired on KBS2 from February 4 to March 26, 2013 on Mondays and Tuesdays at 21:55 for 16 episodes.",
+            "Fireworks (2006 TV series)\nFireworks (; lit. \"Fireworks Display\" or \"Exhibition of Fireworks\") is a 2006 South Korean television series starring Han Chae-young, Kang Ji-hwan, Park Eun-hye and Yoon Sang-hyun. It aired on MBC from May 13 to July 9, 2006 on Saturdays and Sundays at 21:40 for 17 episodes.",
+            "Sassy Girl Chun-hyang\nSassy Girl Chun-hyang (; lit. Delightful Girl Chun-hyang) is a 2005 South Korean television series starring Han Chae-young, Jae Hee, Uhm Tae-woong and Park Si-eun. It aired on KBS2 from January 3 to March 1, 2005 on Mondays and Tuesdays at 21:55 for 17 episodes.",
+            "Bel Ami (TV series)\nBel Ami (; also known as \"Pretty Boy\", and \"'Pretty Man\", is a South Korean romantic comedy television series starring Jang Keun-suk, IU, Lee Jang-woo and Han Chae-young. Based on the same-titled 17-volume manhwa by Chon Kye-young, it aired on KBS2 from November 20, 2013 to January 9, 2014 on Wednesdays and Thursdays at 21:55 for 16 episodes."
+        ],
+        "thoughts": [
+            "1. Autumn in My Heart\n2. Delightful Girl Choon-Hyang\n3. Only You\n4. Fireworks\n5. Boys Over Flowers\n6. A Man Called God\n7. Pretty Man",
+            "The dramas from the year 2009 from the list of Han Chae-young's dramas are:\n1. Boys Over Flowers",
+            "The 2009 drama \"Boys Over Flowers\" and the 2009 film \"Girlfriends\" in which Han Chae-young starred aired on KBS2."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Han Chae-young was in the 2009 drama that aired on what network?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the 2009 dramas that Han Chae-young starred in.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the specific 2009 drama starring Han Chae-young.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve information about the network that aired the identified 2009 drama starring Han Chae-young.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Consolidate the retrieved network information to conclude which network aired the drama.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The task of identifying the network on which the 2009 drama starring Han Chae-young aired involves multiple steps: first, identifying the specific drama from 2009 featuring her; next, retrieving data on that drama to find the network it aired on. This approach ensures clear identification of the drama before attempting to determine the network, following a logical sequence of retrieval and reasoning."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Cain and Abel (TV series)\nCain and Abel () is a 2009 South Korean television series starring So Ji-sub, Shin Hyun-joon, Han Ji-min, and Chae Jung-an. It aired on SBS from February 18 to April 23, 2009 on Wednesdays and Thursdays at 21:55 for 20 episodes.",
+            "Girlfriends (2009 film)\nGirlfriends () is a 2009 South Korean romantic comedy film starring Kang Hye-jung, Han Chae-young, Huh E-jae and Bae Soo-bin.",
+            "A Man Called God\nA Man Called God (; also known as The Man Almighty) is a 2010 South Korean television series starring Song Il-gook, Han Chae-young, Kim Min-jong, Han Go-eun and Yoo In-young. It aired on MBC from March 6 to May 23, 2010 on Saturdays and Sundays at 21:45 for 24 episodes.",
+            "Only You (2005 TV series)\nOnly You is a Korean television series produced and broadcast by SBS in early 2005. It is the only Korean drama shot in Italy. The city in which has been shot the drama in Italy is Vicenza which is located in the north East part, between Venice and Verona (about 50 km distant from Venice). It features Jo Hyun-jae (whose former agency, , is the program's production company) and Han Chae-young as the main protagonists. It was first aired in South Korea starting 4 June 2005.",
+            "Fireworks (2006 TV series)\nFireworks (; lit. \"Fireworks Display\" or \"Exhibition of Fireworks\") is a 2006 South Korean television series starring Han Chae-young, Kang Ji-hwan, Park Eun-hye and Yoon Sang-hyun. It aired on MBC from May 13 to July 9, 2006 on Saturdays and Sundays at 21:40 for 17 episodes.",
+            "Sassy Girl Chun-hyang\nSassy Girl Chun-hyang (; lit. Delightful Girl Chun-hyang) is a 2005 South Korean television series starring Han Chae-young, Jae Hee, Uhm Tae-woong and Park Si-eun. It aired on KBS2 from January 3 to March 1, 2005 on Mondays and Tuesdays at 21:55 for 17 episodes.",
+            "Ad Genius Lee Tae-baek\nAd Genius Lee Tae-baek () is a 2013 South Korean television series starring Jin Goo, Park Ha-sun, Jo Hyun-jae and Han Chae-young. Set in the cutthroat field of advertising where creativity and competition coexist, the drama is the success story of underdog Lee Tae-baek who fights his way to becoming the best ad man in the business. It aired on KBS2 from February 4 to March 26, 2013 on Mondays and Tuesdays at 21:55 for 16 episodes.",
+            "Bel Ami (TV series)\nBel Ami (; also known as \"Pretty Boy\", and \"'Pretty Man\", is a South Korean romantic comedy television series starring Jang Keun-suk, IU, Lee Jang-woo and Han Chae-young. Based on the same-titled 17-volume manhwa by Chon Kye-young, it aired on KBS2 from November 20, 2013 to January 9, 2014 on Wednesdays and Thursdays at 21:55 for 16 episodes.",
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "The Influence (film)\nThe Influence () is a four-part online film starring Lee Byung-hun and Han Chae-young. The movie, which delves into the realms of mystery and fantasy, takes place over the time period 1907\u20132010."
+        ],
+        "thoughts": [
+            "In 2009, Han Chae-young starred in the South Korean romantic comedy film \"Girlfriends\" alongside Kang Hye-jung, Huh E-jae, and Bae Soo-bin. Additionally, she also appeared in the South Korean television series \"Cain and Abel\" in 2009.",
+            "The specific 2009 drama starring Han Chae-young is \"Cain and Abel.\"",
+            "The 2009 drama \"Cain and Abel\" starring Han Chae-young aired on SBS.",
+            "Based on the retrieved network information, it can be concluded that the drama \"Cain and Abel\" aired on SBS."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Han Chae-young was in the 2009 drama that aired on what network?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve a list of dramas from 2009 that featured Han Chae-young.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which network aired each drama from the list featuring Han Chae-young in 2009.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the network that aired the drama starring Han Chae-young in 2009.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts by retrieving a list of dramas from 2009 that Han Chae-young starred in, as this narrows down potential dramas she could have been involved in during that year. Next, it involves determining the networks that broadcast each of these dramas. Finally, it consolidates this information to identify the specific network that aired the drama featuring Han Chae-young."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "A Man Called God\nA Man Called God (; also known as The Man Almighty) is a 2010 South Korean television series starring Song Il-gook, Han Chae-young, Kim Min-jong, Han Go-eun and Yoo In-young. It aired on MBC from March 6 to May 23, 2010 on Saturdays and Sundays at 21:45 for 24 episodes.",
+            "Girlfriends (2009 film)\nGirlfriends () is a 2009 South Korean romantic comedy film starring Kang Hye-jung, Han Chae-young, Huh E-jae and Bae Soo-bin.",
+            "Cain and Abel (TV series)\nCain and Abel () is a 2009 South Korean television series starring So Ji-sub, Shin Hyun-joon, Han Ji-min, and Chae Jung-an. It aired on SBS from February 18 to April 23, 2009 on Wednesdays and Thursdays at 21:55 for 20 episodes.",
+            "Fireworks (2006 TV series)\nFireworks (; lit. \"Fireworks Display\" or \"Exhibition of Fireworks\") is a 2006 South Korean television series starring Han Chae-young, Kang Ji-hwan, Park Eun-hye and Yoon Sang-hyun. It aired on MBC from May 13 to July 9, 2006 on Saturdays and Sundays at 21:40 for 17 episodes.",
+            "Sassy Girl Chun-hyang\nSassy Girl Chun-hyang (; lit. Delightful Girl Chun-hyang) is a 2005 South Korean television series starring Han Chae-young, Jae Hee, Uhm Tae-woong and Park Si-eun. It aired on KBS2 from January 3 to March 1, 2005 on Mondays and Tuesdays at 21:55 for 17 episodes.",
+            "Bel Ami (TV series)\nBel Ami (; also known as \"Pretty Boy\", and \"'Pretty Man\", is a South Korean romantic comedy television series starring Jang Keun-suk, IU, Lee Jang-woo and Han Chae-young. Based on the same-titled 17-volume manhwa by Chon Kye-young, it aired on KBS2 from November 20, 2013 to January 9, 2014 on Wednesdays and Thursdays at 21:55 for 16 episodes.",
+            "Ohlala Couple\nOhlala Couple () is a 2012 South Korean romantic comedy gender bender television series starring Kim Jung-eun, Shin Hyun-joon, Han Jae-suk and Han Chae-ah. It aired on KBS2 from October 1 to November 27, 2012 on Mondays and Tuesdays at 21:55 for 18 episodes.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Martemyan Ryutin\nMartemyan Nikitich Ryutin (Russian: \u041c\u0430\u0440\u0442\u0435\u043c\u044c\u044f\u0301\u043d \u041d\u0438\u043a\u0438\u0301\u0442\u0438\u0447 \u0420\u044e\u0301\u0442\u0438\u043d ) (1890\u20131937) was a Russian Marxist revolutionary, and a political functionary of the Russian Communist Party. Ryutin is best remembered as the leader of a pro-peasant political faction organized against Soviet leader Joseph Stalin in the early 1930s and as the primary author of a 200-page oppositional platform. Ryutin was arrested by the Soviet secret police, along with his co-thinkers, in what has come to be known as the Ryutin Affair. He was executed in January 1937 as part of the Yezhovshchina (Great Purge) conducted against political oppositionists and suspected economic \"wreckers\" and spies.",
+            "Operation Dragoon\nOperation Dragoon (initially Operation Anvil) was the code name for the Allied invasion of Southern France on 15August 1944. The operation was initially planned to be executed in conjunction with Operation Overlord, the Allied landing in the Normandy, but the lack of available resources led to a cancellation of the second landing. By July 1944 the landing was reconsidered, as the clogged-up ports in Normandy did not have the capacity to adequately supply the Allied forces. Concurrently, the French High Command pushed for a revival of the operation that would include large numbers of French troops. As a result, the operation was finally approved in July to be executed in August.",
+            "Louise Peete\nLouise Peete (September 20, 1880 \u2013 April 11, 1947) was a convicted American murderer. Peete was first convicted of murdering wealthy mining engineer Jacob C. Denton in 1920 and was sentenced to life in prison. She was paroled in April 1939. In May 1945, she was convicted of murdering her employer, Margaret Logan, and sentenced to death. She was executed in April 1947 making her the second, and one of only four women, to be executed in the California gas chamber.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Mission patch\nA mission patch is a cloth reproduction of a spaceflight mission emblem worn by astronauts and other personnel affiliated with that mission. It is usually executed as an embroidered patch. The term space patch is mostly applied to an emblem designed for a manned space mission. Traditionally, the patch is worn on the space suit that astronauts and cosmonauts wear when launched into space. Mission patches have been adopted by the crew and personnel of many other space ventures, public and private.",
+            "Chess problem\nA chess problem, also called a chess composition, is a puzzle set by somebody using chess pieces on a chess board, that presents the solver with a particular task to be achieved. For instance, a position might be given with the instruction that White is to move first, and checkmate Black in two moves against any possible defense. A person who creates such problems is known as a composer. There is a good deal of specialized jargon used in connection with chess problems; see glossary of chess problems for a list.",
+            "William Kidd\nWilliam Kidd, also \"Captain William Kidd\" or simply \"Captain Kidd\" (c.1654 \u2013 23 May 1701) was a Scottish sailor who was tried and executed for piracy after returning from a voyage to the Indian Ocean. Some modern historians deem his piratical reputation unjust."
+        ],
+        "thoughts": [
+            "There are no dramas from 2009 featuring Han Chae-young in the provided information.",
+            "- A Man Called God (2010) - MBC\n- Girlfriends (2009 film) - N/A\n- Cain and Abel (2009) - SBS\n- Fireworks (2006 TV series) - MBC\n- Sassy Girl Chun-hyang (2005) - KBS2\n- Bel Ami (2013-2014) - KBS2\n- Ohlala Couple (2012) - KBS2",
+            "The drama starring Han Chae-young in 2009 is \"Girlfriends,\" and it was not aired on a specific network. Therefore, the network that aired the drama is N/A (not applicable)."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Han Chae-young was in the 2009 drama that aired on what network?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the 2009 drama that Han Chae-young starred in.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the network that aired the drama identified in step 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph breaks down the task into two steps. First, we need to identify the specific drama from 2009 that Han Chae-young starred in. Secondly, once we know the drama, we can then find the network that aired it. This is a straightforward retrieval and reasoning task that follows a logical sequence, as one piece of information (the drama) leads directly to the next (the network)."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "Girlfriends (2009 film)\nGirlfriends () is a 2009 South Korean romantic comedy film starring Kang Hye-jung, Han Chae-young, Huh E-jae and Bae Soo-bin.",
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "Only You (2005 TV series)\nOnly You is a Korean television series produced and broadcast by SBS in early 2005. It is the only Korean drama shot in Italy. The city in which has been shot the drama in Italy is Vicenza which is located in the north East part, between Venice and Verona (about 50 km distant from Venice). It features Jo Hyun-jae (whose former agency, , is the program's production company) and Han Chae-young as the main protagonists. It was first aired in South Korea starting 4 June 2005.",
+            "The Influence (film)\nThe Influence () is a four-part online film starring Lee Byung-hun and Han Chae-young. The movie, which delves into the realms of mystery and fantasy, takes place over the time period 1907\u20132010.",
+            "A Man Called God\nA Man Called God (; also known as The Man Almighty) is a 2010 South Korean television series starring Song Il-gook, Han Chae-young, Kim Min-jong, Han Go-eun and Yoo In-young. It aired on MBC from March 6 to May 23, 2010 on Saturdays and Sundays at 21:45 for 24 episodes.",
+            "Ad Genius Lee Tae-baek\nAd Genius Lee Tae-baek () is a 2013 South Korean television series starring Jin Goo, Park Ha-sun, Jo Hyun-jae and Han Chae-young. Set in the cutthroat field of advertising where creativity and competition coexist, the drama is the success story of underdog Lee Tae-baek who fights his way to becoming the best ad man in the business. It aired on KBS2 from February 4 to March 26, 2013 on Mondays and Tuesdays at 21:55 for 16 episodes.",
+            "Cain and Abel (TV series)\nCain and Abel () is a 2009 South Korean television series starring So Ji-sub, Shin Hyun-joon, Han Ji-min, and Chae Jung-an. It aired on SBS from February 18 to April 23, 2009 on Wednesdays and Thursdays at 21:55 for 20 episodes.",
+            "Fireworks (2006 TV series)\nFireworks (; lit. \"Fireworks Display\" or \"Exhibition of Fireworks\") is a 2006 South Korean television series starring Han Chae-young, Kang Ji-hwan, Park Eun-hye and Yoon Sang-hyun. It aired on MBC from May 13 to July 9, 2006 on Saturdays and Sundays at 21:40 for 17 episodes.",
+            "WAGS (TV series)\nWAGS is an American reality documentary television series that premiered on August 18, 2015, on E! television network. The reality show chronicles both the professional and personal lives of several WAGs (an acronym for wives and girlfriends of high-profile sportspersons).",
+            "WAGS Atlanta\nWAGS Atlanta is an upcoming American reality television series that will premiere on the E! cable network in 2017, and is the second spin-off of \"WAGS\". The reality show chronicles both the professional and personal lives of several WAGs (an acronym for wives and girlfriends of high-profile sportspersons) which is set in Atlanta, Georgia.",
+            "Hit and Run, Run, Run\n\"Hit and Run, Run, Run\" is the fourth episode of the seventh season of the mystery drama television series \"Pretty Little Liars\", which aired on July 12, 2016, on the cable network Freeform. The episode was written by Maya Goldsmith and directed by Michael Goi. This episode is rated TV-14.",
+            "ER (TV series)\nER is an American medical drama television series created by novelist and medical doctor Michael Crichton that aired on NBC from September 19, 1994, to April 2, 2009, with a total of 331 episodes spanning over 15 seasons. It was produced by Constant c Productions and Amblin Television, in association with Warner Bros. Television. \"ER\" follows the inner life of the emergency room (ER) of fictional County General Hospital in Chicago, Illinois, and various critical issues faced by the room's physicians and staff. The show became the longest-running primetime medical drama in American television history. It won 23 Primetime Emmy Awards, including the 1996 Outstanding Drama Series award, and received 124 Emmy nominations, which makes it the most nominated drama program in history. \"ER\" won 116 awards in total, including the Peabody Award, while the cast earned four Screen Actors Guild Awards for Outstanding Ensemble Performance in a Drama Series.",
+            "The Outrage (Marcus Welby, M.D.)\n\"The Outrage\" is a 1974 episode of \"Marcus Welby, M.D.\", a long-running American medical drama on ABC. The episode tells the story of a teenage boy who is raped by his male teacher. The episode, which originally aired October 8, 1974, sparked controversy and anger for its equation of homosexuality to pedophilia. \"The Outrage\" was targeted for protests by LGBT rights groups and several network affiliates refused to broadcast it.",
+            "Martin (TV series)\nMartin is an American sitcom that aired for five seasons on Fox from August 27, 1992 to May 1, 1997. Reflecting the rising popularity of the Fox network throughout the 1990s, \"Martin\" was one of the network's highest-rated shows during the sitcom's run.",
+            "Arcade (TV series)\nArcade was an Australian television soap opera shown in 1980 that became one of the biggest flops in the history of Australian television. It aired on Network Ten with the premiere (76-minute) episode shown on Sunday, 20 January 1980. The series then ran five nights a week, Mondays to Fridays, as a 30-minute serial. It was produced solely by Network Ten (as an in-house production) with a start-up budget of almost $1 million."
+        ],
+        "thoughts": [
+            "The 2009 drama that Han Chae-young starred in is \"Girlfriends\".",
+            "Girlfriends (2009 film) - No specific network mentioned\nWAGS (TV series) - E! television network\nWAGS Atlanta - E! cable network\nHit and Run, Run, Run (Pretty Little Liars) - Freeform\nER (TV series) - NBC\nThe Outrage (Marcus Welby, M.D.) - ABC\nMartin (TV series) - Fox\nArcade (TV series) - Network Ten"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Han Chae-young was in the 2009 drama that aired on what network?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the drama that Han Chae-young starred in during 2009.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which television network aired the identified 2009 drama where Han Chae-young was featured.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph is designed to solve the question by first identifying the specific drama Han Chae-young was in during 2009. This is crucial as network airing information is tied to specific dramas. After the drama is identified, the next step is to retrieve information on which network aired this drama, thereby answering the initial question."
+        },
+        "recall": 0.3333333333333333,
+        "retrieved_passages": [
+            "Cain and Abel (TV series)\nCain and Abel () is a 2009 South Korean television series starring So Ji-sub, Shin Hyun-joon, Han Ji-min, and Chae Jung-an. It aired on SBS from February 18 to April 23, 2009 on Wednesdays and Thursdays at 21:55 for 20 episodes.",
+            "A Man Called God\nA Man Called God (; also known as The Man Almighty) is a 2010 South Korean television series starring Song Il-gook, Han Chae-young, Kim Min-jong, Han Go-eun and Yoo In-young. It aired on MBC from March 6 to May 23, 2010 on Saturdays and Sundays at 21:45 for 24 episodes.",
+            "Only You (2005 TV series)\nOnly You is a Korean television series produced and broadcast by SBS in early 2005. It is the only Korean drama shot in Italy. The city in which has been shot the drama in Italy is Vicenza which is located in the north East part, between Venice and Verona (about 50 km distant from Venice). It features Jo Hyun-jae (whose former agency, , is the program's production company) and Han Chae-young as the main protagonists. It was first aired in South Korea starting 4 June 2005.",
+            "Girlfriends (2009 film)\nGirlfriends () is a 2009 South Korean romantic comedy film starring Kang Hye-jung, Han Chae-young, Huh E-jae and Bae Soo-bin.",
+            "Ad Genius Lee Tae-baek\nAd Genius Lee Tae-baek () is a 2013 South Korean television series starring Jin Goo, Park Ha-sun, Jo Hyun-jae and Han Chae-young. Set in the cutthroat field of advertising where creativity and competition coexist, the drama is the success story of underdog Lee Tae-baek who fights his way to becoming the best ad man in the business. It aired on KBS2 from February 4 to March 26, 2013 on Mondays and Tuesdays at 21:55 for 16 episodes.",
+            "Fireworks (2006 TV series)\nFireworks (; lit. \"Fireworks Display\" or \"Exhibition of Fireworks\") is a 2006 South Korean television series starring Han Chae-young, Kang Ji-hwan, Park Eun-hye and Yoon Sang-hyun. It aired on MBC from May 13 to July 9, 2006 on Saturdays and Sundays at 21:40 for 17 episodes.",
+            "Sassy Girl Chun-hyang\nSassy Girl Chun-hyang (; lit. Delightful Girl Chun-hyang) is a 2005 South Korean television series starring Han Chae-young, Jae Hee, Uhm Tae-woong and Park Si-eun. It aired on KBS2 from January 3 to March 1, 2005 on Mondays and Tuesdays at 21:55 for 17 episodes.",
+            "Bel Ami (TV series)\nBel Ami (; also known as \"Pretty Boy\", and \"'Pretty Man\", is a South Korean romantic comedy television series starring Jang Keun-suk, IU, Lee Jang-woo and Han Chae-young. Based on the same-titled 17-volume manhwa by Chon Kye-young, it aired on KBS2 from November 20, 2013 to January 9, 2014 on Wednesdays and Thursdays at 21:55 for 16 episodes.",
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "The Influence (film)\nThe Influence () is a four-part online film starring Lee Byung-hun and Han Chae-young. The movie, which delves into the realms of mystery and fantasy, takes place over the time period 1907\u20132010."
+        ],
+        "thoughts": [
+            "Han Chae-young starred in the drama \"Cain and Abel\" during 2009.",
+            "The 2009 drama \"Cain and Abel\" where Han Chae-young was featured aired on SBS."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Han Chae-young was in the 2009 drama that aired on what network?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the 2009 drama that Han Chae-young starred in.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the network that aired the identified 2009 drama.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph consists of two main steps: \n1. First, we need to identify which 2009 drama Han Chae-young was a part of. This might involve retrieving a list of her works or looking at her filmography specifically for that year.\n2. Once the drama is identified, the next step is to look up information about that drama to find out which network aired it. The answer to the original question will be derived from this second step."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "Girlfriends (2009 film)\nGirlfriends () is a 2009 South Korean romantic comedy film starring Kang Hye-jung, Han Chae-young, Huh E-jae and Bae Soo-bin.",
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "Only You (2005 TV series)\nOnly You is a Korean television series produced and broadcast by SBS in early 2005. It is the only Korean drama shot in Italy. The city in which has been shot the drama in Italy is Vicenza which is located in the north East part, between Venice and Verona (about 50 km distant from Venice). It features Jo Hyun-jae (whose former agency, , is the program's production company) and Han Chae-young as the main protagonists. It was first aired in South Korea starting 4 June 2005.",
+            "The Influence (film)\nThe Influence () is a four-part online film starring Lee Byung-hun and Han Chae-young. The movie, which delves into the realms of mystery and fantasy, takes place over the time period 1907\u20132010.",
+            "A Man Called God\nA Man Called God (; also known as The Man Almighty) is a 2010 South Korean television series starring Song Il-gook, Han Chae-young, Kim Min-jong, Han Go-eun and Yoo In-young. It aired on MBC from March 6 to May 23, 2010 on Saturdays and Sundays at 21:45 for 24 episodes.",
+            "Ad Genius Lee Tae-baek\nAd Genius Lee Tae-baek () is a 2013 South Korean television series starring Jin Goo, Park Ha-sun, Jo Hyun-jae and Han Chae-young. Set in the cutthroat field of advertising where creativity and competition coexist, the drama is the success story of underdog Lee Tae-baek who fights his way to becoming the best ad man in the business. It aired on KBS2 from February 4 to March 26, 2013 on Mondays and Tuesdays at 21:55 for 16 episodes.",
+            "Cain and Abel (TV series)\nCain and Abel () is a 2009 South Korean television series starring So Ji-sub, Shin Hyun-joon, Han Ji-min, and Chae Jung-an. It aired on SBS from February 18 to April 23, 2009 on Wednesdays and Thursdays at 21:55 for 20 episodes.",
+            "Fireworks (2006 TV series)\nFireworks (; lit. \"Fireworks Display\" or \"Exhibition of Fireworks\") is a 2006 South Korean television series starring Han Chae-young, Kang Ji-hwan, Park Eun-hye and Yoon Sang-hyun. It aired on MBC from May 13 to July 9, 2006 on Saturdays and Sundays at 21:40 for 17 episodes.",
+            "WAGS (TV series)\nWAGS is an American reality documentary television series that premiered on August 18, 2015, on E! television network. The reality show chronicles both the professional and personal lives of several WAGs (an acronym for wives and girlfriends of high-profile sportspersons).",
+            "WAGS Atlanta\nWAGS Atlanta is an upcoming American reality television series that will premiere on the E! cable network in 2017, and is the second spin-off of \"WAGS\". The reality show chronicles both the professional and personal lives of several WAGs (an acronym for wives and girlfriends of high-profile sportspersons) which is set in Atlanta, Georgia.",
+            "Hit and Run, Run, Run\n\"Hit and Run, Run, Run\" is the fourth episode of the seventh season of the mystery drama television series \"Pretty Little Liars\", which aired on July 12, 2016, on the cable network Freeform. The episode was written by Maya Goldsmith and directed by Michael Goi. This episode is rated TV-14.",
+            "ER (TV series)\nER is an American medical drama television series created by novelist and medical doctor Michael Crichton that aired on NBC from September 19, 1994, to April 2, 2009, with a total of 331 episodes spanning over 15 seasons. It was produced by Constant c Productions and Amblin Television, in association with Warner Bros. Television. \"ER\" follows the inner life of the emergency room (ER) of fictional County General Hospital in Chicago, Illinois, and various critical issues faced by the room's physicians and staff. The show became the longest-running primetime medical drama in American television history. It won 23 Primetime Emmy Awards, including the 1996 Outstanding Drama Series award, and received 124 Emmy nominations, which makes it the most nominated drama program in history. \"ER\" won 116 awards in total, including the Peabody Award, while the cast earned four Screen Actors Guild Awards for Outstanding Ensemble Performance in a Drama Series.",
+            "The Outrage (Marcus Welby, M.D.)\n\"The Outrage\" is a 1974 episode of \"Marcus Welby, M.D.\", a long-running American medical drama on ABC. The episode tells the story of a teenage boy who is raped by his male teacher. The episode, which originally aired October 8, 1974, sparked controversy and anger for its equation of homosexuality to pedophilia. \"The Outrage\" was targeted for protests by LGBT rights groups and several network affiliates refused to broadcast it.",
+            "Martin (TV series)\nMartin is an American sitcom that aired for five seasons on Fox from August 27, 1992 to May 1, 1997. Reflecting the rising popularity of the Fox network throughout the 1990s, \"Martin\" was one of the network's highest-rated shows during the sitcom's run.",
+            "Level Up (U.S. TV series)\nLevel Up is a live-action television series that was aired on Cartoon Network. A film with the same title, which served as a pilot for the series, premiered on November 23, 2011. The series premiered on Tuesday, January 24, 2012, at 8 p.m. ET/PT."
+        ],
+        "thoughts": [
+            "The 2009 drama that Han Chae-young starred in is \"Girlfriends\".",
+            "The 2009 drama \"Girlfriends\" aired on the E! television network."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Han Chae-young was in the 2009 drama that aired on what network?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the 2009 drama(s) that Han Chae-young appeared in.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "For each identified 2009 drama, determine the network it aired on.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The task is to find the network that aired a particular drama starring Han Chae-young in 2009. The graph starts by identifying the drama(s) she was involved with in that year (Node 1). Once the drama(s) are identified, the next step is to retrieve the network for each drama (Node 2). The final step ensures we have the required information to answer the question."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Cain and Abel (TV series)\nCain and Abel () is a 2009 South Korean television series starring So Ji-sub, Shin Hyun-joon, Han Ji-min, and Chae Jung-an. It aired on SBS from February 18 to April 23, 2009 on Wednesdays and Thursdays at 21:55 for 20 episodes.",
+            "Girlfriends (2009 film)\nGirlfriends () is a 2009 South Korean romantic comedy film starring Kang Hye-jung, Han Chae-young, Huh E-jae and Bae Soo-bin.",
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "A Man Called God\nA Man Called God (; also known as The Man Almighty) is a 2010 South Korean television series starring Song Il-gook, Han Chae-young, Kim Min-jong, Han Go-eun and Yoo In-young. It aired on MBC from March 6 to May 23, 2010 on Saturdays and Sundays at 21:45 for 24 episodes.",
+            "Only You (2005 TV series)\nOnly You is a Korean television series produced and broadcast by SBS in early 2005. It is the only Korean drama shot in Italy. The city in which has been shot the drama in Italy is Vicenza which is located in the north East part, between Venice and Verona (about 50 km distant from Venice). It features Jo Hyun-jae (whose former agency, , is the program's production company) and Han Chae-young as the main protagonists. It was first aired in South Korea starting 4 June 2005.",
+            "The Influence (film)\nThe Influence () is a four-part online film starring Lee Byung-hun and Han Chae-young. The movie, which delves into the realms of mystery and fantasy, takes place over the time period 1907\u20132010.",
+            "Ad Genius Lee Tae-baek\nAd Genius Lee Tae-baek () is a 2013 South Korean television series starring Jin Goo, Park Ha-sun, Jo Hyun-jae and Han Chae-young. Set in the cutthroat field of advertising where creativity and competition coexist, the drama is the success story of underdog Lee Tae-baek who fights his way to becoming the best ad man in the business. It aired on KBS2 from February 4 to March 26, 2013 on Mondays and Tuesdays at 21:55 for 16 episodes.",
+            "Fireworks (2006 TV series)\nFireworks (; lit. \"Fireworks Display\" or \"Exhibition of Fireworks\") is a 2006 South Korean television series starring Han Chae-young, Kang Ji-hwan, Park Eun-hye and Yoon Sang-hyun. It aired on MBC from May 13 to July 9, 2006 on Saturdays and Sundays at 21:40 for 17 episodes.",
+            "Hit and Run, Run, Run\n\"Hit and Run, Run, Run\" is the fourth episode of the seventh season of the mystery drama television series \"Pretty Little Liars\", which aired on July 12, 2016, on the cable network Freeform. The episode was written by Maya Goldsmith and directed by Michael Goi. This episode is rated TV-14.",
+            "The Outrage (Marcus Welby, M.D.)\n\"The Outrage\" is a 1974 episode of \"Marcus Welby, M.D.\", a long-running American medical drama on ABC. The episode tells the story of a teenage boy who is raped by his male teacher. The episode, which originally aired October 8, 1974, sparked controversy and anger for its equation of homosexuality to pedophilia. \"The Outrage\" was targeted for protests by LGBT rights groups and several network affiliates refused to broadcast it.",
+            "Oprah's Lifeclass\nOprah's Lifeclass (also known as Oprah's Lifeclass: The Tour in the show's second season) is an American primetime television show hosted and produced by Oprah Winfrey, which aired on OWN: Oprah Winfrey Network. The series premiered on October 10, 2011.",
+            "ER (TV series)\nER is an American medical drama television series created by novelist and medical doctor Michael Crichton that aired on NBC from September 19, 1994, to April 2, 2009, with a total of 331 episodes spanning over 15 seasons. It was produced by Constant c Productions and Amblin Television, in association with Warner Bros. Television. \"ER\" follows the inner life of the emergency room (ER) of fictional County General Hospital in Chicago, Illinois, and various critical issues faced by the room's physicians and staff. The show became the longest-running primetime medical drama in American television history. It won 23 Primetime Emmy Awards, including the 1996 Outstanding Drama Series award, and received 124 Emmy nominations, which makes it the most nominated drama program in history. \"ER\" won 116 awards in total, including the Peabody Award, while the cast earned four Screen Actors Guild Awards for Outstanding Ensemble Performance in a Drama Series.",
+            "Level Up (U.S. TV series)\nLevel Up is a live-action television series that was aired on Cartoon Network. A film with the same title, which served as a pilot for the series, premiered on November 23, 2011. The series premiered on Tuesday, January 24, 2012, at 8 p.m. ET/PT.",
+            "Christopher I of Denmark\nChristopher I (Danish: \"Christoffer I\" ) (1219 \u2013 29 May 1259) was King of Denmark between 1252 and 1259. He was the son of Valdemar II of Denmark by his wife, Infanta Bereng\u00e1ria of Portugal. He succeeded his brothers Eric IV Plovpenning and Abel of Denmark on the throne. Christopher was elected King upon the death of his older brother Abel in the summer of 1252. He was crowned at Lund Cathedral on Christmas Day 1252.",
+            "Wild Palms\nWild Palms is a five-hour mini-series which was produced by Greengrass Productions and first aired in May 1993 on the ABC network in the United States. The sci-fi drama, announced as an \"event series\", deals with the dangers of politically motivated abuse of mass media technology, virtual realities in particular. It was based on a comic strip written by Bruce Wagner and illustrated by Julian Allen first published in 1990 in \"Details\" magazine. Wagner, who also wrote the screenplay, served as executive producer together with Oliver Stone. The series stars James Belushi, Dana Delany, Robert Loggia, Kim Cattrall, David Warner, and Angie Dickinson. The episodes were directed by Kathryn Bigelow, Keith Gordon, Peter Hewitt and Phil Joanou."
+        ],
+        "thoughts": [
+            "In 2009, Han Chae-young appeared in the drama \"Cain and Abel\" as well as the film \"Girlfriends\".",
+            "Cain and Abel - SBS\nHit and Run, Run, Run - Freeform\nThe Outrage (Marcus Welby, M.D.) - ABC\nOprah's Lifeclass - OWN: Oprah Winfrey Network\nER - NBC\nLevel Up - Cartoon Network\nChristopher I of Denmark - N/A (not a drama TV series)\nWild Palms - ABC"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Han Chae-young was in the 2009 drama that aired on what network?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the 2009 drama(s) featuring Han Chae-young.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the network that aired the identified 2009 drama(s).",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "To find out which network aired the 2009 drama starring Han Chae-young, we start by identifying the specific drama(s) she participated in during that year. Once we have this information, we can then retrieve information about the network that aired it. This approach breaks the problem into two manageable steps: identifying the drama and then finding the airing network."
+        },
+        "recall": 0.4444444444444444,
+        "retrieved_passages": [
+            "Girlfriends (2009 film)\nGirlfriends () is a 2009 South Korean romantic comedy film starring Kang Hye-jung, Han Chae-young, Huh E-jae and Bae Soo-bin.",
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "A Man Called God\nA Man Called God (; also known as The Man Almighty) is a 2010 South Korean television series starring Song Il-gook, Han Chae-young, Kim Min-jong, Han Go-eun and Yoo In-young. It aired on MBC from March 6 to May 23, 2010 on Saturdays and Sundays at 21:45 for 24 episodes.",
+            "Only You (2005 TV series)\nOnly You is a Korean television series produced and broadcast by SBS in early 2005. It is the only Korean drama shot in Italy. The city in which has been shot the drama in Italy is Vicenza which is located in the north East part, between Venice and Verona (about 50 km distant from Venice). It features Jo Hyun-jae (whose former agency, , is the program's production company) and Han Chae-young as the main protagonists. It was first aired in South Korea starting 4 June 2005.",
+            "The Influence (film)\nThe Influence () is a four-part online film starring Lee Byung-hun and Han Chae-young. The movie, which delves into the realms of mystery and fantasy, takes place over the time period 1907\u20132010.",
+            "Ad Genius Lee Tae-baek\nAd Genius Lee Tae-baek () is a 2013 South Korean television series starring Jin Goo, Park Ha-sun, Jo Hyun-jae and Han Chae-young. Set in the cutthroat field of advertising where creativity and competition coexist, the drama is the success story of underdog Lee Tae-baek who fights his way to becoming the best ad man in the business. It aired on KBS2 from February 4 to March 26, 2013 on Mondays and Tuesdays at 21:55 for 16 episodes.",
+            "Cain and Abel (TV series)\nCain and Abel () is a 2009 South Korean television series starring So Ji-sub, Shin Hyun-joon, Han Ji-min, and Chae Jung-an. It aired on SBS from February 18 to April 23, 2009 on Wednesdays and Thursdays at 21:55 for 20 episodes.",
+            "Fireworks (2006 TV series)\nFireworks (; lit. \"Fireworks Display\" or \"Exhibition of Fireworks\") is a 2006 South Korean television series starring Han Chae-young, Kang Ji-hwan, Park Eun-hye and Yoon Sang-hyun. It aired on MBC from May 13 to July 9, 2006 on Saturdays and Sundays at 21:40 for 17 episodes.",
+            "WAGS (TV series)\nWAGS is an American reality documentary television series that premiered on August 18, 2015, on E! television network. The reality show chronicles both the professional and personal lives of several WAGs (an acronym for wives and girlfriends of high-profile sportspersons).",
+            "WAGS Atlanta\nWAGS Atlanta is an upcoming American reality television series that will premiere on the E! cable network in 2017, and is the second spin-off of \"WAGS\". The reality show chronicles both the professional and personal lives of several WAGs (an acronym for wives and girlfriends of high-profile sportspersons) which is set in Atlanta, Georgia.",
+            "Hit and Run, Run, Run\n\"Hit and Run, Run, Run\" is the fourth episode of the seventh season of the mystery drama television series \"Pretty Little Liars\", which aired on July 12, 2016, on the cable network Freeform. The episode was written by Maya Goldsmith and directed by Michael Goi. This episode is rated TV-14.",
+            "ER (TV series)\nER is an American medical drama television series created by novelist and medical doctor Michael Crichton that aired on NBC from September 19, 1994, to April 2, 2009, with a total of 331 episodes spanning over 15 seasons. It was produced by Constant c Productions and Amblin Television, in association with Warner Bros. Television. \"ER\" follows the inner life of the emergency room (ER) of fictional County General Hospital in Chicago, Illinois, and various critical issues faced by the room's physicians and staff. The show became the longest-running primetime medical drama in American television history. It won 23 Primetime Emmy Awards, including the 1996 Outstanding Drama Series award, and received 124 Emmy nominations, which makes it the most nominated drama program in history. \"ER\" won 116 awards in total, including the Peabody Award, while the cast earned four Screen Actors Guild Awards for Outstanding Ensemble Performance in a Drama Series.",
+            "The Outrage (Marcus Welby, M.D.)\n\"The Outrage\" is a 1974 episode of \"Marcus Welby, M.D.\", a long-running American medical drama on ABC. The episode tells the story of a teenage boy who is raped by his male teacher. The episode, which originally aired October 8, 1974, sparked controversy and anger for its equation of homosexuality to pedophilia. \"The Outrage\" was targeted for protests by LGBT rights groups and several network affiliates refused to broadcast it.",
+            "Martin (TV series)\nMartin is an American sitcom that aired for five seasons on Fox from August 27, 1992 to May 1, 1997. Reflecting the rising popularity of the Fox network throughout the 1990s, \"Martin\" was one of the network's highest-rated shows during the sitcom's run.",
+            "Level Up (U.S. TV series)\nLevel Up is a live-action television series that was aired on Cartoon Network. A film with the same title, which served as a pilot for the series, premiered on November 23, 2011. The series premiered on Tuesday, January 24, 2012, at 8 p.m. ET/PT."
+        ],
+        "thoughts": [
+            "The 2009 drama featuring Han Chae-young is \"Girlfriends\", a South Korean romantic comedy film.",
+            "Girlfriends (2009 film) - No specific network mentioned\nWAGS (TV series) - E! television network\nWAGS Atlanta - E! cable network\nHit and Run, Run, Run - Freeform\nER (TV series) - NBC\nThe Outrage (Marcus Welby, M.D.) - ABC\nMartin (TV series) - Fox\nLevel Up (U.S. TV series) - Cartoon Network"
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Han Chae-young was in the 2009 drama that aired on what network?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Find the 2009 drama that Han Chae-young appeared in.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the network on which the 2009 drama featuring Han Chae-young aired.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph for the given question is broken down into two main steps. First, we need to identify which drama Han Chae-young was involved in during the year 2009. This information is crucial and acts as a prerequisite for the next step. Once the specific drama is identified, the next step is to determine the network on which this drama aired during that year. Each step is dependent on the previous one, forming a linear flow of information retrieval and reasoning."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Girlfriends (2009 film)\nGirlfriends () is a 2009 South Korean romantic comedy film starring Kang Hye-jung, Han Chae-young, Huh E-jae and Bae Soo-bin.",
+            "A Man Called God\nA Man Called God (; also known as The Man Almighty) is a 2010 South Korean television series starring Song Il-gook, Han Chae-young, Kim Min-jong, Han Go-eun and Yoo In-young. It aired on MBC from March 6 to May 23, 2010 on Saturdays and Sundays at 21:45 for 24 episodes.",
+            "Only You (2005 TV series)\nOnly You is a Korean television series produced and broadcast by SBS in early 2005. It is the only Korean drama shot in Italy. The city in which has been shot the drama in Italy is Vicenza which is located in the north East part, between Venice and Verona (about 50 km distant from Venice). It features Jo Hyun-jae (whose former agency, , is the program's production company) and Han Chae-young as the main protagonists. It was first aired in South Korea starting 4 June 2005.",
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "Cain and Abel (TV series)\nCain and Abel () is a 2009 South Korean television series starring So Ji-sub, Shin Hyun-joon, Han Ji-min, and Chae Jung-an. It aired on SBS from February 18 to April 23, 2009 on Wednesdays and Thursdays at 21:55 for 20 episodes.",
+            "Ad Genius Lee Tae-baek\nAd Genius Lee Tae-baek () is a 2013 South Korean television series starring Jin Goo, Park Ha-sun, Jo Hyun-jae and Han Chae-young. Set in the cutthroat field of advertising where creativity and competition coexist, the drama is the success story of underdog Lee Tae-baek who fights his way to becoming the best ad man in the business. It aired on KBS2 from February 4 to March 26, 2013 on Mondays and Tuesdays at 21:55 for 16 episodes.",
+            "Fireworks (2006 TV series)\nFireworks (; lit. \"Fireworks Display\" or \"Exhibition of Fireworks\") is a 2006 South Korean television series starring Han Chae-young, Kang Ji-hwan, Park Eun-hye and Yoon Sang-hyun. It aired on MBC from May 13 to July 9, 2006 on Saturdays and Sundays at 21:40 for 17 episodes.",
+            "Sassy Girl Chun-hyang\nSassy Girl Chun-hyang (; lit. Delightful Girl Chun-hyang) is a 2005 South Korean television series starring Han Chae-young, Jae Hee, Uhm Tae-woong and Park Si-eun. It aired on KBS2 from January 3 to March 1, 2005 on Mondays and Tuesdays at 21:55 for 17 episodes.",
+            "The Influence (film)\nThe Influence () is a four-part online film starring Lee Byung-hun and Han Chae-young. The movie, which delves into the realms of mystery and fantasy, takes place over the time period 1907\u20132010."
+        ],
+        "thoughts": [
+            "The 2009 drama that Han Chae-young appeared in is \"Girlfriends\".",
+            "The 2009 drama featuring Han Chae-young, \"Cain and Abel\", aired on SBS."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Han Chae-young was in the 2009 drama that aired on what network?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the 2009 drama in which Han Chae-young appeared.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the network or channel that aired the identified drama in 2009.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "2"
+            },
+            "explanation": "The execution graph for this query begins with a retrieval step to find out which 2009 drama Han Chae-young was a part of. Once this drama is identified, the next step involves retrieving information about the network that aired the drama in 2009. This approach ensures that all necessary information related to the drama and its broadcast network is gathered and reasoned about sequentially."
+        },
+        "recall": 0.3888888888888889,
+        "retrieved_passages": [
+            "Cain and Abel (TV series)\nCain and Abel () is a 2009 South Korean television series starring So Ji-sub, Shin Hyun-joon, Han Ji-min, and Chae Jung-an. It aired on SBS from February 18 to April 23, 2009 on Wednesdays and Thursdays at 21:55 for 20 episodes.",
+            "Girlfriends (2009 film)\nGirlfriends () is a 2009 South Korean romantic comedy film starring Kang Hye-jung, Han Chae-young, Huh E-jae and Bae Soo-bin.",
+            "Han Chae-young\nHan Chae-young (born Kim Ji-young on September 13, 1980), is a South Korean actress. She is known for her notable roles in several Korean dramas such as \"Autumn in My Heart\", \"Delightful Girl Choon-Hyang\", \"Only You\", \"Fireworks\", \"Boys Over Flowers\", \"A Man Called God\" and \"Pretty Man\".",
+            "Only You (2005 TV series)\nOnly You is a Korean television series produced and broadcast by SBS in early 2005. It is the only Korean drama shot in Italy. The city in which has been shot the drama in Italy is Vicenza which is located in the north East part, between Venice and Verona (about 50 km distant from Venice). It features Jo Hyun-jae (whose former agency, , is the program's production company) and Han Chae-young as the main protagonists. It was first aired in South Korea starting 4 June 2005.",
+            "The Influence (film)\nThe Influence () is a four-part online film starring Lee Byung-hun and Han Chae-young. The movie, which delves into the realms of mystery and fantasy, takes place over the time period 1907\u20132010.",
+            "A Man Called God\nA Man Called God (; also known as The Man Almighty) is a 2010 South Korean television series starring Song Il-gook, Han Chae-young, Kim Min-jong, Han Go-eun and Yoo In-young. It aired on MBC from March 6 to May 23, 2010 on Saturdays and Sundays at 21:45 for 24 episodes.",
+            "Ad Genius Lee Tae-baek\nAd Genius Lee Tae-baek () is a 2013 South Korean television series starring Jin Goo, Park Ha-sun, Jo Hyun-jae and Han Chae-young. Set in the cutthroat field of advertising where creativity and competition coexist, the drama is the success story of underdog Lee Tae-baek who fights his way to becoming the best ad man in the business. It aired on KBS2 from February 4 to March 26, 2013 on Mondays and Tuesdays at 21:55 for 16 episodes.",
+            "Fireworks (2006 TV series)\nFireworks (; lit. \"Fireworks Display\" or \"Exhibition of Fireworks\") is a 2006 South Korean television series starring Han Chae-young, Kang Ji-hwan, Park Eun-hye and Yoon Sang-hyun. It aired on MBC from May 13 to July 9, 2006 on Saturdays and Sundays at 21:40 for 17 episodes.",
+            "A*mazing\nA*mazing was an Australian children's television game show that aired between 16 May 1994 until 1998 on the Seven Network. It was famous for a relatively large and elaborate maze/obstacle course that was part of the show's studio set. \"A*mazing\" was hosted by James Sherry for the entire run of the series. A*mazing was produced at Channel 7 Brisbane from 1994\u20131996 and then at Channel 7 Perth from 1997\u20131998.",
+            "Thursday Night Baseball\nThursday Night Baseball (formally known as MLB Network Showcase) is the title of a presentation of Major League Baseball on cable and satellite channel MLB Network (self-produced by MLB Network), that premiered on April 9, 2009. Longtime NBC Sports broadcaster Bob Costas is one of the play-by-play voices of the broadcasts. Matt Vasgersian also does play-by-play on some games. Jim Kaat, John Smoltz, and Tom Verducci provide color commentary. The network produces 26 non-exclusive live games a year during baseball season. Since one or both teams' local TV rights holders also carry the games, the MLB Network feed is subject to local blackouts. In that event, the cities in the blacked-out markets will instead see a simulcast of another scheduled game via one team's local TV rights holder.",
+            "Jessica Biel\nJessica Claire Timberlake (n\u00e9e Biel; born March 3, 1982) is an American actress, model and producer. Biel began her career as a vocalist appearing in musical productions until she was cast as Mary Camden in the family-drama series \"7th Heaven\", for which she achieved recognition. The series is the longest-running series that ever aired on The WB channel and is the longest-running family drama in television history. As of late summer 2017, she is the series lead, title character, and executive producer of USA Network's new limited-series-format murder mystery \"The Sinner\".",
+            "Cartoon Network\nCartoon Network is an American basic cable and satellite television channel that is owned by The Cartoon Network, Inc., a subsidiary of Turner Broadcasting System, itself being a subsidiary of Time Warner. It was founded by Betty Cohen and launched on October 1, 1992.",
+            "Nerdist Industries\nNerdist Industries, LLC is part of the digital division of Legendary Entertainment. Nerdist Industries was founded as a sole podcast (The Nerdist Podcast) created by Chris Hardwick but later spread to include a network of podcasts, a premium content YouTube channel, a news division (Nerdist News), and a television version of the original podcast produced by and aired on BBC America.",
+            "Life After People\nLife After People is a television series on which scientists, structural engineers, and other experts speculate about what might become of Earth should humanity instantly disappear. The featured experts also talk about the impact of human absence on the environment and the vestiges of civilization thus left behind. The series was preceded by a two-hour special that aired on January 21, 2008 on the History Channel which served as a de facto pilot for the series that premiered April 21, 2009. The documentary and subsequent series were both narrated by James Lurie.",
+            "Hit and Run, Run, Run\n\"Hit and Run, Run, Run\" is the fourth episode of the seventh season of the mystery drama television series \"Pretty Little Liars\", which aired on July 12, 2016, on the cable network Freeform. The episode was written by Maya Goldsmith and directed by Michael Goi. This episode is rated TV-14."
+        ],
+        "thoughts": [
+            "Han Chae-young appeared in the 2009 drama \"Cain and Abel\".",
+            "The drama \"Cain and Abel\" aired on the South Korean network SBS in 2009."
+        ],
+        "is_best": false
+    }
+]

@@ -1,0 +1,714 @@
+[
+    {
+        "question": "What is the name of the oldest child that attended the Trump campaign-Russian meeting?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the Trump campaign-Russian meeting and when it took place.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "List all known attendees of the Trump campaign-Russian meeting identified in step 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "For each attendee from step 2, determine their birthdate or age to identify if they are a child and their ages at the time of the meeting.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Analyze the ages or birthdates from step 3 to determine which is the oldest child attendee.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To determine the name of the oldest child attendee at the meeting, first, the event needs to be identified including its date. Next, the participants of that meeting need to be listed. Then, for each participant, it is necessary to check if they were considered a child at that time by finding their birthdates or ages. Finally, by comparing these ages or birthdates, we can identify who was the oldest child."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Trump campaign\u2013Russian meeting\nOn June 9, 2016, a meeting was held in Trump Tower in New York City between three senior members of the presidential campaign of Donald TrumpDonald Trump Jr., Jared Kushner, and Paul Manafortand at least five other people, including Russian lawyer Natalia Veselnitskaya. The meeting was arranged by publicist and long-time Trump acquantiance, Rob Goldstone on behalf of his client, singer-songwriter Emin Agalarov. It was disclosed to U.S. government officials when Kushner filed a revised version of his security clearance form.",
+            "Donald Trump presidential campaign, 2016\nThe 2016 presidential campaign of Donald Trump, an American businessman, television personality, and author, was formally launched on June 16, 2015, at Trump Tower in New York City. Trump was the Republican nominee for President of the United States in the 2016 election, having won the most state primaries, caucuses, and delegates at the 2016 Republican National Convention. He chose Mike Pence, the sitting Governor of Indiana, as his vice presidential running mate. On November 8, 2016, Trump and Pence were elected president and vice president of the United States.",
+            "Trump Tower\nTrump Tower is a 58-story, 664 ft mixed-use skyscraper located at 721\u2013725 Fifth Avenue between 56th and 57th Streets in Midtown Manhattan, New York City. Trump Tower serves as the headquarters for The Trump Organization. Additionally, it houses the penthouse condominium residences of the building's namesake and developer, U.S. President Donald Trump, who was a businessman and real estate developer when the tower was developed. Several members of the Trump family also reside, or have resided, in the building. The tower stands upon a plot where the flagship store of department-store chain Bonwit Teller was formerly located.",
+            "Basket of deplorables\n\"Basket of deplorables\" is a phrase from a 2016 presidential election campaign speech delivered by Democratic nominee Hillary Clinton on September 9, 2016, at a campaign fundraising event, which Clinton used to describe a faction of supporters of her general election opponent, Republican nominee Donald Trump. Clinton later said that she \"regrets saying half [of Trump's supporters]\", and the Trump campaign repeatedly used the phrase against her during and after the 2016 presidential election. Many Trump supporters adopted the \"Deplorable\" moniker for themselves. After Clinton's loss, some journalists and political analysts questioned whether or not the speech played a role in the election's outcome.",
+            "Brad Parscale\nBrad Parscale (born January 3, 1976) is an American digital media and political strategist. He served as the digital media director for Donald Trump's 2016 presidential campaign. Parscale began working for the Trump Organization in 2011, developing and designing websites, and creating and managing digital media strategies. In early 2015, Trump hired Parscale and his firm, Giles-Parscale, to create a website for his exploratory campaign. When Trump declared himself a Republican candidate in 2015, one of the first people he called was Parscale, asking him to update his exploratory campaign site into a \"full-fledged presidential campaign website.\" Throughout the Republican primary, Parscale was responsible for the Donald J. Trump for President website, as well as for digital media strategy and online fundraising campaigns. In June 2016, Parscale was officially named digital media director for the Donald J. Trump for President campaign, overseeing all aspects of digital media and online fundraising, as well as traditional media strategy, like radio and television placements. In January 2017, Parscale, along with another senior Trump aide, Nick Ayers, formally launched America First Policies, a non-profit organization that promotes President Trump's agenda and White House initiatives.",
+            "Trump Tower (White Plains)\nTrump Tower at City Center is a 35-story condominium located in the city of White Plains in Westchester County, New York. It was completed in 2005, and it opened on September 21 of that year with 212 residences. The Trump Organization (partnered with Westchester developer Louis R. Cappelli) led the development, sales, and management of the building. The building is attached to a municipal parking building whose rooftop holds the outdoor amenities for the Trump Tower residents. Rooftop amenities include a pool and lounge area, two tennis courts and a paddle board court.",
+            "Donald Trump Jr.\nDonald John Trump Jr. (born December 31, 1977) is an American businessman and former reality TV personality. He is the oldest child of the 45th President of the United States, Donald Trump, and his first wife, Ivana.",
+            "Paul Manafort\nPaul John Manafort Jr. (born April 1, 1949) is an American lawyer, lobbyist and political consultant. He joined Donald Trump's presidential campaign team in March 2016 and served as campaign manager from June to August 2016. He was previously an adviser to the U.S. presidential campaigns of Republicans Gerald Ford, Ronald Reagan, George H. W. Bush, and Bob Dole. In 1980 Manafort co-founded the Washington, D.C.-based lobbying firm Black, Manafort & Stone, along with principals Charles R. Black Jr., and Roger J. Stone. In 1984 it was renamed Black, Manafort, Stone and Kelly (BMSK) & associates, after Peter G. Kelly was recruited.",
+            "Vichy Republican\nVichy Republican is a term that emerged on social media in 2016 in regards to the United States Presidential campaign ofDonald Trump. To Trump opponents, it refers to members of the Republican Party that have chosen to support Donald Trump's candidacy.",
+            "Jack Posobiec\nJack Posobiec ( ) is an American alt-right pro-Donald Trump Internet activist and conspiracy theorist, known primarily for his controversial comments on Twitter. During the 2016 election, he was a special projects director of Citizens for Trump, a pro-Trump organization. For two months in 2017, he was a correspondent for \"The Rebel\", a far-right Canada-based website. He was granted press access to the White House in April 2017, and his tweets have been promoted by former Trump campaign manager Roger Stone.",
+            "Roger Ailes\nRoger Eugene Ailes (May 15, 1940\u00a0\u2013 May 18, 2017) was an American television executive and media consultant. He was the founder and one-time Chairman and CEO of Fox News and the Fox Television Stations Group, from which he resigned in July 2016 following allegations that he sexually harassed female colleagues. Ailes was a media consultant for Republican presidents Richard Nixon, Ronald Reagan, and George H. W. Bush, and for Rudy Giuliani's first mayoral campaign. In 2016, after he left Fox News, he became an adviser to the Donald Trump campaign, where he assisted with debate preparation.",
+            "Charles R. Black Jr.\nCharles R. Black Jr. (born 1947), is the current Chairman of Prime Policy Group, a public affairs firm which is a subsidiary of Burson-Marsteller Global Public Relations. Prime Policy Group was formed with the merger of Martin B. Gold 's Gold & Liebengood with the Washington, DC-based lobbying firm he co-founded\u2014Black, Manafort, Stone and Kelly\u2014with Paul Manafort, Roger J. Stone and Peter G. Kelly. In 2010, Black was inducted into the American Association of Political Consultants (AAPC) Hall of Fame.",
+            "Scott Pruitt\nEdward Scott Pruitt (born May 9, 1968) is an American lawyer and Republican politician from the state of Oklahoma who is currently the fourteenth Administrator of the Environmental Protection Agency (EPA). Nominated for the position by President Donald Trump, Pruitt was confirmed by the United States Senate to lead the EPA on February 17, 2017.",
+            "The Apprentice (U.S. season 12)\nThe Celebrity Apprentice 5 (also known as The Apprentice 12) is the fifth installment of the reality game show, \"Celebrity Apprentice\". On May 15, 2011, NBC announced that the show would be returning for a fifth season in 2012. The following day, at NBC's annual upfront presentations to advertisers, Donald Trump confirmed that he would be hosting the fifth season. On January 4, 2012, Donald Trump officially announced the cast on \"Today\" and NBC issued a press release with more details."
+        ],
+        "thoughts": [
+            "The Trump campaign-Russian meeting took place on June 9, 2016, at Trump Tower in New York City. The meeting involved three senior members of the Trump presidential campaign, including Donald Trump Jr., Jared Kushner, and Paul Manafort, and at least five other individuals, including Russian lawyer Natalia Veselnitskaya. The meeting was arranged by publicist Rob Goldstone on behalf of his client, singer-songwriter Emin Agalarov. This meeting was later disclosed to U.S. government officials when Kushner filed a revised version of his security clearance form.",
+            "1. Donald Trump Jr.\n2. Jared Kushner\n3. Paul Manafort\n4. Russian lawyer Natalia Veselnitskaya\n5. Rob Goldstone\n6. Emin Agalarov",
+            "1. Paul Manafort - Born April 1, 1949\n   - Age at the time of the meeting (June 9, 2016): 67 years old\n\n2. Donald Trump Jr. - Born December 31, 1977\n   - Age at the time of the meeting (June 9, 2016): 38 years old\n\n3. Charles R. Black Jr. - Born 1947 (exact date not provided)\n   - Age at the time of the meeting (June 9, 2016): Approximately 69 years old\n\n4. Scott Pruitt - Born May 9, 1968\n   - Age at the time of the meeting (June 9, 2016): 48 years old\n\nBased on the information provided, all attendees were adults at the time of the meeting on June 9, 2016. No children were identified as attendees.",
+            "Based on the analysis of the ages or birthdates provided, it is determined that there were no children in attendance at the meeting on June 9, 2016. All attendees were adults, with the oldest being Charles R. Black Jr., who was approximately 69 years old at the time of the meeting."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the oldest child that attended the Trump campaign-Russian meeting?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the specific Trump campaign-Russian meeting being referenced (consider the June 9, 2016 meeting at Trump Tower).",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the list of attendees of the identified Trump campaign-Russian meeting.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "For each attendee, determine their date of birth.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Compare the birthdates of all attendees to determine who is the oldest.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Identify any children (under 18 at the time) among the attendees of the meeting.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Combine results to identify the oldest child from those determined to be children at the time of the meeting.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4",
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "The execution graph decomposes the original question into smaller, manageable tasks. First, we identify which Trump campaign-Russian meeting is relevant to ensure clarity on the context. Then, we retrieve the list of attendees of that meeting. Next, we gather birthdates to determine ages and identify who among the attendees were children (under 18 at the time). Finally, we compare these to establish who the oldest child was."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Trump campaign\u2013Russian meeting\nOn June 9, 2016, a meeting was held in Trump Tower in New York City between three senior members of the presidential campaign of Donald TrumpDonald Trump Jr., Jared Kushner, and Paul Manafortand at least five other people, including Russian lawyer Natalia Veselnitskaya. The meeting was arranged by publicist and long-time Trump acquantiance, Rob Goldstone on behalf of his client, singer-songwriter Emin Agalarov. It was disclosed to U.S. government officials when Kushner filed a revised version of his security clearance form.",
+            "Donald Trump presidential campaign, 2016\nThe 2016 presidential campaign of Donald Trump, an American businessman, television personality, and author, was formally launched on June 16, 2015, at Trump Tower in New York City. Trump was the Republican nominee for President of the United States in the 2016 election, having won the most state primaries, caucuses, and delegates at the 2016 Republican National Convention. He chose Mike Pence, the sitting Governor of Indiana, as his vice presidential running mate. On November 8, 2016, Trump and Pence were elected president and vice president of the United States.",
+            "Basket of deplorables\n\"Basket of deplorables\" is a phrase from a 2016 presidential election campaign speech delivered by Democratic nominee Hillary Clinton on September 9, 2016, at a campaign fundraising event, which Clinton used to describe a faction of supporters of her general election opponent, Republican nominee Donald Trump. Clinton later said that she \"regrets saying half [of Trump's supporters]\", and the Trump campaign repeatedly used the phrase against her during and after the 2016 presidential election. Many Trump supporters adopted the \"Deplorable\" moniker for themselves. After Clinton's loss, some journalists and political analysts questioned whether or not the speech played a role in the election's outcome.",
+            "Brad Parscale\nBrad Parscale (born January 3, 1976) is an American digital media and political strategist. He served as the digital media director for Donald Trump's 2016 presidential campaign. Parscale began working for the Trump Organization in 2011, developing and designing websites, and creating and managing digital media strategies. In early 2015, Trump hired Parscale and his firm, Giles-Parscale, to create a website for his exploratory campaign. When Trump declared himself a Republican candidate in 2015, one of the first people he called was Parscale, asking him to update his exploratory campaign site into a \"full-fledged presidential campaign website.\" Throughout the Republican primary, Parscale was responsible for the Donald J. Trump for President website, as well as for digital media strategy and online fundraising campaigns. In June 2016, Parscale was officially named digital media director for the Donald J. Trump for President campaign, overseeing all aspects of digital media and online fundraising, as well as traditional media strategy, like radio and television placements. In January 2017, Parscale, along with another senior Trump aide, Nick Ayers, formally launched America First Policies, a non-profit organization that promotes President Trump's agenda and White House initiatives.",
+            "Trump Tower\nTrump Tower is a 58-story, 664 ft mixed-use skyscraper located at 721\u2013725 Fifth Avenue between 56th and 57th Streets in Midtown Manhattan, New York City. Trump Tower serves as the headquarters for The Trump Organization. Additionally, it houses the penthouse condominium residences of the building's namesake and developer, U.S. President Donald Trump, who was a businessman and real estate developer when the tower was developed. Several members of the Trump family also reside, or have resided, in the building. The tower stands upon a plot where the flagship store of department-store chain Bonwit Teller was formerly located.",
+            "Donald Trump Jr.\nDonald John Trump Jr. (born December 31, 1977) is an American businessman and former reality TV personality. He is the oldest child of the 45th President of the United States, Donald Trump, and his first wife, Ivana.",
+            "Paul Manafort\nPaul John Manafort Jr. (born April 1, 1949) is an American lawyer, lobbyist and political consultant. He joined Donald Trump's presidential campaign team in March 2016 and served as campaign manager from June to August 2016. He was previously an adviser to the U.S. presidential campaigns of Republicans Gerald Ford, Ronald Reagan, George H. W. Bush, and Bob Dole. In 1980 Manafort co-founded the Washington, D.C.-based lobbying firm Black, Manafort & Stone, along with principals Charles R. Black Jr., and Roger J. Stone. In 1984 it was renamed Black, Manafort, Stone and Kelly (BMSK) & associates, after Peter G. Kelly was recruited.",
+            "Vichy Republican\nVichy Republican is a term that emerged on social media in 2016 in regards to the United States Presidential campaign ofDonald Trump. To Trump opponents, it refers to members of the Republican Party that have chosen to support Donald Trump's candidacy.",
+            "Trump Tower (White Plains)\nTrump Tower at City Center is a 35-story condominium located in the city of White Plains in Westchester County, New York. It was completed in 2005, and it opened on September 21 of that year with 212 residences. The Trump Organization (partnered with Westchester developer Louis R. Cappelli) led the development, sales, and management of the building. The building is attached to a municipal parking building whose rooftop holds the outdoor amenities for the Trump Tower residents. Rooftop amenities include a pool and lounge area, two tennis courts and a paddle board court.",
+            "Trump Entertainment Resorts\nTrump Entertainment Resorts, Inc. was a gaming and hospitality company that owned and operated the now shuttered Trump Taj Mahal hotel and casino, as well as the now shuttered Trump Plaza Hotel and Casino and the Trump Marina located in Atlantic City, New Jersey, United States. Formerly known as Trump Hotels & Casino Resorts, it was founded in 1995 by Donald Trump, now 45th President of the United States, who has not had any formal role in the company since 2011, if not earlier. The company filed for bankruptcy in 2004, 2009 and 2014. It has been a subsidiary of Icahn Enterprises since 2016.",
+            "Jack Posobiec\nJack Posobiec ( ) is an American alt-right pro-Donald Trump Internet activist and conspiracy theorist, known primarily for his controversial comments on Twitter. During the 2016 election, he was a special projects director of Citizens for Trump, a pro-Trump organization. For two months in 2017, he was a correspondent for \"The Rebel\", a far-right Canada-based website. He was granted press access to the White House in April 2017, and his tweets have been promoted by former Trump campaign manager Roger Stone.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "You Fell Victim to a Fateful Struggle\nYou Fell Victim (Russian: \"\u0412\u044b \u0436\u0435\u0440\u0442\u0432\u043e\u044e \u043f\u0430\u043b\u0438\"; \"Vy zhertvoiu pali\"), or You Fell Victim to a Fateful Struggle, is a Russian Marxist and revolutionary funeral march. It acted as the funeral dirge of the Russian revolutionary movement, among them the Bolsheviks."
+        ],
+        "thoughts": [
+            "The specific Trump campaign-Russian meeting being referenced is the June 9, 2016 meeting at Trump Tower in New York City, which involved Donald Trump Jr., Jared Kushner, Paul Manafort, and at least five other people, including Russian lawyer Natalia Veselnitskaya.",
+            "The list of attendees of the identified Trump campaign-Russian meeting at Trump Tower on June 9, 2016, includes Donald Trump Jr., Jared Kushner, Paul Manafort, Russian lawyer Natalia Veselnitskaya, and publicist Rob Goldstone. The meeting was arranged by Goldstone on behalf of his client, singer-songwriter Emin Agalarov.",
+            "- Donald Trump Jr. was born on December 31, 1977.\n- Jared Kushner's date of birth is not provided in the given information.\n- Paul Manafort was born on April 1, 1949.\n- Natalia Veselnitskaya's date of birth is not provided in the given information.\n- Rob Goldstone's date of birth is not provided in the given information.\n- Emin Agalarov's date of birth is not provided in the given information.\n- Mike Pence's date of birth is not provided in the given information.\n- Hillary Clinton's date of birth is not provided in the given information.\n- Brad Parscale was born on January 3, 1976.",
+            "Based on the information provided, Paul Manafort is the oldest attendee with a birthdate of April 1, 1949.",
+            "Based on the information provided, there were no children (under 18 at the time) among the attendees of the meeting. The attendees were all adults, including Donald Trump Jr., Jared Kushner, Paul Manafort, Russian lawyer Natalia Veselnitskaya, and publicist Rob Goldstone.",
+            "Based on the combined results, Paul Manafort is the oldest attendee at the meeting with a birthdate of April 1, 1949."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the oldest child that attended the Trump campaign-Russian meeting?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the specific Trump campaign-Russian meeting in question.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "List all attendees of the identified meeting, including their birth dates where available.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Extract the children attendees from the list of attendees based on age at the time of the meeting.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which child attendee is the oldest based on their birth date.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks down the task into identifying the meeting, gathering attendee data, filtering for children, and determining the oldest among them. It involves retrieval to identify the meeting and attendees, and reasoning to process ages and identify the oldest child."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Trump campaign\u2013Russian meeting\nOn June 9, 2016, a meeting was held in Trump Tower in New York City between three senior members of the presidential campaign of Donald TrumpDonald Trump Jr., Jared Kushner, and Paul Manafortand at least five other people, including Russian lawyer Natalia Veselnitskaya. The meeting was arranged by publicist and long-time Trump acquantiance, Rob Goldstone on behalf of his client, singer-songwriter Emin Agalarov. It was disclosed to U.S. government officials when Kushner filed a revised version of his security clearance form.",
+            "Donald Trump presidential campaign, 2016\nThe 2016 presidential campaign of Donald Trump, an American businessman, television personality, and author, was formally launched on June 16, 2015, at Trump Tower in New York City. Trump was the Republican nominee for President of the United States in the 2016 election, having won the most state primaries, caucuses, and delegates at the 2016 Republican National Convention. He chose Mike Pence, the sitting Governor of Indiana, as his vice presidential running mate. On November 8, 2016, Trump and Pence were elected president and vice president of the United States.",
+            "Trump Tower\nTrump Tower is a 58-story, 664 ft mixed-use skyscraper located at 721\u2013725 Fifth Avenue between 56th and 57th Streets in Midtown Manhattan, New York City. Trump Tower serves as the headquarters for The Trump Organization. Additionally, it houses the penthouse condominium residences of the building's namesake and developer, U.S. President Donald Trump, who was a businessman and real estate developer when the tower was developed. Several members of the Trump family also reside, or have resided, in the building. The tower stands upon a plot where the flagship store of department-store chain Bonwit Teller was formerly located.",
+            "Trump Tower (White Plains)\nTrump Tower at City Center is a 35-story condominium located in the city of White Plains in Westchester County, New York. It was completed in 2005, and it opened on September 21 of that year with 212 residences. The Trump Organization (partnered with Westchester developer Louis R. Cappelli) led the development, sales, and management of the building. The building is attached to a municipal parking building whose rooftop holds the outdoor amenities for the Trump Tower residents. Rooftop amenities include a pool and lounge area, two tennis courts and a paddle board court.",
+            "Basket of deplorables\n\"Basket of deplorables\" is a phrase from a 2016 presidential election campaign speech delivered by Democratic nominee Hillary Clinton on September 9, 2016, at a campaign fundraising event, which Clinton used to describe a faction of supporters of her general election opponent, Republican nominee Donald Trump. Clinton later said that she \"regrets saying half [of Trump's supporters]\", and the Trump campaign repeatedly used the phrase against her during and after the 2016 presidential election. Many Trump supporters adopted the \"Deplorable\" moniker for themselves. After Clinton's loss, some journalists and political analysts questioned whether or not the speech played a role in the election's outcome.",
+            "Brad Parscale\nBrad Parscale (born January 3, 1976) is an American digital media and political strategist. He served as the digital media director for Donald Trump's 2016 presidential campaign. Parscale began working for the Trump Organization in 2011, developing and designing websites, and creating and managing digital media strategies. In early 2015, Trump hired Parscale and his firm, Giles-Parscale, to create a website for his exploratory campaign. When Trump declared himself a Republican candidate in 2015, one of the first people he called was Parscale, asking him to update his exploratory campaign site into a \"full-fledged presidential campaign website.\" Throughout the Republican primary, Parscale was responsible for the Donald J. Trump for President website, as well as for digital media strategy and online fundraising campaigns. In June 2016, Parscale was officially named digital media director for the Donald J. Trump for President campaign, overseeing all aspects of digital media and online fundraising, as well as traditional media strategy, like radio and television placements. In January 2017, Parscale, along with another senior Trump aide, Nick Ayers, formally launched America First Policies, a non-profit organization that promotes President Trump's agenda and White House initiatives.",
+            "Jack Posobiec\nJack Posobiec ( ) is an American alt-right pro-Donald Trump Internet activist and conspiracy theorist, known primarily for his controversial comments on Twitter. During the 2016 election, he was a special projects director of Citizens for Trump, a pro-Trump organization. For two months in 2017, he was a correspondent for \"The Rebel\", a far-right Canada-based website. He was granted press access to the White House in April 2017, and his tweets have been promoted by former Trump campaign manager Roger Stone.",
+            "Vichy Republican\nVichy Republican is a term that emerged on social media in 2016 in regards to the United States Presidential campaign ofDonald Trump. To Trump opponents, it refers to members of the Republican Party that have chosen to support Donald Trump's candidacy.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "Roger Ailes\nRoger Eugene Ailes (May 15, 1940\u00a0\u2013 May 18, 2017) was an American television executive and media consultant. He was the founder and one-time Chairman and CEO of Fox News and the Fox Television Stations Group, from which he resigned in July 2016 following allegations that he sexually harassed female colleagues. Ailes was a media consultant for Republican presidents Richard Nixon, Ronald Reagan, and George H. W. Bush, and for Rudy Giuliani's first mayoral campaign. In 2016, after he left Fox News, he became an adviser to the Donald Trump campaign, where he assisted with debate preparation."
+        ],
+        "thoughts": [
+            "The specific Trump campaign-Russian meeting in question took place on June 9, 2016, at Trump Tower in New York City. It involved three senior members of the Trump campaign - Donald Trump Jr., Jared Kushner, and Paul Manafort - and at least five other people, including Russian lawyer Natalia Veselnitskaya. The meeting was arranged by publicist Rob Goldstone on behalf of his client, singer-songwriter Emin Agalarov. This meeting was disclosed to U.S. government officials when Kushner filed a revised version of his security clearance form.",
+            "1. Donald Trump Jr. - birth date not available\n2. Jared Kushner - birth date not available\n3. Paul Manafort - birth date not available\n4. Natalia Veselnitskaya - birth date not available\n5. Rob Goldstone - birth date not available\n6. Emin Agalarov - birth date not available\n7. Mike Pence - born June 7, 1959\n8. Hillary Clinton - born October 26, 1947\n9. Brad Parscale - born January 3, 1976\n10. Jack Posobiec - birth date not available",
+            "Based on the birth dates provided, the children attendees would be those who were under the age of 18 at the time of the meeting. Since the birth dates of most attendees are not available, we can only determine that Mike Pence was the only attendee who was a child at the time of the meeting, as he was born on June 7, 1959. Therefore, the only child attendee based on age at the time of the meeting was Mike Pence.",
+            "Mike Pence is the oldest child attendee based on his birth date of June 7, 1959."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the oldest child that attended the Trump campaign-Russian meeting?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify attendees of the Trump campaign-Russian meeting.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Filter the attendees to find those who are children of prominent political figures.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve birth dates or age information for each identified child attendee.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which of the child attendees is the oldest based on birth dates or age information.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The graph breaks down the task into a series of steps that involves identifying attendees of the meeting, filtering for children of prominent figures, retrieving their birth dates, and determining the oldest among them. The final node concludes the process by identifying the name of the oldest attendee."
+        },
+        "recall": 0.0,
+        "retrieved_passages": [
+            "International business\nInternational business comprises all international trades services or investments (bonds, stocks) conducted by both the private and public sectors that take place between two or more countries beyond their political boundaries. The term \"international business\" refers to all those business activities which involve cross-border transactions of goods, services, and resources between two or more nations. Transactions of economic resources include capital, skills, people for the purpose of the international production of physical goods and services such as finance, banking, insurance, and construction. International business can also be referred to as globalization. Globalization is the shift toward a more integrated and interdependent economy. In order to conduct business overseas, multinational companies need to separate national markets into one huge global marketplace. Two macro factors underline the trend of greater globalization. The first is falling of barriers to make cross-border trade easier such as the free flow of goods and services, and capital, and the second factor is technological change, particularly the developments in communication, information processing, and transportation technologies.",
+            "Index Magazine\nindex Magazine was a prominent New York City based publication with in-depth interviews with prominent figures in art and culture. It was created by Peter Halley and Bob Nickas in 1996, running until late 2005. Covering the burgeoning Indie culture of the 1990s, index regularly employed such rising photographers as Juergen Teller, Terry Richardson, Wolfgang Tillmans, and Ryan McGinley, and featured interviews with figures including Bj\u00f6rk, Brian Eno, Marc Jacobs, and Scarlett Johansson, mixing new talents and established names in music, film, architecture, fashion, art, and politics. In addition to famous personalities, the publication also featured a mix of interviews with not so-famous New York personalities such as Queen Itchie or Ducky Doolittle.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "History of Korea\nThe Lower Paleolithic era in the Korean Peninsula began roughly half a million years ago. The earliest known Korean pottery dates to around 8000 BC, and the Neolithic period began after 6000 BC, followed by the Bronze Age by 800 BC, and the Iron Age around 400 BC.",
+            "Memory of Mankind\nSeveral motivations underlie the project. The primary ambition of MOM is to preserve an image of our era, created by numerous participants all over the planet. MOM will also contain information which our society is obliged to forward to the future: e.g. description of nuclear waste repositories. MOM collaborates with the NEA and SKB. Although the most obvious ambition and often described in the media is the concern about preserving our knowledge, this is not the primary goal of MOM. Serving as a time capsule MOM is both: in a time frame of millennia it is the story about us, and in a time frame of decades it is a backup. In times where global warming, nuclear danger and biological warfare threaten the existence of civilization, saving the core knowledge and culture acquired over centuries is a backup measure. In case of a collapse, the MOM project could help survivors to rebuild civilization. Linked to this, an another reason is of political order: facing the lack of reactivity of authorities concerning global warming, the MOM project is a reminder of what can happen. Roman and Greek civilizations whose histories have been reconstructed by the small percentage of texts and artifacts which survived until our days are examples that have inspired the MOM project. Finally, it's a critic of our digital civilization : according to Kunze, maybe nothing of the 21st century will last in the future, since most of our interactions are now virtual. The \"accuracy versus bullshit\" is one of the main themes of the MOM project, worried about loss of information, the project can only aim to save a fragment of the information produced until today, but this fragment has to be representative.",
+            "Against All Will\nAgainst All Will is a rock quartet from Los Angeles, California, whose debut album lineup was formed in Spring 2009 by Jimmy Allen (formerly of Puddle of Mudd), Jeff Current (formerly of Seven Story Drop), Steve \"Boomstick\" Wilson (formerly of Dead Kennedys and t.A.T.u.), and Cello Dias (formerly of Soulfly). Songs \"All About You\" and \"The Drug I Need\" from their debut album entitled A Rhyme & Reason ranked in the national rock radio top 50 in 2010.",
+            "Education in the Republic of Macedonia\nThe Constitution mandates free and compulsory primary and secondary education in the Republic of Macedonia, and the Law on Primary Education specifies that all children from 6 to 15 years of age attend school for a compulsory 9 years. The Law on High School Education specifies that all adolescents from the ages of 15 - 19 must attend high school for 4 years (or 3 years - depending on the type of school)",
+            "Hermann G\u00f6ring\nHermann Wilhelm G\u00f6ring (or Goering; ] ; 12 January 1893 \u2013 15 October 1946) was a German political and military leader as well as one of the most powerful figures in the Nazi Party (NSDAP) that ruled Germany from 1933 to 1945. A veteran World War I fighter pilot ace, he was a recipient of the \"Pour le M\u00e9rite\". He was the last commander of \"Jagdgeschwader\" 1, the fighter wing once led by Manfred von Richthofen.",
+            "R. Kelly (album)\nR. Kelly is the second studio album by R&B singer R. Kelly. It was released on November 14, 1995. The album was somewhat of a departure from his previous album's sexual innuendos, featuring slightly more introspective lyrics. \"R. Kelly\" was the artist's second number 1 R&B album and the first one to top the \"Billboard\" 200; it spawned three number 1 R&B singles in chronological order: \"You Remind Me of Something\", \"Down Low (Nobody Has to Know)\" and \"I Can't Sleep Baby (If I)\".",
+            "Herzliya Conference\nThe Herzliya Conference, hosted by the Interdisciplinary Center at Herzliya, is Israel's center stage for the articulation of national policy by its most prominent leaders, including the Israeli President, the Prime Minister, the IDF Chief of General Staff, and the leading contenders for high political office.",
+            "Matthew, Mark, Luke and John\n\"Matthew, Mark, Luke and John\", also known as the \"Black Paternoster\", is an English language prayer and nursery rhyme traditionally said by children as they go to bed. It has a Roud Folk Song Index number of 1704. It may have origins in ancient Babylonian prayers and was being used in a Christian version in late Medieval Germany. The earliest extant version in English can be traced to the mid-sixteenth century. It was mentioned by English Protestant writers as a \"popish\" or magical charm. It is related to other prayers, including a \"Green\" and \"White Paternoster\", which can be traced to late Medieval England and with which it is often confused. It has been the inspiration for a number of literary works by figures including Henry Wadsworth Longfellow and musical works by figures such as Gustav Holst. It has been the subject of alternative versions and satires.",
+            "Staff (military)\nA military staff (often referred to as general staff, army staff, navy staff, or air staff within the individual services) is a group of officers, enlisted and civilian personnel that are responsible for the administrative, operational and logistical needs of its unit. It provides bi-directional flow of information between a commanding officer and subordinate military units. A staff also provides an executive function where it filters information needed by the commander or shunts unnecessary information.",
+            "Construct (album)\nConstruct is the tenth full-length studio album by Swedish melodic death metal band Dark Tranquillity. It was released on 27 May 2013 through Century Media Records. A music video for \"Uniformity\", directed by Patric Ullaeus, was released on 10 May 2013. The album was written during what the band described as their \"darkest period\" and drew critical praise for its melodrama and darkness. Construct would be the band's last studio album with founding member guitarist Martin Henriksson as he left the band in early 2016 due to loss of passion for playing music.",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "Work college\nWork colleges are distinctive liberal arts colleges in the United States that promote the purposeful integration of work, learning, and service. At a work college all students work regardless of their academic program or their financial need. A work college is a public or private non-profit, four-year degree-granting institution of higher learning where student work is an integrated, essential and federally required core component of the educational work-learning-service program. Unlike Federal Work Study, which is solely need-based, work colleges do not differentiate between those that can afford to pay for their education from those that must work to cover their educational costs. At work colleges, students are regularly evaluated and assessed on their work performance and can be dismissed from the institution for non-performance in the work program. Students do not have the ability to \"buy\" their way out of the work requirement. Students perform essential institutional functions in every area imaginable on their campuses and gain a strong sense of ownership and responsibility for their campus community. Student labor enables work colleges to be far more operationally efficient and administratively lean (compared to more traditional colleges). This, in turn, contributes to lower operational costs which results in lower \u2013 and more affordable \u2013 tuition.",
+            "BBC Sky at Night\nBBC Sky at Night magazine is a British monthly magazine about astronomy aimed at amateur astronomers and published by Immediate Media Company. The title of the periodical derives for the likenamed Television program produced by the BBC, \"The Sky at Night\". The magazine, in comparison with the TV series, includes more technical and scientific information. It also includes a bonus CD-ROM with software programs, latest astronomical photographs, written materials and in some issues, a 'classic' episode of \"The Sky at Night\" from the BBC archives."
+        ],
+        "thoughts": [
+            "The relevant information provided does not contain any specific details about the attendees of the Trump campaign-Russian meeting. Therefore, it is not possible to identify the attendees based on the information provided.",
+            "Based on the information provided, it is not possible to filter the attendees to find those who are children of prominent political figures.",
+            "Unfortunately, there is no specific information provided about child attendees in the given text. Therefore, birth dates or age information for each identified child attendee cannot be retrieved.",
+            "Unfortunately, without specific information about the birth dates or ages of the child attendees, it is not possible to determine which child is the oldest."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the oldest child that attended the Trump campaign-Russian meeting?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the Trump campaign-Russian meeting that took place.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the list of all children who attended the identified Trump campaign-Russian meeting.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the ages of the children who attended the meeting at the time of the meeting.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify which child was the oldest at the time of the meeting based on the retrieved ages.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph is designed to answer the question by sequentially breaking down the problem into manageable steps. We begin by identifying the specific Trump campaign-Russian meeting in question. Then, we gather information about all the children who were present at the mentioned meeting. Following this, we retrieve or deduce their ages at that point in time. Finally, a reasoning step involves comparing the ages to determine the oldest child. Each step depends on the successful completion of the previous steps, ensuring a comprehensive approach to answering the question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Trump campaign\u2013Russian meeting\nOn June 9, 2016, a meeting was held in Trump Tower in New York City between three senior members of the presidential campaign of Donald TrumpDonald Trump Jr., Jared Kushner, and Paul Manafortand at least five other people, including Russian lawyer Natalia Veselnitskaya. The meeting was arranged by publicist and long-time Trump acquantiance, Rob Goldstone on behalf of his client, singer-songwriter Emin Agalarov. It was disclosed to U.S. government officials when Kushner filed a revised version of his security clearance form.",
+            "Donald Trump presidential campaign, 2016\nThe 2016 presidential campaign of Donald Trump, an American businessman, television personality, and author, was formally launched on June 16, 2015, at Trump Tower in New York City. Trump was the Republican nominee for President of the United States in the 2016 election, having won the most state primaries, caucuses, and delegates at the 2016 Republican National Convention. He chose Mike Pence, the sitting Governor of Indiana, as his vice presidential running mate. On November 8, 2016, Trump and Pence were elected president and vice president of the United States.",
+            "Trump Tower\nTrump Tower is a 58-story, 664 ft mixed-use skyscraper located at 721\u2013725 Fifth Avenue between 56th and 57th Streets in Midtown Manhattan, New York City. Trump Tower serves as the headquarters for The Trump Organization. Additionally, it houses the penthouse condominium residences of the building's namesake and developer, U.S. President Donald Trump, who was a businessman and real estate developer when the tower was developed. Several members of the Trump family also reside, or have resided, in the building. The tower stands upon a plot where the flagship store of department-store chain Bonwit Teller was formerly located.",
+            "Donald Trump Jr.\nDonald John Trump Jr. (born December 31, 1977) is an American businessman and former reality TV personality. He is the oldest child of the 45th President of the United States, Donald Trump, and his first wife, Ivana.",
+            "Paul Manafort\nPaul John Manafort Jr. (born April 1, 1949) is an American lawyer, lobbyist and political consultant. He joined Donald Trump's presidential campaign team in March 2016 and served as campaign manager from June to August 2016. He was previously an adviser to the U.S. presidential campaigns of Republicans Gerald Ford, Ronald Reagan, George H. W. Bush, and Bob Dole. In 1980 Manafort co-founded the Washington, D.C.-based lobbying firm Black, Manafort & Stone, along with principals Charles R. Black Jr., and Roger J. Stone. In 1984 it was renamed Black, Manafort, Stone and Kelly (BMSK) & associates, after Peter G. Kelly was recruited.",
+            "Trump Tower (White Plains)\nTrump Tower at City Center is a 35-story condominium located in the city of White Plains in Westchester County, New York. It was completed in 2005, and it opened on September 21 of that year with 212 residences. The Trump Organization (partnered with Westchester developer Louis R. Cappelli) led the development, sales, and management of the building. The building is attached to a municipal parking building whose rooftop holds the outdoor amenities for the Trump Tower residents. Rooftop amenities include a pool and lounge area, two tennis courts and a paddle board court.",
+            "Trump Entertainment Resorts\nTrump Entertainment Resorts, Inc. was a gaming and hospitality company that owned and operated the now shuttered Trump Taj Mahal hotel and casino, as well as the now shuttered Trump Plaza Hotel and Casino and the Trump Marina located in Atlantic City, New Jersey, United States. Formerly known as Trump Hotels & Casino Resorts, it was founded in 1995 by Donald Trump, now 45th President of the United States, who has not had any formal role in the company since 2011, if not earlier. The company filed for bankruptcy in 2004, 2009 and 2014. It has been a subsidiary of Icahn Enterprises since 2016.",
+            "Trump Plaza Hotel and Casino\nTrump Plaza is a closed hotel and casino on the Boardwalk in Atlantic City, New Jersey, owned by Trump Entertainment Resorts. Designed by architect Martin Stern, Jr., it operated from May 15, 1984 until September 16, 2014.",
+            "Brad Parscale\nBrad Parscale (born January 3, 1976) is an American digital media and political strategist. He served as the digital media director for Donald Trump's 2016 presidential campaign. Parscale began working for the Trump Organization in 2011, developing and designing websites, and creating and managing digital media strategies. In early 2015, Trump hired Parscale and his firm, Giles-Parscale, to create a website for his exploratory campaign. When Trump declared himself a Republican candidate in 2015, one of the first people he called was Parscale, asking him to update his exploratory campaign site into a \"full-fledged presidential campaign website.\" Throughout the Republican primary, Parscale was responsible for the Donald J. Trump for President website, as well as for digital media strategy and online fundraising campaigns. In June 2016, Parscale was officially named digital media director for the Donald J. Trump for President campaign, overseeing all aspects of digital media and online fundraising, as well as traditional media strategy, like radio and television placements. In January 2017, Parscale, along with another senior Trump aide, Nick Ayers, formally launched America First Policies, a non-profit organization that promotes President Trump's agenda and White House initiatives.",
+            "Vichy Republican\nVichy Republican is a term that emerged on social media in 2016 in regards to the United States Presidential campaign ofDonald Trump. To Trump opponents, it refers to members of the Republican Party that have chosen to support Donald Trump's candidacy.",
+            "Basket of deplorables\n\"Basket of deplorables\" is a phrase from a 2016 presidential election campaign speech delivered by Democratic nominee Hillary Clinton on September 9, 2016, at a campaign fundraising event, which Clinton used to describe a faction of supporters of her general election opponent, Republican nominee Donald Trump. Clinton later said that she \"regrets saying half [of Trump's supporters]\", and the Trump campaign repeatedly used the phrase against her during and after the 2016 presidential election. Many Trump supporters adopted the \"Deplorable\" moniker for themselves. After Clinton's loss, some journalists and political analysts questioned whether or not the speech played a role in the election's outcome.",
+            "Jack Posobiec\nJack Posobiec ( ) is an American alt-right pro-Donald Trump Internet activist and conspiracy theorist, known primarily for his controversial comments on Twitter. During the 2016 election, he was a special projects director of Citizens for Trump, a pro-Trump organization. For two months in 2017, he was a correspondent for \"The Rebel\", a far-right Canada-based website. He was granted press access to the White House in April 2017, and his tweets have been promoted by former Trump campaign manager Roger Stone.",
+            "Roger Ailes\nRoger Eugene Ailes (May 15, 1940\u00a0\u2013 May 18, 2017) was an American television executive and media consultant. He was the founder and one-time Chairman and CEO of Fox News and the Fox Television Stations Group, from which he resigned in July 2016 following allegations that he sexually harassed female colleagues. Ailes was a media consultant for Republican presidents Richard Nixon, Ronald Reagan, and George H. W. Bush, and for Rudy Giuliani's first mayoral campaign. In 2016, after he left Fox News, he became an adviser to the Donald Trump campaign, where he assisted with debate preparation.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller."
+        ],
+        "thoughts": [
+            "The Trump campaign-Russian meeting that took place was on June 9, 2016, at Trump Tower in New York City. It involved three senior members of the presidential campaign of Donald Trump - Donald Trump Jr., Jared Kushner, and Paul Manafort - and at least five other people, including Russian lawyer Natalia Veselnitskaya. The meeting was arranged by publicist Rob Goldstone on behalf of his client, singer-songwriter Emin Agalarov. This meeting was later disclosed to U.S. government officials when Kushner filed a revised version of his security clearance form.",
+            "The children who attended the identified Trump campaign-Russian meeting are Donald Trump Jr. and Jared Kushner.",
+            "The relevant information does not provide the ages of the children who attended the meeting at the time of the meeting. Therefore, it is not possible to determine the ages of the children who attended the meeting based on the given information.",
+            "The relevant information does not provide the ages of the children who attended the meeting at the time of the meeting. Therefore, it is not possible to determine the ages of the children who attended the meeting based on the given information."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the oldest child that attended the Trump campaign-Russian meeting?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify all participants of the Trump campaign-Russian meeting.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the birthdate of each participant from the meeting.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Select participants who are children of prominent figures.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Find the ages of these children attendees based on their birthdates.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Identify the oldest child attendee based on their age.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The graph begins by identifying all participants of the specific meeting, which includes both adults and possible children of notable figures. Next, it retrieves and processes the birthdates of all meeting participants. Concurrently, it filters these participants to only focus on children of notable figures. Using both their birthdates and their status as children, it calculates their ages to identify which child is the oldest. Finally, it synthesizes this information to determine the name of the oldest child that attended the meeting."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Trump campaign\u2013Russian meeting\nOn June 9, 2016, a meeting was held in Trump Tower in New York City between three senior members of the presidential campaign of Donald TrumpDonald Trump Jr., Jared Kushner, and Paul Manafortand at least five other people, including Russian lawyer Natalia Veselnitskaya. The meeting was arranged by publicist and long-time Trump acquantiance, Rob Goldstone on behalf of his client, singer-songwriter Emin Agalarov. It was disclosed to U.S. government officials when Kushner filed a revised version of his security clearance form.",
+            "Donald Trump presidential campaign, 2016\nThe 2016 presidential campaign of Donald Trump, an American businessman, television personality, and author, was formally launched on June 16, 2015, at Trump Tower in New York City. Trump was the Republican nominee for President of the United States in the 2016 election, having won the most state primaries, caucuses, and delegates at the 2016 Republican National Convention. He chose Mike Pence, the sitting Governor of Indiana, as his vice presidential running mate. On November 8, 2016, Trump and Pence were elected president and vice president of the United States.",
+            "Brad Parscale\nBrad Parscale (born January 3, 1976) is an American digital media and political strategist. He served as the digital media director for Donald Trump's 2016 presidential campaign. Parscale began working for the Trump Organization in 2011, developing and designing websites, and creating and managing digital media strategies. In early 2015, Trump hired Parscale and his firm, Giles-Parscale, to create a website for his exploratory campaign. When Trump declared himself a Republican candidate in 2015, one of the first people he called was Parscale, asking him to update his exploratory campaign site into a \"full-fledged presidential campaign website.\" Throughout the Republican primary, Parscale was responsible for the Donald J. Trump for President website, as well as for digital media strategy and online fundraising campaigns. In June 2016, Parscale was officially named digital media director for the Donald J. Trump for President campaign, overseeing all aspects of digital media and online fundraising, as well as traditional media strategy, like radio and television placements. In January 2017, Parscale, along with another senior Trump aide, Nick Ayers, formally launched America First Policies, a non-profit organization that promotes President Trump's agenda and White House initiatives.",
+            "Basket of deplorables\n\"Basket of deplorables\" is a phrase from a 2016 presidential election campaign speech delivered by Democratic nominee Hillary Clinton on September 9, 2016, at a campaign fundraising event, which Clinton used to describe a faction of supporters of her general election opponent, Republican nominee Donald Trump. Clinton later said that she \"regrets saying half [of Trump's supporters]\", and the Trump campaign repeatedly used the phrase against her during and after the 2016 presidential election. Many Trump supporters adopted the \"Deplorable\" moniker for themselves. After Clinton's loss, some journalists and political analysts questioned whether or not the speech played a role in the election's outcome.",
+            "Vichy Republican\nVichy Republican is a term that emerged on social media in 2016 in regards to the United States Presidential campaign ofDonald Trump. To Trump opponents, it refers to members of the Republican Party that have chosen to support Donald Trump's candidacy.",
+            "Jack Posobiec\nJack Posobiec ( ) is an American alt-right pro-Donald Trump Internet activist and conspiracy theorist, known primarily for his controversial comments on Twitter. During the 2016 election, he was a special projects director of Citizens for Trump, a pro-Trump organization. For two months in 2017, he was a correspondent for \"The Rebel\", a far-right Canada-based website. He was granted press access to the White House in April 2017, and his tweets have been promoted by former Trump campaign manager Roger Stone.",
+            "Neck Meetinghouse and Yard\nThe Neck Meetinghouse and Yard, also known as the Quaker Meetinghouse & Graveyard, is a historic Quaker meetinghouse located at West Denton, Caroline County, Maryland. It is a one-story rectangular frame building with a pitched gable roof measuring 30 feet, 8 inches long and 20 feet, 5\u00a0inches deep. In the graveyard are six marked burials with stones dating from the 1850s to 1890, with some more recent interments. It is the only extant Friends meeting house in Caroline County, and one of only a few still standing on the Eastern Shore. The meeting house was utilized from September 26, 1802, when the first meeting was held in the building, until it was abandoned in 1890 for lack of funds and participants.",
+            "Paul Manafort\nPaul John Manafort Jr. (born April 1, 1949) is an American lawyer, lobbyist and political consultant. He joined Donald Trump's presidential campaign team in March 2016 and served as campaign manager from June to August 2016. He was previously an adviser to the U.S. presidential campaigns of Republicans Gerald Ford, Ronald Reagan, George H. W. Bush, and Bob Dole. In 1980 Manafort co-founded the Washington, D.C.-based lobbying firm Black, Manafort & Stone, along with principals Charles R. Black Jr., and Roger J. Stone. In 1984 it was renamed Black, Manafort, Stone and Kelly (BMSK) & associates, after Peter G. Kelly was recruited.",
+            "Donald Trump Jr.\nDonald John Trump Jr. (born December 31, 1977) is an American businessman and former reality TV personality. He is the oldest child of the 45th President of the United States, Donald Trump, and his first wife, Ivana.",
+            "Roger Ailes\nRoger Eugene Ailes (May 15, 1940\u00a0\u2013 May 18, 2017) was an American television executive and media consultant. He was the founder and one-time Chairman and CEO of Fox News and the Fox Television Stations Group, from which he resigned in July 2016 following allegations that he sexually harassed female colleagues. Ailes was a media consultant for Republican presidents Richard Nixon, Ronald Reagan, and George H. W. Bush, and for Rudy Giuliani's first mayoral campaign. In 2016, after he left Fox News, he became an adviser to the Donald Trump campaign, where he assisted with debate preparation.",
+            "Charles R. Black Jr.\nCharles R. Black Jr. (born 1947), is the current Chairman of Prime Policy Group, a public affairs firm which is a subsidiary of Burson-Marsteller Global Public Relations. Prime Policy Group was formed with the merger of Martin B. Gold 's Gold & Liebengood with the Washington, DC-based lobbying firm he co-founded\u2014Black, Manafort, Stone and Kelly\u2014with Paul Manafort, Roger J. Stone and Peter G. Kelly. In 2010, Black was inducted into the American Association of Political Consultants (AAPC) Hall of Fame.",
+            "Trump Tower\nTrump Tower is a 58-story, 664 ft mixed-use skyscraper located at 721\u2013725 Fifth Avenue between 56th and 57th Streets in Midtown Manhattan, New York City. Trump Tower serves as the headquarters for The Trump Organization. Additionally, it houses the penthouse condominium residences of the building's namesake and developer, U.S. President Donald Trump, who was a businessman and real estate developer when the tower was developed. Several members of the Trump family also reside, or have resided, in the building. The tower stands upon a plot where the flagship store of department-store chain Bonwit Teller was formerly located."
+        ],
+        "thoughts": [
+            "Participants of the Trump campaign-Russian meeting:\n1. Donald Trump Jr.\n2. Jared Kushner\n3. Paul Manafort\n4. Russian lawyer Natalia Veselnitskaya\n5. Publicist Rob Goldstone\n6. Singer-songwriter Emin Agalarov",
+            "- Paul John Manafort Jr. was born on April 1, 1949.\n- Donald John Trump Jr. was born on December 31, 1977.\n- Brad Parscale was born on January 3, 1976.\n- Charles R. Black Jr.'s birthdate is not provided in the given information.",
+            "Based on the upstream task, the participants who are children of prominent figures are Donald Trump Jr. (son of former President Donald Trump) and Jared Kushner (son-in-law of former President Donald Trump).",
+            "- Paul John Manafort Jr. is 72 years old (as of 2021).\n- Donald John Trump Jr. is 43 years old (as of 2021).\n- Brad Parscale is 45 years old (as of 2021).\n- Charles R. Black Jr.'s age cannot be determined without his birthdate.",
+            "Based on the information provided, Paul John Manafort Jr. is the oldest child attendee at 72 years old."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the oldest child that attended the Trump campaign-Russian meeting?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the Trump campaign-Russian meeting. Gather details about this specific event.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the list of attendees who participated in the Trump campaign-Russian meeting.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Gather birth dates or ages of all attendees identified in the list.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which attendee is the oldest based on the gathered birth dates or ages.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Identify the name of the oldest attendee determined in the previous step.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph begins by identifying the specific Trump campaign-Russian meeting, as this is the context for all further information. The next step retrieves a list of attendees, which is directly dependent on correctly identifying the meeting. Then, the ages or birth dates of these attendees are collected to determine the oldest participant. Finally, the name of the oldest attendee is identified, answering the original question."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Trump campaign\u2013Russian meeting\nOn June 9, 2016, a meeting was held in Trump Tower in New York City between three senior members of the presidential campaign of Donald TrumpDonald Trump Jr., Jared Kushner, and Paul Manafortand at least five other people, including Russian lawyer Natalia Veselnitskaya. The meeting was arranged by publicist and long-time Trump acquantiance, Rob Goldstone on behalf of his client, singer-songwriter Emin Agalarov. It was disclosed to U.S. government officials when Kushner filed a revised version of his security clearance form.",
+            "Donald Trump presidential campaign, 2016\nThe 2016 presidential campaign of Donald Trump, an American businessman, television personality, and author, was formally launched on June 16, 2015, at Trump Tower in New York City. Trump was the Republican nominee for President of the United States in the 2016 election, having won the most state primaries, caucuses, and delegates at the 2016 Republican National Convention. He chose Mike Pence, the sitting Governor of Indiana, as his vice presidential running mate. On November 8, 2016, Trump and Pence were elected president and vice president of the United States.",
+            "Trump Tower\nTrump Tower is a 58-story, 664 ft mixed-use skyscraper located at 721\u2013725 Fifth Avenue between 56th and 57th Streets in Midtown Manhattan, New York City. Trump Tower serves as the headquarters for The Trump Organization. Additionally, it houses the penthouse condominium residences of the building's namesake and developer, U.S. President Donald Trump, who was a businessman and real estate developer when the tower was developed. Several members of the Trump family also reside, or have resided, in the building. The tower stands upon a plot where the flagship store of department-store chain Bonwit Teller was formerly located.",
+            "Trump Tower (White Plains)\nTrump Tower at City Center is a 35-story condominium located in the city of White Plains in Westchester County, New York. It was completed in 2005, and it opened on September 21 of that year with 212 residences. The Trump Organization (partnered with Westchester developer Louis R. Cappelli) led the development, sales, and management of the building. The building is attached to a municipal parking building whose rooftop holds the outdoor amenities for the Trump Tower residents. Rooftop amenities include a pool and lounge area, two tennis courts and a paddle board court.",
+            "Basket of deplorables\n\"Basket of deplorables\" is a phrase from a 2016 presidential election campaign speech delivered by Democratic nominee Hillary Clinton on September 9, 2016, at a campaign fundraising event, which Clinton used to describe a faction of supporters of her general election opponent, Republican nominee Donald Trump. Clinton later said that she \"regrets saying half [of Trump's supporters]\", and the Trump campaign repeatedly used the phrase against her during and after the 2016 presidential election. Many Trump supporters adopted the \"Deplorable\" moniker for themselves. After Clinton's loss, some journalists and political analysts questioned whether or not the speech played a role in the election's outcome.",
+            "Brad Parscale\nBrad Parscale (born January 3, 1976) is an American digital media and political strategist. He served as the digital media director for Donald Trump's 2016 presidential campaign. Parscale began working for the Trump Organization in 2011, developing and designing websites, and creating and managing digital media strategies. In early 2015, Trump hired Parscale and his firm, Giles-Parscale, to create a website for his exploratory campaign. When Trump declared himself a Republican candidate in 2015, one of the first people he called was Parscale, asking him to update his exploratory campaign site into a \"full-fledged presidential campaign website.\" Throughout the Republican primary, Parscale was responsible for the Donald J. Trump for President website, as well as for digital media strategy and online fundraising campaigns. In June 2016, Parscale was officially named digital media director for the Donald J. Trump for President campaign, overseeing all aspects of digital media and online fundraising, as well as traditional media strategy, like radio and television placements. In January 2017, Parscale, along with another senior Trump aide, Nick Ayers, formally launched America First Policies, a non-profit organization that promotes President Trump's agenda and White House initiatives.",
+            "Trump Entertainment Resorts\nTrump Entertainment Resorts, Inc. was a gaming and hospitality company that owned and operated the now shuttered Trump Taj Mahal hotel and casino, as well as the now shuttered Trump Plaza Hotel and Casino and the Trump Marina located in Atlantic City, New Jersey, United States. Formerly known as Trump Hotels & Casino Resorts, it was founded in 1995 by Donald Trump, now 45th President of the United States, who has not had any formal role in the company since 2011, if not earlier. The company filed for bankruptcy in 2004, 2009 and 2014. It has been a subsidiary of Icahn Enterprises since 2016.",
+            "Vichy Republican\nVichy Republican is a term that emerged on social media in 2016 in regards to the United States Presidential campaign ofDonald Trump. To Trump opponents, it refers to members of the Republican Party that have chosen to support Donald Trump's candidacy.",
+            "Paul Manafort\nPaul John Manafort Jr. (born April 1, 1949) is an American lawyer, lobbyist and political consultant. He joined Donald Trump's presidential campaign team in March 2016 and served as campaign manager from June to August 2016. He was previously an adviser to the U.S. presidential campaigns of Republicans Gerald Ford, Ronald Reagan, George H. W. Bush, and Bob Dole. In 1980 Manafort co-founded the Washington, D.C.-based lobbying firm Black, Manafort & Stone, along with principals Charles R. Black Jr., and Roger J. Stone. In 1984 it was renamed Black, Manafort, Stone and Kelly (BMSK) & associates, after Peter G. Kelly was recruited.",
+            "Donald Trump Jr.\nDonald John Trump Jr. (born December 31, 1977) is an American businessman and former reality TV personality. He is the oldest child of the 45th President of the United States, Donald Trump, and his first wife, Ivana.",
+            "Charles R. Black Jr.\nCharles R. Black Jr. (born 1947), is the current Chairman of Prime Policy Group, a public affairs firm which is a subsidiary of Burson-Marsteller Global Public Relations. Prime Policy Group was formed with the merger of Martin B. Gold 's Gold & Liebengood with the Washington, DC-based lobbying firm he co-founded\u2014Black, Manafort, Stone and Kelly\u2014with Paul Manafort, Roger J. Stone and Peter G. Kelly. In 2010, Black was inducted into the American Association of Political Consultants (AAPC) Hall of Fame.",
+            "Jack Posobiec\nJack Posobiec ( ) is an American alt-right pro-Donald Trump Internet activist and conspiracy theorist, known primarily for his controversial comments on Twitter. During the 2016 election, he was a special projects director of Citizens for Trump, a pro-Trump organization. For two months in 2017, he was a correspondent for \"The Rebel\", a far-right Canada-based website. He was granted press access to the White House in April 2017, and his tweets have been promoted by former Trump campaign manager Roger Stone.",
+            "Roger Ailes\nRoger Eugene Ailes (May 15, 1940\u00a0\u2013 May 18, 2017) was an American television executive and media consultant. He was the founder and one-time Chairman and CEO of Fox News and the Fox Television Stations Group, from which he resigned in July 2016 following allegations that he sexually harassed female colleagues. Ailes was a media consultant for Republican presidents Richard Nixon, Ronald Reagan, and George H. W. Bush, and for Rudy Giuliani's first mayoral campaign. In 2016, after he left Fox News, he became an adviser to the Donald Trump campaign, where he assisted with debate preparation.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller."
+        ],
+        "thoughts": [
+            "The Trump campaign-Russian meeting took place on June 9, 2016, at Trump Tower in New York City. It involved three senior members of Donald Trump's presidential campaign - Donald Trump Jr., Jared Kushner, and Paul Manafort - and at least five other people, including Russian lawyer Natalia Veselnitskaya. The meeting was arranged by publicist Rob Goldstone on behalf of his client, singer-songwriter Emin Agalarov. This meeting was disclosed to U.S. government officials when Kushner filed a revised version of his security clearance form.\n\nThis meeting has been the subject of significant controversy and scrutiny, as it raised questions about potential collusion between the Trump campaign and Russia during the 2016 presidential election. The details and implications of this meeting have been a focal point of investigations into Russian interference in the election and possible ties to the Trump campaign.",
+            "The list of attendees who participated in the Trump campaign-Russian meeting at Trump Tower on June 9, 2016 includes Donald Trump Jr., Jared Kushner, Paul Manafort, Russian lawyer Natalia Veselnitskaya, publicist Rob Goldstone, and singer-songwriter Emin Agalarov.",
+            "- Natalia Veselnitskaya: No birth date available\n- Rob Goldstone: No birth date available\n- Emin Agalarov: No birth date available\n- Donald Trump: June 14, 1946\n- Ivanka Trump: October 30, 1981\n- Jared Kushner: January 10, 1981\n- Mike Pence: June 7, 1959\n- Brad Parscale: January 3, 1976\n- Charles R. Black Jr.: Born in 1947\n- Paul Manafort: April 1, 1949\n- Roger J. Stone: August 27, 1952\n- Peter G. Kelly: No birth date available",
+            "Based on the available birth dates, the oldest attendee is Donald Trump, born on June 14, 1946.",
+            "The name of the oldest attendee is Donald Trump."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the oldest child that attended the Trump campaign-Russian meeting?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the attendees of the Trump campaign-Russian meeting.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the birthdates of the attendees to find out who is the oldest.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify which of the attendees is a child of any participants in the Trump campaign, specifically focusing on family relations.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Cross-reference the oldest attendee determined in step 2 with the children identified in step 3 to find the oldest child that attended.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks the original question into four nodes. First, we retrieve a list of all the attendees of the Trump campaign-Russian meeting (Node 1). Then, we gather birthdates of these attendees to identify who is the oldest (Node 2). In parallel, we determine which attendees are children of any participants in the Trump campaign (Node 3). Finally, we combine the results of these two queries in Node 4 to identify the name of the oldest child that attended the meeting."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Trump campaign\u2013Russian meeting\nOn June 9, 2016, a meeting was held in Trump Tower in New York City between three senior members of the presidential campaign of Donald TrumpDonald Trump Jr., Jared Kushner, and Paul Manafortand at least five other people, including Russian lawyer Natalia Veselnitskaya. The meeting was arranged by publicist and long-time Trump acquantiance, Rob Goldstone on behalf of his client, singer-songwriter Emin Agalarov. It was disclosed to U.S. government officials when Kushner filed a revised version of his security clearance form.",
+            "Donald Trump presidential campaign, 2016\nThe 2016 presidential campaign of Donald Trump, an American businessman, television personality, and author, was formally launched on June 16, 2015, at Trump Tower in New York City. Trump was the Republican nominee for President of the United States in the 2016 election, having won the most state primaries, caucuses, and delegates at the 2016 Republican National Convention. He chose Mike Pence, the sitting Governor of Indiana, as his vice presidential running mate. On November 8, 2016, Trump and Pence were elected president and vice president of the United States.",
+            "Brad Parscale\nBrad Parscale (born January 3, 1976) is an American digital media and political strategist. He served as the digital media director for Donald Trump's 2016 presidential campaign. Parscale began working for the Trump Organization in 2011, developing and designing websites, and creating and managing digital media strategies. In early 2015, Trump hired Parscale and his firm, Giles-Parscale, to create a website for his exploratory campaign. When Trump declared himself a Republican candidate in 2015, one of the first people he called was Parscale, asking him to update his exploratory campaign site into a \"full-fledged presidential campaign website.\" Throughout the Republican primary, Parscale was responsible for the Donald J. Trump for President website, as well as for digital media strategy and online fundraising campaigns. In June 2016, Parscale was officially named digital media director for the Donald J. Trump for President campaign, overseeing all aspects of digital media and online fundraising, as well as traditional media strategy, like radio and television placements. In January 2017, Parscale, along with another senior Trump aide, Nick Ayers, formally launched America First Policies, a non-profit organization that promotes President Trump's agenda and White House initiatives.",
+            "Basket of deplorables\n\"Basket of deplorables\" is a phrase from a 2016 presidential election campaign speech delivered by Democratic nominee Hillary Clinton on September 9, 2016, at a campaign fundraising event, which Clinton used to describe a faction of supporters of her general election opponent, Republican nominee Donald Trump. Clinton later said that she \"regrets saying half [of Trump's supporters]\", and the Trump campaign repeatedly used the phrase against her during and after the 2016 presidential election. Many Trump supporters adopted the \"Deplorable\" moniker for themselves. After Clinton's loss, some journalists and political analysts questioned whether or not the speech played a role in the election's outcome.",
+            "Vichy Republican\nVichy Republican is a term that emerged on social media in 2016 in regards to the United States Presidential campaign ofDonald Trump. To Trump opponents, it refers to members of the Republican Party that have chosen to support Donald Trump's candidacy.",
+            "Jack Posobiec\nJack Posobiec ( ) is an American alt-right pro-Donald Trump Internet activist and conspiracy theorist, known primarily for his controversial comments on Twitter. During the 2016 election, he was a special projects director of Citizens for Trump, a pro-Trump organization. For two months in 2017, he was a correspondent for \"The Rebel\", a far-right Canada-based website. He was granted press access to the White House in April 2017, and his tweets have been promoted by former Trump campaign manager Roger Stone.",
+            "Paul Manafort\nPaul John Manafort Jr. (born April 1, 1949) is an American lawyer, lobbyist and political consultant. He joined Donald Trump's presidential campaign team in March 2016 and served as campaign manager from June to August 2016. He was previously an adviser to the U.S. presidential campaigns of Republicans Gerald Ford, Ronald Reagan, George H. W. Bush, and Bob Dole. In 1980 Manafort co-founded the Washington, D.C.-based lobbying firm Black, Manafort & Stone, along with principals Charles R. Black Jr., and Roger J. Stone. In 1984 it was renamed Black, Manafort, Stone and Kelly (BMSK) & associates, after Peter G. Kelly was recruited.",
+            "Trump Entertainment Resorts\nTrump Entertainment Resorts, Inc. was a gaming and hospitality company that owned and operated the now shuttered Trump Taj Mahal hotel and casino, as well as the now shuttered Trump Plaza Hotel and Casino and the Trump Marina located in Atlantic City, New Jersey, United States. Formerly known as Trump Hotels & Casino Resorts, it was founded in 1995 by Donald Trump, now 45th President of the United States, who has not had any formal role in the company since 2011, if not earlier. The company filed for bankruptcy in 2004, 2009 and 2014. It has been a subsidiary of Icahn Enterprises since 2016.",
+            "Trump Tower\nTrump Tower is a 58-story, 664 ft mixed-use skyscraper located at 721\u2013725 Fifth Avenue between 56th and 57th Streets in Midtown Manhattan, New York City. Trump Tower serves as the headquarters for The Trump Organization. Additionally, it houses the penthouse condominium residences of the building's namesake and developer, U.S. President Donald Trump, who was a businessman and real estate developer when the tower was developed. Several members of the Trump family also reside, or have resided, in the building. The tower stands upon a plot where the flagship store of department-store chain Bonwit Teller was formerly located.",
+            "Donald Trump Jr.\nDonald John Trump Jr. (born December 31, 1977) is an American businessman and former reality TV personality. He is the oldest child of the 45th President of the United States, Donald Trump, and his first wife, Ivana.",
+            "Charles R. Black Jr.\nCharles R. Black Jr. (born 1947), is the current Chairman of Prime Policy Group, a public affairs firm which is a subsidiary of Burson-Marsteller Global Public Relations. Prime Policy Group was formed with the merger of Martin B. Gold 's Gold & Liebengood with the Washington, DC-based lobbying firm he co-founded\u2014Black, Manafort, Stone and Kelly\u2014with Paul Manafort, Roger J. Stone and Peter G. Kelly. In 2010, Black was inducted into the American Association of Political Consultants (AAPC) Hall of Fame.",
+            "Roger Ailes\nRoger Eugene Ailes (May 15, 1940\u00a0\u2013 May 18, 2017) was an American television executive and media consultant. He was the founder and one-time Chairman and CEO of Fox News and the Fox Television Stations Group, from which he resigned in July 2016 following allegations that he sexually harassed female colleagues. Ailes was a media consultant for Republican presidents Richard Nixon, Ronald Reagan, and George H. W. Bush, and for Rudy Giuliani's first mayoral campaign. In 2016, after he left Fox News, he became an adviser to the Donald Trump campaign, where he assisted with debate preparation.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller."
+        ],
+        "thoughts": [
+            "Attendees of the Trump campaign-Russian meeting included Donald Trump Jr., Jared Kushner, and Paul Manafort from the Trump campaign, as well as Russian lawyer Natalia Veselnitskaya. The meeting was arranged by publicist Rob Goldstone on behalf of his client, singer-songwriter Emin Agalarov. This meeting was disclosed to U.S. government officials when Kushner filed a revised version of his security clearance form.",
+            "Based on the birthdates provided, Paul Manafort, born on April 1, 1949, is the oldest attendee of the meeting at Trump Tower in June 2016. Donald Trump Jr. was born on December 31, 1977, and Brad Parscale was born on January 3, 1976. Charles R. Black Jr.'s birthdate is not specified, but based on the information provided, Paul Manafort is the oldest attendee.",
+            "Donald Trump Jr. is a child of Donald Trump and was a participant in the Trump campaign\u2013Russian meeting. Jared Kushner, who is married to Ivanka Trump, is also a child of a participant in the Trump campaign. Therefore, both Donald Trump Jr. and Jared Kushner are children of participants in the Trump campaign.",
+            "Based on the cross-referencing of the oldest attendee, Paul Manafort, with the children identified in step 3, the oldest child that attended the meeting at Trump Tower in June 2016 is Donald Trump Jr., born on December 31, 1977."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the oldest child that attended the Trump campaign-Russian meeting?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the details of the Trump campaign-Russian meeting, including date and attendees.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify the attendees of the Trump campaign-Russian meeting.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the birth dates and names of Donald Trump's children.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which of Donald Trump's children attended the meeting by matching their names with the list of attendees.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Identify the ages of the Trump children who attended the meeting.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    },
+                    {
+                        "id": "6",
+                        "instruction": "Determine the name of the oldest child who attended the meeting by comparing their ages.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "5"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "6"
+            },
+            "explanation": "The graph starts by obtaining the details of the Trump campaign-Russian meeting, specifically focusing on the list of attendees. Simultaneously, information about Donald Trump's children, including their birth dates, is retrieved. By cross-referencing the list of attendees with the names of Trump's children, we can identify which children attended the meeting. Subsequently, we compare the ages of these participants to identify the oldest child among them, providing a complete answer to the question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "Donald Trump Jr.\nDonald John Trump Jr. (born December 31, 1977) is an American businessman and former reality TV personality. He is the oldest child of the 45th President of the United States, Donald Trump, and his first wife, Ivana.",
+            "Trump Tower\nTrump Tower is a 58-story, 664 ft mixed-use skyscraper located at 721\u2013725 Fifth Avenue between 56th and 57th Streets in Midtown Manhattan, New York City. Trump Tower serves as the headquarters for The Trump Organization. Additionally, it houses the penthouse condominium residences of the building's namesake and developer, U.S. President Donald Trump, who was a businessman and real estate developer when the tower was developed. Several members of the Trump family also reside, or have resided, in the building. The tower stands upon a plot where the flagship store of department-store chain Bonwit Teller was formerly located.",
+            "Donald Trump presidential campaign, 2016\nThe 2016 presidential campaign of Donald Trump, an American businessman, television personality, and author, was formally launched on June 16, 2015, at Trump Tower in New York City. Trump was the Republican nominee for President of the United States in the 2016 election, having won the most state primaries, caucuses, and delegates at the 2016 Republican National Convention. He chose Mike Pence, the sitting Governor of Indiana, as his vice presidential running mate. On November 8, 2016, Trump and Pence were elected president and vice president of the United States.",
+            "Brad Parscale\nBrad Parscale (born January 3, 1976) is an American digital media and political strategist. He served as the digital media director for Donald Trump's 2016 presidential campaign. Parscale began working for the Trump Organization in 2011, developing and designing websites, and creating and managing digital media strategies. In early 2015, Trump hired Parscale and his firm, Giles-Parscale, to create a website for his exploratory campaign. When Trump declared himself a Republican candidate in 2015, one of the first people he called was Parscale, asking him to update his exploratory campaign site into a \"full-fledged presidential campaign website.\" Throughout the Republican primary, Parscale was responsible for the Donald J. Trump for President website, as well as for digital media strategy and online fundraising campaigns. In June 2016, Parscale was officially named digital media director for the Donald J. Trump for President campaign, overseeing all aspects of digital media and online fundraising, as well as traditional media strategy, like radio and television placements. In January 2017, Parscale, along with another senior Trump aide, Nick Ayers, formally launched America First Policies, a non-profit organization that promotes President Trump's agenda and White House initiatives.",
+            "Vichy Republican\nVichy Republican is a term that emerged on social media in 2016 in regards to the United States Presidential campaign ofDonald Trump. To Trump opponents, it refers to members of the Republican Party that have chosen to support Donald Trump's candidacy.",
+            "Trump Entertainment Resorts\nTrump Entertainment Resorts, Inc. was a gaming and hospitality company that owned and operated the now shuttered Trump Taj Mahal hotel and casino, as well as the now shuttered Trump Plaza Hotel and Casino and the Trump Marina located in Atlantic City, New Jersey, United States. Formerly known as Trump Hotels & Casino Resorts, it was founded in 1995 by Donald Trump, now 45th President of the United States, who has not had any formal role in the company since 2011, if not earlier. The company filed for bankruptcy in 2004, 2009 and 2014. It has been a subsidiary of Icahn Enterprises since 2016.",
+            "The Apprentice (U.S. season 12)\nThe Celebrity Apprentice 5 (also known as The Apprentice 12) is the fifth installment of the reality game show, \"Celebrity Apprentice\". On May 15, 2011, NBC announced that the show would be returning for a fifth season in 2012. The following day, at NBC's annual upfront presentations to advertisers, Donald Trump confirmed that he would be hosting the fifth season. On January 4, 2012, Donald Trump officially announced the cast on \"Today\" and NBC issued a press release with more details.",
+            "Jack Posobiec\nJack Posobiec ( ) is an American alt-right pro-Donald Trump Internet activist and conspiracy theorist, known primarily for his controversial comments on Twitter. During the 2016 election, he was a special projects director of Citizens for Trump, a pro-Trump organization. For two months in 2017, he was a correspondent for \"The Rebel\", a far-right Canada-based website. He was granted press access to the White House in April 2017, and his tweets have been promoted by former Trump campaign manager Roger Stone.",
+            "WIBW-TV\nWIBW-TV, virtual and VHF digital channel 13, is a CBS-affiliated television station licensed to Topeka, Kansas, United States. The station is owned by Gray Television. WIBW-TV maintains studio facilities located on Commerce Place (next to the interchange of I-70, I-470, US 40, US 75 and K-4) in southwestern Topeka, and its transmitter is located on Windy Hill Road in Maple Hill. To serve portions of the market that cannot adequately receive the main signal, WIBW-TV operates a digital fill-in translator in Topeka, WIBW-LD, which broadcasts on UHF channel 44.",
+            "Kid Marine\nKid Marine is 3rd album by Robert Pollard, released in 1999. It is the first release of Robert Pollard's Fading Captain Series. Pollard has stated that the album is about Jeff \"Kid Marine\" Davis, the person pictured on the cover . Robert told Mojo magazine, \"My personal favorite, a weird record, almost a concept album, about the typical Ohio male and what he does - drink, watch television, eat pizza. It got mixed reviews, there are people who hate it and others who think it's our best record and I'm on their side. I just love the songs. It feels like one piece, like it all fits together. I like the cover and I like the",
+            "How? (song)\n\"How?\" is a song from John Lennon's second solo album \"Imagine\", released in 1971. It is a contemplative song inspired by the Primal Therapy he was undergoing with his wife Yoko Ono, during which he faced many personal questions such as \"How can I go forward when I don't know which way I'm facing?\" This song also shows his thoughts about the world in general (such as \"And the World is so tough; Sometimes I feel I've had enough\").",
+            "I'm a Big Girl Now\nI'm a Big Girl Now is an American sitcom that aired on ABC from October 31, 1980 until May 8, 1981. The series, from \"Soap\" creator Susan Harris and producers Paul Junger Witt and Tony Thomas, was created and developed as a starring vehicle for Diana Canova, in an attempt to capitalize on her success playing Corinne Tate Flotsky on \"Soap\". The theme song, \"I'm a Big Girl Now\", words by Leslie Bricusse and music by George Aliceson Tipton, is sung by Canova.",
+            "Open economy\nAn open economy is an economy in which there are economic activities between the domestic community and outside. People and even businesses can trade in goods and services with other people and businesses in the international community, and funds can flow as investments across the border. Trade can take the form of managerial exchange, technology transfers, and all kinds of goods and services. (However, certain exceptions exist that cannot be exchanged; the railway services of a country, for example, cannot be traded with another country to avail the service.)",
+            "Silvio Dante\nSilvio Manfred Dante, played by Steven Van Zandt, is a fictional character on the HBO TV series \"The Sopranos\". He is the consigliere to Tony Soprano in the Soprano crime family. He is usually a behind-the-scenes figure and tries not to draw much attention to himself. He does very well at maintaining the image of a legitimate businessman as the manager and owner of the Bada Bing strip club. Silvio usually keeps his cool in even the worst situations but has been known to reveal his temper when necessary (or when playing poker). Silvio is a movie and film connoisseur and has an encyclopedic mind for movie lines. Throughout the series, he entertains the other family members by request with lukewarm Godfather impressions, mimicking Michael Corleone's remark in \"The Godfather Part III\": \"Just when I thought I was out...they pulled me back in.\" Silvio is one of the most loyal mobsters in the Soprano crime family.",
+            "Hasbro Family Game Night\nHasbro Family Game Night is a video game originally released for the PlayStation 2 and Wii published by Electronic Arts. It is a mini-game collection consisting of six Hasbro board games - Battleship, Boggle, Connect Four, Sorry!, Sorry! Sliders and Yahtzee. The games all have traditional versions as well as \"advanced\" variants exclusive to the Family Game Night package. The mini-game collection is hosted by Mr. Potato Head. It was released on November 11, 2008.",
+            "Headache (game)\nHeadache is a board game similar to the traditional game \"Mensch \u00e4rgere dich nicht\", in which the object is to land a playing piece on top of all opponents' pieces (known as \"cones\"). The game is distinct from \"Mensch \u00e4rgere dich nicht\" in that there is no finish the player must reach. Play moves in circles, until only one player has cones remaining on the board, being declared the winner. All players are welcome to occupy any space throughout the game, provided the die rolls allow, and there are eight spaces that serve as \"safe\" spots, where a cone resting on this space cannot be captured. Captured pieces are not sent back to start, but are permanently lost."
+        ],
+        "thoughts": [
+            "The details of the Trump campaign-Russian meeting are not provided in the given text.",
+            "The attendees of the Trump campaign-Russian meeting are not provided in the given text.",
+            "- Donald Trump Jr. was born on December 31, 1977.\n- Ivanka Trump was born on October 30, 1981.\n- Eric Trump was born on January 6, 1984.\n- Tiffany Trump was born on October 13, 1993.\n- Barron Trump was born on March 20, 2006.",
+            "Based on the information provided, it is not possible to determine which of Donald Trump's children attended the meeting as the list of attendees is not provided in the given text.",
+            "Without the list of attendees provided, it is not possible to determine the ages of the Trump children who attended the meeting.",
+            "Without the list of attendees provided, it is not possible to determine the ages of the Trump children who attended the meeting. Therefore, we cannot determine the name of the oldest child who attended the meeting."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "What is the name of the oldest child that attended the Trump campaign-Russian meeting?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve details of the Trump campaign-Russian meeting, including attendees and their roles.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "From the list of attendees, filter out those identified as children of prominent figures.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve birthdates or ages of the filtered child attendees to determine the oldest child.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the name of the oldest child based on the retrieved birthdates or ages.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph starts by retrieving details about the meeting, focusing on identifying attendees. It then filters for attendees who are children. Subsequently, it retrieves additional information to determine the age of these child attendees to find the oldest one. The final step is to use this information to pinpoint the name of the oldest child present at the meeting."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Trump campaign\u2013Russian meeting\nOn June 9, 2016, a meeting was held in Trump Tower in New York City between three senior members of the presidential campaign of Donald TrumpDonald Trump Jr., Jared Kushner, and Paul Manafortand at least five other people, including Russian lawyer Natalia Veselnitskaya. The meeting was arranged by publicist and long-time Trump acquantiance, Rob Goldstone on behalf of his client, singer-songwriter Emin Agalarov. It was disclosed to U.S. government officials when Kushner filed a revised version of his security clearance form.",
+            "Donald Trump Jr.\nDonald John Trump Jr. (born December 31, 1977) is an American businessman and former reality TV personality. He is the oldest child of the 45th President of the United States, Donald Trump, and his first wife, Ivana.",
+            "Grace After Midnight\nAccording to the memoir, Pearson says her life was turned around upon learning in prison that a close friend and drug dealer, whom she called \"Uncle\", was killed. Pearson said of her decision to write her book, \"I just want to let people know where I came from ... to share my story. I know the Lord has blessed me. He gave me the power just to tell this story.\" The book also depicts the difficulty with which Pearson attempts to adjust to life after prison; she is fired from two jobs due to her criminal background, which drives her to return temporarily to drug dealing. During an interview about the book, she said, \"Every time I turned around, they kept firing me, so where else could I turn to? The streets never let you down. That's sad to say, but what (was) I supposed to be, starving? Go to a shelter?\"",
+            "Guido Coen\nGuido Coen (1915\u20132010) was an Italian-born British film producer and film subtitler. He and his family were interned in Douglas on the Isle of Man during the Second World War. He began his career working for Filippo Del Giudice and Two Cities Films. When Two Cities was absorbed into the Rank Organisation in the mid-1940s Coen was employed by Sir David Cunynghame of London Film Productions as a subtitler. As Coen later described it in an interview, he did not know anything about subtitling at the time, and learned on the job: I finally got a phone call from London Films, Sir Cunnyngham, that 's it, who asked me whether I had ever subtitles pictures. I immediately said I had when in point of fact I did not know what he meant, and there was a young man in the office with Sir David Cunnynghame called Lew Watt, and he said Lew Watt will do the technical side and we want you to subtitle an Italian picture in to English. I said certainly . I came out of his office and Lew Watt said to me you don't know what they're talking about do you, I said you're quite right, he said well I'll show you. And I started subtitling pictures with Lew Watt, I used to do the literary side, and he used to do the technical side, the spotting, and lengths, and we together did subtitles for 40 or 50 pictures. The funny thing was we subtitled pictures in Chinese, in Indian and for the Chinese picture I had to have a Chinese waiter with me to tell me where the subtitles [...] I had the Italian dialogue and I had the picture, they gave me a film and we did the spotting together with Lew Watt and the measurements and I used to type the script. We had the film, we had the print which used to run on the two sided thing. And Lew Watt was working all the day so we had to do this at night, so we either used to work at night till 2 o'clock in the morning or we used to work at the weekends. There was always the problem that the Movieola might break down and so we had spare keys of other cutting rooms in in elm St in case we were caught. And that was how we started.Coen later founded his own company Kenilworth Film Productions and spent most of the post-war years producing second features. He made a dozen films in partnership with the director Charles Saunders. He later produced the 1971 horror film \"Burke & Hare\" and the comedies \"Au Pair Girls\" and \"Intimate Games.\"",
+            "To the Metal!\nTo The Metal! is the tenth full-length studio album by Gamma Ray. It was released on 29 January 2010. To promote the album, the band did a tour with Freedom Call and Secret Sphere. The album was recorded in Kai's own studio in Hamburg in autumn 2009. The band has recorded 12 songs. Ten of them were featured on the regular album release, while the other two were bonus tracks appearing on the different editions of the album. The band described some of the songs on the official website, revealing that there would be a full-throttle number called \"Rise\", a rhythmic and melodically diverse song called \"Time To Live\", and a multilayered anthem titled \"All you need to know\", featuring ex-Helloween frontman Michael Kiske. Other songs mentioned are \"No Need to Cry\", a song written by Dirk Schl\u00e4chter about the death of his father, \"To The Metal\", a song they played on various festivals before the album release and the atmospheric and dense \"Empathy\". It is the last album featuring drummer Dan Zimmermann.",
+            "Brad Parscale\nBrad Parscale (born January 3, 1976) is an American digital media and political strategist. He served as the digital media director for Donald Trump's 2016 presidential campaign. Parscale began working for the Trump Organization in 2011, developing and designing websites, and creating and managing digital media strategies. In early 2015, Trump hired Parscale and his firm, Giles-Parscale, to create a website for his exploratory campaign. When Trump declared himself a Republican candidate in 2015, one of the first people he called was Parscale, asking him to update his exploratory campaign site into a \"full-fledged presidential campaign website.\" Throughout the Republican primary, Parscale was responsible for the Donald J. Trump for President website, as well as for digital media strategy and online fundraising campaigns. In June 2016, Parscale was officially named digital media director for the Donald J. Trump for President campaign, overseeing all aspects of digital media and online fundraising, as well as traditional media strategy, like radio and television placements. In January 2017, Parscale, along with another senior Trump aide, Nick Ayers, formally launched America First Policies, a non-profit organization that promotes President Trump's agenda and White House initiatives.",
+            "Ossining Electric Railway\nThe Ossining Electric Railway was a streetcar transit line that operated in northern Westchester County. Chartered in 1892 as the Ossining Street Railway, the first section of the line opened in 1893, starting at the New York Central Railroad station at Ossining, and terminating at the Methodist Meeting Grounds (later Camp Woods) 1.8 miles away. There was also a short branch off Main Street to Sparta Hill. The town purchased the company in 1897 for unpaid taxes and continued operation until 1902 when the Westchester Traction Company took control. The new company announced an ambitious project to build a new line to White Plains as well as a route to Port Chester, but the only extension built was from Sparta Hill to Ossining Hospital. Westchester Traction Company took control of the Danbury and Harlem Traction Company project, which was only partially constructed between Danbury, Connecticut and North Salem, New York, and never put into operation. The \"Industrial Contracting Company\" was hired to construct the Danbury and Harlem line as well as the extension of the Ossining Electric Railway. Considerable grading and some track construction took place on the Danbury line, but no evidence of construction on the Ossining line could be found.",
+            "I Wouldn't Change You If I Could\n\"I Wouldn't Change You If I Could\" is a song written by Paul Jones and Arthur Q. Smith, and recorded by American country music artist Ricky Skaggs, as well as Reno & Smiley and Jim Eanes. It was released in January 1983 as the second single from the album \"Highways & Heartaches\". \"I Wouldn't Change You If I Could\" was Ricky Skaggs' fourth number one on the country chart. The single stayed at number one for one week and spent a total of twelve weeks on the country chart.",
+            "Clear Creek Meeting House\nThe Clear Creek Meeting House is a Friends meeting house located at 14365 N. 350th Ave., southeast of McNabb, in Magnolia Township, Putnam County, Illinois. The meeting house was built in 1875 to house the Illinois Yearly Meeting of the Religious Society of Friends, also known as the Quakers. The Yearly Meeting was the westernmost annual meeting of the Hicksite Friends and attracted followers from several states. The meeting house also hosted the Clear Creek Monthly Meeting, which was attended by local Quakers. The building is typical of American Friends meeting houses; it features two square rooms with plain features both outside and inside. The lack of ornamentation was designed to reflect the Quaker tenet of simplicity. The meeting house is one of the few surviving western Quaker meeting houses which represent this tradition of Quaker architecture.",
+            "Trump Tower\nTrump Tower is a 58-story, 664 ft mixed-use skyscraper located at 721\u2013725 Fifth Avenue between 56th and 57th Streets in Midtown Manhattan, New York City. Trump Tower serves as the headquarters for The Trump Organization. Additionally, it houses the penthouse condominium residences of the building's namesake and developer, U.S. President Donald Trump, who was a businessman and real estate developer when the tower was developed. Several members of the Trump family also reside, or have resided, in the building. The tower stands upon a plot where the flagship store of department-store chain Bonwit Teller was formerly located.",
+            "Donald Trump presidential campaign, 2016\nThe 2016 presidential campaign of Donald Trump, an American businessman, television personality, and author, was formally launched on June 16, 2015, at Trump Tower in New York City. Trump was the Republican nominee for President of the United States in the 2016 election, having won the most state primaries, caucuses, and delegates at the 2016 Republican National Convention. He chose Mike Pence, the sitting Governor of Indiana, as his vice presidential running mate. On November 8, 2016, Trump and Pence were elected president and vice president of the United States.",
+            "Vichy Republican\nVichy Republican is a term that emerged on social media in 2016 in regards to the United States Presidential campaign ofDonald Trump. To Trump opponents, it refers to members of the Republican Party that have chosen to support Donald Trump's candidacy.",
+            "Basket of deplorables\n\"Basket of deplorables\" is a phrase from a 2016 presidential election campaign speech delivered by Democratic nominee Hillary Clinton on September 9, 2016, at a campaign fundraising event, which Clinton used to describe a faction of supporters of her general election opponent, Republican nominee Donald Trump. Clinton later said that she \"regrets saying half [of Trump's supporters]\", and the Trump campaign repeatedly used the phrase against her during and after the 2016 presidential election. Many Trump supporters adopted the \"Deplorable\" moniker for themselves. After Clinton's loss, some journalists and political analysts questioned whether or not the speech played a role in the election's outcome.",
+            "Trump Entertainment Resorts\nTrump Entertainment Resorts, Inc. was a gaming and hospitality company that owned and operated the now shuttered Trump Taj Mahal hotel and casino, as well as the now shuttered Trump Plaza Hotel and Casino and the Trump Marina located in Atlantic City, New Jersey, United States. Formerly known as Trump Hotels & Casino Resorts, it was founded in 1995 by Donald Trump, now 45th President of the United States, who has not had any formal role in the company since 2011, if not earlier. The company filed for bankruptcy in 2004, 2009 and 2014. It has been a subsidiary of Icahn Enterprises since 2016."
+        ],
+        "thoughts": [
+            "The Trump campaign\u2013Russian meeting took place on June 9, 2016, at Trump Tower in New York City. Attendees included three senior members of the Trump campaign: Donald Trump Jr., Jared Kushner, and Paul Manafort. At least five other people were present, including Russian lawyer Natalia Veselnitskaya. The meeting was arranged by publicist Rob Goldstone on behalf of his client, singer-songwriter Emin Agalarov. The meeting was disclosed to U.S. government officials when Kushner filed a revised version of his security clearance form.",
+            "Based on the information provided, the attendees who are children of prominent figures are Donald Trump Jr. (son of President Donald Trump) and Jared Kushner (son-in-law of President Donald Trump). Therefore, they should be filtered out from the list of attendees.",
+            "The birthdate of Donald Trump Jr. is December 31, 1977, making him the oldest child attendee in the meeting at Trump Tower on June 9, 2016.",
+            "The oldest child is Donald Trump Jr."
+        ],
+        "is_best": true
+    }
+]

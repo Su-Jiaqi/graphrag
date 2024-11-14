@@ -1,0 +1,680 @@
+[
+    {
+        "question": "Mount Austin Barracks is located near the Peak Tram terminus at what mountain that is also known as Mount Austin?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify which mountain the Peak Tram terminus is located near.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Confirm if the same mountain is also known as Mount Austin.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the location of Mount Austin Barracks and check its proximity to the identified mountain in node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Conclude if Mount Austin Barracks is indeed near the mountain identified, which should be the same as Mount Austin, from nodes 2 and 3.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins by identifying the mountain near the Peak Tram terminus, which is the primary geographic landmark in the question. The next step is to confirm if this mountain is also called Mount Austin, ensuring that this aligns with the question's specification. Concurrently, we need to retrieve the location details of Mount Austin Barracks to ensure it is in proximity to the same mountain. The final node synthesizes the information to confirm that the barracks are near the mountain known as both by the conventional name and 'Mount Austin.'"
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Mount Austin Barracks\nMount Austin Barracks was a British Army base in Hong Kong during British rule. It was acquired in 1897 and developed from the former Mount Austin Hotel. It is named after John Gardiner Austin, former Hong Kong Colonial Secretary. It was located near the Peak Tram terminus at Victoria Peak.",
+            "Victoria Gap\nVictoria Gap () is an area and a mountain pass located between the summits of Victoria Peak (aka. Mount Austin) and Mount Gough, on Hong Kong Island, in Hong Kong. Its altitude is some 150 m below the summit of Victoria Peak. It is the most touristic place within the area referred to as \"The Peak\", which receives some seven million visitors every year.",
+            "Victoria Peak\nVictoria Peak (, or previously ) is a mountain in the western half of Hong Kong Island. It is also known as Mount Austin, and locally as The Peak. With an elevation of 552 m , it is the highest mountain on Hong Kong island, ranked 31 in terms of elevation in the Hong Kong Special Administrative Region (Tai Mo Shan is the highest point in the Hong Kong Special Administrative Region with an elevation of 957 m).",
+            "Gate Lodge\nGate Lodge () is a small house located at Mount Austin Road on Victoria Peak, Hong Kong Island, Hong Kong. Gate Lodge was built between 1900 and 1902. It is in Renaissance style.",
+            "Peak Tower\nThe Peak Tower () is a leisure and shopping complex located at Victoria Gap, near the summit of Victoria Peak on Hong Kong Island, Hong Kong. It also houses the upper terminal of the Peak Tram. Both the Peak Tower and the Peak Tram are owned by the Hong Kong and Shanghai Hotels group, the owner of Hong Kong's famous Peninsula Hotel along with many other properties. The tower and tram are jointly promoted by the collective branding known as The Peak.",
+            "Bank Street (Hong Kong)\nBank Street () is a short street in Central, Hong Kong. It links Des Voeux Road Central to Queen's Road Central. It is named after its location between HSBC Building and the Bank of China Building, the former headquarters of HSBC and Bank of China (Hong Kong) respectively.",
+            "The Peak (Peak Tram)\nThe Peak () is the upper terminus of the Peak Tram funicular railway line. It is located inside the Peak Tower at Victoria Gap, the Peak, Central and Western District, Hong Kong, 398m above sea level. The station was opened in 1888 along with the tramline. It is known to be 35 degrees of a full circle, and if it was extended to a full circle, the entire volume would be roughly 45000 cuft . The volume of the Peak is around 4500 cuft .",
+            "Mount Harwood\nMount Harwood is the first summit east of Mount San Antonio. The United States Geological Survey recognized the name to honor California educator and conservationist Aurelia Squire Harwood in 1965. Prior to this, the peak now known as Thunder Mountain was also referred to as Mount Harwood. Mount Harwood is located on the East side of the San Gabriel Mountains in the Angeles National Forest near the San Bernardino-Los Angeles county border. In this area of the San Gabriel Mountains the peaks are the highest. Because of the elevation Mount Harwood turns out to be ranked the 4th highest peak in the San Gabriel mountains after Dawson Peak, Mount San Antonio or \"Old Baldy\" being the highest at 10,064 feet (3,068 m). The only way for hikers or tourists to access Mount Harwood is to take Mt. Baldy Road off I-210. A National Forest Adventure pass/ National Park access pass must be displayed on a vehicle to access Mount Harwood.",
+            "Gile Mountain\nGile Mountain is located in Windsor County, Vermont, along the border between the towns of Norwich and Sharon, with the summit located in Norwich. The mountain reaches a height of 1873 ft above sea level. Relatively unimposing considering its height, the true summit cannot easily be seen from the surrounding territory, despite the prominent fire tower atop its summit. The tower is easily reached by taking Turnpike Road from Norwich to the parking area near its terminus. From here, the Gile Mountain trail leads west 0.7 mi to the summit, passing under power lines. The summit area contains an old ranger cabin, since converted to a shelter-type structure (though camping is not allowed), and the tower itself. From the top views are expansive, and on a clear day one can see Mount Ascutney to the south, the Green Mountains from Killington Peak to Mount Mansfield to the west, Mount Cardigan, Smarts Mountain, and Croydon Peak to the east, and Mount Cube and Mount Moosilauke to the northeast with many of the White Mountains beyond. Dartmouth College is also visible some seven miles distant.",
+            "Hi-Lite Park\nHi-Lite Park was an amusement park in Geelong, Australia, located near Eastern Beach, on the corner of Bellarine Street and Ritchie Boulevard, where the Eastern Beach tram terminus was once situated. The park opened in 1956 and closed c. 1985.",
+            "Ocean Park Conservation Foundation Hong Kong\nThe Ocean Park Conservation Foundation, Hong Kong (), often referred to by its initialism OPCFHK is the conglomerate of the former Ocean Park Conservation Foundation (OPCF) and The Hong Kong Society for Panda Conservation (HKSPC) established under the Ocean Park Corporation, with effect from 1 July 2005. It is a registered charitable non-governmental organisation.",
+            "Kezhen Peak\nKezhen Peak, also known as Karpogo Sar, is a mountain in the Karakoram mountain range. It is located in the Xinjiang Autonomous Region of China.",
+            "The Crown (mountain)\nThe Crown, also known as Huang Guan Shan and sometimes Crown Peak, is a mountain in the Karakoram mountain range in China. It is located in the Xinjiang Uyghur Autonomous Region of China. Its summit has an elevation of 7295 m and it is the highest peak in the Yengisogat subrange of the Karakoram."
+        ],
+        "thoughts": [
+            "The Peak Tram terminus is located near the Peak Tower at Victoria Peak on Hong Kong Island, Hong Kong.",
+            "Yes, the same mountain is also known as Mount Austin.",
+            "The location of Mount Austin Barracks is near the Peak Tram terminus at Victoria Peak, which is also known as Mount Austin. Victoria Gap, the area and mountain pass located between the summits of Victoria Peak and Mount Gough, is in close proximity to Mount Austin Barracks.",
+            "Based on the information from nodes 2 and 3, it can be concluded that Mount Austin Barracks is indeed near the mountain identified as Mount Austin. The location of Mount Austin Barracks is in close proximity to Victoria Peak, which is also known as Mount Austin. Therefore, it can be confirmed that Mount Austin Barracks is near the mountain identified as Mount Austin."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Mount Austin Barracks is located near the Peak Tram terminus at what mountain that is also known as Mount Austin?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the mountain that is also known as Mount Austin.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the location of the Peak Tram terminus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Verify if the mountain identified in step 1 is near the Peak Tram terminus identified in step 2.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "3",
+                "final_node_id": "3"
+            },
+            "explanation": "The task is to find a mountain known as Mount Austin and verify if it is near the Peak Tram terminus. We first identify the mountain also known as Mount Austin (Node 1) and separately determine where the Peak Tram terminus is located (Node 2). Finally, we check if the identified mountain is near the terminus (Node 3). This approach ensures methodical retrieval and confirmation of the needed information."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "The Peak (Peak Tram)\nThe Peak () is the upper terminus of the Peak Tram funicular railway line. It is located inside the Peak Tower at Victoria Gap, the Peak, Central and Western District, Hong Kong, 398m above sea level. The station was opened in 1888 along with the tramline. It is known to be 35 degrees of a full circle, and if it was extended to a full circle, the entire volume would be roughly 45000 cuft . The volume of the Peak is around 4500 cuft .",
+            "Mount Austin Barracks\nMount Austin Barracks was a British Army base in Hong Kong during British rule. It was acquired in 1897 and developed from the former Mount Austin Hotel. It is named after John Gardiner Austin, former Hong Kong Colonial Secretary. It was located near the Peak Tram terminus at Victoria Peak.",
+            "Victoria Peak\nVictoria Peak (, or previously ) is a mountain in the western half of Hong Kong Island. It is also known as Mount Austin, and locally as The Peak. With an elevation of 552 m , it is the highest mountain on Hong Kong island, ranked 31 in terms of elevation in the Hong Kong Special Administrative Region (Tai Mo Shan is the highest point in the Hong Kong Special Administrative Region with an elevation of 957 m).",
+            "Peak Tower\nThe Peak Tower () is a leisure and shopping complex located at Victoria Gap, near the summit of Victoria Peak on Hong Kong Island, Hong Kong. It also houses the upper terminal of the Peak Tram. Both the Peak Tower and the Peak Tram are owned by the Hong Kong and Shanghai Hotels group, the owner of Hong Kong's famous Peninsula Hotel along with many other properties. The tower and tram are jointly promoted by the collective branding known as The Peak.",
+            "Victoria Gap\nVictoria Gap () is an area and a mountain pass located between the summits of Victoria Peak (aka. Mount Austin) and Mount Gough, on Hong Kong Island, in Hong Kong. Its altitude is some 150 m below the summit of Victoria Peak. It is the most touristic place within the area referred to as \"The Peak\", which receives some seven million visitors every year.",
+            "Mount Harwood\nMount Harwood is the first summit east of Mount San Antonio. The United States Geological Survey recognized the name to honor California educator and conservationist Aurelia Squire Harwood in 1965. Prior to this, the peak now known as Thunder Mountain was also referred to as Mount Harwood. Mount Harwood is located on the East side of the San Gabriel Mountains in the Angeles National Forest near the San Bernardino-Los Angeles county border. In this area of the San Gabriel Mountains the peaks are the highest. Because of the elevation Mount Harwood turns out to be ranked the 4th highest peak in the San Gabriel mountains after Dawson Peak, Mount San Antonio or \"Old Baldy\" being the highest at 10,064 feet (3,068 m). The only way for hikers or tourists to access Mount Harwood is to take Mt. Baldy Road off I-210. A National Forest Adventure pass/ National Park access pass must be displayed on a vehicle to access Mount Harwood.",
+            "Total (group)\nTotal is an American contemporary R&B girl group and one of the signature acts of Sean Combs' Bad Boy Records imprint during the 1990s. The group consisted of members Kima Raynor, Keisha Spivey, and Pamela Long. Total is best known for their hits \"What You Want\" (Featuring Mase), \"Kissing You\", \"Can't You See\" (featuring The Notorious B.I.G.), and \"What About Us?\" and \"Trippin'\", both featuring Missy Elliott. Long was also featured on The Notorious B.I.G.'s hit song \"Hypnotize\", singing the chorus.",
+            "Climbing!\nClimbing!, also known as Mountain Climbing!, is the official debut studio album by American blues rock band Mountain. Released on March 7, 1970, the album featured the 'classic' Mountain lineup of Leslie West (guitar, vocals), Felix Pappalardi (bass, vocals, piano), Corky Laing (drums, percussion) and Steve Knight (keyboards) and followed the West solo album \"Mountain\" featuring Pappalardi and drummer Norman Smart, released in 1969 and often credited to the band. Produced by Pappalardi, the album reached number 17 on the American \"Billboard\" 200 albums chart and featured the band's best-known song, \"Mississippi Queen\". An early rendition of \"For Yasgur's Farm\" was actually performed at the Woodstock Festival in August 1969 as Who Am I But You And The Sun. It was subsequently recorded and retitled for the album.",
+            "Gile Mountain\nGile Mountain is located in Windsor County, Vermont, along the border between the towns of Norwich and Sharon, with the summit located in Norwich. The mountain reaches a height of 1873 ft above sea level. Relatively unimposing considering its height, the true summit cannot easily be seen from the surrounding territory, despite the prominent fire tower atop its summit. The tower is easily reached by taking Turnpike Road from Norwich to the parking area near its terminus. From here, the Gile Mountain trail leads west 0.7 mi to the summit, passing under power lines. The summit area contains an old ranger cabin, since converted to a shelter-type structure (though camping is not allowed), and the tower itself. From the top views are expansive, and on a clear day one can see Mount Ascutney to the south, the Green Mountains from Killington Peak to Mount Mansfield to the west, Mount Cardigan, Smarts Mountain, and Croydon Peak to the east, and Mount Cube and Mount Moosilauke to the northeast with many of the White Mountains beyond. Dartmouth College is also visible some seven miles distant.",
+            "Hi-Lite Park\nHi-Lite Park was an amusement park in Geelong, Australia, located near Eastern Beach, on the corner of Bellarine Street and Ritchie Boulevard, where the Eastern Beach tram terminus was once situated. The park opened in 1956 and closed c. 1985.",
+            "Kendal Mountain Festival\nThe Kendal Mountain Festival is an annual festival held in the town of Kendal, Cumbria on the edge of the English Lake District in the UK. It is one of the most diverse festivals of its kind in the world, attracting film premi\u00e8res from around the globe. Filmmakers, TV producers, adventurers, top brands, athletes and speakers gather to take part in four days of the films, talks, books and exhibitions covering all aspects of mountain and adventure sports culture. It is also the main social event for outdoor enthusiasts in the UK. The British Mountaineering Council states that it \"is by far the largest and most varied event of its type in Europe and it's the main social event for outdoor enthusiasts in the UK.\"",
+            "Ohio State Route 198\nState Route 198 is a north\u2013south state highway in the western portion of the U.S. state of Ohio. Its southern terminus is at an interchange with U.S. Route 33 just south of Wapakoneta, which is also the western terminus of State Route 67 and the southern terminus of State Route 501; its northern terminus is at State Route 117 nearly 4 mi east of Spencerville.",
+            "Maine State Route 102\nState Route 102 is a north-south state highway located on Mount Desert Island in eastern Maine. As of 2007, its southern terminus is located at an intersection with State Route 102A in Tremont on the southern part of the island. Its northern terminus is at intersection with State Route 3 in Bar Harbor, a terminus it shares with State Route 198.",
+            "Tennessee State Route 102\nState Route\u00a0102 (SR\u00a0102) is a 18.56 mi state highway that exists entirely within Rutherford County, Tennessee. Its southern terminus is in Almaville, an unincorporated community in the western part of the county, at SR\u00a096. Its northern terminus is in Smyrna."
+        ],
+        "thoughts": [
+            "The mountain also known as Mount Austin is Victoria Peak, located in the western half of Hong Kong Island.",
+            "The Peak Tram terminus is located inside the Peak Tower at Victoria Gap, the Peak, Central and Western District, Hong Kong, 398m above sea level.",
+            "Based on the results of the upstream tasks, it can be verified that the mountain identified in step 1, Victoria Peak, is indeed near the Peak Tram terminus identified in step 2. Both are located in the same area of Hong Kong Island, with the Peak Tram terminus being situated at Victoria Gap, which is part of Victoria Peak. Therefore, it can be confirmed that the mountain identified in step 1 is near the Peak Tram terminus identified in step 2."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Mount Austin Barracks is located near the Peak Tram terminus at what mountain that is also known as Mount Austin?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the mountain near which Mount Austin Barracks is located, and confirm if it is also known as Mount Austin.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine where the Peak Tram terminus is located.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Cross-reference the location of Mount Austin Barracks and the Peak Tram terminus to identify the mountain name.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Verify if the identified mountain is also known as Mount Austin.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks down the task of identifying the mountain associated with Mount Austin Barracks and its relation to the Peak Tram terminus. Node 1 retrieves information about Mount Austin Barracks and its location near a mountain. Node 2 retrieves details about the Peak Tram terminus location. Node 3 synthesizes this information to determine the mountain name, and Node 4 verifies the alternative name of the identified mountain."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "The Peak (Peak Tram)\nThe Peak () is the upper terminus of the Peak Tram funicular railway line. It is located inside the Peak Tower at Victoria Gap, the Peak, Central and Western District, Hong Kong, 398m above sea level. The station was opened in 1888 along with the tramline. It is known to be 35 degrees of a full circle, and if it was extended to a full circle, the entire volume would be roughly 45000 cuft . The volume of the Peak is around 4500 cuft .",
+            "Mount Austin Barracks\nMount Austin Barracks was a British Army base in Hong Kong during British rule. It was acquired in 1897 and developed from the former Mount Austin Hotel. It is named after John Gardiner Austin, former Hong Kong Colonial Secretary. It was located near the Peak Tram terminus at Victoria Peak.",
+            "Peak Tower\nThe Peak Tower () is a leisure and shopping complex located at Victoria Gap, near the summit of Victoria Peak on Hong Kong Island, Hong Kong. It also houses the upper terminal of the Peak Tram. Both the Peak Tower and the Peak Tram are owned by the Hong Kong and Shanghai Hotels group, the owner of Hong Kong's famous Peninsula Hotel along with many other properties. The tower and tram are jointly promoted by the collective branding known as The Peak.",
+            "Victoria Gap\nVictoria Gap () is an area and a mountain pass located between the summits of Victoria Peak (aka. Mount Austin) and Mount Gough, on Hong Kong Island, in Hong Kong. Its altitude is some 150 m below the summit of Victoria Peak. It is the most touristic place within the area referred to as \"The Peak\", which receives some seven million visitors every year.",
+            "Victoria Peak\nVictoria Peak (, or previously ) is a mountain in the western half of Hong Kong Island. It is also known as Mount Austin, and locally as The Peak. With an elevation of 552 m , it is the highest mountain on Hong Kong island, ranked 31 in terms of elevation in the Hong Kong Special Administrative Region (Tai Mo Shan is the highest point in the Hong Kong Special Administrative Region with an elevation of 957 m).",
+            "Hi-Lite Park\nHi-Lite Park was an amusement park in Geelong, Australia, located near Eastern Beach, on the corner of Bellarine Street and Ritchie Boulevard, where the Eastern Beach tram terminus was once situated. The park opened in 1956 and closed c. 1985.",
+            "Mount Harwood\nMount Harwood is the first summit east of Mount San Antonio. The United States Geological Survey recognized the name to honor California educator and conservationist Aurelia Squire Harwood in 1965. Prior to this, the peak now known as Thunder Mountain was also referred to as Mount Harwood. Mount Harwood is located on the East side of the San Gabriel Mountains in the Angeles National Forest near the San Bernardino-Los Angeles county border. In this area of the San Gabriel Mountains the peaks are the highest. Because of the elevation Mount Harwood turns out to be ranked the 4th highest peak in the San Gabriel mountains after Dawson Peak, Mount San Antonio or \"Old Baldy\" being the highest at 10,064 feet (3,068 m). The only way for hikers or tourists to access Mount Harwood is to take Mt. Baldy Road off I-210. A National Forest Adventure pass/ National Park access pass must be displayed on a vehicle to access Mount Harwood.",
+            "Mount Borodin\nMount Borodin ( ) is a mainly ice-covered mountain, 695 m high, with a rock outcrop on the east side, 7 nmi north-northeast of Gluck Peak in the southwest part of Alexander Island, Antarctica. A number of peaks in this general vicinity first appear on the maps of the Ronne Antarctic Research Expedition (RARE), 1947\u201348. This peak, apparently one of these, was mapped from RARE air photos by Derek J.H. Searle of the Falkland Islands Dependencies Survey in 1960, and named by the UK Antarctic Place-Names Committee after Alexander Borodin, the Russian composer.",
+            "Gate Lodge\nGate Lodge () is a small house located at Mount Austin Road on Victoria Peak, Hong Kong Island, Hong Kong. Gate Lodge was built between 1900 and 1902. It is in Renaissance style.",
+            "Kezhen Peak\nKezhen Peak, also known as Karpogo Sar, is a mountain in the Karakoram mountain range. It is located in the Xinjiang Autonomous Region of China.",
+            "Gile Mountain\nGile Mountain is located in Windsor County, Vermont, along the border between the towns of Norwich and Sharon, with the summit located in Norwich. The mountain reaches a height of 1873 ft above sea level. Relatively unimposing considering its height, the true summit cannot easily be seen from the surrounding territory, despite the prominent fire tower atop its summit. The tower is easily reached by taking Turnpike Road from Norwich to the parking area near its terminus. From here, the Gile Mountain trail leads west 0.7 mi to the summit, passing under power lines. The summit area contains an old ranger cabin, since converted to a shelter-type structure (though camping is not allowed), and the tower itself. From the top views are expansive, and on a clear day one can see Mount Ascutney to the south, the Green Mountains from Killington Peak to Mount Mansfield to the west, Mount Cardigan, Smarts Mountain, and Croydon Peak to the east, and Mount Cube and Mount Moosilauke to the northeast with many of the White Mountains beyond. Dartmouth College is also visible some seven miles distant.",
+            "Geosocial networking\nGeosocial networking is a type of social networking in which geographic services and capabilities such as geocoding and geotagging are used to enable additional social dynamics. User-submitted location data or geolocation techniques can allow social networks to connect and coordinate users with local people or events that match their interests. Geolocation on web-based social network services can be IP-based or use hotspot trilateration. For mobile social networks, texted location information or mobile phone tracking can enable location-based services to enrich social networking.",
+            "Maine State Route 102\nState Route 102 is a north-south state highway located on Mount Desert Island in eastern Maine. As of 2007, its southern terminus is located at an intersection with State Route 102A in Tremont on the southern part of the island. Its northern terminus is at intersection with State Route 3 in Bar Harbor, a terminus it shares with State Route 198.",
+            "Ohio State Route 198\nState Route 198 is a north\u2013south state highway in the western portion of the U.S. state of Ohio. Its southern terminus is at an interchange with U.S. Route 33 just south of Wapakoneta, which is also the western terminus of State Route 67 and the southern terminus of State Route 501; its northern terminus is at State Route 117 nearly 4 mi east of Spencerville.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "Patrick John\nColonel Patrick Roland John (born Roseau, 7 January 1938) was the Prime Minister of Dominica as well as the Premier of Dominica. During his premiership Dominica gained independence from the United Kingdom and he became the first Prime Minister of Dominica. He was leader of the Waterfront and Allied Workers' Union and mayor of Roseau before being elected to the legislature in 1970. He took on prime ministerial duties in 1974 following the resignation of Edward Oliver LeBlanc. After mass protest forced him to resign, John unsuccessfully attempted to overthrow the government of Prime Minister Eugenia Charles with the backing of white supremacist groups (in what became dubbed \"Operation Red Dog\"). As a result, he was jailed for twelve years, of which he served only five years.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Salmon Fishing in the Yemen\nSalmon Fishing in the Yemen is a 2011 British romantic comedy-drama film directed by Lasse Hallstr\u00f6m and starring Ewan McGregor, Emily Blunt, Kristin Scott Thomas and Amr Waked. Based on the 2007 novel of the same name by Paul Torday, and a screenplay by Simon Beaufoy, the film is about a fisheries expert who is recruited by a consultant to help realize a sheikh's vision of bringing the sport of fly fishing to the Yemen desert, initiating an upstream journey of faith to make the impossible possible. The film was shot on location in London, Scotland, and Morocco from August to October 2010. The film premiered at the 2011 Toronto International Film Festival. The film received generally positive reviews upon its release, and earned $34,564,651 in revenue worldwide.",
+            "What We Talk About When We Talk About Anne Frank\nWhat We Talk About When We Talk About Anne Frank is a 2012 short story collection by the American writer Nathan Englander. It was first published on February 7, 2012 through Knopf and collects eight of Englander's short stories, including the title story \"What We Talk About When We Talk About Anne Frank.\" The title of the collection takes influence from Raymond Carver's 1981 short story collection \"What We Talk About When We Talk About Love.\" It was a finalist for the Pulitzer Prize for Fiction, losing to Adam Johnson's \"The Orphan Master's Son\". Englander's collection was awarded the 2012 Frank O'Connor International Short Story Award.",
+            "What Happened to Mary?\nWhat Happened to Mary (frequently erroneously referred to in various texts as \"What Happened to Mary?\" \u2014 but the title was a statement, not a question) is the first motion picture serial made in the United States. Made by Edison Studios, the action serial consisted of twelve one-reel episodes released monthly beginning July 26, 1912 to coincide with the serial story of the same name published in McClure's \"The Ladies' World\" magazine. \"What Happened to Mary\" was performed as a stage play and published as a single-volume print novel, so is an early example of a multiple-media marketing campaign. The scripts were written by Horace G. Plympton and directed by Charles Brabin. The star of the serial was Mary Fuller.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\""
+        ],
+        "thoughts": [
+            "Mount Austin Barracks is located near Mount Austin, which is also known as Mount Austin.",
+            "The Peak Tram terminus is located inside the Peak Tower at Victoria Gap, the Peak, Central and Western District, Hong Kong, 398m above sea level.",
+            "Based on the cross-referencing of the locations of Mount Austin Barracks and the Peak Tram terminus, the mountain name is The Peak, also known as Victoria Peak.",
+            "The identified mountain is indeed also known as Mount Austin. Victoria Peak, also known as Mount Austin, is the highest mountain on Hong Kong Island. Therefore, the identified mountain and Mount Austin are the same."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Mount Austin Barracks is located near the Peak Tram terminus at what mountain that is also known as Mount Austin?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the location of Mount Austin Barracks.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the terminus location of the Peak Tram.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the mountain where both Mount Austin Barracks and the Peak Tram terminus are located.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Verify if the mountain identified is also known as Mount Austin.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The question asks for the name of the mountain near both the Mount Austin Barracks and the Peak Tram terminus. The execution graph starts by locating the Mount Austin Barracks (Node 1) and determining where the Peak Tram ends (Node 2). Node 3 consolidates information from Nodes 1 and 2 to identify the mountain that satisfies both conditions. Finally, Node 4 verifies whether this mountain is also known as Mount Austin, completing the task."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Victoria Gap\nVictoria Gap () is an area and a mountain pass located between the summits of Victoria Peak (aka. Mount Austin) and Mount Gough, on Hong Kong Island, in Hong Kong. Its altitude is some 150 m below the summit of Victoria Peak. It is the most touristic place within the area referred to as \"The Peak\", which receives some seven million visitors every year.",
+            "Victoria Peak\nVictoria Peak (, or previously ) is a mountain in the western half of Hong Kong Island. It is also known as Mount Austin, and locally as The Peak. With an elevation of 552 m , it is the highest mountain on Hong Kong island, ranked 31 in terms of elevation in the Hong Kong Special Administrative Region (Tai Mo Shan is the highest point in the Hong Kong Special Administrative Region with an elevation of 957 m).",
+            "Mount Austin Barracks\nMount Austin Barracks was a British Army base in Hong Kong during British rule. It was acquired in 1897 and developed from the former Mount Austin Hotel. It is named after John Gardiner Austin, former Hong Kong Colonial Secretary. It was located near the Peak Tram terminus at Victoria Peak.",
+            "Gate Lodge\nGate Lodge () is a small house located at Mount Austin Road on Victoria Peak, Hong Kong Island, Hong Kong. Gate Lodge was built between 1900 and 1902. It is in Renaissance style.",
+            "Peak Tower\nThe Peak Tower () is a leisure and shopping complex located at Victoria Gap, near the summit of Victoria Peak on Hong Kong Island, Hong Kong. It also houses the upper terminal of the Peak Tram. Both the Peak Tower and the Peak Tram are owned by the Hong Kong and Shanghai Hotels group, the owner of Hong Kong's famous Peninsula Hotel along with many other properties. The tower and tram are jointly promoted by the collective branding known as The Peak.",
+            "The Peak (Peak Tram)\nThe Peak () is the upper terminus of the Peak Tram funicular railway line. It is located inside the Peak Tower at Victoria Gap, the Peak, Central and Western District, Hong Kong, 398m above sea level. The station was opened in 1888 along with the tramline. It is known to be 35 degrees of a full circle, and if it was extended to a full circle, the entire volume would be roughly 45000 cuft . The volume of the Peak is around 4500 cuft .",
+            "Mount Harwood\nMount Harwood is the first summit east of Mount San Antonio. The United States Geological Survey recognized the name to honor California educator and conservationist Aurelia Squire Harwood in 1965. Prior to this, the peak now known as Thunder Mountain was also referred to as Mount Harwood. Mount Harwood is located on the East side of the San Gabriel Mountains in the Angeles National Forest near the San Bernardino-Los Angeles county border. In this area of the San Gabriel Mountains the peaks are the highest. Because of the elevation Mount Harwood turns out to be ranked the 4th highest peak in the San Gabriel mountains after Dawson Peak, Mount San Antonio or \"Old Baldy\" being the highest at 10,064 feet (3,068 m). The only way for hikers or tourists to access Mount Harwood is to take Mt. Baldy Road off I-210. A National Forest Adventure pass/ National Park access pass must be displayed on a vehicle to access Mount Harwood.",
+            "Gile Mountain\nGile Mountain is located in Windsor County, Vermont, along the border between the towns of Norwich and Sharon, with the summit located in Norwich. The mountain reaches a height of 1873 ft above sea level. Relatively unimposing considering its height, the true summit cannot easily be seen from the surrounding territory, despite the prominent fire tower atop its summit. The tower is easily reached by taking Turnpike Road from Norwich to the parking area near its terminus. From here, the Gile Mountain trail leads west 0.7 mi to the summit, passing under power lines. The summit area contains an old ranger cabin, since converted to a shelter-type structure (though camping is not allowed), and the tower itself. From the top views are expansive, and on a clear day one can see Mount Ascutney to the south, the Green Mountains from Killington Peak to Mount Mansfield to the west, Mount Cardigan, Smarts Mountain, and Croydon Peak to the east, and Mount Cube and Mount Moosilauke to the northeast with many of the White Mountains beyond. Dartmouth College is also visible some seven miles distant.",
+            "Hi-Lite Park\nHi-Lite Park was an amusement park in Geelong, Australia, located near Eastern Beach, on the corner of Bellarine Street and Ritchie Boulevard, where the Eastern Beach tram terminus was once situated. The park opened in 1956 and closed c. 1985.",
+            "Tolland, New South Wales\nTolland is a suburb located in the city of Wagga Wagga in the Riverina region of New South Wales, Australia. The suburb is home to Mount Austin High School and Tolland Shopping Centre which has an IGA supermarket and an Dominos Pizza outlet. It is also home to the Tolland Football Club",
+            "Ohio State Route 198\nState Route 198 is a north\u2013south state highway in the western portion of the U.S. state of Ohio. Its southern terminus is at an interchange with U.S. Route 33 just south of Wapakoneta, which is also the western terminus of State Route 67 and the southern terminus of State Route 501; its northern terminus is at State Route 117 nearly 4 mi east of Spencerville.",
+            "Maine State Route 102\nState Route 102 is a north-south state highway located on Mount Desert Island in eastern Maine. As of 2007, its southern terminus is located at an intersection with State Route 102A in Tremont on the southern part of the island. Its northern terminus is at intersection with State Route 3 in Bar Harbor, a terminus it shares with State Route 198.",
+            "Tennessee State Route 102\nState Route\u00a0102 (SR\u00a0102) is a 18.56 mi state highway that exists entirely within Rutherford County, Tennessee. Its southern terminus is in Almaville, an unincorporated community in the western part of the county, at SR\u00a096. Its northern terminus is in Smyrna.",
+            "Mount Vernon, New York\nMount Vernon is a city in Westchester County, New York, United States. It is an inner suburb of New York City, immediately to the north of the borough of the Bronx. As of the 2010 census, Mount Vernon had a population of 67,292.",
+            "Austin Rover Group\nThe Austin Rover Group (abbreviated ARG) was a British motor manufacturer. It was created in 1982 as the mass-market car manufacturing subsidiary of British Leyland (BL). Previously, this entity had been known as BL Cars Ltd (formerly Leyland Cars) which encompassed the \"Austin-Morris\" and \"Jaguar-Rover-Triumph\" divisions of British Leyland. After a major restructuring of BL's car manufacturing operations, Jaguar regained its independence (leading to its eventual de-mergeri in 1984) whilst the Triumph and Morris marques were retired. The new, leaner car business was rechristened as the Austin Rover Group and focused primarily on the Austin and Rover marques. The Morris and Triumph marques continued briefly within ARG until 1984 when both were dropped."
+        ],
+        "thoughts": [
+            "Mount Austin Barracks is located near the Peak Tram terminus at Victoria Peak on Hong Kong Island, in Hong Kong.",
+            "The terminus location of the Peak Tram is at The Peak Tower, a leisure and shopping complex located at Victoria Gap, near the summit of Victoria Peak on Hong Kong Island, Hong Kong.",
+            "The mountain where both Mount Austin Barracks and the Peak Tram terminus are located is Victoria Peak on Hong Kong Island, in Hong Kong.",
+            "The relevant information provided confirms that Victoria Peak is also known as Mount Austin. The information states that Victoria Peak is also known as Mount Austin, and locally as The Peak. Therefore, it can be verified that the mountain identified is indeed also known as Mount Austin."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Mount Austin Barracks is located near the Peak Tram terminus at what mountain that is also known as Mount Austin?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the location of Mount Austin Barracks",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the location of the Peak Tram terminus",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the mountain associated with the Peak Tram terminus, also known as Mount Austin, based on proximity to Mount Austin Barracks.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "This graph breaks down the question into three parts. The first two steps involve retrieving the locations of Mount Austin Barracks and the Peak Tram terminus independently. The final step combines the retrieved information to deduce which mountain, known as Mount Austin, is near both the Barracks and the Tram terminus."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Mount Austin Barracks\nMount Austin Barracks was a British Army base in Hong Kong during British rule. It was acquired in 1897 and developed from the former Mount Austin Hotel. It is named after John Gardiner Austin, former Hong Kong Colonial Secretary. It was located near the Peak Tram terminus at Victoria Peak.",
+            "The Peak (Peak Tram)\nThe Peak () is the upper terminus of the Peak Tram funicular railway line. It is located inside the Peak Tower at Victoria Gap, the Peak, Central and Western District, Hong Kong, 398m above sea level. The station was opened in 1888 along with the tramline. It is known to be 35 degrees of a full circle, and if it was extended to a full circle, the entire volume would be roughly 45000 cuft . The volume of the Peak is around 4500 cuft .",
+            "Peak Tower\nThe Peak Tower () is a leisure and shopping complex located at Victoria Gap, near the summit of Victoria Peak on Hong Kong Island, Hong Kong. It also houses the upper terminal of the Peak Tram. Both the Peak Tower and the Peak Tram are owned by the Hong Kong and Shanghai Hotels group, the owner of Hong Kong's famous Peninsula Hotel along with many other properties. The tower and tram are jointly promoted by the collective branding known as The Peak.",
+            "Hi-Lite Park\nHi-Lite Park was an amusement park in Geelong, Australia, located near Eastern Beach, on the corner of Bellarine Street and Ritchie Boulevard, where the Eastern Beach tram terminus was once situated. The park opened in 1956 and closed c. 1985.",
+            "Victoria Gap\nVictoria Gap () is an area and a mountain pass located between the summits of Victoria Peak (aka. Mount Austin) and Mount Gough, on Hong Kong Island, in Hong Kong. Its altitude is some 150 m below the summit of Victoria Peak. It is the most touristic place within the area referred to as \"The Peak\", which receives some seven million visitors every year.",
+            "Gate Lodge\nGate Lodge () is a small house located at Mount Austin Road on Victoria Peak, Hong Kong Island, Hong Kong. Gate Lodge was built between 1900 and 1902. It is in Renaissance style.",
+            "Tolland, New South Wales\nTolland is a suburb located in the city of Wagga Wagga in the Riverina region of New South Wales, Australia. The suburb is home to Mount Austin High School and Tolland Shopping Centre which has an IGA supermarket and an Dominos Pizza outlet. It is also home to the Tolland Football Club",
+            "Victoria Peak\nVictoria Peak (, or previously ) is a mountain in the western half of Hong Kong Island. It is also known as Mount Austin, and locally as The Peak. With an elevation of 552 m , it is the highest mountain on Hong Kong island, ranked 31 in terms of elevation in the Hong Kong Special Administrative Region (Tai Mo Shan is the highest point in the Hong Kong Special Administrative Region with an elevation of 957 m).",
+            "Ohio State Route 198\nState Route 198 is a north\u2013south state highway in the western portion of the U.S. state of Ohio. Its southern terminus is at an interchange with U.S. Route 33 just south of Wapakoneta, which is also the western terminus of State Route 67 and the southern terminus of State Route 501; its northern terminus is at State Route 117 nearly 4 mi east of Spencerville.",
+            "Maine State Route 102\nState Route 102 is a north-south state highway located on Mount Desert Island in eastern Maine. As of 2007, its southern terminus is located at an intersection with State Route 102A in Tremont on the southern part of the island. Its northern terminus is at intersection with State Route 3 in Bar Harbor, a terminus it shares with State Route 198.",
+            "Gile Mountain\nGile Mountain is located in Windsor County, Vermont, along the border between the towns of Norwich and Sharon, with the summit located in Norwich. The mountain reaches a height of 1873 ft above sea level. Relatively unimposing considering its height, the true summit cannot easily be seen from the surrounding territory, despite the prominent fire tower atop its summit. The tower is easily reached by taking Turnpike Road from Norwich to the parking area near its terminus. From here, the Gile Mountain trail leads west 0.7 mi to the summit, passing under power lines. The summit area contains an old ranger cabin, since converted to a shelter-type structure (though camping is not allowed), and the tower itself. From the top views are expansive, and on a clear day one can see Mount Ascutney to the south, the Green Mountains from Killington Peak to Mount Mansfield to the west, Mount Cardigan, Smarts Mountain, and Croydon Peak to the east, and Mount Cube and Mount Moosilauke to the northeast with many of the White Mountains beyond. Dartmouth College is also visible some seven miles distant.",
+            "Mount Harwood\nMount Harwood is the first summit east of Mount San Antonio. The United States Geological Survey recognized the name to honor California educator and conservationist Aurelia Squire Harwood in 1965. Prior to this, the peak now known as Thunder Mountain was also referred to as Mount Harwood. Mount Harwood is located on the East side of the San Gabriel Mountains in the Angeles National Forest near the San Bernardino-Los Angeles county border. In this area of the San Gabriel Mountains the peaks are the highest. Because of the elevation Mount Harwood turns out to be ranked the 4th highest peak in the San Gabriel mountains after Dawson Peak, Mount San Antonio or \"Old Baldy\" being the highest at 10,064 feet (3,068 m). The only way for hikers or tourists to access Mount Harwood is to take Mt. Baldy Road off I-210. A National Forest Adventure pass/ National Park access pass must be displayed on a vehicle to access Mount Harwood.",
+            "Tennessee State Route 102\nState Route\u00a0102 (SR\u00a0102) is a 18.56 mi state highway that exists entirely within Rutherford County, Tennessee. Its southern terminus is in Almaville, an unincorporated community in the western part of the county, at SR\u00a096. Its northern terminus is in Smyrna.",
+            "Mount Vernon, New York\nMount Vernon is a city in Westchester County, New York, United States. It is an inner suburb of New York City, immediately to the north of the borough of the Bronx. As of the 2010 census, Mount Vernon had a population of 67,292.",
+            "Austin Rover Group\nThe Austin Rover Group (abbreviated ARG) was a British motor manufacturer. It was created in 1982 as the mass-market car manufacturing subsidiary of British Leyland (BL). Previously, this entity had been known as BL Cars Ltd (formerly Leyland Cars) which encompassed the \"Austin-Morris\" and \"Jaguar-Rover-Triumph\" divisions of British Leyland. After a major restructuring of BL's car manufacturing operations, Jaguar regained its independence (leading to its eventual de-mergeri in 1984) whilst the Triumph and Morris marques were retired. The new, leaner car business was rechristened as the Austin Rover Group and focused primarily on the Austin and Rover marques. The Morris and Triumph marques continued briefly within ARG until 1984 when both were dropped."
+        ],
+        "thoughts": [
+            "Mount Austin Barracks is located near the Peak Tram terminus at Victoria Peak on Hong Kong Island, in Hong Kong. It is situated in the area referred to as \"The Peak\" and is part of the Victoria Peak mountain pass.",
+            "The Peak Tram terminus is located inside the Peak Tower at Victoria Gap, near the summit of Victoria Peak on Hong Kong Island, Hong Kong.",
+            "Based on the information from the upstream tasks, the mountain associated with the Peak Tram terminus, also known as Mount Austin, is Victoria Peak. This is because the Peak Tram terminus is located near the summit of Victoria Peak, and Mount Austin Barracks is also located near the Peak Tram terminus at Victoria Peak. Therefore, Victoria Peak is the mountain associated with the Peak Tram terminus."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Mount Austin Barracks is located near the Peak Tram terminus at what mountain that is also known as Mount Austin?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the location of Mount Austin Barracks.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the location of the Peak Tram terminus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the mountain that is also known as Mount Austin.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Check if the location of Mount Austin Barracks is near the Peak Tram terminus.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Identify if the mountain known as Mount Austin is the same place as where Mount Austin Barracks is located.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph breaks down the question into specific information retrieval and reasoning tasks. First, we need to locate where Mount Austin Barracks is and where the Peak Tram terminus is situated (nodes 1 and 2, respectively). Then, we check the proximity of these two locations (node 4). Simultaneously, we determine which mountain is also referred to as Mount Austin (node 3). Finally, we combine these insights to verify if the mountain known as Mount Austin corresponds with the location of the Mount Austin Barracks (node 5), thereby answering the original question."
+        },
+        "recall": 0.7777777777777778,
+        "retrieved_passages": [
+            "Mount Austin Barracks\nMount Austin Barracks was a British Army base in Hong Kong during British rule. It was acquired in 1897 and developed from the former Mount Austin Hotel. It is named after John Gardiner Austin, former Hong Kong Colonial Secretary. It was located near the Peak Tram terminus at Victoria Peak.",
+            "The Peak (Peak Tram)\nThe Peak () is the upper terminus of the Peak Tram funicular railway line. It is located inside the Peak Tower at Victoria Gap, the Peak, Central and Western District, Hong Kong, 398m above sea level. The station was opened in 1888 along with the tramline. It is known to be 35 degrees of a full circle, and if it was extended to a full circle, the entire volume would be roughly 45000 cuft . The volume of the Peak is around 4500 cuft .",
+            "Peak Tower\nThe Peak Tower () is a leisure and shopping complex located at Victoria Gap, near the summit of Victoria Peak on Hong Kong Island, Hong Kong. It also houses the upper terminal of the Peak Tram. Both the Peak Tower and the Peak Tram are owned by the Hong Kong and Shanghai Hotels group, the owner of Hong Kong's famous Peninsula Hotel along with many other properties. The tower and tram are jointly promoted by the collective branding known as The Peak.",
+            "Hi-Lite Park\nHi-Lite Park was an amusement park in Geelong, Australia, located near Eastern Beach, on the corner of Bellarine Street and Ritchie Boulevard, where the Eastern Beach tram terminus was once situated. The park opened in 1956 and closed c. 1985.",
+            "Mount Harwood\nMount Harwood is the first summit east of Mount San Antonio. The United States Geological Survey recognized the name to honor California educator and conservationist Aurelia Squire Harwood in 1965. Prior to this, the peak now known as Thunder Mountain was also referred to as Mount Harwood. Mount Harwood is located on the East side of the San Gabriel Mountains in the Angeles National Forest near the San Bernardino-Los Angeles county border. In this area of the San Gabriel Mountains the peaks are the highest. Because of the elevation Mount Harwood turns out to be ranked the 4th highest peak in the San Gabriel mountains after Dawson Peak, Mount San Antonio or \"Old Baldy\" being the highest at 10,064 feet (3,068 m). The only way for hikers or tourists to access Mount Harwood is to take Mt. Baldy Road off I-210. A National Forest Adventure pass/ National Park access pass must be displayed on a vehicle to access Mount Harwood.",
+            "Gile Mountain\nGile Mountain is located in Windsor County, Vermont, along the border between the towns of Norwich and Sharon, with the summit located in Norwich. The mountain reaches a height of 1873 ft above sea level. Relatively unimposing considering its height, the true summit cannot easily be seen from the surrounding territory, despite the prominent fire tower atop its summit. The tower is easily reached by taking Turnpike Road from Norwich to the parking area near its terminus. From here, the Gile Mountain trail leads west 0.7 mi to the summit, passing under power lines. The summit area contains an old ranger cabin, since converted to a shelter-type structure (though camping is not allowed), and the tower itself. From the top views are expansive, and on a clear day one can see Mount Ascutney to the south, the Green Mountains from Killington Peak to Mount Mansfield to the west, Mount Cardigan, Smarts Mountain, and Croydon Peak to the east, and Mount Cube and Mount Moosilauke to the northeast with many of the White Mountains beyond. Dartmouth College is also visible some seven miles distant.",
+            "Victoria Gap\nVictoria Gap () is an area and a mountain pass located between the summits of Victoria Peak (aka. Mount Austin) and Mount Gough, on Hong Kong Island, in Hong Kong. Its altitude is some 150 m below the summit of Victoria Peak. It is the most touristic place within the area referred to as \"The Peak\", which receives some seven million visitors every year.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Gate Lodge\nGate Lodge () is a small house located at Mount Austin Road on Victoria Peak, Hong Kong Island, Hong Kong. Gate Lodge was built between 1900 and 1902. It is in Renaissance style.",
+            "Tolland, New South Wales\nTolland is a suburb located in the city of Wagga Wagga in the Riverina region of New South Wales, Australia. The suburb is home to Mount Austin High School and Tolland Shopping Centre which has an IGA supermarket and an Dominos Pizza outlet. It is also home to the Tolland Football Club",
+            "Prehistoric Mongolia\nThe climate of Central Asia became dry after the large tectonic collision between the Indian Plate and the Eurasian Plate. This impact threw up the massive chain of mountains known as the Himalayas. The Himalayas, Greater Khingan and Lesser Khingan mountains act like a high wall, blocking the warm and wet climate from penetrating into Central Asia. Many of the mountains of Mongolia were formed during the Late Neogene and Early Quaternary periods. The Mongolian climate was more humid hundreds of thousands of years ago.",
+            "Victoria Peak\nVictoria Peak (, or previously ) is a mountain in the western half of Hong Kong Island. It is also known as Mount Austin, and locally as The Peak. With an elevation of 552 m , it is the highest mountain on Hong Kong island, ranked 31 in terms of elevation in the Hong Kong Special Administrative Region (Tai Mo Shan is the highest point in the Hong Kong Special Administrative Region with an elevation of 957 m).",
+            "Ohio State Route 198\nState Route 198 is a north\u2013south state highway in the western portion of the U.S. state of Ohio. Its southern terminus is at an interchange with U.S. Route 33 just south of Wapakoneta, which is also the western terminus of State Route 67 and the southern terminus of State Route 501; its northern terminus is at State Route 117 nearly 4 mi east of Spencerville.",
+            "Maine State Route 102\nState Route 102 is a north-south state highway located on Mount Desert Island in eastern Maine. As of 2007, its southern terminus is located at an intersection with State Route 102A in Tremont on the southern part of the island. Its northern terminus is at intersection with State Route 3 in Bar Harbor, a terminus it shares with State Route 198.",
+            "Tennessee State Route 102\nState Route\u00a0102 (SR\u00a0102) is a 18.56 mi state highway that exists entirely within Rutherford County, Tennessee. Its southern terminus is in Almaville, an unincorporated community in the western part of the county, at SR\u00a096. Its northern terminus is in Smyrna.",
+            "Mount Vernon, New York\nMount Vernon is a city in Westchester County, New York, United States. It is an inner suburb of New York City, immediately to the north of the borough of the Bronx. As of the 2010 census, Mount Vernon had a population of 67,292.",
+            "Austin Rover Group\nThe Austin Rover Group (abbreviated ARG) was a British motor manufacturer. It was created in 1982 as the mass-market car manufacturing subsidiary of British Leyland (BL). Previously, this entity had been known as BL Cars Ltd (formerly Leyland Cars) which encompassed the \"Austin-Morris\" and \"Jaguar-Rover-Triumph\" divisions of British Leyland. After a major restructuring of BL's car manufacturing operations, Jaguar regained its independence (leading to its eventual de-mergeri in 1984) whilst the Triumph and Morris marques were retired. The new, leaner car business was rechristened as the Austin Rover Group and focused primarily on the Austin and Rover marques. The Morris and Triumph marques continued briefly within ARG until 1984 when both were dropped."
+        ],
+        "thoughts": [
+            "The mountain also known as Mount Austin is Victoria Peak, located on Hong Kong Island in Hong Kong. It is also referred to as Victoria Gap and is a popular tourist destination, receiving around seven million visitors every year.",
+            "Mount Austin Barracks is located near the Peak Tram terminus at Victoria Peak on Hong Kong Island, in Hong Kong. It is situated in the area known as \"The Peak\" and is part of the Victoria Peak mountain range.",
+            "The Peak Tram terminus is located inside the Peak Tower at Victoria Gap, the Peak, Central and Western District, Hong Kong, 398m above sea level.",
+            "Yes, the location of Mount Austin Barracks is near the Peak Tram terminus at Victoria Peak in Hong Kong.",
+            "Based on the information from the upstream tasks, it can be concluded that the mountain known as Mount Austin is the same place as where Mount Austin Barracks is located. Both are situated near the Peak Tram terminus at Victoria Peak in Hong Kong."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Mount Austin Barracks is located near the Peak Tram terminus at what mountain that is also known as Mount Austin?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the mountain that the Peak Tram terminus is located at or near.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Confirm the mountain is also known as Mount Austin.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the location of Mount Austin Barracks.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Confirm the proximity of Mount Austin Barracks to the location identified in node 1.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Synthesize information to determine the name of the mountain known as Mount Austin where both the Peak Tram terminus and Mount Austin Barracks are located or nearby.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph starts by identifying the mountain where the Peak Tram terminus is located and confirms its alternate name, Mount Austin. In parallel, it retrieves the location of Mount Austin Barracks. Finally, it verifies the proximity and synthesizes the information to answer the original question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Victoria Peak\nVictoria Peak (, or previously ) is a mountain in the western half of Hong Kong Island. It is also known as Mount Austin, and locally as The Peak. With an elevation of 552 m , it is the highest mountain on Hong Kong island, ranked 31 in terms of elevation in the Hong Kong Special Administrative Region (Tai Mo Shan is the highest point in the Hong Kong Special Administrative Region with an elevation of 957 m).",
+            "Mount Austin Barracks\nMount Austin Barracks was a British Army base in Hong Kong during British rule. It was acquired in 1897 and developed from the former Mount Austin Hotel. It is named after John Gardiner Austin, former Hong Kong Colonial Secretary. It was located near the Peak Tram terminus at Victoria Peak.",
+            "Victoria Gap\nVictoria Gap () is an area and a mountain pass located between the summits of Victoria Peak (aka. Mount Austin) and Mount Gough, on Hong Kong Island, in Hong Kong. Its altitude is some 150 m below the summit of Victoria Peak. It is the most touristic place within the area referred to as \"The Peak\", which receives some seven million visitors every year.",
+            "Gate Lodge\nGate Lodge () is a small house located at Mount Austin Road on Victoria Peak, Hong Kong Island, Hong Kong. Gate Lodge was built between 1900 and 1902. It is in Renaissance style.",
+            "Peak Tower\nThe Peak Tower () is a leisure and shopping complex located at Victoria Gap, near the summit of Victoria Peak on Hong Kong Island, Hong Kong. It also houses the upper terminal of the Peak Tram. Both the Peak Tower and the Peak Tram are owned by the Hong Kong and Shanghai Hotels group, the owner of Hong Kong's famous Peninsula Hotel along with many other properties. The tower and tram are jointly promoted by the collective branding known as The Peak.",
+            "The Peak (Peak Tram)\nThe Peak () is the upper terminus of the Peak Tram funicular railway line. It is located inside the Peak Tower at Victoria Gap, the Peak, Central and Western District, Hong Kong, 398m above sea level. The station was opened in 1888 along with the tramline. It is known to be 35 degrees of a full circle, and if it was extended to a full circle, the entire volume would be roughly 45000 cuft . The volume of the Peak is around 4500 cuft .",
+            "Mount Harwood\nMount Harwood is the first summit east of Mount San Antonio. The United States Geological Survey recognized the name to honor California educator and conservationist Aurelia Squire Harwood in 1965. Prior to this, the peak now known as Thunder Mountain was also referred to as Mount Harwood. Mount Harwood is located on the East side of the San Gabriel Mountains in the Angeles National Forest near the San Bernardino-Los Angeles county border. In this area of the San Gabriel Mountains the peaks are the highest. Because of the elevation Mount Harwood turns out to be ranked the 4th highest peak in the San Gabriel mountains after Dawson Peak, Mount San Antonio or \"Old Baldy\" being the highest at 10,064 feet (3,068 m). The only way for hikers or tourists to access Mount Harwood is to take Mt. Baldy Road off I-210. A National Forest Adventure pass/ National Park access pass must be displayed on a vehicle to access Mount Harwood.",
+            "Hi-Lite Park\nHi-Lite Park was an amusement park in Geelong, Australia, located near Eastern Beach, on the corner of Bellarine Street and Ritchie Boulevard, where the Eastern Beach tram terminus was once situated. The park opened in 1956 and closed c. 1985.",
+            "Citybus (Hong Kong)\nCitybus Limited () is one of the three major bus operators in Hong Kong. It provides both franchised and non-franchised bus service. The franchised route network serves mainly Hong Kong Island, cross-harbour routes (between Hong Kong Island and Kowloon/New Territories), Ocean Park, North Lantau (Tung Chung and Hong Kong Disneyland) and Hong Kong International Airport. The non-franchised routes serve mainly City One Sha Tin. It also provides bus rental services and staff bus services for some large companies such as TVB and China Light and Power.",
+            "Kezhen Peak\nKezhen Peak, also known as Karpogo Sar, is a mountain in the Karakoram mountain range. It is located in the Xinjiang Autonomous Region of China.",
+            "Gile Mountain\nGile Mountain is located in Windsor County, Vermont, along the border between the towns of Norwich and Sharon, with the summit located in Norwich. The mountain reaches a height of 1873 ft above sea level. Relatively unimposing considering its height, the true summit cannot easily be seen from the surrounding territory, despite the prominent fire tower atop its summit. The tower is easily reached by taking Turnpike Road from Norwich to the parking area near its terminus. From here, the Gile Mountain trail leads west 0.7 mi to the summit, passing under power lines. The summit area contains an old ranger cabin, since converted to a shelter-type structure (though camping is not allowed), and the tower itself. From the top views are expansive, and on a clear day one can see Mount Ascutney to the south, the Green Mountains from Killington Peak to Mount Mansfield to the west, Mount Cardigan, Smarts Mountain, and Croydon Peak to the east, and Mount Cube and Mount Moosilauke to the northeast with many of the White Mountains beyond. Dartmouth College is also visible some seven miles distant.",
+            "The Crown (mountain)\nThe Crown, also known as Huang Guan Shan and sometimes Crown Peak, is a mountain in the Karakoram mountain range in China. It is located in the Xinjiang Uyghur Autonomous Region of China. Its summit has an elevation of 7295 m and it is the highest peak in the Yengisogat subrange of the Karakoram.",
+            "Tolland, New South Wales\nTolland is a suburb located in the city of Wagga Wagga in the Riverina region of New South Wales, Australia. The suburb is home to Mount Austin High School and Tolland Shopping Centre which has an IGA supermarket and an Dominos Pizza outlet. It is also home to the Tolland Football Club",
+            "Mount Vernon, New York\nMount Vernon is a city in Westchester County, New York, United States. It is an inner suburb of New York City, immediately to the north of the borough of the Bronx. As of the 2010 census, Mount Vernon had a population of 67,292.",
+            "Austin Rover Group\nThe Austin Rover Group (abbreviated ARG) was a British motor manufacturer. It was created in 1982 as the mass-market car manufacturing subsidiary of British Leyland (BL). Previously, this entity had been known as BL Cars Ltd (formerly Leyland Cars) which encompassed the \"Austin-Morris\" and \"Jaguar-Rover-Triumph\" divisions of British Leyland. After a major restructuring of BL's car manufacturing operations, Jaguar regained its independence (leading to its eventual de-mergeri in 1984) whilst the Triumph and Morris marques were retired. The new, leaner car business was rechristened as the Austin Rover Group and focused primarily on the Austin and Rover marques. The Morris and Triumph marques continued briefly within ARG until 1984 when both were dropped."
+        ],
+        "thoughts": [
+            "The Peak Tram terminus is located near Victoria Peak, also known as Mount Austin, in the Central and Western District of Hong Kong.",
+            "The mountain known as Victoria Peak is also referred to as Mount Austin.",
+            "Mount Austin Barracks is located near the Peak Tram terminus at Victoria Peak on Hong Kong Island, in Hong Kong.",
+            "Based on the information from the upstream tasks, it can be confirmed that Mount Austin Barracks is in close proximity to the location identified in node 1, which is the Peak Tram terminus at Victoria Peak on Hong Kong Island. Therefore, Mount Austin Barracks is located near the Peak Tram terminus at Victoria Peak.",
+            "Based on the synthesized information, the mountain known as Mount Austin is also referred to as Victoria Peak. Both the Peak Tram terminus and Mount Austin Barracks are located or nearby Victoria Peak on Hong Kong Island. Therefore, the name of the mountain known as Mount Austin is Victoria Peak."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Mount Austin Barracks is located near the Peak Tram terminus at what mountain that is also known as Mount Austin?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the location of Mount Austin Barracks.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the terminus of the Peak Tram.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine what mountain is near both Mount Austin Barracks and the Peak Tram terminus.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Verify if this mountain is also known as Mount Austin.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks down the question into steps to find the mountain also known as Mount Austin. First, it identifies the location of Mount Austin Barracks. Parallelly, it retrieves information about the Peak Tram terminus. After gathering these details, reasoning is applied to identify a mountain near both these locations. Finally, it verifies if this mountain is indeed known as Mount Austin, synthesizing all information to answer the question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Mount Austin Barracks\nMount Austin Barracks was a British Army base in Hong Kong during British rule. It was acquired in 1897 and developed from the former Mount Austin Hotel. It is named after John Gardiner Austin, former Hong Kong Colonial Secretary. It was located near the Peak Tram terminus at Victoria Peak.",
+            "Victoria Gap\nVictoria Gap () is an area and a mountain pass located between the summits of Victoria Peak (aka. Mount Austin) and Mount Gough, on Hong Kong Island, in Hong Kong. Its altitude is some 150 m below the summit of Victoria Peak. It is the most touristic place within the area referred to as \"The Peak\", which receives some seven million visitors every year.",
+            "Gile Mountain\nGile Mountain is located in Windsor County, Vermont, along the border between the towns of Norwich and Sharon, with the summit located in Norwich. The mountain reaches a height of 1873 ft above sea level. Relatively unimposing considering its height, the true summit cannot easily be seen from the surrounding territory, despite the prominent fire tower atop its summit. The tower is easily reached by taking Turnpike Road from Norwich to the parking area near its terminus. From here, the Gile Mountain trail leads west 0.7 mi to the summit, passing under power lines. The summit area contains an old ranger cabin, since converted to a shelter-type structure (though camping is not allowed), and the tower itself. From the top views are expansive, and on a clear day one can see Mount Ascutney to the south, the Green Mountains from Killington Peak to Mount Mansfield to the west, Mount Cardigan, Smarts Mountain, and Croydon Peak to the east, and Mount Cube and Mount Moosilauke to the northeast with many of the White Mountains beyond. Dartmouth College is also visible some seven miles distant.",
+            "Victoria Peak\nVictoria Peak (, or previously ) is a mountain in the western half of Hong Kong Island. It is also known as Mount Austin, and locally as The Peak. With an elevation of 552 m , it is the highest mountain on Hong Kong island, ranked 31 in terms of elevation in the Hong Kong Special Administrative Region (Tai Mo Shan is the highest point in the Hong Kong Special Administrative Region with an elevation of 957 m).",
+            "Mount Harwood\nMount Harwood is the first summit east of Mount San Antonio. The United States Geological Survey recognized the name to honor California educator and conservationist Aurelia Squire Harwood in 1965. Prior to this, the peak now known as Thunder Mountain was also referred to as Mount Harwood. Mount Harwood is located on the East side of the San Gabriel Mountains in the Angeles National Forest near the San Bernardino-Los Angeles county border. In this area of the San Gabriel Mountains the peaks are the highest. Because of the elevation Mount Harwood turns out to be ranked the 4th highest peak in the San Gabriel mountains after Dawson Peak, Mount San Antonio or \"Old Baldy\" being the highest at 10,064 feet (3,068 m). The only way for hikers or tourists to access Mount Harwood is to take Mt. Baldy Road off I-210. A National Forest Adventure pass/ National Park access pass must be displayed on a vehicle to access Mount Harwood.",
+            "The Peak (Peak Tram)\nThe Peak () is the upper terminus of the Peak Tram funicular railway line. It is located inside the Peak Tower at Victoria Gap, the Peak, Central and Western District, Hong Kong, 398m above sea level. The station was opened in 1888 along with the tramline. It is known to be 35 degrees of a full circle, and if it was extended to a full circle, the entire volume would be roughly 45000 cuft . The volume of the Peak is around 4500 cuft .",
+            "Peak Tower\nThe Peak Tower () is a leisure and shopping complex located at Victoria Gap, near the summit of Victoria Peak on Hong Kong Island, Hong Kong. It also houses the upper terminal of the Peak Tram. Both the Peak Tower and the Peak Tram are owned by the Hong Kong and Shanghai Hotels group, the owner of Hong Kong's famous Peninsula Hotel along with many other properties. The tower and tram are jointly promoted by the collective branding known as The Peak.",
+            "Hi-Lite Park\nHi-Lite Park was an amusement park in Geelong, Australia, located near Eastern Beach, on the corner of Bellarine Street and Ritchie Boulevard, where the Eastern Beach tram terminus was once situated. The park opened in 1956 and closed c. 1985.",
+            "Gate Lodge\nGate Lodge () is a small house located at Mount Austin Road on Victoria Peak, Hong Kong Island, Hong Kong. Gate Lodge was built between 1900 and 1902. It is in Renaissance style.",
+            "Tolland, New South Wales\nTolland is a suburb located in the city of Wagga Wagga in the Riverina region of New South Wales, Australia. The suburb is home to Mount Austin High School and Tolland Shopping Centre which has an IGA supermarket and an Dominos Pizza outlet. It is also home to the Tolland Football Club",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "Ohio State Route 198\nState Route 198 is a north\u2013south state highway in the western portion of the U.S. state of Ohio. Its southern terminus is at an interchange with U.S. Route 33 just south of Wapakoneta, which is also the western terminus of State Route 67 and the southern terminus of State Route 501; its northern terminus is at State Route 117 nearly 4 mi east of Spencerville.",
+            "Lake Road (Western New York)\nLake Road is an east\u2013west roadway in western New York in the United States. It extends for 29 mi from the Irondequoit Bay Outlet Bridge in the Monroe County town of Webster to New York State Route\u00a014 (NY\u00a014) in the Wayne County village of Sodus Point. As its name implies, it follows the southern shore of Lake Ontario for its entire length. Lake Road serves as the northern terminus of NY\u00a0250 and was once the northern terminus of NY\u00a021. The entirety of the roadway east of Bay Road in Webster is part of the Seaway Trail, a National Scenic Byway.",
+            "Maine State Route 102\nState Route 102 is a north-south state highway located on Mount Desert Island in eastern Maine. As of 2007, its southern terminus is located at an intersection with State Route 102A in Tremont on the southern part of the island. Its northern terminus is at intersection with State Route 3 in Bar Harbor, a terminus it shares with State Route 198.",
+            "Mount Vernon, New York\nMount Vernon is a city in Westchester County, New York, United States. It is an inner suburb of New York City, immediately to the north of the borough of the Bronx. As of the 2010 census, Mount Vernon had a population of 67,292.",
+            "Austin Rover Group\nThe Austin Rover Group (abbreviated ARG) was a British motor manufacturer. It was created in 1982 as the mass-market car manufacturing subsidiary of British Leyland (BL). Previously, this entity had been known as BL Cars Ltd (formerly Leyland Cars) which encompassed the \"Austin-Morris\" and \"Jaguar-Rover-Triumph\" divisions of British Leyland. After a major restructuring of BL's car manufacturing operations, Jaguar regained its independence (leading to its eventual de-mergeri in 1984) whilst the Triumph and Morris marques were retired. The new, leaner car business was rechristened as the Austin Rover Group and focused primarily on the Austin and Rover marques. The Morris and Triumph marques continued briefly within ARG until 1984 when both were dropped."
+        ],
+        "thoughts": [
+            "Mount Austin Barracks is located near the Peak Tram terminus at Victoria Peak on Hong Kong Island, in Hong Kong. It is situated in the area referred to as \"The Peak\" and is part of the Victoria Peak mountain pass.",
+            "The terminus of the Peak Tram is located inside the Peak Tower at Victoria Gap, the Peak, Central and Western District, Hong Kong, 398m above sea level.",
+            "The mountain near both Mount Austin Barracks and the Peak Tram terminus is Victoria Peak.",
+            "Yes, the mountain known as Victoria Peak is also known as Mount Austin."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Mount Austin Barracks is located near the Peak Tram terminus at what mountain that is also known as Mount Austin?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the location of Mount Austin Barracks.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the location of the Peak Tram terminus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the mountain name where both Mount Austin Barracks and the Peak Tram terminus are located.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Check whether the mountain identified is also known as Mount Austin.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The graph breaks down the question into a sequence of nodes. Nodes 1 and 2 retrieve the locations of Mount Austin Barracks and the Peak Tram terminus, respectively. Node 3 reasons about which mountain is common to both locations. Finally, Node 4 verifies if the identified mountain is also known as Mount Austin, ensuring the answer aligns with the question's condition."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Victoria Peak\nVictoria Peak (, or previously ) is a mountain in the western half of Hong Kong Island. It is also known as Mount Austin, and locally as The Peak. With an elevation of 552 m , it is the highest mountain on Hong Kong island, ranked 31 in terms of elevation in the Hong Kong Special Administrative Region (Tai Mo Shan is the highest point in the Hong Kong Special Administrative Region with an elevation of 957 m).",
+            "Victoria Gap\nVictoria Gap () is an area and a mountain pass located between the summits of Victoria Peak (aka. Mount Austin) and Mount Gough, on Hong Kong Island, in Hong Kong. Its altitude is some 150 m below the summit of Victoria Peak. It is the most touristic place within the area referred to as \"The Peak\", which receives some seven million visitors every year.",
+            "Mount Austin Barracks\nMount Austin Barracks was a British Army base in Hong Kong during British rule. It was acquired in 1897 and developed from the former Mount Austin Hotel. It is named after John Gardiner Austin, former Hong Kong Colonial Secretary. It was located near the Peak Tram terminus at Victoria Peak.",
+            "Gate Lodge\nGate Lodge () is a small house located at Mount Austin Road on Victoria Peak, Hong Kong Island, Hong Kong. Gate Lodge was built between 1900 and 1902. It is in Renaissance style.",
+            "The Peak (Peak Tram)\nThe Peak () is the upper terminus of the Peak Tram funicular railway line. It is located inside the Peak Tower at Victoria Gap, the Peak, Central and Western District, Hong Kong, 398m above sea level. The station was opened in 1888 along with the tramline. It is known to be 35 degrees of a full circle, and if it was extended to a full circle, the entire volume would be roughly 45000 cuft . The volume of the Peak is around 4500 cuft .",
+            "Mount Harwood\nMount Harwood is the first summit east of Mount San Antonio. The United States Geological Survey recognized the name to honor California educator and conservationist Aurelia Squire Harwood in 1965. Prior to this, the peak now known as Thunder Mountain was also referred to as Mount Harwood. Mount Harwood is located on the East side of the San Gabriel Mountains in the Angeles National Forest near the San Bernardino-Los Angeles county border. In this area of the San Gabriel Mountains the peaks are the highest. Because of the elevation Mount Harwood turns out to be ranked the 4th highest peak in the San Gabriel mountains after Dawson Peak, Mount San Antonio or \"Old Baldy\" being the highest at 10,064 feet (3,068 m). The only way for hikers or tourists to access Mount Harwood is to take Mt. Baldy Road off I-210. A National Forest Adventure pass/ National Park access pass must be displayed on a vehicle to access Mount Harwood.",
+            "Peak Tower\nThe Peak Tower () is a leisure and shopping complex located at Victoria Gap, near the summit of Victoria Peak on Hong Kong Island, Hong Kong. It also houses the upper terminal of the Peak Tram. Both the Peak Tower and the Peak Tram are owned by the Hong Kong and Shanghai Hotels group, the owner of Hong Kong's famous Peninsula Hotel along with many other properties. The tower and tram are jointly promoted by the collective branding known as The Peak.",
+            "Mount Borodin\nMount Borodin ( ) is a mainly ice-covered mountain, 695 m high, with a rock outcrop on the east side, 7 nmi north-northeast of Gluck Peak in the southwest part of Alexander Island, Antarctica. A number of peaks in this general vicinity first appear on the maps of the Ronne Antarctic Research Expedition (RARE), 1947\u201348. This peak, apparently one of these, was mapped from RARE air photos by Derek J.H. Searle of the Falkland Islands Dependencies Survey in 1960, and named by the UK Antarctic Place-Names Committee after Alexander Borodin, the Russian composer.",
+            "Hi-Lite Park\nHi-Lite Park was an amusement park in Geelong, Australia, located near Eastern Beach, on the corner of Bellarine Street and Ritchie Boulevard, where the Eastern Beach tram terminus was once situated. The park opened in 1956 and closed c. 1985.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Tolland, New South Wales\nTolland is a suburb located in the city of Wagga Wagga in the Riverina region of New South Wales, Australia. The suburb is home to Mount Austin High School and Tolland Shopping Centre which has an IGA supermarket and an Dominos Pizza outlet. It is also home to the Tolland Football Club",
+            "Ohio State Route 198\nState Route 198 is a north\u2013south state highway in the western portion of the U.S. state of Ohio. Its southern terminus is at an interchange with U.S. Route 33 just south of Wapakoneta, which is also the western terminus of State Route 67 and the southern terminus of State Route 501; its northern terminus is at State Route 117 nearly 4 mi east of Spencerville.",
+            "Maine State Route 102\nState Route 102 is a north-south state highway located on Mount Desert Island in eastern Maine. As of 2007, its southern terminus is located at an intersection with State Route 102A in Tremont on the southern part of the island. Its northern terminus is at intersection with State Route 3 in Bar Harbor, a terminus it shares with State Route 198.",
+            "Gile Mountain\nGile Mountain is located in Windsor County, Vermont, along the border between the towns of Norwich and Sharon, with the summit located in Norwich. The mountain reaches a height of 1873 ft above sea level. Relatively unimposing considering its height, the true summit cannot easily be seen from the surrounding territory, despite the prominent fire tower atop its summit. The tower is easily reached by taking Turnpike Road from Norwich to the parking area near its terminus. From here, the Gile Mountain trail leads west 0.7 mi to the summit, passing under power lines. The summit area contains an old ranger cabin, since converted to a shelter-type structure (though camping is not allowed), and the tower itself. From the top views are expansive, and on a clear day one can see Mount Ascutney to the south, the Green Mountains from Killington Peak to Mount Mansfield to the west, Mount Cardigan, Smarts Mountain, and Croydon Peak to the east, and Mount Cube and Mount Moosilauke to the northeast with many of the White Mountains beyond. Dartmouth College is also visible some seven miles distant.",
+            "Tennessee State Route 102\nState Route\u00a0102 (SR\u00a0102) is a 18.56 mi state highway that exists entirely within Rutherford County, Tennessee. Its southern terminus is in Almaville, an unincorporated community in the western part of the county, at SR\u00a096. Its northern terminus is in Smyrna.",
+            "Austin Rover Group\nThe Austin Rover Group (abbreviated ARG) was a British motor manufacturer. It was created in 1982 as the mass-market car manufacturing subsidiary of British Leyland (BL). Previously, this entity had been known as BL Cars Ltd (formerly Leyland Cars) which encompassed the \"Austin-Morris\" and \"Jaguar-Rover-Triumph\" divisions of British Leyland. After a major restructuring of BL's car manufacturing operations, Jaguar regained its independence (leading to its eventual de-mergeri in 1984) whilst the Triumph and Morris marques were retired. The new, leaner car business was rechristened as the Austin Rover Group and focused primarily on the Austin and Rover marques. The Morris and Triumph marques continued briefly within ARG until 1984 when both were dropped."
+        ],
+        "thoughts": [
+            "The location of Mount Austin Barracks is near the Peak Tram terminus at Victoria Peak on Hong Kong Island, Hong Kong.",
+            "The location of the Peak Tram terminus is inside the Peak Tower at Victoria Gap, the Peak, Central and Western District, Hong Kong, 398m above sea level.",
+            "The mountain where both Mount Austin Barracks and the Peak Tram terminus are located is Victoria Peak.",
+            "The mountain identified as Victoria Peak is also known as Mount Austin."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Mount Austin Barracks is located near the Peak Tram terminus at what mountain that is also known as Mount Austin?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the location of Mount Austin Barracks.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the location of the Peak Tram terminus.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the mountain known as Mount Austin.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Verify if the location of the Peak Tram terminus is near Mount Austin Barracks.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Check if Mount Austin Barracks and the Peak Tram terminus are located at the mountain known as Mount Austin.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph is structured to first gather information on the specific locations related to Mount Austin Barracks and the Peak Tram terminus, as well as confirming what geographical location is known as Mount Austin. The reasoning steps then verify the proximity of the tram terminus to the barracks and finally ensure that both are situated on the mountain identified as Mount Austin. This structured approach ensures that all necessary information is retrieved and logically reasoned to answer the question accurately."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "Mount Austin Barracks\nMount Austin Barracks was a British Army base in Hong Kong during British rule. It was acquired in 1897 and developed from the former Mount Austin Hotel. It is named after John Gardiner Austin, former Hong Kong Colonial Secretary. It was located near the Peak Tram terminus at Victoria Peak.",
+            "The Peak (Peak Tram)\nThe Peak () is the upper terminus of the Peak Tram funicular railway line. It is located inside the Peak Tower at Victoria Gap, the Peak, Central and Western District, Hong Kong, 398m above sea level. The station was opened in 1888 along with the tramline. It is known to be 35 degrees of a full circle, and if it was extended to a full circle, the entire volume would be roughly 45000 cuft . The volume of the Peak is around 4500 cuft .",
+            "Peak Tower\nThe Peak Tower () is a leisure and shopping complex located at Victoria Gap, near the summit of Victoria Peak on Hong Kong Island, Hong Kong. It also houses the upper terminal of the Peak Tram. Both the Peak Tower and the Peak Tram are owned by the Hong Kong and Shanghai Hotels group, the owner of Hong Kong's famous Peninsula Hotel along with many other properties. The tower and tram are jointly promoted by the collective branding known as The Peak.",
+            "Hi-Lite Park\nHi-Lite Park was an amusement park in Geelong, Australia, located near Eastern Beach, on the corner of Bellarine Street and Ritchie Boulevard, where the Eastern Beach tram terminus was once situated. The park opened in 1956 and closed c. 1985.",
+            "Victoria Gap\nVictoria Gap () is an area and a mountain pass located between the summits of Victoria Peak (aka. Mount Austin) and Mount Gough, on Hong Kong Island, in Hong Kong. Its altitude is some 150 m below the summit of Victoria Peak. It is the most touristic place within the area referred to as \"The Peak\", which receives some seven million visitors every year.",
+            "Gate Lodge\nGate Lodge () is a small house located at Mount Austin Road on Victoria Peak, Hong Kong Island, Hong Kong. Gate Lodge was built between 1900 and 1902. It is in Renaissance style.",
+            "Tolland, New South Wales\nTolland is a suburb located in the city of Wagga Wagga in the Riverina region of New South Wales, Australia. The suburb is home to Mount Austin High School and Tolland Shopping Centre which has an IGA supermarket and an Dominos Pizza outlet. It is also home to the Tolland Football Club",
+            "Victoria Peak\nVictoria Peak (, or previously ) is a mountain in the western half of Hong Kong Island. It is also known as Mount Austin, and locally as The Peak. With an elevation of 552 m , it is the highest mountain on Hong Kong island, ranked 31 in terms of elevation in the Hong Kong Special Administrative Region (Tai Mo Shan is the highest point in the Hong Kong Special Administrative Region with an elevation of 957 m).",
+            "Ohio State Route 198\nState Route 198 is a north\u2013south state highway in the western portion of the U.S. state of Ohio. Its southern terminus is at an interchange with U.S. Route 33 just south of Wapakoneta, which is also the western terminus of State Route 67 and the southern terminus of State Route 501; its northern terminus is at State Route 117 nearly 4 mi east of Spencerville.",
+            "Maine State Route 102\nState Route 102 is a north-south state highway located on Mount Desert Island in eastern Maine. As of 2007, its southern terminus is located at an intersection with State Route 102A in Tremont on the southern part of the island. Its northern terminus is at intersection with State Route 3 in Bar Harbor, a terminus it shares with State Route 198.",
+            "Gile Mountain\nGile Mountain is located in Windsor County, Vermont, along the border between the towns of Norwich and Sharon, with the summit located in Norwich. The mountain reaches a height of 1873 ft above sea level. Relatively unimposing considering its height, the true summit cannot easily be seen from the surrounding territory, despite the prominent fire tower atop its summit. The tower is easily reached by taking Turnpike Road from Norwich to the parking area near its terminus. From here, the Gile Mountain trail leads west 0.7 mi to the summit, passing under power lines. The summit area contains an old ranger cabin, since converted to a shelter-type structure (though camping is not allowed), and the tower itself. From the top views are expansive, and on a clear day one can see Mount Ascutney to the south, the Green Mountains from Killington Peak to Mount Mansfield to the west, Mount Cardigan, Smarts Mountain, and Croydon Peak to the east, and Mount Cube and Mount Moosilauke to the northeast with many of the White Mountains beyond. Dartmouth College is also visible some seven miles distant.",
+            "Mount Harwood\nMount Harwood is the first summit east of Mount San Antonio. The United States Geological Survey recognized the name to honor California educator and conservationist Aurelia Squire Harwood in 1965. Prior to this, the peak now known as Thunder Mountain was also referred to as Mount Harwood. Mount Harwood is located on the East side of the San Gabriel Mountains in the Angeles National Forest near the San Bernardino-Los Angeles county border. In this area of the San Gabriel Mountains the peaks are the highest. Because of the elevation Mount Harwood turns out to be ranked the 4th highest peak in the San Gabriel mountains after Dawson Peak, Mount San Antonio or \"Old Baldy\" being the highest at 10,064 feet (3,068 m). The only way for hikers or tourists to access Mount Harwood is to take Mt. Baldy Road off I-210. A National Forest Adventure pass/ National Park access pass must be displayed on a vehicle to access Mount Harwood.",
+            "Tennessee State Route 102\nState Route\u00a0102 (SR\u00a0102) is a 18.56 mi state highway that exists entirely within Rutherford County, Tennessee. Its southern terminus is in Almaville, an unincorporated community in the western part of the county, at SR\u00a096. Its northern terminus is in Smyrna.",
+            "Mount Vernon, New York\nMount Vernon is a city in Westchester County, New York, United States. It is an inner suburb of New York City, immediately to the north of the borough of the Bronx. As of the 2010 census, Mount Vernon had a population of 67,292.",
+            "Austin Rover Group\nThe Austin Rover Group (abbreviated ARG) was a British motor manufacturer. It was created in 1982 as the mass-market car manufacturing subsidiary of British Leyland (BL). Previously, this entity had been known as BL Cars Ltd (formerly Leyland Cars) which encompassed the \"Austin-Morris\" and \"Jaguar-Rover-Triumph\" divisions of British Leyland. After a major restructuring of BL's car manufacturing operations, Jaguar regained its independence (leading to its eventual de-mergeri in 1984) whilst the Triumph and Morris marques were retired. The new, leaner car business was rechristened as the Austin Rover Group and focused primarily on the Austin and Rover marques. The Morris and Triumph marques continued briefly within ARG until 1984 when both were dropped."
+        ],
+        "thoughts": [
+            "Mount Austin Barracks is located near the Peak Tram terminus at Victoria Peak on Hong Kong Island, in Hong Kong. It is situated in the area referred to as \"The Peak\" and is part of the Victoria Peak mountain pass.",
+            "The Peak Tram terminus is located inside the Peak Tower at Victoria Gap, the Peak, Central and Western District, Hong Kong, 398m above sea level.",
+            "Mount Austin is also known as Victoria Peak and is the highest mountain on Hong Kong Island, with an elevation of 552 meters. It is located in the western half of Hong Kong Island and is a popular tourist destination, receiving around seven million visitors every year. It is also the location of the former Mount Austin Barracks, which was a British Army base during British rule in Hong Kong. Additionally, Mount Austin is part of the area referred to as \"The Peak\" and is home to the Gate Lodge, a small house built in Renaissance style. It is not to be confused with Mount Austin in Tolland, New South Wales, or Mount Harwood in the San Gabriel Mountains.",
+            "Mount Austin Barracks and the Peak Tram terminus are both located at Victoria Peak, which is also known as Mount Austin. Therefore, they are indeed located at the mountain known as Mount Austin."
+        ],
+        "is_best": false
+    }
+]

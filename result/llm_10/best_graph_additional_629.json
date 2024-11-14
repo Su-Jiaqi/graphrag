@@ -1,0 +1,765 @@
+[
+    {
+        "attempt": 1,
+        "question": "Which athlete was an American tennis player: Henri Kontinen or Melanie Oudin?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Fetch background information on Henri Kontinen, focusing on nationality and sports discipline.",
+                "output": "Henri Kontinen is a Finnish tennis player, known for his success in doubles matches. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. Henri's younger brother, Micke Kontinen, is also a Finnish tennis player. The Kontinen brothers have made a significant impact in the world of tennis, representing their home country of Finland in international competitions.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Fetch background information on Melanie Oudin, focusing on nationality and sports discipline.",
+                "output": "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her achievements in the sports discipline of tennis and holds American nationality.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine the nationality of Henri Kontinen and identify if he plays tennis.",
+                "output": "Henri Kontinen is a Finnish tennis player.",
+                "upstream": [
+                    [
+                        "1",
+                        "Henri Kontinen is a Finnish tennis player, known for his success in doubles matches. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. Henri's younger brother, Micke Kontinen, is also a Finnish tennis player. The Kontinen brothers have made a significant impact in the world of tennis, representing their home country of Finland in international competitions."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine the nationality of Melanie Oudin and identify if she plays tennis.",
+                "output": "Melanie Oudin is an American tennis player.",
+                "upstream": [
+                    [
+                        "2",
+                        "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her achievements in the sports discipline of tennis and holds American nationality."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the nationalities identified. Conclude which athlete is an American tennis player.",
+                "output": "Based on the nationalities identified, Melanie Oudin is the American tennis player.",
+                "upstream": [
+                    [
+                        "3",
+                        "Henri Kontinen is a Finnish tennis player."
+                    ],
+                    [
+                        "4",
+                        "Melanie Oudin is an American tennis player."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Henri Kontinen\nHenri Kontinen (] ; born 19 June 1990) is a Finnish tennis player.",
+            "Melanie Oudin\nMelanie Oudin (born September 23, 1991) is a former American tennis player and former world junior No. 2. She was a member of the American Fed Cup team from 2009 to 2011 and winner of the 2011 US Open mixed doubles title, with fellow American player Jack Sock.",
+            "Micke Kontinen\nMicke Kontinen (born 18 December 1992) is a Finnish tennis player. He is the younger brother of Henri Kontinen who is also a tennis player.",
+            "2012 Aegon Classic\nThe 2012 Aegon Classic was a women's tennis tournament played on outdoor grass courts. It was the 31st edition of the event. It took place at the Edgbaston Priory Club in Birmingham, England, United Kingdom, scheduled between 11 and 17 June 2012. Melanie Oudin won the singles title.",
+            "Christopher Rungkat\nChristopher Benjamin Rungkat (born 14 January 1990) is an Indonesian tennis player. He is the grandson of \"Famous\" Benny Rungkat, former chairman of the Indonesian Air Carriers Association. Christopher's father, Michael Alexander Fritz Rungkat, is of Dutch and Indonesian descent and his mother, Elfia Mirlianti, is full Indonesian descent. In 2008, he won the final stage of French Open 2008 Boys' Doubles Juniors category with Finnish tennis player Henri Kontinen. He is the youngest ever Indonesian to be the All Indonesian Champion, and by the end of his junior career,he was awarded for Indonesian best promising athlete 2008.",
+            "Treat Huey\nTreat Conrad Huey ( ) (born 28 August 1985) is a Filipino-American tennis player who represents the Philippines in international competitions. He turned professional in 2008 and he started representing the Philippines in the Davis Cup and the Southeast Asian Games in 2009. Huey specializes in doubles and has reached eighteen finals on the ATP World Tour. He won titles at the 2012 Citi Open, 2013 Swiss Indoors, and 2014 Aegon International alongside Dominic Inglot, 2015 Estoril Open with Scott Lipsky, and 2015 St. Petersburg Open and 2015 Malaysian Open, Kuala Lumpur with Henri Kontinen.",
+            "Tim Cranston\nTim Cranston (born 13 December 1962 in Halifax, Nova Scotia) is a retired professional ice hockey player who holds dual Canadian and British nationality. He played in Europe between 1985 and 1999 except for one game in the 1986\u201387 season played in the American Hockey League. He was also a member of the Great Britain national ice hockey team between 1993 and 1997. Whilst living in the United Kingdom, Cranston was the founding chairman of the British Ice Hockey Player's Association (GB). Currently living in Halifax, Nova Scotia, Cranston is working as a sports agent and lawyer for the sports and entertainment industries. He was inducted into the British Ice Hockey Hall of Fame in 2010.",
+            "Rumbold of Mechelen\nSaint Rumbold (or \"Rumold\", \"Romuold\", Latin: \"Rumoldus\" , Dutch: \"Rombout\" , French: \"Rombaut\" ) was an Irish or Scottish Christian missionary, although his true nationality is not known for certain.",
+            "Sudha Kheterpal\nSudha Kheterpal is a British-Indian musician best known as the percussionist in Faithless. In 2008 she toured with The Return of the Spice Girls. She has also played with K-Klass, Kylie Minogue, Melanie Williams, Jo Roberts, Corduroy, Mark Morrison, Rae and Christian, Ian Brown, Talvin Singh, and Dido.",
+            "Smiley (2012 film)\nSmiley is a 2012 American psychological slasher horror film directed by Michael Gallagher and made by Level 10 Films. The film stars were Caitlin Gerard, Melanie Papalia, Keith David, Shane Dawson, Andrew James Allen, Toby Turner, and Liza Weil. The film was released on October 12, 2012.",
+            "Tamzin Outhwaite\nTamzin Maria Outhwaite ( ; born 5 November 1970) is a British actress from London. Since coming to national notice playing Melanie Owen in the BBC One soap opera \"EastEnders\" from 1998 until 2002, she has since starred in both theatre and television productions, including army series \"Red Cap\" and crime drama \"New Tricks\".",
+            "Jean Baptiste Androuet du Cerceau\nJean Baptiste Androuet du Cerceau (1544/47\u20131590) was a French architect who designed the Pont Neuf (1579), spanning the Seine, Paris, and became supervisor of the royal works under Henri III and Henri IV, including the Louvre. Several \"h\u00f4tels particuliers\" are ascribed to him. The H\u00f4tel d'Angoul\u00eame, the H\u00f4tel de Lamoignon (1584), which houses the Historical Library of the City of Paris, and the H\u00f4tel de Mayenne (rue St-Antoine in the Marais). The H\u00f4tel de Mayenne, with rhythmically varied dormer windows set in a high slate roof, has the pediments of its piano nobile windows superposed on the frieze above.",
+            "Abdul Wali Khan Sports Complex\nAbdul Wali Khan Sports Complex also known as Charsadda Sports Complex is located in Charsadda, Khyber Pakhtunkhwa, in Pakistan. It is the 2nd largest sports complex in Khyber Pakhtunkhwa after Qayyum Sports Complex Peshawar. The sport complex has started functioning in 2016 and has been completed at the cost of Rs.490 million."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 2,
+        "question": "Which athlete was an American tennis player: Henri Kontinen or Melanie Oudin?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Fetch background information on Henri Kontinen, focusing on nationality and sports discipline.",
+                "output": "Henri Kontinen is a Finnish tennis player, known for his success in doubles matches. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. Henri's younger brother, Micke Kontinen, is also a Finnish tennis player. The Kontinen brothers have made a significant impact in the world of tennis, representing their home country of Finland in international competitions.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Fetch background information on Melanie Oudin, focusing on nationality and sports discipline.",
+                "output": "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her achievements in the sports discipline of tennis and holds American nationality.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine the nationality of Henri Kontinen and identify if he plays tennis.",
+                "output": "Henri Kontinen is a Finnish tennis player.",
+                "upstream": [
+                    [
+                        "1",
+                        "Henri Kontinen is a Finnish tennis player, known for his success in doubles matches. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. Henri's younger brother, Micke Kontinen, is also a Finnish tennis player. The Kontinen brothers have made a significant impact in the world of tennis, representing their home country of Finland in international competitions."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine the nationality of Melanie Oudin and identify if she plays tennis.",
+                "output": "Melanie Oudin is an American tennis player.",
+                "upstream": [
+                    [
+                        "2",
+                        "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her achievements in the sports discipline of tennis and holds American nationality."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the nationalities identified. Conclude which athlete is an American tennis player.",
+                "output": "Based on the nationalities identified, Melanie Oudin is the American tennis player.",
+                "upstream": [
+                    [
+                        "3",
+                        "Henri Kontinen is a Finnish tennis player."
+                    ],
+                    [
+                        "4",
+                        "Melanie Oudin is an American tennis player."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Henri Kontinen\nHenri Kontinen (] ; born 19 June 1990) is a Finnish tennis player.",
+            "Melanie Oudin\nMelanie Oudin (born September 23, 1991) is a former American tennis player and former world junior No. 2. She was a member of the American Fed Cup team from 2009 to 2011 and winner of the 2011 US Open mixed doubles title, with fellow American player Jack Sock.",
+            "Micke Kontinen\nMicke Kontinen (born 18 December 1992) is a Finnish tennis player. He is the younger brother of Henri Kontinen who is also a tennis player.",
+            "2012 Aegon Classic\nThe 2012 Aegon Classic was a women's tennis tournament played on outdoor grass courts. It was the 31st edition of the event. It took place at the Edgbaston Priory Club in Birmingham, England, United Kingdom, scheduled between 11 and 17 June 2012. Melanie Oudin won the singles title.",
+            "Christopher Rungkat\nChristopher Benjamin Rungkat (born 14 January 1990) is an Indonesian tennis player. He is the grandson of \"Famous\" Benny Rungkat, former chairman of the Indonesian Air Carriers Association. Christopher's father, Michael Alexander Fritz Rungkat, is of Dutch and Indonesian descent and his mother, Elfia Mirlianti, is full Indonesian descent. In 2008, he won the final stage of French Open 2008 Boys' Doubles Juniors category with Finnish tennis player Henri Kontinen. He is the youngest ever Indonesian to be the All Indonesian Champion, and by the end of his junior career,he was awarded for Indonesian best promising athlete 2008.",
+            "Treat Huey\nTreat Conrad Huey ( ) (born 28 August 1985) is a Filipino-American tennis player who represents the Philippines in international competitions. He turned professional in 2008 and he started representing the Philippines in the Davis Cup and the Southeast Asian Games in 2009. Huey specializes in doubles and has reached eighteen finals on the ATP World Tour. He won titles at the 2012 Citi Open, 2013 Swiss Indoors, and 2014 Aegon International alongside Dominic Inglot, 2015 Estoril Open with Scott Lipsky, and 2015 St. Petersburg Open and 2015 Malaysian Open, Kuala Lumpur with Henri Kontinen.",
+            "Tim Cranston\nTim Cranston (born 13 December 1962 in Halifax, Nova Scotia) is a retired professional ice hockey player who holds dual Canadian and British nationality. He played in Europe between 1985 and 1999 except for one game in the 1986\u201387 season played in the American Hockey League. He was also a member of the Great Britain national ice hockey team between 1993 and 1997. Whilst living in the United Kingdom, Cranston was the founding chairman of the British Ice Hockey Player's Association (GB). Currently living in Halifax, Nova Scotia, Cranston is working as a sports agent and lawyer for the sports and entertainment industries. He was inducted into the British Ice Hockey Hall of Fame in 2010.",
+            "Rumbold of Mechelen\nSaint Rumbold (or \"Rumold\", \"Romuold\", Latin: \"Rumoldus\" , Dutch: \"Rombout\" , French: \"Rombaut\" ) was an Irish or Scottish Christian missionary, although his true nationality is not known for certain.",
+            "Sudha Kheterpal\nSudha Kheterpal is a British-Indian musician best known as the percussionist in Faithless. In 2008 she toured with The Return of the Spice Girls. She has also played with K-Klass, Kylie Minogue, Melanie Williams, Jo Roberts, Corduroy, Mark Morrison, Rae and Christian, Ian Brown, Talvin Singh, and Dido.",
+            "Smiley (2012 film)\nSmiley is a 2012 American psychological slasher horror film directed by Michael Gallagher and made by Level 10 Films. The film stars were Caitlin Gerard, Melanie Papalia, Keith David, Shane Dawson, Andrew James Allen, Toby Turner, and Liza Weil. The film was released on October 12, 2012.",
+            "Tamzin Outhwaite\nTamzin Maria Outhwaite ( ; born 5 November 1970) is a British actress from London. Since coming to national notice playing Melanie Owen in the BBC One soap opera \"EastEnders\" from 1998 until 2002, she has since starred in both theatre and television productions, including army series \"Red Cap\" and crime drama \"New Tricks\".",
+            "Jean Baptiste Androuet du Cerceau\nJean Baptiste Androuet du Cerceau (1544/47\u20131590) was a French architect who designed the Pont Neuf (1579), spanning the Seine, Paris, and became supervisor of the royal works under Henri III and Henri IV, including the Louvre. Several \"h\u00f4tels particuliers\" are ascribed to him. The H\u00f4tel d'Angoul\u00eame, the H\u00f4tel de Lamoignon (1584), which houses the Historical Library of the City of Paris, and the H\u00f4tel de Mayenne (rue St-Antoine in the Marais). The H\u00f4tel de Mayenne, with rhythmically varied dormer windows set in a high slate roof, has the pediments of its piano nobile windows superposed on the frieze above.",
+            "Abdul Wali Khan Sports Complex\nAbdul Wali Khan Sports Complex also known as Charsadda Sports Complex is located in Charsadda, Khyber Pakhtunkhwa, in Pakistan. It is the 2nd largest sports complex in Khyber Pakhtunkhwa after Qayyum Sports Complex Peshawar. The sport complex has started functioning in 2016 and has been completed at the cost of Rs.490 million."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 3,
+        "question": "Which athlete was an American tennis player: Henri Kontinen or Melanie Oudin?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Fetch background information on Henri Kontinen, focusing on nationality and sports discipline.",
+                "output": "Henri Kontinen is a Finnish tennis player, known for his success in doubles matches. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. Henri's younger brother, Micke Kontinen, is also a Finnish tennis player. Together, the Kontinen brothers have made a significant impact in the world of tennis, representing their home country of Finland in international competitions.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Fetch background information on Melanie Oudin, focusing on nationality and sports discipline.",
+                "output": "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her achievements in the sports discipline of tennis and holds American nationality.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine the nationality of Henri Kontinen and identify if he plays tennis.",
+                "output": "Henri Kontinen is a Finnish tennis player.",
+                "upstream": [
+                    [
+                        "1",
+                        "Henri Kontinen is a Finnish tennis player, known for his success in doubles matches. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. Henri's younger brother, Micke Kontinen, is also a Finnish tennis player. Together, the Kontinen brothers have made a significant impact in the world of tennis, representing their home country of Finland in international competitions."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine the nationality of Melanie Oudin and identify if she plays tennis.",
+                "output": "Melanie Oudin is an American tennis player.",
+                "upstream": [
+                    [
+                        "2",
+                        "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her achievements in the sports discipline of tennis and holds American nationality."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the nationalities identified. Conclude which athlete is an American tennis player.",
+                "output": "Based on the nationalities identified, Melanie Oudin is the American tennis player.",
+                "upstream": [
+                    [
+                        "3",
+                        "Henri Kontinen is a Finnish tennis player."
+                    ],
+                    [
+                        "4",
+                        "Melanie Oudin is an American tennis player."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Henri Kontinen\nHenri Kontinen (] ; born 19 June 1990) is a Finnish tennis player.",
+            "Melanie Oudin\nMelanie Oudin (born September 23, 1991) is a former American tennis player and former world junior No. 2. She was a member of the American Fed Cup team from 2009 to 2011 and winner of the 2011 US Open mixed doubles title, with fellow American player Jack Sock.",
+            "Micke Kontinen\nMicke Kontinen (born 18 December 1992) is a Finnish tennis player. He is the younger brother of Henri Kontinen who is also a tennis player.",
+            "2012 Aegon Classic\nThe 2012 Aegon Classic was a women's tennis tournament played on outdoor grass courts. It was the 31st edition of the event. It took place at the Edgbaston Priory Club in Birmingham, England, United Kingdom, scheduled between 11 and 17 June 2012. Melanie Oudin won the singles title.",
+            "Christopher Rungkat\nChristopher Benjamin Rungkat (born 14 January 1990) is an Indonesian tennis player. He is the grandson of \"Famous\" Benny Rungkat, former chairman of the Indonesian Air Carriers Association. Christopher's father, Michael Alexander Fritz Rungkat, is of Dutch and Indonesian descent and his mother, Elfia Mirlianti, is full Indonesian descent. In 2008, he won the final stage of French Open 2008 Boys' Doubles Juniors category with Finnish tennis player Henri Kontinen. He is the youngest ever Indonesian to be the All Indonesian Champion, and by the end of his junior career,he was awarded for Indonesian best promising athlete 2008.",
+            "Treat Huey\nTreat Conrad Huey ( ) (born 28 August 1985) is a Filipino-American tennis player who represents the Philippines in international competitions. He turned professional in 2008 and he started representing the Philippines in the Davis Cup and the Southeast Asian Games in 2009. Huey specializes in doubles and has reached eighteen finals on the ATP World Tour. He won titles at the 2012 Citi Open, 2013 Swiss Indoors, and 2014 Aegon International alongside Dominic Inglot, 2015 Estoril Open with Scott Lipsky, and 2015 St. Petersburg Open and 2015 Malaysian Open, Kuala Lumpur with Henri Kontinen.",
+            "Tim Cranston\nTim Cranston (born 13 December 1962 in Halifax, Nova Scotia) is a retired professional ice hockey player who holds dual Canadian and British nationality. He played in Europe between 1985 and 1999 except for one game in the 1986\u201387 season played in the American Hockey League. He was also a member of the Great Britain national ice hockey team between 1993 and 1997. Whilst living in the United Kingdom, Cranston was the founding chairman of the British Ice Hockey Player's Association (GB). Currently living in Halifax, Nova Scotia, Cranston is working as a sports agent and lawyer for the sports and entertainment industries. He was inducted into the British Ice Hockey Hall of Fame in 2010.",
+            "Rumbold of Mechelen\nSaint Rumbold (or \"Rumold\", \"Romuold\", Latin: \"Rumoldus\" , Dutch: \"Rombout\" , French: \"Rombaut\" ) was an Irish or Scottish Christian missionary, although his true nationality is not known for certain.",
+            "Sudha Kheterpal\nSudha Kheterpal is a British-Indian musician best known as the percussionist in Faithless. In 2008 she toured with The Return of the Spice Girls. She has also played with K-Klass, Kylie Minogue, Melanie Williams, Jo Roberts, Corduroy, Mark Morrison, Rae and Christian, Ian Brown, Talvin Singh, and Dido.",
+            "Smiley (2012 film)\nSmiley is a 2012 American psychological slasher horror film directed by Michael Gallagher and made by Level 10 Films. The film stars were Caitlin Gerard, Melanie Papalia, Keith David, Shane Dawson, Andrew James Allen, Toby Turner, and Liza Weil. The film was released on October 12, 2012.",
+            "Tamzin Outhwaite\nTamzin Maria Outhwaite ( ; born 5 November 1970) is a British actress from London. Since coming to national notice playing Melanie Owen in the BBC One soap opera \"EastEnders\" from 1998 until 2002, she has since starred in both theatre and television productions, including army series \"Red Cap\" and crime drama \"New Tricks\".",
+            "Jean Baptiste Androuet du Cerceau\nJean Baptiste Androuet du Cerceau (1544/47\u20131590) was a French architect who designed the Pont Neuf (1579), spanning the Seine, Paris, and became supervisor of the royal works under Henri III and Henri IV, including the Louvre. Several \"h\u00f4tels particuliers\" are ascribed to him. The H\u00f4tel d'Angoul\u00eame, the H\u00f4tel de Lamoignon (1584), which houses the Historical Library of the City of Paris, and the H\u00f4tel de Mayenne (rue St-Antoine in the Marais). The H\u00f4tel de Mayenne, with rhythmically varied dormer windows set in a high slate roof, has the pediments of its piano nobile windows superposed on the frieze above.",
+            "Abdul Wali Khan Sports Complex\nAbdul Wali Khan Sports Complex also known as Charsadda Sports Complex is located in Charsadda, Khyber Pakhtunkhwa, in Pakistan. It is the 2nd largest sports complex in Khyber Pakhtunkhwa after Qayyum Sports Complex Peshawar. The sport complex has started functioning in 2016 and has been completed at the cost of Rs.490 million."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 4,
+        "question": "Which athlete was an American tennis player: Henri Kontinen or Melanie Oudin?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Fetch background information on Henri Kontinen, focusing on nationality and sports discipline.",
+                "output": "Henri Kontinen is a Finnish tennis player, known for his success in doubles matches. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. Henri's younger brother, Micke Kontinen, is also a Finnish tennis player. The Kontinen brothers have made a significant impact in the world of tennis, representing their home country of Finland in international competitions.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Fetch background information on Melanie Oudin, focusing on nationality and sports discipline.",
+                "output": "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her achievements in the sport of tennis and holds American nationality.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine the nationality of Henri Kontinen and identify if he plays tennis.",
+                "output": "Henri Kontinen is a Finnish tennis player.",
+                "upstream": [
+                    [
+                        "1",
+                        "Henri Kontinen is a Finnish tennis player, known for his success in doubles matches. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. Henri's younger brother, Micke Kontinen, is also a Finnish tennis player. The Kontinen brothers have made a significant impact in the world of tennis, representing their home country of Finland in international competitions."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine the nationality of Melanie Oudin and identify if she plays tennis.",
+                "output": "Melanie Oudin is an American tennis player.",
+                "upstream": [
+                    [
+                        "2",
+                        "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her achievements in the sport of tennis and holds American nationality."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the nationalities identified. Conclude which athlete is an American tennis player.",
+                "output": "Based on the nationalities identified, Melanie Oudin is the American tennis player.",
+                "upstream": [
+                    [
+                        "3",
+                        "Henri Kontinen is a Finnish tennis player."
+                    ],
+                    [
+                        "4",
+                        "Melanie Oudin is an American tennis player."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Henri Kontinen\nHenri Kontinen (] ; born 19 June 1990) is a Finnish tennis player.",
+            "Melanie Oudin\nMelanie Oudin (born September 23, 1991) is a former American tennis player and former world junior No. 2. She was a member of the American Fed Cup team from 2009 to 2011 and winner of the 2011 US Open mixed doubles title, with fellow American player Jack Sock.",
+            "Micke Kontinen\nMicke Kontinen (born 18 December 1992) is a Finnish tennis player. He is the younger brother of Henri Kontinen who is also a tennis player.",
+            "2012 Aegon Classic\nThe 2012 Aegon Classic was a women's tennis tournament played on outdoor grass courts. It was the 31st edition of the event. It took place at the Edgbaston Priory Club in Birmingham, England, United Kingdom, scheduled between 11 and 17 June 2012. Melanie Oudin won the singles title.",
+            "Christopher Rungkat\nChristopher Benjamin Rungkat (born 14 January 1990) is an Indonesian tennis player. He is the grandson of \"Famous\" Benny Rungkat, former chairman of the Indonesian Air Carriers Association. Christopher's father, Michael Alexander Fritz Rungkat, is of Dutch and Indonesian descent and his mother, Elfia Mirlianti, is full Indonesian descent. In 2008, he won the final stage of French Open 2008 Boys' Doubles Juniors category with Finnish tennis player Henri Kontinen. He is the youngest ever Indonesian to be the All Indonesian Champion, and by the end of his junior career,he was awarded for Indonesian best promising athlete 2008.",
+            "Treat Huey\nTreat Conrad Huey ( ) (born 28 August 1985) is a Filipino-American tennis player who represents the Philippines in international competitions. He turned professional in 2008 and he started representing the Philippines in the Davis Cup and the Southeast Asian Games in 2009. Huey specializes in doubles and has reached eighteen finals on the ATP World Tour. He won titles at the 2012 Citi Open, 2013 Swiss Indoors, and 2014 Aegon International alongside Dominic Inglot, 2015 Estoril Open with Scott Lipsky, and 2015 St. Petersburg Open and 2015 Malaysian Open, Kuala Lumpur with Henri Kontinen.",
+            "Tim Cranston\nTim Cranston (born 13 December 1962 in Halifax, Nova Scotia) is a retired professional ice hockey player who holds dual Canadian and British nationality. He played in Europe between 1985 and 1999 except for one game in the 1986\u201387 season played in the American Hockey League. He was also a member of the Great Britain national ice hockey team between 1993 and 1997. Whilst living in the United Kingdom, Cranston was the founding chairman of the British Ice Hockey Player's Association (GB). Currently living in Halifax, Nova Scotia, Cranston is working as a sports agent and lawyer for the sports and entertainment industries. He was inducted into the British Ice Hockey Hall of Fame in 2010.",
+            "Rumbold of Mechelen\nSaint Rumbold (or \"Rumold\", \"Romuold\", Latin: \"Rumoldus\" , Dutch: \"Rombout\" , French: \"Rombaut\" ) was an Irish or Scottish Christian missionary, although his true nationality is not known for certain.",
+            "Sudha Kheterpal\nSudha Kheterpal is a British-Indian musician best known as the percussionist in Faithless. In 2008 she toured with The Return of the Spice Girls. She has also played with K-Klass, Kylie Minogue, Melanie Williams, Jo Roberts, Corduroy, Mark Morrison, Rae and Christian, Ian Brown, Talvin Singh, and Dido.",
+            "Smiley (2012 film)\nSmiley is a 2012 American psychological slasher horror film directed by Michael Gallagher and made by Level 10 Films. The film stars were Caitlin Gerard, Melanie Papalia, Keith David, Shane Dawson, Andrew James Allen, Toby Turner, and Liza Weil. The film was released on October 12, 2012.",
+            "Tamzin Outhwaite\nTamzin Maria Outhwaite ( ; born 5 November 1970) is a British actress from London. Since coming to national notice playing Melanie Owen in the BBC One soap opera \"EastEnders\" from 1998 until 2002, she has since starred in both theatre and television productions, including army series \"Red Cap\" and crime drama \"New Tricks\".",
+            "Jean Baptiste Androuet du Cerceau\nJean Baptiste Androuet du Cerceau (1544/47\u20131590) was a French architect who designed the Pont Neuf (1579), spanning the Seine, Paris, and became supervisor of the royal works under Henri III and Henri IV, including the Louvre. Several \"h\u00f4tels particuliers\" are ascribed to him. The H\u00f4tel d'Angoul\u00eame, the H\u00f4tel de Lamoignon (1584), which houses the Historical Library of the City of Paris, and the H\u00f4tel de Mayenne (rue St-Antoine in the Marais). The H\u00f4tel de Mayenne, with rhythmically varied dormer windows set in a high slate roof, has the pediments of its piano nobile windows superposed on the frieze above.",
+            "Abdul Wali Khan Sports Complex\nAbdul Wali Khan Sports Complex also known as Charsadda Sports Complex is located in Charsadda, Khyber Pakhtunkhwa, in Pakistan. It is the 2nd largest sports complex in Khyber Pakhtunkhwa after Qayyum Sports Complex Peshawar. The sport complex has started functioning in 2016 and has been completed at the cost of Rs.490 million."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 5,
+        "question": "Which athlete was an American tennis player: Henri Kontinen or Melanie Oudin?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Fetch background information on Henri Kontinen, focusing on nationality and sports discipline.",
+                "output": "Henri Kontinen is a Finnish tennis player, known for his success in doubles matches. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. Henri's younger brother, Micke Kontinen, is also a Finnish tennis player. The Kontinen brothers have made a significant impact in the world of tennis, representing their home country of Finland in international competitions.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Fetch background information on Melanie Oudin, focusing on nationality and sports discipline.",
+                "output": "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her nationality as an American and her sports discipline as a tennis player.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine the nationality of Henri Kontinen and identify if he plays tennis.",
+                "output": "Henri Kontinen is a Finnish tennis player.",
+                "upstream": [
+                    [
+                        "1",
+                        "Henri Kontinen is a Finnish tennis player, known for his success in doubles matches. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. Henri's younger brother, Micke Kontinen, is also a Finnish tennis player. The Kontinen brothers have made a significant impact in the world of tennis, representing their home country of Finland in international competitions."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine the nationality of Melanie Oudin and identify if she plays tennis.",
+                "output": "Melanie Oudin is an American tennis player.",
+                "upstream": [
+                    [
+                        "2",
+                        "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her nationality as an American and her sports discipline as a tennis player."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the nationalities identified. Conclude which athlete is an American tennis player.",
+                "output": "Based on the nationalities identified, Melanie Oudin is the American tennis player.",
+                "upstream": [
+                    [
+                        "3",
+                        "Henri Kontinen is a Finnish tennis player."
+                    ],
+                    [
+                        "4",
+                        "Melanie Oudin is an American tennis player."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Henri Kontinen\nHenri Kontinen (] ; born 19 June 1990) is a Finnish tennis player.",
+            "Melanie Oudin\nMelanie Oudin (born September 23, 1991) is a former American tennis player and former world junior No. 2. She was a member of the American Fed Cup team from 2009 to 2011 and winner of the 2011 US Open mixed doubles title, with fellow American player Jack Sock.",
+            "Micke Kontinen\nMicke Kontinen (born 18 December 1992) is a Finnish tennis player. He is the younger brother of Henri Kontinen who is also a tennis player.",
+            "2012 Aegon Classic\nThe 2012 Aegon Classic was a women's tennis tournament played on outdoor grass courts. It was the 31st edition of the event. It took place at the Edgbaston Priory Club in Birmingham, England, United Kingdom, scheduled between 11 and 17 June 2012. Melanie Oudin won the singles title.",
+            "Christopher Rungkat\nChristopher Benjamin Rungkat (born 14 January 1990) is an Indonesian tennis player. He is the grandson of \"Famous\" Benny Rungkat, former chairman of the Indonesian Air Carriers Association. Christopher's father, Michael Alexander Fritz Rungkat, is of Dutch and Indonesian descent and his mother, Elfia Mirlianti, is full Indonesian descent. In 2008, he won the final stage of French Open 2008 Boys' Doubles Juniors category with Finnish tennis player Henri Kontinen. He is the youngest ever Indonesian to be the All Indonesian Champion, and by the end of his junior career,he was awarded for Indonesian best promising athlete 2008.",
+            "Treat Huey\nTreat Conrad Huey ( ) (born 28 August 1985) is a Filipino-American tennis player who represents the Philippines in international competitions. He turned professional in 2008 and he started representing the Philippines in the Davis Cup and the Southeast Asian Games in 2009. Huey specializes in doubles and has reached eighteen finals on the ATP World Tour. He won titles at the 2012 Citi Open, 2013 Swiss Indoors, and 2014 Aegon International alongside Dominic Inglot, 2015 Estoril Open with Scott Lipsky, and 2015 St. Petersburg Open and 2015 Malaysian Open, Kuala Lumpur with Henri Kontinen.",
+            "Tim Cranston\nTim Cranston (born 13 December 1962 in Halifax, Nova Scotia) is a retired professional ice hockey player who holds dual Canadian and British nationality. He played in Europe between 1985 and 1999 except for one game in the 1986\u201387 season played in the American Hockey League. He was also a member of the Great Britain national ice hockey team between 1993 and 1997. Whilst living in the United Kingdom, Cranston was the founding chairman of the British Ice Hockey Player's Association (GB). Currently living in Halifax, Nova Scotia, Cranston is working as a sports agent and lawyer for the sports and entertainment industries. He was inducted into the British Ice Hockey Hall of Fame in 2010.",
+            "Rumbold of Mechelen\nSaint Rumbold (or \"Rumold\", \"Romuold\", Latin: \"Rumoldus\" , Dutch: \"Rombout\" , French: \"Rombaut\" ) was an Irish or Scottish Christian missionary, although his true nationality is not known for certain.",
+            "Sudha Kheterpal\nSudha Kheterpal is a British-Indian musician best known as the percussionist in Faithless. In 2008 she toured with The Return of the Spice Girls. She has also played with K-Klass, Kylie Minogue, Melanie Williams, Jo Roberts, Corduroy, Mark Morrison, Rae and Christian, Ian Brown, Talvin Singh, and Dido.",
+            "Smiley (2012 film)\nSmiley is a 2012 American psychological slasher horror film directed by Michael Gallagher and made by Level 10 Films. The film stars were Caitlin Gerard, Melanie Papalia, Keith David, Shane Dawson, Andrew James Allen, Toby Turner, and Liza Weil. The film was released on October 12, 2012.",
+            "Tamzin Outhwaite\nTamzin Maria Outhwaite ( ; born 5 November 1970) is a British actress from London. Since coming to national notice playing Melanie Owen in the BBC One soap opera \"EastEnders\" from 1998 until 2002, she has since starred in both theatre and television productions, including army series \"Red Cap\" and crime drama \"New Tricks\".",
+            "Jean Baptiste Androuet du Cerceau\nJean Baptiste Androuet du Cerceau (1544/47\u20131590) was a French architect who designed the Pont Neuf (1579), spanning the Seine, Paris, and became supervisor of the royal works under Henri III and Henri IV, including the Louvre. Several \"h\u00f4tels particuliers\" are ascribed to him. The H\u00f4tel d'Angoul\u00eame, the H\u00f4tel de Lamoignon (1584), which houses the Historical Library of the City of Paris, and the H\u00f4tel de Mayenne (rue St-Antoine in the Marais). The H\u00f4tel de Mayenne, with rhythmically varied dormer windows set in a high slate roof, has the pediments of its piano nobile windows superposed on the frieze above.",
+            "Abdul Wali Khan Sports Complex\nAbdul Wali Khan Sports Complex also known as Charsadda Sports Complex is located in Charsadda, Khyber Pakhtunkhwa, in Pakistan. It is the 2nd largest sports complex in Khyber Pakhtunkhwa after Qayyum Sports Complex Peshawar. The sport complex has started functioning in 2016 and has been completed at the cost of Rs.490 million."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 6,
+        "question": "Which athlete was an American tennis player: Henri Kontinen or Melanie Oudin?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Fetch background information on Henri Kontinen, focusing on nationality and sports discipline.",
+                "output": "Henri Kontinen is a Finnish tennis player, known for his success in doubles matches. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. Henri's younger brother, Micke Kontinen, is also a Finnish tennis player. The Kontinen brothers have made a significant impact in the world of tennis, representing their home country of Finland in international competitions.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Fetch background information on Melanie Oudin, focusing on nationality and sports discipline.",
+                "output": "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her nationality as an American and her sports discipline as a tennis player.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine the nationality of Henri Kontinen and identify if he plays tennis.",
+                "output": "Henri Kontinen is a Finnish tennis player.",
+                "upstream": [
+                    [
+                        "1",
+                        "Henri Kontinen is a Finnish tennis player, known for his success in doubles matches. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. Henri's younger brother, Micke Kontinen, is also a Finnish tennis player. The Kontinen brothers have made a significant impact in the world of tennis, representing their home country of Finland in international competitions."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine the nationality of Melanie Oudin and identify if she plays tennis.",
+                "output": "Melanie Oudin is an American tennis player.",
+                "upstream": [
+                    [
+                        "2",
+                        "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her nationality as an American and her sports discipline as a tennis player."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the nationalities identified. Conclude which athlete is an American tennis player.",
+                "output": "Based on the nationalities identified, Melanie Oudin is the American tennis player.",
+                "upstream": [
+                    [
+                        "3",
+                        "Henri Kontinen is a Finnish tennis player."
+                    ],
+                    [
+                        "4",
+                        "Melanie Oudin is an American tennis player."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Henri Kontinen\nHenri Kontinen (] ; born 19 June 1990) is a Finnish tennis player.",
+            "Melanie Oudin\nMelanie Oudin (born September 23, 1991) is a former American tennis player and former world junior No. 2. She was a member of the American Fed Cup team from 2009 to 2011 and winner of the 2011 US Open mixed doubles title, with fellow American player Jack Sock.",
+            "Micke Kontinen\nMicke Kontinen (born 18 December 1992) is a Finnish tennis player. He is the younger brother of Henri Kontinen who is also a tennis player.",
+            "2012 Aegon Classic\nThe 2012 Aegon Classic was a women's tennis tournament played on outdoor grass courts. It was the 31st edition of the event. It took place at the Edgbaston Priory Club in Birmingham, England, United Kingdom, scheduled between 11 and 17 June 2012. Melanie Oudin won the singles title.",
+            "Christopher Rungkat\nChristopher Benjamin Rungkat (born 14 January 1990) is an Indonesian tennis player. He is the grandson of \"Famous\" Benny Rungkat, former chairman of the Indonesian Air Carriers Association. Christopher's father, Michael Alexander Fritz Rungkat, is of Dutch and Indonesian descent and his mother, Elfia Mirlianti, is full Indonesian descent. In 2008, he won the final stage of French Open 2008 Boys' Doubles Juniors category with Finnish tennis player Henri Kontinen. He is the youngest ever Indonesian to be the All Indonesian Champion, and by the end of his junior career,he was awarded for Indonesian best promising athlete 2008.",
+            "Treat Huey\nTreat Conrad Huey ( ) (born 28 August 1985) is a Filipino-American tennis player who represents the Philippines in international competitions. He turned professional in 2008 and he started representing the Philippines in the Davis Cup and the Southeast Asian Games in 2009. Huey specializes in doubles and has reached eighteen finals on the ATP World Tour. He won titles at the 2012 Citi Open, 2013 Swiss Indoors, and 2014 Aegon International alongside Dominic Inglot, 2015 Estoril Open with Scott Lipsky, and 2015 St. Petersburg Open and 2015 Malaysian Open, Kuala Lumpur with Henri Kontinen.",
+            "Tim Cranston\nTim Cranston (born 13 December 1962 in Halifax, Nova Scotia) is a retired professional ice hockey player who holds dual Canadian and British nationality. He played in Europe between 1985 and 1999 except for one game in the 1986\u201387 season played in the American Hockey League. He was also a member of the Great Britain national ice hockey team between 1993 and 1997. Whilst living in the United Kingdom, Cranston was the founding chairman of the British Ice Hockey Player's Association (GB). Currently living in Halifax, Nova Scotia, Cranston is working as a sports agent and lawyer for the sports and entertainment industries. He was inducted into the British Ice Hockey Hall of Fame in 2010.",
+            "Rumbold of Mechelen\nSaint Rumbold (or \"Rumold\", \"Romuold\", Latin: \"Rumoldus\" , Dutch: \"Rombout\" , French: \"Rombaut\" ) was an Irish or Scottish Christian missionary, although his true nationality is not known for certain.",
+            "Sudha Kheterpal\nSudha Kheterpal is a British-Indian musician best known as the percussionist in Faithless. In 2008 she toured with The Return of the Spice Girls. She has also played with K-Klass, Kylie Minogue, Melanie Williams, Jo Roberts, Corduroy, Mark Morrison, Rae and Christian, Ian Brown, Talvin Singh, and Dido.",
+            "Smiley (2012 film)\nSmiley is a 2012 American psychological slasher horror film directed by Michael Gallagher and made by Level 10 Films. The film stars were Caitlin Gerard, Melanie Papalia, Keith David, Shane Dawson, Andrew James Allen, Toby Turner, and Liza Weil. The film was released on October 12, 2012.",
+            "Tamzin Outhwaite\nTamzin Maria Outhwaite ( ; born 5 November 1970) is a British actress from London. Since coming to national notice playing Melanie Owen in the BBC One soap opera \"EastEnders\" from 1998 until 2002, she has since starred in both theatre and television productions, including army series \"Red Cap\" and crime drama \"New Tricks\".",
+            "Jean Baptiste Androuet du Cerceau\nJean Baptiste Androuet du Cerceau (1544/47\u20131590) was a French architect who designed the Pont Neuf (1579), spanning the Seine, Paris, and became supervisor of the royal works under Henri III and Henri IV, including the Louvre. Several \"h\u00f4tels particuliers\" are ascribed to him. The H\u00f4tel d'Angoul\u00eame, the H\u00f4tel de Lamoignon (1584), which houses the Historical Library of the City of Paris, and the H\u00f4tel de Mayenne (rue St-Antoine in the Marais). The H\u00f4tel de Mayenne, with rhythmically varied dormer windows set in a high slate roof, has the pediments of its piano nobile windows superposed on the frieze above.",
+            "Abdul Wali Khan Sports Complex\nAbdul Wali Khan Sports Complex also known as Charsadda Sports Complex is located in Charsadda, Khyber Pakhtunkhwa, in Pakistan. It is the 2nd largest sports complex in Khyber Pakhtunkhwa after Qayyum Sports Complex Peshawar. The sport complex has started functioning in 2016 and has been completed at the cost of Rs.490 million."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 7,
+        "question": "Which athlete was an American tennis player: Henri Kontinen or Melanie Oudin?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Fetch background information on Henri Kontinen, focusing on nationality and sports discipline.",
+                "output": "Henri Kontinen is a Finnish tennis player, known for his success in doubles matches. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. His younger brother, Micke Kontinen, is also a Finnish tennis player. Henri Kontinen's nationality is Finnish, and he has represented Finland in international tennis competitions.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Fetch background information on Melanie Oudin, focusing on nationality and sports discipline.",
+                "output": "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her achievements in the sports discipline of tennis and holds American nationality.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine the nationality of Henri Kontinen and identify if he plays tennis.",
+                "output": "Henri Kontinen is a Finnish tennis player.",
+                "upstream": [
+                    [
+                        "1",
+                        "Henri Kontinen is a Finnish tennis player, known for his success in doubles matches. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. His younger brother, Micke Kontinen, is also a Finnish tennis player. Henri Kontinen's nationality is Finnish, and he has represented Finland in international tennis competitions."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine the nationality of Melanie Oudin and identify if she plays tennis.",
+                "output": "Melanie Oudin is an American tennis player.",
+                "upstream": [
+                    [
+                        "2",
+                        "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her achievements in the sports discipline of tennis and holds American nationality."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the nationalities identified. Conclude which athlete is an American tennis player.",
+                "output": "Based on the nationalities identified, Melanie Oudin is the American tennis player.",
+                "upstream": [
+                    [
+                        "3",
+                        "Henri Kontinen is a Finnish tennis player."
+                    ],
+                    [
+                        "4",
+                        "Melanie Oudin is an American tennis player."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Henri Kontinen\nHenri Kontinen (] ; born 19 June 1990) is a Finnish tennis player.",
+            "Melanie Oudin\nMelanie Oudin (born September 23, 1991) is a former American tennis player and former world junior No. 2. She was a member of the American Fed Cup team from 2009 to 2011 and winner of the 2011 US Open mixed doubles title, with fellow American player Jack Sock.",
+            "Micke Kontinen\nMicke Kontinen (born 18 December 1992) is a Finnish tennis player. He is the younger brother of Henri Kontinen who is also a tennis player.",
+            "2012 Aegon Classic\nThe 2012 Aegon Classic was a women's tennis tournament played on outdoor grass courts. It was the 31st edition of the event. It took place at the Edgbaston Priory Club in Birmingham, England, United Kingdom, scheduled between 11 and 17 June 2012. Melanie Oudin won the singles title.",
+            "Christopher Rungkat\nChristopher Benjamin Rungkat (born 14 January 1990) is an Indonesian tennis player. He is the grandson of \"Famous\" Benny Rungkat, former chairman of the Indonesian Air Carriers Association. Christopher's father, Michael Alexander Fritz Rungkat, is of Dutch and Indonesian descent and his mother, Elfia Mirlianti, is full Indonesian descent. In 2008, he won the final stage of French Open 2008 Boys' Doubles Juniors category with Finnish tennis player Henri Kontinen. He is the youngest ever Indonesian to be the All Indonesian Champion, and by the end of his junior career,he was awarded for Indonesian best promising athlete 2008.",
+            "Treat Huey\nTreat Conrad Huey ( ) (born 28 August 1985) is a Filipino-American tennis player who represents the Philippines in international competitions. He turned professional in 2008 and he started representing the Philippines in the Davis Cup and the Southeast Asian Games in 2009. Huey specializes in doubles and has reached eighteen finals on the ATP World Tour. He won titles at the 2012 Citi Open, 2013 Swiss Indoors, and 2014 Aegon International alongside Dominic Inglot, 2015 Estoril Open with Scott Lipsky, and 2015 St. Petersburg Open and 2015 Malaysian Open, Kuala Lumpur with Henri Kontinen.",
+            "Tim Cranston\nTim Cranston (born 13 December 1962 in Halifax, Nova Scotia) is a retired professional ice hockey player who holds dual Canadian and British nationality. He played in Europe between 1985 and 1999 except for one game in the 1986\u201387 season played in the American Hockey League. He was also a member of the Great Britain national ice hockey team between 1993 and 1997. Whilst living in the United Kingdom, Cranston was the founding chairman of the British Ice Hockey Player's Association (GB). Currently living in Halifax, Nova Scotia, Cranston is working as a sports agent and lawyer for the sports and entertainment industries. He was inducted into the British Ice Hockey Hall of Fame in 2010.",
+            "Rumbold of Mechelen\nSaint Rumbold (or \"Rumold\", \"Romuold\", Latin: \"Rumoldus\" , Dutch: \"Rombout\" , French: \"Rombaut\" ) was an Irish or Scottish Christian missionary, although his true nationality is not known for certain.",
+            "Sudha Kheterpal\nSudha Kheterpal is a British-Indian musician best known as the percussionist in Faithless. In 2008 she toured with The Return of the Spice Girls. She has also played with K-Klass, Kylie Minogue, Melanie Williams, Jo Roberts, Corduroy, Mark Morrison, Rae and Christian, Ian Brown, Talvin Singh, and Dido.",
+            "Smiley (2012 film)\nSmiley is a 2012 American psychological slasher horror film directed by Michael Gallagher and made by Level 10 Films. The film stars were Caitlin Gerard, Melanie Papalia, Keith David, Shane Dawson, Andrew James Allen, Toby Turner, and Liza Weil. The film was released on October 12, 2012.",
+            "Tamzin Outhwaite\nTamzin Maria Outhwaite ( ; born 5 November 1970) is a British actress from London. Since coming to national notice playing Melanie Owen in the BBC One soap opera \"EastEnders\" from 1998 until 2002, she has since starred in both theatre and television productions, including army series \"Red Cap\" and crime drama \"New Tricks\".",
+            "Jean Baptiste Androuet du Cerceau\nJean Baptiste Androuet du Cerceau (1544/47\u20131590) was a French architect who designed the Pont Neuf (1579), spanning the Seine, Paris, and became supervisor of the royal works under Henri III and Henri IV, including the Louvre. Several \"h\u00f4tels particuliers\" are ascribed to him. The H\u00f4tel d'Angoul\u00eame, the H\u00f4tel de Lamoignon (1584), which houses the Historical Library of the City of Paris, and the H\u00f4tel de Mayenne (rue St-Antoine in the Marais). The H\u00f4tel de Mayenne, with rhythmically varied dormer windows set in a high slate roof, has the pediments of its piano nobile windows superposed on the frieze above.",
+            "Abdul Wali Khan Sports Complex\nAbdul Wali Khan Sports Complex also known as Charsadda Sports Complex is located in Charsadda, Khyber Pakhtunkhwa, in Pakistan. It is the 2nd largest sports complex in Khyber Pakhtunkhwa after Qayyum Sports Complex Peshawar. The sport complex has started functioning in 2016 and has been completed at the cost of Rs.490 million."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 8,
+        "question": "Which athlete was an American tennis player: Henri Kontinen or Melanie Oudin?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Fetch background information on Henri Kontinen, focusing on nationality and sports discipline.",
+                "output": "Henri Kontinen is a Finnish tennis player, known for his success in doubles matches. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. His younger brother, Micke Kontinen, is also a Finnish tennis player. Henri Kontinen's nationality is Finnish, and he has represented Finland in international tennis competitions.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Fetch background information on Melanie Oudin, focusing on nationality and sports discipline.",
+                "output": "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her achievements in the sports discipline of tennis and holds American nationality.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine the nationality of Henri Kontinen and identify if he plays tennis.",
+                "output": "Henri Kontinen is a Finnish tennis player.",
+                "upstream": [
+                    [
+                        "1",
+                        "Henri Kontinen is a Finnish tennis player, known for his success in doubles matches. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. His younger brother, Micke Kontinen, is also a Finnish tennis player. Henri Kontinen's nationality is Finnish, and he has represented Finland in international tennis competitions."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine the nationality of Melanie Oudin and identify if she plays tennis.",
+                "output": "Melanie Oudin is an American tennis player.",
+                "upstream": [
+                    [
+                        "2",
+                        "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her achievements in the sports discipline of tennis and holds American nationality."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the nationalities identified. Conclude which athlete is an American tennis player.",
+                "output": "Based on the nationalities identified, Melanie Oudin is the American tennis player.",
+                "upstream": [
+                    [
+                        "3",
+                        "Henri Kontinen is a Finnish tennis player."
+                    ],
+                    [
+                        "4",
+                        "Melanie Oudin is an American tennis player."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Henri Kontinen\nHenri Kontinen (] ; born 19 June 1990) is a Finnish tennis player.",
+            "Melanie Oudin\nMelanie Oudin (born September 23, 1991) is a former American tennis player and former world junior No. 2. She was a member of the American Fed Cup team from 2009 to 2011 and winner of the 2011 US Open mixed doubles title, with fellow American player Jack Sock.",
+            "Micke Kontinen\nMicke Kontinen (born 18 December 1992) is a Finnish tennis player. He is the younger brother of Henri Kontinen who is also a tennis player.",
+            "2012 Aegon Classic\nThe 2012 Aegon Classic was a women's tennis tournament played on outdoor grass courts. It was the 31st edition of the event. It took place at the Edgbaston Priory Club in Birmingham, England, United Kingdom, scheduled between 11 and 17 June 2012. Melanie Oudin won the singles title.",
+            "Christopher Rungkat\nChristopher Benjamin Rungkat (born 14 January 1990) is an Indonesian tennis player. He is the grandson of \"Famous\" Benny Rungkat, former chairman of the Indonesian Air Carriers Association. Christopher's father, Michael Alexander Fritz Rungkat, is of Dutch and Indonesian descent and his mother, Elfia Mirlianti, is full Indonesian descent. In 2008, he won the final stage of French Open 2008 Boys' Doubles Juniors category with Finnish tennis player Henri Kontinen. He is the youngest ever Indonesian to be the All Indonesian Champion, and by the end of his junior career,he was awarded for Indonesian best promising athlete 2008.",
+            "Treat Huey\nTreat Conrad Huey ( ) (born 28 August 1985) is a Filipino-American tennis player who represents the Philippines in international competitions. He turned professional in 2008 and he started representing the Philippines in the Davis Cup and the Southeast Asian Games in 2009. Huey specializes in doubles and has reached eighteen finals on the ATP World Tour. He won titles at the 2012 Citi Open, 2013 Swiss Indoors, and 2014 Aegon International alongside Dominic Inglot, 2015 Estoril Open with Scott Lipsky, and 2015 St. Petersburg Open and 2015 Malaysian Open, Kuala Lumpur with Henri Kontinen.",
+            "Tim Cranston\nTim Cranston (born 13 December 1962 in Halifax, Nova Scotia) is a retired professional ice hockey player who holds dual Canadian and British nationality. He played in Europe between 1985 and 1999 except for one game in the 1986\u201387 season played in the American Hockey League. He was also a member of the Great Britain national ice hockey team between 1993 and 1997. Whilst living in the United Kingdom, Cranston was the founding chairman of the British Ice Hockey Player's Association (GB). Currently living in Halifax, Nova Scotia, Cranston is working as a sports agent and lawyer for the sports and entertainment industries. He was inducted into the British Ice Hockey Hall of Fame in 2010.",
+            "Rumbold of Mechelen\nSaint Rumbold (or \"Rumold\", \"Romuold\", Latin: \"Rumoldus\" , Dutch: \"Rombout\" , French: \"Rombaut\" ) was an Irish or Scottish Christian missionary, although his true nationality is not known for certain.",
+            "Sudha Kheterpal\nSudha Kheterpal is a British-Indian musician best known as the percussionist in Faithless. In 2008 she toured with The Return of the Spice Girls. She has also played with K-Klass, Kylie Minogue, Melanie Williams, Jo Roberts, Corduroy, Mark Morrison, Rae and Christian, Ian Brown, Talvin Singh, and Dido.",
+            "Smiley (2012 film)\nSmiley is a 2012 American psychological slasher horror film directed by Michael Gallagher and made by Level 10 Films. The film stars were Caitlin Gerard, Melanie Papalia, Keith David, Shane Dawson, Andrew James Allen, Toby Turner, and Liza Weil. The film was released on October 12, 2012.",
+            "Tamzin Outhwaite\nTamzin Maria Outhwaite ( ; born 5 November 1970) is a British actress from London. Since coming to national notice playing Melanie Owen in the BBC One soap opera \"EastEnders\" from 1998 until 2002, she has since starred in both theatre and television productions, including army series \"Red Cap\" and crime drama \"New Tricks\".",
+            "Jean Baptiste Androuet du Cerceau\nJean Baptiste Androuet du Cerceau (1544/47\u20131590) was a French architect who designed the Pont Neuf (1579), spanning the Seine, Paris, and became supervisor of the royal works under Henri III and Henri IV, including the Louvre. Several \"h\u00f4tels particuliers\" are ascribed to him. The H\u00f4tel d'Angoul\u00eame, the H\u00f4tel de Lamoignon (1584), which houses the Historical Library of the City of Paris, and the H\u00f4tel de Mayenne (rue St-Antoine in the Marais). The H\u00f4tel de Mayenne, with rhythmically varied dormer windows set in a high slate roof, has the pediments of its piano nobile windows superposed on the frieze above.",
+            "Abdul Wali Khan Sports Complex\nAbdul Wali Khan Sports Complex also known as Charsadda Sports Complex is located in Charsadda, Khyber Pakhtunkhwa, in Pakistan. It is the 2nd largest sports complex in Khyber Pakhtunkhwa after Qayyum Sports Complex Peshawar. The sport complex has started functioning in 2016 and has been completed at the cost of Rs.490 million."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 9,
+        "question": "Which athlete was an American tennis player: Henri Kontinen or Melanie Oudin?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Fetch background information on Henri Kontinen, focusing on nationality and sports discipline.",
+                "output": "Henri Kontinen is a Finnish tennis player, known for his success in doubles competitions. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. Henri's younger brother, Micke Kontinen, is also a Finnish tennis player. The Kontinen brothers have made a significant impact in the world of tennis, representing their home country of Finland in international competitions.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Fetch background information on Melanie Oudin, focusing on nationality and sports discipline.",
+                "output": "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her achievements in the sports discipline of tennis and holds American nationality.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine the nationality of Henri Kontinen and identify if he plays tennis.",
+                "output": "Henri Kontinen is a Finnish tennis player.",
+                "upstream": [
+                    [
+                        "1",
+                        "Henri Kontinen is a Finnish tennis player, known for his success in doubles competitions. He has partnered with players such as Christopher Rungkat and Treat Huey to win titles in various ATP World Tour events. Henri's younger brother, Micke Kontinen, is also a Finnish tennis player. The Kontinen brothers have made a significant impact in the world of tennis, representing their home country of Finland in international competitions."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine the nationality of Melanie Oudin and identify if she plays tennis.",
+                "output": "Melanie Oudin is an American tennis player.",
+                "upstream": [
+                    [
+                        "2",
+                        "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her achievements in the sports discipline of tennis and holds American nationality."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the nationalities identified. Conclude which athlete is an American tennis player.",
+                "output": "Based on the nationalities identified, Melanie Oudin is the American tennis player.",
+                "upstream": [
+                    [
+                        "3",
+                        "Henri Kontinen is a Finnish tennis player."
+                    ],
+                    [
+                        "4",
+                        "Melanie Oudin is an American tennis player."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Henri Kontinen\nHenri Kontinen (] ; born 19 June 1990) is a Finnish tennis player.",
+            "Melanie Oudin\nMelanie Oudin (born September 23, 1991) is a former American tennis player and former world junior No. 2. She was a member of the American Fed Cup team from 2009 to 2011 and winner of the 2011 US Open mixed doubles title, with fellow American player Jack Sock.",
+            "Micke Kontinen\nMicke Kontinen (born 18 December 1992) is a Finnish tennis player. He is the younger brother of Henri Kontinen who is also a tennis player.",
+            "2012 Aegon Classic\nThe 2012 Aegon Classic was a women's tennis tournament played on outdoor grass courts. It was the 31st edition of the event. It took place at the Edgbaston Priory Club in Birmingham, England, United Kingdom, scheduled between 11 and 17 June 2012. Melanie Oudin won the singles title.",
+            "Christopher Rungkat\nChristopher Benjamin Rungkat (born 14 January 1990) is an Indonesian tennis player. He is the grandson of \"Famous\" Benny Rungkat, former chairman of the Indonesian Air Carriers Association. Christopher's father, Michael Alexander Fritz Rungkat, is of Dutch and Indonesian descent and his mother, Elfia Mirlianti, is full Indonesian descent. In 2008, he won the final stage of French Open 2008 Boys' Doubles Juniors category with Finnish tennis player Henri Kontinen. He is the youngest ever Indonesian to be the All Indonesian Champion, and by the end of his junior career,he was awarded for Indonesian best promising athlete 2008.",
+            "Treat Huey\nTreat Conrad Huey ( ) (born 28 August 1985) is a Filipino-American tennis player who represents the Philippines in international competitions. He turned professional in 2008 and he started representing the Philippines in the Davis Cup and the Southeast Asian Games in 2009. Huey specializes in doubles and has reached eighteen finals on the ATP World Tour. He won titles at the 2012 Citi Open, 2013 Swiss Indoors, and 2014 Aegon International alongside Dominic Inglot, 2015 Estoril Open with Scott Lipsky, and 2015 St. Petersburg Open and 2015 Malaysian Open, Kuala Lumpur with Henri Kontinen.",
+            "Tim Cranston\nTim Cranston (born 13 December 1962 in Halifax, Nova Scotia) is a retired professional ice hockey player who holds dual Canadian and British nationality. He played in Europe between 1985 and 1999 except for one game in the 1986\u201387 season played in the American Hockey League. He was also a member of the Great Britain national ice hockey team between 1993 and 1997. Whilst living in the United Kingdom, Cranston was the founding chairman of the British Ice Hockey Player's Association (GB). Currently living in Halifax, Nova Scotia, Cranston is working as a sports agent and lawyer for the sports and entertainment industries. He was inducted into the British Ice Hockey Hall of Fame in 2010.",
+            "Rumbold of Mechelen\nSaint Rumbold (or \"Rumold\", \"Romuold\", Latin: \"Rumoldus\" , Dutch: \"Rombout\" , French: \"Rombaut\" ) was an Irish or Scottish Christian missionary, although his true nationality is not known for certain.",
+            "Sudha Kheterpal\nSudha Kheterpal is a British-Indian musician best known as the percussionist in Faithless. In 2008 she toured with The Return of the Spice Girls. She has also played with K-Klass, Kylie Minogue, Melanie Williams, Jo Roberts, Corduroy, Mark Morrison, Rae and Christian, Ian Brown, Talvin Singh, and Dido.",
+            "Smiley (2012 film)\nSmiley is a 2012 American psychological slasher horror film directed by Michael Gallagher and made by Level 10 Films. The film stars were Caitlin Gerard, Melanie Papalia, Keith David, Shane Dawson, Andrew James Allen, Toby Turner, and Liza Weil. The film was released on October 12, 2012.",
+            "Tamzin Outhwaite\nTamzin Maria Outhwaite ( ; born 5 November 1970) is a British actress from London. Since coming to national notice playing Melanie Owen in the BBC One soap opera \"EastEnders\" from 1998 until 2002, she has since starred in both theatre and television productions, including army series \"Red Cap\" and crime drama \"New Tricks\".",
+            "Jean Baptiste Androuet du Cerceau\nJean Baptiste Androuet du Cerceau (1544/47\u20131590) was a French architect who designed the Pont Neuf (1579), spanning the Seine, Paris, and became supervisor of the royal works under Henri III and Henri IV, including the Louvre. Several \"h\u00f4tels particuliers\" are ascribed to him. The H\u00f4tel d'Angoul\u00eame, the H\u00f4tel de Lamoignon (1584), which houses the Historical Library of the City of Paris, and the H\u00f4tel de Mayenne (rue St-Antoine in the Marais). The H\u00f4tel de Mayenne, with rhythmically varied dormer windows set in a high slate roof, has the pediments of its piano nobile windows superposed on the frieze above.",
+            "Abdul Wali Khan Sports Complex\nAbdul Wali Khan Sports Complex also known as Charsadda Sports Complex is located in Charsadda, Khyber Pakhtunkhwa, in Pakistan. It is the 2nd largest sports complex in Khyber Pakhtunkhwa after Qayyum Sports Complex Peshawar. The sport complex has started functioning in 2016 and has been completed at the cost of Rs.490 million."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 10,
+        "question": "Which athlete was an American tennis player: Henri Kontinen or Melanie Oudin?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Fetch background information on Henri Kontinen, focusing on nationality and sports discipline.",
+                "output": "Henri Kontinen is a Finnish tennis player, known for his expertise in doubles. He has achieved success in various tournaments, including winning titles at the 2015 St. Petersburg Open and the 2015 Malaysian Open, Kuala Lumpur alongside Treat Huey. Kontinen's nationality is Finnish, and he has represented his country in international tennis competitions. He has also partnered with other players such as Christopher Rungkat, with whom he won the final stage of the French Open 2008 Boys' Doubles Juniors category.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Fetch background information on Melanie Oudin, focusing on nationality and sports discipline.",
+                "output": "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her nationality as an American and her sports discipline as a tennis player.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine the nationality of Henri Kontinen and identify if he plays tennis.",
+                "output": "Henri Kontinen is a Finnish tennis player.",
+                "upstream": [
+                    [
+                        "1",
+                        "Henri Kontinen is a Finnish tennis player, known for his expertise in doubles. He has achieved success in various tournaments, including winning titles at the 2015 St. Petersburg Open and the 2015 Malaysian Open, Kuala Lumpur alongside Treat Huey. Kontinen's nationality is Finnish, and he has represented his country in international tennis competitions. He has also partnered with other players such as Christopher Rungkat, with whom he won the final stage of the French Open 2008 Boys' Doubles Juniors category."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine the nationality of Melanie Oudin and identify if she plays tennis.",
+                "output": "Melanie Oudin is an American tennis player.",
+                "upstream": [
+                    [
+                        "2",
+                        "Melanie Oudin is a former American tennis player who was a member of the American Fed Cup team from 2009 to 2011 and won the 2011 US Open mixed doubles title. She was also the winner of the 2012 Aegon Classic singles title. Therefore, she is known for her nationality as an American and her sports discipline as a tennis player."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Compare the nationalities identified. Conclude which athlete is an American tennis player.",
+                "output": "Based on the nationalities identified, Melanie Oudin is the American tennis player.",
+                "upstream": [
+                    [
+                        "3",
+                        "Henri Kontinen is a Finnish tennis player."
+                    ],
+                    [
+                        "4",
+                        "Melanie Oudin is an American tennis player."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Henri Kontinen\nHenri Kontinen (] ; born 19 June 1990) is a Finnish tennis player.",
+            "Melanie Oudin\nMelanie Oudin (born September 23, 1991) is a former American tennis player and former world junior No. 2. She was a member of the American Fed Cup team from 2009 to 2011 and winner of the 2011 US Open mixed doubles title, with fellow American player Jack Sock.",
+            "Micke Kontinen\nMicke Kontinen (born 18 December 1992) is a Finnish tennis player. He is the younger brother of Henri Kontinen who is also a tennis player.",
+            "2012 Aegon Classic\nThe 2012 Aegon Classic was a women's tennis tournament played on outdoor grass courts. It was the 31st edition of the event. It took place at the Edgbaston Priory Club in Birmingham, England, United Kingdom, scheduled between 11 and 17 June 2012. Melanie Oudin won the singles title.",
+            "Treat Huey\nTreat Conrad Huey ( ) (born 28 August 1985) is a Filipino-American tennis player who represents the Philippines in international competitions. He turned professional in 2008 and he started representing the Philippines in the Davis Cup and the Southeast Asian Games in 2009. Huey specializes in doubles and has reached eighteen finals on the ATP World Tour. He won titles at the 2012 Citi Open, 2013 Swiss Indoors, and 2014 Aegon International alongside Dominic Inglot, 2015 Estoril Open with Scott Lipsky, and 2015 St. Petersburg Open and 2015 Malaysian Open, Kuala Lumpur with Henri Kontinen.",
+            "Lifestyle trends and media\nLifestyle changes have been increasing slowly since the introduction of media. Media \u2013 films, television shows, magazines, and more recently, the Internet (i.e. self-written blogs and popular websites) are the main sources of lifestyle influence around the world. Lifestyle changes include how people eat, dress, and communicate. Celebrity endorsements are prevalent. Lifestyle trends have always been influenced by the wealthy and famous, whether they are spotted at leisure or in a paid advertisement. At the dawn of the media age, the newspaper, popular magazines like \"Life\", and TV allowed the general public glimpse lifestyles that before were only available to the imagination. After its creation, the Internet became arguably the most powerful medium for spotting and influencing trends, not just by celebrities but by the average person. The computer era has changed the way people obtain their news, perspectives and communication. Magazines are still popular, but advertisers now often supply a web address where consumers can visit for more information than a print ad can provide. The average American household has two personal computers, making the Internet easily accessible. The rise of user-generated content is exemplified by the fact that anyone with Internet access can create a blog or an online journal, whether personal or commercial, which might detail someone's experience in a new restaurant, a purchased item of clothing or knickknack, or a review to a film. With the advent of the Android phone and its relative ease of uploading photos to social media sites such as Facebook, one can get an idea of how quickly an idea, pub review, or coveted object can be shared. Advertisers have always been privy to the strength of word-of-mouth and have tapped into social media, including Facebook, Twitter, and Tumblr to make their wares known. Douglas Kellner writes, \"Radio, television, film, and the other products of media culture provide materials out of which we forge our very identities; our sense of selfhood; our notion of what it means to be male or female; our sense of class, of ethnicity and race, of nationality, of sexuality; and of \"us\" and \"them.\"\"",
+            "Lost Someone\n\"Lost Someone\" is a song recorded by James Brown in 1961. It was written by Brown and Famous Flames members Bobby Byrd and Baby Lloyd Stallworth. Like \"Please, Please, Please\" before it, the song's lyrics combine a lament for lost love with a plea for forgiveness. The single was a #2 R&B hit and reached #48 on the pop chart. According to Brown, \"Lost Someone\" is based on the chord changes of the Conway Twitty song \"It's Only Make Believe\".",
+            "Christopher Rungkat\nChristopher Benjamin Rungkat (born 14 January 1990) is an Indonesian tennis player. He is the grandson of \"Famous\" Benny Rungkat, former chairman of the Indonesian Air Carriers Association. Christopher's father, Michael Alexander Fritz Rungkat, is of Dutch and Indonesian descent and his mother, Elfia Mirlianti, is full Indonesian descent. In 2008, he won the final stage of French Open 2008 Boys' Doubles Juniors category with Finnish tennis player Henri Kontinen. He is the youngest ever Indonesian to be the All Indonesian Champion, and by the end of his junior career,he was awarded for Indonesian best promising athlete 2008.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "(You Can Still) Rock in America\n\"(You Can Still) Rock in America\" is a rock anthem written by Jack Blades and Brad Gillis, and the first single released from Night Ranger's 1983 album \"Midnight Madness\". Former Deep Purple and Black Sabbath singer Glenn Hughes contribute backing vocals on the song.",
+            "Tim Cranston\nTim Cranston (born 13 December 1962 in Halifax, Nova Scotia) is a retired professional ice hockey player who holds dual Canadian and British nationality. He played in Europe between 1985 and 1999 except for one game in the 1986\u201387 season played in the American Hockey League. He was also a member of the Great Britain national ice hockey team between 1993 and 1997. Whilst living in the United Kingdom, Cranston was the founding chairman of the British Ice Hockey Player's Association (GB). Currently living in Halifax, Nova Scotia, Cranston is working as a sports agent and lawyer for the sports and entertainment industries. He was inducted into the British Ice Hockey Hall of Fame in 2010.",
+            "Rumbold of Mechelen\nSaint Rumbold (or \"Rumold\", \"Romuold\", Latin: \"Rumoldus\" , Dutch: \"Rombout\" , French: \"Rombaut\" ) was an Irish or Scottish Christian missionary, although his true nationality is not known for certain.",
+            "Sudha Kheterpal\nSudha Kheterpal is a British-Indian musician best known as the percussionist in Faithless. In 2008 she toured with The Return of the Spice Girls. She has also played with K-Klass, Kylie Minogue, Melanie Williams, Jo Roberts, Corduroy, Mark Morrison, Rae and Christian, Ian Brown, Talvin Singh, and Dido.",
+            "Smiley (2012 film)\nSmiley is a 2012 American psychological slasher horror film directed by Michael Gallagher and made by Level 10 Films. The film stars were Caitlin Gerard, Melanie Papalia, Keith David, Shane Dawson, Andrew James Allen, Toby Turner, and Liza Weil. The film was released on October 12, 2012.",
+            "Tamzin Outhwaite\nTamzin Maria Outhwaite ( ; born 5 November 1970) is a British actress from London. Since coming to national notice playing Melanie Owen in the BBC One soap opera \"EastEnders\" from 1998 until 2002, she has since starred in both theatre and television productions, including army series \"Red Cap\" and crime drama \"New Tricks\".",
+            "Abdul Wali Khan Sports Complex\nAbdul Wali Khan Sports Complex also known as Charsadda Sports Complex is located in Charsadda, Khyber Pakhtunkhwa, in Pakistan. It is the 2nd largest sports complex in Khyber Pakhtunkhwa after Qayyum Sports Complex Peshawar. The sport complex has started functioning in 2016 and has been completed at the cost of Rs.490 million."
+        ],
+        "recall": 0.9444444444444444
+    }
+]

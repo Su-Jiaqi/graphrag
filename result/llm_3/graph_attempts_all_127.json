@@ -1,0 +1,687 @@
+[
+    {
+        "question": "Who was the original female founder of the brewery that was purchased in 2006 by the largest brewery in the state of Maryland?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the largest brewery in the state of Maryland as of 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find which brewery was purchased by the largest brewery in Maryland in 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the original founder of the brewery identified in node 2.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Verify if the original founder identified in node 3 is female.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Provide the name of the original female founder of the brewery.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The task begins by identifying the largest brewery in Maryland as of 2006, as this is key to understanding which brewery it might have acquired. The question suggests a sequence where first the largest brewery is established, followed by identifying its acquisition target from 2006. Once the correct brewery is found, we trace back to identify its original founder. Given the question focuses on a 'female founder,' additional validation and reasoning steps are included to ensure the original founder is indeed female, culminating in the final node presenting the answer."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Frederick Brewing Company\nFrederick Brewing Company (at one point also known as Wild Goose Brewery) is a brewery at the Wedgewood Business Park in Frederick, Maryland, United States. It was founded sometime between 1992 and 1993 by Marjorie McGinnis, Kevin Brannon, and Steve Nordahl and had its grand opening on 12 February 1997. The company was taken over by Snyder International Brewing Group in 1999 and merged with Snyder International Brewing Group in 2001. In early 2002 or 2003 the company was placed into receivership and in 2006 was purchased by Flying Dog Brewery and renamed Wild Goose Brewery. At some point the brewery stopped being known as Wild Goose Brewery and just became Flying Dog Brewery.",
+            "Flying Dog Brewery\nFlying Dog Brewery is a craft brewery located in Frederick, Maryland. Founded in 1990 by George Stranahan and Richard McIntyre, it is the largest brewery in Maryland. As of 2015, Flying Dog is the 37th largest craft brewery in the United States.",
+            "Browar \u0141om\u017ca\nThe Browar \u0141om\u017ca (] ) is Poland's fourth largest brewery. Browar \u0141om\u017ca Sp. z o.o. launched the plant in 1968. In 2007 it was purchased by Royal Unibrew. In 2011 it was sold to Polish Brewery Van Pur of Warsaw. The Browar \u0141om\u017ca brewery is located in \u0141om\u017ca, Poland.",
+            "Truman's Brewery\nTruman's Brewery was a large East London brewery and one of the largest brewers in the world at the end of the 19th century. Founded around 1666, the Black Eagle Brewery was established on a plot of land next to what is now Brick Lane in London, E1. It grew steadily until the 18th century when, under the management of Benjamin Truman, and driven by the demand for porter, it expanded rapidly and became one of the largest brewers in London. Its growth continued into and through the 19th century with the expansion of its brewery and pub estate. In 1873, it purchased Philips Brewery in Burton and became the largest brewery in the world.",
+            "Pearl Brewing Company\nThe Pearl Brewing Company (also known as the Pearl Brewery or just Pearl) was an American brewery, established in 1883 in Downtown San Antonio, Texas, USA. In 1985, Pearl's parent company purchased the Pabst Brewing Company and assumed the Pabst name. In 1999, the Pabst Brewing Company began transferring its production to Miller Brewing, on a contract basis, and closing all of its breweries. Pearl beer is still in production at Miller's Ft. Worth, Texas facility, but the Pearl Brewery in San Antonio was closed in 2001. Since then, the former brewery was purchased by Silver Ventures, Inc., which has made the property the crown jewel in revitalization efforts of southern Midtown and northern Downtown San Antonio.",
+            "Starr Hill Brewery\nStarr Hill Brewery was founded in 1999 in the town of Charlottesville, Virginia, by Mark Thompson and Kristin Dolan. The brewery takes its name from the neighborhood where it was originally located. In 2005, the brewery moved to nearby Crozet, Virginia.",
+            "Stevens Point Brewery\nStevens Point Brewery is a regional American brewery located in Stevens Point, Wisconsin. The brewery is the fifth-oldest continuously operating brewery and the third-oldest privately owned brewery in the nation.",
+            "\u017bywiec Brewery\n\u017bywiec Brewery (] ) is a brewery founded in 1856, in \u017bywiec, Poland, then part of Austria-Hungary. It was nationalised after the Second World War. Grupa \u017bywiec S.A. consists of five main breweries: \u017bywiec Brewery, Elbrewery, Le\u017cajsk, Warka Brewery and Cieszyn Brewery. Currently the Dutch Heineken Group (Heineken International Beheer B.V.), with a 61% shareholding, has control over major operations. The brewery has the capacity of producing 5 million hls a year, making it the largest brewery in Grupa \u017bywiec.",
+            "Boulevard Brewing Company\nBoulevard Brewing Company is a brewery located in Kansas City, Missouri. The Brewers Association currently ranks the American arm of Boulevard's parent company, Duvel Moortgat USA, as the 12th largest craft brewery, and the 18th largest active brewery in the United States based on 2014 sales volume. Before the sale of Anheuser-Busch to InBev in 2008, Boulevard was the largest independent American brewery in the state of Missouri. Boulevard's beers are available in select markets across the country.",
+            "Sun King Brewing\nSun King Brewing is a brewery in the Cole-Noble District of Indianapolis, Indiana, United States. It is the largest brewery in Indianapolis and the second largest brewery in the state. In 2011, Sun King won eight medals, including four gold medals, total at the Great American Beer Festival. Sun King was the first commercial brewery to open up in approximately 30 years in Indianapolis.",
+            "Marble Brewery (Albuquerque, New Mexico)\nMarble Brewery is a brewery in Albuquerque, New Mexico, founded in 2008. As of 2014, it was the second largest brewery in New Mexico behind Santa Fe Brewing Company with an annual production volume of 13,000 US barrels. In 2016, the brewery completed a major expansion which increased the production capacity to 30,000 barrels. Its beers have won several awards and it was named Small Brewery and Brewmaster of the Year at the 2014 Great American Beer Festival.",
+            "Gordon Biersch Brewing Company\nGordon Biersch Brewery is an American brewery founded by Dan Gordon and Dean Biersch. Gordon, a graduate from the five-year brewing engineering program at Weihenstephan, Germany, and Biersch opened their first brewery restaurant in Palo Alto, California in July 1988. In 1999, the restaurants were sold to what ultimately became CraftWorks Restaurants & Breweries.",
+            "Four Peaks Brewery\nFour Peaks Brewery is an Arizona brewery and restaurant. The original and main location is in an old creamery and warehouse on 8th Street in Tempe, Arizona, about 1/2 mile east of the campus of Arizona State University. Nearby Scottsdale, Arizona boasts an additional location, and, in response to high demand (nearly 40,000 barrels in 2012 alone), another Tempe brewing site opened in the summer of 2012. The Tempe site was selected following a review of 25 potential sites, including the famed Sunkist facility in Mesa, Arizona and numerous warehouses in downtown Phoenix.",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "Bavarian Brewing Company\nBavarian Brewing Company was a brewery established in Covington, Kentucky, in 1866 by Julius Deglow, but became known as the Bavarian Brewery in the 1870s. The brewery was originally located on Pike Street and the business expanded to include the 12th street property by 1877. The company also operated as the John Meyer Brewery and the Meyer-Riedlin Brewery before becoming incorporated at Bavarian Brewery Co. in 1889 by William Riedlin. The company was family owned until it was acquired by International Breweries, Inc.(IBI) in 1959. However, it operated as the Bavarian Division of IBI and continued to produce its flagship beer, Bavarian's, until the facility closed in 1966. The property was placed on the National Register of Historic Places in 1996 and rehabilitated shortly thereafter."
+        ],
+        "thoughts": [
+            "As of 2006, the largest brewery in the state of Maryland was Flying Dog Brewery, located in Frederick, Maryland. Flying Dog Brewery was founded in 1990 and has since become the largest brewery in the state.",
+            "The largest brewery in Maryland, Flying Dog Brewery, purchased the Frederick Brewing Company in 2006 and renamed it Wild Goose Brewery.",
+            "The original founder of the Frederick Brewing Company (Wild Goose Brewery) in Frederick, Maryland, was Marjorie McGinnis, Kevin Brannon, and Steve Nordahl.",
+            "Based on the information provided in the upstream task, it is confirmed that the original founder of the Frederick Brewing Company (Wild Goose Brewery) in Frederick, Maryland, was Marjorie McGinnis. Therefore, the original founder identified in node 3 is female.",
+            "The original female founder of the brewery is Marjorie McGinnis."
+        ],
+        "is_best": true
+    },
+    {
+        "question": "Who was the original female founder of the brewery that was purchased in 2006 by the largest brewery in the state of Maryland?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the largest brewery in the state of Maryland as of 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which brewery was purchased in 2006 by the largest brewery in Maryland identified in step 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the original founders of the brewery identified in step 2.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the female founder from the list of original founders found in step 3.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To answer the question, it's necessary to first identify the largest brewery in Maryland as of 2006 to determine which brewery it purchased that year. Once the purchased brewery is identified, the original founders of this purchased brewery need to be retrieved. Finally, determine the female founder from this list."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Flying Dog Brewery\nFlying Dog Brewery is a craft brewery located in Frederick, Maryland. Founded in 1990 by George Stranahan and Richard McIntyre, it is the largest brewery in Maryland. As of 2015, Flying Dog is the 37th largest craft brewery in the United States.",
+            "Frederick Brewing Company\nFrederick Brewing Company (at one point also known as Wild Goose Brewery) is a brewery at the Wedgewood Business Park in Frederick, Maryland, United States. It was founded sometime between 1992 and 1993 by Marjorie McGinnis, Kevin Brannon, and Steve Nordahl and had its grand opening on 12 February 1997. The company was taken over by Snyder International Brewing Group in 1999 and merged with Snyder International Brewing Group in 2001. In early 2002 or 2003 the company was placed into receivership and in 2006 was purchased by Flying Dog Brewery and renamed Wild Goose Brewery. At some point the brewery stopped being known as Wild Goose Brewery and just became Flying Dog Brewery.",
+            "Truman's Brewery\nTruman's Brewery was a large East London brewery and one of the largest brewers in the world at the end of the 19th century. Founded around 1666, the Black Eagle Brewery was established on a plot of land next to what is now Brick Lane in London, E1. It grew steadily until the 18th century when, under the management of Benjamin Truman, and driven by the demand for porter, it expanded rapidly and became one of the largest brewers in London. Its growth continued into and through the 19th century with the expansion of its brewery and pub estate. In 1873, it purchased Philips Brewery in Burton and became the largest brewery in the world.",
+            "Browar \u0141om\u017ca\nThe Browar \u0141om\u017ca (] ) is Poland's fourth largest brewery. Browar \u0141om\u017ca Sp. z o.o. launched the plant in 1968. In 2007 it was purchased by Royal Unibrew. In 2011 it was sold to Polish Brewery Van Pur of Warsaw. The Browar \u0141om\u017ca brewery is located in \u0141om\u017ca, Poland.",
+            "\u017bywiec Brewery\n\u017bywiec Brewery (] ) is a brewery founded in 1856, in \u017bywiec, Poland, then part of Austria-Hungary. It was nationalised after the Second World War. Grupa \u017bywiec S.A. consists of five main breweries: \u017bywiec Brewery, Elbrewery, Le\u017cajsk, Warka Brewery and Cieszyn Brewery. Currently the Dutch Heineken Group (Heineken International Beheer B.V.), with a 61% shareholding, has control over major operations. The brewery has the capacity of producing 5 million hls a year, making it the largest brewery in Grupa \u017bywiec.",
+            "Pearl Brewing Company\nThe Pearl Brewing Company (also known as the Pearl Brewery or just Pearl) was an American brewery, established in 1883 in Downtown San Antonio, Texas, USA. In 1985, Pearl's parent company purchased the Pabst Brewing Company and assumed the Pabst name. In 1999, the Pabst Brewing Company began transferring its production to Miller Brewing, on a contract basis, and closing all of its breweries. Pearl beer is still in production at Miller's Ft. Worth, Texas facility, but the Pearl Brewery in San Antonio was closed in 2001. Since then, the former brewery was purchased by Silver Ventures, Inc., which has made the property the crown jewel in revitalization efforts of southern Midtown and northern Downtown San Antonio.",
+            "Boulevard Brewing Company\nBoulevard Brewing Company is a brewery located in Kansas City, Missouri. The Brewers Association currently ranks the American arm of Boulevard's parent company, Duvel Moortgat USA, as the 12th largest craft brewery, and the 18th largest active brewery in the United States based on 2014 sales volume. Before the sale of Anheuser-Busch to InBev in 2008, Boulevard was the largest independent American brewery in the state of Missouri. Boulevard's beers are available in select markets across the country.",
+            "Marble Brewery (Albuquerque, New Mexico)\nMarble Brewery is a brewery in Albuquerque, New Mexico, founded in 2008. As of 2014, it was the second largest brewery in New Mexico behind Santa Fe Brewing Company with an annual production volume of 13,000 US barrels. In 2016, the brewery completed a major expansion which increased the production capacity to 30,000 barrels. Its beers have won several awards and it was named Small Brewery and Brewmaster of the Year at the 2014 Great American Beer Festival.",
+            "Sun King Brewing\nSun King Brewing is a brewery in the Cole-Noble District of Indianapolis, Indiana, United States. It is the largest brewery in Indianapolis and the second largest brewery in the state. In 2011, Sun King won eight medals, including four gold medals, total at the Great American Beer Festival. Sun King was the first commercial brewery to open up in approximately 30 years in Indianapolis.",
+            "Gordon Biersch Brewing Company\nGordon Biersch Brewery is an American brewery founded by Dan Gordon and Dean Biersch. Gordon, a graduate from the five-year brewing engineering program at Weihenstephan, Germany, and Biersch opened their first brewery restaurant in Palo Alto, California in July 1988. In 1999, the restaurants were sold to what ultimately became CraftWorks Restaurants & Breweries.",
+            "Erie Brewing Company\nThe Erie Brewery Company is an American brewery in Erie, Pennsylvania. Founded as a brewpub in 1994, Erie Brewing transitioned to a full-time brewery in 1999. The brewery has won three medals from the Great American Beer Festival.",
+            "Karl Strauss Brewing Company\nKarl Strauss Brewing Company is a San Diego, California-based craft brewery with eleven brewpub locations across Southern California and an onsite tasting room at their main brewery in the Pacific Beach neighborhood of San Diego. Besides being available at its own brewpubs the company\u2019s beers are distributed across all of California. Karl Strauss is the oldest surviving brewery in San Diego County, having been founded in 1989, and is credited with launching the county's rise to prominence in the craft brewing industry. Based on 2016 sales volume it is the 47th largest brewery in the United States. In 2016 Karl Strauss was declared the Mid-Size Brewery of the Year at the Great American Beer Festival.",
+            "Christian Moerlein Brewing Co.\nChristian Moerlein Brewing Co. is a private beer company that began production in 1853 in Cincinnati, Ohio by German immigrant Christian Moerlein. Before closing its doors in 1919 as result of prohibition, Christian Moerlein was among the ten largest American breweries by volume. In 1981, the brand was revived by the Hudepohl Brewing Company as a \"better beer\" a precursor to the current craft beer category and is considered a pioneer craft beer of today's craft beer movement. In 1999, Hudepohl-Schoenling Brewing Co. sold out to a group of out-of-town owners, a sale that included the famed Christian Moerlein craft beer brand. In 2004, Greg Hardman a Cincinnati resident purchased Christian Moerlein, as well as 65 other historic Cincinnati brands, returning local ownership to Cincinnati in a move that included a plan to return Cincinnati's grand brewing traditions. The four phase plan was, 1) return the local ownership of Cincinnati's great beer brands to Cincinnati; 2) build their base of sales to; 3) open local brewing operations in the heart of Cincinnati's historic Brewery District and; 4) open a World-class Moerlein Lager House on the banks of the Ohio River to act as a signal that beer is back in Cincinnati.",
+            "Bavarian Brewing Company\nBavarian Brewing Company was a brewery established in Covington, Kentucky, in 1866 by Julius Deglow, but became known as the Bavarian Brewery in the 1870s. The brewery was originally located on Pike Street and the business expanded to include the 12th street property by 1877. The company also operated as the John Meyer Brewery and the Meyer-Riedlin Brewery before becoming incorporated at Bavarian Brewery Co. in 1889 by William Riedlin. The company was family owned until it was acquired by International Breweries, Inc.(IBI) in 1959. However, it operated as the Bavarian Division of IBI and continued to produce its flagship beer, Bavarian's, until the facility closed in 1966. The property was placed on the National Register of Historic Places in 1996 and rehabilitated shortly thereafter."
+        ],
+        "thoughts": [
+            "As of 2006, the largest brewery in the state of Maryland was Flying Dog Brewery, located in Frederick, Maryland. Flying Dog Brewery was founded in 1990 and has since become the largest brewery in the state.",
+            "The Frederick Brewing Company was purchased in 2006 by the largest brewery in Maryland, Flying Dog Brewery.",
+            "Frederick Brewing Company was founded by Marjorie McGinnis, Kevin Brannon, and Steve Nordahl.",
+            "The female founder from the list of original founders is Marjorie McGinnis."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who was the original female founder of the brewery that was purchased in 2006 by the largest brewery in the state of Maryland?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the largest brewery in the state of Maryland as of 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which brewery was purchased by this largest brewery in Maryland in 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the original founders of the identified brewery that was purchased in 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the female founder among the original founders of the brewery.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph begins by identifying the largest brewery in Maryland as of 2006 because it is the entity making the purchase. Next, we find out which brewery was acquired by the largest brewery, which helps in tracing the history of the acquired brewery. We then retrieve the information about the original founders of the purchased brewery. Finally, we use this information to identify any female founder among these original founders, thereby answering the question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Flying Dog Brewery\nFlying Dog Brewery is a craft brewery located in Frederick, Maryland. Founded in 1990 by George Stranahan and Richard McIntyre, it is the largest brewery in Maryland. As of 2015, Flying Dog is the 37th largest craft brewery in the United States.",
+            "Frederick Brewing Company\nFrederick Brewing Company (at one point also known as Wild Goose Brewery) is a brewery at the Wedgewood Business Park in Frederick, Maryland, United States. It was founded sometime between 1992 and 1993 by Marjorie McGinnis, Kevin Brannon, and Steve Nordahl and had its grand opening on 12 February 1997. The company was taken over by Snyder International Brewing Group in 1999 and merged with Snyder International Brewing Group in 2001. In early 2002 or 2003 the company was placed into receivership and in 2006 was purchased by Flying Dog Brewery and renamed Wild Goose Brewery. At some point the brewery stopped being known as Wild Goose Brewery and just became Flying Dog Brewery.",
+            "Truman's Brewery\nTruman's Brewery was a large East London brewery and one of the largest brewers in the world at the end of the 19th century. Founded around 1666, the Black Eagle Brewery was established on a plot of land next to what is now Brick Lane in London, E1. It grew steadily until the 18th century when, under the management of Benjamin Truman, and driven by the demand for porter, it expanded rapidly and became one of the largest brewers in London. Its growth continued into and through the 19th century with the expansion of its brewery and pub estate. In 1873, it purchased Philips Brewery in Burton and became the largest brewery in the world.",
+            "Browar \u0141om\u017ca\nThe Browar \u0141om\u017ca (] ) is Poland's fourth largest brewery. Browar \u0141om\u017ca Sp. z o.o. launched the plant in 1968. In 2007 it was purchased by Royal Unibrew. In 2011 it was sold to Polish Brewery Van Pur of Warsaw. The Browar \u0141om\u017ca brewery is located in \u0141om\u017ca, Poland.",
+            "Pearl Brewing Company\nThe Pearl Brewing Company (also known as the Pearl Brewery or just Pearl) was an American brewery, established in 1883 in Downtown San Antonio, Texas, USA. In 1985, Pearl's parent company purchased the Pabst Brewing Company and assumed the Pabst name. In 1999, the Pabst Brewing Company began transferring its production to Miller Brewing, on a contract basis, and closing all of its breweries. Pearl beer is still in production at Miller's Ft. Worth, Texas facility, but the Pearl Brewery in San Antonio was closed in 2001. Since then, the former brewery was purchased by Silver Ventures, Inc., which has made the property the crown jewel in revitalization efforts of southern Midtown and northern Downtown San Antonio.",
+            "Boulevard Brewing Company\nBoulevard Brewing Company is a brewery located in Kansas City, Missouri. The Brewers Association currently ranks the American arm of Boulevard's parent company, Duvel Moortgat USA, as the 12th largest craft brewery, and the 18th largest active brewery in the United States based on 2014 sales volume. Before the sale of Anheuser-Busch to InBev in 2008, Boulevard was the largest independent American brewery in the state of Missouri. Boulevard's beers are available in select markets across the country.",
+            "\u017bywiec Brewery\n\u017bywiec Brewery (] ) is a brewery founded in 1856, in \u017bywiec, Poland, then part of Austria-Hungary. It was nationalised after the Second World War. Grupa \u017bywiec S.A. consists of five main breweries: \u017bywiec Brewery, Elbrewery, Le\u017cajsk, Warka Brewery and Cieszyn Brewery. Currently the Dutch Heineken Group (Heineken International Beheer B.V.), with a 61% shareholding, has control over major operations. The brewery has the capacity of producing 5 million hls a year, making it the largest brewery in Grupa \u017bywiec.",
+            "Sun King Brewing\nSun King Brewing is a brewery in the Cole-Noble District of Indianapolis, Indiana, United States. It is the largest brewery in Indianapolis and the second largest brewery in the state. In 2011, Sun King won eight medals, including four gold medals, total at the Great American Beer Festival. Sun King was the first commercial brewery to open up in approximately 30 years in Indianapolis.",
+            "Marble Brewery (Albuquerque, New Mexico)\nMarble Brewery is a brewery in Albuquerque, New Mexico, founded in 2008. As of 2014, it was the second largest brewery in New Mexico behind Santa Fe Brewing Company with an annual production volume of 13,000 US barrels. In 2016, the brewery completed a major expansion which increased the production capacity to 30,000 barrels. Its beers have won several awards and it was named Small Brewery and Brewmaster of the Year at the 2014 Great American Beer Festival.",
+            "Erie Brewing Company\nThe Erie Brewery Company is an American brewery in Erie, Pennsylvania. Founded as a brewpub in 1994, Erie Brewing transitioned to a full-time brewery in 1999. The brewery has won three medals from the Great American Beer Festival.",
+            "Christian Moerlein Brewing Co.\nChristian Moerlein Brewing Co. is a private beer company that began production in 1853 in Cincinnati, Ohio by German immigrant Christian Moerlein. Before closing its doors in 1919 as result of prohibition, Christian Moerlein was among the ten largest American breweries by volume. In 1981, the brand was revived by the Hudepohl Brewing Company as a \"better beer\" a precursor to the current craft beer category and is considered a pioneer craft beer of today's craft beer movement. In 1999, Hudepohl-Schoenling Brewing Co. sold out to a group of out-of-town owners, a sale that included the famed Christian Moerlein craft beer brand. In 2004, Greg Hardman a Cincinnati resident purchased Christian Moerlein, as well as 65 other historic Cincinnati brands, returning local ownership to Cincinnati in a move that included a plan to return Cincinnati's grand brewing traditions. The four phase plan was, 1) return the local ownership of Cincinnati's great beer brands to Cincinnati; 2) build their base of sales to; 3) open local brewing operations in the heart of Cincinnati's historic Brewery District and; 4) open a World-class Moerlein Lager House on the banks of the Ohio River to act as a signal that beer is back in Cincinnati.",
+            "Karl Strauss Brewing Company\nKarl Strauss Brewing Company is a San Diego, California-based craft brewery with eleven brewpub locations across Southern California and an onsite tasting room at their main brewery in the Pacific Beach neighborhood of San Diego. Besides being available at its own brewpubs the company\u2019s beers are distributed across all of California. Karl Strauss is the oldest surviving brewery in San Diego County, having been founded in 1989, and is credited with launching the county's rise to prominence in the craft brewing industry. Based on 2016 sales volume it is the 47th largest brewery in the United States. In 2016 Karl Strauss was declared the Mid-Size Brewery of the Year at the Great American Beer Festival.",
+            "Gordon Biersch Brewing Company\nGordon Biersch Brewery is an American brewery founded by Dan Gordon and Dean Biersch. Gordon, a graduate from the five-year brewing engineering program at Weihenstephan, Germany, and Biersch opened their first brewery restaurant in Palo Alto, California in July 1988. In 1999, the restaurants were sold to what ultimately became CraftWorks Restaurants & Breweries.",
+            "Bavarian Brewing Company\nBavarian Brewing Company was a brewery established in Covington, Kentucky, in 1866 by Julius Deglow, but became known as the Bavarian Brewery in the 1870s. The brewery was originally located on Pike Street and the business expanded to include the 12th street property by 1877. The company also operated as the John Meyer Brewery and the Meyer-Riedlin Brewery before becoming incorporated at Bavarian Brewery Co. in 1889 by William Riedlin. The company was family owned until it was acquired by International Breweries, Inc.(IBI) in 1959. However, it operated as the Bavarian Division of IBI and continued to produce its flagship beer, Bavarian's, until the facility closed in 1966. The property was placed on the National Register of Historic Places in 1996 and rehabilitated shortly thereafter."
+        ],
+        "thoughts": [
+            "As of 2006, the largest brewery in the state of Maryland was Flying Dog Brewery, located in Frederick, Maryland.",
+            "The Frederick Brewing Company was purchased by Flying Dog Brewery in 2006.",
+            "Frederick Brewing Company: Founded by Marjorie McGinnis, Kevin Brannon, and Steve Nordahl\nPearl Brewing Company: Founded in 1883 in San Antonio, Texas\nErie Brewing Company: Founded as a brewpub in 1994, transitioned to a full-time brewery in 1999\nBoulevard Brewing Company: Founded in Kansas City, Missouri\nChristian Moerlein Brewing Co.: Founded in 1853 by Christian Moerlein, revived in 1981 by Hudepohl Brewing Company, and later purchased by Greg Hardman in 2004\nKarl Strauss Brewing Company: Founded in 1989 in San Diego, California by Karl Strauss\nGordon Biersch Brewing Company: Founded by Dan Gordon and Dean Biersch in 1988\nBavarian Brewing Company: Established in 1866 by Julius Deglow, later incorporated as Bavarian Brewery Co. in 1889 by William Riedlin",
+            "Marjorie McGinnis is the female founder among the original founders of the Frederick Brewing Company."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who was the original female founder of the brewery that was purchased in 2006 by the largest brewery in the state of Maryland?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the largest brewery in the state of Maryland as of 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which breweries were purchased by this largest brewery in 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the founder of each brewery from the list of breweries purchased in 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine which, if any, of these founders are female.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To answer the main question, begin by identifying the largest brewery in Maryland in 2006. Then, find out which breweries it purchased that year. For each brewery purchased, retrieve information about the founders. Finally, determine if any of these founders were female. The node representing the identification of a female founder concludes the execution graph, synthesizing all previous information gathered."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Frederick Brewing Company\nFrederick Brewing Company (at one point also known as Wild Goose Brewery) is a brewery at the Wedgewood Business Park in Frederick, Maryland, United States. It was founded sometime between 1992 and 1993 by Marjorie McGinnis, Kevin Brannon, and Steve Nordahl and had its grand opening on 12 February 1997. The company was taken over by Snyder International Brewing Group in 1999 and merged with Snyder International Brewing Group in 2001. In early 2002 or 2003 the company was placed into receivership and in 2006 was purchased by Flying Dog Brewery and renamed Wild Goose Brewery. At some point the brewery stopped being known as Wild Goose Brewery and just became Flying Dog Brewery.",
+            "Flying Dog Brewery\nFlying Dog Brewery is a craft brewery located in Frederick, Maryland. Founded in 1990 by George Stranahan and Richard McIntyre, it is the largest brewery in Maryland. As of 2015, Flying Dog is the 37th largest craft brewery in the United States.",
+            "Erie Brewing Company\nThe Erie Brewery Company is an American brewery in Erie, Pennsylvania. Founded as a brewpub in 1994, Erie Brewing transitioned to a full-time brewery in 1999. The brewery has won three medals from the Great American Beer Festival.",
+            "Pearl Brewing Company\nThe Pearl Brewing Company (also known as the Pearl Brewery or just Pearl) was an American brewery, established in 1883 in Downtown San Antonio, Texas, USA. In 1985, Pearl's parent company purchased the Pabst Brewing Company and assumed the Pabst name. In 1999, the Pabst Brewing Company began transferring its production to Miller Brewing, on a contract basis, and closing all of its breweries. Pearl beer is still in production at Miller's Ft. Worth, Texas facility, but the Pearl Brewery in San Antonio was closed in 2001. Since then, the former brewery was purchased by Silver Ventures, Inc., which has made the property the crown jewel in revitalization efforts of southern Midtown and northern Downtown San Antonio.",
+            "Boulevard Brewing Company\nBoulevard Brewing Company is a brewery located in Kansas City, Missouri. The Brewers Association currently ranks the American arm of Boulevard's parent company, Duvel Moortgat USA, as the 12th largest craft brewery, and the 18th largest active brewery in the United States based on 2014 sales volume. Before the sale of Anheuser-Busch to InBev in 2008, Boulevard was the largest independent American brewery in the state of Missouri. Boulevard's beers are available in select markets across the country.",
+            "Karl Strauss Brewing Company\nKarl Strauss Brewing Company is a San Diego, California-based craft brewery with eleven brewpub locations across Southern California and an onsite tasting room at their main brewery in the Pacific Beach neighborhood of San Diego. Besides being available at its own brewpubs the company\u2019s beers are distributed across all of California. Karl Strauss is the oldest surviving brewery in San Diego County, having been founded in 1989, and is credited with launching the county's rise to prominence in the craft brewing industry. Based on 2016 sales volume it is the 47th largest brewery in the United States. In 2016 Karl Strauss was declared the Mid-Size Brewery of the Year at the Great American Beer Festival.",
+            "Gordon Biersch Brewing Company\nGordon Biersch Brewery is an American brewery founded by Dan Gordon and Dean Biersch. Gordon, a graduate from the five-year brewing engineering program at Weihenstephan, Germany, and Biersch opened their first brewery restaurant in Palo Alto, California in July 1988. In 1999, the restaurants were sold to what ultimately became CraftWorks Restaurants & Breweries.",
+            "Bavarian Brewing Company\nBavarian Brewing Company was a brewery established in Covington, Kentucky, in 1866 by Julius Deglow, but became known as the Bavarian Brewery in the 1870s. The brewery was originally located on Pike Street and the business expanded to include the 12th street property by 1877. The company also operated as the John Meyer Brewery and the Meyer-Riedlin Brewery before becoming incorporated at Bavarian Brewery Co. in 1889 by William Riedlin. The company was family owned until it was acquired by International Breweries, Inc.(IBI) in 1959. However, it operated as the Bavarian Division of IBI and continued to produce its flagship beer, Bavarian's, until the facility closed in 1966. The property was placed on the National Register of Historic Places in 1996 and rehabilitated shortly thereafter.",
+            "Truman's Brewery\nTruman's Brewery was a large East London brewery and one of the largest brewers in the world at the end of the 19th century. Founded around 1666, the Black Eagle Brewery was established on a plot of land next to what is now Brick Lane in London, E1. It grew steadily until the 18th century when, under the management of Benjamin Truman, and driven by the demand for porter, it expanded rapidly and became one of the largest brewers in London. Its growth continued into and through the 19th century with the expansion of its brewery and pub estate. In 1873, it purchased Philips Brewery in Burton and became the largest brewery in the world.",
+            "Marble Brewery (Albuquerque, New Mexico)\nMarble Brewery is a brewery in Albuquerque, New Mexico, founded in 2008. As of 2014, it was the second largest brewery in New Mexico behind Santa Fe Brewing Company with an annual production volume of 13,000 US barrels. In 2016, the brewery completed a major expansion which increased the production capacity to 30,000 barrels. Its beers have won several awards and it was named Small Brewery and Brewmaster of the Year at the 2014 Great American Beer Festival.",
+            "Banks Barbados Brewery\nBanks (Barbados) Breweries Ltd. is a Caribbean brewery founded in 1961 in St. Michael, Barbados. The company's main brand, the Banks Beer brand is also the flagship product of the wider Banks Holdings Limited. (\"BHL Group\") which owns the Banks (Barbados) Breweries Ltd. company.",
+            "Sun King Brewing\nSun King Brewing is a brewery in the Cole-Noble District of Indianapolis, Indiana, United States. It is the largest brewery in Indianapolis and the second largest brewery in the state. In 2011, Sun King won eight medals, including four gold medals, total at the Great American Beer Festival. Sun King was the first commercial brewery to open up in approximately 30 years in Indianapolis.",
+            "\u017bywiec Brewery\n\u017bywiec Brewery (] ) is a brewery founded in 1856, in \u017bywiec, Poland, then part of Austria-Hungary. It was nationalised after the Second World War. Grupa \u017bywiec S.A. consists of five main breweries: \u017bywiec Brewery, Elbrewery, Le\u017cajsk, Warka Brewery and Cieszyn Brewery. Currently the Dutch Heineken Group (Heineken International Beheer B.V.), with a 61% shareholding, has control over major operations. The brewery has the capacity of producing 5 million hls a year, making it the largest brewery in Grupa \u017bywiec.",
+            "Browar \u0141om\u017ca\nThe Browar \u0141om\u017ca (] ) is Poland's fourth largest brewery. Browar \u0141om\u017ca Sp. z o.o. launched the plant in 1968. In 2007 it was purchased by Royal Unibrew. In 2011 it was sold to Polish Brewery Van Pur of Warsaw. The Browar \u0141om\u017ca brewery is located in \u0141om\u017ca, Poland."
+        ],
+        "thoughts": [
+            "As of 2006, the largest brewery in the state of Maryland was Flying Dog Brewery, located in Frederick, Maryland.",
+            "In 2006, Flying Dog Brewery purchased the Frederick Brewing Company, which was also known as Wild Goose Brewery at the time. Therefore, the Frederick Brewing Company/Wild Goose Brewery was purchased by Flying Dog Brewery in 2006.",
+            "Frederick Brewing Company - Founded by Marjorie McGinnis, Kevin Brannon, and Steve Nordahl\nErie Brewing Company - Founded as a brewpub in 1994\nPearl Brewing Company - Established in 1883 in Downtown San Antonio, Texas\nBoulevard Brewing Company - Founded in Kansas City, Missouri\nKarl Strauss Brewing Company - Founded in San Diego, California in 1989\nGordon Biersch Brewing Company - Founded by Dan Gordon and Dean Biersch\nBavarian Brewing Company - Established in Covington, Kentucky in 1866 by Julius Deglow\nMarble Brewery - Founded in Albuquerque, New Mexico in 2008",
+            "Marjorie McGinnis is the only female founder listed, so the Frederick Brewing Company is the only company with a female founder."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who was the original female founder of the brewery that was purchased in 2006 by the largest brewery in the state of Maryland?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the largest brewery in the state of Maryland as of 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which breweries were purchased by the largest Maryland brewery in 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "For each brewery identified in step 2, find the original founder(s).",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Filter the list of founders from step 3 to identify any original female founders.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks down the task into identifying relevant information step-by-step. First, we need to identify the largest brewery in Maryland as of 2006. Then, we look into what purchases this brewery made that year. After identifying the purchased breweries, we retrieve the original founders of each one, specifically filtering to find female founders. This step-by-step approach ensures we gather all necessary information to answer the original question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Frederick Brewing Company\nFrederick Brewing Company (at one point also known as Wild Goose Brewery) is a brewery at the Wedgewood Business Park in Frederick, Maryland, United States. It was founded sometime between 1992 and 1993 by Marjorie McGinnis, Kevin Brannon, and Steve Nordahl and had its grand opening on 12 February 1997. The company was taken over by Snyder International Brewing Group in 1999 and merged with Snyder International Brewing Group in 2001. In early 2002 or 2003 the company was placed into receivership and in 2006 was purchased by Flying Dog Brewery and renamed Wild Goose Brewery. At some point the brewery stopped being known as Wild Goose Brewery and just became Flying Dog Brewery.",
+            "Flying Dog Brewery\nFlying Dog Brewery is a craft brewery located in Frederick, Maryland. Founded in 1990 by George Stranahan and Richard McIntyre, it is the largest brewery in Maryland. As of 2015, Flying Dog is the 37th largest craft brewery in the United States.",
+            "Pearl Brewing Company\nThe Pearl Brewing Company (also known as the Pearl Brewery or just Pearl) was an American brewery, established in 1883 in Downtown San Antonio, Texas, USA. In 1985, Pearl's parent company purchased the Pabst Brewing Company and assumed the Pabst name. In 1999, the Pabst Brewing Company began transferring its production to Miller Brewing, on a contract basis, and closing all of its breweries. Pearl beer is still in production at Miller's Ft. Worth, Texas facility, but the Pearl Brewery in San Antonio was closed in 2001. Since then, the former brewery was purchased by Silver Ventures, Inc., which has made the property the crown jewel in revitalization efforts of southern Midtown and northern Downtown San Antonio.",
+            "Erie Brewing Company\nThe Erie Brewery Company is an American brewery in Erie, Pennsylvania. Founded as a brewpub in 1994, Erie Brewing transitioned to a full-time brewery in 1999. The brewery has won three medals from the Great American Beer Festival.",
+            "Bavarian Brewing Company\nBavarian Brewing Company was a brewery established in Covington, Kentucky, in 1866 by Julius Deglow, but became known as the Bavarian Brewery in the 1870s. The brewery was originally located on Pike Street and the business expanded to include the 12th street property by 1877. The company also operated as the John Meyer Brewery and the Meyer-Riedlin Brewery before becoming incorporated at Bavarian Brewery Co. in 1889 by William Riedlin. The company was family owned until it was acquired by International Breweries, Inc.(IBI) in 1959. However, it operated as the Bavarian Division of IBI and continued to produce its flagship beer, Bavarian's, until the facility closed in 1966. The property was placed on the National Register of Historic Places in 1996 and rehabilitated shortly thereafter.",
+            "Boulevard Brewing Company\nBoulevard Brewing Company is a brewery located in Kansas City, Missouri. The Brewers Association currently ranks the American arm of Boulevard's parent company, Duvel Moortgat USA, as the 12th largest craft brewery, and the 18th largest active brewery in the United States based on 2014 sales volume. Before the sale of Anheuser-Busch to InBev in 2008, Boulevard was the largest independent American brewery in the state of Missouri. Boulevard's beers are available in select markets across the country.",
+            "Karl Strauss Brewing Company\nKarl Strauss Brewing Company is a San Diego, California-based craft brewery with eleven brewpub locations across Southern California and an onsite tasting room at their main brewery in the Pacific Beach neighborhood of San Diego. Besides being available at its own brewpubs the company\u2019s beers are distributed across all of California. Karl Strauss is the oldest surviving brewery in San Diego County, having been founded in 1989, and is credited with launching the county's rise to prominence in the craft brewing industry. Based on 2016 sales volume it is the 47th largest brewery in the United States. In 2016 Karl Strauss was declared the Mid-Size Brewery of the Year at the Great American Beer Festival.",
+            "Gordon Biersch Brewing Company\nGordon Biersch Brewery is an American brewery founded by Dan Gordon and Dean Biersch. Gordon, a graduate from the five-year brewing engineering program at Weihenstephan, Germany, and Biersch opened their first brewery restaurant in Palo Alto, California in July 1988. In 1999, the restaurants were sold to what ultimately became CraftWorks Restaurants & Breweries.",
+            "Marble Brewery (Albuquerque, New Mexico)\nMarble Brewery is a brewery in Albuquerque, New Mexico, founded in 2008. As of 2014, it was the second largest brewery in New Mexico behind Santa Fe Brewing Company with an annual production volume of 13,000 US barrels. In 2016, the brewery completed a major expansion which increased the production capacity to 30,000 barrels. Its beers have won several awards and it was named Small Brewery and Brewmaster of the Year at the 2014 Great American Beer Festival.",
+            "Truman's Brewery\nTruman's Brewery was a large East London brewery and one of the largest brewers in the world at the end of the 19th century. Founded around 1666, the Black Eagle Brewery was established on a plot of land next to what is now Brick Lane in London, E1. It grew steadily until the 18th century when, under the management of Benjamin Truman, and driven by the demand for porter, it expanded rapidly and became one of the largest brewers in London. Its growth continued into and through the 19th century with the expansion of its brewery and pub estate. In 1873, it purchased Philips Brewery in Burton and became the largest brewery in the world.",
+            "Banks Barbados Brewery\nBanks (Barbados) Breweries Ltd. is a Caribbean brewery founded in 1961 in St. Michael, Barbados. The company's main brand, the Banks Beer brand is also the flagship product of the wider Banks Holdings Limited. (\"BHL Group\") which owns the Banks (Barbados) Breweries Ltd. company.",
+            "\u017bywiec Brewery\n\u017bywiec Brewery (] ) is a brewery founded in 1856, in \u017bywiec, Poland, then part of Austria-Hungary. It was nationalised after the Second World War. Grupa \u017bywiec S.A. consists of five main breweries: \u017bywiec Brewery, Elbrewery, Le\u017cajsk, Warka Brewery and Cieszyn Brewery. Currently the Dutch Heineken Group (Heineken International Beheer B.V.), with a 61% shareholding, has control over major operations. The brewery has the capacity of producing 5 million hls a year, making it the largest brewery in Grupa \u017bywiec.",
+            "Browar \u0141om\u017ca\nThe Browar \u0141om\u017ca (] ) is Poland's fourth largest brewery. Browar \u0141om\u017ca Sp. z o.o. launched the plant in 1968. In 2007 it was purchased by Royal Unibrew. In 2011 it was sold to Polish Brewery Van Pur of Warsaw. The Browar \u0141om\u017ca brewery is located in \u0141om\u017ca, Poland.",
+            "Sun King Brewing\nSun King Brewing is a brewery in the Cole-Noble District of Indianapolis, Indiana, United States. It is the largest brewery in Indianapolis and the second largest brewery in the state. In 2011, Sun King won eight medals, including four gold medals, total at the Great American Beer Festival. Sun King was the first commercial brewery to open up in approximately 30 years in Indianapolis."
+        ],
+        "thoughts": [
+            "As of 2006, the largest brewery in the state of Maryland was Flying Dog Brewery, located in Frederick, Maryland. Flying Dog Brewery was founded in 1990 and has since become the largest brewery in the state.",
+            "In 2006, the largest Maryland brewery, Flying Dog Brewery, purchased the Frederick Brewing Company, which was also known as Wild Goose Brewery at the time.",
+            "Frederick Brewing Company: Founded by Marjorie McGinnis, Kevin Brannon, and Steve Nordahl\nPearl Brewing Company: Founded in 1883 in Downtown San Antonio, Texas\nErie Brewing Company: Founded as a brewpub in 1994\nBavarian Brewing Company: Established in Covington, Kentucky in 1866 by Julius Deglow, and later incorporated as Bavarian Brewery Co. in 1889 by William Riedlin\nBoulevard Brewing Company: Founded in Kansas City, Missouri\nKarl Strauss Brewing Company: Founded in 1989 in San Diego, California by Karl Strauss\nGordon Biersch Brewing Company: Founded by Dan Gordon and Dean Biersch\nMarble Brewery: Founded in 2008 in Albuquerque, New Mexico",
+            "Marjorie McGinnis is the original female founder identified from the list of founders."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who was the original female founder of the brewery that was purchased in 2006 by the largest brewery in the state of Maryland?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the largest brewery in the state of Maryland as of 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find the breweries that were purchased by the largest brewery in Maryland in 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "For each brewery identified in node 2, determine its original founder, focusing on female founders.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify which of the breweries from node 2 had a female founder.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph breaks down the task of finding the original female founder of a brewery into logical steps. First, determine the largest brewery in Maryland in 2006, as this entity will be the purchaser (Node 1). Next, identify the breweries it purchased that year (Node 2). Then, investigate the original founders of these purchased breweries and focus on any female founders (Node 3). Finally, filter results to find which brewery specifically had a female founder (Node 4), providing the answer to the overall question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Flying Dog Brewery\nFlying Dog Brewery is a craft brewery located in Frederick, Maryland. Founded in 1990 by George Stranahan and Richard McIntyre, it is the largest brewery in Maryland. As of 2015, Flying Dog is the 37th largest craft brewery in the United States.",
+            "Frederick Brewing Company\nFrederick Brewing Company (at one point also known as Wild Goose Brewery) is a brewery at the Wedgewood Business Park in Frederick, Maryland, United States. It was founded sometime between 1992 and 1993 by Marjorie McGinnis, Kevin Brannon, and Steve Nordahl and had its grand opening on 12 February 1997. The company was taken over by Snyder International Brewing Group in 1999 and merged with Snyder International Brewing Group in 2001. In early 2002 or 2003 the company was placed into receivership and in 2006 was purchased by Flying Dog Brewery and renamed Wild Goose Brewery. At some point the brewery stopped being known as Wild Goose Brewery and just became Flying Dog Brewery.",
+            "Pearl Brewing Company\nThe Pearl Brewing Company (also known as the Pearl Brewery or just Pearl) was an American brewery, established in 1883 in Downtown San Antonio, Texas, USA. In 1985, Pearl's parent company purchased the Pabst Brewing Company and assumed the Pabst name. In 1999, the Pabst Brewing Company began transferring its production to Miller Brewing, on a contract basis, and closing all of its breweries. Pearl beer is still in production at Miller's Ft. Worth, Texas facility, but the Pearl Brewery in San Antonio was closed in 2001. Since then, the former brewery was purchased by Silver Ventures, Inc., which has made the property the crown jewel in revitalization efforts of southern Midtown and northern Downtown San Antonio.",
+            "Gordon Biersch Brewing Company\nGordon Biersch Brewery is an American brewery founded by Dan Gordon and Dean Biersch. Gordon, a graduate from the five-year brewing engineering program at Weihenstephan, Germany, and Biersch opened their first brewery restaurant in Palo Alto, California in July 1988. In 1999, the restaurants were sold to what ultimately became CraftWorks Restaurants & Breweries.",
+            "Banks Barbados Brewery\nBanks (Barbados) Breweries Ltd. is a Caribbean brewery founded in 1961 in St. Michael, Barbados. The company's main brand, the Banks Beer brand is also the flagship product of the wider Banks Holdings Limited. (\"BHL Group\") which owns the Banks (Barbados) Breweries Ltd. company.",
+            "Truman's Brewery\nTruman's Brewery was a large East London brewery and one of the largest brewers in the world at the end of the 19th century. Founded around 1666, the Black Eagle Brewery was established on a plot of land next to what is now Brick Lane in London, E1. It grew steadily until the 18th century when, under the management of Benjamin Truman, and driven by the demand for porter, it expanded rapidly and became one of the largest brewers in London. Its growth continued into and through the 19th century with the expansion of its brewery and pub estate. In 1873, it purchased Philips Brewery in Burton and became the largest brewery in the world.",
+            "\u017bywiec Brewery\n\u017bywiec Brewery (] ) is a brewery founded in 1856, in \u017bywiec, Poland, then part of Austria-Hungary. It was nationalised after the Second World War. Grupa \u017bywiec S.A. consists of five main breweries: \u017bywiec Brewery, Elbrewery, Le\u017cajsk, Warka Brewery and Cieszyn Brewery. Currently the Dutch Heineken Group (Heineken International Beheer B.V.), with a 61% shareholding, has control over major operations. The brewery has the capacity of producing 5 million hls a year, making it the largest brewery in Grupa \u017bywiec.",
+            "Browar \u0141om\u017ca\nThe Browar \u0141om\u017ca (] ) is Poland's fourth largest brewery. Browar \u0141om\u017ca Sp. z o.o. launched the plant in 1968. In 2007 it was purchased by Royal Unibrew. In 2011 it was sold to Polish Brewery Van Pur of Warsaw. The Browar \u0141om\u017ca brewery is located in \u0141om\u017ca, Poland.",
+            "Apollinariya Yakubova\nApollinariya Yakubova (died 1913 or 1917) was a Russian Marxist revolutionary and, with Vladimir Lenin, one of the founders of the League of Struggle for the Emancipation of the Working Class.",
+            "Bavarian Brewing Company\nBavarian Brewing Company was a brewery established in Covington, Kentucky, in 1866 by Julius Deglow, but became known as the Bavarian Brewery in the 1870s. The brewery was originally located on Pike Street and the business expanded to include the 12th street property by 1877. The company also operated as the John Meyer Brewery and the Meyer-Riedlin Brewery before becoming incorporated at Bavarian Brewery Co. in 1889 by William Riedlin. The company was family owned until it was acquired by International Breweries, Inc.(IBI) in 1959. However, it operated as the Bavarian Division of IBI and continued to produce its flagship beer, Bavarian's, until the facility closed in 1966. The property was placed on the National Register of Historic Places in 1996 and rehabilitated shortly thereafter.",
+            "Pipe Creek Friends Meetinghouse\nPipe Creek Friends Meetinghouse is a historic Friends meeting house located at Union Bridge, Carroll County, Maryland, United States. It is a 1\u00a0\u2044 -story brick structure in Flemish bond on a stone foundation. The meetinghouse was begun in 1771 and completed the next year. A fire in October 1934 destroyed the interior, but the original benches were saved. The founders of the meetinghouse were immigrants from the north of Ireland. It was the Quaker meetinghouse attended by a great-grandfather of President Herbert Hoover.",
+            "Hilliard's Beer\nHilliard's Beer is a brewery in Seattle, Washington, US. It opened on October 7, 2011 in a building constructed in 1947 within the Ballard neighborhood. The company is the namesake of Ryan Hilliard, a self-described home brewer gone pro. To open the brewery, Hilliard stepped away from a career as a flight instructor. Hilliard's was one of the first craft breweries in Washington to focus on producing beer in aluminum cans. Packaging beer in cans was an important part of the original Hilliard's Beer business plan: better for the beer's longevity, better for business operation sustainability and better for the environment. The brewing philosophy of Hilliard's Beer is 'keep it simple' with a focus on quality ingredients. This philosophy is displayed in their cans' design, created by Seattle's own design company, Mint. Hilliard's Beer is described as a \"retro cool beer brand that embraces good design\".",
+            "Boulevard Brewing Company\nBoulevard Brewing Company is a brewery located in Kansas City, Missouri. The Brewers Association currently ranks the American arm of Boulevard's parent company, Duvel Moortgat USA, as the 12th largest craft brewery, and the 18th largest active brewery in the United States based on 2014 sales volume. Before the sale of Anheuser-Busch to InBev in 2008, Boulevard was the largest independent American brewery in the state of Missouri. Boulevard's beers are available in select markets across the country.",
+            "Sun King Brewing\nSun King Brewing is a brewery in the Cole-Noble District of Indianapolis, Indiana, United States. It is the largest brewery in Indianapolis and the second largest brewery in the state. In 2011, Sun King won eight medals, including four gold medals, total at the Great American Beer Festival. Sun King was the first commercial brewery to open up in approximately 30 years in Indianapolis.",
+            "Marble Brewery (Albuquerque, New Mexico)\nMarble Brewery is a brewery in Albuquerque, New Mexico, founded in 2008. As of 2014, it was the second largest brewery in New Mexico behind Santa Fe Brewing Company with an annual production volume of 13,000 US barrels. In 2016, the brewery completed a major expansion which increased the production capacity to 30,000 barrels. Its beers have won several awards and it was named Small Brewery and Brewmaster of the Year at the 2014 Great American Beer Festival.",
+            "List of Nip/Tuck episodes\n\"Nip/Tuck\" is an American drama created by Ryan Murphy, which aired on FX in the United States between 2003 and 2010. The series focuses on McNamara/Troy, a plastic surgery practice, and follows its founders, Sean McNamara and Christian Troy (portrayed by Dylan Walsh and Julian McMahon). Each episode typically involves the cosmetic procedures of one or more patients, and also features the personal and professional lives of its main cast.",
+            "Cahit Berkay\nCahit Berkay (born August 3, 1946, Uluborlu, Isparta) is a Turkish musician from the founders of the Mo\u011follar band. He graduated from Kabata\u015f Erkek Lisesi (Kabata\u015f High School). He has composed credits and film music for many Turkish films. After this period, the Mo\u011follar also worked with Selda Ba\u011fcan, Cem Karaca and Ali R\u0131za Binbo\u011fa beside the solo 45s.",
+            "Mollie Gillen\nMollie Gillen (n\u00e9e Woolnough; 1908\u20132009) was an Australian historian, researcher, writer and novelist. Her work on the First Fleet, in \"The search for John Small,\" \"First Fleeter\" and The Founders of Australia: A Biographical Dictionary of the First Fleet, explored the idea that many of the founding families of Australia were descended from the convict population, rather than those sent to guard them. Gillen's article Maud Montgomery: The Girl Who Wrote Green Gables instigated a new era in scholarship on Lucy Maud Montgomery.",
+            "Aim\u00e9 C\u00e9saire\nAim\u00e9 Fernand David C\u00e9saire (26 June 1913 \u2013 17 April 2008) was a Francophone and French poet, author and politician from Martinique. He was \"one of the founders of the n\u00e9gritude movement in Francophone literature\". He wrote such works as \"Une Temp\u00eate\", a response to Shakespeare's play \"The Tempest\", and \"Discours sur le colonialisme\" (\"Discourse on Colonialism\"), an essay describing the strife between the colonizers and the colonized. His works have been translated into many languages.",
+            "Henry M. Morris\nHenry Madison Morris (October 6, 1918 \u2013 February 25, 2006) was an American young Earth creationist, Christian apologist, and engineer. He was one of the founders of the Creation Research Society and the Institute for Creation Research. He is considered by many to be \"the father of modern creation science.\" He is widely known for coauthoring \"The Genesis Flood\" with John C. Whitcomb in 1961."
+        ],
+        "thoughts": [
+            "As of 2006, the largest brewery in the state of Maryland was Flying Dog Brewery, located in Frederick, Maryland. Flying Dog Brewery was founded in 1990 and has since become the largest brewery in the state.",
+            "In 2006, Flying Dog Brewery purchased the Frederick Brewing Company, which was then renamed Wild Goose Brewery. Therefore, the Frederick Brewing Company was one of the breweries purchased by the largest brewery in Maryland in 2006.",
+            "There are no female founders identified in the provided information.",
+            "None of the breweries from node 2 had a female founder."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who was the original female founder of the brewery that was purchased in 2006 by the largest brewery in the state of Maryland?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the largest brewery in the state of Maryland as of 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find breweries in Maryland that were purchased in 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine which brewery among those found in step 2 was purchased by the largest brewery identified in step 1.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1",
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Find the original founders of the brewery identified in step 3.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Identify the female founder from the list of founders retrieved in step 4.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The question requires identifying a specific brewery event and its founders. We start by finding the largest brewery in Maryland as of 2006 since this will help narrow down our candidates. Simultaneously, we retrieve which breweries in Maryland were purchased in that year. These two retrieval results are combined to identify the particular brewery purchased by the largest brewery. Then, the founders of this identified brewery are retrieved, and from this list, we determine the original female founder, which directly answers the question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Flying Dog Brewery\nFlying Dog Brewery is a craft brewery located in Frederick, Maryland. Founded in 1990 by George Stranahan and Richard McIntyre, it is the largest brewery in Maryland. As of 2015, Flying Dog is the 37th largest craft brewery in the United States.",
+            "Truman's Brewery\nTruman's Brewery was a large East London brewery and one of the largest brewers in the world at the end of the 19th century. Founded around 1666, the Black Eagle Brewery was established on a plot of land next to what is now Brick Lane in London, E1. It grew steadily until the 18th century when, under the management of Benjamin Truman, and driven by the demand for porter, it expanded rapidly and became one of the largest brewers in London. Its growth continued into and through the 19th century with the expansion of its brewery and pub estate. In 1873, it purchased Philips Brewery in Burton and became the largest brewery in the world.",
+            "Frederick Brewing Company\nFrederick Brewing Company (at one point also known as Wild Goose Brewery) is a brewery at the Wedgewood Business Park in Frederick, Maryland, United States. It was founded sometime between 1992 and 1993 by Marjorie McGinnis, Kevin Brannon, and Steve Nordahl and had its grand opening on 12 February 1997. The company was taken over by Snyder International Brewing Group in 1999 and merged with Snyder International Brewing Group in 2001. In early 2002 or 2003 the company was placed into receivership and in 2006 was purchased by Flying Dog Brewery and renamed Wild Goose Brewery. At some point the brewery stopped being known as Wild Goose Brewery and just became Flying Dog Brewery.",
+            "Boulevard Brewing Company\nBoulevard Brewing Company is a brewery located in Kansas City, Missouri. The Brewers Association currently ranks the American arm of Boulevard's parent company, Duvel Moortgat USA, as the 12th largest craft brewery, and the 18th largest active brewery in the United States based on 2014 sales volume. Before the sale of Anheuser-Busch to InBev in 2008, Boulevard was the largest independent American brewery in the state of Missouri. Boulevard's beers are available in select markets across the country.",
+            "Sun King Brewing\nSun King Brewing is a brewery in the Cole-Noble District of Indianapolis, Indiana, United States. It is the largest brewery in Indianapolis and the second largest brewery in the state. In 2011, Sun King won eight medals, including four gold medals, total at the Great American Beer Festival. Sun King was the first commercial brewery to open up in approximately 30 years in Indianapolis.",
+            "Pipe Creek Friends Meetinghouse\nPipe Creek Friends Meetinghouse is a historic Friends meeting house located at Union Bridge, Carroll County, Maryland, United States. It is a 1\u00a0\u2044 -story brick structure in Flemish bond on a stone foundation. The meetinghouse was begun in 1771 and completed the next year. A fire in October 1934 destroyed the interior, but the original benches were saved. The founders of the meetinghouse were immigrants from the north of Ireland. It was the Quaker meetinghouse attended by a great-grandfather of President Herbert Hoover.",
+            "Marble Brewery (Albuquerque, New Mexico)\nMarble Brewery is a brewery in Albuquerque, New Mexico, founded in 2008. As of 2014, it was the second largest brewery in New Mexico behind Santa Fe Brewing Company with an annual production volume of 13,000 US barrels. In 2016, the brewery completed a major expansion which increased the production capacity to 30,000 barrels. Its beers have won several awards and it was named Small Brewery and Brewmaster of the Year at the 2014 Great American Beer Festival.",
+            "\u017bywiec Brewery\n\u017bywiec Brewery (] ) is a brewery founded in 1856, in \u017bywiec, Poland, then part of Austria-Hungary. It was nationalised after the Second World War. Grupa \u017bywiec S.A. consists of five main breweries: \u017bywiec Brewery, Elbrewery, Le\u017cajsk, Warka Brewery and Cieszyn Brewery. Currently the Dutch Heineken Group (Heineken International Beheer B.V.), with a 61% shareholding, has control over major operations. The brewery has the capacity of producing 5 million hls a year, making it the largest brewery in Grupa \u017bywiec.",
+            "Gordon Biersch Brewing Company\nGordon Biersch Brewery is an American brewery founded by Dan Gordon and Dean Biersch. Gordon, a graduate from the five-year brewing engineering program at Weihenstephan, Germany, and Biersch opened their first brewery restaurant in Palo Alto, California in July 1988. In 1999, the restaurants were sold to what ultimately became CraftWorks Restaurants & Breweries.",
+            "Here's the Thing\nHere's the Thing is a public radio show and podcast interview series hosted by actor Alec Baldwin. On October 24, 2011, New York City's WNYC released the first episode of Baldwin's podcast, a series of interviews with public figures including artists, policy makers and performers. \"Here's the Thing\" was developed for Baldwin by Lu Olkowski, Trey Kay, Kathy Russo and Emily Botein.",
+            "Western Shore of Maryland\nMaryland's Western Shore (not to be confused with Western Maryland) is an area of Maryland west of the Chesapeake Bay. Originally, it included all areas not on the Eastern Shore and some colonial and later state government functions were administered separately for each region. The term no longer identifies an official region of Maryland and is used in contrast to the \"Eastern Shore\", which has long had a distinct historical, cultural, sociological, and economic character and sense of personality, well known in American and state history, politics and events, especially before the 1952 construction of the Gov. William Preston Lane Memorial Bridge (Chesapeake Bay Bridge).",
+            "National Mine Map Repository\nThe National Mine Map Repository (NMMR) is part of the United States Department of the Interior (DOI), Office of Surface Mining Reclamation and Enforcement (OSMRE or OSM). The NMMR resides in the Pittsburgh suburb of Green Tree, Pennsylvania, and collects and maintains mine map information and images for the entire country, including data and maps of coal mines in the anthracite coal region of northeastern Pennsylvania. The Green Tree facility provides and stores, digitally and in microfilm (aperture cards), over 182,000 maps of abandoned mines. This repository contains maps of mine workings from the 1790s to the present day. It serves as a point of reference for mine maps and other information for both surface and underground mines throughout the United States. It also serves as a location to retrieve mine maps in an emergency. The NMMR provides services ranging from retrieving mine related data for economic analysis to assessing the potential risk associated with underground mining. Through analysis of mine maps and related information, the repository assists private and public sectors in industrial and commercial development, highway construction, and the preservation of public health, safety, and welfare. In addition, they collect, reproduce, and maintain a national inventory of mine maps and supporting documentation for private and public interests.",
+            "East African Breweries\nEast African Breweries Limited, commonly referred to as EABL, is a Kenya-based holding company that manufactures branded beer, spirits, and non-alcoholic beverages.",
+            "N. Louise Young\nNellie Louise Young (June 7, 1907 - September 22, 1997) was the first African American woman licensed to practice medicine in Maryland. Young was born in Baltimore, Maryland, to Dr. Howard E. Young, Maryland's first African American pharmacist, and Estelle Hall Young. Her father's pharmacy served as a place of inspiration for Young as a child:\"I admired the doctors...and I wanted to be able to send my prescriptions to my father's drugstore.\"She attended the old Colored High School (now Fredrick Douglass High School) in Baltimore. Following her graduation in 1924, Young enrolled in Howard University where she earned her bachelor of science degree in social sciences and later obtained her medical degree from the Howard University School of Medicine in 1930. Young initially served as an intern at Freedmen\u2019s Hospital in Washington, D.C., after she was not accepted to the Provident Hospital in Baltimore due to the lack of housing accommodations for women. After her internship, Young opened her own practice in offices above her father's drugstore in 1932. Around the same time, she was appointed staff physician at the Maryland Training School for Girls, where she served from 1933-1940.",
+            "Lawrence A. Gordon\nLawrence A. Gordon is the EY Alumni Professor of Managerial Accounting and Information Assurance at the University of Maryland\u2019s Robert H. Smith School of Business. He is also an Affiliate Professor in the University of Maryland Institute for Advanced Computer Studies. Dr. Gordon earned his Ph.D. in Managerial Economics from Rensselaer Polytechnic Institute. An internationally known scholar in the areas of managerial accounting (often called management accounting) and cybersecurity economics, Dr. Gordon's research focuses on such issues as economic aspects of information security (including cybersecurity or computer security), corporate performance measures, cost management systems, and capital investments. He is the author of approximately 100 articles, published in such journals as The Accounting Review, ACM Transactions on Information and System Security, Communications of the ACM, Journal of Financial and Quantitative Analysis, Journal of Computer Security, MIS Quarterly, Accounting, Organizations and Society, and the Journal of Accounting and Public Policy. Dr. Gordon's current research emphasizes the importance of applying concepts from economics and managerial accounting to an information-based economy. Dr. Gordon is the co-creator (with Martin P. Loeb) of the Gordon-Loeb Model, which provides a mathematical economic model for deriving an organization's optimal investment level in cyber/information security. The Gordon-Loeb Model has been featured in The Wall Street Journal and The Financial Times. For a 3-minute video that provides a non-mathematical overview of the Model, go to: https://www.youtube.com/watch?v=cd8dT0FuqQ4. Dr. Gordon also is the author of several books, including Managerial Accounting: Concepts and Empirical Evidence, Managing Cybersecurity Resources: A Cost-Benefit Analysis and Improving Capital Budgeting: A Decision Support System Approach. In addition, he is the Editor-in-Chief of the Journal of Accounting and Public Policy and serves on the editorial boards of several other journals. Dr. Gordon's research has over 6,400 citations in Google Scholar.",
+            "Banks Barbados Brewery\nBanks (Barbados) Breweries Ltd. is a Caribbean brewery founded in 1961 in St. Michael, Barbados. The company's main brand, the Banks Beer brand is also the flagship product of the wider Banks Holdings Limited. (\"BHL Group\") which owns the Banks (Barbados) Breweries Ltd. company.",
+            "Maryland gubernatorial election, 2018\nThe 2018 Maryland gubernatorial election will take place on November 6, 2018, to elect the Governor of Maryland. The Republican and Democratic primaries will be held on June 26, 2018.",
+            "Global Warming Solutions Act of 2006\nThe Global Warming Solutions Act of 2006, or Assembly Bill (AB) 32, is a California State Law that fights global warming by establishing a comprehensive program to reduce greenhouse gas emissions from all sources throughout the state. AB 32 was authored by then-Assembly member Fran Pavley and Assembly Speaker Fabian Nunez (D-Los Angeles) and signed into law by Governor Arnold Schwarzenegger on September 27, 2006.",
+            "Ohio State Route 267\nState Route 267 (SR 267, OH 267) is a north\u2013south state highway located in northeast Ohio, a U.S. state. Its southern terminus is at a signalized intersection with the duplex of State Route 7 and State Route 39 in downtown East Liverpool, amidst the interchange where State Route 7 and State Route 39 join the U.S. Route 30/State Route 11 freeway in opposing directions. The northern terminus of State Route 267 is at a diamond interchange with the U.S. Route 30/State Route 7/State Route 11 freeway near Calcutta, one where State Route 7 splits from U.S. Route 30/State Route 11 and takes over for State Route 267 heading north.",
+            "Snow beer\nSnow beer (simplified Chinese: \u96ea\u82b1\u5564\u9152, literally \"Snowflake beer\") is a lager beer from China. It is brewed by CR Snow, that (until October 2016) was a joint venture between SABMiller and China Resources Enterprises. When Snow was first released in 1993 it was produced by three breweries. As of 2014, CRSB is the largest brewing company in China with over 90 breweries across the country, brewing more than 100 million hectolitres of Snow every year. Snow beer is the best-selling beer brand in the world, despite largely being sold only in China.",
+            "Karine Nahon\nKarine Nahon (Hebrew: \u05e7\u05e8\u05d9\u05df \u05e0\u05d4\u05d5\u05df\u200e \u200e ), is an Israeli information scientist and public intellectual active in the area of information, technology and society. She holds a dual position as an associate professor in the The Information School at University of Washington and the Interdisciplinary Center Herzliya. In July 2017, Nahon was named #24 on Forbes' list of 50 Most Influential Women in Israel .Her co-authored book \u201cGoing Viral\u201d was awarded Best Information Science Book Award by the Association for Information Science and Technology and the 2014 Outstanding Academic Title Award by the American Library Association."
+        ],
+        "thoughts": [
+            "As of 2006, the largest brewery in the state of Maryland was Flying Dog Brewery, located in Frederick, Maryland. Flying Dog Brewery was founded in 1990 and has since become the largest brewery in the state.",
+            "Unfortunately, there is no information provided about breweries in Maryland that were purchased in 2006.",
+            "Based on the information provided, it is not possible to determine which brewery among those found in step 2 was purchased by the largest brewery identified in step 1. Additional information about brewery acquisitions in Maryland would be needed to make this determination.",
+            "The original founders of the brewery identified in step 3, East African Breweries Limited, are not mentioned in the provided information. Therefore, the original founders of East African Breweries Limited are not included in the given text.",
+            "Since the original founders of East African Breweries Limited are not mentioned in the provided information, we are unable to identify the female founder from the list of founders."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who was the original female founder of the brewery that was purchased in 2006 by the largest brewery in the state of Maryland?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the largest brewery in the state of Maryland as of 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Find out which brewery was purchased by the largest brewery in Maryland in 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Determine the original founder(s) of the brewery identified in Step 2.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify if there was a female founder among the original founders of the brewery from Step 3.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "To answer this question, we must trace the ownership and founding history of the brewery purchased by the largest brewery in Maryland in 2006. First, we identify the largest Maryland brewery at that time (Node 1), then find which brewery it acquired in 2006 (Node 2). Next, we determine the original founders of the acquired brewery (Node 3), and finally identify if any of these founders was a female (Node 4). This sequence ensures that we consider both the current and historical contexts of brewery ownership and founding."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Flying Dog Brewery\nFlying Dog Brewery is a craft brewery located in Frederick, Maryland. Founded in 1990 by George Stranahan and Richard McIntyre, it is the largest brewery in Maryland. As of 2015, Flying Dog is the 37th largest craft brewery in the United States.",
+            "Frederick Brewing Company\nFrederick Brewing Company (at one point also known as Wild Goose Brewery) is a brewery at the Wedgewood Business Park in Frederick, Maryland, United States. It was founded sometime between 1992 and 1993 by Marjorie McGinnis, Kevin Brannon, and Steve Nordahl and had its grand opening on 12 February 1997. The company was taken over by Snyder International Brewing Group in 1999 and merged with Snyder International Brewing Group in 2001. In early 2002 or 2003 the company was placed into receivership and in 2006 was purchased by Flying Dog Brewery and renamed Wild Goose Brewery. At some point the brewery stopped being known as Wild Goose Brewery and just became Flying Dog Brewery.",
+            "Truman's Brewery\nTruman's Brewery was a large East London brewery and one of the largest brewers in the world at the end of the 19th century. Founded around 1666, the Black Eagle Brewery was established on a plot of land next to what is now Brick Lane in London, E1. It grew steadily until the 18th century when, under the management of Benjamin Truman, and driven by the demand for porter, it expanded rapidly and became one of the largest brewers in London. Its growth continued into and through the 19th century with the expansion of its brewery and pub estate. In 1873, it purchased Philips Brewery in Burton and became the largest brewery in the world.",
+            "Browar \u0141om\u017ca\nThe Browar \u0141om\u017ca (] ) is Poland's fourth largest brewery. Browar \u0141om\u017ca Sp. z o.o. launched the plant in 1968. In 2007 it was purchased by Royal Unibrew. In 2011 it was sold to Polish Brewery Van Pur of Warsaw. The Browar \u0141om\u017ca brewery is located in \u0141om\u017ca, Poland.",
+            "Pearl Brewing Company\nThe Pearl Brewing Company (also known as the Pearl Brewery or just Pearl) was an American brewery, established in 1883 in Downtown San Antonio, Texas, USA. In 1985, Pearl's parent company purchased the Pabst Brewing Company and assumed the Pabst name. In 1999, the Pabst Brewing Company began transferring its production to Miller Brewing, on a contract basis, and closing all of its breweries. Pearl beer is still in production at Miller's Ft. Worth, Texas facility, but the Pearl Brewery in San Antonio was closed in 2001. Since then, the former brewery was purchased by Silver Ventures, Inc., which has made the property the crown jewel in revitalization efforts of southern Midtown and northern Downtown San Antonio.",
+            "Boulevard Brewing Company\nBoulevard Brewing Company is a brewery located in Kansas City, Missouri. The Brewers Association currently ranks the American arm of Boulevard's parent company, Duvel Moortgat USA, as the 12th largest craft brewery, and the 18th largest active brewery in the United States based on 2014 sales volume. Before the sale of Anheuser-Busch to InBev in 2008, Boulevard was the largest independent American brewery in the state of Missouri. Boulevard's beers are available in select markets across the country.",
+            "\u017bywiec Brewery\n\u017bywiec Brewery (] ) is a brewery founded in 1856, in \u017bywiec, Poland, then part of Austria-Hungary. It was nationalised after the Second World War. Grupa \u017bywiec S.A. consists of five main breweries: \u017bywiec Brewery, Elbrewery, Le\u017cajsk, Warka Brewery and Cieszyn Brewery. Currently the Dutch Heineken Group (Heineken International Beheer B.V.), with a 61% shareholding, has control over major operations. The brewery has the capacity of producing 5 million hls a year, making it the largest brewery in Grupa \u017bywiec.",
+            "Sun King Brewing\nSun King Brewing is a brewery in the Cole-Noble District of Indianapolis, Indiana, United States. It is the largest brewery in Indianapolis and the second largest brewery in the state. In 2011, Sun King won eight medals, including four gold medals, total at the Great American Beer Festival. Sun King was the first commercial brewery to open up in approximately 30 years in Indianapolis.",
+            "Marble Brewery (Albuquerque, New Mexico)\nMarble Brewery is a brewery in Albuquerque, New Mexico, founded in 2008. As of 2014, it was the second largest brewery in New Mexico behind Santa Fe Brewing Company with an annual production volume of 13,000 US barrels. In 2016, the brewery completed a major expansion which increased the production capacity to 30,000 barrels. Its beers have won several awards and it was named Small Brewery and Brewmaster of the Year at the 2014 Great American Beer Festival.",
+            "Gordon Biersch Brewing Company\nGordon Biersch Brewery is an American brewery founded by Dan Gordon and Dean Biersch. Gordon, a graduate from the five-year brewing engineering program at Weihenstephan, Germany, and Biersch opened their first brewery restaurant in Palo Alto, California in July 1988. In 1999, the restaurants were sold to what ultimately became CraftWorks Restaurants & Breweries.",
+            "Erie Brewing Company\nThe Erie Brewery Company is an American brewery in Erie, Pennsylvania. Founded as a brewpub in 1994, Erie Brewing transitioned to a full-time brewery in 1999. The brewery has won three medals from the Great American Beer Festival.",
+            "Karl Strauss Brewing Company\nKarl Strauss Brewing Company is a San Diego, California-based craft brewery with eleven brewpub locations across Southern California and an onsite tasting room at their main brewery in the Pacific Beach neighborhood of San Diego. Besides being available at its own brewpubs the company\u2019s beers are distributed across all of California. Karl Strauss is the oldest surviving brewery in San Diego County, having been founded in 1989, and is credited with launching the county's rise to prominence in the craft brewing industry. Based on 2016 sales volume it is the 47th largest brewery in the United States. In 2016 Karl Strauss was declared the Mid-Size Brewery of the Year at the Great American Beer Festival.",
+            "Christian Moerlein Brewing Co.\nChristian Moerlein Brewing Co. is a private beer company that began production in 1853 in Cincinnati, Ohio by German immigrant Christian Moerlein. Before closing its doors in 1919 as result of prohibition, Christian Moerlein was among the ten largest American breweries by volume. In 1981, the brand was revived by the Hudepohl Brewing Company as a \"better beer\" a precursor to the current craft beer category and is considered a pioneer craft beer of today's craft beer movement. In 1999, Hudepohl-Schoenling Brewing Co. sold out to a group of out-of-town owners, a sale that included the famed Christian Moerlein craft beer brand. In 2004, Greg Hardman a Cincinnati resident purchased Christian Moerlein, as well as 65 other historic Cincinnati brands, returning local ownership to Cincinnati in a move that included a plan to return Cincinnati's grand brewing traditions. The four phase plan was, 1) return the local ownership of Cincinnati's great beer brands to Cincinnati; 2) build their base of sales to; 3) open local brewing operations in the heart of Cincinnati's historic Brewery District and; 4) open a World-class Moerlein Lager House on the banks of the Ohio River to act as a signal that beer is back in Cincinnati.",
+            "Bavarian Brewing Company\nBavarian Brewing Company was a brewery established in Covington, Kentucky, in 1866 by Julius Deglow, but became known as the Bavarian Brewery in the 1870s. The brewery was originally located on Pike Street and the business expanded to include the 12th street property by 1877. The company also operated as the John Meyer Brewery and the Meyer-Riedlin Brewery before becoming incorporated at Bavarian Brewery Co. in 1889 by William Riedlin. The company was family owned until it was acquired by International Breweries, Inc.(IBI) in 1959. However, it operated as the Bavarian Division of IBI and continued to produce its flagship beer, Bavarian's, until the facility closed in 1966. The property was placed on the National Register of Historic Places in 1996 and rehabilitated shortly thereafter."
+        ],
+        "thoughts": [
+            "As of 2006, the largest brewery in the state of Maryland was Flying Dog Brewery, located in Frederick, Maryland.",
+            "The Frederick Brewing Company was purchased by Flying Dog Brewery in 2006.",
+            "Frederick Brewing Company was founded by Marjorie McGinnis, Kevin Brannon, and Steve Nordahl. Pearl Brewing Company was established in 1883 in Downtown San Antonio, Texas. Erie Brewing Company was founded as a brewpub in 1994. Boulevard Brewing Company was founded in Kansas City, Missouri. Karl Strauss Brewing Company was founded in 1989 in San Diego, California by Karl Strauss. Christian Moerlein Brewing Co. was founded in 1853 in Cincinnati, Ohio by Christian Moerlein. Bavarian Brewing Company was established in Covington, Kentucky in 1866 by Julius Deglow and later incorporated as Bavarian Brewery Co. by William Riedlin. Gordon Biersch Brewing Company was founded by Dan Gordon and Dean Biersch in Palo Alto, California in July 1988.",
+            "Yes, there was a female founder among the original founders of the brewery from Step 3. Marjorie McGinnis was one of the founders of Frederick Brewing Company."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who was the original female founder of the brewery that was purchased in 2006 by the largest brewery in the state of Maryland?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the largest brewery in the state of Maryland as of 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which breweries were purchased by the largest brewery in Maryland in 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "For each brewery identified in step 2, find the original founders.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the gender of the founders identified in step 3 and identify any female founders.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph is structured to first identify the largest brewery in Maryland, which is critical as it contextualizes which brewery purchases to investigate for 2006. Once the purchasing brewery is identified, the task moves to pinpoint which specific brewery was acquired by this largest entity in that year. Subsequently, the graph focuses on discovering the founders of the acquired brewery and finally hones in on determining their genders to find the original female founder."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Frederick Brewing Company\nFrederick Brewing Company (at one point also known as Wild Goose Brewery) is a brewery at the Wedgewood Business Park in Frederick, Maryland, United States. It was founded sometime between 1992 and 1993 by Marjorie McGinnis, Kevin Brannon, and Steve Nordahl and had its grand opening on 12 February 1997. The company was taken over by Snyder International Brewing Group in 1999 and merged with Snyder International Brewing Group in 2001. In early 2002 or 2003 the company was placed into receivership and in 2006 was purchased by Flying Dog Brewery and renamed Wild Goose Brewery. At some point the brewery stopped being known as Wild Goose Brewery and just became Flying Dog Brewery.",
+            "Flying Dog Brewery\nFlying Dog Brewery is a craft brewery located in Frederick, Maryland. Founded in 1990 by George Stranahan and Richard McIntyre, it is the largest brewery in Maryland. As of 2015, Flying Dog is the 37th largest craft brewery in the United States.",
+            "Pearl Brewing Company\nThe Pearl Brewing Company (also known as the Pearl Brewery or just Pearl) was an American brewery, established in 1883 in Downtown San Antonio, Texas, USA. In 1985, Pearl's parent company purchased the Pabst Brewing Company and assumed the Pabst name. In 1999, the Pabst Brewing Company began transferring its production to Miller Brewing, on a contract basis, and closing all of its breweries. Pearl beer is still in production at Miller's Ft. Worth, Texas facility, but the Pearl Brewery in San Antonio was closed in 2001. Since then, the former brewery was purchased by Silver Ventures, Inc., which has made the property the crown jewel in revitalization efforts of southern Midtown and northern Downtown San Antonio.",
+            "Erie Brewing Company\nThe Erie Brewery Company is an American brewery in Erie, Pennsylvania. Founded as a brewpub in 1994, Erie Brewing transitioned to a full-time brewery in 1999. The brewery has won three medals from the Great American Beer Festival.",
+            "Karl Strauss Brewing Company\nKarl Strauss Brewing Company is a San Diego, California-based craft brewery with eleven brewpub locations across Southern California and an onsite tasting room at their main brewery in the Pacific Beach neighborhood of San Diego. Besides being available at its own brewpubs the company\u2019s beers are distributed across all of California. Karl Strauss is the oldest surviving brewery in San Diego County, having been founded in 1989, and is credited with launching the county's rise to prominence in the craft brewing industry. Based on 2016 sales volume it is the 47th largest brewery in the United States. In 2016 Karl Strauss was declared the Mid-Size Brewery of the Year at the Great American Beer Festival.",
+            "Bavarian Brewing Company\nBavarian Brewing Company was a brewery established in Covington, Kentucky, in 1866 by Julius Deglow, but became known as the Bavarian Brewery in the 1870s. The brewery was originally located on Pike Street and the business expanded to include the 12th street property by 1877. The company also operated as the John Meyer Brewery and the Meyer-Riedlin Brewery before becoming incorporated at Bavarian Brewery Co. in 1889 by William Riedlin. The company was family owned until it was acquired by International Breweries, Inc.(IBI) in 1959. However, it operated as the Bavarian Division of IBI and continued to produce its flagship beer, Bavarian's, until the facility closed in 1966. The property was placed on the National Register of Historic Places in 1996 and rehabilitated shortly thereafter.",
+            "Boulevard Brewing Company\nBoulevard Brewing Company is a brewery located in Kansas City, Missouri. The Brewers Association currently ranks the American arm of Boulevard's parent company, Duvel Moortgat USA, as the 12th largest craft brewery, and the 18th largest active brewery in the United States based on 2014 sales volume. Before the sale of Anheuser-Busch to InBev in 2008, Boulevard was the largest independent American brewery in the state of Missouri. Boulevard's beers are available in select markets across the country.",
+            "Marble Brewery (Albuquerque, New Mexico)\nMarble Brewery is a brewery in Albuquerque, New Mexico, founded in 2008. As of 2014, it was the second largest brewery in New Mexico behind Santa Fe Brewing Company with an annual production volume of 13,000 US barrels. In 2016, the brewery completed a major expansion which increased the production capacity to 30,000 barrels. Its beers have won several awards and it was named Small Brewery and Brewmaster of the Year at the 2014 Great American Beer Festival.",
+            "Gordon Biersch Brewing Company\nGordon Biersch Brewery is an American brewery founded by Dan Gordon and Dean Biersch. Gordon, a graduate from the five-year brewing engineering program at Weihenstephan, Germany, and Biersch opened their first brewery restaurant in Palo Alto, California in July 1988. In 1999, the restaurants were sold to what ultimately became CraftWorks Restaurants & Breweries.",
+            "Banks Barbados Brewery\nBanks (Barbados) Breweries Ltd. is a Caribbean brewery founded in 1961 in St. Michael, Barbados. The company's main brand, the Banks Beer brand is also the flagship product of the wider Banks Holdings Limited. (\"BHL Group\") which owns the Banks (Barbados) Breweries Ltd. company.",
+            "Truman's Brewery\nTruman's Brewery was a large East London brewery and one of the largest brewers in the world at the end of the 19th century. Founded around 1666, the Black Eagle Brewery was established on a plot of land next to what is now Brick Lane in London, E1. It grew steadily until the 18th century when, under the management of Benjamin Truman, and driven by the demand for porter, it expanded rapidly and became one of the largest brewers in London. Its growth continued into and through the 19th century with the expansion of its brewery and pub estate. In 1873, it purchased Philips Brewery in Burton and became the largest brewery in the world.",
+            "\u017bywiec Brewery\n\u017bywiec Brewery (] ) is a brewery founded in 1856, in \u017bywiec, Poland, then part of Austria-Hungary. It was nationalised after the Second World War. Grupa \u017bywiec S.A. consists of five main breweries: \u017bywiec Brewery, Elbrewery, Le\u017cajsk, Warka Brewery and Cieszyn Brewery. Currently the Dutch Heineken Group (Heineken International Beheer B.V.), with a 61% shareholding, has control over major operations. The brewery has the capacity of producing 5 million hls a year, making it the largest brewery in Grupa \u017bywiec.",
+            "Browar \u0141om\u017ca\nThe Browar \u0141om\u017ca (] ) is Poland's fourth largest brewery. Browar \u0141om\u017ca Sp. z o.o. launched the plant in 1968. In 2007 it was purchased by Royal Unibrew. In 2011 it was sold to Polish Brewery Van Pur of Warsaw. The Browar \u0141om\u017ca brewery is located in \u0141om\u017ca, Poland.",
+            "Sun King Brewing\nSun King Brewing is a brewery in the Cole-Noble District of Indianapolis, Indiana, United States. It is the largest brewery in Indianapolis and the second largest brewery in the state. In 2011, Sun King won eight medals, including four gold medals, total at the Great American Beer Festival. Sun King was the first commercial brewery to open up in approximately 30 years in Indianapolis."
+        ],
+        "thoughts": [
+            "As of 2006, the largest brewery in the state of Maryland was Flying Dog Brewery, located in Frederick, Maryland. Flying Dog Brewery was founded in 1990 and has since become the largest brewery in the state.",
+            "In 2006, Flying Dog Brewery purchased Frederick Brewing Company and renamed it Wild Goose Brewery. There is no information indicating that Flying Dog Brewery purchased any other breweries in Maryland in 2006. Therefore, the only brewery purchased by the largest brewery in Maryland in 2006 was Frederick Brewing Company, which was then renamed Wild Goose Brewery.",
+            "Frederick Brewing Company: Founded by Marjorie McGinnis, Kevin Brannon, and Steve Nordahl\nFlying Dog Brewery: Founded by George Stranahan and Richard McIntyre\nPearl Brewing Company: Founded in 1883 in Downtown San Antonio, Texas\nErie Brewing Company: Founded as a brewpub in 1994\nKarl Strauss Brewing Company: Founded in 1989\nBavarian Brewing Company: Established in Covington, Kentucky in 1866 by Julius Deglow, and later incorporated by William Riedlin in 1889\nBoulevard Brewing Company: Founded in Kansas City, Missouri\nMarble Brewery: Founded in 2008 in Albuquerque, New Mexico",
+            "Out of the founders identified, Marjorie McGinnis is the only female founder."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "Who was the original female founder of the brewery that was purchased in 2006 by the largest brewery in the state of Maryland?",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the largest brewery in the state of Maryland.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine which brewery was purchased by the largest brewery in Maryland in 2006.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the original female founder of the brewery identified in step 2.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The question requires understanding a sequence of events and entities: first by identifying the largest brewery in Maryland, then discovering which brewery it acquired in 2006, and finally uncovering the original female founder of that acquired brewery. The execution graph is structured to tackle each part of this problem in a step-by-step manner, ensuring all necessary information is layered correctly to reach a comprehensive answer."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "Flying Dog Brewery\nFlying Dog Brewery is a craft brewery located in Frederick, Maryland. Founded in 1990 by George Stranahan and Richard McIntyre, it is the largest brewery in Maryland. As of 2015, Flying Dog is the 37th largest craft brewery in the United States.",
+            "Frederick Brewing Company\nFrederick Brewing Company (at one point also known as Wild Goose Brewery) is a brewery at the Wedgewood Business Park in Frederick, Maryland, United States. It was founded sometime between 1992 and 1993 by Marjorie McGinnis, Kevin Brannon, and Steve Nordahl and had its grand opening on 12 February 1997. The company was taken over by Snyder International Brewing Group in 1999 and merged with Snyder International Brewing Group in 2001. In early 2002 or 2003 the company was placed into receivership and in 2006 was purchased by Flying Dog Brewery and renamed Wild Goose Brewery. At some point the brewery stopped being known as Wild Goose Brewery and just became Flying Dog Brewery.",
+            "\u017bywiec Brewery\n\u017bywiec Brewery (] ) is a brewery founded in 1856, in \u017bywiec, Poland, then part of Austria-Hungary. It was nationalised after the Second World War. Grupa \u017bywiec S.A. consists of five main breweries: \u017bywiec Brewery, Elbrewery, Le\u017cajsk, Warka Brewery and Cieszyn Brewery. Currently the Dutch Heineken Group (Heineken International Beheer B.V.), with a 61% shareholding, has control over major operations. The brewery has the capacity of producing 5 million hls a year, making it the largest brewery in Grupa \u017bywiec.",
+            "Truman's Brewery\nTruman's Brewery was a large East London brewery and one of the largest brewers in the world at the end of the 19th century. Founded around 1666, the Black Eagle Brewery was established on a plot of land next to what is now Brick Lane in London, E1. It grew steadily until the 18th century when, under the management of Benjamin Truman, and driven by the demand for porter, it expanded rapidly and became one of the largest brewers in London. Its growth continued into and through the 19th century with the expansion of its brewery and pub estate. In 1873, it purchased Philips Brewery in Burton and became the largest brewery in the world.",
+            "Banks Barbados Brewery\nBanks (Barbados) Breweries Ltd. is a Caribbean brewery founded in 1961 in St. Michael, Barbados. The company's main brand, the Banks Beer brand is also the flagship product of the wider Banks Holdings Limited. (\"BHL Group\") which owns the Banks (Barbados) Breweries Ltd. company.",
+            "Boulevard Brewing Company\nBoulevard Brewing Company is a brewery located in Kansas City, Missouri. The Brewers Association currently ranks the American arm of Boulevard's parent company, Duvel Moortgat USA, as the 12th largest craft brewery, and the 18th largest active brewery in the United States based on 2014 sales volume. Before the sale of Anheuser-Busch to InBev in 2008, Boulevard was the largest independent American brewery in the state of Missouri. Boulevard's beers are available in select markets across the country.",
+            "Sun King Brewing\nSun King Brewing is a brewery in the Cole-Noble District of Indianapolis, Indiana, United States. It is the largest brewery in Indianapolis and the second largest brewery in the state. In 2011, Sun King won eight medals, including four gold medals, total at the Great American Beer Festival. Sun King was the first commercial brewery to open up in approximately 30 years in Indianapolis.",
+            "Gordon Biersch Brewing Company\nGordon Biersch Brewery is an American brewery founded by Dan Gordon and Dean Biersch. Gordon, a graduate from the five-year brewing engineering program at Weihenstephan, Germany, and Biersch opened their first brewery restaurant in Palo Alto, California in July 1988. In 1999, the restaurants were sold to what ultimately became CraftWorks Restaurants & Breweries.",
+            "Bavarian Brewing Company\nBavarian Brewing Company was a brewery established in Covington, Kentucky, in 1866 by Julius Deglow, but became known as the Bavarian Brewery in the 1870s. The brewery was originally located on Pike Street and the business expanded to include the 12th street property by 1877. The company also operated as the John Meyer Brewery and the Meyer-Riedlin Brewery before becoming incorporated at Bavarian Brewery Co. in 1889 by William Riedlin. The company was family owned until it was acquired by International Breweries, Inc.(IBI) in 1959. However, it operated as the Bavarian Division of IBI and continued to produce its flagship beer, Bavarian's, until the facility closed in 1966. The property was placed on the National Register of Historic Places in 1996 and rehabilitated shortly thereafter.",
+            "Pearl Brewing Company\nThe Pearl Brewing Company (also known as the Pearl Brewery or just Pearl) was an American brewery, established in 1883 in Downtown San Antonio, Texas, USA. In 1985, Pearl's parent company purchased the Pabst Brewing Company and assumed the Pabst name. In 1999, the Pabst Brewing Company began transferring its production to Miller Brewing, on a contract basis, and closing all of its breweries. Pearl beer is still in production at Miller's Ft. Worth, Texas facility, but the Pearl Brewery in San Antonio was closed in 2001. Since then, the former brewery was purchased by Silver Ventures, Inc., which has made the property the crown jewel in revitalization efforts of southern Midtown and northern Downtown San Antonio.",
+            "Marble Brewery (Albuquerque, New Mexico)\nMarble Brewery is a brewery in Albuquerque, New Mexico, founded in 2008. As of 2014, it was the second largest brewery in New Mexico behind Santa Fe Brewing Company with an annual production volume of 13,000 US barrels. In 2016, the brewery completed a major expansion which increased the production capacity to 30,000 barrels. Its beers have won several awards and it was named Small Brewery and Brewmaster of the Year at the 2014 Great American Beer Festival.",
+            "Browar \u0141om\u017ca\nThe Browar \u0141om\u017ca (] ) is Poland's fourth largest brewery. Browar \u0141om\u017ca Sp. z o.o. launched the plant in 1968. In 2007 it was purchased by Royal Unibrew. In 2011 it was sold to Polish Brewery Van Pur of Warsaw. The Browar \u0141om\u017ca brewery is located in \u0141om\u017ca, Poland.",
+            "Erie Brewing Company\nThe Erie Brewery Company is an American brewery in Erie, Pennsylvania. Founded as a brewpub in 1994, Erie Brewing transitioned to a full-time brewery in 1999. The brewery has won three medals from the Great American Beer Festival.",
+            "Karl Strauss Brewing Company\nKarl Strauss Brewing Company is a San Diego, California-based craft brewery with eleven brewpub locations across Southern California and an onsite tasting room at their main brewery in the Pacific Beach neighborhood of San Diego. Besides being available at its own brewpubs the company\u2019s beers are distributed across all of California. Karl Strauss is the oldest surviving brewery in San Diego County, having been founded in 1989, and is credited with launching the county's rise to prominence in the craft brewing industry. Based on 2016 sales volume it is the 47th largest brewery in the United States. In 2016 Karl Strauss was declared the Mid-Size Brewery of the Year at the Great American Beer Festival.",
+            "Christian Moerlein Brewing Co.\nChristian Moerlein Brewing Co. is a private beer company that began production in 1853 in Cincinnati, Ohio by German immigrant Christian Moerlein. Before closing its doors in 1919 as result of prohibition, Christian Moerlein was among the ten largest American breweries by volume. In 1981, the brand was revived by the Hudepohl Brewing Company as a \"better beer\" a precursor to the current craft beer category and is considered a pioneer craft beer of today's craft beer movement. In 1999, Hudepohl-Schoenling Brewing Co. sold out to a group of out-of-town owners, a sale that included the famed Christian Moerlein craft beer brand. In 2004, Greg Hardman a Cincinnati resident purchased Christian Moerlein, as well as 65 other historic Cincinnati brands, returning local ownership to Cincinnati in a move that included a plan to return Cincinnati's grand brewing traditions. The four phase plan was, 1) return the local ownership of Cincinnati's great beer brands to Cincinnati; 2) build their base of sales to; 3) open local brewing operations in the heart of Cincinnati's historic Brewery District and; 4) open a World-class Moerlein Lager House on the banks of the Ohio River to act as a signal that beer is back in Cincinnati.",
+            "Chen Tao (True Way Cult)\nChen Tao (\u771f\u9053, or \"True Way\") was a UFO religion that originated in Taiwan. It was by Hon-Ming Chen (born 1955) who first associated it with UFOs, and later had the group misrepresented as a New Age UFO cult. Chen was a former professor who claimed to be atheist until he joined a religious cultivation group, which dated back for two generations to the original female founder, Teacher Yu-Hsia Chen. But he broke with the group headed by the third-generation teacher in 1993 and created, with another fellow-cultivator, Tao-hung Ma, their own groups. It was later when he broke with Ma and decided to move to the US that new elements such as the pseudo-scientific information of cosmology, and flying saucers, as well as Christian motifs of the prophecy of the end and the great tribulation, etc., were introduced into the group."
+        ],
+        "thoughts": [
+            "The largest brewery in the state of Maryland is Flying Dog Brewery, located in Frederick, Maryland. As of 2015, it is the 37th largest craft brewery in the United States.",
+            "The Frederick Brewing Company was purchased by the largest brewery in Maryland in 2006, which was Flying Dog Brewery.",
+            "Marjorie McGinnis is the original female founder of the Frederick Brewing Company, which was also known as Wild Goose Brewery."
+        ],
+        "is_best": false
+    }
+]

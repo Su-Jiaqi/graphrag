@@ -1,0 +1,634 @@
+[
+    {
+        "question": "This American crime film set in South Los Angeles was written and directed by the same director and writer of screenwriter of \"Street Kings\", \"End of Watch\", \"Sabotage\", \"Fury\" and what other film? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the list of films directed and written by David Ayer, who is the screenwriter of 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "From the retrieved list of films written or directed by David Ayer, identify any American crime films set in South Los Angeles.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify which of the identified films from the previous step was written and directed by David Ayer and matches the description in the question.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph for this task begins by retrieving the list of films associated with David Ayer, who is known for writing 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury'. Next, it filters these films to identify those that are American crime films set in South Los Angeles. Finally, it selects the one film from this list that was both written and directed by Ayer, providing the answer to the question."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "David Ayer\nDavid Ayer (born January 18, 1968) is an American film director, producer, and screenwriter. He is best known for being the writer of \"Training Day\" (2001), and the director and writer of \"Harsh Times\" (2005), \"Street Kings\" (2008), \"End of Watch\" (2012), \"Sabotage\" (2014), \"Fury\" (2014), and \"Suicide Squad\" (2016).",
+            "End of Watch\nEnd of Watch is a 2012 American crime drama film written and directed by David Ayer. It stars Jake Gyllenhaal and Michael Pe\u00f1a as Brian Taylor and Miguel Zavala, two Los Angeles Police Department officers who work in South Los Angeles. The film focuses on their day-to-day police work, their dealings with a certain group of gang members, their friendship with each other, and their personal relationships.",
+            "Harsh Times\nHarsh Times is a 2005 American crime film set in South Los Angeles. The film stars Christian Bale and Freddy Rodriguez, and was written and directed by David Ayer, who wrote the script for the Academy Award-winning 2001 film \"Training Day\". The film was distributed by Metro-Goldwyn-Mayer and Bauer Martinez Entertainment. Ayer says that the film's characters are largely based on the people he knew when he lived in South Central.",
+            "Street Kings 2: Motor City\nStreet Kings 2: Motor City is a 2011 American crime film starring Ray Liotta and directed by Chris Fisher. It is the sequel to the 2008's \"Street Kings\" starring Keanu Reeves. The film was released on direct-to-DVD in the United States on April 19, 2011.",
+            "Nick Fury: Agent of S.H.I.E.L.D. (film)\nNick Fury: Agent of S.H.I.E.L.D. is an American television film based on the Marvel Comics character Nick Fury. It was first broadcast on May 26, 1998 on Fox. Directed by Rod Hardy, the film stars David Hasselhoff as Fury, a retired super spy who is approached to return to duty to take down the terrorist organization HYDRA, who threaten to attack Manhattan with a pathogen they have reconstituted known as the Death's Head virus. Lisa Rinna plays Contessa Valentina \"Val\" Allegra de Fontaine, and Sandra Hess plays Andrea von Strucker / Viper. It was released on DVD on September 30, 2008.",
+            "Christopher Guest\nChristopher Haden-Guest, 5th Baron Haden-Guest (born February 5, 1948), simply known as Christopher Guest, is an English-American screenwriter, composer, musician, director, actor, and comedian who holds dual British and American citizenship. Guest is most widely known in Hollywood for having written, directed and starred in his series of comedy films shot in mock-documentary (mockumentary) style. Many scenes and character backgrounds in Guest's films are written and directed, although actors have no rehearsal time and the ensemble improvise scenes while filming them. The series of films began with \"This Is Spinal Tap\" (directed by Rob Reiner), and continued with \"Waiting for Guffman\", \"Best In Show\", \"A Mighty Wind\", \"For Your Consideration\", and \"Mascots\".",
+            "Wolverine/Nick Fury: The Scorpio Connection\nWolverine/Nick Fury: The Scorpio Connection is a 1989 graphic novel published by Marvel Comics and written by Archie Goodwin and drawn by Howard Chaykin. The story concerns a new Scorpio who is attempting to kill Nick Fury while Wolverine becomes involved when he investigates the murder of a friend who once saved his life at the hands of the new Scorpio. It is the first part of the Wolverine/Nick Fury trilogy.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend."
+        ],
+        "thoughts": [
+            "Films directed and written by David Ayer:\n1. Harsh Times (2005)\n2. Street Kings (2008)\n3. End of Watch (2012)\n4. Sabotage (2014)\n5. Fury (2014)\n6. Suicide Squad (2016)",
+            "The American crime film set in South Los Angeles from the list of films written or directed by David Ayer is \"End of Watch\" (2012).",
+            "The film \"End of Watch\" (2012) was written and directed by David Ayer and matches the description in the question."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This American crime film set in South Los Angeles was written and directed by the same director and writer of screenwriter of \"Street Kings\", \"End of Watch\", \"Sabotage\", \"Fury\" and what other film? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the common writer/director for the films 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve a list of films or filmography for the identified writer/director from Node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the titles of films written and directed by this person that are American crime films set in South Los Angeles.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Compare the film titles from Node 2 and Node 3 to identify a common film that fits the description given in the question.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph for the complex question is structured to systematically identify the writer/director of the mentioned films, retrieve their complete filmography, and filter it down to identify an appropriate film that matches the criteria of being an American crime film set in South Los Angeles. The initial step is to identify and confirm the common writer/director, followed by gathering their filmography. These results are narrowed down to films that meet the specific setting and genre, before finally matching them to arrive at the correct film title."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "Harsh Times\nHarsh Times is a 2005 American crime film set in South Los Angeles. The film stars Christian Bale and Freddy Rodriguez, and was written and directed by David Ayer, who wrote the script for the Academy Award-winning 2001 film \"Training Day\". The film was distributed by Metro-Goldwyn-Mayer and Bauer Martinez Entertainment. Ayer says that the film's characters are largely based on the people he knew when he lived in South Central.",
+            "End of Watch\nEnd of Watch is a 2012 American crime drama film written and directed by David Ayer. It stars Jake Gyllenhaal and Michael Pe\u00f1a as Brian Taylor and Miguel Zavala, two Los Angeles Police Department officers who work in South Los Angeles. The film focuses on their day-to-day police work, their dealings with a certain group of gang members, their friendship with each other, and their personal relationships.",
+            "David Ayer\nDavid Ayer (born January 18, 1968) is an American film director, producer, and screenwriter. He is best known for being the writer of \"Training Day\" (2001), and the director and writer of \"Harsh Times\" (2005), \"Street Kings\" (2008), \"End of Watch\" (2012), \"Sabotage\" (2014), \"Fury\" (2014), and \"Suicide Squad\" (2016).",
+            "South of 8\nSouth of 8 is a 2016 American crime film written by first time director Tony Olmos and Rosewood Five Productions, based on a string of bank robberies set in the near future. It officially premiered September 26, 2016 at the Downtown Los Angeles Film Festival in Los Angeles, California, where it won the jury award for Best Dramatic Screenplay. Prior to its premiere, the film won 'Best Trailer' at the San Diego Film Awards and was a finalist for Audience Choice #TrailerChallenge at DTLAFF via Indi.com. The film screened again on February 11, 2017 at San Diego Film Week and took home the award for \"Best Horror/SciFi/Thriller Feature.\"",
+            "Set It Off (film)\nSet It Off is a 1996 American crime action film directed by F. Gary Gray and written by Kate Lanier and Takashi Bufford. The film stars Jada Pinkett Smith, Queen Latifah, Vivica A. Fox and Kimberly Elise (in her film debut). It follows four close friends in Los Angeles, California, who decide to plan and execute a bank robbery. They decide to do so for different reasons, although all four want better for themselves and their families. The film became a critical and box office success, grossing over $41 million against a budget of $9 million.",
+            "Gangster Squad (film)\nGangster Squad is a 2013 American action crime film directed by Ruben Fleischer, written by Will Beall and starring Josh Brolin, Ryan Gosling, Nick Nolte, Emma Stone and Sean Penn. The plot is a fictionalized account of the LAPD officers and detectives called the \"Gangster Squad\" who attempt to keep Los Angeles safe from Mickey Cohen and his gang during the 1940s and '50s.",
+            "Armed and Dangerous (1986 film)\nArmed and Dangerous is a 1986 American action-crime comedy film starring John Candy, Eugene Levy, Robert Loggia and Meg Ryan. It was directed by Mark L. Lester and filmed on location in and around Los Angeles, California.",
+            "DoubleTree by Hilton Hotel Los Angeles Downtown\nThe DoubleTree by Hilton Hotel Los Angeles Downtown is located in Los Angeles, California, USA. Managed by Rim Hospitality Inc., the hotel is located in the Little Tokyo area of downtown Los Angeles at 120 South Los Angeles Street.",
+            "The Informers (2008 film)\nThe Informers is a 2008 American ensemble Hollywood drama film written by Bret Easton Ellis and Nicholas Jarecki and directed by Gregor Jordan. The film is based on Ellis' 1994 collection of short stories of the same name. The film, which is set amidst the decadence of the early 1980s, depicts an assortment of socially alienated, mainly well-off characters who numb their sense of emptiness with casual sex, alcohol, and drugs. Filming took place in Los Angeles, Uruguay, and Buenos Aires in 2007.",
+            "Job sharing\nJob sharing or work sharing is an employment arrangement where typically two people are retained on a part-time or reduced-time basis to perform a job normally fulfilled by one person working full-time. Since all positions are shared thus leads to a net reduction in per-employee income. The people sharing the job work as a team to complete the job task and are equally responsible for the job workload. Compensation is apportioned between the workers, Working hours, pay and holidays are divided equally. The Pay As You Go system helps make deductions for national insurance and superannuations are made as a straightforward percentage.",
+            "Syrian Emergency Task Force\nThe Syrian Emergency Task Force (SETF) is a United States-based organization that advocates for the armed overthrow of the government of Syria. It first gained widespread public attention in the wake of the Elizabeth O'Bagy resume padding scandal; O'Bagy had served as a paid lobbyist for the group. The group's primary activity is advocating for U.S. military involvement in the Syrian Civil War through congressional office visits, media awareness campaigns, and organizing junkets for key U.S. foreign policy decisionmakers. According to SETF, it is also committed to supporting the overthrow of the government of Cuba; a statement co-signed by it and the Florida-based Cuban exile organization \"Assembly of the Resistance\" declared it would work for \"the overthrow of the dictatorial regimes of Assad and Castro.\"",
+            "Mursm\u00e4cka\nMursm\u00e4cka, also called \"bruksm\u00e4cka\" or only \"sm\u00e4cka\", was an historical profession for women in Sweden. A mursm\u00e4cka was a female construction worker with the task to hand mortar during construction work. The profession is recorded from at least 1691 (though it is not confirmed by name until the 1830s) and discontinued in 1922. This was a very hard but common work for a poor uneducated women during the 19th century, particularly in Stockholm. In July 1888, the Mursm\u00e4cka of Stockholm performed a great strike action which attracted considerable attention in contemporary Sweden.",
+            "Pretty Much Dead Already\n\"Pretty Much Dead Already\" is the seventh episode and mid-season finale of the second season, and 13th episode overall of the post-apocalyptic horror television series \"The Walking Dead\". It originally aired on AMC in the United States on November 27, 2011. In the episode, Glenn (Steven Yeun) reveals to the group that there are walkers in the Greenes' barn, dividing the group on what to do. Hershel Greene (Scott Wilson) sets a deadline for the group to leave, unless Rick Grimes (Andrew Lincoln) does a difficult task. Meanwhile, Shane Walsh (Jon Bernthal) slowly loses his sanity after many secrets around him are revealed and Carol Peletier begins to question whether her daughter, Sophia will be found.",
+            "NaGISA\nNaGISA (Natural Geography in Shore Areas or Natural Geography of In-Shore Areas) is an international collaborative effort aimed at inventorying, cataloguing, and monitoring biodiversity of the in-shore area. So named for the Japanese word \"nagisa\" (\"where the land meets the sea\"), it is an Apronym. NaGISA is the first project of the larger CoML effort (Census of Marine Life) to have global participation in actual field work. The actual procedures of this project involve inexpensive collection equipment (for easy universal participation). This equipment is used to photograph sampling sites, to actually take samples from the sites, and to process these samples. At each site throughout the world, samples are taken from the intertidal zone out to a depth of 10 meters (and optionally out to 20 meters depth). These samples are then processed (the organisms are isolated) and then analyzed and catalogued. The information (regarding the kind and number of organisms analyzed) is sent to the global headquarters of NaGISA- the University of Kyoto in Japan. All of this information is then collated on the Ocean Biogeographic Information System (OBIS website). The end goal of the larger CoML effort is to find what \"was\", what \"is\", and what \"will be\" in the world's oceans. For NaGISA the goal is to find this in the world's in-shore areas.",
+            "The Apprentice (U.S. season 13)\nThe Celebrity Apprentice 6 (also known as All-Star Celebrity Apprentice or The Apprentice 13) is the sixth installment of the reality game show, \"Celebrity Apprentice\", which premiered on Sunday, March 3, 2013. This season's cast is an \"All-Star\" celebrity cast, bringing back many fan favorites to compete head-to-head. There are eight men and six women in the cast. Brande Roderick, Claudia Jordan, Dennis Rodman, La Toya Jackson, Lil Jon, Omarosa Manigault and the only previous winner, Bret Michaels formed team Power and team Plan B was formed by Dee Snider, Gary Busey, Lisa Rinna, Marilu Henner, Penn Jillette, Stephen Baldwin and Trace Adkins. This marked Omarosa's third appearance on \"The Apprentice\", more than any other contestant. Also appearing as guest judges are past winners Joan Rivers, Piers Morgan, Arsenio Hall and John Rich, along with past judge George Ross, as well as Ivanka Trump, Eric Trump, and Donald Trump Jr. This season also introduced the Social Boardroom MVP reward. Viewers went on Twitter to select the celebrity they think did best in the task. The celebrity who received the most votes won additional money for their charity. This season premiered on March 3, 2013.",
+            "Operation Barrel Roll\nOperation \"Barrel Roll\" was a covert U.S. Air Force 2nd Air Division (later the Seventh Air Force) and U.S. Navy Task Force 77, interdiction and close air support campaign conducted in the Kingdom of Laos between 14 December 1964 and 29 March 1973 concurrent with the Vietnam War.",
+            "Chess problem\nA chess problem, also called a chess composition, is a puzzle set by somebody using chess pieces on a chess board, that presents the solver with a particular task to be achieved. For instance, a position might be given with the instruction that White is to move first, and checkmate Black in two moves against any possible defense. A person who creates such problems is known as a composer. There is a good deal of specialized jargon used in connection with chess problems; see glossary of chess problems for a list.",
+            "David Hewlett\nDavid Ian Hewlett (born 18 April 1968) is an English-born Canadian actor, writer, director, and voice actor best known for his role as Dr. Rodney McKay on the Canadian-American science fiction TV shows \"Stargate SG-1\", \"Stargate Atlantis\" and \"Stargate Universe\". Younger television viewers may know him best from his two 1993 guest appearances on \"Shining Time Station\", portraying nosy journalist Ted Typo.",
+            "Steve Carell\nSteven John Carell ( ; born August 16, 1962) is an American actor, comedian, director, producer, and writer. Carell is best known for playing Michael Scott on the American version of \"The Office\" (2005\u20132011), on which he also worked as an occasional writer, producer, and director.",
+            "Daniel Palladino\nDaniel Palladino is one of the producers of the American animated sitcom \"Family Guy\". Palladino is also a former producer, writer, and director for the American dramedy \"Gilmore Girls, \"he executive produced \"The Return of Jezebel James\", and was a consulting producer, writer, and director for the sitcom \"Bunheads.\" He is married to television writer and producer Amy Sherman-Palladino, the creator of \"Gilmore Girls, The Return of Jezebel James\", and \"Bunheads\".",
+            "Mail Order Family\nMail Order Family was a television comedy television series by writer-producer Jackie Clarke, director-executive producer Ruben Fleischer and executive producer David Bernad, that was cancelled without an episode even being made. The show was pitched to NBC was meant to revolve around \"a widowed single father who orders a mail-order bride from the Philippines to help raise his two preteen daughters.\"",
+            "Hrithik Roshan filmography\nHrithik Roshan is an Indian actor known for his work in Bollywood films. As a child, he made uncredited appearances in three films directed by his maternal grandfather, J. Om Prakash, the first of which was in \"Aasha\" (1980). In 1986, Roshan played the adopted son of Rajinikanth's character in Prakash's crime drama \"Bhagwaan Dada\". Roshan subsequently worked as an assistant director on four films, including \"Khudgarz\" (1987) and \"Karan Arjun\" (1995), all of which were directed by his father, Rakesh."
+        ],
+        "thoughts": [
+            "The common writer/director for the films 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury' is David Ayer.",
+            "Filmography of David Ayer:\n1. Harsh Times (2005) - Writer and Director\n2. Street Kings (2008) - Writer\n3. End of Watch (2012) - Writer and Director\n4. Sabotage (2014) - Director and Writer\n5. Fury (2014) - Director and Writer\n6. Suicide Squad (2016) - Director and Writer",
+            "Harsh Times\nEnd of Watch",
+            "The common film that fits the description given in the question is \"Harsh Times.\" It is listed in both Node 2 and Node 3."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This American crime film set in South Los Angeles was written and directed by the same director and writer of screenwriter of \"Street Kings\", \"End of Watch\", \"Sabotage\", \"Fury\" and what other film? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve information about the writer and director of the films 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify any other films directed or written by the same person who wrote and directed the films retrieved in Node 1, and set in South Los Angeles.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "From the films identified in Node 2, check which ones are crime films.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Select the film that is set in South Los Angeles and is a crime film written and directed by the same director and writer of the other mentioned films.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph starts by collecting information on the director and writer of the films 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury', aiming to identify the person responsible for them. The next step involves retrieving other films authored by the same person, with a filter for those set in South Los Angeles. A reasoning step narrows this list to crime films, and the final reasoning step synthesizes the gathered data to determine the specific American crime film in question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "David Ayer\nDavid Ayer (born January 18, 1968) is an American film director, producer, and screenwriter. He is best known for being the writer of \"Training Day\" (2001), and the director and writer of \"Harsh Times\" (2005), \"Street Kings\" (2008), \"End of Watch\" (2012), \"Sabotage\" (2014), \"Fury\" (2014), and \"Suicide Squad\" (2016).",
+            "Harsh Times\nHarsh Times is a 2005 American crime film set in South Los Angeles. The film stars Christian Bale and Freddy Rodriguez, and was written and directed by David Ayer, who wrote the script for the Academy Award-winning 2001 film \"Training Day\". The film was distributed by Metro-Goldwyn-Mayer and Bauer Martinez Entertainment. Ayer says that the film's characters are largely based on the people he knew when he lived in South Central.",
+            "End of Watch\nEnd of Watch is a 2012 American crime drama film written and directed by David Ayer. It stars Jake Gyllenhaal and Michael Pe\u00f1a as Brian Taylor and Miguel Zavala, two Los Angeles Police Department officers who work in South Los Angeles. The film focuses on their day-to-day police work, their dealings with a certain group of gang members, their friendship with each other, and their personal relationships.",
+            "Ken Kwapis\nKenneth William \"Ken\" Kwapis (born August 17, 1957) is an American film and television director and screenwriter. He specialized in the single-camera sitcom in the 1990s and 2000s and has directed feature films such as \"Sesame Street Presents Follow That Bird\" (1985), \"The Sisterhood of the Traveling Pants\" (2005), and \"He's Just Not That into You\" (2009).",
+            "Kim Tae-yeon discography\nKim Tae-yeon, better known by the mononym Taeyeon, is a South Korean singer. Her discography consists of one studio album, two extended plays (EPs), twenty singles (including four as featured artist), and three promotional singles. She debuted as a member of South Korean girl group Girls' Generation in August 2007 and initially gained some popularity as a singer upon recording soundtrack songs \"If\" for \"Hong Gil Dong\" and \"Can You Hear Me\" for \"Beethoven Virus\" (2008). She subsequently established herself as one of the most renowned vocalist on the South Korean music scene with further soundtrack recordings, notably \"I Love You\" for \"\" (2010), \"Missing You like Crazy\" for \"The King 2 Hearts\", \"Closer\" for \"To the Beautiful You\" (2012), and \"And One\" for \"That Winter, the Wind Blows\" (2013), all of which managed to enter the top ten of South Korea's Gaon Digital Chart. Apart from soundtrack recordings, Taeyeon has also recorded duets with other artists, most notably \"Like a Star\" with The One and \"Different\" with Kim Bum-soo, which peaked at numbers one and two on the Gaon Digital Chart, respectively.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "South of 8\nSouth of 8 is a 2016 American crime film written by first time director Tony Olmos and Rosewood Five Productions, based on a string of bank robberies set in the near future. It officially premiered September 26, 2016 at the Downtown Los Angeles Film Festival in Los Angeles, California, where it won the jury award for Best Dramatic Screenplay. Prior to its premiere, the film won 'Best Trailer' at the San Diego Film Awards and was a finalist for Audience Choice #TrailerChallenge at DTLAFF via Indi.com. The film screened again on February 11, 2017 at San Diego Film Week and took home the award for \"Best Horror/SciFi/Thriller Feature.\"",
+            "His Last Walk\nHis Last Walk is the debut full-length album by American post-hardcore band Blessthefall, released April 10, 2007. It is the only release by the band to feature original vocalist, Craig Mabbitt, who would later be replaced by Beau Bokan. The album was released before Blessthefall started to play on the Taste of Chaos tour. Four singles were released for the album: \"Higinia\", \"Guys Like You Make Us Look Bad\", \"A Message to the Unknown\", and \"Rise Up.\" The last song, \"His Last Walk\", features a bonus song (at the end of the same track) called \"Purple Dog\", which is a joke song made by the band members in which all members sing the song and clap their hands.",
+            "Meet Market (film)\nMeet Market is a 2004 film directed by Charlie Loventhal and starring Alan Tudyk, Krista Allen, Elizabeth Berkley, Laurie Holden and Julian McMahon. The movie is a comedy about singles in Los Angeles who attempt to find love in the aisles of a supermarket. The film was released directly to DVD on February 12, 2008.",
+            "DoubleTree by Hilton Hotel Los Angeles Downtown\nThe DoubleTree by Hilton Hotel Los Angeles Downtown is located in Los Angeles, California, USA. Managed by Rim Hospitality Inc., the hotel is located in the Little Tokyo area of downtown Los Angeles at 120 South Los Angeles Street.",
+            "Sharon Gannon\nSharon Gannon (born July 4, 1951 in Washington, D.C.) is a yoga teacher, animal rights advocate, musician, author, dancer/choreographer and painter. Along with David Life, she is the co-founder of the Jivamukti Yoga Method which contributed to the exponential rise in popularity of yoga in the west during the late 20th century. The Jivamukti Yoga Method distinguishes itself as a path to enlightenment by promoting compassion for all beings, challenging the modern belief that enslaving and exploiting animals and the natural world is our right as the dominant species. The Jivamukti Yoga Method teaches its students that they must be willing to promote the happiness of all beings without exception if they wish to realize their fullest capacity for joy. Jivamukti students are encouraged to adopt a diet that eliminates all animal products (vegan) as this is the diet that causes the least amount of harm to the earth and other beings, humans included. Core to the teachings of Jivamukti Yoga is the concept of shunyata or (emptiness) which is found in the ancient yogic scriptures. This idea can be simply stated as: everything you see and experience in the world comes from your perception of it. If you want to change someone or to change the world, you start by changing yourself by changing your views. When you begin to embrace this concept and put it into practice then you cannot find solace in complaining or blaming others. You are freed from seeing yourself as a victim of others or of circumstances. According to Gannon: \"How you treat others will determine how others treat you. How others treat you will determine how you see yourself. How you see yourself will determine who you are.\"",
+            "My Heidelberg, I Can Not Forget You\nMy Heidelberg, I Can Not Forget You (German: Mein Heidelberg, ich kann Dich nicht vergessen) is a 1927 German silent film directed by James Bauer and starring Dorothea Wieck, and Hans Adalbert Schlettow.",
+            "Ultimate Nick Fury\nGeneral Nicholas Joseph \"Nick\" Fury is a fictional character appearing in comic books published by Marvel Comics' Ultimate Marvel section as a different version of Nick Fury or Nick Fury Jr., his son and successor as director of S.H.I.E.L.D. He has a substantial presence in all the Ultimate Marvel comics, appearing first in \"Ultimate Marvel Team-Up\" and \"Ultimate X-Men\" and later reappearing regularly in \"Ultimate Spider-Man\" and finally securing a regular, recurring role as the general of S.H.I.E.L.D. and the leader of the Ultimates, a re-imagining of the Avengers. This character was designed to look like Samuel L. Jackson, the actor who later went on to portray Nick Fury in several Marvel movies and television shows set in the established Marvel Cinematic Universe.",
+            "Central Avenue (Los Angeles)\nCentral Avenue is a major north-south thoroughfare in the central portion of the Los Angeles, California metropolitan area. Located just to the west of the Alameda Corridor, it runs from the eastern end of the Los Angeles Civic Center south, ending at Del Amo Boulevard in Carson. From north to south, Central Avenue passes through Downtown Los Angeles, South Los Angeles (including Watts, Florence-Graham, and Willowbrook), Compton, and Carson (where it runs through California State University, Dominguez Hills).",
+            "Set It Off (film)\nSet It Off is a 1996 American crime action film directed by F. Gary Gray and written by Kate Lanier and Takashi Bufford. The film stars Jada Pinkett Smith, Queen Latifah, Vivica A. Fox and Kimberly Elise (in her film debut). It follows four close friends in Los Angeles, California, who decide to plan and execute a bank robbery. They decide to do so for different reasons, although all four want better for themselves and their families. The film became a critical and box office success, grossing over $41 million against a budget of $9 million.",
+            "Mulholland Drive\nMulholland Drive is a street and road in the eastern Santa Monica Mountains of Southern California. It is named after pioneering Los Angeles civil engineer William Mulholland. The western rural portion in Los Angeles and Ventura Counties is named Mulholland Highway. The road is featured in innumerable movies, songs, and novels. David Lynch, who wrote and directed a film named after Mullholland Drive, has said that one can feel \"the history of Hollywood\" on it."
+        ],
+        "thoughts": [
+            "The writer and director of the films 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury' is David Ayer. He is an American film director, producer, and screenwriter, best known for his work on these films as well as \"Training Day\" (2001) and \"Suicide Squad\" (2016).",
+            "David Ayer, who wrote and directed \"Harsh Times\" and \"End of Watch\", also wrote the script for the Academy Award-winning film \"Training Day\". All three films are set in South Los Angeles.",
+            "Based on the information provided, the crime films identified from the films in Node 2 are \"Training Day\" and \"Harsh Times\".",
+            "The film that is set in South Los Angeles and is a crime film written and directed by the same director and writer of the other mentioned films is \"Training Day.\" This film is written by David Ayer and directed by Antoine Fuqua, who also wrote and directed \"Harsh Times.\""
+        ],
+        "is_best": true
+    },
+    {
+        "question": "This American crime film set in South Los Angeles was written and directed by the same director and writer of screenwriter of \"Street Kings\", \"End of Watch\", \"Sabotage\", \"Fury\" and what other film? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the director and writer of 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Retrieve the filmography of the identified director and writer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Find the American crime film set in South Los Angeles from the director's filmography that matches the description.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify which film among the filmography was written and directed by the same person as the other films listed in the question.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The task is to find another film, written and directed by the same individual responsible for 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury', which also fits the description of being an American crime film set in South Los Angeles. The execution graph starts by identifying the common creator of all listed films. Next, it retrieves their entire filmography and determines which film is an American crime film set in South Los Angeles. Lastly, it confirms if this film is written and directed by the same person, thereby answering the query."
+        },
+        "recall": 0.8888888888888888,
+        "retrieved_passages": [
+            "David Ayer\nDavid Ayer (born January 18, 1968) is an American film director, producer, and screenwriter. He is best known for being the writer of \"Training Day\" (2001), and the director and writer of \"Harsh Times\" (2005), \"Street Kings\" (2008), \"End of Watch\" (2012), \"Sabotage\" (2014), \"Fury\" (2014), and \"Suicide Squad\" (2016).",
+            "Ultimate Nick Fury\nGeneral Nicholas Joseph \"Nick\" Fury is a fictional character appearing in comic books published by Marvel Comics' Ultimate Marvel section as a different version of Nick Fury or Nick Fury Jr., his son and successor as director of S.H.I.E.L.D. He has a substantial presence in all the Ultimate Marvel comics, appearing first in \"Ultimate Marvel Team-Up\" and \"Ultimate X-Men\" and later reappearing regularly in \"Ultimate Spider-Man\" and finally securing a regular, recurring role as the general of S.H.I.E.L.D. and the leader of the Ultimates, a re-imagining of the Avengers. This character was designed to look like Samuel L. Jackson, the actor who later went on to portray Nick Fury in several Marvel movies and television shows set in the established Marvel Cinematic Universe.",
+            "Street Kings 2: Motor City\nStreet Kings 2: Motor City is a 2011 American crime film starring Ray Liotta and directed by Chris Fisher. It is the sequel to the 2008's \"Street Kings\" starring Keanu Reeves. The film was released on direct-to-DVD in the United States on April 19, 2011.",
+            "End of Watch\nEnd of Watch is a 2012 American crime drama film written and directed by David Ayer. It stars Jake Gyllenhaal and Michael Pe\u00f1a as Brian Taylor and Miguel Zavala, two Los Angeles Police Department officers who work in South Los Angeles. The film focuses on their day-to-day police work, their dealings with a certain group of gang members, their friendship with each other, and their personal relationships.",
+            "Harsh Times\nHarsh Times is a 2005 American crime film set in South Los Angeles. The film stars Christian Bale and Freddy Rodriguez, and was written and directed by David Ayer, who wrote the script for the Academy Award-winning 2001 film \"Training Day\". The film was distributed by Metro-Goldwyn-Mayer and Bauer Martinez Entertainment. Ayer says that the film's characters are largely based on the people he knew when he lived in South Central.",
+            "List of Nick Fury comics\nThese are tiles about the characters of Nick Fury, Nick Fury Jr., Ultimate Nick Fury or any other alternative version of the character published by Marvel Comics.",
+            "Nick Fury, Agent of S.H.I.E.L.D.: Empyre\nNick Fury, Agent of S.H.I.E.L.D.: Empyre is a fortyeight page novel written by Will Murray and published by Berkley Books and Marvel Comics in 2000. It is the first appearance of the character of Nick Fury in novel form. It features illustrations by longtime Nick Fury artist Jim Steranko. The plot revived the concept of S.H.I.E.L.D.'s psychic sensory division from the old Stan Lee and Jack Kirby comics.",
+            "Joel Greenblatt\nJoel Greenblatt (born December 13, 1957) is an American academic, hedge fund manager, investor, and writer. He is a value investor, and adjunct professor at the Columbia University Graduate School of Business. He is the former chairman of the board of Alliant Techsystems and founder of the New York Securities Auction Corporation. He is also a director at Pzena Investment Management, a high-end value firm.",
+            "Wolverine/Nick Fury: The Scorpio Connection\nWolverine/Nick Fury: The Scorpio Connection is a 1989 graphic novel published by Marvel Comics and written by Archie Goodwin and drawn by Howard Chaykin. The story concerns a new Scorpio who is attempting to kill Nick Fury while Wolverine becomes involved when he investigates the murder of a friend who once saved his life at the hands of the new Scorpio. It is the first part of the Wolverine/Nick Fury trilogy.",
+            "Suicide Squad (film)\nSuicide Squad is a 2016 American superhero film based on the DC Comics antihero team of the same name, distributed by Warner Bros. Pictures. It is the third installment in the DC Extended Universe (DCEU). The film is written and directed by David Ayer and stars an ensemble cast featuring Will Smith, Jared Leto, Margot Robbie, Joel Kinnaman, Viola Davis, Jai Courtney, Jay Hernandez, Adewale Akinnuoye-Agbaje, Ike Barinholtz, Scott Eastwood, and Cara Delevingne. In \"Suicide Squad\", a secret government agency led by Amanda Waller recruits imprisoned supervillains to execute dangerous black ops missions and save the world from a powerful threat, in exchange for reduced sentences.",
+            "Hrithik Roshan filmography\nHrithik Roshan is an Indian actor known for his work in Bollywood films. As a child, he made uncredited appearances in three films directed by his maternal grandfather, J. Om Prakash, the first of which was in \"Aasha\" (1980). In 1986, Roshan played the adopted son of Rajinikanth's character in Prakash's crime drama \"Bhagwaan Dada\". Roshan subsequently worked as an assistant director on four films, including \"Khudgarz\" (1987) and \"Karan Arjun\" (1995), all of which were directed by his father, Rakesh.",
+            "Tara Strong filmography\nTara Strong (born Tara Lyn Charendoff; February 12, 1973) is a Canadian\u2013American actress who has done voice work for numerous animations and video games and performed in various live-action productions. Many of her major voice roles include animated series such as \"Rugrats\", \"The Powerpuff Girls\", \"The Fairly OddParents\", \"Drawn Together\", \"Teen Titans\" and the spin-off series \"Teen Titans Go!\", and \"\", as well as video games such as \"Mortal Kombat X\", \"Final Fantasy X-2\", and the \"\" series. Her portrayals have garnered nominations in the Annie Awards and Daytime Emmys, and an award from the Academy of Interactive Arts & Sciences.",
+            "David, Lord of Brechin\nSir David de Brechin (died 1320) was a Scottish knight who fought on both sides during the Wars of Scottish Independence.",
+            "David de Inchmartin\nSir David de Inchmartin was a Scottish knight who took part in the War of Scottish Independence, as a supporter of Robert de Brus."
+        ],
+        "thoughts": [
+            "The director and writer of 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury' is David Ayer.",
+            "Director and Writer Filmography:\n- Training Day (2001) - Writer\n- Harsh Times (2005) - Director and Writer\n- Street Kings (2008) - Director\n- End of Watch (2012) - Director and Writer\n- Sabotage (2014) - Director\n- Fury (2014) - Director\n- Suicide Squad (2016) - Director and Writer\n\nNote: The filmography provided is focused on the directorial and writing work of David Ayer.\n\nIt is important to note that the filmography of Hrithik Roshan and Tara Strong is not relevant to the identified director and writer, David Ayer.",
+            "The American crime film set in South Los Angeles from the director's filmography that matches the description is \"End of Watch\" (2012). This film was both directed and written by David Ayer and is set in South Los Angeles, following the lives of two LAPD officers as they patrol the dangerous streets of the area.",
+            "The film \"End of Watch\" (2012) was written and directed by David Ayer, making it the film from the director's filmography that matches the description."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This American crime film set in South Los Angeles was written and directed by the same director and writer of screenwriter of \"Street Kings\", \"End of Watch\", \"Sabotage\", \"Fury\" and what other film? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the director and writer of 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "List other films written and directed by the identified person from Step 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify which of these films is an American crime film set in South Los Angeles.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The task involves determining an American crime film set in South Los Angeles, written and directed by the same person who wrote and directed several other known films. The execution graph starts by identifying the writer/director of the given films. After identifying the individual, the next step is to list other films associated with them. The final step involves reasoning through these films to identify the one that matches the specified criteria of being an American crime film set in South Los Angeles."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "End of Watch\nEnd of Watch is a 2012 American crime drama film written and directed by David Ayer. It stars Jake Gyllenhaal and Michael Pe\u00f1a as Brian Taylor and Miguel Zavala, two Los Angeles Police Department officers who work in South Los Angeles. The film focuses on their day-to-day police work, their dealings with a certain group of gang members, their friendship with each other, and their personal relationships.",
+            "Harsh Times\nHarsh Times is a 2005 American crime film set in South Los Angeles. The film stars Christian Bale and Freddy Rodriguez, and was written and directed by David Ayer, who wrote the script for the Academy Award-winning 2001 film \"Training Day\". The film was distributed by Metro-Goldwyn-Mayer and Bauer Martinez Entertainment. Ayer says that the film's characters are largely based on the people he knew when he lived in South Central.",
+            "David Ayer\nDavid Ayer (born January 18, 1968) is an American film director, producer, and screenwriter. He is best known for being the writer of \"Training Day\" (2001), and the director and writer of \"Harsh Times\" (2005), \"Street Kings\" (2008), \"End of Watch\" (2012), \"Sabotage\" (2014), \"Fury\" (2014), and \"Suicide Squad\" (2016).",
+            "Street Kings 2: Motor City\nStreet Kings 2: Motor City is a 2011 American crime film starring Ray Liotta and directed by Chris Fisher. It is the sequel to the 2008's \"Street Kings\" starring Keanu Reeves. The film was released on direct-to-DVD in the United States on April 19, 2011.",
+            "Suicide Squad (film)\nSuicide Squad is a 2016 American superhero film based on the DC Comics antihero team of the same name, distributed by Warner Bros. Pictures. It is the third installment in the DC Extended Universe (DCEU). The film is written and directed by David Ayer and stars an ensemble cast featuring Will Smith, Jared Leto, Margot Robbie, Joel Kinnaman, Viola Davis, Jai Courtney, Jay Hernandez, Adewale Akinnuoye-Agbaje, Ike Barinholtz, Scott Eastwood, and Cara Delevingne. In \"Suicide Squad\", a secret government agency led by Amanda Waller recruits imprisoned supervillains to execute dangerous black ops missions and save the world from a powerful threat, in exchange for reduced sentences.",
+            "The Wannabe\nThe Wannabe is a 2015 American drama film written and directed by Nick Sandow. The film stars Patricia Arquette, David Zayas, Domenick Lombardozzi, Michael Imperioli, Vincent Piazza and Nick Sandow. The film was released on December 4, 2015, by Entertainment One Films and Orion Pictures.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "David Yates\nDavid Yates (born (1963--)08 1963 ) is an English filmmaker who has directed feature films, short films, and television productions.",
+            "The SpongeBob SquarePants Movie\nThe SpongeBob SquarePants Movie is a 2004 American live-action/animated comedy film based on the Nickelodeon television series \"SpongeBob SquarePants\". The film was co-written, directed, and co-produced by series creator Stephen Hillenburg and starred the series' cast of Tom Kenny, Bill Fagerbakke, Clancy Brown, Rodger Bumpass and Mr. Lawrence, with guest performances by Scarlett Johansson, Jeffrey Tambor, Alec Baldwin and David Hasselhoff. It was produced by Hillenburg's production company United Plankton Pictures and Nickelodeon Movies, it was distributed by Paramount Pictures and was also the first film in the \"SpongeBob SquarePants\" film series. In the film, Plankton devises a plan to steal King Neptune's crown and send it to Shell City, and SpongeBob and Patrick must retrieve the crown to save Mr. Krabs from King Neptune's wrath and Bikini Bottom from Plankton's plan.",
+            "Vegas Movie Studio\nVegas Movie Studio (previously Sony Vegas Movie Studio) is a consumer-based nonlinear video editing software designed for the PC. It is a scaled-down version of Vegas Pro. Movie Studio was formerly called \"Sonic Foundry VideoFactory\" and then \"Sony Screenblast Movie Studio,\". As of version 13, Vegas Movie Studio is now part of Magix GmbH after Sony had officially announced it had sold most of its creative software suit to the German-based company. On February 14, 2017, Magix announced a brand new version of Vegas Movie Studio, Vegas Movie Studio 14.0, which is the first stable release of Vegas Movie Studio since 2014 and Magix's first stable release since its acquisition from Sony.",
+            "The Lone Ranger (serial)\nThe Lone Ranger is a 1938 American Republic Movie serial based on the radio program of the same name. It was the ninth of the sixty-six serials produced by Republic, the fourth western (a third of Republic's serials were westerns) and the first Republic serial release of 1938. The following year a sequel serial \"The Lone Ranger Rides Again\" was released.",
+            "Hole in One (2010 film)\nHole in One (also known as \"ParFection: The Golf Movie\") is a 2010 comedy movie starring Steve Talley. It is about a cool undergraduate boy who gets tricked by some surgeons and they operate on him, giving him a set of breasts. Now, he has to earn money through golf for the reverse surgery. The movie was released by Universal Studios via Universal Pictures and launched in the United Kingdom on September 12, 2010. With a wide release in an additional 65 territories and countries. It is awaiting a US Domestic release. Universal 'Tagged' the movie as 'American Pie Plays Golf' and so many people have mistaken for it being an American Pie movie because Steve Talley, who appeared in and stars in it. Further evidence shows that Steve Talley is called 'Eric Keller' in Hole in One and is called 'Dwight Stifler' in the American Pie movie Franchise series which shows the distinct differences between the movies. Box Office figures report $1,600,000 GBP in London England. Universal release Hole in One in a total of 65 countries. No other figures reported.",
+            "Storytelling (Belle and Sebastian album)\nStorytelling is a soundtrack by Scottish indie pop band Belle and Sebastian. It is the score to the Todd Solondz movie \"Storytelling\". Belle and Sebastian experienced many problems in communication with Solondz while scoring the film, and as such only about six minutes of their music was actually used in the movie . The album contains five tracks that are recorded dialogues. The instrumental track \"Fuck This Shit\" uses the prosody of the title phrase in a number of different keys but never the words themselves. It was the band's final release on Jeepster, as they went on to sign a deal with Rough Trade the following year.",
+            "East Jaffrey Historic District\nThe East Jaffrey Historic District is a historic district running roughly along NH Route 124 (Main Street) through Jaffrey, New Hampshire. It encompasses what is now the economic and civic heart of the town, centered on the Jaffrey Mills and the crossing of the Contoocook River by Route 124. It extends as far west as St. Patrick's Church beyond Charlonne Street and as far east as the US Post Office building at Route 124 and Ellison Street. To the north it extends along Peterborough Street (United States Route 202) to Christian Court, and to the south it extends along River Street (also US 202) and School Street to their junction. The district includes early 19th-century residential structures, as well as industrial buildings and housing associated with the Jaffrey Mills which arose in the mid-19th century. The area was known as \"East Jaffrey\" prior to its rise in economic ascendancy over what is now Jaffrey Center, the center of Jaffrey when it was chartered in 1773.",
+            "Combat Zone, Boston\nThe Combat Zone was the name given in the 1960s to the adult entertainment district in downtown Boston, Massachusetts. Centered on Washington Street between Boylston Street and Kneeland Street, the area was once the site of many strip clubs, peep shows, X-rated movie theaters, and adult bookstores. It also had a reputation for crime, including prostitution."
+        ],
+        "thoughts": [
+            "The director and writer of 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury' is David Ayer.",
+            "Other films written and directed by David Ayer include \"Street Kings\" (2008), \"Sabotage\" (2014), and \"Fury\" (2014).",
+            "The American crime film set in South Los Angeles is \"Training Day\" (2001)."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This American crime film set in South Los Angeles was written and directed by the same director and writer of screenwriter of \"Street Kings\", \"End of Watch\", \"Sabotage\", \"Fury\" and what other film? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the director and writer of the films: 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Determine the American crime film set in South Los Angeles written and directed by the same person identified in Node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Retrieve the list of films directed and written by the individual identified in Node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Identify the film from the list retrieved in Node 3 that is not 'Street Kings', 'End of Watch', 'Sabotage', or 'Fury'.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    },
+                    {
+                        "id": "5",
+                        "instruction": "Verify if the film identified in Node 4 is an American crime film set in South Los Angeles, matching the description in the question.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2",
+                            "4"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "5"
+            },
+            "explanation": "The execution graph begins by identifying the director and writer of all specified films, as they are the common factor linking all these movies. Node 1 focuses on finding this individual's name, which then allows further analysis of the director's filmography to match the description of an American crime film set in South Los Angeles. Steps are taken to ensure gathered data supports the conclusion about what other film fits the criteria."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "David Ayer\nDavid Ayer (born January 18, 1968) is an American film director, producer, and screenwriter. He is best known for being the writer of \"Training Day\" (2001), and the director and writer of \"Harsh Times\" (2005), \"Street Kings\" (2008), \"End of Watch\" (2012), \"Sabotage\" (2014), \"Fury\" (2014), and \"Suicide Squad\" (2016).",
+            "Harsh Times\nHarsh Times is a 2005 American crime film set in South Los Angeles. The film stars Christian Bale and Freddy Rodriguez, and was written and directed by David Ayer, who wrote the script for the Academy Award-winning 2001 film \"Training Day\". The film was distributed by Metro-Goldwyn-Mayer and Bauer Martinez Entertainment. Ayer says that the film's characters are largely based on the people he knew when he lived in South Central.",
+            "End of Watch\nEnd of Watch is a 2012 American crime drama film written and directed by David Ayer. It stars Jake Gyllenhaal and Michael Pe\u00f1a as Brian Taylor and Miguel Zavala, two Los Angeles Police Department officers who work in South Los Angeles. The film focuses on their day-to-day police work, their dealings with a certain group of gang members, their friendship with each other, and their personal relationships.",
+            "South of 8\nSouth of 8 is a 2016 American crime film written by first time director Tony Olmos and Rosewood Five Productions, based on a string of bank robberies set in the near future. It officially premiered September 26, 2016 at the Downtown Los Angeles Film Festival in Los Angeles, California, where it won the jury award for Best Dramatic Screenplay. Prior to its premiere, the film won 'Best Trailer' at the San Diego Film Awards and was a finalist for Audience Choice #TrailerChallenge at DTLAFF via Indi.com. The film screened again on February 11, 2017 at San Diego Film Week and took home the award for \"Best Horror/SciFi/Thriller Feature.\"",
+            "Set It Off (film)\nSet It Off is a 1996 American crime action film directed by F. Gary Gray and written by Kate Lanier and Takashi Bufford. The film stars Jada Pinkett Smith, Queen Latifah, Vivica A. Fox and Kimberly Elise (in her film debut). It follows four close friends in Los Angeles, California, who decide to plan and execute a bank robbery. They decide to do so for different reasons, although all four want better for themselves and their families. The film became a critical and box office success, grossing over $41 million against a budget of $9 million.",
+            "Armed and Dangerous (1986 film)\nArmed and Dangerous is a 1986 American action-crime comedy film starring John Candy, Eugene Levy, Robert Loggia and Meg Ryan. It was directed by Mark L. Lester and filmed on location in and around Los Angeles, California.",
+            "Gangster Squad (film)\nGangster Squad is a 2013 American action crime film directed by Ruben Fleischer, written by Will Beall and starring Josh Brolin, Ryan Gosling, Nick Nolte, Emma Stone and Sean Penn. The plot is a fictionalized account of the LAPD officers and detectives called the \"Gangster Squad\" who attempt to keep Los Angeles safe from Mickey Cohen and his gang during the 1940s and '50s.",
+            "The Informers (2008 film)\nThe Informers is a 2008 American ensemble Hollywood drama film written by Bret Easton Ellis and Nicholas Jarecki and directed by Gregor Jordan. The film is based on Ellis' 1994 collection of short stories of the same name. The film, which is set amidst the decadence of the early 1980s, depicts an assortment of socially alienated, mainly well-off characters who numb their sense of emptiness with casual sex, alcohol, and drugs. Filming took place in Los Angeles, Uruguay, and Buenos Aires in 2007.",
+            "Road Trip (film)\nRoad Trip is a 2000 American comedy film directed by Todd Phillips and written by Scot Armstrong and Phillips. The film stars Breckin Meyer, Seann William Scott, Paulo Costanzo, and DJ Qualls as four college friends who embark on an 1800-mile road trip to retrieve an illicit tape mistakenly mailed to a girlfriend.",
+            "Watch What Happens Live with Andy Cohen\nWatch What Happens Live with Andy Cohen (previously named Watch What Happens Live until December 19, 2016) is an American pop culture-based late-night talk show hosted by Andy Cohen that premiered on July 16, 2009. It features Bravo's own reality programming in the manner of an aftershow, and celebrities' recent news. The show is produced live from New York City, making possible interaction with viewers by phone and social media. In November 2013, Bravo renewed \"Watch What Happens: Live\" for two additional seasons. On March 2, 2016, the show aired its 1000th episode.",
+            "Street Kings 2: Motor City\nStreet Kings 2: Motor City is a 2011 American crime film starring Ray Liotta and directed by Chris Fisher. It is the sequel to the 2008's \"Street Kings\" starring Keanu Reeves. The film was released on direct-to-DVD in the United States on April 19, 2011.",
+            "Suicide Squad (film)\nSuicide Squad is a 2016 American superhero film based on the DC Comics antihero team of the same name, distributed by Warner Bros. Pictures. It is the third installment in the DC Extended Universe (DCEU). The film is written and directed by David Ayer and stars an ensemble cast featuring Will Smith, Jared Leto, Margot Robbie, Joel Kinnaman, Viola Davis, Jai Courtney, Jay Hernandez, Adewale Akinnuoye-Agbaje, Ike Barinholtz, Scott Eastwood, and Cara Delevingne. In \"Suicide Squad\", a secret government agency led by Amanda Waller recruits imprisoned supervillains to execute dangerous black ops missions and save the world from a powerful threat, in exchange for reduced sentences.",
+            "The Wannabe\nThe Wannabe is a 2015 American drama film written and directed by Nick Sandow. The film stars Patricia Arquette, David Zayas, Domenick Lombardozzi, Michael Imperioli, Vincent Piazza and Nick Sandow. The film was released on December 4, 2015, by Entertainment One Films and Orion Pictures.",
+            "David Yates\nDavid Yates (born (1963--)08 1963 ) is an English filmmaker who has directed feature films, short films, and television productions.",
+            "Ultimate Nick Fury\nGeneral Nicholas Joseph \"Nick\" Fury is a fictional character appearing in comic books published by Marvel Comics' Ultimate Marvel section as a different version of Nick Fury or Nick Fury Jr., his son and successor as director of S.H.I.E.L.D. He has a substantial presence in all the Ultimate Marvel comics, appearing first in \"Ultimate Marvel Team-Up\" and \"Ultimate X-Men\" and later reappearing regularly in \"Ultimate Spider-Man\" and finally securing a regular, recurring role as the general of S.H.I.E.L.D. and the leader of the Ultimates, a re-imagining of the Avengers. This character was designed to look like Samuel L. Jackson, the actor who later went on to portray Nick Fury in several Marvel movies and television shows set in the established Marvel Cinematic Universe.",
+            "The SpongeBob SquarePants Movie\nThe SpongeBob SquarePants Movie is a 2004 American live-action/animated comedy film based on the Nickelodeon television series \"SpongeBob SquarePants\". The film was co-written, directed, and co-produced by series creator Stephen Hillenburg and starred the series' cast of Tom Kenny, Bill Fagerbakke, Clancy Brown, Rodger Bumpass and Mr. Lawrence, with guest performances by Scarlett Johansson, Jeffrey Tambor, Alec Baldwin and David Hasselhoff. It was produced by Hillenburg's production company United Plankton Pictures and Nickelodeon Movies, it was distributed by Paramount Pictures and was also the first film in the \"SpongeBob SquarePants\" film series. In the film, Plankton devises a plan to steal King Neptune's crown and send it to Shell City, and SpongeBob and Patrick must retrieve the crown to save Mr. Krabs from King Neptune's wrath and Bikini Bottom from Plankton's plan.",
+            "Eugene Levy\nEugene Levy, CM (born December 17, 1946) is a Canadian actor, comedian, producer, director, musician and writer. He is the only actor to have appeared in all eight of the \"American Pie\" films, in his role as Noah Levenstein. He often plays nerdy, unconventional figures, with his humour often deriving from his excessive explanations of matters and the way in which he deals with sticky situations. Levy is a regular collaborator of actor-director Christopher Guest, appearing in and co-writing four of his films, commencing with \"Waiting for Guffman\" (1997).",
+            "Charles Burnett (director)\nCharles Burnett (born April 13, 1944, in Vicksburg, Mississippi) is an African-American film director, film producer, writer, editor, actor, photographer, and cinematographer. His most popular films include \"Killer of Sheep\" (1978), \"My Brother's Wedding\" (1983), \"To Sleep with Anger\" (1990), \"The Glass Shield\" (1994), and \"\" (2007). He has been involved in other types of motion pictures including shorts, documentaries, and a TV series.",
+            "Nelson Pereira dos Santos\nNelson Pereira dos Santos (born 22 October 1928) is a Brazilian film director. He directed films such as \"Vidas Secas\" (Barren Lives), based on the book with the same name by Brazilian writer Graciliano Ramos."
+        ],
+        "thoughts": [
+            "The director and writer of the films \"Street Kings\", \"End of Watch\", \"Sabotage\", and \"Fury\" is David Ayer.",
+            "The American crime film set in South Los Angeles written and directed by the same person identified in Node 1 is \"Harsh Times\" (2005).",
+            "Films directed and written by David Ayer:\n1. Harsh Times (2005)\n2. End of Watch (2012)\n3. Street Kings (2008)\n4. Sabotage (2014)\n5. Fury (2014)\n6. Suicide Squad (2016)",
+            "The film that is not 'Street Kings', 'End of Watch', 'Sabotage', or 'Fury' is 'Suicide Squad' (2016).",
+            "Based on the information from the upstream tasks, the film identified in Node 4, \"Suicide Squad\" (2016), does not match the description of being an American crime film set in South Los Angeles. Therefore, the film identified in Node 4 does not meet the criteria specified in the question."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This American crime film set in South Los Angeles was written and directed by the same director and writer of screenwriter of \"Street Kings\", \"End of Watch\", \"Sabotage\", \"Fury\" and what other film? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Retrieve the list of films written and directed by the same person who wrote 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "Identify which of these films is a crime film set in South Los Angeles.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Synthesize the information to determine the film that matches the criteria of the question.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The execution graph starts by retrieving all films written and directed by the person who also wrote 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury'. This is essential because they are the common link required to answer the question. The second node identifies which of these films is a crime film set in South Los Angeles, filtering the list based on the setting and genre. Finally, the third node synthesizes the retrieved and analyzed data to answer the original question."
+        },
+        "recall": 0.5,
+        "retrieved_passages": [
+            "David Ayer\nDavid Ayer (born January 18, 1968) is an American film director, producer, and screenwriter. He is best known for being the writer of \"Training Day\" (2001), and the director and writer of \"Harsh Times\" (2005), \"Street Kings\" (2008), \"End of Watch\" (2012), \"Sabotage\" (2014), \"Fury\" (2014), and \"Suicide Squad\" (2016).",
+            "Street Kings 2: Motor City\nStreet Kings 2: Motor City is a 2011 American crime film starring Ray Liotta and directed by Chris Fisher. It is the sequel to the 2008's \"Street Kings\" starring Keanu Reeves. The film was released on direct-to-DVD in the United States on April 19, 2011.",
+            "End of Watch\nEnd of Watch is a 2012 American crime drama film written and directed by David Ayer. It stars Jake Gyllenhaal and Michael Pe\u00f1a as Brian Taylor and Miguel Zavala, two Los Angeles Police Department officers who work in South Los Angeles. The film focuses on their day-to-day police work, their dealings with a certain group of gang members, their friendship with each other, and their personal relationships.",
+            "Can You Ever Forgive Me? (film)\nCan You Ever Forgive Me? is an upcoming biographical comedy-drama film directed by Marielle Heller, written by Nicole Holofcener and Jeff Whitty, based on Lee Israel's memoir of the same name and starring Melissa McCarthy.",
+            "Wolverine/Nick Fury: The Scorpio Connection\nWolverine/Nick Fury: The Scorpio Connection is a 1989 graphic novel published by Marvel Comics and written by Archie Goodwin and drawn by Howard Chaykin. The story concerns a new Scorpio who is attempting to kill Nick Fury while Wolverine becomes involved when he investigates the murder of a friend who once saved his life at the hands of the new Scorpio. It is the first part of the Wolverine/Nick Fury trilogy.",
+            "Mulholland Drive\nMulholland Drive is a street and road in the eastern Santa Monica Mountains of Southern California. It is named after pioneering Los Angeles civil engineer William Mulholland. The western rural portion in Los Angeles and Ventura Counties is named Mulholland Highway. The road is featured in innumerable movies, songs, and novels. David Lynch, who wrote and directed a film named after Mullholland Drive, has said that one can feel \"the history of Hollywood\" on it.",
+            "The Fury (1978 film)\nThe Fury is a 1978 supernatural thriller film directed by Brian De Palma. The screenplay by John Farris was based on his 1976 novel of the same name. The film stars Kirk Douglas, John Cassavetes, Carrie Snodgress, Charles Durning, Amy Irving and Andrew Stevens. The music, composed by Academy Award-winner John Williams and performed by the London Symphony Orchestra, was highly praised by critic Pauline Kael, who called it \"as elegant and delicately varied a score as any horror film has ever had\".",
+            "Nick Fury: Agent of S.H.I.E.L.D. (film)\nNick Fury: Agent of S.H.I.E.L.D. is an American television film based on the Marvel Comics character Nick Fury. It was first broadcast on May 26, 1998 on Fox. Directed by Rod Hardy, the film stars David Hasselhoff as Fury, a retired super spy who is approached to return to duty to take down the terrorist organization HYDRA, who threaten to attack Manhattan with a pathogen they have reconstituted known as the Death's Head virus. Lisa Rinna plays Contessa Valentina \"Val\" Allegra de Fontaine, and Sandra Hess plays Andrea von Strucker / Viper. It was released on DVD on September 30, 2008."
+        ],
+        "thoughts": [
+            "The films written and directed by David Ayer are:\n- Harsh Times (2005)\n- Street Kings (2008)\n- End of Watch (2012)\n- Sabotage (2014)\n- Fury (2014)\n- Suicide Squad (2016)",
+            "The crime film set in South Los Angeles is \"End of Watch\" (2012).",
+            "The film that matches the criteria of being a crime film set in South Los Angeles is \"End of Watch\" (2012)."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This American crime film set in South Los Angeles was written and directed by the same director and writer of screenwriter of \"Street Kings\", \"End of Watch\", \"Sabotage\", \"Fury\" and what other film? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the director and writer of \"Street Kings\", \"End of Watch\", \"Sabotage\", and \"Fury\".",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "List all films directed and written by the identified director and writer.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Filter the list of films to identify those set in South Los Angeles.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    },
+                    {
+                        "id": "4",
+                        "instruction": "Determine the name of the American crime film set in South Los Angeles from the filtered list.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "3"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "4"
+            },
+            "explanation": "The execution graph starts by identifying the common director and writer for the films \"Street Kings\", \"End of Watch\", \"Sabotage\", and \"Fury\". Once identified, it retrieves all films created by this individual. Then, the graph filters these films to find ones set in South Los Angeles. The final node synthesizes this information to determine which of these films is an American crime film set in that location."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "David Ayer\nDavid Ayer (born January 18, 1968) is an American film director, producer, and screenwriter. He is best known for being the writer of \"Training Day\" (2001), and the director and writer of \"Harsh Times\" (2005), \"Street Kings\" (2008), \"End of Watch\" (2012), \"Sabotage\" (2014), \"Fury\" (2014), and \"Suicide Squad\" (2016).",
+            "Barbara Albert\nBarbara Albert (born 1970 in Vienna) is an Austrian writer, film-producer and film-director.",
+            "Trust (1990 film)\nTrust is a 1990 American dark romantic comedy starring Adrienne Shelly and Martin Donovan. It is the second feature film from writer-director Hal Hartley.",
+            "Paul Andrew Williams\nPaul Andrew Williams is a British film writer and director, born in Portsmouth, England in 1973. He won the New Director's Award for his film London to Brighton in the 2006 Edinburgh International Film Festival.",
+            "Floyd Mutrux\nFloyd Mutrux (born June 21, 1941) is an American stage and film director, writer, producer, and screenwriter.",
+            "Sleeping Dogs Lie (2005 film)\nSleeping Dogs Lie is a 2005 American drama film by writer Chumahan Bowen and director Stuart Lessner, starring Rage Against the Machine drummer Brad Wilk and Ed Asner. The film also features Tool lead singer Maynard James Keenan as Deputy Lance.",
+            "Charles Burnett (director)\nCharles Burnett (born April 13, 1944, in Vicksburg, Mississippi) is an African-American film director, film producer, writer, editor, actor, photographer, and cinematographer. His most popular films include \"Killer of Sheep\" (1978), \"My Brother's Wedding\" (1983), \"To Sleep with Anger\" (1990), \"The Glass Shield\" (1994), and \"\" (2007). He has been involved in other types of motion pictures including shorts, documentaries, and a TV series.",
+            "Wolfgang Becker\nWolfgang Becker (born 22 June 1954) is a German film director and writer. He is best known to the international audience for his work \"Good Bye Lenin!\" (2003).",
+            "Harsh Times\nHarsh Times is a 2005 American crime film set in South Los Angeles. The film stars Christian Bale and Freddy Rodriguez, and was written and directed by David Ayer, who wrote the script for the Academy Award-winning 2001 film \"Training Day\". The film was distributed by Metro-Goldwyn-Mayer and Bauer Martinez Entertainment. Ayer says that the film's characters are largely based on the people he knew when he lived in South Central.",
+            "End of Watch\nEnd of Watch is a 2012 American crime drama film written and directed by David Ayer. It stars Jake Gyllenhaal and Michael Pe\u00f1a as Brian Taylor and Miguel Zavala, two Los Angeles Police Department officers who work in South Los Angeles. The film focuses on their day-to-day police work, their dealings with a certain group of gang members, their friendship with each other, and their personal relationships.",
+            "Suicide Squad (film)\nSuicide Squad is a 2016 American superhero film based on the DC Comics antihero team of the same name, distributed by Warner Bros. Pictures. It is the third installment in the DC Extended Universe (DCEU). The film is written and directed by David Ayer and stars an ensemble cast featuring Will Smith, Jared Leto, Margot Robbie, Joel Kinnaman, Viola Davis, Jai Courtney, Jay Hernandez, Adewale Akinnuoye-Agbaje, Ike Barinholtz, Scott Eastwood, and Cara Delevingne. In \"Suicide Squad\", a secret government agency led by Amanda Waller recruits imprisoned supervillains to execute dangerous black ops missions and save the world from a powerful threat, in exchange for reduced sentences.",
+            "The Wannabe\nThe Wannabe is a 2015 American drama film written and directed by Nick Sandow. The film stars Patricia Arquette, David Zayas, Domenick Lombardozzi, Michael Imperioli, Vincent Piazza and Nick Sandow. The film was released on December 4, 2015, by Entertainment One Films and Orion Pictures.",
+            "David Yates\nDavid Yates (born (1963--)08 1963 ) is an English filmmaker who has directed feature films, short films, and television productions.",
+            "List of American Pie characters\nThis is a list of characters from the film series \"American Pie\" consisting of \"American Pie\" (1999), \"American Pie 2\" (2001), \"American Wedding\" (2003), \"\" (2005), \"\" (2006), \"\" (2007), \"\" (2009), and \"American Reunion\" (2012). Only one character, Noah Levenstein played by Eugene Levy, has appeared in all eight released films. Biggs, Hannigan, Scott, Nicholas, Thomas, Coolidge, Cho, Isfield, Cheek, and Owen all play their characters in four films each; other characters appear in fewer films.",
+            "Plague Town\nPlague Town is a 2008 American horror film directed by David Gregory and written by David Gregory and John Cregan."
+        ],
+        "thoughts": [
+            "The director and writer of \"Street Kings\", \"End of Watch\", \"Sabotage\", and \"Fury\" is David Ayer.",
+            "Films directed and written by David Ayer:\n1. Harsh Times (2005)\n2. End of Watch (2012)\n3. Street Kings (2008)\n4. Sabotage (2014)\n5. Fury (2014)\n6. Suicide Squad (2016)\n\nOther films directed by David Gregory and written by David Gregory and John Cregan:\n1. Plague Town (2008)",
+            "The films set in South Los Angeles from the list are:\n1. End of Watch (2012)\n2. Street Kings (2008)",
+            "The name of the American crime film set in South Los Angeles from the filtered list is \"End of Watch\" (2012)."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This American crime film set in South Los Angeles was written and directed by the same director and writer of screenwriter of \"Street Kings\", \"End of Watch\", \"Sabotage\", \"Fury\" and what other film? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the director and writer of 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury'.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "List all films directed and written by the identified person from Node 1.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Filter the list of films from Node 2 to find the American crime film set in South Los Angeles.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The task is broken down into steps to identify the director and writer responsible for 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury'. Then, we enumerate all films written and directed by this individual, using this list to identify a specific American crime film set in South Los Angeles to find the film in question."
+        },
+        "recall": 0.9444444444444444,
+        "retrieved_passages": [
+            "David Ayer\nDavid Ayer (born January 18, 1968) is an American film director, producer, and screenwriter. He is best known for being the writer of \"Training Day\" (2001), and the director and writer of \"Harsh Times\" (2005), \"Street Kings\" (2008), \"End of Watch\" (2012), \"Sabotage\" (2014), \"Fury\" (2014), and \"Suicide Squad\" (2016).",
+            "Harsh Times\nHarsh Times is a 2005 American crime film set in South Los Angeles. The film stars Christian Bale and Freddy Rodriguez, and was written and directed by David Ayer, who wrote the script for the Academy Award-winning 2001 film \"Training Day\". The film was distributed by Metro-Goldwyn-Mayer and Bauer Martinez Entertainment. Ayer says that the film's characters are largely based on the people he knew when he lived in South Central.",
+            "Ultimate Nick Fury\nGeneral Nicholas Joseph \"Nick\" Fury is a fictional character appearing in comic books published by Marvel Comics' Ultimate Marvel section as a different version of Nick Fury or Nick Fury Jr., his son and successor as director of S.H.I.E.L.D. He has a substantial presence in all the Ultimate Marvel comics, appearing first in \"Ultimate Marvel Team-Up\" and \"Ultimate X-Men\" and later reappearing regularly in \"Ultimate Spider-Man\" and finally securing a regular, recurring role as the general of S.H.I.E.L.D. and the leader of the Ultimates, a re-imagining of the Avengers. This character was designed to look like Samuel L. Jackson, the actor who later went on to portray Nick Fury in several Marvel movies and television shows set in the established Marvel Cinematic Universe.",
+            "End of Watch\nEnd of Watch is a 2012 American crime drama film written and directed by David Ayer. It stars Jake Gyllenhaal and Michael Pe\u00f1a as Brian Taylor and Miguel Zavala, two Los Angeles Police Department officers who work in South Los Angeles. The film focuses on their day-to-day police work, their dealings with a certain group of gang members, their friendship with each other, and their personal relationships.",
+            "Street Kings 2: Motor City\nStreet Kings 2: Motor City is a 2011 American crime film starring Ray Liotta and directed by Chris Fisher. It is the sequel to the 2008's \"Street Kings\" starring Keanu Reeves. The film was released on direct-to-DVD in the United States on April 19, 2011.",
+            "Suicide Squad (film)\nSuicide Squad is a 2016 American superhero film based on the DC Comics antihero team of the same name, distributed by Warner Bros. Pictures. It is the third installment in the DC Extended Universe (DCEU). The film is written and directed by David Ayer and stars an ensemble cast featuring Will Smith, Jared Leto, Margot Robbie, Joel Kinnaman, Viola Davis, Jai Courtney, Jay Hernandez, Adewale Akinnuoye-Agbaje, Ike Barinholtz, Scott Eastwood, and Cara Delevingne. In \"Suicide Squad\", a secret government agency led by Amanda Waller recruits imprisoned supervillains to execute dangerous black ops missions and save the world from a powerful threat, in exchange for reduced sentences.",
+            "The Wannabe\nThe Wannabe is a 2015 American drama film written and directed by Nick Sandow. The film stars Patricia Arquette, David Zayas, Domenick Lombardozzi, Michael Imperioli, Vincent Piazza and Nick Sandow. The film was released on December 4, 2015, by Entertainment One Films and Orion Pictures.",
+            "David Yates\nDavid Yates (born (1963--)08 1963 ) is an English filmmaker who has directed feature films, short films, and television productions.",
+            "List of American Pie characters\nThis is a list of characters from the film series \"American Pie\" consisting of \"American Pie\" (1999), \"American Pie 2\" (2001), \"American Wedding\" (2003), \"\" (2005), \"\" (2006), \"\" (2007), \"\" (2009), and \"American Reunion\" (2012). Only one character, Noah Levenstein played by Eugene Levy, has appeared in all eight released films. Biggs, Hannigan, Scott, Nicholas, Thomas, Coolidge, Cho, Isfield, Cheek, and Owen all play their characters in four films each; other characters appear in fewer films.",
+            "Plague Town\nPlague Town is a 2008 American horror film directed by David Gregory and written by David Gregory and John Cregan.",
+            "List of Nick Fury comics\nThese are tiles about the characters of Nick Fury, Nick Fury Jr., Ultimate Nick Fury or any other alternative version of the character published by Marvel Comics.",
+            "Nick Fury, Agent of S.H.I.E.L.D.: Empyre\nNick Fury, Agent of S.H.I.E.L.D.: Empyre is a fortyeight page novel written by Will Murray and published by Berkley Books and Marvel Comics in 2000. It is the first appearance of the character of Nick Fury in novel form. It features illustrations by longtime Nick Fury artist Jim Steranko. The plot revived the concept of S.H.I.E.L.D.'s psychic sensory division from the old Stan Lee and Jack Kirby comics.",
+            "Joel Greenblatt\nJoel Greenblatt (born December 13, 1957) is an American academic, hedge fund manager, investor, and writer. He is a value investor, and adjunct professor at the Columbia University Graduate School of Business. He is the former chairman of the board of Alliant Techsystems and founder of the New York Securities Auction Corporation. He is also a director at Pzena Investment Management, a high-end value firm.",
+            "Wolverine/Nick Fury: The Scorpio Connection\nWolverine/Nick Fury: The Scorpio Connection is a 1989 graphic novel published by Marvel Comics and written by Archie Goodwin and drawn by Howard Chaykin. The story concerns a new Scorpio who is attempting to kill Nick Fury while Wolverine becomes involved when he investigates the murder of a friend who once saved his life at the hands of the new Scorpio. It is the first part of the Wolverine/Nick Fury trilogy."
+        ],
+        "thoughts": [
+            "Director and writer of 'Street Kings', 'End of Watch', 'Sabotage', and 'Fury' is David Ayer.",
+            "Films directed and written by David Ayer:\n1. Harsh Times (2005)\n2. End of Watch (2012)\n3. Suicide Squad (2016)",
+            "The American crime film set in South Los Angeles from the list of films directed and written by David Ayer is \"End of Watch\" (2012)."
+        ],
+        "is_best": false
+    },
+    {
+        "question": "This American crime film set in South Los Angeles was written and directed by the same director and writer of screenwriter of \"Street Kings\", \"End of Watch\", \"Sabotage\", \"Fury\" and what other film? ",
+        "graph": {
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "1",
+                        "instruction": "Identify the writer and director of \"Street Kings\", \"End of Watch\", \"Sabotage\", \"Fury\".",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": []
+                    },
+                    {
+                        "id": "2",
+                        "instruction": "List all films written and directed by the identified writer and director.",
+                        "node_type": "retrievalandreasoning",
+                        "upstream_node_ids": [
+                            "1"
+                        ]
+                    },
+                    {
+                        "id": "3",
+                        "instruction": "Identify the films set in South Los Angeles from the list of films by the writer and director.",
+                        "node_type": "reasoning",
+                        "upstream_node_ids": [
+                            "2"
+                        ]
+                    }
+                ],
+                "root_node_id": "1",
+                "final_node_id": "3"
+            },
+            "explanation": "The question requires finding a writer and director responsible for multiple films and then identifying which of their films fits the description of being set in South Los Angeles. The solution involves three main steps: finding the person who wrote and directed the named films (Node 1), listing all their works (Node 2), and identifying which of these works is set in South Los Angeles (Node 3)."
+        },
+        "recall": 0.8333333333333334,
+        "retrieved_passages": [
+            "David Ayer\nDavid Ayer (born January 18, 1968) is an American film director, producer, and screenwriter. He is best known for being the writer of \"Training Day\" (2001), and the director and writer of \"Harsh Times\" (2005), \"Street Kings\" (2008), \"End of Watch\" (2012), \"Sabotage\" (2014), \"Fury\" (2014), and \"Suicide Squad\" (2016).",
+            "Barbara Albert\nBarbara Albert (born 1970 in Vienna) is an Austrian writer, film-producer and film-director.",
+            "Charles Burnett (director)\nCharles Burnett (born April 13, 1944, in Vicksburg, Mississippi) is an African-American film director, film producer, writer, editor, actor, photographer, and cinematographer. His most popular films include \"Killer of Sheep\" (1978), \"My Brother's Wedding\" (1983), \"To Sleep with Anger\" (1990), \"The Glass Shield\" (1994), and \"\" (2007). He has been involved in other types of motion pictures including shorts, documentaries, and a TV series.",
+            "Floyd Mutrux\nFloyd Mutrux (born June 21, 1941) is an American stage and film director, writer, producer, and screenwriter.",
+            "Trust (1990 film)\nTrust is a 1990 American dark romantic comedy starring Adrienne Shelly and Martin Donovan. It is the second feature film from writer-director Hal Hartley.",
+            "Nelson Pereira dos Santos\nNelson Pereira dos Santos (born 22 October 1928) is a Brazilian film director. He directed films such as \"Vidas Secas\" (Barren Lives), based on the book with the same name by Brazilian writer Graciliano Ramos.",
+            "Paul Andrew Williams\nPaul Andrew Williams is a British film writer and director, born in Portsmouth, England in 1973. He won the New Director's Award for his film London to Brighton in the 2006 Edinburgh International Film Festival.",
+            "Wolfgang Becker\nWolfgang Becker (born 22 June 1954) is a German film director and writer. He is best known to the international audience for his work \"Good Bye Lenin!\" (2003).",
+            "Harsh Times\nHarsh Times is a 2005 American crime film set in South Los Angeles. The film stars Christian Bale and Freddy Rodriguez, and was written and directed by David Ayer, who wrote the script for the Academy Award-winning 2001 film \"Training Day\". The film was distributed by Metro-Goldwyn-Mayer and Bauer Martinez Entertainment. Ayer says that the film's characters are largely based on the people he knew when he lived in South Central.",
+            "End of Watch\nEnd of Watch is a 2012 American crime drama film written and directed by David Ayer. It stars Jake Gyllenhaal and Michael Pe\u00f1a as Brian Taylor and Miguel Zavala, two Los Angeles Police Department officers who work in South Los Angeles. The film focuses on their day-to-day police work, their dealings with a certain group of gang members, their friendship with each other, and their personal relationships.",
+            "Suicide Squad (film)\nSuicide Squad is a 2016 American superhero film based on the DC Comics antihero team of the same name, distributed by Warner Bros. Pictures. It is the third installment in the DC Extended Universe (DCEU). The film is written and directed by David Ayer and stars an ensemble cast featuring Will Smith, Jared Leto, Margot Robbie, Joel Kinnaman, Viola Davis, Jai Courtney, Jay Hernandez, Adewale Akinnuoye-Agbaje, Ike Barinholtz, Scott Eastwood, and Cara Delevingne. In \"Suicide Squad\", a secret government agency led by Amanda Waller recruits imprisoned supervillains to execute dangerous black ops missions and save the world from a powerful threat, in exchange for reduced sentences.",
+            "The Wannabe\nThe Wannabe is a 2015 American drama film written and directed by Nick Sandow. The film stars Patricia Arquette, David Zayas, Domenick Lombardozzi, Michael Imperioli, Vincent Piazza and Nick Sandow. The film was released on December 4, 2015, by Entertainment One Films and Orion Pictures.",
+            "David Yates\nDavid Yates (born (1963--)08 1963 ) is an English filmmaker who has directed feature films, short films, and television productions.",
+            "List of American Pie characters\nThis is a list of characters from the film series \"American Pie\" consisting of \"American Pie\" (1999), \"American Pie 2\" (2001), \"American Wedding\" (2003), \"\" (2005), \"\" (2006), \"\" (2007), \"\" (2009), and \"American Reunion\" (2012). Only one character, Noah Levenstein played by Eugene Levy, has appeared in all eight released films. Biggs, Hannigan, Scott, Nicholas, Thomas, Coolidge, Cho, Isfield, Cheek, and Owen all play their characters in four films each; other characters appear in fewer films.",
+            "Plague Town\nPlague Town is a 2008 American horror film directed by David Gregory and written by David Gregory and John Cregan."
+        ],
+        "thoughts": [
+            "The writer and director of \"Street Kings\", \"End of Watch\", \"Sabotage\", and \"Fury\" is David Ayer.",
+            "Films written and directed by David Ayer:\n1. Harsh Times (2005)\n2. End of Watch (2012)\n3. Street Kings (2008)\n4. Sabotage (2014)\n5. Fury (2014)\n6. Suicide Squad (2016)\n\nOther films directed by David Ayer:\n1. Suicide Squad (2016)\n\nOther films written and directed by David Gregory:\n1. Plague Town (2008)",
+            "The films set in South Los Angeles from the list of films by the writer and director David Ayer are:\n1. Harsh Times (2005)\n2. End of Watch (2012)\n3. Street Kings (2008)"
+        ],
+        "is_best": false
+    }
+]

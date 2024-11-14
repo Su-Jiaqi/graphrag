@@ -1,0 +1,792 @@
+[
+    {
+        "attempt": 1,
+        "question": "Are Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos both directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve background information about Fabi\u00e1n Bielinsky, focusing on his profession and notable works.",
+                "output": "Fabi\u00e1n Bielinsky was an Argentine film director known for his notable works in the film industry. One of his most well-known films is \"Nine Queens,\" a crime drama released in 2000. The film received critical acclaim and was a commercial success, establishing Bielinsky as a talented director. Another notable work by Bielinsky is \"The Aura,\" a neo-noir crime thriller released in 2005. Unfortunately, Bielinsky passed away in 2006 at the age of 47, leaving behind a legacy of impactful and influential films.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve background information about Nelson Pereira dos Santos, focusing on his profession and notable works.",
+                "output": "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to the Cinema Novo movement. He was born on October 22, 1928, and is best known for directing films such as \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". Many of his works were based on novels by Brazilian writers such as Graciliano Ramos and Jorge Amado. Dos Santos' films often addressed social and political issues, and he was known for his satirical and critical approach to Brazilian society.\n\nIn addition to his notable works, dos Santos also received training at the Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC) in France, where he honed his skills as a director. His influence on Brazilian cinema and his contributions to the development of the Cinema Novo movement have solidified his legacy as a pioneering filmmaker in Brazil.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Fabi\u00e1n Bielinsky is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director known for his notable works in the film industry, including \"Nine Queens\" and \"The Aura.\" Therefore, it can be determined that Fabi\u00e1n Bielinsky is a director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Fabi\u00e1n Bielinsky was an Argentine film director known for his notable works in the film industry. One of his most well-known films is \"Nine Queens,\" a crime drama released in 2000. The film received critical acclaim and was a commercial success, establishing Bielinsky as a talented director. Another notable work by Bielinsky is \"The Aura,\" a neo-noir crime thriller released in 2005. Unfortunately, Bielinsky passed away in 2006 at the age of 47, leaving behind a legacy of impactful and influential films."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Nelson Pereira dos Santos is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director. He is a Brazilian film director known for his contributions to the Cinema Novo movement and has directed several notable films addressing social and political issues. Additionally, he received training in film direction, further confirming his role as a director.",
+                "upstream": [
+                    [
+                        "2",
+                        "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to the Cinema Novo movement. He was born on October 22, 1928, and is best known for directing films such as \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". Many of his works were based on novels by Brazilian writers such as Graciliano Ramos and Jorge Amado. Dos Santos' films often addressed social and political issues, and he was known for his satirical and critical approach to Brazilian society.\n\nIn addition to his notable works, dos Santos also received training at the Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC) in France, where he honed his skills as a director. His influence on Brazilian cinema and his contributions to the development of the Cinema Novo movement have solidified his legacy as a pioneering filmmaker in Brazil."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Validate if both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are directors based on the previous reasoning steps.",
+                "output": "Based on the previous reasoning steps, both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are confirmed to be directors in the film industry.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director known for his notable works in the film industry, including \"Nine Queens\" and \"The Aura.\" Therefore, it can be determined that Fabi\u00e1n Bielinsky is a director."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director. He is a Brazilian film director known for his contributions to the Cinema Novo movement and has directed several notable films addressing social and political issues. Additionally, he received training in film direction, further confirming his role as a director."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Nelson Pereira dos Santos\nNelson Pereira dos Santos (born 22 October 1928) is a Brazilian film director. He directed films such as \"Vidas Secas\" (Barren Lives), based on the book with the same name by Brazilian writer Graciliano Ramos.",
+            "Rio, 100 Degrees F.\nRio, 100 Degrees F \"(Portuguese: Rio, 40 Graus\") is\u00a0a 1955 Brazilian film written and directed by\u00a0Nelson Pereira dos Santos. It is dos Santos' first feature work, inspired by the Italian Neo-Realism, and is considered a precursor of the Cinema Novo\u00a0movement.",
+            "Tenda dos Milagres (film)\nTenda dos Milagres is a 1977 Brazilian drama film directed by Nelson Pereira dos Santos, based on the novel of the same name by Jorge Amado. It stars Hugo Carvana, Sonia Dias and Severino Dada. The director satirizes and exposes racism in Brazilian society. The most notable example where this is done is in a flashback scene where Brazilians are shown listening with approving interest to Nazi race theories in the late 1930s. \"Tenda dos Milagres\" was shot in Salvador, Bahia.",
+            "How Tasty Was My Little Frenchman\nHow Tasty Was My Little Frenchman (Portuguese: \"Como Era Gostoso o Meu Franc\u00eas\" ) is a Brazilian black comedy directed by Nelson Pereira dos Santos released in 1971.",
+            "Tent of Miracles (novel)\nTent of Miracles (Portuguese: \"Tenda dos Milagres\" ) is a Brazilian Modernist novel. It was written by Jorge Amado in 1967 and published the following year. It was later adapted to a 1977 Cinema Novo (Nouvelle Vague) film by director/screenplay writer Nelson Pereira dos Santos.",
+            "Jubiab\u00e1 (film)\nJubiab\u00e1 (French: Bahia de tous les saints ) is a 1986 Brazilian-French romantic drama film directed by Nelson Pereira dos Santos. Based on the novel of the same name by Jorge Amado, it stars Charles Baiano and Fran\u00e7oise Goussard as two lovers.",
+            "Fabi\u00e1n Bielinsky\nFabi\u00e1n Bielinsky (3 February 1959 \u2013 28 June 2006) was an Argentine film director born in Buenos Aires.",
+            "The Amulet of Ogum\nThe Amulet of Ogum (Portuguese: O Amuleto de Ogum ) is a 1974 Brazilian drama film directed by Nelson Pereira dos Santos. It was entered into the 1975 Cannes Film Festival. It was also selected as the Brazilian entry for the Best Foreign Language Film at the 48th Academy Awards, but was not accepted as a nominee.",
+            "Institut des hautes \u00e9tudes cin\u00e9matographiques\nL'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC; the \"Institute for Advanced Cinematographic Studies\") is a French film school, founded during World War II under the leadership of Marcel L'Herbier who was its president from 1944 to 1969. IDHEC offered training for directors and producers, cameramen, sound technicians, editors, art directors and costume designers. It became highly influential, and many prominent film-makers received their training there including Paulo Rocha, Louis Malle, Alain Resnais, Claire Denis, Volker Schl\u00f6ndorff, Jean-Jacques Annaud, Claude Sautet, Nelson Pereira dos Santos, Patrice Leconte, Costa Gavras, Theo Angelopoulos, Omar Amiralay, Rithy Panh, Arnaud Desplechin, Claude Miller, Alfonso Gumucio Dagron Christopher Miles and Pascale Ferran.",
+            "Viva Dead Ponies\nViva Dead Ponies (originally titled \"Bugs Fucking Bunny\" ) was the second album by The Fatima Mansions, and features elements of both their original, more synth-led and melodic sound on songs such as \"You're A Rose\", as well as the noiser, guitar-oriented style that would become more prominent in their later works (a notable example of this being \"Look What I Stole For Us, Darling\").",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "The Nerdist Podcast\nThe Nerdist Podcast is a weekly interview show \"about what it really means to be a nerd\" hosted by Chris Hardwick, usually accompanied by Jonah Ray and Matt Mira. The audio podcasts are typically an hour in length and include conversations with notable comedians or entertainers, sometimes at their own home. The show launched February 8, 2010. It serves as the flagship podcast for Nerdist Industries, which was founded in 2012 after the success of \"The Nerdist Podcast\". The show's theme song is \"Jetpack Blues, Sunset Hues\" by the chiptune band Anamanaguchi.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "What the Butler Saw (play)\nWhat the Butler Saw is a farce written by the English playwright Joe Orton. It was premi\u00e8red at the Queen's Theatre in London on 5 March 1969. It was Orton's final play and the second to be performed after his death, following \"Funeral Games\" in 1968."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 2,
+        "question": "Are Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos both directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve background information about Fabi\u00e1n Bielinsky, focusing on his profession and notable works.",
+                "output": "Fabi\u00e1n Bielinsky was an Argentine film director known for his work in the film industry. Some of his notable works include \"Nine Queens\" (2000) and \"The Aura\" (2005). These films are known for their intricate plots and engaging storytelling, showcasing Bielinsky's talent as a director.\n\nBielinsky's career in the film industry has left a lasting impact, and his work continues to be celebrated by audiences and critics alike. His unique storytelling style and ability to captivate audiences through his films have solidified his reputation as a talented director in the industry.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve background information about Nelson Pereira dos Santos, focusing on his profession and notable works.",
+                "output": "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to the Cinema Novo movement. He was born on October 22, 1928, and is best known for directing films such as \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". Many of his works were based on novels by Brazilian writers such as Graciliano Ramos and Jorge Amado. Dos Santos' films often addressed social and political issues, and he was known for his satirical and critical approach to Brazilian society.\n\nIn addition to his notable works, dos Santos also received training at the Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC) in France, where he honed his skills as a director. His influence on Brazilian cinema and his contributions to the development of the Cinema Novo movement have solidified his legacy as a pioneering filmmaker in Brazil.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Fabi\u00e1n Bielinsky is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director known for his work in the film industry. His notable works such as \"Nine Queens\" and \"The Aura\" showcase his talent and unique storytelling style, solidifying his reputation as a talented director. Therefore, it can be determined that Fabi\u00e1n Bielinsky is a director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Fabi\u00e1n Bielinsky was an Argentine film director known for his work in the film industry. Some of his notable works include \"Nine Queens\" (2000) and \"The Aura\" (2005). These films are known for their intricate plots and engaging storytelling, showcasing Bielinsky's talent as a director.\n\nBielinsky's career in the film industry has left a lasting impact, and his work continues to be celebrated by audiences and critics alike. His unique storytelling style and ability to captivate audiences through his films have solidified his reputation as a talented director in the industry."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Nelson Pereira dos Santos is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director. He is a Brazilian film director known for his contributions to the Cinema Novo movement and has directed several notable films addressing social and political issues. Additionally, he received training in film direction, further confirming his role as a director.",
+                "upstream": [
+                    [
+                        "2",
+                        "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to the Cinema Novo movement. He was born on October 22, 1928, and is best known for directing films such as \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". Many of his works were based on novels by Brazilian writers such as Graciliano Ramos and Jorge Amado. Dos Santos' films often addressed social and political issues, and he was known for his satirical and critical approach to Brazilian society.\n\nIn addition to his notable works, dos Santos also received training at the Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC) in France, where he honed his skills as a director. His influence on Brazilian cinema and his contributions to the development of the Cinema Novo movement have solidified his legacy as a pioneering filmmaker in Brazil."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Validate if both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are directors based on the previous reasoning steps.",
+                "output": "Based on the previous reasoning steps, both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are confirmed to be directors in the film industry.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director known for his work in the film industry. His notable works such as \"Nine Queens\" and \"The Aura\" showcase his talent and unique storytelling style, solidifying his reputation as a talented director. Therefore, it can be determined that Fabi\u00e1n Bielinsky is a director."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director. He is a Brazilian film director known for his contributions to the Cinema Novo movement and has directed several notable films addressing social and political issues. Additionally, he received training in film direction, further confirming his role as a director."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Fabi\u00e1n Bielinsky\nFabi\u00e1n Bielinsky (3 February 1959 \u2013 28 June 2006) was an Argentine film director born in Buenos Aires.",
+            "Nelson Pereira dos Santos\nNelson Pereira dos Santos (born 22 October 1928) is a Brazilian film director. He directed films such as \"Vidas Secas\" (Barren Lives), based on the book with the same name by Brazilian writer Graciliano Ramos.",
+            "Rio, 100 Degrees F.\nRio, 100 Degrees F \"(Portuguese: Rio, 40 Graus\") is\u00a0a 1955 Brazilian film written and directed by\u00a0Nelson Pereira dos Santos. It is dos Santos' first feature work, inspired by the Italian Neo-Realism, and is considered a precursor of the Cinema Novo\u00a0movement.",
+            "Tenda dos Milagres (film)\nTenda dos Milagres is a 1977 Brazilian drama film directed by Nelson Pereira dos Santos, based on the novel of the same name by Jorge Amado. It stars Hugo Carvana, Sonia Dias and Severino Dada. The director satirizes and exposes racism in Brazilian society. The most notable example where this is done is in a flashback scene where Brazilians are shown listening with approving interest to Nazi race theories in the late 1930s. \"Tenda dos Milagres\" was shot in Salvador, Bahia.",
+            "How Tasty Was My Little Frenchman\nHow Tasty Was My Little Frenchman (Portuguese: \"Como Era Gostoso o Meu Franc\u00eas\" ) is a Brazilian black comedy directed by Nelson Pereira dos Santos released in 1971.",
+            "Tent of Miracles (novel)\nTent of Miracles (Portuguese: \"Tenda dos Milagres\" ) is a Brazilian Modernist novel. It was written by Jorge Amado in 1967 and published the following year. It was later adapted to a 1977 Cinema Novo (Nouvelle Vague) film by director/screenplay writer Nelson Pereira dos Santos.",
+            "Jubiab\u00e1 (film)\nJubiab\u00e1 (French: Bahia de tous les saints ) is a 1986 Brazilian-French romantic drama film directed by Nelson Pereira dos Santos. Based on the novel of the same name by Jorge Amado, it stars Charles Baiano and Fran\u00e7oise Goussard as two lovers.",
+            "The Amulet of Ogum\nThe Amulet of Ogum (Portuguese: O Amuleto de Ogum ) is a 1974 Brazilian drama film directed by Nelson Pereira dos Santos. It was entered into the 1975 Cannes Film Festival. It was also selected as the Brazilian entry for the Best Foreign Language Film at the 48th Academy Awards, but was not accepted as a nominee.",
+            "Scott Hahn\nScott W. Hahn (born October 28, 1957) is an American Roman Catholic lay theologian, contemporary author, professor, and Christian apologist. A former Presbyterian who converted to Catholicism, Hahn's popular works include \"Rome Sweet Home\" and \"The Lamb's Supper: The Mass as Heaven on Earth\". His lectures have been featured in multiple audio distributions through Lighthouse Catholic Media. Hahn is known for his notable research on early Christianity during the Apostolic Age and various theoretical works concerning the early Church fathers.",
+            "Yoann Lemoine\nYoann Lemoine (born 16 March 1983) is a French music video director, graphic designer and singer-songwriter. His most notable works include his music video direction for Katy Perry's \"Teenage Dream\", Taylor Swift's single \"Back to December\", Lana Del Rey's \"Born to Die\" and Mystery Jets' \"Dreaming of Another World\".",
+            "Convention (meeting)\nA convention, in the sense of a meeting, is a gathering of individuals who meet at an arranged place and time in order to discuss or engage in some common interest. The most common conventions are based upon industry, profession, and fandom. Trade conventions typically focus on a particular industry or industry segment, and feature keynote speakers, vendor displays, and other information and activities of interest to the event organizers and attendees. Professional conventions focus on issues of concern to the profession and advancements in the profession. Such conventions are generally organized by societies or communities dedicated to promotion of the topic of interest. Fan conventions usually feature displays, shows, and sales based on pop culture and guest celebrities. Science fiction conventions traditionally partake of the nature of both professional conventions and fan conventions, with the balance varying from one to another. Conventions also exist for various hobbies, such as gaming or model railroads.",
+            "Viva Dead Ponies\nViva Dead Ponies (originally titled \"Bugs Fucking Bunny\" ) was the second album by The Fatima Mansions, and features elements of both their original, more synth-led and melodic sound on songs such as \"You're A Rose\", as well as the noiser, guitar-oriented style that would become more prominent in their later works (a notable example of this being \"Look What I Stole For Us, Darling\").",
+            "Institut des hautes \u00e9tudes cin\u00e9matographiques\nL'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC; the \"Institute for Advanced Cinematographic Studies\") is a French film school, founded during World War II under the leadership of Marcel L'Herbier who was its president from 1944 to 1969. IDHEC offered training for directors and producers, cameramen, sound technicians, editors, art directors and costume designers. It became highly influential, and many prominent film-makers received their training there including Paulo Rocha, Louis Malle, Alain Resnais, Claire Denis, Volker Schl\u00f6ndorff, Jean-Jacques Annaud, Claude Sautet, Nelson Pereira dos Santos, Patrice Leconte, Costa Gavras, Theo Angelopoulos, Omar Amiralay, Rithy Panh, Arnaud Desplechin, Claude Miller, Alfonso Gumucio Dagron Christopher Miles and Pascale Ferran.",
+            "Lee Sung-jae\nLee Sung-jae (born August 23, 1970) is a South Korean actor. Among his notable works include the films \"Art Museum by the Zoo\", \"Attack the Gas Station\", \"Barking Dogs Never Bite\", and \"Kick the Moon\", as well as the television series \"Lie\" and \"A Wife's Credentials\".",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Subhash Ghai\nSubhash Ghai (born 24 January 1945) is an Indian film director, producer and screenwriter, known for his works predominantly in Hindi cinema. His most notable works include \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and Black & White (2008). In 1982, He started Mukta Arts Private Limited which, in 2000, became a public company, with Subhash Ghai as its executive chairman. In 2006, he received the National Film Award, for producing the social problem film \"Iqbal\", in the same year he founded the Whistling Woods International film and media institution in Mumbai. In 2015, He received the IIFA Award for outstanding contribution to Indian Cinema."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 3,
+        "question": "Are Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos both directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve background information about Fabi\u00e1n Bielinsky, focusing on his profession and notable works.",
+                "output": "Fabi\u00e1n Bielinsky was an Argentine film director known for his work in the film industry. Some of his notable works include \"Nine Queens\" (2000) and \"The Aura\" (2005). He was known for his unique storytelling and visual style, and his contributions to the Argentine film industry have left a lasting impact.\n\nIt is important to note that the information provided includes details about other individuals and topics, such as Scott Hahn, Yoann Lemoine, conventions, Viva Dead Ponies, Lee Sung-jae, Legal Profession Admission Board, and Subhash Ghai, which are not directly related to Fabi\u00e1n Bielinsky.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve background information about Nelson Pereira dos Santos, focusing on his profession and notable works.",
+                "output": "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to Brazilian cinema. He was a key figure in the Cinema Novo movement and was influenced by Italian Neo-Realism. Some of his notable works include \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". He also directed the film adaptation of Jorge Amado's novel \"Tent of Miracles\". Additionally, he was associated with the French film school, L'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC), where he received training. Nelson Pereira dos Santos' work often addressed social and political issues in Brazilian society, and he is considered one of the most influential filmmakers in Brazilian cinema.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Fabi\u00e1n Bielinsky is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director, known for his work in the Argentine film industry. His notable works include \"Nine Queens\" (2000) and \"The Aura\" (2005). Therefore, Fabi\u00e1n Bielinsky is a director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Fabi\u00e1n Bielinsky was an Argentine film director known for his work in the film industry. Some of his notable works include \"Nine Queens\" (2000) and \"The Aura\" (2005). He was known for his unique storytelling and visual style, and his contributions to the Argentine film industry have left a lasting impact.\n\nIt is important to note that the information provided includes details about other individuals and topics, such as Scott Hahn, Yoann Lemoine, conventions, Viva Dead Ponies, Lee Sung-jae, Legal Profession Admission Board, and Subhash Ghai, which are not directly related to Fabi\u00e1n Bielinsky."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Nelson Pereira dos Santos is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director, known for his significant contributions to Brazilian cinema and his influential works in the Cinema Novo movement.",
+                "upstream": [
+                    [
+                        "2",
+                        "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to Brazilian cinema. He was a key figure in the Cinema Novo movement and was influenced by Italian Neo-Realism. Some of his notable works include \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". He also directed the film adaptation of Jorge Amado's novel \"Tent of Miracles\". Additionally, he was associated with the French film school, L'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC), where he received training. Nelson Pereira dos Santos' work often addressed social and political issues in Brazilian society, and he is considered one of the most influential filmmakers in Brazilian cinema."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Validate if both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are directors based on the previous reasoning steps.",
+                "output": "Based on the previous reasoning steps, both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are directors.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director, known for his work in the Argentine film industry. His notable works include \"Nine Queens\" (2000) and \"The Aura\" (2005). Therefore, Fabi\u00e1n Bielinsky is a director."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director, known for his significant contributions to Brazilian cinema and his influential works in the Cinema Novo movement."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Fabi\u00e1n Bielinsky\nFabi\u00e1n Bielinsky (3 February 1959 \u2013 28 June 2006) was an Argentine film director born in Buenos Aires.",
+            "Nelson Pereira dos Santos\nNelson Pereira dos Santos (born 22 October 1928) is a Brazilian film director. He directed films such as \"Vidas Secas\" (Barren Lives), based on the book with the same name by Brazilian writer Graciliano Ramos.",
+            "Rio, 100 Degrees F.\nRio, 100 Degrees F \"(Portuguese: Rio, 40 Graus\") is\u00a0a 1955 Brazilian film written and directed by\u00a0Nelson Pereira dos Santos. It is dos Santos' first feature work, inspired by the Italian Neo-Realism, and is considered a precursor of the Cinema Novo\u00a0movement.",
+            "Tenda dos Milagres (film)\nTenda dos Milagres is a 1977 Brazilian drama film directed by Nelson Pereira dos Santos, based on the novel of the same name by Jorge Amado. It stars Hugo Carvana, Sonia Dias and Severino Dada. The director satirizes and exposes racism in Brazilian society. The most notable example where this is done is in a flashback scene where Brazilians are shown listening with approving interest to Nazi race theories in the late 1930s. \"Tenda dos Milagres\" was shot in Salvador, Bahia.",
+            "How Tasty Was My Little Frenchman\nHow Tasty Was My Little Frenchman (Portuguese: \"Como Era Gostoso o Meu Franc\u00eas\" ) is a Brazilian black comedy directed by Nelson Pereira dos Santos released in 1971.",
+            "Tent of Miracles (novel)\nTent of Miracles (Portuguese: \"Tenda dos Milagres\" ) is a Brazilian Modernist novel. It was written by Jorge Amado in 1967 and published the following year. It was later adapted to a 1977 Cinema Novo (Nouvelle Vague) film by director/screenplay writer Nelson Pereira dos Santos.",
+            "Jubiab\u00e1 (film)\nJubiab\u00e1 (French: Bahia de tous les saints ) is a 1986 Brazilian-French romantic drama film directed by Nelson Pereira dos Santos. Based on the novel of the same name by Jorge Amado, it stars Charles Baiano and Fran\u00e7oise Goussard as two lovers.",
+            "The Amulet of Ogum\nThe Amulet of Ogum (Portuguese: O Amuleto de Ogum ) is a 1974 Brazilian drama film directed by Nelson Pereira dos Santos. It was entered into the 1975 Cannes Film Festival. It was also selected as the Brazilian entry for the Best Foreign Language Film at the 48th Academy Awards, but was not accepted as a nominee.",
+            "Scott Hahn\nScott W. Hahn (born October 28, 1957) is an American Roman Catholic lay theologian, contemporary author, professor, and Christian apologist. A former Presbyterian who converted to Catholicism, Hahn's popular works include \"Rome Sweet Home\" and \"The Lamb's Supper: The Mass as Heaven on Earth\". His lectures have been featured in multiple audio distributions through Lighthouse Catholic Media. Hahn is known for his notable research on early Christianity during the Apostolic Age and various theoretical works concerning the early Church fathers.",
+            "Yoann Lemoine\nYoann Lemoine (born 16 March 1983) is a French music video director, graphic designer and singer-songwriter. His most notable works include his music video direction for Katy Perry's \"Teenage Dream\", Taylor Swift's single \"Back to December\", Lana Del Rey's \"Born to Die\" and Mystery Jets' \"Dreaming of Another World\".",
+            "Convention (meeting)\nA convention, in the sense of a meeting, is a gathering of individuals who meet at an arranged place and time in order to discuss or engage in some common interest. The most common conventions are based upon industry, profession, and fandom. Trade conventions typically focus on a particular industry or industry segment, and feature keynote speakers, vendor displays, and other information and activities of interest to the event organizers and attendees. Professional conventions focus on issues of concern to the profession and advancements in the profession. Such conventions are generally organized by societies or communities dedicated to promotion of the topic of interest. Fan conventions usually feature displays, shows, and sales based on pop culture and guest celebrities. Science fiction conventions traditionally partake of the nature of both professional conventions and fan conventions, with the balance varying from one to another. Conventions also exist for various hobbies, such as gaming or model railroads.",
+            "Viva Dead Ponies\nViva Dead Ponies (originally titled \"Bugs Fucking Bunny\" ) was the second album by The Fatima Mansions, and features elements of both their original, more synth-led and melodic sound on songs such as \"You're A Rose\", as well as the noiser, guitar-oriented style that would become more prominent in their later works (a notable example of this being \"Look What I Stole For Us, Darling\").",
+            "Institut des hautes \u00e9tudes cin\u00e9matographiques\nL'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC; the \"Institute for Advanced Cinematographic Studies\") is a French film school, founded during World War II under the leadership of Marcel L'Herbier who was its president from 1944 to 1969. IDHEC offered training for directors and producers, cameramen, sound technicians, editors, art directors and costume designers. It became highly influential, and many prominent film-makers received their training there including Paulo Rocha, Louis Malle, Alain Resnais, Claire Denis, Volker Schl\u00f6ndorff, Jean-Jacques Annaud, Claude Sautet, Nelson Pereira dos Santos, Patrice Leconte, Costa Gavras, Theo Angelopoulos, Omar Amiralay, Rithy Panh, Arnaud Desplechin, Claude Miller, Alfonso Gumucio Dagron Christopher Miles and Pascale Ferran.",
+            "Lee Sung-jae\nLee Sung-jae (born August 23, 1970) is a South Korean actor. Among his notable works include the films \"Art Museum by the Zoo\", \"Attack the Gas Station\", \"Barking Dogs Never Bite\", and \"Kick the Moon\", as well as the television series \"Lie\" and \"A Wife's Credentials\".",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Subhash Ghai\nSubhash Ghai (born 24 January 1945) is an Indian film director, producer and screenwriter, known for his works predominantly in Hindi cinema. His most notable works include \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and Black & White (2008). In 1982, He started Mukta Arts Private Limited which, in 2000, became a public company, with Subhash Ghai as its executive chairman. In 2006, he received the National Film Award, for producing the social problem film \"Iqbal\", in the same year he founded the Whistling Woods International film and media institution in Mumbai. In 2015, He received the IIFA Award for outstanding contribution to Indian Cinema."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 4,
+        "question": "Are Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos both directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve background information about Fabi\u00e1n Bielinsky, focusing on his profession and notable works.",
+                "output": "Fabi\u00e1n Bielinsky was an Argentine film director known for his notable works in the film industry. Some of his notable works include the films \"Nine Queens\" (2000) and \"The Aura\" (2005). Bielinsky was known for his skill in creating suspenseful and engaging crime dramas, and his work has been well-received by audiences and critics alike. His contributions to the film industry have left a lasting impact on the world of cinema.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve background information about Nelson Pereira dos Santos, focusing on his profession and notable works.",
+                "output": "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to the Cinema Novo movement. He was born on October 22, 1928, and is best known for directing films such as \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". He was also involved in the adaptation of Jorge Amado's novel \"Tent of Miracles\" into a film. Dos Santos' work often addressed social and political issues in Brazilian society, and he was considered a precursor of the Cinema Novo movement. He received his training at the Institut des hautes \u00e9tudes cin\u00e9matographiques in France, and his work has been recognized at international film festivals.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Fabi\u00e1n Bielinsky is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director known for his notable works in the film industry, such as \"Nine Queens\" and \"The Aura.\" Therefore, it can be determined that Fabi\u00e1n Bielinsky is a director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Fabi\u00e1n Bielinsky was an Argentine film director known for his notable works in the film industry. Some of his notable works include the films \"Nine Queens\" (2000) and \"The Aura\" (2005). Bielinsky was known for his skill in creating suspenseful and engaging crime dramas, and his work has been well-received by audiences and critics alike. His contributions to the film industry have left a lasting impact on the world of cinema."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Nelson Pereira dos Santos is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director, known for his contributions to the Cinema Novo movement and for directing several films.",
+                "upstream": [
+                    [
+                        "2",
+                        "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to the Cinema Novo movement. He was born on October 22, 1928, and is best known for directing films such as \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". He was also involved in the adaptation of Jorge Amado's novel \"Tent of Miracles\" into a film. Dos Santos' work often addressed social and political issues in Brazilian society, and he was considered a precursor of the Cinema Novo movement. He received his training at the Institut des hautes \u00e9tudes cin\u00e9matographiques in France, and his work has been recognized at international film festivals."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Validate if both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are directors based on the previous reasoning steps.",
+                "output": "Based on the previous reasoning steps, both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are directors.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director known for his notable works in the film industry, such as \"Nine Queens\" and \"The Aura.\" Therefore, it can be determined that Fabi\u00e1n Bielinsky is a director."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director, known for his contributions to the Cinema Novo movement and for directing several films."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Nelson Pereira dos Santos\nNelson Pereira dos Santos (born 22 October 1928) is a Brazilian film director. He directed films such as \"Vidas Secas\" (Barren Lives), based on the book with the same name by Brazilian writer Graciliano Ramos.",
+            "Rio, 100 Degrees F.\nRio, 100 Degrees F \"(Portuguese: Rio, 40 Graus\") is\u00a0a 1955 Brazilian film written and directed by\u00a0Nelson Pereira dos Santos. It is dos Santos' first feature work, inspired by the Italian Neo-Realism, and is considered a precursor of the Cinema Novo\u00a0movement.",
+            "Tenda dos Milagres (film)\nTenda dos Milagres is a 1977 Brazilian drama film directed by Nelson Pereira dos Santos, based on the novel of the same name by Jorge Amado. It stars Hugo Carvana, Sonia Dias and Severino Dada. The director satirizes and exposes racism in Brazilian society. The most notable example where this is done is in a flashback scene where Brazilians are shown listening with approving interest to Nazi race theories in the late 1930s. \"Tenda dos Milagres\" was shot in Salvador, Bahia.",
+            "How Tasty Was My Little Frenchman\nHow Tasty Was My Little Frenchman (Portuguese: \"Como Era Gostoso o Meu Franc\u00eas\" ) is a Brazilian black comedy directed by Nelson Pereira dos Santos released in 1971.",
+            "Tent of Miracles (novel)\nTent of Miracles (Portuguese: \"Tenda dos Milagres\" ) is a Brazilian Modernist novel. It was written by Jorge Amado in 1967 and published the following year. It was later adapted to a 1977 Cinema Novo (Nouvelle Vague) film by director/screenplay writer Nelson Pereira dos Santos.",
+            "Jubiab\u00e1 (film)\nJubiab\u00e1 (French: Bahia de tous les saints ) is a 1986 Brazilian-French romantic drama film directed by Nelson Pereira dos Santos. Based on the novel of the same name by Jorge Amado, it stars Charles Baiano and Fran\u00e7oise Goussard as two lovers.",
+            "Fabi\u00e1n Bielinsky\nFabi\u00e1n Bielinsky (3 February 1959 \u2013 28 June 2006) was an Argentine film director born in Buenos Aires.",
+            "The Amulet of Ogum\nThe Amulet of Ogum (Portuguese: O Amuleto de Ogum ) is a 1974 Brazilian drama film directed by Nelson Pereira dos Santos. It was entered into the 1975 Cannes Film Festival. It was also selected as the Brazilian entry for the Best Foreign Language Film at the 48th Academy Awards, but was not accepted as a nominee.",
+            "Institut des hautes \u00e9tudes cin\u00e9matographiques\nL'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC; the \"Institute for Advanced Cinematographic Studies\") is a French film school, founded during World War II under the leadership of Marcel L'Herbier who was its president from 1944 to 1969. IDHEC offered training for directors and producers, cameramen, sound technicians, editors, art directors and costume designers. It became highly influential, and many prominent film-makers received their training there including Paulo Rocha, Louis Malle, Alain Resnais, Claire Denis, Volker Schl\u00f6ndorff, Jean-Jacques Annaud, Claude Sautet, Nelson Pereira dos Santos, Patrice Leconte, Costa Gavras, Theo Angelopoulos, Omar Amiralay, Rithy Panh, Arnaud Desplechin, Claude Miller, Alfonso Gumucio Dagron Christopher Miles and Pascale Ferran.",
+            "Viva Dead Ponies\nViva Dead Ponies (originally titled \"Bugs Fucking Bunny\" ) was the second album by The Fatima Mansions, and features elements of both their original, more synth-led and melodic sound on songs such as \"You're A Rose\", as well as the noiser, guitar-oriented style that would become more prominent in their later works (a notable example of this being \"Look What I Stole For Us, Darling\").",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "The Nerdist Podcast\nThe Nerdist Podcast is a weekly interview show \"about what it really means to be a nerd\" hosted by Chris Hardwick, usually accompanied by Jonah Ray and Matt Mira. The audio podcasts are typically an hour in length and include conversations with notable comedians or entertainers, sometimes at their own home. The show launched February 8, 2010. It serves as the flagship podcast for Nerdist Industries, which was founded in 2012 after the success of \"The Nerdist Podcast\". The show's theme song is \"Jetpack Blues, Sunset Hues\" by the chiptune band Anamanaguchi.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "What the Butler Saw (play)\nWhat the Butler Saw is a farce written by the English playwright Joe Orton. It was premi\u00e8red at the Queen's Theatre in London on 5 March 1969. It was Orton's final play and the second to be performed after his death, following \"Funeral Games\" in 1968."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 5,
+        "question": "Are Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos both directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve background information about Fabi\u00e1n Bielinsky, focusing on his profession and notable works.",
+                "output": "Fabi\u00e1n Bielinsky was an Argentine film director known for his notable works in the film industry. Some of his notable works include the films \"Nine Queens\" (2000) and \"The Aura\" (2005). Bielinsky was known for his skill in creating suspenseful and engaging crime dramas, and his work has been well-received by audiences and critics alike. Unfortunately, Bielinsky passed away in 2006, leaving behind a legacy of impactful and memorable films.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve background information about Nelson Pereira dos Santos, focusing on his profession and notable works.",
+                "output": "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to Brazilian cinema. He was a key figure in the Cinema Novo movement and was influenced by Italian Neo-Realism. Some of his notable works include \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". He also directed the film adaptation of Jorge Amado's novel \"Tent of Miracles\". Additionally, he was associated with the French film school, L'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC), where he received training. Nelson Pereira dos Santos' work often addressed social and political issues in Brazilian society, and he is considered one of the most influential filmmakers in Brazilian cinema.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Fabi\u00e1n Bielinsky is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director known for his notable works in the film industry. Therefore, it can be determined that Fabi\u00e1n Bielinsky is a director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Fabi\u00e1n Bielinsky was an Argentine film director known for his notable works in the film industry. Some of his notable works include the films \"Nine Queens\" (2000) and \"The Aura\" (2005). Bielinsky was known for his skill in creating suspenseful and engaging crime dramas, and his work has been well-received by audiences and critics alike. Unfortunately, Bielinsky passed away in 2006, leaving behind a legacy of impactful and memorable films."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Nelson Pereira dos Santos is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director, known for his significant contributions to Brazilian cinema and his influential works in the Cinema Novo movement.",
+                "upstream": [
+                    [
+                        "2",
+                        "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to Brazilian cinema. He was a key figure in the Cinema Novo movement and was influenced by Italian Neo-Realism. Some of his notable works include \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". He also directed the film adaptation of Jorge Amado's novel \"Tent of Miracles\". Additionally, he was associated with the French film school, L'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC), where he received training. Nelson Pereira dos Santos' work often addressed social and political issues in Brazilian society, and he is considered one of the most influential filmmakers in Brazilian cinema."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Validate if both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are directors based on the previous reasoning steps.",
+                "output": "Based on the previous reasoning steps, both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are confirmed to be directors in the film industry.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director known for his notable works in the film industry. Therefore, it can be determined that Fabi\u00e1n Bielinsky is a director."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director, known for his significant contributions to Brazilian cinema and his influential works in the Cinema Novo movement."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Nelson Pereira dos Santos\nNelson Pereira dos Santos (born 22 October 1928) is a Brazilian film director. He directed films such as \"Vidas Secas\" (Barren Lives), based on the book with the same name by Brazilian writer Graciliano Ramos.",
+            "Rio, 100 Degrees F.\nRio, 100 Degrees F \"(Portuguese: Rio, 40 Graus\") is\u00a0a 1955 Brazilian film written and directed by\u00a0Nelson Pereira dos Santos. It is dos Santos' first feature work, inspired by the Italian Neo-Realism, and is considered a precursor of the Cinema Novo\u00a0movement.",
+            "Tenda dos Milagres (film)\nTenda dos Milagres is a 1977 Brazilian drama film directed by Nelson Pereira dos Santos, based on the novel of the same name by Jorge Amado. It stars Hugo Carvana, Sonia Dias and Severino Dada. The director satirizes and exposes racism in Brazilian society. The most notable example where this is done is in a flashback scene where Brazilians are shown listening with approving interest to Nazi race theories in the late 1930s. \"Tenda dos Milagres\" was shot in Salvador, Bahia.",
+            "How Tasty Was My Little Frenchman\nHow Tasty Was My Little Frenchman (Portuguese: \"Como Era Gostoso o Meu Franc\u00eas\" ) is a Brazilian black comedy directed by Nelson Pereira dos Santos released in 1971.",
+            "Tent of Miracles (novel)\nTent of Miracles (Portuguese: \"Tenda dos Milagres\" ) is a Brazilian Modernist novel. It was written by Jorge Amado in 1967 and published the following year. It was later adapted to a 1977 Cinema Novo (Nouvelle Vague) film by director/screenplay writer Nelson Pereira dos Santos.",
+            "Jubiab\u00e1 (film)\nJubiab\u00e1 (French: Bahia de tous les saints ) is a 1986 Brazilian-French romantic drama film directed by Nelson Pereira dos Santos. Based on the novel of the same name by Jorge Amado, it stars Charles Baiano and Fran\u00e7oise Goussard as two lovers.",
+            "Fabi\u00e1n Bielinsky\nFabi\u00e1n Bielinsky (3 February 1959 \u2013 28 June 2006) was an Argentine film director born in Buenos Aires.",
+            "The Amulet of Ogum\nThe Amulet of Ogum (Portuguese: O Amuleto de Ogum ) is a 1974 Brazilian drama film directed by Nelson Pereira dos Santos. It was entered into the 1975 Cannes Film Festival. It was also selected as the Brazilian entry for the Best Foreign Language Film at the 48th Academy Awards, but was not accepted as a nominee.",
+            "Institut des hautes \u00e9tudes cin\u00e9matographiques\nL'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC; the \"Institute for Advanced Cinematographic Studies\") is a French film school, founded during World War II under the leadership of Marcel L'Herbier who was its president from 1944 to 1969. IDHEC offered training for directors and producers, cameramen, sound technicians, editors, art directors and costume designers. It became highly influential, and many prominent film-makers received their training there including Paulo Rocha, Louis Malle, Alain Resnais, Claire Denis, Volker Schl\u00f6ndorff, Jean-Jacques Annaud, Claude Sautet, Nelson Pereira dos Santos, Patrice Leconte, Costa Gavras, Theo Angelopoulos, Omar Amiralay, Rithy Panh, Arnaud Desplechin, Claude Miller, Alfonso Gumucio Dagron Christopher Miles and Pascale Ferran.",
+            "Viva Dead Ponies\nViva Dead Ponies (originally titled \"Bugs Fucking Bunny\" ) was the second album by The Fatima Mansions, and features elements of both their original, more synth-led and melodic sound on songs such as \"You're A Rose\", as well as the noiser, guitar-oriented style that would become more prominent in their later works (a notable example of this being \"Look What I Stole For Us, Darling\").",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "The Nerdist Podcast\nThe Nerdist Podcast is a weekly interview show \"about what it really means to be a nerd\" hosted by Chris Hardwick, usually accompanied by Jonah Ray and Matt Mira. The audio podcasts are typically an hour in length and include conversations with notable comedians or entertainers, sometimes at their own home. The show launched February 8, 2010. It serves as the flagship podcast for Nerdist Industries, which was founded in 2012 after the success of \"The Nerdist Podcast\". The show's theme song is \"Jetpack Blues, Sunset Hues\" by the chiptune band Anamanaguchi.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "What the Butler Saw (play)\nWhat the Butler Saw is a farce written by the English playwright Joe Orton. It was premi\u00e8red at the Queen's Theatre in London on 5 March 1969. It was Orton's final play and the second to be performed after his death, following \"Funeral Games\" in 1968."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 6,
+        "question": "Are Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos both directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve background information about Fabi\u00e1n Bielinsky, focusing on his profession and notable works.",
+                "output": "Fabi\u00e1n Bielinsky was an Argentine film director known for his work in the film industry. Some of his notable works include \"Nine Queens\" (2000) and \"The Aura\" (2005). These films received critical acclaim and showcased Bielinsky's talent as a director. His contributions to the Argentine film industry have left a lasting impact on the cinematic landscape.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve background information about Nelson Pereira dos Santos, focusing on his profession and notable works.",
+                "output": "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to the Cinema Novo movement. He was born on October 22, 1928, and is best known for directing films such as \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". Many of his works were based on novels by Brazilian writers such as Graciliano Ramos and Jorge Amado. He was also associated with the French film school, L'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC), where he received training and became highly influential in the world of cinema. dos Santos' films often addressed social and political issues, and he was known for his satirical and critical approach to Brazilian society. His work has left a lasting impact on Brazilian and international cinema.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Fabi\u00e1n Bielinsky is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director known for his work in the Argentine film industry. Therefore, it can be determined that Fabi\u00e1n Bielinsky is a director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Fabi\u00e1n Bielinsky was an Argentine film director known for his work in the film industry. Some of his notable works include \"Nine Queens\" (2000) and \"The Aura\" (2005). These films received critical acclaim and showcased Bielinsky's talent as a director. His contributions to the Argentine film industry have left a lasting impact on the cinematic landscape."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Nelson Pereira dos Santos is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director, known for his contributions to the Cinema Novo movement and for directing several films.",
+                "upstream": [
+                    [
+                        "2",
+                        "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to the Cinema Novo movement. He was born on October 22, 1928, and is best known for directing films such as \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". Many of his works were based on novels by Brazilian writers such as Graciliano Ramos and Jorge Amado. He was also associated with the French film school, L'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC), where he received training and became highly influential in the world of cinema. dos Santos' films often addressed social and political issues, and he was known for his satirical and critical approach to Brazilian society. His work has left a lasting impact on Brazilian and international cinema."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Validate if both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are directors based on the previous reasoning steps.",
+                "output": "Based on the previous reasoning steps, both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are confirmed to be directors.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director known for his work in the Argentine film industry. Therefore, it can be determined that Fabi\u00e1n Bielinsky is a director."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director, known for his contributions to the Cinema Novo movement and for directing several films."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Fabi\u00e1n Bielinsky\nFabi\u00e1n Bielinsky (3 February 1959 \u2013 28 June 2006) was an Argentine film director born in Buenos Aires.",
+            "Nelson Pereira dos Santos\nNelson Pereira dos Santos (born 22 October 1928) is a Brazilian film director. He directed films such as \"Vidas Secas\" (Barren Lives), based on the book with the same name by Brazilian writer Graciliano Ramos.",
+            "Rio, 100 Degrees F.\nRio, 100 Degrees F \"(Portuguese: Rio, 40 Graus\") is\u00a0a 1955 Brazilian film written and directed by\u00a0Nelson Pereira dos Santos. It is dos Santos' first feature work, inspired by the Italian Neo-Realism, and is considered a precursor of the Cinema Novo\u00a0movement.",
+            "Tenda dos Milagres (film)\nTenda dos Milagres is a 1977 Brazilian drama film directed by Nelson Pereira dos Santos, based on the novel of the same name by Jorge Amado. It stars Hugo Carvana, Sonia Dias and Severino Dada. The director satirizes and exposes racism in Brazilian society. The most notable example where this is done is in a flashback scene where Brazilians are shown listening with approving interest to Nazi race theories in the late 1930s. \"Tenda dos Milagres\" was shot in Salvador, Bahia.",
+            "How Tasty Was My Little Frenchman\nHow Tasty Was My Little Frenchman (Portuguese: \"Como Era Gostoso o Meu Franc\u00eas\" ) is a Brazilian black comedy directed by Nelson Pereira dos Santos released in 1971.",
+            "Tent of Miracles (novel)\nTent of Miracles (Portuguese: \"Tenda dos Milagres\" ) is a Brazilian Modernist novel. It was written by Jorge Amado in 1967 and published the following year. It was later adapted to a 1977 Cinema Novo (Nouvelle Vague) film by director/screenplay writer Nelson Pereira dos Santos.",
+            "Jubiab\u00e1 (film)\nJubiab\u00e1 (French: Bahia de tous les saints ) is a 1986 Brazilian-French romantic drama film directed by Nelson Pereira dos Santos. Based on the novel of the same name by Jorge Amado, it stars Charles Baiano and Fran\u00e7oise Goussard as two lovers.",
+            "The Amulet of Ogum\nThe Amulet of Ogum (Portuguese: O Amuleto de Ogum ) is a 1974 Brazilian drama film directed by Nelson Pereira dos Santos. It was entered into the 1975 Cannes Film Festival. It was also selected as the Brazilian entry for the Best Foreign Language Film at the 48th Academy Awards, but was not accepted as a nominee.",
+            "Scott Hahn\nScott W. Hahn (born October 28, 1957) is an American Roman Catholic lay theologian, contemporary author, professor, and Christian apologist. A former Presbyterian who converted to Catholicism, Hahn's popular works include \"Rome Sweet Home\" and \"The Lamb's Supper: The Mass as Heaven on Earth\". His lectures have been featured in multiple audio distributions through Lighthouse Catholic Media. Hahn is known for his notable research on early Christianity during the Apostolic Age and various theoretical works concerning the early Church fathers.",
+            "Yoann Lemoine\nYoann Lemoine (born 16 March 1983) is a French music video director, graphic designer and singer-songwriter. His most notable works include his music video direction for Katy Perry's \"Teenage Dream\", Taylor Swift's single \"Back to December\", Lana Del Rey's \"Born to Die\" and Mystery Jets' \"Dreaming of Another World\".",
+            "Convention (meeting)\nA convention, in the sense of a meeting, is a gathering of individuals who meet at an arranged place and time in order to discuss or engage in some common interest. The most common conventions are based upon industry, profession, and fandom. Trade conventions typically focus on a particular industry or industry segment, and feature keynote speakers, vendor displays, and other information and activities of interest to the event organizers and attendees. Professional conventions focus on issues of concern to the profession and advancements in the profession. Such conventions are generally organized by societies or communities dedicated to promotion of the topic of interest. Fan conventions usually feature displays, shows, and sales based on pop culture and guest celebrities. Science fiction conventions traditionally partake of the nature of both professional conventions and fan conventions, with the balance varying from one to another. Conventions also exist for various hobbies, such as gaming or model railroads.",
+            "Viva Dead Ponies\nViva Dead Ponies (originally titled \"Bugs Fucking Bunny\" ) was the second album by The Fatima Mansions, and features elements of both their original, more synth-led and melodic sound on songs such as \"You're A Rose\", as well as the noiser, guitar-oriented style that would become more prominent in their later works (a notable example of this being \"Look What I Stole For Us, Darling\").",
+            "Institut des hautes \u00e9tudes cin\u00e9matographiques\nL'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC; the \"Institute for Advanced Cinematographic Studies\") is a French film school, founded during World War II under the leadership of Marcel L'Herbier who was its president from 1944 to 1969. IDHEC offered training for directors and producers, cameramen, sound technicians, editors, art directors and costume designers. It became highly influential, and many prominent film-makers received their training there including Paulo Rocha, Louis Malle, Alain Resnais, Claire Denis, Volker Schl\u00f6ndorff, Jean-Jacques Annaud, Claude Sautet, Nelson Pereira dos Santos, Patrice Leconte, Costa Gavras, Theo Angelopoulos, Omar Amiralay, Rithy Panh, Arnaud Desplechin, Claude Miller, Alfonso Gumucio Dagron Christopher Miles and Pascale Ferran.",
+            "Lee Sung-jae\nLee Sung-jae (born August 23, 1970) is a South Korean actor. Among his notable works include the films \"Art Museum by the Zoo\", \"Attack the Gas Station\", \"Barking Dogs Never Bite\", and \"Kick the Moon\", as well as the television series \"Lie\" and \"A Wife's Credentials\".",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Subhash Ghai\nSubhash Ghai (born 24 January 1945) is an Indian film director, producer and screenwriter, known for his works predominantly in Hindi cinema. His most notable works include \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and Black & White (2008). In 1982, He started Mukta Arts Private Limited which, in 2000, became a public company, with Subhash Ghai as its executive chairman. In 2006, he received the National Film Award, for producing the social problem film \"Iqbal\", in the same year he founded the Whistling Woods International film and media institution in Mumbai. In 2015, He received the IIFA Award for outstanding contribution to Indian Cinema."
+        ],
+        "recall": 0.9444444444444444
+    },
+    {
+        "attempt": 7,
+        "question": "Are Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos both directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve background information about Fabi\u00e1n Bielinsky, focusing on his profession and notable works.",
+                "output": "Fabi\u00e1n Bielinsky was an Argentine film director known for his work in the film industry. He was born in Buenos Aires and is best known for his notable works such as \"Nine Queens\" and \"The Aura\". \"Nine Queens\" is a crime drama film released in 2000, while \"The Aura\" is a neo-noir psychological thriller released in 2005. Both films received critical acclaim and established Bielinsky as a talented director in the industry. Unfortunately, Bielinsky passed away on June 28, 2006, leaving behind a legacy of impactful and influential films.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve background information about Nelson Pereira dos Santos, focusing on his profession and notable works.",
+                "output": "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to the Cinema Novo movement. He was born on October 22, 1928, and is best known for directing films such as \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". Many of his works were based on novels by Brazilian writers such as Graciliano Ramos and Jorge Amado. Dos Santos' films often addressed social and political issues, and he was known for his satirical and critical approach to Brazilian society.\n\nIn addition to his notable works, dos Santos also received training at the Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC) in France, where he honed his skills as a director. His influence on Brazilian cinema and his contributions to the development of the Cinema Novo movement have solidified his legacy as a pioneering filmmaker in Brazil.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Fabi\u00e1n Bielinsky is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director known for his work in the film industry, with notable works such as \"Nine Queens\" and \"The Aura\". Therefore, it can be determined that Fabi\u00e1n Bielinsky is a director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Fabi\u00e1n Bielinsky was an Argentine film director known for his work in the film industry. He was born in Buenos Aires and is best known for his notable works such as \"Nine Queens\" and \"The Aura\". \"Nine Queens\" is a crime drama film released in 2000, while \"The Aura\" is a neo-noir psychological thriller released in 2005. Both films received critical acclaim and established Bielinsky as a talented director in the industry. Unfortunately, Bielinsky passed away on June 28, 2006, leaving behind a legacy of impactful and influential films."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Nelson Pereira dos Santos is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director. He is a Brazilian film director known for his contributions to the Cinema Novo movement and has directed several notable films addressing social and political issues. Additionally, he received training in film direction, further confirming his role as a director.",
+                "upstream": [
+                    [
+                        "2",
+                        "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to the Cinema Novo movement. He was born on October 22, 1928, and is best known for directing films such as \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". Many of his works were based on novels by Brazilian writers such as Graciliano Ramos and Jorge Amado. Dos Santos' films often addressed social and political issues, and he was known for his satirical and critical approach to Brazilian society.\n\nIn addition to his notable works, dos Santos also received training at the Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC) in France, where he honed his skills as a director. His influence on Brazilian cinema and his contributions to the development of the Cinema Novo movement have solidified his legacy as a pioneering filmmaker in Brazil."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Validate if both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are directors based on the previous reasoning steps.",
+                "output": "Based on the previous reasoning steps, both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are confirmed to be directors in the film industry.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director known for his work in the film industry, with notable works such as \"Nine Queens\" and \"The Aura\". Therefore, it can be determined that Fabi\u00e1n Bielinsky is a director."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director. He is a Brazilian film director known for his contributions to the Cinema Novo movement and has directed several notable films addressing social and political issues. Additionally, he received training in film direction, further confirming his role as a director."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Nelson Pereira dos Santos\nNelson Pereira dos Santos (born 22 October 1928) is a Brazilian film director. He directed films such as \"Vidas Secas\" (Barren Lives), based on the book with the same name by Brazilian writer Graciliano Ramos.",
+            "Rio, 100 Degrees F.\nRio, 100 Degrees F \"(Portuguese: Rio, 40 Graus\") is\u00a0a 1955 Brazilian film written and directed by\u00a0Nelson Pereira dos Santos. It is dos Santos' first feature work, inspired by the Italian Neo-Realism, and is considered a precursor of the Cinema Novo\u00a0movement.",
+            "Tenda dos Milagres (film)\nTenda dos Milagres is a 1977 Brazilian drama film directed by Nelson Pereira dos Santos, based on the novel of the same name by Jorge Amado. It stars Hugo Carvana, Sonia Dias and Severino Dada. The director satirizes and exposes racism in Brazilian society. The most notable example where this is done is in a flashback scene where Brazilians are shown listening with approving interest to Nazi race theories in the late 1930s. \"Tenda dos Milagres\" was shot in Salvador, Bahia.",
+            "How Tasty Was My Little Frenchman\nHow Tasty Was My Little Frenchman (Portuguese: \"Como Era Gostoso o Meu Franc\u00eas\" ) is a Brazilian black comedy directed by Nelson Pereira dos Santos released in 1971.",
+            "Tent of Miracles (novel)\nTent of Miracles (Portuguese: \"Tenda dos Milagres\" ) is a Brazilian Modernist novel. It was written by Jorge Amado in 1967 and published the following year. It was later adapted to a 1977 Cinema Novo (Nouvelle Vague) film by director/screenplay writer Nelson Pereira dos Santos.",
+            "Jubiab\u00e1 (film)\nJubiab\u00e1 (French: Bahia de tous les saints ) is a 1986 Brazilian-French romantic drama film directed by Nelson Pereira dos Santos. Based on the novel of the same name by Jorge Amado, it stars Charles Baiano and Fran\u00e7oise Goussard as two lovers.",
+            "Fabi\u00e1n Bielinsky\nFabi\u00e1n Bielinsky (3 February 1959 \u2013 28 June 2006) was an Argentine film director born in Buenos Aires.",
+            "The Amulet of Ogum\nThe Amulet of Ogum (Portuguese: O Amuleto de Ogum ) is a 1974 Brazilian drama film directed by Nelson Pereira dos Santos. It was entered into the 1975 Cannes Film Festival. It was also selected as the Brazilian entry for the Best Foreign Language Film at the 48th Academy Awards, but was not accepted as a nominee.",
+            "Institut des hautes \u00e9tudes cin\u00e9matographiques\nL'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC; the \"Institute for Advanced Cinematographic Studies\") is a French film school, founded during World War II under the leadership of Marcel L'Herbier who was its president from 1944 to 1969. IDHEC offered training for directors and producers, cameramen, sound technicians, editors, art directors and costume designers. It became highly influential, and many prominent film-makers received their training there including Paulo Rocha, Louis Malle, Alain Resnais, Claire Denis, Volker Schl\u00f6ndorff, Jean-Jacques Annaud, Claude Sautet, Nelson Pereira dos Santos, Patrice Leconte, Costa Gavras, Theo Angelopoulos, Omar Amiralay, Rithy Panh, Arnaud Desplechin, Claude Miller, Alfonso Gumucio Dagron Christopher Miles and Pascale Ferran.",
+            "Viva Dead Ponies\nViva Dead Ponies (originally titled \"Bugs Fucking Bunny\" ) was the second album by The Fatima Mansions, and features elements of both their original, more synth-led and melodic sound on songs such as \"You're A Rose\", as well as the noiser, guitar-oriented style that would become more prominent in their later works (a notable example of this being \"Look What I Stole For Us, Darling\").",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "The Nerdist Podcast\nThe Nerdist Podcast is a weekly interview show \"about what it really means to be a nerd\" hosted by Chris Hardwick, usually accompanied by Jonah Ray and Matt Mira. The audio podcasts are typically an hour in length and include conversations with notable comedians or entertainers, sometimes at their own home. The show launched February 8, 2010. It serves as the flagship podcast for Nerdist Industries, which was founded in 2012 after the success of \"The Nerdist Podcast\". The show's theme song is \"Jetpack Blues, Sunset Hues\" by the chiptune band Anamanaguchi.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "What the Butler Saw (play)\nWhat the Butler Saw is a farce written by the English playwright Joe Orton. It was premi\u00e8red at the Queen's Theatre in London on 5 March 1969. It was Orton's final play and the second to be performed after his death, following \"Funeral Games\" in 1968."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 8,
+        "question": "Are Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos both directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve background information about Fabi\u00e1n Bielinsky, focusing on his profession and notable works.",
+                "output": "Fabi\u00e1n Bielinsky was an Argentine film director known for his notable works in the film industry. Some of his notable works include the film \"Nine Queens\" (2000) and \"The Aura\" (2005). Bielinsky was known for his skill in creating suspenseful and engaging crime dramas, and his work has been well-received by audiences and critics alike. Unfortunately, Bielinsky passed away on June 28, 2006, leaving behind a legacy of impactful and memorable films.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve background information about Nelson Pereira dos Santos, focusing on his profession and notable works.",
+                "output": "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to the Cinema Novo movement. He was born on October 22, 1928, and is best known for directing films such as \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". Many of his works were based on novels by Brazilian writers such as Graciliano Ramos and Jorge Amado. Dos Santos' films often addressed social and political issues, and he was known for his satirical and critical approach to Brazilian society.\n\nIn addition to his notable works, dos Santos also received training at the Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC) in France, where he honed his skills as a director. His influence on Brazilian cinema and his contributions to the Cinema Novo movement have solidified his legacy as a pioneering filmmaker in Brazil.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Fabi\u00e1n Bielinsky is a director based on the retrieved information.",
+                "output": "Yes, Fabi\u00e1n Bielinsky is a director based on the information retrieved. He is known for his notable works in the film industry, including \"Nine Queens\" (2000) and \"The Aura\" (2005), and is recognized for his skill in creating suspenseful and engaging crime dramas.",
+                "upstream": [
+                    [
+                        "1",
+                        "Fabi\u00e1n Bielinsky was an Argentine film director known for his notable works in the film industry. Some of his notable works include the film \"Nine Queens\" (2000) and \"The Aura\" (2005). Bielinsky was known for his skill in creating suspenseful and engaging crime dramas, and his work has been well-received by audiences and critics alike. Unfortunately, Bielinsky passed away on June 28, 2006, leaving behind a legacy of impactful and memorable films."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Nelson Pereira dos Santos is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director. He is known for his contributions to the Cinema Novo movement and has directed several notable films addressing social and political issues in Brazilian society. Additionally, he received training in film direction, further confirming his role as a director.",
+                "upstream": [
+                    [
+                        "2",
+                        "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to the Cinema Novo movement. He was born on October 22, 1928, and is best known for directing films such as \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". Many of his works were based on novels by Brazilian writers such as Graciliano Ramos and Jorge Amado. Dos Santos' films often addressed social and political issues, and he was known for his satirical and critical approach to Brazilian society.\n\nIn addition to his notable works, dos Santos also received training at the Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC) in France, where he honed his skills as a director. His influence on Brazilian cinema and his contributions to the Cinema Novo movement have solidified his legacy as a pioneering filmmaker in Brazil."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Validate if both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are directors based on the previous reasoning steps.",
+                "output": "Based on the previous reasoning steps, both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are confirmed to be directors.",
+                "upstream": [
+                    [
+                        "3",
+                        "Yes, Fabi\u00e1n Bielinsky is a director based on the information retrieved. He is known for his notable works in the film industry, including \"Nine Queens\" (2000) and \"The Aura\" (2005), and is recognized for his skill in creating suspenseful and engaging crime dramas."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director. He is known for his contributions to the Cinema Novo movement and has directed several notable films addressing social and political issues in Brazilian society. Additionally, he received training in film direction, further confirming his role as a director."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Nelson Pereira dos Santos\nNelson Pereira dos Santos (born 22 October 1928) is a Brazilian film director. He directed films such as \"Vidas Secas\" (Barren Lives), based on the book with the same name by Brazilian writer Graciliano Ramos.",
+            "Rio, 100 Degrees F.\nRio, 100 Degrees F \"(Portuguese: Rio, 40 Graus\") is\u00a0a 1955 Brazilian film written and directed by\u00a0Nelson Pereira dos Santos. It is dos Santos' first feature work, inspired by the Italian Neo-Realism, and is considered a precursor of the Cinema Novo\u00a0movement.",
+            "Tenda dos Milagres (film)\nTenda dos Milagres is a 1977 Brazilian drama film directed by Nelson Pereira dos Santos, based on the novel of the same name by Jorge Amado. It stars Hugo Carvana, Sonia Dias and Severino Dada. The director satirizes and exposes racism in Brazilian society. The most notable example where this is done is in a flashback scene where Brazilians are shown listening with approving interest to Nazi race theories in the late 1930s. \"Tenda dos Milagres\" was shot in Salvador, Bahia.",
+            "How Tasty Was My Little Frenchman\nHow Tasty Was My Little Frenchman (Portuguese: \"Como Era Gostoso o Meu Franc\u00eas\" ) is a Brazilian black comedy directed by Nelson Pereira dos Santos released in 1971.",
+            "Tent of Miracles (novel)\nTent of Miracles (Portuguese: \"Tenda dos Milagres\" ) is a Brazilian Modernist novel. It was written by Jorge Amado in 1967 and published the following year. It was later adapted to a 1977 Cinema Novo (Nouvelle Vague) film by director/screenplay writer Nelson Pereira dos Santos.",
+            "Jubiab\u00e1 (film)\nJubiab\u00e1 (French: Bahia de tous les saints ) is a 1986 Brazilian-French romantic drama film directed by Nelson Pereira dos Santos. Based on the novel of the same name by Jorge Amado, it stars Charles Baiano and Fran\u00e7oise Goussard as two lovers.",
+            "Fabi\u00e1n Bielinsky\nFabi\u00e1n Bielinsky (3 February 1959 \u2013 28 June 2006) was an Argentine film director born in Buenos Aires.",
+            "The Amulet of Ogum\nThe Amulet of Ogum (Portuguese: O Amuleto de Ogum ) is a 1974 Brazilian drama film directed by Nelson Pereira dos Santos. It was entered into the 1975 Cannes Film Festival. It was also selected as the Brazilian entry for the Best Foreign Language Film at the 48th Academy Awards, but was not accepted as a nominee.",
+            "Institut des hautes \u00e9tudes cin\u00e9matographiques\nL'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC; the \"Institute for Advanced Cinematographic Studies\") is a French film school, founded during World War II under the leadership of Marcel L'Herbier who was its president from 1944 to 1969. IDHEC offered training for directors and producers, cameramen, sound technicians, editors, art directors and costume designers. It became highly influential, and many prominent film-makers received their training there including Paulo Rocha, Louis Malle, Alain Resnais, Claire Denis, Volker Schl\u00f6ndorff, Jean-Jacques Annaud, Claude Sautet, Nelson Pereira dos Santos, Patrice Leconte, Costa Gavras, Theo Angelopoulos, Omar Amiralay, Rithy Panh, Arnaud Desplechin, Claude Miller, Alfonso Gumucio Dagron Christopher Miles and Pascale Ferran.",
+            "Viva Dead Ponies\nViva Dead Ponies (originally titled \"Bugs Fucking Bunny\" ) was the second album by The Fatima Mansions, and features elements of both their original, more synth-led and melodic sound on songs such as \"You're A Rose\", as well as the noiser, guitar-oriented style that would become more prominent in their later works (a notable example of this being \"Look What I Stole For Us, Darling\").",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "The Nerdist Podcast\nThe Nerdist Podcast is a weekly interview show \"about what it really means to be a nerd\" hosted by Chris Hardwick, usually accompanied by Jonah Ray and Matt Mira. The audio podcasts are typically an hour in length and include conversations with notable comedians or entertainers, sometimes at their own home. The show launched February 8, 2010. It serves as the flagship podcast for Nerdist Industries, which was founded in 2012 after the success of \"The Nerdist Podcast\". The show's theme song is \"Jetpack Blues, Sunset Hues\" by the chiptune band Anamanaguchi.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "What the Butler Saw (play)\nWhat the Butler Saw is a farce written by the English playwright Joe Orton. It was premi\u00e8red at the Queen's Theatre in London on 5 March 1969. It was Orton's final play and the second to be performed after his death, following \"Funeral Games\" in 1968."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 9,
+        "question": "Are Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos both directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve background information about Fabi\u00e1n Bielinsky, focusing on his profession and notable works.",
+                "output": "Fabi\u00e1n Bielinsky was an Argentine film director known for his notable works in the film industry. Some of his notable works include the films \"Nine Queens\" (2000) and \"The Aura\" (2005). Bielinsky was known for his skill in creating suspenseful and engaging crime dramas, and his work has been well-received by audiences and critics alike. Unfortunately, Bielinsky passed away in 2006, leaving behind a legacy of impactful and memorable films.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve background information about Nelson Pereira dos Santos, focusing on his profession and notable works.",
+                "output": "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to Brazilian cinema. He was a key figure in the Cinema Novo movement and was influenced by Italian Neo-Realism. Some of his notable works include \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". He also directed the film adaptation of Jorge Amado's novel \"Tent of Miracles\". Additionally, he was associated with the French film school, L'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC), where he received training. Nelson Pereira dos Santos' work often addressed social and political issues in Brazilian society, and he is considered one of the most influential filmmakers in Brazilian cinema.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Fabi\u00e1n Bielinsky is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director known for his notable works in the film industry. Therefore, it can be determined that Fabi\u00e1n Bielinsky is a director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Fabi\u00e1n Bielinsky was an Argentine film director known for his notable works in the film industry. Some of his notable works include the films \"Nine Queens\" (2000) and \"The Aura\" (2005). Bielinsky was known for his skill in creating suspenseful and engaging crime dramas, and his work has been well-received by audiences and critics alike. Unfortunately, Bielinsky passed away in 2006, leaving behind a legacy of impactful and memorable films."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Nelson Pereira dos Santos is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director, known for his significant contributions to Brazilian cinema and his influential works in the Cinema Novo movement.",
+                "upstream": [
+                    [
+                        "2",
+                        "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to Brazilian cinema. He was a key figure in the Cinema Novo movement and was influenced by Italian Neo-Realism. Some of his notable works include \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tenda dos Milagres\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", and \"The Amulet of Ogum\". He also directed the film adaptation of Jorge Amado's novel \"Tent of Miracles\". Additionally, he was associated with the French film school, L'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC), where he received training. Nelson Pereira dos Santos' work often addressed social and political issues in Brazilian society, and he is considered one of the most influential filmmakers in Brazilian cinema."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Validate if both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are directors based on the previous reasoning steps.",
+                "output": "Based on the previous reasoning steps, both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are confirmed to be directors in the film industry.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director known for his notable works in the film industry. Therefore, it can be determined that Fabi\u00e1n Bielinsky is a director."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director, known for his significant contributions to Brazilian cinema and his influential works in the Cinema Novo movement."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Nelson Pereira dos Santos\nNelson Pereira dos Santos (born 22 October 1928) is a Brazilian film director. He directed films such as \"Vidas Secas\" (Barren Lives), based on the book with the same name by Brazilian writer Graciliano Ramos.",
+            "Rio, 100 Degrees F.\nRio, 100 Degrees F \"(Portuguese: Rio, 40 Graus\") is\u00a0a 1955 Brazilian film written and directed by\u00a0Nelson Pereira dos Santos. It is dos Santos' first feature work, inspired by the Italian Neo-Realism, and is considered a precursor of the Cinema Novo\u00a0movement.",
+            "Tenda dos Milagres (film)\nTenda dos Milagres is a 1977 Brazilian drama film directed by Nelson Pereira dos Santos, based on the novel of the same name by Jorge Amado. It stars Hugo Carvana, Sonia Dias and Severino Dada. The director satirizes and exposes racism in Brazilian society. The most notable example where this is done is in a flashback scene where Brazilians are shown listening with approving interest to Nazi race theories in the late 1930s. \"Tenda dos Milagres\" was shot in Salvador, Bahia.",
+            "How Tasty Was My Little Frenchman\nHow Tasty Was My Little Frenchman (Portuguese: \"Como Era Gostoso o Meu Franc\u00eas\" ) is a Brazilian black comedy directed by Nelson Pereira dos Santos released in 1971.",
+            "Tent of Miracles (novel)\nTent of Miracles (Portuguese: \"Tenda dos Milagres\" ) is a Brazilian Modernist novel. It was written by Jorge Amado in 1967 and published the following year. It was later adapted to a 1977 Cinema Novo (Nouvelle Vague) film by director/screenplay writer Nelson Pereira dos Santos.",
+            "Jubiab\u00e1 (film)\nJubiab\u00e1 (French: Bahia de tous les saints ) is a 1986 Brazilian-French romantic drama film directed by Nelson Pereira dos Santos. Based on the novel of the same name by Jorge Amado, it stars Charles Baiano and Fran\u00e7oise Goussard as two lovers.",
+            "Fabi\u00e1n Bielinsky\nFabi\u00e1n Bielinsky (3 February 1959 \u2013 28 June 2006) was an Argentine film director born in Buenos Aires.",
+            "The Amulet of Ogum\nThe Amulet of Ogum (Portuguese: O Amuleto de Ogum ) is a 1974 Brazilian drama film directed by Nelson Pereira dos Santos. It was entered into the 1975 Cannes Film Festival. It was also selected as the Brazilian entry for the Best Foreign Language Film at the 48th Academy Awards, but was not accepted as a nominee.",
+            "Institut des hautes \u00e9tudes cin\u00e9matographiques\nL'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC; the \"Institute for Advanced Cinematographic Studies\") is a French film school, founded during World War II under the leadership of Marcel L'Herbier who was its president from 1944 to 1969. IDHEC offered training for directors and producers, cameramen, sound technicians, editors, art directors and costume designers. It became highly influential, and many prominent film-makers received their training there including Paulo Rocha, Louis Malle, Alain Resnais, Claire Denis, Volker Schl\u00f6ndorff, Jean-Jacques Annaud, Claude Sautet, Nelson Pereira dos Santos, Patrice Leconte, Costa Gavras, Theo Angelopoulos, Omar Amiralay, Rithy Panh, Arnaud Desplechin, Claude Miller, Alfonso Gumucio Dagron Christopher Miles and Pascale Ferran.",
+            "Viva Dead Ponies\nViva Dead Ponies (originally titled \"Bugs Fucking Bunny\" ) was the second album by The Fatima Mansions, and features elements of both their original, more synth-led and melodic sound on songs such as \"You're A Rose\", as well as the noiser, guitar-oriented style that would become more prominent in their later works (a notable example of this being \"Look What I Stole For Us, Darling\").",
+            "What Are Little Boys Made Of?\n\"What Are Little Boys Made Of?\" is a popular nursery rhyme dating from the early 19th century. It has a Roud Folk Song Index number of 821.",
+            "What Are Little Girls Made Of?\n\"What Are Little Girls Made Of?\" is episode seven of the of the American science fiction television series, \"\". It was first broadcast October 20, 1966, and repeated, two months later, on December 22, the first episode of the series to be repeated on NBC. It was written by Robert Bloch and directed by James Goldstone. The title of the episode is taken from the fourth line of the 19th century nursery rhyme, \"What Are Little Boys Made Of?.\"",
+            "What Are We Doin' Lonesome\n\"What Are We Doin' Lonesome\" is a song written by Larry Gatlin, and recorded by American country music group Larry Gatlin & the Gatlin Brothers Band. It was released in October 1981 as the first single from the album \"Not Guilty\". The song reached number 4 on the \"Billboard\" Hot Country Singles & Tracks chart.",
+            "The Nerdist Podcast\nThe Nerdist Podcast is a weekly interview show \"about what it really means to be a nerd\" hosted by Chris Hardwick, usually accompanied by Jonah Ray and Matt Mira. The audio podcasts are typically an hour in length and include conversations with notable comedians or entertainers, sometimes at their own home. The show launched February 8, 2010. It serves as the flagship podcast for Nerdist Industries, which was founded in 2012 after the success of \"The Nerdist Podcast\". The show's theme song is \"Jetpack Blues, Sunset Hues\" by the chiptune band Anamanaguchi.",
+            "I Write What I Like\nI Write What I Like (full name \"I Write What I Like: Selected Writings by Steve Biko\") is a compilation of writings from anti-apartheid activist Steve Biko.",
+            "What the Butler Saw (play)\nWhat the Butler Saw is a farce written by the English playwright Joe Orton. It was premi\u00e8red at the Queen's Theatre in London on 5 March 1969. It was Orton's final play and the second to be performed after his death, following \"Funeral Games\" in 1968."
+        ],
+        "recall": 0.8333333333333334
+    },
+    {
+        "attempt": 10,
+        "question": "Are Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos both directors?",
+        "nodes": [
+            {
+                "node_id": "1",
+                "instruction": "Retrieve background information about Fabi\u00e1n Bielinsky, focusing on his profession and notable works.",
+                "output": "Fabi\u00e1n Bielinsky was an Argentine film director known for his work in the film industry. Some of his notable works include \"Nine Queens\" (2000) and \"The Aura\" (2005). He was known for his unique storytelling and visual style, and his contributions to the Argentine film industry have left a lasting impact.\n\nIt is important to note that the information provided includes details about other individuals and topics, such as Scott Hahn, Yoann Lemoine, conventions, Viva Dead Ponies, Lee Sung-jae, Legal Profession Admission Board, and Subhash Ghai, which are not directly related to Fabi\u00e1n Bielinsky.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "2",
+                "instruction": "Retrieve background information about Nelson Pereira dos Santos, focusing on his profession and notable works.",
+                "output": "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to the Cinema Novo movement. He was born on October 22, 1928, and is best known for directing films such as \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tent of Miracles\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", \"Tenda dos Milagres\", and \"The Amulet of Ogum\". He was also associated with the French film school, L'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC), where he received training. His work often addressed social and political issues in Brazilian society, and he was known for his use of satire and exposing racism in his films. dos Santos' work has had a significant impact on Brazilian cinema and the global film industry.",
+                "upstream": [],
+                "node_type": "retrievalandreasoning"
+            },
+            {
+                "node_id": "3",
+                "instruction": "Determine if Fabi\u00e1n Bielinsky is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director, known for his work in the Argentine film industry. His notable works include \"Nine Queens\" (2000) and \"The Aura\" (2005). Therefore, Fabi\u00e1n Bielinsky is a director.",
+                "upstream": [
+                    [
+                        "1",
+                        "Fabi\u00e1n Bielinsky was an Argentine film director known for his work in the film industry. Some of his notable works include \"Nine Queens\" (2000) and \"The Aura\" (2005). He was known for his unique storytelling and visual style, and his contributions to the Argentine film industry have left a lasting impact.\n\nIt is important to note that the information provided includes details about other individuals and topics, such as Scott Hahn, Yoann Lemoine, conventions, Viva Dead Ponies, Lee Sung-jae, Legal Profession Admission Board, and Subhash Ghai, which are not directly related to Fabi\u00e1n Bielinsky."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "4",
+                "instruction": "Determine if Nelson Pereira dos Santos is a director based on the retrieved information.",
+                "output": "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director, known for his contributions to the Cinema Novo movement and for directing several films.",
+                "upstream": [
+                    [
+                        "2",
+                        "Nelson Pereira dos Santos was a Brazilian film director known for his contributions to the Cinema Novo movement. He was born on October 22, 1928, and is best known for directing films such as \"Vidas Secas\" (Barren Lives), \"Rio, 100 Degrees F\", \"Tent of Miracles\", \"How Tasty Was My Little Frenchman\", \"Jubiab\u00e1\", \"Tenda dos Milagres\", and \"The Amulet of Ogum\". He was also associated with the French film school, L'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC), where he received training. His work often addressed social and political issues in Brazilian society, and he was known for his use of satire and exposing racism in his films. dos Santos' work has had a significant impact on Brazilian cinema and the global film industry."
+                    ]
+                ],
+                "node_type": "reasoning"
+            },
+            {
+                "node_id": "5",
+                "instruction": "Validate if both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are directors based on the previous reasoning steps.",
+                "output": "Based on the previous reasoning steps, both Fabi\u00e1n Bielinsky and Nelson Pereira dos Santos are directors.",
+                "upstream": [
+                    [
+                        "3",
+                        "Based on the retrieved information, Fabi\u00e1n Bielinsky is indeed a director, known for his work in the Argentine film industry. His notable works include \"Nine Queens\" (2000) and \"The Aura\" (2005). Therefore, Fabi\u00e1n Bielinsky is a director."
+                    ],
+                    [
+                        "4",
+                        "Based on the retrieved information, Nelson Pereira dos Santos is indeed a director, known for his contributions to the Cinema Novo movement and for directing several films."
+                    ]
+                ],
+                "node_type": "reasoning"
+            }
+        ],
+        "retrieved_passages": [
+            "Fabi\u00e1n Bielinsky\nFabi\u00e1n Bielinsky (3 February 1959 \u2013 28 June 2006) was an Argentine film director born in Buenos Aires.",
+            "Nelson Pereira dos Santos\nNelson Pereira dos Santos (born 22 October 1928) is a Brazilian film director. He directed films such as \"Vidas Secas\" (Barren Lives), based on the book with the same name by Brazilian writer Graciliano Ramos.",
+            "Rio, 100 Degrees F.\nRio, 100 Degrees F \"(Portuguese: Rio, 40 Graus\") is\u00a0a 1955 Brazilian film written and directed by\u00a0Nelson Pereira dos Santos. It is dos Santos' first feature work, inspired by the Italian Neo-Realism, and is considered a precursor of the Cinema Novo\u00a0movement.",
+            "Tent of Miracles (novel)\nTent of Miracles (Portuguese: \"Tenda dos Milagres\" ) is a Brazilian Modernist novel. It was written by Jorge Amado in 1967 and published the following year. It was later adapted to a 1977 Cinema Novo (Nouvelle Vague) film by director/screenplay writer Nelson Pereira dos Santos.",
+            "How Tasty Was My Little Frenchman\nHow Tasty Was My Little Frenchman (Portuguese: \"Como Era Gostoso o Meu Franc\u00eas\" ) is a Brazilian black comedy directed by Nelson Pereira dos Santos released in 1971.",
+            "Jubiab\u00e1 (film)\nJubiab\u00e1 (French: Bahia de tous les saints ) is a 1986 Brazilian-French romantic drama film directed by Nelson Pereira dos Santos. Based on the novel of the same name by Jorge Amado, it stars Charles Baiano and Fran\u00e7oise Goussard as two lovers.",
+            "Tenda dos Milagres (film)\nTenda dos Milagres is a 1977 Brazilian drama film directed by Nelson Pereira dos Santos, based on the novel of the same name by Jorge Amado. It stars Hugo Carvana, Sonia Dias and Severino Dada. The director satirizes and exposes racism in Brazilian society. The most notable example where this is done is in a flashback scene where Brazilians are shown listening with approving interest to Nazi race theories in the late 1930s. \"Tenda dos Milagres\" was shot in Salvador, Bahia.",
+            "The Amulet of Ogum\nThe Amulet of Ogum (Portuguese: O Amuleto de Ogum ) is a 1974 Brazilian drama film directed by Nelson Pereira dos Santos. It was entered into the 1975 Cannes Film Festival. It was also selected as the Brazilian entry for the Best Foreign Language Film at the 48th Academy Awards, but was not accepted as a nominee.",
+            "Scott Hahn\nScott W. Hahn (born October 28, 1957) is an American Roman Catholic lay theologian, contemporary author, professor, and Christian apologist. A former Presbyterian who converted to Catholicism, Hahn's popular works include \"Rome Sweet Home\" and \"The Lamb's Supper: The Mass as Heaven on Earth\". His lectures have been featured in multiple audio distributions through Lighthouse Catholic Media. Hahn is known for his notable research on early Christianity during the Apostolic Age and various theoretical works concerning the early Church fathers.",
+            "Institut des hautes \u00e9tudes cin\u00e9matographiques\nL'Institut des hautes \u00e9tudes cin\u00e9matographiques (IDHEC; the \"Institute for Advanced Cinematographic Studies\") is a French film school, founded during World War II under the leadership of Marcel L'Herbier who was its president from 1944 to 1969. IDHEC offered training for directors and producers, cameramen, sound technicians, editors, art directors and costume designers. It became highly influential, and many prominent film-makers received their training there including Paulo Rocha, Louis Malle, Alain Resnais, Claire Denis, Volker Schl\u00f6ndorff, Jean-Jacques Annaud, Claude Sautet, Nelson Pereira dos Santos, Patrice Leconte, Costa Gavras, Theo Angelopoulos, Omar Amiralay, Rithy Panh, Arnaud Desplechin, Claude Miller, Alfonso Gumucio Dagron Christopher Miles and Pascale Ferran.",
+            "Yoann Lemoine\nYoann Lemoine (born 16 March 1983) is a French music video director, graphic designer and singer-songwriter. His most notable works include his music video direction for Katy Perry's \"Teenage Dream\", Taylor Swift's single \"Back to December\", Lana Del Rey's \"Born to Die\" and Mystery Jets' \"Dreaming of Another World\".",
+            "Convention (meeting)\nA convention, in the sense of a meeting, is a gathering of individuals who meet at an arranged place and time in order to discuss or engage in some common interest. The most common conventions are based upon industry, profession, and fandom. Trade conventions typically focus on a particular industry or industry segment, and feature keynote speakers, vendor displays, and other information and activities of interest to the event organizers and attendees. Professional conventions focus on issues of concern to the profession and advancements in the profession. Such conventions are generally organized by societies or communities dedicated to promotion of the topic of interest. Fan conventions usually feature displays, shows, and sales based on pop culture and guest celebrities. Science fiction conventions traditionally partake of the nature of both professional conventions and fan conventions, with the balance varying from one to another. Conventions also exist for various hobbies, such as gaming or model railroads.",
+            "Viva Dead Ponies\nViva Dead Ponies (originally titled \"Bugs Fucking Bunny\" ) was the second album by The Fatima Mansions, and features elements of both their original, more synth-led and melodic sound on songs such as \"You're A Rose\", as well as the noiser, guitar-oriented style that would become more prominent in their later works (a notable example of this being \"Look What I Stole For Us, Darling\").",
+            "Lee Sung-jae\nLee Sung-jae (born August 23, 1970) is a South Korean actor. Among his notable works include the films \"Art Museum by the Zoo\", \"Attack the Gas Station\", \"Barking Dogs Never Bite\", and \"Kick the Moon\", as well as the television series \"Lie\" and \"A Wife's Credentials\".",
+            "Legal Profession Admission Board\nThe Legal Profession Admission Board is the statutory authority responsible for the admission of lawyers in New South Wales. It was formerly two separate boards; the Barristers Admission Board and the Solicitors Admission Board. The \"Legal Profession Act 1993\" introduced common admission for both branches of the profession resulting in the merger of the two boards.",
+            "Subhash Ghai\nSubhash Ghai (born 24 January 1945) is an Indian film director, producer and screenwriter, known for his works predominantly in Hindi cinema. His most notable works include \"Kalicharan\" (1976), \"Karz\" (1980), \"Hero\" (1983), \"Meri Jung\" (1985), \"Karma\" (1986), \"Ram Lakhan\" (1989), \"Saudagar\" (1991), \"Khalnayak\" (1993), \"Pardes\" (1997), \"Taal\" (1999), and Black & White (2008). In 1982, He started Mukta Arts Private Limited which, in 2000, became a public company, with Subhash Ghai as its executive chairman. In 2006, he received the National Film Award, for producing the social problem film \"Iqbal\", in the same year he founded the Whistling Woods International film and media institution in Mumbai. In 2015, He received the IIFA Award for outstanding contribution to Indian Cinema."
+        ],
+        "recall": 0.9444444444444444
+    }
+]
