@@ -28,7 +28,7 @@ from elasticsearch import Elasticsearch
 from transformers import AutoTokenizer, AutoModel
 from sentence_transformers import SentenceTransformer
 
-from openai import OpenAI
+from openai import OpenAI, AsyncOpenAI
 import networkx as nx
 import matplotlib.pyplot as plt
 
@@ -63,8 +63,8 @@ class GraphResponse(BaseModel):
     graph: ExecutionGraph
     explanation: str
 
-def construct_execution_graph(question: str, num_trials: int = 10) -> Tuple[GraphResponse, List[GraphResponse]]:
-    client = OpenAI()
+async def construct_execution_graph(question: str, num_trials: int = 10) -> Tuple[GraphResponse, List[GraphResponse]]:
+    client = AsyncOpenAI()
     system_message = """
     You are an AI assistant specialized in creating execution graphs for complex, multi-hop retrieval and reasoning tasks. Your role is to break down questions into a series of interconnected steps, represented as nodes in a graph.
 
@@ -87,7 +87,7 @@ def construct_execution_graph(question: str, num_trials: int = 10) -> Tuple[Grap
 
     for _ in range(num_trials):
         try:
-            completion = client.beta.chat.completions.parse(
+            completion = await client.beta.chat.completions.parse(
                 model="gpt-4o-2024-08-06",
                 messages=messages,
                 response_format=GraphResponse,
@@ -101,7 +101,7 @@ def construct_execution_graph(question: str, num_trials: int = 10) -> Tuple[Grap
 
     return all_graph_responses
 
-def retrieve_and_reason_step(query: str, instruction: str, corpus: Dict[str, Any], top_k: int, retriever: DocumentRetriever, dataset: str, client: Any, few_shot: List[Dict[str, Any]], upstream_results: List[Tuple[str, str]]) -> Tuple[str, List[str], List[float]]:
+async def retrieve_and_reason_step(query: str, instruction: str, corpus: Dict[str, Any], top_k: int, retriever: DocumentRetriever, dataset: str, client: Any, few_shot: List[Dict[str, Any]], upstream_results: List[Tuple[str, str]]) -> Tuple[str, List[str], List[float]]:
     # TODO think about how we can use the global query into line 101 
     # TODO Instruction should have explicit placeholder for the upstream results, please print the instruction
     # Retrieval query writing step
@@ -114,9 +114,9 @@ def retrieve_and_reason_step(query: str, instruction: str, corpus: Dict[str, Any
         HumanMessage(prompt_user),
     ]).format_prompt()
 
-    retrieval_query_current_step = client.invoke(messages.to_messages()).content
+    retrieval_query_current_step = (await client.ainvoke(messages.to_messages())).content
     # Retrieval step
-    doc_ids, scores = retriever.rank_docs(retrieval_query_current_step, top_k=top_k)
+    doc_ids, scores = await asyncio.to_thread(retriever.rank_docs, retrieval_query_current_step, top_k=top_k)
     
     if dataset in ['hotpotqa']:
         retrieved_passages = []
@@ -141,13 +141,13 @@ def retrieve_and_reason_step(query: str, instruction: str, corpus: Dict[str, Any
     ]).format_prompt()
 
     try:
-        chat_completion = client.invoke(messages.to_messages())
+        chat_completion = await client.ainvoke(messages.to_messages())
         return chat_completion.content, retrieved_passages, scores
     except Exception as e:
         print(f"Error in retrieve and reason step: {e}")
         return '', retrieved_passages, scores
 
-def reason_step(instruction: str, client: Any, upstream_results: List[Tuple[str, str]]) -> str:
+async def reason_step(instruction: str, client: Any, upstream_results: List[Tuple[str, str]]) -> str:
     prompt_user = f'Instruction: {instruction}\n\n To answer this questin, we executed the folloing upstream task first:\n'
     for node, result in upstream_results:
         prompt_user += f"This is the upstream task {node} And the result is {result}\n"
@@ -158,7 +158,7 @@ def reason_step(instruction: str, client: Any, upstream_results: List[Tuple[str,
     ]).format_prompt()
 
     try:
-        chat_completion = client.invoke(messages.to_messages())
+        chat_completion = await client.ainvoke(messages.to_messages())
         return chat_completion.content
     except Exception as e:
         print(f"Error in reason step: {e}")
@@ -581,7 +581,7 @@ def reason_step(instruction: str, client: Any, upstream_results: List[Tuple[str,
 #     print(f"The best result for Sample {idx} was from trial {best_trial}")
     
 #     return best_result
-def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namespace, corpus: Dict[str, Any], retriever: DocumentRetriever, client: Any, processed_ids: set) -> Optional[Tuple[int, Dict[int, float], List[str], List[str], int]]:
+async def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namespace, corpus: Dict[str, Any], retriever: DocumentRetriever, client: Any, processed_ids: set) -> Optional[Tuple[int, Dict[int, float], List[str], List[str], int]]:
     if args.dataset in ['hotpotqa', '2wikimultihopqa']:
         sample_id = sample['_id']
     elif args.dataset in ['musique']:
@@ -596,7 +596,7 @@ def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namespace, c
     
     print(f"Processing Sample {idx}: Question - {query}")
     
-    all_graph_responses = construct_execution_graph(query, num_trials=10)
+    all_graph_responses = await construct_execution_graph(query, num_trials=10)
 
     if not all_graph_responses:
         print(f"Failed to construct execution graph for sample {idx}")
@@ -613,18 +613,18 @@ def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namespace, c
         thoughts = []
         node_outputs = {}
 
-        def execute_node(node: ExecutionNode) -> str:
+        async def execute_node(node: ExecutionNode) -> str:
             if node.id in node_outputs:
                 return node_outputs[node.id]
 
             upstream_results = []
             for up_id in node.upstream_node_ids:
                 up_node = next(n for n in graph_response.graph.nodes if n.id == up_id)
-                up_result = execute_node(up_node)
+                up_result = await execute_node(up_node)
                 upstream_results.append((up_node.id, up_result))
 
             if node.node_type == NodeType.retrievalandreasoning:
-                result, passages, scores = retrieve_and_reason_step(
+                result, passages, scores = await retrieve_and_reason_step(
                     query=query,
                     instruction=node.instruction,
                     corpus=corpus,
@@ -641,7 +641,7 @@ def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namespace, c
                     else:
                         retrieved_passages_dict[passage] = score
             elif node.node_type == NodeType.reasoning:
-                result = reason_step(
+                result = await reason_step(
                     instruction=node.instruction,
                     client=client,
                     upstream_results=upstream_results
@@ -655,7 +655,7 @@ def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namespace, c
             return result
 
         final_node = next(n for n in graph_response.graph.nodes if n.id == graph_response.graph.final_node_id)
-        final_output = execute_node(final_node)
+        final_output = await execute_node(final_node)
 
         sorted_passages = sorted(retrieved_passages_dict.items(), key=lambda x: x[1], reverse=True)
         retrieved_passages, scores = zip(*sorted_passages) if sorted_passages else ([], [])
@@ -714,7 +714,7 @@ def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namespace, c
         for node in best_graph.graph.nodes:
             upstream_results = [(up_node.id, node_outputs[up_node.id]) for up_node in best_graph.graph.nodes if up_node.id in node.upstream_node_ids]
             if node.node_type == NodeType.retrievalandreasoning:
-                result, passages, scores = retrieve_and_reason_step(
+                result, passages, scores = await retrieve_and_reason_step(
                     query=query,
                     instruction=node.instruction,
                     corpus=corpus,
@@ -731,7 +731,7 @@ def process_sample(idx: int, sample: Dict[str, Any], args: argparse.Namespace, c
                     else:
                         retrieved_passages_dict[passage] = score
             elif node.node_type == NodeType.reasoning:
-                result = reason_step(
+                result = await reason_step(
                     instruction=node.instruction,
                     client=client,
                     upstream_results=upstream_results
@@ -819,7 +819,50 @@ def visualize_execution_graph(graph_response: GraphResponse):
     plt.axis('off')
     plt.tight_layout()
     plt.show()
+async def main():
+    if len(results) > 0:
+        for k in k_list:
+            print(f'R@{k}: {total_recall[k] / len(results):.4f} ', end='')
+        print()
+    if read_existing_data:
+        print(f'All samples have been already in the result file ({output_path}), exit.')
+        exit(0)
+    sem = asyncio.Semaphore(100)
+    tasks = []
+    import io
+    sys.stdout = io.StringIO()
+    for idx, sample in enumerate(data):
+        async def __task(idx, sample):
+            async with sem:
+                result = await process_sample(idx, sample, args, corpus, retriever, client, processed_ids)
+                if result is not None:
+                    idx, recall, retrieved_passages, thoughts, it = result
 
+                    # print metrics
+                    for k in k_list:
+                        total_recall[k] += recall[k]
+                        print(f'R@{k}: {total_recall[k] / (idx + 1):.4f} ', end='')
+                    print()
+                    if args.max_steps > 1:
+                        print('[ITERATION]', it, '[PASSAGE]', len(retrieved_passages), '[THOUGHT]', thoughts)
+
+                    # record results
+                    results[idx]['retrieved'] = retrieved_passages
+                    results[idx]['recall'] = recall
+                    results[idx]['thoughts'] = thoughts
+
+                    # if idx % 50 == 0:
+                    #     with open(output_path, 'w') as f:
+                    #         json.dump(results, f)
+        tasks.append(__task(idx, sample))
+    # save final results
+    import tqdm.asyncio
+    await tqdm.asyncio.tqdm_asyncio.gather(*tasks)
+    with open(output_path, 'w') as f:
+        json.dump(results, f)
+    print(f'Saved results to {output_path}')
+    for k in k_list:
+        print(f'R@{k}: {total_recall[k] / len(data):.4f} ', end='')
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     # parser.add_argument('--dataset', type=str, choices=['hotpotqa', 'musique', '2wikimultihopqa'], required=True)
@@ -955,39 +998,4 @@ if __name__ == '__main__':
     #     print(f'Results file {output_path} maybe empty, cannot be loaded.')
     #     processed_ids = set()
 
-    if len(results) > 0:
-        for k in k_list:
-            print(f'R@{k}: {total_recall[k] / len(results):.4f} ', end='')
-        print()
-    if read_existing_data:
-        print(f'All samples have been already in the result file ({output_path}), exit.')
-        exit(0)
-
-    for idx, sample in enumerate(tqdm(data, desc='GraphRAG')):
-        result = process_sample(idx, sample, args, corpus, retriever, client, processed_ids)
-        if result is not None:
-            idx, recall, retrieved_passages, thoughts, it = result
-
-            # print metrics
-            for k in k_list:
-                total_recall[k] += recall[k]
-                print(f'R@{k}: {total_recall[k] / (idx + 1):.4f} ', end='')
-            print()
-            if args.max_steps > 1:
-                print('[ITERATION]', it, '[PASSAGE]', len(retrieved_passages), '[THOUGHT]', thoughts)
-
-            # record results
-            results[idx]['retrieved'] = retrieved_passages
-            results[idx]['recall'] = recall
-            results[idx]['thoughts'] = thoughts
-
-            if idx % 50 == 0:
-                with open(output_path, 'w') as f:
-                    json.dump(results, f)
-
-    # save final results
-    with open(output_path, 'w') as f:
-        json.dump(results, f)
-    print(f'Saved results to {output_path}')
-    for k in k_list:
-        print(f'R@{k}: {total_recall[k] / len(data):.4f} ', end='')
+    asyncio.run(main())
